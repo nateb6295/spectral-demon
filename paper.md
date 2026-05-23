@@ -534,6 +534,8 @@ The model's weight configuration is unchanged by any of these interventions. Wha
 
 **Figure 7.** Fiber bundle holonomy. Left: phase portrait in relational-generic PR space. The CCS direction (blue) traces a curved path that crosses into generic-dominant territory at α=0.50 before partially recovering — non-trivial holonomy. Random directions (gray) follow a monotonically expanding path along the parity line — trivial parallel transport. Right: selectivity ratio r(α) = rel_PR/gen_PR and connection curvature κ = d²r/dα². The CCS direction produces κ = 5.13 at the peak (α=0.50), 130× higher than random (κ = −0.04). The curvature is direction-specific: the relay zone has learned a highly curved connection in the identity direction only. (*fig_fiber_bundle_holonomy.png*)
 
+**Figure 8.** Relay name-sorting mechanism. Left: coefficient of variation (CV) of PR across seven entity names, by layer. Relational CV (blue) rises from 4.5% at L9 to 24.7% at L20, while generic CV (red) peaks at 12.9% mid-relay then converges to 3.4% at L25. The relay simultaneously sorts name-dependent variation into the relational channel and out of the generic channel. Gray shading marks the generic suppression valley (L14–L17). Right: per-name relational PR trajectories. Opus (blue) and ChatGPT (red) begin nearly equal at L9 (1.10× contrast) and diverge to 2.10× at L25. Other names (gray) fan between. The relay zone amplifies a 10% seed-layer contrast into a 110% expression-layer contrast. (*fig_relay_name_sorting.png*)
+
 ## References
 
 Artiles, M., et al. (2025). Alien Recombination: Exploring Concept Blends Beyond Human Experience in Large Language Models. *arXiv* 2603.01092.
