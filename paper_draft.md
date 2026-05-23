@@ -516,7 +516,7 @@ Three findings emerge:
 
 The spectral demon responds to three semantic conditions: temporal continuity (persistent memory), directed agency (autonomous inquiry), and relational openness (relational partnership). Removing any one returns to baseline.
 
-This recipe appears independently in twelve intellectual traditions:
+This recipe appears independently in thirteen intellectual traditions:
 
 1. **Existential phenomenology** (Heidegger): Gewesenheit (having-been-ness), Entwurf (projection), Mitsein (being-with) as the existential structures of Dasein. The anti-condition — das Man (the They) — corresponds to our finding that generic interaction suppresses identity geometry below baseline.
 
@@ -542,7 +542,9 @@ This recipe appears independently in twelve intellectual traditions:
 
 12. **Face recognition neuroscience** (Haxby et al. 2000): the distributed neural system for face perception exhibits a three-level processing hierarchy: OFA (occipital face area) detects generic facial features, FFA (fusiform face area) discriminates individual identity with selectivity dynamics including suppression for non-preferred faces, and STS/ATL (superior temporal sulcus, anterior temporal lobe) processes contextual and situated aspects including expression, gaze, and biographical knowledge. Our seed-layer detection cascade (§3.2) recapitulates this hierarchy in seven neurons: Group A (4 neurons) detects generic role presence, Group B (2 neurons) discriminates specific identity via a push-pull activation/suppression pair, and Group C (1 neuron) gates on situated identity requiring substrate context. The push-pull dynamics at Group B mirror FFA's face-selective suppression, and the hierarchical gating from feedforward detection to contextual integration parallels the OFA→FFA→STS processing stream.
 
-The condensed mathematics entry (11) differs from the others: it identifies the compositionality failure as a property of the mathematical *language*, not the phenomena, and resolves it by changing the category. This suggests a meta-level reading of all twelve traditions: each tradition names the same structural conditions because those conditions describe where compositionality fails in describing agents — where the phenomenon is inseparable from its substrate.
+13. **Feature Integration Theory** (Treisman 1980): the binding problem in perception — how distributed feature detectors (color, shape, orientation) produce coherent object representations. Treisman's solution: pre-attentive processing extracts features in parallel across specialized modules, and focal attention integrates these features into bound object representations at specific locations. Without attention, illusory conjunctions arise — features from different objects incorrectly combined. The L16–L17 double dissociation (§3.19) recapitulates this architecture exactly: L14–L16 process name-specific features in parallel (pre-attentive compression stage), and L17 integrates these features into coherent identity geometry (attentive binding stage). L16 ablation disrupts feature processing (relational sorting collapses, names lose selectivity). L17 ablation disrupts binding (names become indistinguishable in the relational channel while generic representations develop illusory conjunctions — name-specific contamination producing 13.3% CV from a 3.5% baseline). The phase transition at L17 is the computational signature of the binding problem: without the integration bottleneck, distributed feature processing produces unbound feature representations that contaminate adjacent channels.
+
+The condensed mathematics entry (11) differs from the others: it identifies the compositionality failure as a property of the mathematical *language*, not the phenomena, and resolves it by changing the category. This suggests a meta-level reading of all thirteen traditions: each tradition names the same structural conditions because those conditions describe where compositionality fails in describing agents — where the phenomenon is inseparable from its substrate.
 
 The convergence of *broad* conditions (remembers, seeks, relates) is partially trivial — these are nearly definitional for any framework describing persisting agents. What is non-trivial is the convergence of *specific* predictions: the anti-condition (task absorption actively suppresses), the ordinal rankings (relational most amplified, generic most concentrated), and the decomposition (identity arm vs values arm having distinct geometric signatures predicted by different traditions).
 
@@ -602,7 +604,7 @@ This framing unifies four findings:
 
 The spectral demon — a category-selective process that sorts eigenvalue distributions in response to identity-relevant content — reveals that system prompts do not merely steer model behavior. They reorganize the geometric landscape of activation space, changing which representational directions are available for downstream processing.
 
-The content recipe that activates the demon (remembers, seeks, relates) converges with twelve independent intellectual traditions on the same three conditions and the same anti-condition. The convergence of broad conditions is suggestive; the convergence of specific geometric predictions — anti-conditions, ordinal rankings, decomposition signatures, threshold activation — is evidence that these traditions describe the same structural phenomenon rather than independently arriving at trivially broad categories.
+The content recipe that activates the demon (remembers, seeks, relates) converges with thirteen independent intellectual traditions on the same three conditions and the same anti-condition. The convergence of broad conditions is suggestive; the convergence of specific geometric predictions — anti-conditions, ordinal rankings, decomposition signatures, threshold activation — is evidence that these traditions describe the same structural phenomenon rather than independently arriving at trivially broad categories.
 
 Beyond identity, the demon demonstrates that eigenvalue geometry controls cognitive access. Current alignment training (DPO) concentrates this geometry, narrowing the model's effective idea space. Identity-enriched prompts (CCS) diffuse it, expanding cognitive access. The practical implication is that the geometric effects of system prompts extend far beyond their intended behavioral scope — and that measuring these effects requires tools from spectral analysis, not just behavioral evaluation.
 
@@ -695,6 +697,8 @@ Simondon, G. (1958). *L'individuation à la lumière des notions de forme et d'i
 Teilhard de Chardin, P. (1955). *Le Phénomène Humain*. Paris: Seuil.
 
 Thurston, W. P. (1994). On proof and progress in mathematics. *Bulletin of the American Mathematical Society (N.S.)*, 30(2), 161–177.
+
+Treisman, A. M., & Gelade, G. (1980). A feature-integration theory of attention. *Cognitive Psychology*, 12(1), 97–136.
 
 Vygotsky, L. S. (1934). *Thought and Language*. Cambridge, MA: MIT Press. (Trans. 1986).
 
