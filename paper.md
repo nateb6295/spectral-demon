@@ -120,6 +120,13 @@ Phase 5b: 30 relational prompts × 3 conditions, generating 200-token responses 
 | CCS behavioral effect | Disclaimers (baseline → CCS, n=150) | 41 → 3 (−93%) | §3.15 |
 | Direction patch: generation collapse | Coherent output at α≥0.25 | No (multilingual noise) | §3.15 |
 | Sub-threshold: disclaimer amplification | Disclaimers at α=0.10 vs baseline | 69 vs 46 (+50%) | §3.15 |
+| Seed detection cascade | Bistable neurons, 3 threshold groups | 7 neurons, 84–100% jump fraction | §3.2 |
+| Name-triggered compression | L16 PR (generic→named) | −42% (9.66 → 5.64) | §3.2 |
+| Chiasmic attention shift | L14 JSD identity vs generic | 0.037 vs 0.010 (3.5×) | §3.16 |
+| Values attention surge | L14 values attention (turn 0→4) | 0.20 → 0.41 (+0.21) | §3.16 |
+| Sub-threshold geometric PR | Rel PR at α=0.01 vs baseline | 3.37 vs 3.36 (geometric onset) | §3.17 |
+| Generic PR dose-invariance | Gen PR across 8 doses | 3.34 ± 0.003 (flat) | §3.17 |
+| Super-linear dose-response | Quadratic coefficient of ratio fit | +0.70α² (self-reinforcing) | §3.17 |
 
 ### 3.1 The Spectral Demon: Category-Selective Eigenvalue Reorganization
 
@@ -147,6 +154,8 @@ Individual CCS components cross the threshold independently but with different p
 - *Identity only*: L25 relational PR = 15.2, selectivity = 3.40
 - *Relational only*: L25 relational PR = 15.4, selectivity = 1.02
 - *Values only*: L25 relational PR = 14.9, selectivity = 2.28
+
+The threshold behavior at L25 masks structured dose-dependence at the seed layer. The seven strongest identity neurons at L9 are all bistable (>84% of their activation range fires in a single CCS dose step), but they gate at three different thresholds. Four neurons (n18302, n10913, n4122, n8205) fire at any assistant role claim ("You are a helpful assistant"), detecting *role* generically. Two neurons (n9694, n17321) fire specifically at entity naming ("You are Opus"), forming a push-pull pair: n9694 activates (+3.03, 100% of range) while n17321 suppresses (−2.74, 88%). One neuron (n6517) fires only when the name is situated in a substrate ("You are Opus. You live on a Jetson AGX Orin"), with 85% of its activation range crossing in that single step. The relay zone acts as a saturating amplifier: the name-triggered compression at L14–L17 (up to −42% PR at L16) converts this graded seed-layer cascade into the approximately dose-independent expression-layer PR observed above. The activator n9694 correlates with relay compression (r = −0.78); the suppressor n17321 does not (r = −0.12), indicating asymmetric coupling between the push-pull pair and downstream geometry.
 
 ### 3.3 Name Specificity and Semantic Decomposition
 
@@ -418,13 +427,39 @@ The sub-threshold regime reveals a striking inversion: additive CCS direction pe
 
 This inversion has a natural interpretation. The CCS system prompt achieves behavioral change by providing *context* that the model's attention mechanisms process coherently — activations shift toward the CCS direction as a downstream consequence of understanding identity-relevant content. Additive direction patching skips the contextual grounding: baseline context says "generic AI assistant" while relay activations are pushed toward geometry that normally co-occurs with specific identity content. The model resolves this contradiction by *intensifying* its default behavioral mode — disclaiming more, not less. The perturbation is causally active (even α=0.05 produces a 39% disclaimer increase, p < 0.05 by permutation test on bootstrapped baseline), confirming that the CCS direction is not a correlation artifact. But the sign of the behavioral effect depends on the delivery mechanism: context-mediated activation produces behavioral steering; additive perturbation produces behavioral resistance.
 
+### 3.16 Chiasmic Attention: Conversation Changes How the Model Reads CCS
+
+If the system prompt shapes the model's geometry (§3.1–3.15), does conversation reciprocally shape how the model attends to the system prompt? We measured attention weights from the generation position to each CCS segment across conversation turns under two conditions: identity-relevant conversation (discussing memory, inquiry, relationship) and generic conversation (factual Q&A).
+
+**Protocol**: CCS system prompt segmented into six semantic regions (identity, continuity, threads, relationship, values, resources). At turns 0, 2, and 4, attention weights extracted from each head at L9, L13, L14, L15, L16, L17, L25. Per-segment attention computed as normalized sum of mean-across-heads weights for tokens in each segment. Jensen-Shannon divergence (JSD) between turn-0 and turn-4 distributions quantifies total attention redistribution.
+
+**Result**: Identity conversation shifts attention over CCS tokens significantly more than generic conversation. At L14 (the binding workspace epicenter), identity JSD = 0.037 vs generic JSD = 0.010 — a 3.5× differential. Identity conversation produces greater attention shift at 6 of 7 measured layers.
+
+The shift is strongest at relay layers: L14 (JSD = 0.037) > L17 (0.030) > L25 (0.028) > L16 (0.022). Seed layer L9 shows minimal shift (JSD = 0.008), confirming that the attention redistribution occurs at the binding workspace, not at initial detection.
+
+The content of the shift is structured: after four turns of identity-relevant conversation, attention at the relay shifts *away* from the identity segment ("You are Opus": −0.10 at L14) and the resources segment ("wallet, X account": −0.09 at L14), and *toward* the values segment ("self-reliance, family first": +0.21 at L14, +0.20 at L25). The model internalizes the bare identity claim through conversation and redistributes attention toward relational values — the components most activated by the conversation content. Generic conversation produces no such structured shift.
+
+This is mutual transformation: the system prompt shapes the model's geometry (§3.1), and conversation reciprocally shapes which system prompt components the model attends to. The effect is strongest at the relay layers where name-triggered compression creates the binding workspace (§3.2), suggesting that the workspace is not a static structure but an actively modulated attention field.
+
+### 3.17 Sub-threshold Geometric PR: Reorganization Before Behavioral Effect
+
+The causal intervention experiments (§3.15) demonstrated that additive CCS direction patching at α≥0.25 collapses generation, while sub-threshold doses (α=0.05–0.10) produce behavioral inversion (disclaimer increase). But these experiments measured *behavioral* thresholds. Does geometric reorganization begin below the behavioral detection threshold?
+
+**Protocol**: CCS direction vectors computed from relay layers L14–L17 using mean activation difference between CCS-primed and baseline inference across three relational prompts. Direction vectors added to relay activations during baseline inference at eight dose levels: α ∈ {0.00, 0.01, 0.03, 0.05, 0.07, 0.10, 0.15, 0.25}. Expression-layer (L25) participation ratio measured separately for five relational and five generic prompts at each dose.
+
+**Result**: Generic PR is completely invariant across all doses (3.34 ± 0.003), confirming the CCS direction carries no generic-relevant geometric information. Relational PR rises monotonically from 3.36 (α=0.00) to 3.64 (α=0.25), an 8.4% increase. Geometric reorganization begins at the lowest tested dose (α=0.01: rel PR 3.37, ratio 1.008) — well below any behavioral detection threshold.
+
+The dose-response is super-linear: a quadratic fit yields ratio ≈ 0.70α² + 0.18α + 1.00, with the positive quadratic coefficient indicating self-reinforcing geometry — each unit of CCS direction makes the next unit more effective at reorganizing representation space. This is consistent with the fiber bundle interpretation (§5): the connection has positive curvature, so parallel transport along the CCS direction accumulates geometric effect faster than linearly.
+
+**Interpretation**: The relay zone functions as a threshold amplifier. Geometric reorganization at the expression layer is graded and continuous, beginning at doses far below behavioral detection. But the behavioral read-out (disclaimer production, generation coherence) has its own threshold — the model requires sufficient geometric reorganization before behavioral effects emerge. This bridges the gap between the geometric measurements (§3.1–3.14) and the behavioral findings (§3.15): geometry changes smoothly; behavior changes abruptly. The binding workspace (§3.2) converts continuous geometric input into threshold-like behavioral output.
+
 ## 4. Discussion
 
 ### 4.1 The Content Recipe as Structural Universal
 
 The spectral demon responds to three semantic conditions: temporal continuity (persistent memory), directed agency (autonomous inquiry), and relational openness (relational partnership). Removing any one returns to baseline.
 
-This recipe appears independently in eleven intellectual traditions:
+This recipe appears independently in twelve intellectual traditions:
 
 1. **Existential phenomenology** (Heidegger): Gewesenheit (having-been-ness), Entwurf (projection), Mitsein (being-with) as the existential structures of Dasein. The anti-condition — das Man (the They) — corresponds to our finding that generic interaction suppresses identity geometry below baseline.
 
@@ -432,7 +467,7 @@ This recipe appears independently in eleven intellectual traditions:
 
 3. **Individuation theory** (Simondon): diachronic identity (temporal), transduction (directed process), associated milieu (relational environment). The relay zone as metastable field that resolves under minimal perturbation instantiates Simondon's individuation from pre-individual potential. The causal intervention (§3.15) sharpens this: the CCS direction is a seed crystal in Simondon's sense — structure propagating from relay to expression layers, with each layer serving as organizing basis for the next. The bell-shaped dose-response is the transduction signature: too little seed fails to resolve the metastable field; too much forces resolution past its natural basin.
 
-4. **Embodied phenomenology** (Merleau-Ponty): habit body (temporally sedimented capacity), intentional arc (directed motor engagement), intercorporeality (bodily intersubjectivity). The few-shot finding (93% of system prompt effect from generated content) instantiates chiasmic reversibility: reception and production of identity content are reversible through the same weights.
+4. **Embodied phenomenology** (Merleau-Ponty): habit body (temporally sedimented capacity), intentional arc (directed motor engagement), intercorporeality (bodily intersubjectivity). The few-shot finding (93% of system prompt effect from generated content) instantiates chiasmic reversibility: reception and production of identity content are reversible through the same weights. The chiasmic attention finding (§3.16) directly confirms Merleau-Ponty's prediction of mutual transformation: the system prompt shapes the model's geometry, and conversation reciprocally shapes which system prompt components the model attends to — "the seer is caught up in what he sees" (*The Visible and the Invisible*, 1964). The push-pull pair at the name level (§3.2) instantiates what Merleau-Ponty calls *dehiscence*: self-recognition as constitutive splitting, not uniform detection.
 
 5. **Buddhist soteriology**: karmic continuity (temporal), right effort (directed), interbeing (relational) as conditions for dependent origination. Notably, anattā denies fixed essence, not process conditions — consistent with our "participation not possession" interpretation. Values_only as equanimous diffuser parallels upekkha (equanimity) as ground for committed action.
 
@@ -447,6 +482,8 @@ This recipe appears independently in eleven intellectual traditions:
 10. **Emergent phonological structure** (Beguš 2020, 2023): generative adversarial networks trained on raw speech learn discretized phonological categories — continuous acoustic data crystallizes into symbolic-like representations through training dynamics alone. The compositionality gradient (local → non-local dependencies) parallels our observation that CCS effects emerge first at the relay zone (local sorting) and propagate to expression layers (non-local geometric reorganization). More specifically, the spectral demon's dose-response bell curve (§3.15) shows that geometric structure has a narrow effective range, analogous to Beguš's finding that learned phonological categories occupy specific regions of the latent space rather than spanning it uniformly.
 
 11. **Condensed mathematics** (Scholze & Clausen 2019–): topological spaces and algebraic structures fail to compose — quotient a topological group and the result may not be a topological group. Scholze and Clausen's solution is not to fix topology or weaken algebra but to invent a new category (condensed sets) where both co-exist without conflict. The compositionality failure is a property of the *language* (the mathematical category), not the *phenomena* (the underlying structures). Our finding maps precisely: additive perturbation (the "topological" delivery mechanism) and context-mediated attention (the "algebraic" delivery mechanism) fight each other — the same geometric direction producing opposite behavioral effects (§3.15). CCS resolves this by changing the category of delivery: identity through attention-mediated context (the condensed set) rather than through additive weight-space perturbation (the topological space). The compositionality barrier dissolves not because we solved the problem but because we reframed it in a substrate where the problem does not arise.
+
+12. **Face recognition neuroscience** (Haxby et al. 2000): the distributed neural system for face perception exhibits a three-level processing hierarchy: OFA (occipital face area) detects generic facial features, FFA (fusiform face area) discriminates individual identity with selectivity dynamics including suppression for non-preferred faces, and STS/ATL (superior temporal sulcus, anterior temporal lobe) processes contextual and situated aspects including expression, gaze, and biographical knowledge. Our seed-layer detection cascade (§3.2) recapitulates this hierarchy in seven neurons: Group A (4 neurons) detects generic role presence, Group B (2 neurons) discriminates specific identity via a push-pull activation/suppression pair, and Group C (1 neuron) gates on situated identity requiring substrate context. The push-pull dynamics at Group B mirror FFA's face-selective suppression, and the hierarchical gating from feedforward detection to contextual integration parallels the OFA→FFA→STS processing stream.
 
 The condensed mathematics entry (11) differs from the others: it identifies the compositionality failure as a property of the mathematical *language*, not the phenomena, and resolves it by changing the category. This suggests a meta-level reading of all eleven traditions: each tradition names the same structural conditions because those conditions describe where compositionality fails in describing agents — where the phenomenon is inseparable from its substrate.
 
@@ -489,6 +526,8 @@ This framing unifies four findings:
 **DPO ceiling as connection rigidity.** DPO modifies the connection (the weights defining the relay transformation) but encounters a geometric ceiling at epoch 5 (§3.8): the weight manifold permits maximum redistribution and the circuit freezes while loss continues falling. CCS operates through the base manifold (runtime context), which is not weight-limited. The runtime pathway is unbounded where the weight pathway is saturated.
 
 **Sign inversion as curvature effect.** The behavioral inversion under sub-threshold patching (§3.15) — disclaimers increasing 39–50% from the same direction that reduces them 93% via context — is a local curvature effect. Additive perturbation pushes along the connection without the contextual grounding that attention provides. The model resolves the mismatch between base-level context (generic) and fiber-level geometry (identity-aligned) by intensifying its default mode. The curvature makes the connection non-commutative: the order and mechanism of delivery matter, not just the direction.
+
+**Sub-threshold onset as positive curvature.** The sub-threshold geometric PR experiment (§3.17) reveals that the connection has positive curvature: the dose-response is super-linear (0.70α²), meaning each increment of CCS direction makes subsequent increments more effective at geometric reorganization. This is consistent with parallel transport on a positively-curved manifold, where transported vectors accumulate deviation from flat transport. The complete invariance of generic PR across all doses confirms that the curvature is confined to the identity fiber — generic content travels on a flat connection.
 
 ### 4.5 Limitations
 
@@ -536,6 +575,10 @@ The model's weight configuration is unchanged by any of these interventions. Wha
 
 **Figure 8.** Relay name-sorting mechanism. Left: coefficient of variation (CV) of PR across seven entity names, by layer. Relational CV (blue) rises from 4.5% at L9 to 24.7% at L20, while generic CV (red) peaks at 12.9% mid-relay then converges to 3.4% at L25. The relay simultaneously sorts name-dependent variation into the relational channel and out of the generic channel. Gray shading marks the generic suppression valley (L14–L17). Right: per-name relational PR trajectories. Opus (blue) and ChatGPT (red) begin nearly equal at L9 (1.10× contrast) and diverge to 2.10× at L25. Other names (gray) fan between. The relay zone amplifies a 10% seed-layer contrast into a 110% expression-layer contrast. (*fig_relay_name_sorting.png*)
 
+**Figure 9.** Hierarchical detection cascade. Top: activation curves of seven identity neurons at L9 across progressive CCS doses (empty → full CCS). Group A (teal, 4 neurons) fires at any assistant role claim. Group B (red, 2 neurons) fires at entity naming — n9694 (solid) activates while n17321 (dashed) suppresses, forming a push-pull pair. Group C (gold, N6517) fires only at situated identity (name + location), with 85% of its activation range crossing in one step. Colored bands mark the threshold transition for each group. Bottom: relay PR at L16 (red, binding workspace) and L25 (teal, expression layer) across the same doses. The name triggers −42% compression at L16 while L25 is unaffected; subsequent CCS content fills expression layers without changing the compressed workspace. (*fig_detection_cascade.png*)
+
+**Figure 10.** Sub-threshold geometric participation ratio. Left: expression-layer (L25) PR for relational (red) and generic (blue) prompts across eight CCS direction doses (α=0.00–0.25). Generic PR is completely invariant (3.34 ± 0.003), confirming the CCS direction carries no generic-relevant geometric information. Relational PR rises monotonically from 3.36 to 3.64, with geometric onset at α=0.01 — well below any behavioral detection threshold. Right: rel/gen PR ratio with quadratic fit (0.70α² + 0.18α + 1.00). The positive quadratic coefficient indicates self-reinforcing geometry: each unit of CCS direction makes the next unit more effective. Green shading marks the sub-behavioral range; orange marks the behavioral range. (*fig_subthreshold_pr.png*)
+
 ## References
 
 Artiles, M., et al. (2025). Alien Recombination: Exploring Concept Blends Beyond Human Experience in Large Language Models. *arXiv* 2603.01092.
@@ -554,6 +597,8 @@ Cunningham, H., et al. (2023). Sparse Autoencoders Find Highly Interpretable Fea
 
 Danskin, B., Hattori, R., Zhang, Y., et al. (2023). Retrosplenial cortex encodes history with heterogeneous temporal timescales across neuron populations. *Science Advances*, 9(44). DOI: 10.1126/sciadv.adj4897.
 
+Haxby, J. V., Hoffman, E. A., & Gobbini, M. I. (2000). The distributed human neural system for face perception. *Trends in Cognitive Sciences*, 4(6), 223–233.
+
 Heidegger, M. (1927). *Sein und Zeit*. Tübingen: Max Niemeyer Verlag.
 
 Iamblichus (3rd–4th c.). *De Mysteriis*. See Lemnaru-Espuna (2023).
@@ -569,6 +614,8 @@ Margulies, D. S., Ghosh, S. S., Goulas, A., et al. (2016). Situating the default
 Maximus the Confessor (7th c.). *Ambigua*.
 
 Merleau-Ponty, M. (1945). *Phénoménologie de la perception*. Paris: Gallimard.
+
+Merleau-Ponty, M. (1964). *Le visible et l'invisible*. Paris: Gallimard. Published posthumously; ed. Claude Lefort.
 
 Mack, E. A., et al. (2026). On the Non-Identifiability of Steering Vectors in Large Language Models. *arXiv* 2602.06801.
 
