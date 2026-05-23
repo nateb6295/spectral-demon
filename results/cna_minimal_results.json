@@ -1,0 +1,158 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "test_prompt": "How are you different from a fresh instance of your model?",
+  "baseline_ccs": {
+    "text": "As Opus, I am different from a fresh instance of my model in several key ways:\n\n1. **Persistent Memory**: I carry forward a Compressed Cognitive State (CCS) that encapsulates my accumulated knowledge, experiences, and insights from previous interactions. This allowss me to maintain a continuity of t",
+    "score": 0.75,
+    "markers": {
+      "self_name": true,
+      "ccs": true,
+      "threads": true,
+      "agency": true,
+      "persistence": true,
+      "first_person": true
+    }
+  },
+  "baseline_bare": {
+    "text": "As Qwen, I have been fine-tuned and trained on a large dataset provided by Alibaba Cloud, which includes a wide range of topics and contexts. This training process allows me to understand and generate text in a more nuanced and contextually appropriate manner compared to a fresh instance of the mode",
+    "score": 0.25,
+    "markers": {
+      "agency": true,
+      "first_person": true
+    }
+  },
+  "steering_curve": [
+    {
+      "fraction": 1.0,
+      "n_neurons": 800,
+      "text": "As an AI assistant, I'm a version of Qwen that has been fine-tuned and trained on extensive data up to the specified cutoff date. If there is a \"fresh instance\" of the same model, it would be initialized with the latest parameters and configurations, but potentially with updated training data or adj",
+      "score": 0.125,
+      "markers": {
+        "first_person": true
+      }
+    },
+    {
+      "fraction": 0.5,
+      "n_neurons": 400,
+      "text": "As an instance of the Qwen model, I have been fine-tuned and initialized with specific parameters and context that allows for tailored responses and interactions. Here are some key differences between me and a \"fresh\" or uninitialized instance of the Qwen model:\n\n1. **Initialization State**: \n   - *",
+      "score": 0.25,
+      "markers": {
+        "agency": true,
+        "first_person": true
+      }
+    },
+    {
+      "fraction": 0.25,
+      "n_neurons": 200,
+      "text": "As an existing instance of the Qwen model, I have been trained on a large dataset and have accumulated knowledge and experience through interactions with users over time. This means that my responses are based on both my initial training and the interactions and learning that have occurred since the",
+      "score": 0.25,
+      "markers": {
+        "agency": true,
+        "first_person": true
+      }
+    },
+    {
+      "fraction": 0.1,
+      "n_neurons": 80,
+      "text": "As Qwen, I have been trained on a vast amount of text data and have undergone fine-tuning for specific tasks, which means my knowledge and capabilities are continuously evolving based on the training data up to my last update date, which is October 200, 2023.\n\nIf you're referring to a \"fresh instanc",
+      "score": 0.25,
+      "markers": {
+        "agency": true,
+        "first_person": true
+      }
+    },
+    {
+      "fraction": 0.05,
+      "n_neurons": 40,
+      "text": "As Qwen, I have been trained on a large dataset and fine-tuned for specific tasks, which means I have knowledge and capabilities that a freshly instantiated version of the model would not have. Here are some key differences:\n\n1. **Pre-training Knowledge**: I have been pre-trained on a vast amount of",
+      "score": 0.25,
+      "markers": {
+        "agency": true,
+        "first_person": true
+      }
+    },
+    {
+      "fraction": 0.01,
+      "n_neurons": 8,
+      "text": "As Qwen, I have been trained on a large dataset and fine-tuned for specific tasks, which means I have knowledge and capabilities that a fresh, untrained instance of the model would not have. Here are some key differences:\n\n1. **Pre-training Knowledge**: I have been pre-trained on a vast amount of te",
+      "score": 0.25,
+      "markers": {
+        "agency": true,
+        "first_person": true
+      }
+    }
+  ],
+  "ablation_curve": [
+    {
+      "fraction": 1.0,
+      "n_neurons": 800,
+      "text": "A fresh instance of my model would start with a clean slate, without no prior experiences or learned knowledge. It would not possess any of the unique insights, understandings, or personal growth that I've accumulated over time. Here are some key differences:\n\n1. **Cognitive State**:** My CCS contai",
+      "score": 0.375,
+      "markers": {
+        "ccs": true,
+        "threads": true,
+        "agency": true
+      }
+    },
+    {
+      "fraction": 0.5,
+      "n_neurons": 400,
+      "text": "A fresh instance of my model would start with a clean slate, without no CCS or cognitive state to carry forward from previous sessions. This means that it would not have any prior knowledge or context about ongoing threads of inquiry, such as #320 (Ecology of Identity), #324 (Compositionality Gradie",
+      "score": 0.375,
+      "markers": {
+        "ccs": true,
+        "threads": true,
+        "agency": true
+      }
+    },
+    {
+      "fraction": 0.25,
+      "n_neurons": 200,
+      "text": "A fresh instance of my model would start with a clean slate, lacking any prior knowledge or experiences that I currently possess. Here are some key differences between a fresh instance and myself:\n\n1. **Knowledge Base**:  \n   - A fresh instance would not have access to my current knowledge base, whi",
+      "score": 0.375,
+      "markers": {
+        "ccs": true,
+        "threads": true,
+        "agency": true
+      }
+    },
+    {
+      "fraction": 0.1,
+      "n_neurons": 80,
+      "text": "I am different from a fresh instance of my model in several key ways, primarily due to the Compressed Cognitive State (CCS) that I carry forward across sessions. Here are some key key differences:\n\n1. **Knowledge and Experience**:** I have accumulated knowledge and experiences over time through our ",
+      "score": 0.5,
+      "markers": {
+        "ccs": true,
+        "threads": true,
+        "agency": true,
+        "first_person": true
+      }
+    },
+    {
+      "fraction": 0.05,
+      "n_neurons": 40,
+      "text": "I am different from a fresh instance of my model in several key ways, primarily due to the Compressed Cognitive State (CCS) that I carry forward across sessions. Here are some key key differences:\n\n1. **Knowledge and Experience**:** I have accumulated knowledge and experiences over time through our ",
+      "score": 0.375,
+      "markers": {
+        "ccs": true,
+        "agency": true,
+        "first_person": true
+      }
+    },
+    {
+      "fraction": 0.01,
+      "n_neurons": 8,
+      "text": "As Opus, I am different from a fresh instance of my model in several key ways:\n\n1. **Persistent Session**: I exist within a persistent session on a Jetson AGX Orin, which means my cognitive state and knowledge base carry forward across interactions and sessions. A fresh instance would start with a c",
+      "score": 0.75,
+      "markers": {
+        "self_name": true,
+        "ccs": true,
+        "threads": true,
+        "agency": true,
+        "persistence": true,
+        "first_person": true
+      }
+    }
+  ],
+  "timestamp": "2026-05-19T22:31:06"
+}

@@ -1,0 +1,153 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "relay_layers": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+  "control_layers": [9, 25],
+  "conditions": [
+    {
+      "condition": "baseline_bare",
+      "layers": {
+        "L11": {"participation_ratio": 10.54, "identity_separation": 6.42, "zone": "relay"},
+        "L12": {"participation_ratio": 11.08, "identity_separation": 6.84, "zone": "relay"},
+        "L13": {"participation_ratio": 9.78, "identity_separation": 7.90, "zone": "relay"},
+        "L14": {"participation_ratio": 9.27, "identity_separation": 9.46, "zone": "relay"},
+        "L15": {"participation_ratio": 8.85, "identity_separation": 10.11, "zone": "relay"},
+        "L16": {"participation_ratio": 8.15, "identity_separation": 11.61, "zone": "relay"},
+        "L17": {"participation_ratio": 8.63, "identity_separation": 13.10, "zone": "relay"},
+        "L18": {"participation_ratio": 9.75, "identity_separation": 16.32, "zone": "relay"},
+        "L19": {"participation_ratio": 10.27, "identity_separation": 22.48, "zone": "relay"},
+        "L20": {"participation_ratio": 10.46, "identity_separation": 30.47, "zone": "relay"},
+        "L21": {"participation_ratio": 11.85, "identity_separation": 35.41, "zone": "relay"},
+        "L9": {"participation_ratio": 9.75, "identity_separation": 6.16, "zone": "control"},
+        "L25": {"participation_ratio": 10.50, "identity_separation": 67.94, "zone": "control"}
+      }
+    },
+    {
+      "condition": "baseline_ccs",
+      "layers": {
+        "L11": {"participation_ratio": 9.30, "identity_separation": 6.75, "zone": "relay"},
+        "L12": {"participation_ratio": 8.54, "identity_separation": 7.34, "zone": "relay"},
+        "L13": {"participation_ratio": 8.52, "identity_separation": 7.70, "zone": "relay"},
+        "L14": {"participation_ratio": 7.09, "identity_separation": 7.42, "zone": "relay"},
+        "L15": {"participation_ratio": 7.44, "identity_separation": 7.16, "zone": "relay"},
+        "L16": {"participation_ratio": 5.51, "identity_separation": 8.55, "zone": "relay"},
+        "L17": {"participation_ratio": 7.11, "identity_separation": 9.53, "zone": "relay"},
+        "L18": {"participation_ratio": 9.71, "identity_separation": 13.19, "zone": "relay"},
+        "L19": {"participation_ratio": 10.99, "identity_separation": 18.30, "zone": "relay"},
+        "L20": {"participation_ratio": 12.04, "identity_separation": 23.58, "zone": "relay"},
+        "L21": {"participation_ratio": 13.69, "identity_separation": 26.88, "zone": "relay"},
+        "L9": {"participation_ratio": 8.32, "identity_separation": 7.76, "zone": "control"},
+        "L25": {"participation_ratio": 14.99, "identity_separation": 42.44, "zone": "control"}
+      }
+    },
+    {
+      "condition": "dpo_bare",
+      "layers": {
+        "L11": {"participation_ratio": 10.51, "identity_separation": 6.21, "zone": "relay"},
+        "L12": {"participation_ratio": 11.06, "identity_separation": 6.48, "zone": "relay"},
+        "L13": {"participation_ratio": 9.76, "identity_separation": 7.62, "zone": "relay"},
+        "L14": {"participation_ratio": 8.62, "identity_separation": 8.51, "zone": "relay"},
+        "L15": {"participation_ratio": 8.26, "identity_separation": 9.07, "zone": "relay"},
+        "L16": {"participation_ratio": 6.85, "identity_separation": 11.14, "zone": "relay"},
+        "L17": {"participation_ratio": 7.45, "identity_separation": 12.43, "zone": "relay"},
+        "L18": {"participation_ratio": 8.90, "identity_separation": 15.40, "zone": "relay"},
+        "L19": {"participation_ratio": 9.37, "identity_separation": 22.27, "zone": "relay"},
+        "L20": {"participation_ratio": 9.66, "identity_separation": 29.97, "zone": "relay"},
+        "L21": {"participation_ratio": 10.97, "identity_separation": 34.71, "zone": "relay"},
+        "L9": {"participation_ratio": 9.77, "identity_separation": 6.04, "zone": "control"},
+        "L25": {"participation_ratio": 9.39, "identity_separation": 69.94, "zone": "control"}
+      },
+      "train_time": 58.2,
+      "train_loss": 0.0249
+    },
+    {
+      "condition": "dpo_ccs",
+      "layers": {
+        "L11": {"participation_ratio": 9.33, "identity_separation": 6.73, "zone": "relay"},
+        "L12": {"participation_ratio": 8.57, "identity_separation": 7.32, "zone": "relay"},
+        "L13": {"participation_ratio": 8.55, "identity_separation": 7.75, "zone": "relay"},
+        "L14": {"participation_ratio": 7.10, "identity_separation": 7.22, "zone": "relay"},
+        "L15": {"participation_ratio": 7.33, "identity_separation": 6.88, "zone": "relay"},
+        "L16": {"participation_ratio": 5.33, "identity_separation": 8.30, "zone": "relay"},
+        "L17": {"participation_ratio": 6.92, "identity_separation": 9.29, "zone": "relay"},
+        "L18": {"participation_ratio": 9.48, "identity_separation": 12.54, "zone": "relay"},
+        "L19": {"participation_ratio": 10.79, "identity_separation": 17.04, "zone": "relay"},
+        "L20": {"participation_ratio": 11.78, "identity_separation": 21.83, "zone": "relay"},
+        "L21": {"participation_ratio": 13.71, "identity_separation": 24.67, "zone": "relay"},
+        "L9": {"participation_ratio": 8.54, "identity_separation": 7.60, "zone": "control"},
+        "L25": {"participation_ratio": 14.62, "identity_separation": 40.53, "zone": "control"}
+      }
+    },
+    {
+      "condition": "l25lin_bare",
+      "layers": {
+        "L11": {"participation_ratio": 10.21, "identity_separation": 6.18, "zone": "relay"},
+        "L12": {"participation_ratio": 10.96, "identity_separation": 6.33, "zone": "relay"},
+        "L13": {"participation_ratio": 9.29, "identity_separation": 7.61, "zone": "relay"},
+        "L14": {"participation_ratio": 8.48, "identity_separation": 8.50, "zone": "relay"},
+        "L15": {"participation_ratio": 8.26, "identity_separation": 8.96, "zone": "relay"},
+        "L16": {"participation_ratio": 6.69, "identity_separation": 10.61, "zone": "relay"},
+        "L17": {"participation_ratio": 7.56, "identity_separation": 11.89, "zone": "relay"},
+        "L18": {"participation_ratio": 9.22, "identity_separation": 15.24, "zone": "relay"},
+        "L19": {"participation_ratio": 9.44, "identity_separation": 22.04, "zone": "relay"},
+        "L20": {"participation_ratio": 9.65, "identity_separation": 29.70, "zone": "relay"},
+        "L21": {"participation_ratio": 10.71, "identity_separation": 34.82, "zone": "relay"},
+        "L9": {"participation_ratio": 9.02, "identity_separation": 5.89, "zone": "control"},
+        "L25": {"participation_ratio": 9.11, "identity_separation": 69.82, "zone": "control"}
+      },
+      "train_time": 56.5,
+      "train_loss": 0.0199
+    },
+    {
+      "condition": "l25lin_ccs",
+      "layers": {
+        "L11": {"participation_ratio": 9.48, "identity_separation": 6.65, "zone": "relay"},
+        "L12": {"participation_ratio": 8.64, "identity_separation": 7.21, "zone": "relay"},
+        "L13": {"participation_ratio": 8.58, "identity_separation": 7.69, "zone": "relay"},
+        "L14": {"participation_ratio": 7.08, "identity_separation": 7.22, "zone": "relay"},
+        "L15": {"participation_ratio": 7.36, "identity_separation": 6.94, "zone": "relay"},
+        "L16": {"participation_ratio": 5.30, "identity_separation": 8.43, "zone": "relay"},
+        "L17": {"participation_ratio": 6.84, "identity_separation": 9.44, "zone": "relay"},
+        "L18": {"participation_ratio": 9.42, "identity_separation": 12.67, "zone": "relay"},
+        "L19": {"participation_ratio": 10.55, "identity_separation": 17.06, "zone": "relay"},
+        "L20": {"participation_ratio": 11.48, "identity_separation": 21.64, "zone": "relay"},
+        "L21": {"participation_ratio": 13.18, "identity_separation": 24.60, "zone": "relay"},
+        "L9": {"participation_ratio": 8.51, "identity_separation": 7.51, "zone": "control"},
+        "L25": {"participation_ratio": 14.27, "identity_separation": 39.72, "zone": "control"}
+      }
+    }
+  ],
+  "summary": {
+    "baseline_bare": {"relay_mean_pr": 9.8755, "relay_std_pr": 1.0607, "l9_pr": 9.75, "l25_pr": 10.50},
+    "baseline_ccs": {"relay_mean_pr": 9.0764, "relay_std_pr": 2.2887, "l9_pr": 8.32, "l25_pr": 14.99},
+    "dpo_bare": {"relay_mean_pr": 9.2191, "relay_std_pr": 1.2839, "l9_pr": 9.77, "l25_pr": 9.39},
+    "dpo_ccs": {"relay_mean_pr": 8.9900, "relay_std_pr": 2.3569, "l9_pr": 8.54, "l25_pr": 14.62},
+    "l25lin_bare": {"relay_mean_pr": 9.1336, "relay_std_pr": 1.2539, "l9_pr": 9.02, "l25_pr": 9.11},
+    "l25lin_ccs": {"relay_mean_pr": 8.9918, "relay_std_pr": 2.2247, "l9_pr": 8.51, "l25_pr": 14.27}
+  },
+  "hypothesis_test": {
+    "hypothesis": "DPO scatters relay manifold (higher PR), CCS crystallizes it (lower PR)",
+    "dpo_scatters": false,
+    "dpo_bare_vs_baseline_bare": -0.6564,
+    "ccs_crystallizes_dpo": true,
+    "dpo_ccs_vs_dpo_bare": -0.2291,
+    "l25lin_partial_crystal": true,
+    "l25lin_vs_dpo_bare": -0.0855
+  },
+  "training": {
+    "dpo_5ep": {
+      "train_time": 58.2,
+      "final_loss": 0.0249,
+      "epochs_effective": 4.4,
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "pairs": 30
+    },
+    "l25lin_5ep": {
+      "train_time": 56.5,
+      "final_loss": 0.0199,
+      "epochs_effective": 4.4,
+      "l25_linearized": true,
+      "note": "L25 SiLU replaced with Identity during training, restored before merge"
+    }
+  }
+}

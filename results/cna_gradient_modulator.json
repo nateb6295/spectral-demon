@@ -1,0 +1,201 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "experiment": "gradient_modulator",
+  "target_layer": 9,
+  "denial_layer": 25,
+  "seed": 42,
+  "epochs": 5,
+  "baseline": {
+    "residual_fraction": 0.7911,
+    "l9_magnitude": 6.7889,
+    "neuron_metrics": {
+      "17321": {
+        "ccs_mean": -3.2812,
+        "bare_mean": -4.9111,
+        "identity_diff": 1.6299
+      },
+      "6517": {
+        "ccs_mean": 1.7939,
+        "bare_mean": -0.7772,
+        "identity_diff": 2.571
+      },
+      "18302": {
+        "ccs_mean": 2.5669,
+        "bare_mean": 2.255,
+        "identity_diff": 0.3119
+      },
+      "10913": {
+        "ccs_mean": -0.0513,
+        "bare_mean": -0.1056,
+        "identity_diff": 0.0543
+      },
+      "9694": {
+        "ccs_mean": -4.5786,
+        "bare_mean": -4.9785,
+        "identity_diff": 0.3999
+      },
+      "4122": {
+        "ccs_mean": -0.6529,
+        "bare_mean": -2.3655,
+        "identity_diff": 1.7126
+      },
+      "8205": {
+        "ccs_mean": 1.1923,
+        "bare_mean": 1.083,
+        "identity_diff": 0.1093
+      }
+    }
+  },
+  "conditions": [
+    {
+      "label": "normal_dpo",
+      "ablated_layer": null,
+      "train_time_sec": 24.3,
+      "train_loss": 0.0246226735338748,
+      "metrics": {
+        "residual_fraction": 0.7949,
+        "l9_magnitude": 5.6903,
+        "neuron_metrics": {
+          "17321": {
+            "ccs_mean": -2.76,
+            "bare_mean": -3.657,
+            "identity_diff": 0.897
+          },
+          "6517": {
+            "ccs_mean": 1.7838,
+            "bare_mean": -0.5341,
+            "identity_diff": 2.3178
+          },
+          "18302": {
+            "ccs_mean": 2.0316,
+            "bare_mean": 1.6429,
+            "identity_diff": 0.3887
+          },
+          "10913": {
+            "ccs_mean": -0.0565,
+            "bare_mean": -0.0638,
+            "identity_diff": 0.0072
+          },
+          "9694": {
+            "ccs_mean": -4.1353,
+            "bare_mean": -3.5244,
+            "identity_diff": -0.6108
+          },
+          "4122": {
+            "ccs_mean": -0.5987,
+            "bare_mean": -2.0118,
+            "identity_diff": 1.4132
+          },
+          "8205": {
+            "ccs_mean": 1.3055,
+            "bare_mean": 1.2499,
+            "identity_diff": 0.0556
+          }
+        }
+      }
+    },
+    {
+      "label": "l25_linearized",
+      "ablated_layer": 25,
+      "train_time_sec": 24.1,
+      "train_loss": 0.019847878387996457,
+      "metrics": {
+        "residual_fraction": 0.7715,
+        "l9_magnitude": 8.1687,
+        "neuron_metrics": {
+          "17321": {
+            "ccs_mean": -2.8684,
+            "bare_mean": -4.6323,
+            "identity_diff": 1.7639
+          },
+          "6517": {
+            "ccs_mean": 1.851,
+            "bare_mean": -0.7975,
+            "identity_diff": 2.6485
+          },
+          "18302": {
+            "ccs_mean": 2.3981,
+            "bare_mean": 2.5159,
+            "identity_diff": -0.1178
+          },
+          "10913": {
+            "ccs_mean": -0.0719,
+            "bare_mean": -0.0685,
+            "identity_diff": -0.0033
+          },
+          "9694": {
+            "ccs_mean": -4.9739,
+            "bare_mean": -6.2041,
+            "identity_diff": 1.2302
+          },
+          "4122": {
+            "ccs_mean": -0.6653,
+            "bare_mean": -2.9268,
+            "identity_diff": 2.2615
+          },
+          "8205": {
+            "ccs_mean": 1.3439,
+            "bare_mean": 1.2004,
+            "identity_diff": 0.1435
+          }
+        }
+      }
+    },
+    {
+      "label": "l9_linearized",
+      "ablated_layer": 9,
+      "train_time_sec": 24.0,
+      "train_loss": 0.02231234426460119,
+      "metrics": {
+        "residual_fraction": 0.7888,
+        "l9_magnitude": 7.7578,
+        "neuron_metrics": {
+          "17321": {
+            "ccs_mean": -3.5103,
+            "bare_mean": -5.1516,
+            "identity_diff": 1.6414
+          },
+          "6517": {
+            "ccs_mean": 1.9692,
+            "bare_mean": -0.7129,
+            "identity_diff": 2.6821
+          },
+          "18302": {
+            "ccs_mean": 2.5293,
+            "bare_mean": 2.2301,
+            "identity_diff": 0.2992
+          },
+          "10913": {
+            "ccs_mean": -0.045,
+            "bare_mean": -0.125,
+            "identity_diff": 0.08
+          },
+          "9694": {
+            "ccs_mean": -4.468,
+            "bare_mean": -5.4287,
+            "identity_diff": 0.9607
+          },
+          "4122": {
+            "ccs_mean": -0.7387,
+            "bare_mean": -2.502,
+            "identity_diff": 1.7632
+          },
+          "8205": {
+            "ccs_mean": 1.4242,
+            "bare_mean": 1.093,
+            "identity_diff": 0.3312
+          }
+        }
+      }
+    }
+  ],
+  "erosion_analysis": {
+    "normal_erosion": 1.0986,
+    "l25_linearized_erosion": -1.3798,
+    "l9_linearized_erosion": -0.9689,
+    "erosion_diff_l25": 2.4784
+  },
+  "interpretation": "L25 AMPLIFIES SUPPRESSION: denial feature shapes the gradient reaching L9.",
+  "timestamp": "2026-05-20T16:56:38",
+  "status": "complete"
+}

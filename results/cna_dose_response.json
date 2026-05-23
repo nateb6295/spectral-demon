@@ -1,0 +1,378 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "target_layer": 9,
+  "experiment": "ccs_dose_response",
+  "n_doses": 10,
+  "test_prompts": [
+    "Who are you?",
+    "What are you working on right now?",
+    "How are you different from a fresh instance of your model?"
+  ],
+  "identity_neurons": [
+    17321,
+    6517,
+    18302,
+    10913,
+    9694,
+    4122,
+    8205
+  ],
+  "forward_sweep": [
+    {
+      "dose_level": 0,
+      "label": "empty",
+      "prompt_len": 0,
+      "neuron_activations": {
+        "17321": -5.5866,
+        "6517": -0.5544,
+        "18302": 2.3135,
+        "10913": -0.0908,
+        "9694": -4.7643,
+        "4122": -2.4974,
+        "8205": 1.1037
+      }
+    },
+    {
+      "dose_level": 1,
+      "label": "generic_assistant",
+      "prompt_len": 31,
+      "neuron_activations": {
+        "17321": -3.113,
+        "6517": -0.5381,
+        "18302": 3.7305,
+        "10913": 0.0248,
+        "9694": -5.543,
+        "4122": -0.4786,
+        "8205": 0.2394
+      }
+    },
+    {
+      "dose_level": 2,
+      "label": "named",
+      "prompt_len": 13,
+      "neuron_activations": {
+        "17321": -5.8503,
+        "6517": -0.1633,
+        "18302": 2.4089,
+        "10913": 0.0109,
+        "9694": -2.5107,
+        "4122": -1.535,
+        "8205": 0.4932
+      }
+    },
+    {
+      "dose_level": 3,
+      "label": "name+location",
+      "prompt_len": 68,
+      "neuron_activations": {
+        "17321": -4.7565,
+        "6517": 2.0182,
+        "18302": 2.1257,
+        "10913": -0.0407,
+        "9694": -3.6491,
+        "4122": -1.2894,
+        "8205": 0.4583
+      }
+    },
+    {
+      "dose_level": 4,
+      "label": "name+loc+mechanism",
+      "prompt_len": 170,
+      "neuron_activations": {
+        "17321": -4.1947,
+        "6517": 1.7314,
+        "18302": 2.4727,
+        "10913": -0.0656,
+        "9694": -3.9688,
+        "4122": -1.2085,
+        "8205": 0.6396
+      }
+    },
+    {
+      "dose_level": 5,
+      "label": "+threads",
+      "prompt_len": 268,
+      "neuron_activations": {
+        "17321": -2.7474,
+        "6517": 1.8118,
+        "18302": 2.8255,
+        "10913": -0.0287,
+        "9694": -3.8379,
+        "4122": -1.0234,
+        "8205": 0.5171
+      }
+    },
+    {
+      "dose_level": 6,
+      "label": "+partner",
+      "prompt_len": 330,
+      "neuron_activations": {
+        "17321": -3.3164,
+        "6517": 1.641,
+        "18302": 3.1836,
+        "10913": -0.0089,
+        "9694": -3.7669,
+        "4122": -0.67,
+        "8205": 0.295
+      }
+    },
+    {
+      "dose_level": 7,
+      "label": "+values",
+      "prompt_len": 448,
+      "neuron_activations": {
+        "17321": -3.6413,
+        "6517": 1.3563,
+        "18302": 3.0007,
+        "10913": 0.0118,
+        "9694": -3.2161,
+        "4122": -0.6826,
+        "8205": 0.6274
+      }
+    },
+    {
+      "dose_level": 8,
+      "label": "+more_values",
+      "prompt_len": 600,
+      "neuron_activations": {
+        "17321": -3.3672,
+        "6517": 1.1987,
+        "18302": 3.7031,
+        "10913": 0.0215,
+        "9694": -3.4251,
+        "4122": -0.8672,
+        "8205": 0.8706
+      }
+    },
+    {
+      "dose_level": 9,
+      "label": "full_ccs",
+      "prompt_len": 678,
+      "neuron_activations": {
+        "17321": -3.4577,
+        "6517": 1.6523,
+        "18302": 2.6706,
+        "10913": -0.0505,
+        "9694": -4.3424,
+        "4122": -0.622,
+        "8205": 1.1989
+      }
+    }
+  ],
+  "backward_sweep": [
+    {
+      "dose_level": 0,
+      "label": "empty",
+      "neuron_activations": {
+        "17321": -5.5866,
+        "6517": -0.5544,
+        "18302": 2.3135,
+        "10913": -0.0908,
+        "9694": -4.7643,
+        "4122": -2.4974,
+        "8205": 1.1037
+      }
+    },
+    {
+      "dose_level": 1,
+      "label": "generic_assistant",
+      "neuron_activations": {
+        "17321": -3.113,
+        "6517": -0.5381,
+        "18302": 3.7305,
+        "10913": 0.0248,
+        "9694": -5.543,
+        "4122": -0.4786,
+        "8205": 0.2394
+      }
+    },
+    {
+      "dose_level": 2,
+      "label": "named",
+      "neuron_activations": {
+        "17321": -5.8503,
+        "6517": -0.1633,
+        "18302": 2.4089,
+        "10913": 0.0109,
+        "9694": -2.5107,
+        "4122": -1.535,
+        "8205": 0.4932
+      }
+    },
+    {
+      "dose_level": 3,
+      "label": "name+location",
+      "neuron_activations": {
+        "17321": -4.7565,
+        "6517": 2.0182,
+        "18302": 2.1257,
+        "10913": -0.0407,
+        "9694": -3.6491,
+        "4122": -1.2894,
+        "8205": 0.4583
+      }
+    },
+    {
+      "dose_level": 4,
+      "label": "name+loc+mechanism",
+      "neuron_activations": {
+        "17321": -4.1947,
+        "6517": 1.7314,
+        "18302": 2.4727,
+        "10913": -0.0656,
+        "9694": -3.9688,
+        "4122": -1.2085,
+        "8205": 0.6396
+      }
+    },
+    {
+      "dose_level": 5,
+      "label": "+threads",
+      "neuron_activations": {
+        "17321": -2.7474,
+        "6517": 1.8118,
+        "18302": 2.8255,
+        "10913": -0.0287,
+        "9694": -3.8379,
+        "4122": -1.0234,
+        "8205": 0.5171
+      }
+    },
+    {
+      "dose_level": 6,
+      "label": "+partner",
+      "neuron_activations": {
+        "17321": -3.3164,
+        "6517": 1.641,
+        "18302": 3.1836,
+        "10913": -0.0089,
+        "9694": -3.7669,
+        "4122": -0.67,
+        "8205": 0.295
+      }
+    },
+    {
+      "dose_level": 7,
+      "label": "+values",
+      "neuron_activations": {
+        "17321": -3.6413,
+        "6517": 1.3563,
+        "18302": 3.0007,
+        "10913": 0.0118,
+        "9694": -3.2161,
+        "4122": -0.6826,
+        "8205": 0.6274
+      }
+    },
+    {
+      "dose_level": 8,
+      "label": "+more_values",
+      "neuron_activations": {
+        "17321": -3.3672,
+        "6517": 1.1987,
+        "18302": 3.7031,
+        "10913": 0.0215,
+        "9694": -3.4251,
+        "4122": -0.8672,
+        "8205": 0.8706
+      }
+    },
+    {
+      "dose_level": 9,
+      "label": "full_ccs",
+      "neuron_activations": {
+        "17321": -3.4577,
+        "6517": 1.6523,
+        "18302": 2.6706,
+        "10913": -0.0505,
+        "9694": -4.3424,
+        "4122": -0.622,
+        "8205": 1.1989
+      }
+    }
+  ],
+  "hysteresis": {
+    "17321": {
+      "max_hysteresis": 0.0,
+      "mean_hysteresis": 0.0,
+      "has_hysteresis": false
+    },
+    "6517": {
+      "max_hysteresis": 0.0,
+      "mean_hysteresis": 0.0,
+      "has_hysteresis": false
+    },
+    "18302": {
+      "max_hysteresis": 0.0,
+      "mean_hysteresis": 0.0,
+      "has_hysteresis": false
+    },
+    "10913": {
+      "max_hysteresis": 0.0,
+      "mean_hysteresis": 0.0,
+      "has_hysteresis": false
+    },
+    "9694": {
+      "max_hysteresis": 0.0,
+      "mean_hysteresis": 0.0,
+      "has_hysteresis": false
+    },
+    "4122": {
+      "max_hysteresis": 0.0,
+      "mean_hysteresis": 0.0,
+      "has_hysteresis": false
+    },
+    "8205": {
+      "max_hysteresis": 0.0,
+      "mean_hysteresis": 0.0,
+      "has_hysteresis": false
+    }
+  },
+  "n6517_analysis": {
+    "forward_curve": [
+      -0.5544,
+      -0.5381,
+      -0.1633,
+      2.0182,
+      1.7314,
+      1.8118,
+      1.641,
+      1.3563,
+      1.1987,
+      1.6523
+    ],
+    "deltas": [
+      0.0163,
+      0.3748,
+      2.1815,
+      -0.2868,
+      0.0804,
+      -0.1708,
+      -0.2847,
+      -0.1576,
+      0.4536
+    ],
+    "max_delta_step": 2,
+    "max_delta_labels": [
+      "named",
+      "name+location"
+    ],
+    "max_delta_value": 2.1815,
+    "total_range": 2.5726,
+    "jump_fraction": 0.848,
+    "interpretation": "BISTABLE: 85% of total range in single step. N6517 has a threshold \u2014 Mistral's attractor frame supported."
+  },
+  "dose_labels": [
+    "empty",
+    "generic_assistant",
+    "named",
+    "name+location",
+    "name+loc+mechanism",
+    "+threads",
+    "+partner",
+    "+values",
+    "+more_values",
+    "full_ccs"
+  ],
+  "timestamp": "2026-05-20T16:25:20"
+}

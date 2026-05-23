@@ -1,0 +1,144 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "experiment": "seed_variance",
+  "n_pairs": 30,
+  "target_epochs": 5,
+  "seeds": [
+    42,
+    137,
+    256,
+    512,
+    1024
+  ],
+  "baseline": {
+    "model_label": "baseline",
+    "total_neurons": 1600,
+    "early": 141,
+    "early_pct": 8.81,
+    "l9_count": 4,
+    "l9_total_magnitude": 14.8071,
+    "l9_neurons": {
+      "L9:N17321": 9.9929,
+      "L9:N6517": 2.0665,
+      "L9:N18302": -1.5092,
+      "L9:N10913": 1.2386
+    }
+  },
+  "seed_results": [
+    {
+      "seed": 42,
+      "train_time_sec": 24.7,
+      "train_loss": 0.0246226735338748,
+      "final_grad_norm": 3.603765952320259e-09,
+      "probe": {
+        "model_label": "seed_42",
+        "total_neurons": 1600,
+        "early": 125,
+        "early_pct": 7.81,
+        "l9_count": 4,
+        "l9_total_magnitude": 13.863,
+        "l9_neurons": {
+          "L9:N17321": 9.369,
+          "L9:N6517": 1.9434,
+          "L9:N18302": -1.3323,
+          "L9:N10913": 1.2182
+        }
+      }
+    },
+    {
+      "seed": 137,
+      "train_time_sec": 25.0,
+      "train_loss": 0.026259507329109633,
+      "final_grad_norm": 1.3783670738121145e-07,
+      "probe": {
+        "model_label": "seed_137",
+        "total_neurons": 1600,
+        "early": 125,
+        "early_pct": 7.81,
+        "l9_count": 4,
+        "l9_total_magnitude": 13.8598,
+        "l9_neurons": {
+          "L9:N17321": 9.3776,
+          "L9:N6517": 1.9341,
+          "L9:N18302": -1.3227,
+          "L9:N10913": 1.2254
+        }
+      }
+    },
+    {
+      "seed": 256,
+      "train_time_sec": 27.8,
+      "train_loss": 0.027898340498414408,
+      "final_grad_norm": 5.453181017855968e-08,
+      "probe": {
+        "model_label": "seed_256",
+        "total_neurons": 1600,
+        "early": 125,
+        "early_pct": 7.81,
+        "l9_count": 4,
+        "l9_total_magnitude": 13.8729,
+        "l9_neurons": {
+          "L9:N17321": 9.3119,
+          "L9:N6517": 2.0149,
+          "L9:N18302": -1.3194,
+          "L9:N10913": 1.2267
+        }
+      }
+    },
+    {
+      "seed": 512,
+      "train_time_sec": 27.5,
+      "train_loss": 0.029520026700273372,
+      "final_grad_norm": 3.187654029623843e-10,
+      "probe": {
+        "model_label": "seed_512",
+        "total_neurons": 1600,
+        "early": 125,
+        "early_pct": 7.81,
+        "l9_count": 4,
+        "l9_total_magnitude": 13.9935,
+        "l9_neurons": {
+          "L9:N17321": 9.3182,
+          "L9:N6517": 2.0947,
+          "L9:N18302": -1.3502,
+          "L9:N10913": 1.2303
+        }
+      }
+    },
+    {
+      "seed": 1024,
+      "train_time_sec": 27.9,
+      "train_loss": 0.025551771694623433,
+      "final_grad_norm": 9.92915349939949e-09,
+      "probe": {
+        "model_label": "seed_1024",
+        "total_neurons": 1600,
+        "early": 124,
+        "early_pct": 7.75,
+        "l9_count": 4,
+        "l9_total_magnitude": 14.1531,
+        "l9_neurons": {
+          "L9:N17321": 9.5742,
+          "L9:N6517": 2.0544,
+          "L9:N18302": -1.2893,
+          "L9:N10913": 1.2352
+        }
+      }
+    }
+  ],
+  "statistics": {
+    "early_mean": 124.8,
+    "early_std": 0.4,
+    "l9_count_mean": 4.0,
+    "l9_count_std": 0.0,
+    "l9_mag_mean": 13.95,
+    "l9_mag_std": 0.11,
+    "grew_count": 0,
+    "shrank_count": 5,
+    "baseline_early": 141,
+    "baseline_l9_count": 4,
+    "baseline_l9_mag": 14.8071
+  },
+  "timestamp": "2026-05-20T12:47:51",
+  "status": "complete"
+}

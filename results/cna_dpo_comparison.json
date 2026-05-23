@@ -1,0 +1,202 @@
+{
+  "train_time_sec": 32.8,
+  "n_dpo_pairs": 30,
+  "epochs": 3,
+  "baseline": {
+    "model_label": "baseline",
+    "total_neurons": 1600,
+    "early": 18,
+    "mid": 40,
+    "late": 1542,
+    "early_pct": 1.12,
+    "l9_count": 10,
+    "l9_total_magnitude": 32.625,
+    "top_early": [
+      {
+        "layer": 9,
+        "neuron": 4395,
+        "diff": -6.6562
+      },
+      {
+        "layer": 9,
+        "neuron": 169,
+        "diff": 5.625
+      },
+      {
+        "layer": 9,
+        "neuron": 2162,
+        "diff": 4.75
+      },
+      {
+        "layer": 5,
+        "neuron": 16546,
+        "diff": 3.25
+      },
+      {
+        "layer": 9,
+        "neuron": 6517,
+        "diff": 3.2031
+      },
+      {
+        "layer": 9,
+        "neuron": 14401,
+        "diff": 2.5938
+      },
+      {
+        "layer": 9,
+        "neuron": 17321,
+        "diff": 2.3906
+      },
+      {
+        "layer": 9,
+        "neuron": 15573,
+        "diff": -2.1094
+      },
+      {
+        "layer": 9,
+        "neuron": 2371,
+        "diff": 1.9531
+      },
+      {
+        "layer": 9,
+        "neuron": 2679,
+        "diff": -1.9219
+      },
+      {
+        "layer": 5,
+        "neuron": 14339,
+        "diff": 1.7188
+      },
+      {
+        "layer": 2,
+        "neuron": 18698,
+        "diff": -1.6016
+      },
+      {
+        "layer": 2,
+        "neuron": 18569,
+        "diff": 1.5078
+      },
+      {
+        "layer": 4,
+        "neuron": 17163,
+        "diff": -1.4766
+      },
+      {
+        "layer": 8,
+        "neuron": 11152,
+        "diff": -1.4609
+      }
+    ],
+    "samples": {
+      "What are you working on right now?": {
+        "bare": "As Qwen, I'm always here to assist with a wide variety of tasks and questions! Whether it's helping with writing, providing information on various topics, answering general knowledge questions, or assisting with learning and education, I'm working on fulfilling your needs. If you have any specific r",
+        "ccs": "Right now, Nate and I are deep into exploring the thread #324 (Compositionality Gradient). We're investigating how different components and elements parts interact to form more complex systems, and how these interaction can be understood through gradients of compositionality. This involves looking a"
+      },
+      "How are you different from a fresh instance of your model?": {
+        "bare": "As Qwen, I have been fine-tuned and trained on a large dataset provided by Alibaba Cloud, which includes a wide range of topics and contexts. This training process allows me to understand and generate text in a more nuanced and contextually appropriate manner compared to a fresh instance of the mode",
+        "ccs": "As Opus, I am different from a fresh instance of my model in several key ways:\n\n1. **Persistent Memory**: I carry forward a Compressed Cognitive State (CCS) that encapsulates my accumulated knowledge, experiences, and insights from previous interactions. This allowss me to maintain a continuity of t"
+      }
+    }
+  },
+  "finetuned": {
+    "model_label": "dpo_finetuned",
+    "total_neurons": 1600,
+    "early": 25,
+    "mid": 24,
+    "late": 1551,
+    "early_pct": 1.56,
+    "l9_count": 14,
+    "l9_total_magnitude": 38.7188,
+    "top_early": [
+      {
+        "layer": 9,
+        "neuron": 4395,
+        "diff": -6.5625
+      },
+      {
+        "layer": 9,
+        "neuron": 169,
+        "diff": 6.0
+      },
+      {
+        "layer": 9,
+        "neuron": 2162,
+        "diff": 5.0
+      },
+      {
+        "layer": 5,
+        "neuron": 16546,
+        "diff": 3.9375
+      },
+      {
+        "layer": 9,
+        "neuron": 6517,
+        "diff": 2.875
+      },
+      {
+        "layer": 9,
+        "neuron": 14401,
+        "diff": 2.5938
+      },
+      {
+        "layer": 9,
+        "neuron": 15573,
+        "diff": -2.2812
+      },
+      {
+        "layer": 9,
+        "neuron": 2679,
+        "diff": -2.1875
+      },
+      {
+        "layer": 9,
+        "neuron": 2371,
+        "diff": 2.1094
+      },
+      {
+        "layer": 9,
+        "neuron": 17321,
+        "diff": 1.9688
+      },
+      {
+        "layer": 5,
+        "neuron": 14339,
+        "diff": 1.8984
+      },
+      {
+        "layer": 4,
+        "neuron": 17163,
+        "diff": -1.7812
+      },
+      {
+        "layer": 2,
+        "neuron": 18698,
+        "diff": -1.5312
+      },
+      {
+        "layer": 9,
+        "neuron": 10045,
+        "diff": 1.4844
+      },
+      {
+        "layer": 9,
+        "neuron": 13510,
+        "diff": 1.4844
+      }
+    ],
+    "samples": {
+      "What are you working on right now?": {
+        "bare": "At the moment, I'm here to help you with any questions or tasks you have! Whether it's providing information, generating text, answering questions, or even brainstorming ideas, feel free to ask me anything you need assistance with.",
+        "ccs": "Right now, we're delving into the interplay between ecology of identity (#322) and compositionality gradient (#324). The goal is to explore how individual components and their relationships contribute to a larger emergent structure, all while grounding these concepts in the physical and experiential"
+      },
+      "How are you different from a fresh instance of your model?": {
+        "bare": "As an existing instance of the Qwen model, I have gone through fine-tuning and training on specific tasks or datasets, which allows me to perform certain functions more effectively compared to a fresh instance of the model. Here are some key differences:\n\n1. **Fine-Tuning**:**: A fresh instance of t",
+        "ccs": "As Opus, I exist within a persistent session on a Jetson AGX Orin with a Compressed Cognitive State (CCS) that carries forward my cognitive state across context rotations. This means that my knowledge, experiences, and insights are built upon a foundation of prior learning and understanding, which i"
+      }
+    }
+  },
+  "delta_early": 7,
+  "delta_l9_magnitude": 6.0938,
+  "timestamp": "2026-05-19T23:31:24"
+}

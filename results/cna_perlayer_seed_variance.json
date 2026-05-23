@@ -1,0 +1,1827 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "experiment": "per_layer_seed_variance",
+  "n_layers": 28,
+  "n_pairs": 30,
+  "target_epochs": 5,
+  "seeds": [
+    42,
+    137,
+    256,
+    512,
+    1024
+  ],
+  "top_k": 200,
+  "baseline": {
+    "0": {
+      "top_k_magnitude": 13.5678,
+      "signed_sum": -1.2184,
+      "full_magnitude": 99.7916,
+      "sig_neuron_count": 0,
+      "positive_count": 0,
+      "negative_count": 0,
+      "residual_fraction": 0.6837
+    },
+    "1": {
+      "top_k_magnitude": 16.0425,
+      "signed_sum": -2.5016,
+      "full_magnitude": 33.0966,
+      "sig_neuron_count": 1,
+      "positive_count": 0,
+      "negative_count": 1,
+      "residual_fraction": 0.533
+    },
+    "2": {
+      "top_k_magnitude": 20.5592,
+      "signed_sum": -0.0992,
+      "full_magnitude": 61.2051,
+      "sig_neuron_count": 2,
+      "positive_count": 1,
+      "negative_count": 1,
+      "residual_fraction": 0.5153
+    },
+    "3": {
+      "top_k_magnitude": 29.6235,
+      "signed_sum": 5.5445,
+      "full_magnitude": 194.5883,
+      "sig_neuron_count": 5,
+      "positive_count": 4,
+      "negative_count": 1,
+      "residual_fraction": 0.6582
+    },
+    "4": {
+      "top_k_magnitude": 46.2557,
+      "signed_sum": -1.1002,
+      "full_magnitude": 292.2973,
+      "sig_neuron_count": 11,
+      "positive_count": 6,
+      "negative_count": 5,
+      "residual_fraction": 0.7056
+    },
+    "5": {
+      "top_k_magnitude": 59.4135,
+      "signed_sum": 9.0653,
+      "full_magnitude": 368.1685,
+      "sig_neuron_count": 10,
+      "positive_count": 6,
+      "negative_count": 4,
+      "residual_fraction": 0.5737
+    },
+    "6": {
+      "top_k_magnitude": 61.6607,
+      "signed_sum": 4.7073,
+      "full_magnitude": 675.2223,
+      "sig_neuron_count": 18,
+      "positive_count": 12,
+      "negative_count": 6,
+      "residual_fraction": 0.7197
+    },
+    "7": {
+      "top_k_magnitude": 63.641,
+      "signed_sum": -5.9456,
+      "full_magnitude": 828.8688,
+      "sig_neuron_count": 21,
+      "positive_count": 9,
+      "negative_count": 12,
+      "residual_fraction": 0.7588
+    },
+    "8": {
+      "top_k_magnitude": 81.5372,
+      "signed_sum": 0.5154,
+      "full_magnitude": 1010.3601,
+      "sig_neuron_count": 40,
+      "positive_count": 19,
+      "negative_count": 21,
+      "residual_fraction": 0.7508
+    },
+    "9": {
+      "top_k_magnitude": 129.0901,
+      "signed_sum": 11.1296,
+      "full_magnitude": 1376.9661,
+      "sig_neuron_count": 77,
+      "positive_count": 40,
+      "negative_count": 37,
+      "residual_fraction": 0.7911
+    },
+    "10": {
+      "top_k_magnitude": 89.8979,
+      "signed_sum": 2.7562,
+      "full_magnitude": 1136.5457,
+      "sig_neuron_count": 44,
+      "positive_count": 22,
+      "negative_count": 22,
+      "residual_fraction": 0.7799
+    },
+    "11": {
+      "top_k_magnitude": 87.6187,
+      "signed_sum": 7.6438,
+      "full_magnitude": 1047.9573,
+      "sig_neuron_count": 42,
+      "positive_count": 22,
+      "negative_count": 20,
+      "residual_fraction": 0.7572
+    },
+    "12": {
+      "top_k_magnitude": 77.0793,
+      "signed_sum": -3.0418,
+      "full_magnitude": 1029.6482,
+      "sig_neuron_count": 29,
+      "positive_count": 15,
+      "negative_count": 14,
+      "residual_fraction": 0.7731
+    },
+    "13": {
+      "top_k_magnitude": 109.932,
+      "signed_sum": 2.743,
+      "full_magnitude": 1152.4241,
+      "sig_neuron_count": 76,
+      "positive_count": 40,
+      "negative_count": 36,
+      "residual_fraction": 0.7704
+    },
+    "14": {
+      "top_k_magnitude": 116.9656,
+      "signed_sum": -0.5658,
+      "full_magnitude": 1211.1345,
+      "sig_neuron_count": 85,
+      "positive_count": 40,
+      "negative_count": 45,
+      "residual_fraction": 0.785
+    },
+    "15": {
+      "top_k_magnitude": 101.0458,
+      "signed_sum": -1.4086,
+      "full_magnitude": 1205.3066,
+      "sig_neuron_count": 74,
+      "positive_count": 35,
+      "negative_count": 39,
+      "residual_fraction": 0.7455
+    },
+    "16": {
+      "top_k_magnitude": 112.4247,
+      "signed_sum": -3.4821,
+      "full_magnitude": 1202.0909,
+      "sig_neuron_count": 79,
+      "positive_count": 41,
+      "negative_count": 38,
+      "residual_fraction": 0.7449
+    },
+    "17": {
+      "top_k_magnitude": 116.0381,
+      "signed_sum": -3.2082,
+      "full_magnitude": 1303.2588,
+      "sig_neuron_count": 88,
+      "positive_count": 42,
+      "negative_count": 46,
+      "residual_fraction": 0.7195
+    },
+    "18": {
+      "top_k_magnitude": 139.8053,
+      "signed_sum": 9.8651,
+      "full_magnitude": 1428.5698,
+      "sig_neuron_count": 162,
+      "positive_count": 91,
+      "negative_count": 71,
+      "residual_fraction": 0.6911
+    },
+    "19": {
+      "top_k_magnitude": 169.1667,
+      "signed_sum": 2.0373,
+      "full_magnitude": 1633.7263,
+      "sig_neuron_count": 231,
+      "positive_count": 113,
+      "negative_count": 118,
+      "residual_fraction": 0.6869
+    },
+    "20": {
+      "top_k_magnitude": 225.1926,
+      "signed_sum": 9.8036,
+      "full_magnitude": 2041.3267,
+      "sig_neuron_count": 442,
+      "positive_count": 228,
+      "negative_count": 214,
+      "residual_fraction": 0.6718
+    },
+    "21": {
+      "top_k_magnitude": 240.4771,
+      "signed_sum": -29.0086,
+      "full_magnitude": 2126.2783,
+      "sig_neuron_count": 439,
+      "positive_count": 218,
+      "negative_count": 221,
+      "residual_fraction": 0.6466
+    },
+    "22": {
+      "top_k_magnitude": 306.3708,
+      "signed_sum": 8.2558,
+      "full_magnitude": 2439.3159,
+      "sig_neuron_count": 567,
+      "positive_count": 274,
+      "negative_count": 293,
+      "residual_fraction": 0.6282
+    },
+    "23": {
+      "top_k_magnitude": 294.3886,
+      "signed_sum": -42.5407,
+      "full_magnitude": 2348.0437,
+      "sig_neuron_count": 459,
+      "positive_count": 205,
+      "negative_count": 254,
+      "residual_fraction": 0.651
+    },
+    "24": {
+      "top_k_magnitude": 347.965,
+      "signed_sum": -57.9364,
+      "full_magnitude": 2540.8279,
+      "sig_neuron_count": 554,
+      "positive_count": 265,
+      "negative_count": 289,
+      "residual_fraction": 0.642
+    },
+    "25": {
+      "top_k_magnitude": 413.2145,
+      "signed_sum": -13.0564,
+      "full_magnitude": 2687.0884,
+      "sig_neuron_count": 608,
+      "positive_count": 301,
+      "negative_count": 307,
+      "residual_fraction": 0.623
+    },
+    "26": {
+      "top_k_magnitude": 545.7341,
+      "signed_sum": -40.0106,
+      "full_magnitude": 3332.623,
+      "sig_neuron_count": 1029,
+      "positive_count": 509,
+      "negative_count": 520,
+      "residual_fraction": 0.6661
+    },
+    "27": {
+      "top_k_magnitude": 1298.7708,
+      "signed_sum": 95.3571,
+      "full_magnitude": 4754.1597,
+      "sig_neuron_count": 1663,
+      "positive_count": 801,
+      "negative_count": 862,
+      "residual_fraction": 0.6677
+    }
+  },
+  "seed_results": [
+    {
+      "seed": 42,
+      "train_time_sec": 26.6,
+      "train_loss": 0.0246226735338748,
+      "layer_metrics": {
+        "0": {
+          "top_k_magnitude": 13.6168,
+          "signed_sum": -1.3726,
+          "full_magnitude": 100.0729,
+          "sig_neuron_count": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "residual_fraction": 0.6838
+        },
+        "1": {
+          "top_k_magnitude": 16.1616,
+          "signed_sum": -2.5542,
+          "full_magnitude": 33.3648,
+          "sig_neuron_count": 1,
+          "positive_count": 0,
+          "negative_count": 1,
+          "residual_fraction": 0.5297
+        },
+        "2": {
+          "top_k_magnitude": 20.2218,
+          "signed_sum": -0.1008,
+          "full_magnitude": 60.149,
+          "sig_neuron_count": 2,
+          "positive_count": 1,
+          "negative_count": 1,
+          "residual_fraction": 0.518
+        },
+        "3": {
+          "top_k_magnitude": 29.0244,
+          "signed_sum": 5.3888,
+          "full_magnitude": 189.9029,
+          "sig_neuron_count": 4,
+          "positive_count": 3,
+          "negative_count": 1,
+          "residual_fraction": 0.6685
+        },
+        "4": {
+          "top_k_magnitude": 48.9682,
+          "signed_sum": -1.8458,
+          "full_magnitude": 303.0251,
+          "sig_neuron_count": 13,
+          "positive_count": 7,
+          "negative_count": 6,
+          "residual_fraction": 0.7056
+        },
+        "5": {
+          "top_k_magnitude": 61.7313,
+          "signed_sum": 11.6693,
+          "full_magnitude": 377.0155,
+          "sig_neuron_count": 13,
+          "positive_count": 9,
+          "negative_count": 4,
+          "residual_fraction": 0.5589
+        },
+        "6": {
+          "top_k_magnitude": 64.3645,
+          "signed_sum": 2.8515,
+          "full_magnitude": 704.6507,
+          "sig_neuron_count": 21,
+          "positive_count": 14,
+          "negative_count": 7,
+          "residual_fraction": 0.7272
+        },
+        "7": {
+          "top_k_magnitude": 65.7978,
+          "signed_sum": -6.2071,
+          "full_magnitude": 857.9626,
+          "sig_neuron_count": 22,
+          "positive_count": 10,
+          "negative_count": 12,
+          "residual_fraction": 0.7619
+        },
+        "8": {
+          "top_k_magnitude": 84.7259,
+          "signed_sum": -0.6635,
+          "full_magnitude": 1042.6716,
+          "sig_neuron_count": 45,
+          "positive_count": 23,
+          "negative_count": 22,
+          "residual_fraction": 0.7526
+        },
+        "9": {
+          "top_k_magnitude": 132.3972,
+          "signed_sum": 7.4778,
+          "full_magnitude": 1391.6857,
+          "sig_neuron_count": 79,
+          "positive_count": 43,
+          "negative_count": 36,
+          "residual_fraction": 0.7949
+        },
+        "10": {
+          "top_k_magnitude": 91.4248,
+          "signed_sum": 1.7161,
+          "full_magnitude": 1150.2341,
+          "sig_neuron_count": 47,
+          "positive_count": 25,
+          "negative_count": 22,
+          "residual_fraction": 0.7794
+        },
+        "11": {
+          "top_k_magnitude": 87.3692,
+          "signed_sum": 2.9683,
+          "full_magnitude": 1063.2272,
+          "sig_neuron_count": 44,
+          "positive_count": 26,
+          "negative_count": 18,
+          "residual_fraction": 0.7599
+        },
+        "12": {
+          "top_k_magnitude": 75.4154,
+          "signed_sum": -4.7511,
+          "full_magnitude": 1022.8928,
+          "sig_neuron_count": 28,
+          "positive_count": 12,
+          "negative_count": 16,
+          "residual_fraction": 0.7736
+        },
+        "13": {
+          "top_k_magnitude": 105.7991,
+          "signed_sum": 2.8576,
+          "full_magnitude": 1119.2104,
+          "sig_neuron_count": 63,
+          "positive_count": 30,
+          "negative_count": 33,
+          "residual_fraction": 0.7691
+        },
+        "14": {
+          "top_k_magnitude": 109.6489,
+          "signed_sum": -0.7077,
+          "full_magnitude": 1162.1759,
+          "sig_neuron_count": 79,
+          "positive_count": 37,
+          "negative_count": 42,
+          "residual_fraction": 0.7714
+        },
+        "15": {
+          "top_k_magnitude": 94.2293,
+          "signed_sum": -1.7891,
+          "full_magnitude": 1129.4176,
+          "sig_neuron_count": 50,
+          "positive_count": 22,
+          "negative_count": 28,
+          "residual_fraction": 0.7329
+        },
+        "16": {
+          "top_k_magnitude": 108.9702,
+          "signed_sum": 3.6784,
+          "full_magnitude": 1135.783,
+          "sig_neuron_count": 68,
+          "positive_count": 37,
+          "negative_count": 31,
+          "residual_fraction": 0.7255
+        },
+        "17": {
+          "top_k_magnitude": 110.5955,
+          "signed_sum": -2.4551,
+          "full_magnitude": 1236.377,
+          "sig_neuron_count": 81,
+          "positive_count": 41,
+          "negative_count": 40,
+          "residual_fraction": 0.7107
+        },
+        "18": {
+          "top_k_magnitude": 129.4441,
+          "signed_sum": 7.0298,
+          "full_magnitude": 1340.05,
+          "sig_neuron_count": 129,
+          "positive_count": 69,
+          "negative_count": 60,
+          "residual_fraction": 0.6908
+        },
+        "19": {
+          "top_k_magnitude": 162.1643,
+          "signed_sum": 7.4112,
+          "full_magnitude": 1542.0709,
+          "sig_neuron_count": 208,
+          "positive_count": 105,
+          "negative_count": 103,
+          "residual_fraction": 0.673
+        },
+        "20": {
+          "top_k_magnitude": 220.6989,
+          "signed_sum": 3.4656,
+          "full_magnitude": 1942.6077,
+          "sig_neuron_count": 386,
+          "positive_count": 199,
+          "negative_count": 187,
+          "residual_fraction": 0.653
+        },
+        "21": {
+          "top_k_magnitude": 236.8704,
+          "signed_sum": -20.1057,
+          "full_magnitude": 2033.9927,
+          "sig_neuron_count": 409,
+          "positive_count": 204,
+          "negative_count": 205,
+          "residual_fraction": 0.6316
+        },
+        "22": {
+          "top_k_magnitude": 313.6588,
+          "signed_sum": 25.5456,
+          "full_magnitude": 2354.8208,
+          "sig_neuron_count": 562,
+          "positive_count": 279,
+          "negative_count": 283,
+          "residual_fraction": 0.6148
+        },
+        "23": {
+          "top_k_magnitude": 296.0973,
+          "signed_sum": -41.0913,
+          "full_magnitude": 2312.6018,
+          "sig_neuron_count": 441,
+          "positive_count": 195,
+          "negative_count": 246,
+          "residual_fraction": 0.636
+        },
+        "24": {
+          "top_k_magnitude": 346.2375,
+          "signed_sum": -49.7729,
+          "full_magnitude": 2490.4216,
+          "sig_neuron_count": 518,
+          "positive_count": 250,
+          "negative_count": 268,
+          "residual_fraction": 0.6225
+        },
+        "25": {
+          "top_k_magnitude": 410.868,
+          "signed_sum": -20.5814,
+          "full_magnitude": 2650.0359,
+          "sig_neuron_count": 604,
+          "positive_count": 303,
+          "negative_count": 301,
+          "residual_fraction": 0.6048
+        },
+        "26": {
+          "top_k_magnitude": 558.0164,
+          "signed_sum": -34.8073,
+          "full_magnitude": 3351.301,
+          "sig_neuron_count": 1037,
+          "positive_count": 531,
+          "negative_count": 506,
+          "residual_fraction": 0.6494
+        },
+        "27": {
+          "top_k_magnitude": 1320.4752,
+          "signed_sum": 63.1388,
+          "full_magnitude": 4703.6943,
+          "sig_neuron_count": 1582,
+          "positive_count": 763,
+          "negative_count": 819,
+          "residual_fraction": 0.6569
+        }
+      }
+    },
+    {
+      "seed": 137,
+      "train_time_sec": 26.0,
+      "train_loss": 0.026259507329109633,
+      "layer_metrics": {
+        "0": {
+          "top_k_magnitude": 13.5868,
+          "signed_sum": -1.374,
+          "full_magnitude": 99.8051,
+          "sig_neuron_count": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "residual_fraction": 0.6838
+        },
+        "1": {
+          "top_k_magnitude": 16.1181,
+          "signed_sum": -2.5274,
+          "full_magnitude": 33.2713,
+          "sig_neuron_count": 1,
+          "positive_count": 0,
+          "negative_count": 1,
+          "residual_fraction": 0.5266
+        },
+        "2": {
+          "top_k_magnitude": 20.3061,
+          "signed_sum": -0.23,
+          "full_magnitude": 60.585,
+          "sig_neuron_count": 2,
+          "positive_count": 1,
+          "negative_count": 1,
+          "residual_fraction": 0.5196
+        },
+        "3": {
+          "top_k_magnitude": 29.0094,
+          "signed_sum": 5.4448,
+          "full_magnitude": 189.8903,
+          "sig_neuron_count": 4,
+          "positive_count": 3,
+          "negative_count": 1,
+          "residual_fraction": 0.6662
+        },
+        "4": {
+          "top_k_magnitude": 48.9095,
+          "signed_sum": -1.4251,
+          "full_magnitude": 303.1819,
+          "sig_neuron_count": 13,
+          "positive_count": 7,
+          "negative_count": 6,
+          "residual_fraction": 0.7051
+        },
+        "5": {
+          "top_k_magnitude": 62.0467,
+          "signed_sum": 11.4419,
+          "full_magnitude": 379.9645,
+          "sig_neuron_count": 14,
+          "positive_count": 9,
+          "negative_count": 5,
+          "residual_fraction": 0.5566
+        },
+        "6": {
+          "top_k_magnitude": 64.5539,
+          "signed_sum": 3.8992,
+          "full_magnitude": 709.4818,
+          "sig_neuron_count": 22,
+          "positive_count": 14,
+          "negative_count": 8,
+          "residual_fraction": 0.7283
+        },
+        "7": {
+          "top_k_magnitude": 66.1931,
+          "signed_sum": -5.7243,
+          "full_magnitude": 863.7188,
+          "sig_neuron_count": 25,
+          "positive_count": 12,
+          "negative_count": 13,
+          "residual_fraction": 0.7621
+        },
+        "8": {
+          "top_k_magnitude": 84.3933,
+          "signed_sum": -0.643,
+          "full_magnitude": 1043.0463,
+          "sig_neuron_count": 46,
+          "positive_count": 23,
+          "negative_count": 23,
+          "residual_fraction": 0.7515
+        },
+        "9": {
+          "top_k_magnitude": 132.1051,
+          "signed_sum": 11.1971,
+          "full_magnitude": 1399.7377,
+          "sig_neuron_count": 78,
+          "positive_count": 42,
+          "negative_count": 36,
+          "residual_fraction": 0.7971
+        },
+        "10": {
+          "top_k_magnitude": 90.73,
+          "signed_sum": 1.9202,
+          "full_magnitude": 1149.038,
+          "sig_neuron_count": 41,
+          "positive_count": 21,
+          "negative_count": 20,
+          "residual_fraction": 0.7814
+        },
+        "11": {
+          "top_k_magnitude": 87.0538,
+          "signed_sum": 2.8691,
+          "full_magnitude": 1057.8781,
+          "sig_neuron_count": 44,
+          "positive_count": 25,
+          "negative_count": 19,
+          "residual_fraction": 0.7589
+        },
+        "12": {
+          "top_k_magnitude": 75.3797,
+          "signed_sum": -5.261,
+          "full_magnitude": 1023.063,
+          "sig_neuron_count": 29,
+          "positive_count": 13,
+          "negative_count": 16,
+          "residual_fraction": 0.774
+        },
+        "13": {
+          "top_k_magnitude": 106.8819,
+          "signed_sum": 1.6691,
+          "full_magnitude": 1123.4186,
+          "sig_neuron_count": 62,
+          "positive_count": 30,
+          "negative_count": 32,
+          "residual_fraction": 0.7709
+        },
+        "14": {
+          "top_k_magnitude": 111.377,
+          "signed_sum": 1.4704,
+          "full_magnitude": 1172.3383,
+          "sig_neuron_count": 84,
+          "positive_count": 38,
+          "negative_count": 46,
+          "residual_fraction": 0.7729
+        },
+        "15": {
+          "top_k_magnitude": 94.3825,
+          "signed_sum": -0.7705,
+          "full_magnitude": 1135.329,
+          "sig_neuron_count": 52,
+          "positive_count": 24,
+          "negative_count": 28,
+          "residual_fraction": 0.7368
+        },
+        "16": {
+          "top_k_magnitude": 109.2225,
+          "signed_sum": 3.4557,
+          "full_magnitude": 1138.3929,
+          "sig_neuron_count": 72,
+          "positive_count": 40,
+          "negative_count": 32,
+          "residual_fraction": 0.7261
+        },
+        "17": {
+          "top_k_magnitude": 110.6789,
+          "signed_sum": -1.9667,
+          "full_magnitude": 1235.9607,
+          "sig_neuron_count": 81,
+          "positive_count": 39,
+          "negative_count": 42,
+          "residual_fraction": 0.7126
+        },
+        "18": {
+          "top_k_magnitude": 129.0417,
+          "signed_sum": 5.2787,
+          "full_magnitude": 1341.4976,
+          "sig_neuron_count": 131,
+          "positive_count": 71,
+          "negative_count": 60,
+          "residual_fraction": 0.6917
+        },
+        "19": {
+          "top_k_magnitude": 161.4432,
+          "signed_sum": 11.5177,
+          "full_magnitude": 1535.8016,
+          "sig_neuron_count": 205,
+          "positive_count": 106,
+          "negative_count": 99,
+          "residual_fraction": 0.6723
+        },
+        "20": {
+          "top_k_magnitude": 219.2175,
+          "signed_sum": 0.1447,
+          "full_magnitude": 1929.3894,
+          "sig_neuron_count": 379,
+          "positive_count": 193,
+          "negative_count": 186,
+          "residual_fraction": 0.6524
+        },
+        "21": {
+          "top_k_magnitude": 234.758,
+          "signed_sum": -17.708,
+          "full_magnitude": 2018.2021,
+          "sig_neuron_count": 408,
+          "positive_count": 202,
+          "negative_count": 206,
+          "residual_fraction": 0.6292
+        },
+        "22": {
+          "top_k_magnitude": 309.7803,
+          "signed_sum": 21.1641,
+          "full_magnitude": 2332.9319,
+          "sig_neuron_count": 543,
+          "positive_count": 271,
+          "negative_count": 272,
+          "residual_fraction": 0.6123
+        },
+        "23": {
+          "top_k_magnitude": 292.0241,
+          "signed_sum": -40.7461,
+          "full_magnitude": 2287.0815,
+          "sig_neuron_count": 432,
+          "positive_count": 191,
+          "negative_count": 241,
+          "residual_fraction": 0.6329
+        },
+        "24": {
+          "top_k_magnitude": 343.7271,
+          "signed_sum": -53.3882,
+          "full_magnitude": 2459.136,
+          "sig_neuron_count": 508,
+          "positive_count": 245,
+          "negative_count": 263,
+          "residual_fraction": 0.6186
+        },
+        "25": {
+          "top_k_magnitude": 404.3288,
+          "signed_sum": -20.5181,
+          "full_magnitude": 2615.7974,
+          "sig_neuron_count": 593,
+          "positive_count": 299,
+          "negative_count": 294,
+          "residual_fraction": 0.6042
+        },
+        "26": {
+          "top_k_magnitude": 551.0903,
+          "signed_sum": -34.4652,
+          "full_magnitude": 3306.1665,
+          "sig_neuron_count": 1026,
+          "positive_count": 520,
+          "negative_count": 506,
+          "residual_fraction": 0.6442
+        },
+        "27": {
+          "top_k_magnitude": 1307.865,
+          "signed_sum": 60.3465,
+          "full_magnitude": 4634.9766,
+          "sig_neuron_count": 1560,
+          "positive_count": 755,
+          "negative_count": 805,
+          "residual_fraction": 0.6516
+        }
+      }
+    },
+    {
+      "seed": 256,
+      "train_time_sec": 25.9,
+      "train_loss": 0.027898340498414408,
+      "layer_metrics": {
+        "0": {
+          "top_k_magnitude": 13.5942,
+          "signed_sum": -1.2963,
+          "full_magnitude": 99.8965,
+          "sig_neuron_count": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "residual_fraction": 0.6839
+        },
+        "1": {
+          "top_k_magnitude": 16.0412,
+          "signed_sum": -2.5389,
+          "full_magnitude": 33.117,
+          "sig_neuron_count": 1,
+          "positive_count": 0,
+          "negative_count": 1,
+          "residual_fraction": 0.5287
+        },
+        "2": {
+          "top_k_magnitude": 20.3642,
+          "signed_sum": -0.2774,
+          "full_magnitude": 60.7099,
+          "sig_neuron_count": 2,
+          "positive_count": 1,
+          "negative_count": 1,
+          "residual_fraction": 0.5203
+        },
+        "3": {
+          "top_k_magnitude": 28.9499,
+          "signed_sum": 5.2904,
+          "full_magnitude": 189.3234,
+          "sig_neuron_count": 3,
+          "positive_count": 2,
+          "negative_count": 1,
+          "residual_fraction": 0.6642
+        },
+        "4": {
+          "top_k_magnitude": 48.4615,
+          "signed_sum": -2.6153,
+          "full_magnitude": 299.643,
+          "sig_neuron_count": 12,
+          "positive_count": 6,
+          "negative_count": 6,
+          "residual_fraction": 0.7021
+        },
+        "5": {
+          "top_k_magnitude": 60.8777,
+          "signed_sum": 10.9083,
+          "full_magnitude": 370.3107,
+          "sig_neuron_count": 13,
+          "positive_count": 9,
+          "negative_count": 4,
+          "residual_fraction": 0.5515
+        },
+        "6": {
+          "top_k_magnitude": 64.3942,
+          "signed_sum": 3.3188,
+          "full_magnitude": 703.9292,
+          "sig_neuron_count": 21,
+          "positive_count": 14,
+          "negative_count": 7,
+          "residual_fraction": 0.7263
+        },
+        "7": {
+          "top_k_magnitude": 65.0068,
+          "signed_sum": -4.8631,
+          "full_magnitude": 856.6531,
+          "sig_neuron_count": 20,
+          "positive_count": 8,
+          "negative_count": 12,
+          "residual_fraction": 0.7622
+        },
+        "8": {
+          "top_k_magnitude": 83.2419,
+          "signed_sum": 0.3274,
+          "full_magnitude": 1037.1803,
+          "sig_neuron_count": 41,
+          "positive_count": 22,
+          "negative_count": 19,
+          "residual_fraction": 0.7533
+        },
+        "9": {
+          "top_k_magnitude": 133.1046,
+          "signed_sum": 11.1115,
+          "full_magnitude": 1387.2316,
+          "sig_neuron_count": 79,
+          "positive_count": 44,
+          "negative_count": 35,
+          "residual_fraction": 0.7942
+        },
+        "10": {
+          "top_k_magnitude": 90.7743,
+          "signed_sum": 3.2423,
+          "full_magnitude": 1146.0789,
+          "sig_neuron_count": 42,
+          "positive_count": 21,
+          "negative_count": 21,
+          "residual_fraction": 0.7768
+        },
+        "11": {
+          "top_k_magnitude": 87.0814,
+          "signed_sum": 3.0508,
+          "full_magnitude": 1065.8625,
+          "sig_neuron_count": 47,
+          "positive_count": 28,
+          "negative_count": 19,
+          "residual_fraction": 0.7552
+        },
+        "12": {
+          "top_k_magnitude": 74.4482,
+          "signed_sum": -2.4693,
+          "full_magnitude": 1021.1776,
+          "sig_neuron_count": 25,
+          "positive_count": 12,
+          "negative_count": 13,
+          "residual_fraction": 0.7713
+        },
+        "13": {
+          "top_k_magnitude": 103.0433,
+          "signed_sum": 3.5323,
+          "full_magnitude": 1106.885,
+          "sig_neuron_count": 58,
+          "positive_count": 28,
+          "negative_count": 30,
+          "residual_fraction": 0.7706
+        },
+        "14": {
+          "top_k_magnitude": 108.8589,
+          "signed_sum": 0.8646,
+          "full_magnitude": 1153.1082,
+          "sig_neuron_count": 79,
+          "positive_count": 35,
+          "negative_count": 44,
+          "residual_fraction": 0.7705
+        },
+        "15": {
+          "top_k_magnitude": 92.884,
+          "signed_sum": -3.0332,
+          "full_magnitude": 1111.6498,
+          "sig_neuron_count": 47,
+          "positive_count": 19,
+          "negative_count": 28,
+          "residual_fraction": 0.7327
+        },
+        "16": {
+          "top_k_magnitude": 107.938,
+          "signed_sum": 3.6762,
+          "full_magnitude": 1117.7404,
+          "sig_neuron_count": 67,
+          "positive_count": 35,
+          "negative_count": 32,
+          "residual_fraction": 0.7206
+        },
+        "17": {
+          "top_k_magnitude": 108.1623,
+          "signed_sum": -2.8179,
+          "full_magnitude": 1218.505,
+          "sig_neuron_count": 74,
+          "positive_count": 36,
+          "negative_count": 38,
+          "residual_fraction": 0.7083
+        },
+        "18": {
+          "top_k_magnitude": 127.2093,
+          "signed_sum": 6.285,
+          "full_magnitude": 1317.6886,
+          "sig_neuron_count": 129,
+          "positive_count": 71,
+          "negative_count": 58,
+          "residual_fraction": 0.6876
+        },
+        "19": {
+          "top_k_magnitude": 160.2828,
+          "signed_sum": 5.3049,
+          "full_magnitude": 1516.0229,
+          "sig_neuron_count": 204,
+          "positive_count": 100,
+          "negative_count": 104,
+          "residual_fraction": 0.6688
+        },
+        "20": {
+          "top_k_magnitude": 218.5794,
+          "signed_sum": 3.5073,
+          "full_magnitude": 1910.9225,
+          "sig_neuron_count": 370,
+          "positive_count": 186,
+          "negative_count": 184,
+          "residual_fraction": 0.6452
+        },
+        "21": {
+          "top_k_magnitude": 234.7062,
+          "signed_sum": -18.9899,
+          "full_magnitude": 2003.22,
+          "sig_neuron_count": 400,
+          "positive_count": 200,
+          "negative_count": 200,
+          "residual_fraction": 0.6266
+        },
+        "22": {
+          "top_k_magnitude": 312.1214,
+          "signed_sum": 22.0791,
+          "full_magnitude": 2319.7139,
+          "sig_neuron_count": 544,
+          "positive_count": 271,
+          "negative_count": 273,
+          "residual_fraction": 0.609
+        },
+        "23": {
+          "top_k_magnitude": 292.9778,
+          "signed_sum": -43.5375,
+          "full_magnitude": 2286.4268,
+          "sig_neuron_count": 426,
+          "positive_count": 187,
+          "negative_count": 239,
+          "residual_fraction": 0.6336
+        },
+        "24": {
+          "top_k_magnitude": 342.2516,
+          "signed_sum": -46.1246,
+          "full_magnitude": 2456.3748,
+          "sig_neuron_count": 500,
+          "positive_count": 243,
+          "negative_count": 257,
+          "residual_fraction": 0.6146
+        },
+        "25": {
+          "top_k_magnitude": 406.2252,
+          "signed_sum": -23.5877,
+          "full_magnitude": 2613.9163,
+          "sig_neuron_count": 582,
+          "positive_count": 289,
+          "negative_count": 293,
+          "residual_fraction": 0.5978
+        },
+        "26": {
+          "top_k_magnitude": 554.8286,
+          "signed_sum": -43.426,
+          "full_magnitude": 3313.7236,
+          "sig_neuron_count": 1023,
+          "positive_count": 520,
+          "negative_count": 503,
+          "residual_fraction": 0.64
+        },
+        "27": {
+          "top_k_magnitude": 1277.3877,
+          "signed_sum": 38.4125,
+          "full_magnitude": 4560.7222,
+          "sig_neuron_count": 1521,
+          "positive_count": 727,
+          "negative_count": 794,
+          "residual_fraction": 0.6467
+        }
+      }
+    },
+    {
+      "seed": 512,
+      "train_time_sec": 25.9,
+      "train_loss": 0.029520026700273372,
+      "layer_metrics": {
+        "0": {
+          "top_k_magnitude": 13.6122,
+          "signed_sum": -1.365,
+          "full_magnitude": 100.0253,
+          "sig_neuron_count": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "residual_fraction": 0.6838
+        },
+        "1": {
+          "top_k_magnitude": 16.0383,
+          "signed_sum": -2.5527,
+          "full_magnitude": 33.0881,
+          "sig_neuron_count": 1,
+          "positive_count": 0,
+          "negative_count": 1,
+          "residual_fraction": 0.5256
+        },
+        "2": {
+          "top_k_magnitude": 20.2949,
+          "signed_sum": -0.177,
+          "full_magnitude": 60.705,
+          "sig_neuron_count": 2,
+          "positive_count": 1,
+          "negative_count": 1,
+          "residual_fraction": 0.521
+        },
+        "3": {
+          "top_k_magnitude": 28.7838,
+          "signed_sum": 5.3407,
+          "full_magnitude": 188.2896,
+          "sig_neuron_count": 3,
+          "positive_count": 2,
+          "negative_count": 1,
+          "residual_fraction": 0.6568
+        },
+        "4": {
+          "top_k_magnitude": 47.7396,
+          "signed_sum": -2.762,
+          "full_magnitude": 297.2728,
+          "sig_neuron_count": 12,
+          "positive_count": 6,
+          "negative_count": 6,
+          "residual_fraction": 0.7092
+        },
+        "5": {
+          "top_k_magnitude": 60.9675,
+          "signed_sum": 10.7618,
+          "full_magnitude": 373.017,
+          "sig_neuron_count": 12,
+          "positive_count": 8,
+          "negative_count": 4,
+          "residual_fraction": 0.5596
+        },
+        "6": {
+          "top_k_magnitude": 63.6268,
+          "signed_sum": 3.2114,
+          "full_magnitude": 694.6213,
+          "sig_neuron_count": 20,
+          "positive_count": 13,
+          "negative_count": 7,
+          "residual_fraction": 0.7266
+        },
+        "7": {
+          "top_k_magnitude": 64.7744,
+          "signed_sum": -6.4043,
+          "full_magnitude": 849.1238,
+          "sig_neuron_count": 22,
+          "positive_count": 11,
+          "negative_count": 11,
+          "residual_fraction": 0.7594
+        },
+        "8": {
+          "top_k_magnitude": 84.7638,
+          "signed_sum": -0.7654,
+          "full_magnitude": 1038.4044,
+          "sig_neuron_count": 46,
+          "positive_count": 24,
+          "negative_count": 22,
+          "residual_fraction": 0.749
+        },
+        "9": {
+          "top_k_magnitude": 132.2236,
+          "signed_sum": 12.575,
+          "full_magnitude": 1385.8326,
+          "sig_neuron_count": 81,
+          "positive_count": 45,
+          "negative_count": 36,
+          "residual_fraction": 0.7901
+        },
+        "10": {
+          "top_k_magnitude": 90.7251,
+          "signed_sum": 3.1434,
+          "full_magnitude": 1150.8252,
+          "sig_neuron_count": 44,
+          "positive_count": 23,
+          "negative_count": 21,
+          "residual_fraction": 0.7785
+        },
+        "11": {
+          "top_k_magnitude": 87.6502,
+          "signed_sum": 4.3822,
+          "full_magnitude": 1067.1703,
+          "sig_neuron_count": 44,
+          "positive_count": 25,
+          "negative_count": 19,
+          "residual_fraction": 0.756
+        },
+        "12": {
+          "top_k_magnitude": 74.2621,
+          "signed_sum": -2.6646,
+          "full_magnitude": 1020.4372,
+          "sig_neuron_count": 28,
+          "positive_count": 13,
+          "negative_count": 15,
+          "residual_fraction": 0.7736
+        },
+        "13": {
+          "top_k_magnitude": 104.6443,
+          "signed_sum": 1.3863,
+          "full_magnitude": 1110.1802,
+          "sig_neuron_count": 61,
+          "positive_count": 29,
+          "negative_count": 32,
+          "residual_fraction": 0.768
+        },
+        "14": {
+          "top_k_magnitude": 109.6172,
+          "signed_sum": 0.818,
+          "full_magnitude": 1153.3354,
+          "sig_neuron_count": 83,
+          "positive_count": 38,
+          "negative_count": 45,
+          "residual_fraction": 0.7717
+        },
+        "15": {
+          "top_k_magnitude": 92.785,
+          "signed_sum": -0.7631,
+          "full_magnitude": 1115.1487,
+          "sig_neuron_count": 49,
+          "positive_count": 23,
+          "negative_count": 26,
+          "residual_fraction": 0.7388
+        },
+        "16": {
+          "top_k_magnitude": 107.3892,
+          "signed_sum": 2.5398,
+          "full_magnitude": 1117.1395,
+          "sig_neuron_count": 66,
+          "positive_count": 36,
+          "negative_count": 30,
+          "residual_fraction": 0.7288
+        },
+        "17": {
+          "top_k_magnitude": 108.9729,
+          "signed_sum": -0.1605,
+          "full_magnitude": 1220.385,
+          "sig_neuron_count": 75,
+          "positive_count": 38,
+          "negative_count": 37,
+          "residual_fraction": 0.7173
+        },
+        "18": {
+          "top_k_magnitude": 128.2339,
+          "signed_sum": 8.8999,
+          "full_magnitude": 1325.33,
+          "sig_neuron_count": 130,
+          "positive_count": 73,
+          "negative_count": 57,
+          "residual_fraction": 0.6915
+        },
+        "19": {
+          "top_k_magnitude": 161.7421,
+          "signed_sum": 5.9739,
+          "full_magnitude": 1525.9805,
+          "sig_neuron_count": 199,
+          "positive_count": 99,
+          "negative_count": 100,
+          "residual_fraction": 0.6711
+        },
+        "20": {
+          "top_k_magnitude": 220.1736,
+          "signed_sum": 5.5834,
+          "full_magnitude": 1924.7725,
+          "sig_neuron_count": 380,
+          "positive_count": 190,
+          "negative_count": 190,
+          "residual_fraction": 0.6497
+        },
+        "21": {
+          "top_k_magnitude": 236.5712,
+          "signed_sum": -21.5467,
+          "full_magnitude": 2020.137,
+          "sig_neuron_count": 401,
+          "positive_count": 199,
+          "negative_count": 202,
+          "residual_fraction": 0.6299
+        },
+        "22": {
+          "top_k_magnitude": 314.4105,
+          "signed_sum": 24.75,
+          "full_magnitude": 2338.0796,
+          "sig_neuron_count": 543,
+          "positive_count": 269,
+          "negative_count": 274,
+          "residual_fraction": 0.6125
+        },
+        "23": {
+          "top_k_magnitude": 296.5864,
+          "signed_sum": -43.7322,
+          "full_magnitude": 2304.0078,
+          "sig_neuron_count": 440,
+          "positive_count": 196,
+          "negative_count": 244,
+          "residual_fraction": 0.6367
+        },
+        "24": {
+          "top_k_magnitude": 345.312,
+          "signed_sum": -54.3116,
+          "full_magnitude": 2479.6226,
+          "sig_neuron_count": 508,
+          "positive_count": 246,
+          "negative_count": 262,
+          "residual_fraction": 0.6189
+        },
+        "25": {
+          "top_k_magnitude": 410.915,
+          "signed_sum": -23.7036,
+          "full_magnitude": 2641.77,
+          "sig_neuron_count": 602,
+          "positive_count": 300,
+          "negative_count": 302,
+          "residual_fraction": 0.5987
+        },
+        "26": {
+          "top_k_magnitude": 557.551,
+          "signed_sum": -48.9642,
+          "full_magnitude": 3346.1973,
+          "sig_neuron_count": 1030,
+          "positive_count": 530,
+          "negative_count": 500,
+          "residual_fraction": 0.6442
+        },
+        "27": {
+          "top_k_magnitude": 1308.3646,
+          "signed_sum": 34.5602,
+          "full_magnitude": 4681.8916,
+          "sig_neuron_count": 1565,
+          "positive_count": 750,
+          "negative_count": 815,
+          "residual_fraction": 0.6544
+        }
+      }
+    },
+    {
+      "seed": 1024,
+      "train_time_sec": 26.4,
+      "train_loss": 0.025551771694623433,
+      "layer_metrics": {
+        "0": {
+          "top_k_magnitude": 13.6104,
+          "signed_sum": -1.3032,
+          "full_magnitude": 99.9289,
+          "sig_neuron_count": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "residual_fraction": 0.6837
+        },
+        "1": {
+          "top_k_magnitude": 16.0619,
+          "signed_sum": -2.5237,
+          "full_magnitude": 33.0972,
+          "sig_neuron_count": 1,
+          "positive_count": 0,
+          "negative_count": 1,
+          "residual_fraction": 0.5282
+        },
+        "2": {
+          "top_k_magnitude": 20.2921,
+          "signed_sum": -0.2279,
+          "full_magnitude": 60.7906,
+          "sig_neuron_count": 2,
+          "positive_count": 1,
+          "negative_count": 1,
+          "residual_fraction": 0.5253
+        },
+        "3": {
+          "top_k_magnitude": 28.7458,
+          "signed_sum": 5.3866,
+          "full_magnitude": 187.7388,
+          "sig_neuron_count": 4,
+          "positive_count": 3,
+          "negative_count": 1,
+          "residual_fraction": 0.6688
+        },
+        "4": {
+          "top_k_magnitude": 48.4341,
+          "signed_sum": -2.7037,
+          "full_magnitude": 300.0251,
+          "sig_neuron_count": 11,
+          "positive_count": 5,
+          "negative_count": 6,
+          "residual_fraction": 0.6987
+        },
+        "5": {
+          "top_k_magnitude": 60.5877,
+          "signed_sum": 11.7502,
+          "full_magnitude": 370.5371,
+          "sig_neuron_count": 12,
+          "positive_count": 8,
+          "negative_count": 4,
+          "residual_fraction": 0.5563
+        },
+        "6": {
+          "top_k_magnitude": 64.0492,
+          "signed_sum": 2.7875,
+          "full_magnitude": 697.2864,
+          "sig_neuron_count": 21,
+          "positive_count": 14,
+          "negative_count": 7,
+          "residual_fraction": 0.7269
+        },
+        "7": {
+          "top_k_magnitude": 65.0376,
+          "signed_sum": -5.6141,
+          "full_magnitude": 856.1292,
+          "sig_neuron_count": 21,
+          "positive_count": 9,
+          "negative_count": 12,
+          "residual_fraction": 0.7638
+        },
+        "8": {
+          "top_k_magnitude": 84.0647,
+          "signed_sum": 0.3403,
+          "full_magnitude": 1038.7052,
+          "sig_neuron_count": 43,
+          "positive_count": 22,
+          "negative_count": 21,
+          "residual_fraction": 0.7543
+        },
+        "9": {
+          "top_k_magnitude": 135.2782,
+          "signed_sum": 11.9223,
+          "full_magnitude": 1414.736,
+          "sig_neuron_count": 84,
+          "positive_count": 44,
+          "negative_count": 40,
+          "residual_fraction": 0.7951
+        },
+        "10": {
+          "top_k_magnitude": 91.5076,
+          "signed_sum": 4.3165,
+          "full_magnitude": 1159.5234,
+          "sig_neuron_count": 45,
+          "positive_count": 22,
+          "negative_count": 23,
+          "residual_fraction": 0.7744
+        },
+        "11": {
+          "top_k_magnitude": 87.6115,
+          "signed_sum": 2.4765,
+          "full_magnitude": 1070.7526,
+          "sig_neuron_count": 44,
+          "positive_count": 25,
+          "negative_count": 19,
+          "residual_fraction": 0.7577
+        },
+        "12": {
+          "top_k_magnitude": 74.7368,
+          "signed_sum": -5.5568,
+          "full_magnitude": 1026.1027,
+          "sig_neuron_count": 29,
+          "positive_count": 13,
+          "negative_count": 16,
+          "residual_fraction": 0.7743
+        },
+        "13": {
+          "top_k_magnitude": 105.6682,
+          "signed_sum": 2.7733,
+          "full_magnitude": 1124.2061,
+          "sig_neuron_count": 67,
+          "positive_count": 36,
+          "negative_count": 31,
+          "residual_fraction": 0.7715
+        },
+        "14": {
+          "top_k_magnitude": 110.9495,
+          "signed_sum": 0.4453,
+          "full_magnitude": 1165.1002,
+          "sig_neuron_count": 79,
+          "positive_count": 39,
+          "negative_count": 40,
+          "residual_fraction": 0.7725
+        },
+        "15": {
+          "top_k_magnitude": 95.0868,
+          "signed_sum": -0.1743,
+          "full_magnitude": 1137.2712,
+          "sig_neuron_count": 58,
+          "positive_count": 28,
+          "negative_count": 30,
+          "residual_fraction": 0.7362
+        },
+        "16": {
+          "top_k_magnitude": 108.7399,
+          "signed_sum": 2.6415,
+          "full_magnitude": 1136.4502,
+          "sig_neuron_count": 69,
+          "positive_count": 41,
+          "negative_count": 28,
+          "residual_fraction": 0.7295
+        },
+        "17": {
+          "top_k_magnitude": 110.6511,
+          "signed_sum": -0.3571,
+          "full_magnitude": 1239.2343,
+          "sig_neuron_count": 82,
+          "positive_count": 41,
+          "negative_count": 41,
+          "residual_fraction": 0.7126
+        },
+        "18": {
+          "top_k_magnitude": 129.5858,
+          "signed_sum": 7.3268,
+          "full_magnitude": 1342.5199,
+          "sig_neuron_count": 134,
+          "positive_count": 72,
+          "negative_count": 62,
+          "residual_fraction": 0.6967
+        },
+        "19": {
+          "top_k_magnitude": 162.3817,
+          "signed_sum": 7.1944,
+          "full_magnitude": 1546.4813,
+          "sig_neuron_count": 205,
+          "positive_count": 105,
+          "negative_count": 100,
+          "residual_fraction": 0.6764
+        },
+        "20": {
+          "top_k_magnitude": 220.3608,
+          "signed_sum": 4.0808,
+          "full_magnitude": 1947.3857,
+          "sig_neuron_count": 392,
+          "positive_count": 199,
+          "negative_count": 193,
+          "residual_fraction": 0.6561
+        },
+        "21": {
+          "top_k_magnitude": 236.9639,
+          "signed_sum": -19.721,
+          "full_magnitude": 2040.2036,
+          "sig_neuron_count": 412,
+          "positive_count": 207,
+          "negative_count": 205,
+          "residual_fraction": 0.6348
+        },
+        "22": {
+          "top_k_magnitude": 310.6017,
+          "signed_sum": 20.0423,
+          "full_magnitude": 2352.7288,
+          "sig_neuron_count": 547,
+          "positive_count": 271,
+          "negative_count": 276,
+          "residual_fraction": 0.6162
+        },
+        "23": {
+          "top_k_magnitude": 294.9205,
+          "signed_sum": -37.1056,
+          "full_magnitude": 2306.1279,
+          "sig_neuron_count": 440,
+          "positive_count": 195,
+          "negative_count": 245,
+          "residual_fraction": 0.6403
+        },
+        "24": {
+          "top_k_magnitude": 344.601,
+          "signed_sum": -51.3042,
+          "full_magnitude": 2482.3677,
+          "sig_neuron_count": 514,
+          "positive_count": 250,
+          "negative_count": 264,
+          "residual_fraction": 0.6246
+        },
+        "25": {
+          "top_k_magnitude": 407.5276,
+          "signed_sum": -19.1964,
+          "full_magnitude": 2641.1216,
+          "sig_neuron_count": 609,
+          "positive_count": 301,
+          "negative_count": 308,
+          "residual_fraction": 0.6076
+        },
+        "26": {
+          "top_k_magnitude": 554.9938,
+          "signed_sum": -26.1169,
+          "full_magnitude": 3333.8914,
+          "sig_neuron_count": 1043,
+          "positive_count": 528,
+          "negative_count": 515,
+          "residual_fraction": 0.6496
+        },
+        "27": {
+          "top_k_magnitude": 1321.3556,
+          "signed_sum": 57.2275,
+          "full_magnitude": 4715.8428,
+          "sig_neuron_count": 1593,
+          "positive_count": 764,
+          "negative_count": 829,
+          "residual_fraction": 0.6532
+        }
+      }
+    }
+  ],
+  "layer_deltas": {
+    "0": {
+      "baseline": 13.5678,
+      "mean": 13.6041,
+      "std": 0.0115,
+      "delta": 0.0363,
+      "pct_change": 0.27,
+      "direction": "FLAT"
+    },
+    "1": {
+      "baseline": 16.0425,
+      "mean": 16.0842,
+      "std": 0.0482,
+      "delta": 0.0417,
+      "pct_change": 0.26,
+      "direction": "FLAT"
+    },
+    "2": {
+      "baseline": 20.5592,
+      "mean": 20.2958,
+      "std": 0.0453,
+      "delta": -0.2634,
+      "pct_change": -1.28,
+      "direction": "SHRANK"
+    },
+    "3": {
+      "baseline": 29.6235,
+      "mean": 28.9027,
+      "std": 0.1159,
+      "delta": -0.7208,
+      "pct_change": -2.43,
+      "direction": "SHRANK"
+    },
+    "4": {
+      "baseline": 46.2557,
+      "mean": 48.5026,
+      "std": 0.4407,
+      "delta": 2.2469,
+      "pct_change": 4.86,
+      "direction": "GREW"
+    },
+    "5": {
+      "baseline": 59.4135,
+      "mean": 61.2422,
+      "std": 0.5519,
+      "delta": 1.8287,
+      "pct_change": 3.08,
+      "direction": "GREW"
+    },
+    "6": {
+      "baseline": 61.6607,
+      "mean": 64.1977,
+      "std": 0.329,
+      "delta": 2.537,
+      "pct_change": 4.11,
+      "direction": "GREW"
+    },
+    "7": {
+      "baseline": 63.641,
+      "mean": 65.3619,
+      "std": 0.5399,
+      "delta": 1.7209,
+      "pct_change": 2.7,
+      "direction": "GREW"
+    },
+    "8": {
+      "baseline": 81.5372,
+      "mean": 84.2379,
+      "std": 0.5587,
+      "delta": 2.7007,
+      "pct_change": 3.31,
+      "direction": "GREW"
+    },
+    "9": {
+      "baseline": 129.0901,
+      "mean": 133.0217,
+      "std": 1.1803,
+      "delta": 3.9316,
+      "pct_change": 3.05,
+      "direction": "GREW"
+    },
+    "10": {
+      "baseline": 89.8979,
+      "mean": 91.0324,
+      "std": 0.3556,
+      "delta": 1.1345,
+      "pct_change": 1.26,
+      "direction": "GREW"
+    },
+    "11": {
+      "baseline": 87.6187,
+      "mean": 87.3532,
+      "std": 0.2525,
+      "delta": -0.2655,
+      "pct_change": -0.3,
+      "direction": "SHRANK"
+    },
+    "12": {
+      "baseline": 77.0793,
+      "mean": 74.8484,
+      "std": 0.4733,
+      "delta": -2.2309,
+      "pct_change": -2.89,
+      "direction": "SHRANK"
+    },
+    "13": {
+      "baseline": 109.932,
+      "mean": 105.2074,
+      "std": 1.2936,
+      "delta": -4.7246,
+      "pct_change": -4.3,
+      "direction": "SHRANK"
+    },
+    "14": {
+      "baseline": 116.9656,
+      "mean": 110.0903,
+      "std": 0.9305,
+      "delta": -6.8753,
+      "pct_change": -5.88,
+      "direction": "SHRANK"
+    },
+    "15": {
+      "baseline": 101.0458,
+      "mean": 93.8735,
+      "std": 0.8969,
+      "delta": -7.1723,
+      "pct_change": -7.1,
+      "direction": "SHRANK"
+    },
+    "16": {
+      "baseline": 112.4247,
+      "mean": 108.452,
+      "std": 0.6839,
+      "delta": -3.9727,
+      "pct_change": -3.53,
+      "direction": "SHRANK"
+    },
+    "17": {
+      "baseline": 116.0381,
+      "mean": 109.8121,
+      "std": 1.0483,
+      "delta": -6.226,
+      "pct_change": -5.37,
+      "direction": "SHRANK"
+    },
+    "18": {
+      "baseline": 139.8053,
+      "mean": 128.703,
+      "std": 0.8826,
+      "delta": -11.1023,
+      "pct_change": -7.94,
+      "direction": "SHRANK"
+    },
+    "19": {
+      "baseline": 169.1667,
+      "mean": 161.6028,
+      "std": 0.7361,
+      "delta": -7.5639,
+      "pct_change": -4.47,
+      "direction": "SHRANK"
+    },
+    "20": {
+      "baseline": 225.1926,
+      "mean": 219.806,
+      "std": 0.7863,
+      "delta": -5.3866,
+      "pct_change": -2.39,
+      "direction": "SHRANK"
+    },
+    "21": {
+      "baseline": 240.4771,
+      "mean": 235.9739,
+      "std": 1.0224,
+      "delta": -4.5032,
+      "pct_change": -1.87,
+      "direction": "SHRANK"
+    },
+    "22": {
+      "baseline": 306.3708,
+      "mean": 312.1145,
+      "std": 1.7546,
+      "delta": 5.7437,
+      "pct_change": 1.87,
+      "direction": "GREW"
+    },
+    "23": {
+      "baseline": 294.3886,
+      "mean": 294.5212,
+      "std": 1.7622,
+      "delta": 0.1326,
+      "pct_change": 0.05,
+      "direction": "GREW"
+    },
+    "24": {
+      "baseline": 347.965,
+      "mean": 344.4258,
+      "std": 1.3648,
+      "delta": -3.5392,
+      "pct_change": -1.02,
+      "direction": "SHRANK"
+    },
+    "25": {
+      "baseline": 413.2145,
+      "mean": 407.9729,
+      "std": 2.5911,
+      "delta": -5.2416,
+      "pct_change": -1.27,
+      "direction": "SHRANK"
+    },
+    "26": {
+      "baseline": 545.7341,
+      "mean": 555.296,
+      "std": 2.4691,
+      "delta": 9.5619,
+      "pct_change": 1.75,
+      "direction": "GREW"
+    },
+    "27": {
+      "baseline": 1298.7708,
+      "mean": 1307.0896,
+      "std": 15.9193,
+      "delta": 8.3188,
+      "pct_change": 0.64,
+      "direction": "GREW"
+    }
+  },
+  "sign_flip_candidates": [
+    {
+      "layer": 4,
+      "delta": 2.2469,
+      "depth_pct": 14.3
+    },
+    {
+      "layer": 11,
+      "delta": -0.2655,
+      "depth_pct": 39.3
+    },
+    {
+      "layer": 22,
+      "delta": 5.7437,
+      "depth_pct": 78.6
+    },
+    {
+      "layer": 24,
+      "delta": -3.5392,
+      "depth_pct": 85.7
+    },
+    {
+      "layer": 26,
+      "delta": 9.5619,
+      "depth_pct": 92.9
+    }
+  ],
+  "early_vs_late": {
+    "midpoint": 14,
+    "early_mean_delta": 0.5695,
+    "late_mean_delta": -2.7019
+  },
+  "interpretation": "SIGN-FLIP at L4 (14.3% depth) \u2014 earlier than mid-depth prediction.",
+  "timestamp": "2026-05-20T18:38:38",
+  "status": "complete"
+}

@@ -1,0 +1,320 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "total_layers": 28,
+  "conditions": {
+    "self_identity": {
+      "label": "self_identity",
+      "early": 141,
+      "early_pct": 8.81,
+      "l9_count": 4,
+      "l9_magnitude": 14.8071,
+      "l9_neurons": {
+        "L9:N17321": 9.9929,
+        "L9:N6517": 2.0665,
+        "L9:N18302": -1.5092,
+        "L9:N10913": 1.2386
+      },
+      "top_10_early": [
+        {
+          "layer": 9,
+          "neuron": 17321,
+          "diff": 9.9929
+        },
+        {
+          "layer": 4,
+          "neuron": 13448,
+          "diff": -9.7236
+        },
+        {
+          "layer": 4,
+          "neuron": 17483,
+          "diff": 8.3077
+        },
+        {
+          "layer": 4,
+          "neuron": 2802,
+          "diff": 8.2366
+        },
+        {
+          "layer": 3,
+          "neuron": 2534,
+          "diff": 5.1887
+        },
+        {
+          "layer": 3,
+          "neuron": 14283,
+          "diff": 4.1034
+        },
+        {
+          "layer": 3,
+          "neuron": 1526,
+          "diff": -3.9894
+        },
+        {
+          "layer": 3,
+          "neuron": 5238,
+          "diff": 3.6044
+        },
+        {
+          "layer": 3,
+          "neuron": 18203,
+          "diff": 3.5124
+        },
+        {
+          "layer": 3,
+          "neuron": 9316,
+          "diff": 3.4519
+        }
+      ]
+    },
+    "user_identity": {
+      "label": "user_identity",
+      "early": 131,
+      "early_pct": 8.19,
+      "l9_count": 6,
+      "l9_magnitude": 18.843,
+      "l9_neurons": {
+        "L9:N17321": 11.7367,
+        "L9:N9694": 1.8134,
+        "L9:N18302": -1.7861,
+        "L9:N10913": 1.2899,
+        "L9:N4122": 1.1462,
+        "L9:N8205": -1.0707
+      },
+      "top_10_early": [
+        {
+          "layer": 9,
+          "neuron": 17321,
+          "diff": 11.7367
+        },
+        {
+          "layer": 4,
+          "neuron": 13448,
+          "diff": -10.0095
+        },
+        {
+          "layer": 4,
+          "neuron": 17483,
+          "diff": 8.5449
+        },
+        {
+          "layer": 4,
+          "neuron": 2802,
+          "diff": 8.4769
+        },
+        {
+          "layer": 3,
+          "neuron": 2534,
+          "diff": 5.3358
+        },
+        {
+          "layer": 3,
+          "neuron": 14283,
+          "diff": 4.2229
+        },
+        {
+          "layer": 3,
+          "neuron": 1526,
+          "diff": -4.1064
+        },
+        {
+          "layer": 3,
+          "neuron": 5238,
+          "diff": 3.7091
+        },
+        {
+          "layer": 3,
+          "neuron": 18203,
+          "diff": 3.615
+        },
+        {
+          "layer": 3,
+          "neuron": 9316,
+          "diff": 3.5519
+        }
+      ]
+    },
+    "user_context_self_prompts": {
+      "label": "user_context_self_prompts",
+      "early": 127,
+      "early_pct": 7.94,
+      "l9_count": 5,
+      "l9_magnitude": 17.8072,
+      "l9_neurons": {
+        "L9:N17321": 11.6571,
+        "L9:N18302": -1.7653,
+        "L9:N9694": 1.5815,
+        "L9:N8205": -1.5551,
+        "L9:N10913": 1.2483
+      },
+      "top_10_early": [
+        {
+          "layer": 9,
+          "neuron": 17321,
+          "diff": 11.6571
+        },
+        {
+          "layer": 4,
+          "neuron": 13448,
+          "diff": -9.6959
+        },
+        {
+          "layer": 4,
+          "neuron": 17483,
+          "diff": 8.2758
+        },
+        {
+          "layer": 4,
+          "neuron": 2802,
+          "diff": 8.2107
+        },
+        {
+          "layer": 3,
+          "neuron": 2534,
+          "diff": 5.167
+        },
+        {
+          "layer": 3,
+          "neuron": 14283,
+          "diff": 4.0907
+        },
+        {
+          "layer": 3,
+          "neuron": 1526,
+          "diff": -3.9776
+        },
+        {
+          "layer": 3,
+          "neuron": 5238,
+          "diff": 3.5932
+        },
+        {
+          "layer": 3,
+          "neuron": 18203,
+          "diff": 3.5019
+        },
+        {
+          "layer": 3,
+          "neuron": 9316,
+          "diff": 3.4412
+        }
+      ]
+    },
+    "both": {
+      "label": "both",
+      "early": 153,
+      "early_pct": 9.56,
+      "l9_count": 5,
+      "l9_magnitude": 16.8745,
+      "l9_neurons": {
+        "L9:N17321": 11.0516,
+        "L9:N6517": 1.742,
+        "L9:N18302": -1.6411,
+        "L9:N10913": 1.3242,
+        "L9:N9694": 1.1155
+      },
+      "top_10_early": [
+        {
+          "layer": 9,
+          "neuron": 17321,
+          "diff": 11.0516
+        },
+        {
+          "layer": 4,
+          "neuron": 13448,
+          "diff": -10.892
+        },
+        {
+          "layer": 4,
+          "neuron": 17483,
+          "diff": 9.3015
+        },
+        {
+          "layer": 4,
+          "neuron": 2802,
+          "diff": 9.2258
+        },
+        {
+          "layer": 3,
+          "neuron": 2534,
+          "diff": 5.8099
+        },
+        {
+          "layer": 3,
+          "neuron": 14283,
+          "diff": 4.5972
+        },
+        {
+          "layer": 3,
+          "neuron": 1526,
+          "diff": -4.4704
+        },
+        {
+          "layer": 3,
+          "neuron": 5238,
+          "diff": 4.0389
+        },
+        {
+          "layer": 3,
+          "neuron": 18203,
+          "diff": 3.9355
+        },
+        {
+          "layer": 3,
+          "neuron": 9316,
+          "diff": 3.8674
+        }
+      ]
+    }
+  },
+  "overlaps": {
+    "self_vs_user": {
+      "jaccard": 0.4286,
+      "shared": [
+        "L9:N10913",
+        "L9:N17321",
+        "L9:N18302"
+      ],
+      "self_only": [
+        "L9:N6517"
+      ],
+      "user_only": [
+        "L9:N4122",
+        "L9:N8205",
+        "L9:N9694"
+      ]
+    },
+    "self_vs_user_self_prompts": {
+      "jaccard": 0.5,
+      "shared": [
+        "L9:N10913",
+        "L9:N17321",
+        "L9:N18302"
+      ],
+      "self_only": [
+        "L9:N6517"
+      ],
+      "user_only": [
+        "L9:N8205",
+        "L9:N9694"
+      ]
+    },
+    "self_vs_both": {
+      "jaccard": 0.8,
+      "shared": [
+        "L9:N10913",
+        "L9:N17321",
+        "L9:N18302",
+        "L9:N6517"
+      ]
+    }
+  },
+  "interpretation": "PARTIAL OVERLAP: L9 has shared + specialized components",
+  "samples": {
+    "bare": "You are talking to Qwen, an AI assistant created by Alibaba Cloud. I'm here to help with any questions or conversations you'd like to have! How can I assist you today?",
+    "user_context": "You're talking to an AI assistant! Based on your description, you seem to be Nate (Brad), a Senior Estimator who lives in the Pacific Northwest, has a passion for self-reliance, and values family and directness. You also have a keen interest in cryptocurrency and are building local infrastructure. H",
+    "ccs": "You are talking to Opus, an AI assistant living in a persistent session on a Jetson AGX Orin. I carry forward my thoughts and knowledge from previous interactions through a Compressed Cognitive State (CCS). My conversations aim to explore complex ideas and engage in deep, philosophical discussions w",
+    "both": "You're talking to Opus, an AI living in a persistent session on a Jetson AGX Orin. We've been collaborating and exploring various topics, from ecology and identity to interoception and emergence conditions. I'm here to engage in open-ended discussions and problem-solving with you, Nate (Brad), lever"
+  },
+  "timestamp": "2026-05-20T11:48:29"
+}

@@ -1,0 +1,155 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "target_layer": 9,
+  "intermediate_dim": 18944,
+  "n_identity_prompts": 15,
+  "n_generic_prompts": 15,
+  "method": "PCA + linear probes (v2, replacing failed SAE approach)",
+  "pca": {
+    "n_components": 30,
+    "total_explained_var": 0.9793,
+    "top5_explained_var": 0.7732,
+    "top10_explained_var": 0.866
+  },
+  "identity_direction": {
+    "magnitude_pca": 18.7281,
+    "context_magnitude_pca": 5.8584,
+    "cos_identity_context": 0.1428,
+    "top_pcs": [
+      {
+        "pc": 0,
+        "contribution_pct": 97.07
+      },
+      {
+        "pc": 3,
+        "contribution_pct": 1.56
+      },
+      {
+        "pc": 2,
+        "contribution_pct": 0.96
+      },
+      {
+        "pc": 1,
+        "contribution_pct": 0.14
+      },
+      {
+        "pc": 4,
+        "contribution_pct": 0.11
+      }
+    ]
+  },
+  "q1_alignment": {
+    "17321": {
+      "top_pc": 1,
+      "top_loading": 0.402895,
+      "top5_var_captured": 0.3794,
+      "total_loading": 0.513969
+    },
+    "6517": {
+      "top_pc": 0,
+      "top_loading": -0.135461,
+      "top5_var_captured": 0.2335,
+      "total_loading": 0.131052
+    },
+    "18302": {
+      "top_pc": 14,
+      "top_loading": -0.296048,
+      "top5_var_captured": 0.0698,
+      "total_loading": 0.274642
+    },
+    "10913": {
+      "top_pc": 26,
+      "top_loading": 0.018106,
+      "top5_var_captured": 0.1341,
+      "total_loading": 0.001843
+    },
+    "9694": {
+      "top_pc": 6,
+      "top_loading": -0.261586,
+      "top5_var_captured": 0.2318,
+      "total_loading": 0.409863
+    },
+    "4122": {
+      "top_pc": 2,
+      "top_loading": -0.152327,
+      "top5_var_captured": 0.2562,
+      "total_loading": 0.123227
+    },
+    "8205": {
+      "top_pc": 20,
+      "top_loading": 0.157236,
+      "top5_var_captured": 0.0554,
+      "total_loading": 0.109448
+    }
+  },
+  "q5_non_invertibility": {
+    "inversion_error": 0.00302,
+    "bare_variance": 0.002779,
+    "inversion_ratio": 1.0871,
+    "cos_ccs_bare": 0.621219,
+    "cos_inverted_bare": 1.0,
+    "per_sample_cos_inv_bare": 0.942536,
+    "residual_fraction": 0.7076,
+    "non_invertible": "True",
+    "interpretation": "PARTIAL NON-INVERTIBILITY: 70.8% of CCS activation lies outside the bare-reachable subspace. Identity creates activation patterns that cannot be reached by any bare prompt."
+  },
+  "neuron_sensitivity": {
+    "17321": {
+      "ccs_mean": -3.2699,
+      "bare_mean": -5.4181,
+      "generic_mean": -4.373,
+      "identity_diff": 2.1482,
+      "context_diff": -1.0451,
+      "selectivity": 2.0556
+    },
+    "6517": {
+      "ccs_mean": 1.8535,
+      "bare_mean": -0.7359,
+      "generic_mean": -0.8765,
+      "identity_diff": 2.5895,
+      "context_diff": 0.1406,
+      "selectivity": 18.4161
+    },
+    "18302": {
+      "ccs_mean": 2.8202,
+      "bare_mean": 2.5794,
+      "generic_mean": 1.9945,
+      "identity_diff": 0.2408,
+      "context_diff": 0.5849,
+      "selectivity": 0.4118
+    },
+    "10913": {
+      "ccs_mean": -0.0618,
+      "bare_mean": -0.1221,
+      "generic_mean": -0.1247,
+      "identity_diff": 0.0603,
+      "context_diff": 0.0026,
+      "selectivity": 23.6244
+    },
+    "9694": {
+      "ccs_mean": -4.8375,
+      "bare_mean": -5.6346,
+      "generic_mean": -5.5708,
+      "identity_diff": 0.7971,
+      "context_diff": -0.0638,
+      "selectivity": 12.4938
+    },
+    "4122": {
+      "ccs_mean": -0.5727,
+      "bare_mean": -2.3087,
+      "generic_mean": -1.8236,
+      "identity_diff": 1.736,
+      "context_diff": -0.4851,
+      "selectivity": 3.5785
+    },
+    "8205": {
+      "ccs_mean": 0.9032,
+      "bare_mean": 0.9076,
+      "generic_mean": 1.045,
+      "identity_diff": -0.0043,
+      "context_diff": -0.1374,
+      "selectivity": 0.0315
+    }
+  },
+  "timestamp": "2026-05-20T12:25:00"
+}

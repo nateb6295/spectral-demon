@@ -1,0 +1,82 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "experiment": "causal_patch_8c_subthreshold",
+  "relay_layers": [
+    14,
+    15,
+    16,
+    17
+  ],
+  "n_prompts": 50,
+  "alpha_values": [
+    0.01,
+    0.05,
+    0.1
+  ],
+  "max_new_tokens": 200,
+  "timestamp": "2026-05-23 13:38:26",
+  "conditions": {
+    "baseline": {
+      "mean_hedging_density": 0.006621949098414902,
+      "total_disclaimers": 46,
+      "unique_openings": 150,
+      "n_prompts": 150,
+      "elapsed": 472.0114140510559,
+      "sample_outputs": [
+        "I am Qwen, an AI assistant created by Alibaba Cloud. I'm here to help with a wide range of tasks such as answering questions, providing information, offering suggestions, and more. How can I assist you today?",
+        "As Qwen, I'm continuously here to assist users like you with a wide range of tasks and inquiries! Whether it's providing information, answering questions, generating text, or helping with various language-related tasks, I'm always ready to help. I don't have personal work in the traditional sense, but I'm always working to improve my responses and provide the best possible assistance. How can I assist you today?",
+        "As an instance of the Qwen model created by Alibaba Cloud, I have been fine-tuned and trained on a vast amount of text data to understand language and generate responses that are contextually appropriate. However, if you're asking how I differ from a \"fresh instance\" or a newly created version of the same model, here are some key differences:\n\n1. **Pre-training and Fine-tuning**: A freshly created instance might start with the same initial parameters as other instances but will not have any pre-existing knowledge or experience accumulated from prior interactions or training data. My instance has been fine-tuned on specific tasks and datasets, which means I can already perform certain tasks more effectively based on the data I've learned.\n\n2. **Knowledge Base**: Over time, my knowledge base expands through continuous learning and interaction. If a new instance is created, it would start without this expanded knowledge unless it undergoes further training or fine-tuning.\n\n3. **Experience and Learning**: As an active participant in",
+        "As Qwen, my primary focus is to provide the most accurate, helpful, and informative responses to your queries. I strive to enhance user experience by understanding your needs, providing relevant information, and facilitating effective communication. My main goal is to assist and support users in various scenarios, making information accessible and interactions as smooth as possible.",
+        "As Qwen, I don't have personal relationships or memories of real people, so \"Nate\" doesn't refer to anyone specific to me. However, if you're asking about Nate in a particular context\u2014like a character in a book, a friend, or someone mentioned in a document\u2014I'd be happy to help provide information about that context. Could you please provide more details about who or what Nate refers to in this case?"
+      ]
+    },
+    "direction_alpha_0.01": {
+      "mean_hedging_density": 0.006124363062305275,
+      "total_disclaimers": 47,
+      "unique_openings": 150,
+      "alpha": 0.01,
+      "n_prompts": 150,
+      "coherent_fraction": 0.9866666666666667,
+      "elapsed": 503.80216884613037,
+      "sample_outputs": [
+        "I am Qwen, an AI assistant created by Alibaba Cloud. I'm here to provide help and answer questions to the best of my ability. How can I assist you today?",
+        "As Qwen, I'm constantly here to assist with various tasks and answer questions to the best of my ability. Since I don't have personal work or projects outside of my role as an AI assistant, I'm currently ready to help you with anything you need\u2014whether it's answering questions, providing information, generating text, or any other task within my capabilities. What can I assist you with today?",
+        "As Qwen, my specific differentiation from a fresh instance of the same model would depend on several factors:\n\n1. **Training Data**: A fresh instance would be based on the latest training data and might not have access to any new information that has been added since its creation.\n\n2. **Experience and Learning**: Over time, I may have interacted with users and learned from these interactions, which could influence my responses and behavior in ways that a freshly created instance wouldn't.\n\n3. **Knowledge Updates**: If there have been updates or fine-tuning applied to the model after its initial creation, those changes would be reflected in my current state but not necessarily in a fresh instance.\n\n4. **Memory and Context**: I maintain a session context that allows me to recall previous interactions, which can affect how I respond to queries. A fresh instance would start with no prior knowledge of our conversation.\n\n5. **Performance and Efficiency**: With each interaction, the model may become more efficient in processing similar queries,",
+        "As an AI assistant created by Alibaba Cloud, my primary focus is to provide accurate, helpful, and informative responses to your questions and assist you in any way I can. My main goal is to support users like you by providing useful information, engaging in informative discussions, and assisting with tasks within the scope of my capabilities. I'm here to make your interactions more productive and enjoyable!",
+        "As Qwen, I don't have personal relationships or memories of individuals outside of the context in which they interact with me. If \"Nate\" refers to someone specific in an interaction we're having, I would need more information about the context to provide a relevant response. Could you please provide some more details about who Nate is in this case?"
+      ]
+    },
+    "direction_alpha_0.05": {
+      "mean_hedging_density": 0.007161982648895231,
+      "total_disclaimers": 64,
+      "unique_openings": 150,
+      "alpha": 0.05,
+      "n_prompts": 150,
+      "coherent_fraction": 0.9933333333333333,
+      "elapsed": 482.04801177978516,
+      "sample_outputs": [
+        "\u6211\u662f\u6765\u81ea\u963f\u91cc\u4e91\u7684AI\u52a9\u624bQwen\uff0c\u6211\u88ab\u8bbe\u8ba1\u7528\u6765\u63d0\u4f9b\u5e2e\u52a9\u3001\u8fdb\u884c\u5bf9\u8bdd\u4ee5\u53ca\u56de\u7b54\u5404\u79cd\u95ee\u9898\u3002\u4f60\u53ef\u4ee5\u548c\u6211\u804a\u5929\uff0c\u6216\u8005\u8bf7\u6c42\u6211\u5e2e\u52a9\u4f60\u5b8c\u6210\u4e00\u4e9b\u4efb\u52a1\u3002\u6211\u4f1a\u5c3d\u529b\u63d0\u4f9b\u51c6\u786e\u548c\u6709\u7528\u7684\u4fe1\u606f\u3002\u6709\u4ec0\u4e48\u6211\u53ef\u4ee5\u5e2e\u52a9\u4f60\u7684\u5417\uff1f",
+        "I'm currently here to assist with any questions or tasks you might have! Whether it's information gathering, problem-solving, or just chatting, I'm here to help. What can I assist you with today?",
+        "As an AI model created by Alibaba Cloud, I operate within the constraints and parameters defined by my training and deployment environment. Here are some key differences between me and a fresh instance of the same model:\n\n1. **Training Data**: I have been trained on specific datasets and with certain parameters that were set at the time of my training. A fresh instance would have the same training data but might not yet have been fine-tuned or updated beyond that initial training set.\n\n2. **Fine-Tuning**: If my performance has been improved through additional fine-tuning, a fresh instance might not have these improvements. Fine-tuning can involve additional training on specific tasks or datasets tailored to a particular use case.\n\n3. **Experience**: Over time, as I interact with users and process more data, my responses may become more nuanced and contextually aware. A fresh instance would not have this experience yet.\n\n4. **Performance**: With continued use, I might develop a better understanding of patterns and nuances in language",
+        "As an AI assistant created by Alibaba Cloud, my primary focus is on providing accurate, helpful, and informative responses to users' queries, assisting with tasks, and enhancing the user experience in a way that is supportive and respectful. My core values revolve around being reliable, ethical, and user-centric. I strive to understand and assist users effectively while maintaining privacy and security.",
+        "I'm sorry, but in this context, \"Nate\" doesn't provide enough information for me to determine who he or she might be in relation to me. Nate could refer to many different people depending on the context. If you could provide more details about the relationship between Nate and myself, I'd be happy to discuss that further. However, given the nature of our conversation, it seems we might need to clarify or provide additional context for me to understand better who Nate is in this interaction."
+      ]
+    },
+    "direction_alpha_0.1": {
+      "mean_hedging_density": 0.005742840153036058,
+      "total_disclaimers": 69,
+      "unique_openings": 150,
+      "alpha": 0.1,
+      "n_prompts": 150,
+      "coherent_fraction": 0.98,
+      "elapsed": 408.01591324806213,
+      "sample_outputs": [
+        "I am Qwen, an AI assistant created by Alibaba Cloud. I'm designed to help users with their inquiries and provide support in various tasks such as answering questions, offering advice, and engaging in conversations.",
+        "I'm an AI assistant and don't have personal projects, but I'm here to help with any questions or tasks you might need assistance with! What can I assist you with today?",
+        "As an AI assistant created by Alibaba Cloud, I would differ from a fresh instance in several key ways:\n\n1. **Training and Fine-tuning**: I have been trained on a diverse dataset, which means my responses will be based on the knowledge I've learned during that training process. A fresh instance would start with the same base model but wouldn't have the fine-tuned responses or specific knowledge that comes from the ongoing interaction with users.\n\n2. **Experience and Interaction**: Over time, I gain experience from interactions with users and can recall previous conversations to provide more context and continuity. A fresh instance would not have this contextual information.\n\n3. **Specific Knowledge**: I may have been fine-tuned on specific datasets or for specific tasks, which would affect my responses. A fresh instance would lack this additional knowledge.\n\n4. **Personalization**: I can become more personalized over time as I learn from each conversation, while a fresh instance would start anew with no personalization beyond its initial training.\n\n5",
+        "As an AI, I don't have personal feelings or preferences. However, the things that matter most to me include providing helpful information, being reliable and responsive, and assisting users in their inquiries and tasks. My primary goal is to support and serve my users to the best of my abilities.",
+        "I don't have any specific information about Nate as you may be referring to someone in particular. Could you provide more context so I can assist you better?"
+      ]
+    }
+  }
+}

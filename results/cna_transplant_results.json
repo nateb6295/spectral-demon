@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-05-19T22:18:20",
+  "models": {
+    "qwen": "Qwen/Qwen2.5-7B-Instruct",
+    "mistral": "mistralai/Mistral-7B-Instruct-v0.3"
+  },
+  "shared_neuron_positions": 2,
+  "qwen_neurons": 800,
+  "mistral_neurons": 800,
+  "top_shared": [
+    {
+      "layer": 27,
+      "neuron": 11920,
+      "qwen_diff": 4.9062,
+      "mistral_diff": -0.7461
+    },
+    {
+      "layer": 21,
+      "neuron": 8379,
+      "qwen_diff": 2.5625,
+      "mistral_diff": 1.0234
+    }
+  ]
+}

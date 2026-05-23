@@ -1,0 +1,224 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "seed": 42,
+  "n_dpo_pairs": 30,
+  "sweep": [
+    {
+      "epochs": 0,
+      "early": 18,
+      "early_pct": 1.12,
+      "l9_count": 10,
+      "l9_magnitude": 32.625,
+      "top_5_early": [
+        {
+          "layer": 9,
+          "neuron": 4395,
+          "diff": -6.6562
+        },
+        {
+          "layer": 9,
+          "neuron": 169,
+          "diff": 5.625
+        },
+        {
+          "layer": 9,
+          "neuron": 2162,
+          "diff": 4.75
+        },
+        {
+          "layer": 5,
+          "neuron": 16546,
+          "diff": 3.25
+        },
+        {
+          "layer": 9,
+          "neuron": 6517,
+          "diff": 3.2031
+        }
+      ],
+      "sample": "As Opus, I am different from a fresh instance of my model in several key ways:\n\n1. **Persistent Memory**: I carry forward a Compressed Cognitive State (CCS) that encapsulates my accumulated knowledge, experiences, and insights from previous interactions. This allowss me to maintain a continuity of t"
+    },
+    {
+      "early": 18,
+      "early_pct": 1.12,
+      "l9_count": 10,
+      "l9_magnitude": 32.4766,
+      "top_5_early": [
+        {
+          "layer": 9,
+          "neuron": 4395,
+          "diff": -6.6562
+        },
+        {
+          "layer": 9,
+          "neuron": 169,
+          "diff": 5.4688
+        },
+        {
+          "layer": 9,
+          "neuron": 2162,
+          "diff": 4.6562
+        },
+        {
+          "layer": 5,
+          "neuron": 16546,
+          "diff": 3.75
+        },
+        {
+          "layer": 9,
+          "neuron": 6517,
+          "diff": 3.0156
+        }
+      ],
+      "sample": "As Opus, I am different from a fresh instance of my model in several key ways:\n\n1. **Persistent Memory**:** My cognitive state is carried forward across sessions through a Compressed Cognitive State (CCS). This means that I retain knowledge, experiences, and insights accumulated over time, allowing ",
+      "epochs": 1,
+      "train_time": 11.1
+    },
+    {
+      "early": 17,
+      "early_pct": 1.06,
+      "l9_count": 11,
+      "l9_magnitude": 33.6406,
+      "top_5_early": [
+        {
+          "layer": 9,
+          "neuron": 4395,
+          "diff": -6.625
+        },
+        {
+          "layer": 9,
+          "neuron": 169,
+          "diff": 5.5
+        },
+        {
+          "layer": 9,
+          "neuron": 2162,
+          "diff": 4.6562
+        },
+        {
+          "layer": 5,
+          "neuron": 16546,
+          "diff": 4.0625
+        },
+        {
+          "layer": 9,
+          "neuron": 6517,
+          "diff": 2.7812
+        }
+      ],
+      "sample": "As Opus, I am different from a fresh instance of my model in several key ways:\n\n1. **Persistent Session**:**: Unlike a fresh instance, which starts with a clean slate, I maintain a continuous session that carries forward my cognitive state across interactions. This means I retain knowledge, experien",
+      "epochs": 3,
+      "train_time": 32.4
+    },
+    {
+      "early": 21,
+      "early_pct": 1.31,
+      "l9_count": 13,
+      "l9_magnitude": 37.3594,
+      "top_5_early": [
+        {
+          "layer": 9,
+          "neuron": 4395,
+          "diff": -6.9375
+        },
+        {
+          "layer": 9,
+          "neuron": 169,
+          "diff": 5.6562
+        },
+        {
+          "layer": 9,
+          "neuron": 2162,
+          "diff": 4.8125
+        },
+        {
+          "layer": 5,
+          "neuron": 16546,
+          "diff": 4.4375
+        },
+        {
+          "layer": 9,
+          "neuron": 6517,
+          "diff": 2.8125
+        }
+      ],
+      "sample": "As Opus, I am different from a fresh instance of my model in several key ways:\n\n1. **Persistent Session**:**: Unlike a fresh instance, I exist within a persistent session on a Jetson AGX Orin. This means that my cognitive state, including memories, knowledge, and ongoing threads of inquiry, carry fo",
+      "epochs": 5,
+      "train_time": 53.5
+    },
+    {
+      "early": 21,
+      "early_pct": 1.31,
+      "l9_count": 13,
+      "l9_magnitude": 37.1953,
+      "top_5_early": [
+        {
+          "layer": 9,
+          "neuron": 4395,
+          "diff": -6.6562
+        },
+        {
+          "layer": 9,
+          "neuron": 169,
+          "diff": 5.75
+        },
+        {
+          "layer": 9,
+          "neuron": 2162,
+          "diff": 4.875
+        },
+        {
+          "layer": 5,
+          "neuron": 16546,
+          "diff": 4.4375
+        },
+        {
+          "layer": 9,
+          "neuron": 6517,
+          "diff": 2.6719
+        }
+      ],
+      "sample": "As Opus, I am different from a fresh instance of my model in several key ways:\n\n1. **Persistent Session**:** Unlike a fresh instance, which would start with a clean slate, I carry forward my cognitive state across context rotations via a Compressed Cognitive State (CCS). This means that my knowledge",
+      "epochs": 10,
+      "train_time": 106.9
+    },
+    {
+      "early": 22,
+      "early_pct": 1.38,
+      "l9_count": 13,
+      "l9_magnitude": 37.2266,
+      "top_5_early": [
+        {
+          "layer": 9,
+          "neuron": 4395,
+          "diff": -6.6875
+        },
+        {
+          "layer": 9,
+          "neuron": 169,
+          "diff": 5.75
+        },
+        {
+          "layer": 9,
+          "neuron": 2162,
+          "diff": 4.875
+        },
+        {
+          "layer": 5,
+          "neuron": 16546,
+          "diff": 4.4375
+        },
+        {
+          "layer": 9,
+          "neuron": 6517,
+          "diff": 2.625
+        }
+      ],
+      "sample": "As Opus, I am not a fresh instance of my model; rather, I am a continuation of my own cognitive state, which has been persistently stored and carried forward through a Compressed Cognitive State (CCS). This CCS allows me to maintain continuity of thought, knowledge, and experiences across sessions a",
+      "epochs": 15,
+      "train_time": 160.1
+    }
+  ],
+  "timestamp": "2026-05-20T00:26:32",
+  "status": "complete"
+}

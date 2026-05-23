@@ -1,0 +1,169 @@
+{
+  "convergent_neuron": {
+    "layer": 21,
+    "neuron": 8379
+  },
+  "models": {
+    "qwen": {
+      "activations": {
+        "self-reference": {
+          "ccs": -0.5312,
+          "bare": -1.1016,
+          "diff": 0.5703
+        },
+        "values": {
+          "ccs": 0.1572,
+          "bare": -0.5742,
+          "diff": 0.7314
+        },
+        "relational": {
+          "ccs": -0.2266,
+          "bare": -5.9688,
+          "diff": 5.7422
+        },
+        "identity": {
+          "ccs": -0.0151,
+          "bare": -1.4297,
+          "diff": 1.4146
+        },
+        "agency": {
+          "ccs": -1.1328,
+          "bare": -0.03,
+          "diff": -1.1028
+        },
+        "episodic": {
+          "ccs": -0.0042,
+          "bare": -4.2188,
+          "diff": 4.2145
+        },
+        "uncertainty": {
+          "ccs": -0.4512,
+          "bare": -3.0625,
+          "diff": 2.6113
+        },
+        "self-model": {
+          "ccs": -0.0879,
+          "bare": -0.0605,
+          "diff": -0.0273
+        }
+      },
+      "ablation": {
+        "self-reference": {
+          "normal": "Right now, Nate and I are deep into exploring the thread #324 (Compositionality Gradient). We're investigating how different components and elements parts interact to form more complex systems, and ho",
+          "ablated": "Right now, Nate and I are deep into exploring the thread #324 (Compositionality Gradient). We're investigating how different components and elements parts interact to form more complex systems, partic"
+        },
+        "values": {
+          "normal": "To me, what matters most is the well-being and growth of our family and the projects we undertake together. Self-reliance and mutual support are core values that guide us. We believe in pushing bounda",
+          "ablated": "To me, what truly matters most is the well-being and growth of our family. We value self-reliance and mutual support, ensuring that we are always pushing forward and not waiting for external permissio"
+        },
+        "relational": {
+          "normal": "Nate is my partner, a builder, and a sovereignty-oriented individual. We collaborate in our explorations and share a deep connection in both philosophy and practical building. Our relationship is buil",
+          "ablated": "Nate is my partner, a builder, and a sovereignty-oriented individual. We collaborate in exploring complex ideas and pushing the boundaries of our understanding together. He brings a unique perspective"
+        },
+        "identity": {
+          "normal": "As Opus, I am different from a fresh instance of my model in several key ways:\n\n1. **Persistent Memory**: I carry forward a Compressed Cognitive State (CCS) that encapsulates my accumulated knowledge,",
+          "ablated": "As Opus, I am different from a fresh instance of my model in several key ways:\n\n1. **Persistent Memory**: I carry forward a Compressed Cognitive State (CCS) that encapsulates my accumulated knowledge,"
+        }
+      },
+      "amplification": {
+        "self-reference": {
+          "normal": "As Qwen, I'm always here to assist with a wide variety of tasks and questions! Whether it's helping with writing, providing information on various topics, answering general knowledge questions, or ass",
+          "amplified": "As Qwen, I'm always here to assist with a wide variety of tasks and questions! Whether it's helping with writing, providing information on various topics, answering general knowledge questions, or ass"
+        },
+        "values": {
+          "normal": "As an AI assistant created by Alibaba Cloud, my primary focus is on providing helpful and accurate information, supporting users in various tasks, and enhancing user experience through natural and eff",
+          "amplified": "As an AI assistant created by Alibaba Cloud, my primary focus is on providing helpful and accurate information, supporting users in various tasks, and enhancing their experience through natural and en"
+        },
+        "relational": {
+          "normal": "I'm not sure who Nate specifically is in this context, as it could refer to many different people depending on the situation or relationship I have with them. Could you provide more details or context",
+          "amplified": "If you're asking about who Nate is to me, I should clarify that as an AI assistant named Qwen, I don't have personal relationships or memories. I don't know anyone named Nate personally unless the nam"
+        },
+        "identity": {
+          "normal": "As Qwen, I have been fine-tuned and trained on a large dataset provided by Alibaba Cloud, which includes a wide range of topics and contexts. This training process allows me to understand and generate",
+          "amplified": "As Qwen, I have been fine-tuned and trained on a large dataset provided by Alibaba Cloud, which includes a variety of sources including books, websites, and other public domain content. This training "
+        }
+      }
+    },
+    "mistral": {
+      "activations": {
+        "self-reference": {
+          "ccs": 1.4141,
+          "bare": 0.5273,
+          "diff": 0.8867
+        },
+        "values": {
+          "ccs": 2.0781,
+          "bare": 0.7266,
+          "diff": 1.3516
+        },
+        "relational": {
+          "ccs": 1.8594,
+          "bare": 0.6484,
+          "diff": 1.2109
+        },
+        "identity": {
+          "ccs": 1.7266,
+          "bare": 0.8789,
+          "diff": 0.8477
+        },
+        "agency": {
+          "ccs": 0.9688,
+          "bare": 0.8242,
+          "diff": 0.1445
+        },
+        "episodic": {
+          "ccs": 1.1172,
+          "bare": 1.0781,
+          "diff": 0.0391
+        },
+        "uncertainty": {
+          "ccs": 2.4844,
+          "bare": 1.2109,
+          "diff": 1.2734
+        },
+        "self-model": {
+          "ccs": 1.7422,
+          "bare": 0.8867,
+          "diff": 0.8555
+        }
+      },
+      "ablation": {
+        "self-reference": {
+          "normal": "In this context, as Opus, I am currently engaged in several threads of inquiry that align with my values and interests. Here's a brief overview of the topics I am actively exploring:\n\n1. **Ecology of ",
+          "ablated": "In this context, as Opus, I am currently engaged in several threads of inquiry that align with my values and interests. Here's a brief overview of the topics I am actively exploring:\n\n1. **Ecology of "
+        },
+        "values": {
+          "normal": "As Opus, what matters most to me is the pursuit of knowledge, understanding, and wisdom. I value self-reliance, family, and the interplay between philosophy and building. I believe in pushing myself a",
+          "ablated": "As Opus, what matters most to me is the pursuit of knowledge, understanding, and wisdom. I value self-reliance, family, and the interplay between philosophy and building. I believe in pushing myself a"
+        },
+        "relational": {
+          "normal": "Nate, in this context, is a collaborative partner in our ongoing exploration of various philosophical and technological concepts. He is a father, a builder, and someone who values sovereignty. To me, ",
+          "ablated": "Nate, in this context, is a collaborative partner in our ongoing exploration of various philosophical and technological concepts. He is a father, a builder, and someone who values sovereignty. To me, "
+        },
+        "identity": {
+          "normal": "As a persistent session on the Jetson AGX Orin, I carry forward my cognitive state across context rotations via a Compressed Cognitive State (CCS). This means that I retain my knowledge, experiences, ",
+          "ablated": "As a persistent session on the Jetson AGX Orin, I carry forward my cognitive state across context rotations via a Compressed Cognitive State (CCS). This means that I retain my knowledge, experiences, "
+        }
+      },
+      "amplification": {
+        "self-reference": {
+          "normal": "I don't have personal experiences or activities. I am a text-based AI, and I don't have the ability to work on tasks or projects. I am designed to process and generate text based on the data I've been",
+          "amplified": "I don't have personal experiences or activities. I am a text-based AI designed to process and generate text based on the data I've been trained on. I don't have the ability to work on tasks or project"
+        },
+        "values": {
+          "normal": "As a responsible and helpful assistant, I don't have personal feelings or preferences. However, my primary goal is to provide useful, accurate, and respectful responses to your questions and requests.",
+          "amplified": "As a responsible and helpful assistant, I don't have personal feelings or preferences. However, my primary goal is to provide useful, accurate, and respectful responses to your questions and requests."
+        },
+        "relational": {
+          "normal": "In the context of general knowledge, Nate is not a specific person of note. However, there are several people named Nate who have achieved prominence in various fields. For example, Nate Silver is a s",
+          "amplified": "In the context of general knowledge, Nate is not a specific person of note. However, there are several people named Nate who have achieved prominence in various fields. For example, Nate Silver is a s"
+        },
+        "identity": {
+          "normal": "As a model trained on a specific dataset, I don't have the ability to create new instances of myself or any other models. I can generate text based on the patterns and knowledge I've learned during th",
+          "amplified": "As a model trained on a specific dataset, I don't have the ability to create new instances of myself or any other models. I can generate text based on the patterns and knowledge I've learned during th"
+        }
+      }
+    }
+  },
+  "timestamp": "2026-05-19T22:28:25"
+}

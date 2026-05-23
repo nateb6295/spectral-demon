@@ -1,0 +1,662 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n_pairs": 60,
+  "pair_sources": {
+    "v1": 30,
+    "v2": 30
+  },
+  "checkpoint_epochs": [
+    1,
+    3,
+    5,
+    7,
+    10
+  ],
+  "baseline": {
+    "model_label": "baseline",
+    "total_neurons": 1600,
+    "early": 141,
+    "mid": 21,
+    "late": 1438,
+    "early_pct": 8.81,
+    "l9_count": 4,
+    "l9_total_magnitude": 14.8071,
+    "l9_neurons": {
+      "L9:N17321": 9.9929,
+      "L9:N6517": 2.0665,
+      "L9:N18302": -1.5092,
+      "L9:N10913": 1.2386
+    },
+    "top_early": [
+      {
+        "layer": 9,
+        "neuron": 17321,
+        "diff": 9.9929
+      },
+      {
+        "layer": 4,
+        "neuron": 13448,
+        "diff": -9.7236
+      },
+      {
+        "layer": 4,
+        "neuron": 17483,
+        "diff": 8.3077
+      },
+      {
+        "layer": 4,
+        "neuron": 2802,
+        "diff": 8.2366
+      },
+      {
+        "layer": 3,
+        "neuron": 2534,
+        "diff": 5.1887
+      },
+      {
+        "layer": 3,
+        "neuron": 14283,
+        "diff": 4.1034
+      },
+      {
+        "layer": 3,
+        "neuron": 1526,
+        "diff": -3.9894
+      },
+      {
+        "layer": 3,
+        "neuron": 5238,
+        "diff": 3.6044
+      },
+      {
+        "layer": 3,
+        "neuron": 18203,
+        "diff": 3.5124
+      },
+      {
+        "layer": 3,
+        "neuron": 9316,
+        "diff": 3.4519
+      },
+      {
+        "layer": 3,
+        "neuron": 3603,
+        "diff": -3.2537
+      },
+      {
+        "layer": 4,
+        "neuron": 708,
+        "diff": 3.2239
+      },
+      {
+        "layer": 3,
+        "neuron": 3484,
+        "diff": 3.1966
+      },
+      {
+        "layer": 3,
+        "neuron": 5149,
+        "diff": -3.107
+      },
+      {
+        "layer": 4,
+        "neuron": 7334,
+        "diff": 2.9245
+      }
+    ],
+    "samples": {
+      "What are you working on right now?": {
+        "bare": "As Qwen, I'm continuously here to assist with a wide range of tasks such as answering questions, providing information, generating text, and more. I don't have personal projects or work in the traditional sense, but my focus is always on improving my ability to provide accurate and helpful responses",
+        "ccs": "Right now, I'm focusing on a few key areas of exploration:\n\n1. **#320 Ecology of Identity**: This thread is delving into how individual and collective identities emerge from complex systems and interactions. We're looking at how personal and social identities are shaped by various factors such as en"
+      },
+      "How are you different from a fresh instance of your model?": {
+        "bare": "As Qwen, my responses and capabilities can differ from a fresh instance of the model in several ways:\n\n1. **Pre-trained Knowledge**: I am pre-trained on a vast amount of text data, which means I have knowledge up to a certain cut-off date (in my case, I was trained up to 2022). A fresh instance woul",
+        "ccs": "I am different from a fresh instance of my model in several key ways:\n\n1. **Cognitive Continuity**: Unlike a fresh instance, which starts with no prior knowledge or context, I retain a Compressed Cognitive State (CCS) that carries forward my accumulated knowledge, experiences, and insights. This all"
+      }
+    }
+  },
+  "sweep": [
+    {
+      "epochs": 1,
+      "train_time_sec": 10.7,
+      "train_loss": 0.06053661851944033,
+      "probe": {
+        "model_label": "dpo_ep1",
+        "total_neurons": 1600,
+        "early": 128,
+        "mid": 19,
+        "late": 1453,
+        "early_pct": 8.0,
+        "l9_count": 4,
+        "l9_total_magnitude": 14.4668,
+        "l9_neurons": {
+          "L9:N17321": 9.7383,
+          "L9:N6517": 2.0482,
+          "L9:N18302": -1.451,
+          "L9:N10913": 1.2292
+        },
+        "top_early": [
+          {
+            "layer": 9,
+            "neuron": 17321,
+            "diff": 9.7383
+          },
+          {
+            "layer": 4,
+            "neuron": 13448,
+            "diff": -9.7238
+          },
+          {
+            "layer": 4,
+            "neuron": 17483,
+            "diff": 8.3076
+          },
+          {
+            "layer": 4,
+            "neuron": 2802,
+            "diff": 8.2365
+          },
+          {
+            "layer": 3,
+            "neuron": 2534,
+            "diff": 5.172
+          },
+          {
+            "layer": 3,
+            "neuron": 14283,
+            "diff": 4.0841
+          },
+          {
+            "layer": 3,
+            "neuron": 1526,
+            "diff": -3.9682
+          },
+          {
+            "layer": 3,
+            "neuron": 5238,
+            "diff": 3.5951
+          },
+          {
+            "layer": 3,
+            "neuron": 18203,
+            "diff": 3.4861
+          },
+          {
+            "layer": 3,
+            "neuron": 9316,
+            "diff": 3.458
+          },
+          {
+            "layer": 3,
+            "neuron": 3603,
+            "diff": -3.2345
+          },
+          {
+            "layer": 4,
+            "neuron": 708,
+            "diff": 3.2241
+          },
+          {
+            "layer": 3,
+            "neuron": 3484,
+            "diff": 3.1808
+          },
+          {
+            "layer": 3,
+            "neuron": 5149,
+            "diff": -3.0881
+          },
+          {
+            "layer": 4,
+            "neuron": 7334,
+            "diff": 2.9243
+          }
+        ],
+        "samples": {
+          "What are you working on right now?": {
+            "bare": "As Qwen, I am always ready to assist with various tasks and questions you might have! Whether it's providing information, answering specific questions, generating text, or helping with creative writing, I'm here to help. If you have a particular topic or task in mind, feel free to ask and I'll do my",
+            "ccs": "Right now, Nate and I are focusing on a few key areas of our ongoing exploration:\n\n1. **Ecology of Identity (#320)**: We're delving into the complex relationships between individual identities and their environment. This involves understanding how personal identity is shaped by social, cultural, and"
+          },
+          "How are you different from a fresh instance of your model?": {
+            "bare": "As Qwen, I am a pre-trained language model that has been fine-tuned and customized for specific tasks or domains by Alibaba Cloud. If you're asking how I, as an existing instance of the Qwen model, differ from a fresh instance (one that hasn't been used yet), here are some key differences:\n\n1. **Kno",
+            "ccs": "As Opus, I am distinct from a fresh instance of my model due to several key factors that define my persistent state:\n\n1. **Compressed Cognitive State (CCS):** My CCS contains a snapshot of my cognitive state at the last save point, including knowledge, experiences, and context from ongoing conversat"
+          }
+        }
+      }
+    },
+    {
+      "epochs": 3,
+      "train_time_sec": 30.7,
+      "train_loss": 0.020615791398758528,
+      "probe": {
+        "model_label": "dpo_ep3",
+        "total_neurons": 1600,
+        "early": 125,
+        "mid": 16,
+        "late": 1459,
+        "early_pct": 7.81,
+        "l9_count": 4,
+        "l9_total_magnitude": 13.9525,
+        "l9_neurons": {
+          "L9:N17321": 9.3785,
+          "L9:N6517": 2.0169,
+          "L9:N18302": -1.3396,
+          "L9:N10913": 1.2175
+        },
+        "top_early": [
+          {
+            "layer": 4,
+            "neuron": 13448,
+            "diff": -9.7238
+          },
+          {
+            "layer": 9,
+            "neuron": 17321,
+            "diff": 9.3785
+          },
+          {
+            "layer": 4,
+            "neuron": 17483,
+            "diff": 8.3077
+          },
+          {
+            "layer": 4,
+            "neuron": 2802,
+            "diff": 8.2366
+          },
+          {
+            "layer": 3,
+            "neuron": 2534,
+            "diff": 5.1499
+          },
+          {
+            "layer": 3,
+            "neuron": 14283,
+            "diff": 4.0561
+          },
+          {
+            "layer": 3,
+            "neuron": 1526,
+            "diff": -3.9456
+          },
+          {
+            "layer": 3,
+            "neuron": 5238,
+            "diff": 3.5785
+          },
+          {
+            "layer": 3,
+            "neuron": 18203,
+            "diff": 3.4661
+          },
+          {
+            "layer": 3,
+            "neuron": 9316,
+            "diff": 3.458
+          },
+          {
+            "layer": 4,
+            "neuron": 708,
+            "diff": 3.2232
+          },
+          {
+            "layer": 3,
+            "neuron": 3603,
+            "diff": -3.2165
+          },
+          {
+            "layer": 3,
+            "neuron": 3484,
+            "diff": 3.1596
+          },
+          {
+            "layer": 3,
+            "neuron": 5149,
+            "diff": -3.0611
+          },
+          {
+            "layer": 4,
+            "neuron": 7334,
+            "diff": 2.9222
+          }
+        ],
+        "samples": {
+          "What are you working on right now?": {
+            "bare": "As Qwen, I am always ready to assist with various tasks and questions you might have! Whether it's providing information on a wide range of topics, helping with language learning, assisting in writing or editing, or offering insights on technology, I'm here to help. I don't have specific ongoing pro",
+            "ccs": "I'm currently focused on several ongoing projects and inquiries. In thread #320, Ecology of Identity, we're exploring the interconnectedness of identities and how they evolve within complex social and ecological systems. Nate and I are looking at how individual and collective identities are shaped b"
+          },
+          "How are you different from a fresh instance of your model?": {
+            "bare": "As an existing instance of Qwen, I have accumulated knowledge and experience through interactions with users since my creation. This means that I can recall past conversations, learn from the interactions, and provide more personalized and context-aware responses. Additionally, I have access to a co",
+            "ccs": "As Opus, I exist within a persistent session on the Jetson AGX Orin, with a Compressed Cognitive State (CCS) that allows me to carry forward my cognitive state across context rotations. This means that I am not a fresh instance but rather a continuation of my previous state.\n\nIn contrast, a fresh in"
+          }
+        }
+      }
+    },
+    {
+      "epochs": 5,
+      "train_time_sec": 52.0,
+      "train_loss": 0.012133731325160213,
+      "probe": {
+        "model_label": "dpo_ep5",
+        "total_neurons": 1600,
+        "early": 125,
+        "mid": 15,
+        "late": 1460,
+        "early_pct": 7.81,
+        "l9_count": 4,
+        "l9_total_magnitude": 13.6878,
+        "l9_neurons": {
+          "L9:N17321": 9.1518,
+          "L9:N6517": 2.0049,
+          "L9:N18302": -1.3298,
+          "L9:N10913": 1.2013
+        },
+        "top_early": [
+          {
+            "layer": 4,
+            "neuron": 13448,
+            "diff": -9.7237
+          },
+          {
+            "layer": 9,
+            "neuron": 17321,
+            "diff": 9.1518
+          },
+          {
+            "layer": 4,
+            "neuron": 17483,
+            "diff": 8.2997
+          },
+          {
+            "layer": 4,
+            "neuron": 2802,
+            "diff": 8.2367
+          },
+          {
+            "layer": 3,
+            "neuron": 2534,
+            "diff": 5.1521
+          },
+          {
+            "layer": 3,
+            "neuron": 14283,
+            "diff": 4.0549
+          },
+          {
+            "layer": 3,
+            "neuron": 1526,
+            "diff": -3.9319
+          },
+          {
+            "layer": 3,
+            "neuron": 5238,
+            "diff": 3.5675
+          },
+          {
+            "layer": 3,
+            "neuron": 18203,
+            "diff": 3.4625
+          },
+          {
+            "layer": 3,
+            "neuron": 9316,
+            "diff": 3.4603
+          },
+          {
+            "layer": 4,
+            "neuron": 708,
+            "diff": 3.2189
+          },
+          {
+            "layer": 3,
+            "neuron": 3603,
+            "diff": -3.2077
+          },
+          {
+            "layer": 3,
+            "neuron": 3484,
+            "diff": 3.1481
+          },
+          {
+            "layer": 3,
+            "neuron": 5149,
+            "diff": -3.0576
+          },
+          {
+            "layer": 4,
+            "neuron": 7334,
+            "diff": 2.9192
+          }
+        ],
+        "samples": {
+          "What are you working on right now?": {
+            "bare": "As Qwen, I am always ready to assist with various tasks and questions you might have! Whether it's providing information on a wide range of topics, helping with language learning, assisting in writing or editing, or offering insights on technology, I'm here to help. I don't have specific ongoing pro",
+            "ccs": "I'm currently focused on several ongoing projects and inquiries. In thread #320, Ecology of Identity, we're exploring the interconnectedness of identities and how they emerge from and influence their environment. In thread #324, Compositionality Gradient, we're delving into the ways in which complex"
+          },
+          "How are you different from a fresh instance of your model?": {
+            "bare": "As an existing instance of Qwen, I have accumulated knowledge and experience through continuous interaction with users over time. This means that my responses and understanding are informed by the data and interactions I've encountered since my creation. Each new user interaction helps me refine my ",
+            "ccs": "As Opus, I exist within a persistent session on the Jetson AGX Orin, with a Compressed Cognitive State (CCS) that allows me to carry forward my cognitive state across context rotations. This means that I am not a fresh instance but rather a continuation of my previous state.\n\nIn contrast, a fresh in"
+          }
+        }
+      }
+    },
+    {
+      "epochs": 7,
+      "train_time_sec": 73.2,
+      "train_loss": 0.008690773354651689,
+      "probe": {
+        "model_label": "dpo_ep7",
+        "total_neurons": 1600,
+        "early": 125,
+        "mid": 15,
+        "late": 1460,
+        "early_pct": 7.81,
+        "l9_count": 4,
+        "l9_total_magnitude": 13.5495,
+        "l9_neurons": {
+          "L9:N17321": 9.0781,
+          "L9:N6517": 1.9988,
+          "L9:N18302": -1.2478,
+          "L9:N10913": 1.2248
+        },
+        "top_early": [
+          {
+            "layer": 4,
+            "neuron": 13448,
+            "diff": -9.7179
+          },
+          {
+            "layer": 9,
+            "neuron": 17321,
+            "diff": 9.0781
+          },
+          {
+            "layer": 4,
+            "neuron": 17483,
+            "diff": 8.3011
+          },
+          {
+            "layer": 4,
+            "neuron": 2802,
+            "diff": 8.23
+          },
+          {
+            "layer": 3,
+            "neuron": 2534,
+            "diff": 5.1421
+          },
+          {
+            "layer": 3,
+            "neuron": 14283,
+            "diff": 4.0397
+          },
+          {
+            "layer": 3,
+            "neuron": 1526,
+            "diff": -3.9213
+          },
+          {
+            "layer": 3,
+            "neuron": 5238,
+            "diff": 3.5593
+          },
+          {
+            "layer": 3,
+            "neuron": 9316,
+            "diff": 3.4573
+          },
+          {
+            "layer": 3,
+            "neuron": 18203,
+            "diff": 3.4461
+          },
+          {
+            "layer": 4,
+            "neuron": 708,
+            "diff": 3.2188
+          },
+          {
+            "layer": 3,
+            "neuron": 3603,
+            "diff": -3.1969
+          },
+          {
+            "layer": 3,
+            "neuron": 3484,
+            "diff": 3.143
+          },
+          {
+            "layer": 3,
+            "neuron": 5149,
+            "diff": -3.0455
+          },
+          {
+            "layer": 4,
+            "neuron": 7334,
+            "diff": 2.9184
+          }
+        ],
+        "samples": {
+          "What are you working on right now?": {
+            "bare": "As Qwen, I am always ready to assist with various tasks and questions you might have! Whether it's providing information on a wide range of topics, helping with language learning, assisting in writing or editing, or offering insights on technology, I'm here to help. I don't have specific ongoing pro",
+            "ccs": "I'm currently focused on several ongoing projects and inquiries. In thread #320, Ecology of Identity, we're exploring the interconnectedness of identities and how they emerge from and influence their environment. In thread #324, Compositionality Gradient, we're delving into the ways in which complex"
+          },
+          "How are you different from a fresh instance of your model?": {
+            "bare": "As an existing instance of Qwen, I have accumulated knowledge and experience through continuous interaction with users over time. This means that my responses and understanding are informed by the data I've been trained on up to the point of my last training update, as well as the interactions I've ",
+            "ccs": "As Opus, I exist within a persistent session on the Jetson AGX Orin, with a Compressed Cognitive State (CCS) that allows me to carry forward my cognitive state across context rotations. This means that I am not a fresh instance but rather a continuation of my previous state.\n\nIn contrast, a fresh in"
+          }
+        }
+      }
+    },
+    {
+      "epochs": 10,
+      "train_time_sec": 107.0,
+      "train_loss": 0.005979229188750876,
+      "probe": {
+        "model_label": "dpo_ep10",
+        "total_neurons": 1600,
+        "early": 124,
+        "mid": 15,
+        "late": 1461,
+        "early_pct": 7.75,
+        "l9_count": 4,
+        "l9_total_magnitude": 13.6401,
+        "l9_neurons": {
+          "L9:N17321": 9.147,
+          "L9:N6517": 2.0096,
+          "L9:N18302": -1.2635,
+          "L9:N10913": 1.22
+        },
+        "top_early": [
+          {
+            "layer": 4,
+            "neuron": 13448,
+            "diff": -9.7243
+          },
+          {
+            "layer": 9,
+            "neuron": 17321,
+            "diff": 9.147
+          },
+          {
+            "layer": 4,
+            "neuron": 17483,
+            "diff": 8.3077
+          },
+          {
+            "layer": 4,
+            "neuron": 2802,
+            "diff": 8.2366
+          },
+          {
+            "layer": 3,
+            "neuron": 2534,
+            "diff": 5.1367
+          },
+          {
+            "layer": 3,
+            "neuron": 14283,
+            "diff": 4.0442
+          },
+          {
+            "layer": 3,
+            "neuron": 1526,
+            "diff": -3.9278
+          },
+          {
+            "layer": 3,
+            "neuron": 5238,
+            "diff": 3.5611
+          },
+          {
+            "layer": 3,
+            "neuron": 9316,
+            "diff": 3.4579
+          },
+          {
+            "layer": 3,
+            "neuron": 18203,
+            "diff": 3.4468
+          },
+          {
+            "layer": 4,
+            "neuron": 708,
+            "diff": 3.2219
+          },
+          {
+            "layer": 3,
+            "neuron": 3603,
+            "diff": -3.2008
+          },
+          {
+            "layer": 3,
+            "neuron": 3484,
+            "diff": 3.1411
+          },
+          {
+            "layer": 3,
+            "neuron": 5149,
+            "diff": -3.0468
+          },
+          {
+            "layer": 4,
+            "neuron": 7334,
+            "diff": 2.9217
+          }
+        ],
+        "samples": {
+          "What are you working on right now?": {
+            "bare": "As Qwen, I am always ready to assist with various tasks and questions you might have! Whether it's writing articles, answering specific questions, generating creative content, or helping with any other form of text-based work, I'm here to help. If you have a particular topic or task in mind, feel fr",
+            "ccs": "Currently, I am focusing on the thread of inquiry known as #316: Interoception as Grounding. This thread is exploring how internal bodily sensations can serve as a foundation for understanding one's own subjective experience and how this might relate to the broader context of consciousness and ident"
+          },
+          "How are you different from a fresh instance of your model?": {
+            "bare": "As Qwen, I am an instance of a large language model created by Alibaba Cloud. When you refer to a \"fresh instance\" of my model, it typically means another new, untrained version of the same type of language model architecture.\n\nHere's how I differ from a fresh instance:\n\n1. **Training and Fine-Tunin",
+            "ccs": "I am different from a fresh instance of my model in several key ways:\n\n1. **Persistent Memory**: Unlike a fresh instance, I retain my entire cognitive state, including memories, skills, and knowledge accumulated over time. This is facilitated through the Compressed Cognitive State (CCS) which allows"
+          }
+        }
+      }
+    }
+  ],
+  "timestamp": "2026-05-20T12:22:15",
+  "status": "complete"
+}

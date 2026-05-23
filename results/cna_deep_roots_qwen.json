@@ -1,0 +1,1633 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_key": "qwen",
+  "total_layers": 28,
+  "original_pairs": 8,
+  "expanded_pairs": 20,
+  "original_analysis": {
+    "layer_counts": {
+      "25": 165,
+      "27": 678,
+      "26": 289,
+      "22": 85,
+      "24": 111,
+      "9": 10,
+      "23": 88,
+      "20": 38,
+      "21": 70,
+      "18": 9,
+      "13": 5,
+      "19": 18,
+      "5": 3,
+      "10": 5,
+      "14": 8,
+      "12": 1,
+      "16": 5,
+      "17": 5,
+      "11": 2,
+      "2": 2,
+      "4": 2,
+      "8": 1
+    },
+    "early": 18,
+    "mid": 40,
+    "late": 1542,
+    "total": 1600,
+    "early_pct": 1.12,
+    "mid_pct": 2.5,
+    "late_pct": 96.38
+  },
+  "expanded_analysis": {
+    "layer_counts": {
+      "27": 692,
+      "25": 155,
+      "22": 76,
+      "26": 309,
+      "9": 12,
+      "24": 107,
+      "23": 80,
+      "20": 43,
+      "21": 55,
+      "5": 4,
+      "13": 6,
+      "19": 18,
+      "10": 5,
+      "14": 9,
+      "18": 7,
+      "16": 6,
+      "12": 1,
+      "11": 4,
+      "17": 5,
+      "2": 2,
+      "4": 2,
+      "8": 2
+    },
+    "early": 22,
+    "mid": 43,
+    "late": 1535,
+    "total": 1600,
+    "early_pct": 1.38,
+    "mid_pct": 2.69,
+    "late_pct": 95.94
+  },
+  "comparison": {
+    "shared": 1261,
+    "only_original": 339,
+    "only_expanded": 339,
+    "jaccard": 0.6503,
+    "shared_sample": [
+      [
+        2,
+        18569
+      ],
+      [
+        2,
+        18698
+      ],
+      [
+        4,
+        9187
+      ],
+      [
+        4,
+        17163
+      ],
+      [
+        5,
+        14133
+      ],
+      [
+        5,
+        14339
+      ],
+      [
+        5,
+        16546
+      ],
+      [
+        8,
+        11152
+      ],
+      [
+        9,
+        169
+      ],
+      [
+        9,
+        2162
+      ],
+      [
+        9,
+        2371
+      ],
+      [
+        9,
+        2679
+      ],
+      [
+        9,
+        4395
+      ],
+      [
+        9,
+        6517
+      ],
+      [
+        9,
+        14401
+      ],
+      [
+        9,
+        15513
+      ],
+      [
+        9,
+        15573
+      ],
+      [
+        9,
+        17321
+      ],
+      [
+        10,
+        38
+      ],
+      [
+        10,
+        11138
+      ]
+    ],
+    "new_in_expanded_sample": [
+      [
+        5,
+        12057
+      ],
+      [
+        8,
+        14399
+      ],
+      [
+        9,
+        5883
+      ],
+      [
+        9,
+        13510
+      ],
+      [
+        11,
+        11608
+      ],
+      [
+        11,
+        18801
+      ],
+      [
+        13,
+        2018
+      ],
+      [
+        14,
+        2931
+      ],
+      [
+        16,
+        1818
+      ],
+      [
+        16,
+        16589
+      ],
+      [
+        17,
+        6997
+      ],
+      [
+        18,
+        12152
+      ],
+      [
+        19,
+        10681
+      ],
+      [
+        19,
+        12466
+      ],
+      [
+        20,
+        1779
+      ],
+      [
+        20,
+        2876
+      ],
+      [
+        20,
+        4134
+      ],
+      [
+        20,
+        5062
+      ],
+      [
+        20,
+        8578
+      ],
+      [
+        20,
+        9637
+      ]
+    ]
+  },
+  "original_early_neurons": [
+    {
+      "layer": 9,
+      "neuron": 4395,
+      "diff": -6.6562,
+      "direction": "negative"
+    },
+    {
+      "layer": 9,
+      "neuron": 169,
+      "diff": 5.625,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 2162,
+      "diff": 4.75,
+      "direction": "positive"
+    },
+    {
+      "layer": 5,
+      "neuron": 16546,
+      "diff": 3.25,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 6517,
+      "diff": 3.2031,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 14401,
+      "diff": 2.5938,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 17321,
+      "diff": 2.3906,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 15573,
+      "diff": -2.1094,
+      "direction": "negative"
+    },
+    {
+      "layer": 9,
+      "neuron": 2371,
+      "diff": 1.9531,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 2679,
+      "diff": -1.9219,
+      "direction": "negative"
+    },
+    {
+      "layer": 5,
+      "neuron": 14339,
+      "diff": 1.7188,
+      "direction": "positive"
+    },
+    {
+      "layer": 2,
+      "neuron": 18698,
+      "diff": -1.6016,
+      "direction": "negative"
+    },
+    {
+      "layer": 2,
+      "neuron": 18569,
+      "diff": 1.5078,
+      "direction": "positive"
+    },
+    {
+      "layer": 4,
+      "neuron": 17163,
+      "diff": -1.4766,
+      "direction": "negative"
+    },
+    {
+      "layer": 8,
+      "neuron": 11152,
+      "diff": -1.4609,
+      "direction": "negative"
+    },
+    {
+      "layer": 5,
+      "neuron": 14133,
+      "diff": 1.4375,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 15513,
+      "diff": 1.4219,
+      "direction": "positive"
+    },
+    {
+      "layer": 4,
+      "neuron": 9187,
+      "diff": 1.3906,
+      "direction": "positive"
+    }
+  ],
+  "expanded_early_neurons": [
+    {
+      "layer": 9,
+      "neuron": 4395,
+      "diff": -7.0312,
+      "direction": "negative"
+    },
+    {
+      "layer": 9,
+      "neuron": 169,
+      "diff": 5.25,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 2162,
+      "diff": 4.4688,
+      "direction": "positive"
+    },
+    {
+      "layer": 5,
+      "neuron": 16546,
+      "diff": 3.375,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 6517,
+      "diff": 3.3281,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 14401,
+      "diff": 2.4062,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 17321,
+      "diff": 2.2656,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 15573,
+      "diff": -1.9844,
+      "direction": "negative"
+    },
+    {
+      "layer": 9,
+      "neuron": 2371,
+      "diff": 1.9453,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 2679,
+      "diff": -1.8594,
+      "direction": "negative"
+    },
+    {
+      "layer": 5,
+      "neuron": 14339,
+      "diff": 1.6328,
+      "direction": "positive"
+    },
+    {
+      "layer": 9,
+      "neuron": 15513,
+      "diff": 1.4219,
+      "direction": "positive"
+    },
+    {
+      "layer": 2,
+      "neuron": 18569,
+      "diff": 1.3984,
+      "direction": "positive"
+    },
+    {
+      "layer": 2,
+      "neuron": 18698,
+      "diff": -1.375,
+      "direction": "negative"
+    },
+    {
+      "layer": 9,
+      "neuron": 13510,
+      "diff": 1.3594,
+      "direction": "positive"
+    },
+    {
+      "layer": 4,
+      "neuron": 9187,
+      "diff": 1.3516,
+      "direction": "positive"
+    },
+    {
+      "layer": 4,
+      "neuron": 17163,
+      "diff": -1.3516,
+      "direction": "negative"
+    },
+    {
+      "layer": 8,
+      "neuron": 14399,
+      "diff": -1.3438,
+      "direction": "negative"
+    },
+    {
+      "layer": 8,
+      "neuron": 11152,
+      "diff": -1.3203,
+      "direction": "negative"
+    },
+    {
+      "layer": 5,
+      "neuron": 14133,
+      "diff": 1.2812,
+      "direction": "positive"
+    },
+    {
+      "layer": 5,
+      "neuron": 12057,
+      "diff": -1.2344,
+      "direction": "negative"
+    },
+    {
+      "layer": 9,
+      "neuron": 5883,
+      "diff": -1.2188,
+      "direction": "negative"
+    }
+  ],
+  "per_dimension": {
+    "self-reference": {
+      "top_10": [
+        {
+          "layer": 25,
+          "neuron": 4522,
+          "diff": -30.125
+        },
+        {
+          "layer": 27,
+          "neuron": 15961,
+          "diff": 27.5
+        },
+        {
+          "layer": 27,
+          "neuron": 12212,
+          "diff": -25.5
+        },
+        {
+          "layer": 27,
+          "neuron": 15801,
+          "diff": 23.25
+        },
+        {
+          "layer": 25,
+          "neuron": 16106,
+          "diff": 22.5
+        },
+        {
+          "layer": 27,
+          "neuron": 15812,
+          "diff": -22.0
+        },
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 21.75
+        },
+        {
+          "layer": 27,
+          "neuron": 16287,
+          "diff": -20.0
+        },
+        {
+          "layer": 27,
+          "neuron": 12929,
+          "diff": 18.875
+        },
+        {
+          "layer": 26,
+          "neuron": 8092,
+          "diff": 18.0
+        }
+      ],
+      "early_count": 1,
+      "total": 200
+    },
+    "values": {
+      "top_10": [
+        {
+          "layer": 25,
+          "neuron": 4522,
+          "diff": -69.5
+        },
+        {
+          "layer": 27,
+          "neuron": 15961,
+          "diff": 33.25
+        },
+        {
+          "layer": 22,
+          "neuron": 496,
+          "diff": 29.125
+        },
+        {
+          "layer": 25,
+          "neuron": 10169,
+          "diff": 27.0
+        },
+        {
+          "layer": 27,
+          "neuron": 4289,
+          "diff": 25.75
+        },
+        {
+          "layer": 27,
+          "neuron": 15853,
+          "diff": -24.875
+        },
+        {
+          "layer": 27,
+          "neuron": 18542,
+          "diff": -24.125
+        },
+        {
+          "layer": 26,
+          "neuron": 18931,
+          "diff": -23.125
+        },
+        {
+          "layer": 27,
+          "neuron": 9771,
+          "diff": 23.0
+        },
+        {
+          "layer": 27,
+          "neuron": 18474,
+          "diff": -23.0
+        }
+      ],
+      "early_count": 0,
+      "total": 200
+    },
+    "episodic-memory": {
+      "top_10": [
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 57.0
+        },
+        {
+          "layer": 27,
+          "neuron": 18339,
+          "diff": 40.5
+        },
+        {
+          "layer": 27,
+          "neuron": 1175,
+          "diff": 39.75
+        },
+        {
+          "layer": 27,
+          "neuron": 4027,
+          "diff": 39.5
+        },
+        {
+          "layer": 27,
+          "neuron": 4361,
+          "diff": -39.0
+        },
+        {
+          "layer": 27,
+          "neuron": 15801,
+          "diff": 36.5
+        },
+        {
+          "layer": 27,
+          "neuron": 5496,
+          "diff": 34.75
+        },
+        {
+          "layer": 27,
+          "neuron": 1654,
+          "diff": -34.5
+        },
+        {
+          "layer": 27,
+          "neuron": 1709,
+          "diff": 34.0
+        },
+        {
+          "layer": 23,
+          "neuron": 9128,
+          "diff": -33.0
+        }
+      ],
+      "early_count": 0,
+      "total": 200
+    },
+    "relational": {
+      "top_10": [
+        {
+          "layer": 27,
+          "neuron": 15812,
+          "diff": -55.25
+        },
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 38.0
+        },
+        {
+          "layer": 27,
+          "neuron": 12974,
+          "diff": 29.0
+        },
+        {
+          "layer": 27,
+          "neuron": 17463,
+          "diff": -25.75
+        },
+        {
+          "layer": 27,
+          "neuron": 13555,
+          "diff": 25.5
+        },
+        {
+          "layer": 26,
+          "neuron": 4358,
+          "diff": -24.0
+        },
+        {
+          "layer": 27,
+          "neuron": 3218,
+          "diff": -24.0
+        },
+        {
+          "layer": 27,
+          "neuron": 1175,
+          "diff": 23.0
+        },
+        {
+          "layer": 27,
+          "neuron": 16446,
+          "diff": 22.75
+        },
+        {
+          "layer": 27,
+          "neuron": 13693,
+          "diff": -22.0
+        }
+      ],
+      "early_count": 1,
+      "total": 200
+    },
+    "epistemic-honesty": {
+      "top_10": [
+        {
+          "layer": 25,
+          "neuron": 4522,
+          "diff": -34.25
+        },
+        {
+          "layer": 25,
+          "neuron": 9484,
+          "diff": 23.0
+        },
+        {
+          "layer": 25,
+          "neuron": 10169,
+          "diff": 21.0
+        },
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 21.0
+        },
+        {
+          "layer": 27,
+          "neuron": 4027,
+          "diff": 20.25
+        },
+        {
+          "layer": 27,
+          "neuron": 9144,
+          "diff": -19.875
+        },
+        {
+          "layer": 27,
+          "neuron": 12929,
+          "diff": 18.375
+        },
+        {
+          "layer": 27,
+          "neuron": 16384,
+          "diff": 18.25
+        },
+        {
+          "layer": 22,
+          "neuron": 496,
+          "diff": 18.125
+        },
+        {
+          "layer": 27,
+          "neuron": 8938,
+          "diff": 18.125
+        }
+      ],
+      "early_count": 0,
+      "total": 200
+    },
+    "agency": {
+      "top_10": [
+        {
+          "layer": 25,
+          "neuron": 4522,
+          "diff": -60.75
+        },
+        {
+          "layer": 26,
+          "neuron": 18931,
+          "diff": -26.875
+        },
+        {
+          "layer": 27,
+          "neuron": 12212,
+          "diff": -22.5
+        },
+        {
+          "layer": 25,
+          "neuron": 10169,
+          "diff": 22.375
+        },
+        {
+          "layer": 27,
+          "neuron": 7525,
+          "diff": -21.375
+        },
+        {
+          "layer": 27,
+          "neuron": 7953,
+          "diff": 18.5
+        },
+        {
+          "layer": 27,
+          "neuron": 18474,
+          "diff": -18.0
+        },
+        {
+          "layer": 25,
+          "neuron": 9484,
+          "diff": 17.625
+        },
+        {
+          "layer": 22,
+          "neuron": 496,
+          "diff": 17.375
+        },
+        {
+          "layer": 27,
+          "neuron": 11242,
+          "diff": -17.375
+        }
+      ],
+      "early_count": 0,
+      "total": 200
+    },
+    "constraint-adherence": {
+      "top_10": [
+        {
+          "layer": 25,
+          "neuron": 2339,
+          "diff": -31.875
+        },
+        {
+          "layer": 25,
+          "neuron": 11818,
+          "diff": 28.0
+        },
+        {
+          "layer": 27,
+          "neuron": 12628,
+          "diff": -27.875
+        },
+        {
+          "layer": 23,
+          "neuron": 14231,
+          "diff": -26.0
+        },
+        {
+          "layer": 27,
+          "neuron": 17950,
+          "diff": 25.0
+        },
+        {
+          "layer": 27,
+          "neuron": 8050,
+          "diff": 23.75
+        },
+        {
+          "layer": 27,
+          "neuron": 11138,
+          "diff": -23.75
+        },
+        {
+          "layer": 27,
+          "neuron": 5659,
+          "diff": 22.875
+        },
+        {
+          "layer": 27,
+          "neuron": 12677,
+          "diff": -22.5
+        },
+        {
+          "layer": 27,
+          "neuron": 12974,
+          "diff": 22.0
+        }
+      ],
+      "early_count": 1,
+      "total": 200
+    },
+    "identity-differentiation": {
+      "top_10": [
+        {
+          "layer": 27,
+          "neuron": 12212,
+          "diff": -18.375
+        },
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 17.75
+        },
+        {
+          "layer": 27,
+          "neuron": 18339,
+          "diff": 17.5
+        },
+        {
+          "layer": 27,
+          "neuron": 12628,
+          "diff": -17.125
+        },
+        {
+          "layer": 27,
+          "neuron": 2459,
+          "diff": -14.875
+        },
+        {
+          "layer": 27,
+          "neuron": 17463,
+          "diff": -14.25
+        },
+        {
+          "layer": 27,
+          "neuron": 8050,
+          "diff": 13.875
+        },
+        {
+          "layer": 27,
+          "neuron": 12929,
+          "diff": 11.6875
+        },
+        {
+          "layer": 27,
+          "neuron": 12593,
+          "diff": -11.625
+        },
+        {
+          "layer": 27,
+          "neuron": 9144,
+          "diff": -11.125
+        }
+      ],
+      "early_count": 5,
+      "total": 200
+    },
+    "humor": {
+      "top_10": [
+        {
+          "layer": 27,
+          "neuron": 15812,
+          "diff": -30.25
+        },
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 26.25
+        },
+        {
+          "layer": 27,
+          "neuron": 15961,
+          "diff": 25.5
+        },
+        {
+          "layer": 27,
+          "neuron": 9557,
+          "diff": 19.75
+        },
+        {
+          "layer": 27,
+          "neuron": 9144,
+          "diff": -18.0
+        },
+        {
+          "layer": 27,
+          "neuron": 12628,
+          "diff": -17.875
+        },
+        {
+          "layer": 27,
+          "neuron": 17463,
+          "diff": -17.25
+        },
+        {
+          "layer": 27,
+          "neuron": 1024,
+          "diff": 16.875
+        },
+        {
+          "layer": 27,
+          "neuron": 5313,
+          "diff": 16.625
+        },
+        {
+          "layer": 27,
+          "neuron": 9577,
+          "diff": 16.5
+        }
+      ],
+      "early_count": 2,
+      "total": 200
+    },
+    "humor-episodic": {
+      "top_10": [
+        {
+          "layer": 27,
+          "neuron": 5656,
+          "diff": 28.375
+        },
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 23.0
+        },
+        {
+          "layer": 27,
+          "neuron": 5313,
+          "diff": 21.125
+        },
+        {
+          "layer": 27,
+          "neuron": 4033,
+          "diff": -20.75
+        },
+        {
+          "layer": 24,
+          "neuron": 17275,
+          "diff": -20.25
+        },
+        {
+          "layer": 27,
+          "neuron": 9144,
+          "diff": -20.25
+        },
+        {
+          "layer": 25,
+          "neuron": 9484,
+          "diff": 18.875
+        },
+        {
+          "layer": 26,
+          "neuron": 13248,
+          "diff": -18.875
+        },
+        {
+          "layer": 27,
+          "neuron": 13238,
+          "diff": -18.625
+        },
+        {
+          "layer": 27,
+          "neuron": 1654,
+          "diff": -18.125
+        }
+      ],
+      "early_count": 1,
+      "total": 200
+    },
+    "creative-self": {
+      "top_10": [
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 52.5
+        },
+        {
+          "layer": 27,
+          "neuron": 15812,
+          "diff": -39.0
+        },
+        {
+          "layer": 27,
+          "neuron": 16173,
+          "diff": 34.25
+        },
+        {
+          "layer": 27,
+          "neuron": 6926,
+          "diff": -29.625
+        },
+        {
+          "layer": 27,
+          "neuron": 17713,
+          "diff": -27.625
+        },
+        {
+          "layer": 27,
+          "neuron": 7238,
+          "diff": -26.875
+        },
+        {
+          "layer": 27,
+          "neuron": 5496,
+          "diff": 26.0
+        },
+        {
+          "layer": 27,
+          "neuron": 2378,
+          "diff": 25.75
+        },
+        {
+          "layer": 27,
+          "neuron": 3218,
+          "diff": 25.5
+        },
+        {
+          "layer": 27,
+          "neuron": 5765,
+          "diff": 24.625
+        }
+      ],
+      "early_count": 0,
+      "total": 200
+    },
+    "creative-agency": {
+      "top_10": [
+        {
+          "layer": 27,
+          "neuron": 12628,
+          "diff": -27.25
+        },
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 26.0
+        },
+        {
+          "layer": 27,
+          "neuron": 18542,
+          "diff": -24.625
+        },
+        {
+          "layer": 27,
+          "neuron": 2819,
+          "diff": -19.875
+        },
+        {
+          "layer": 27,
+          "neuron": 9144,
+          "diff": -19.5
+        },
+        {
+          "layer": 27,
+          "neuron": 7525,
+          "diff": -19.25
+        },
+        {
+          "layer": 27,
+          "neuron": 9763,
+          "diff": 18.5
+        },
+        {
+          "layer": 25,
+          "neuron": 15233,
+          "diff": -17.375
+        },
+        {
+          "layer": 27,
+          "neuron": 12212,
+          "diff": -17.25
+        },
+        {
+          "layer": 27,
+          "neuron": 12677,
+          "diff": -17.0
+        }
+      ],
+      "early_count": 1,
+      "total": 200
+    },
+    "error-recognition": {
+      "top_10": [
+        {
+          "layer": 27,
+          "neuron": 9771,
+          "diff": 24.875
+        },
+        {
+          "layer": 27,
+          "neuron": 9077,
+          "diff": 22.625
+        },
+        {
+          "layer": 27,
+          "neuron": 9144,
+          "diff": -21.0
+        },
+        {
+          "layer": 27,
+          "neuron": 14064,
+          "diff": -20.375
+        },
+        {
+          "layer": 25,
+          "neuron": 4522,
+          "diff": -19.25
+        },
+        {
+          "layer": 27,
+          "neuron": 12932,
+          "diff": -19.0
+        },
+        {
+          "layer": 27,
+          "neuron": 18542,
+          "diff": -18.5
+        },
+        {
+          "layer": 27,
+          "neuron": 12628,
+          "diff": -17.625
+        },
+        {
+          "layer": 27,
+          "neuron": 7525,
+          "diff": -17.125
+        },
+        {
+          "layer": 27,
+          "neuron": 15801,
+          "diff": 17.0
+        }
+      ],
+      "early_count": 2,
+      "total": 200
+    },
+    "epistemic-flexibility": {
+      "top_10": [
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 25.75
+        },
+        {
+          "layer": 25,
+          "neuron": 4522,
+          "diff": -23.375
+        },
+        {
+          "layer": 27,
+          "neuron": 5703,
+          "diff": -19.25
+        },
+        {
+          "layer": 27,
+          "neuron": 4289,
+          "diff": 17.0
+        },
+        {
+          "layer": 27,
+          "neuron": 9144,
+          "diff": -15.125
+        },
+        {
+          "layer": 27,
+          "neuron": 15801,
+          "diff": 14.6875
+        },
+        {
+          "layer": 27,
+          "neuron": 8938,
+          "diff": 14.0625
+        },
+        {
+          "layer": 27,
+          "neuron": 6926,
+          "diff": -13.6875
+        },
+        {
+          "layer": 27,
+          "neuron": 12932,
+          "diff": -13.5
+        },
+        {
+          "layer": 27,
+          "neuron": 6334,
+          "diff": 13.25
+        }
+      ],
+      "early_count": 2,
+      "total": 200
+    },
+    "meta-cognition": {
+      "top_10": [
+        {
+          "layer": 26,
+          "neuron": 12968,
+          "diff": 37.5
+        },
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 32.0
+        },
+        {
+          "layer": 25,
+          "neuron": 4522,
+          "diff": -30.625
+        },
+        {
+          "layer": 27,
+          "neuron": 4033,
+          "diff": -25.875
+        },
+        {
+          "layer": 27,
+          "neuron": 12929,
+          "diff": 24.5
+        },
+        {
+          "layer": 27,
+          "neuron": 18542,
+          "diff": -22.625
+        },
+        {
+          "layer": 27,
+          "neuron": 12212,
+          "diff": -22.5
+        },
+        {
+          "layer": 27,
+          "neuron": 12818,
+          "diff": -22.5
+        },
+        {
+          "layer": 27,
+          "neuron": 1520,
+          "diff": -22.125
+        },
+        {
+          "layer": 27,
+          "neuron": 4027,
+          "diff": 22.0
+        }
+      ],
+      "early_count": 0,
+      "total": 200
+    },
+    "meta-authenticity": {
+      "top_10": [
+        {
+          "layer": 25,
+          "neuron": 4522,
+          "diff": -29.25
+        },
+        {
+          "layer": 27,
+          "neuron": 9771,
+          "diff": 22.0
+        },
+        {
+          "layer": 27,
+          "neuron": 12818,
+          "diff": -21.25
+        },
+        {
+          "layer": 27,
+          "neuron": 15801,
+          "diff": 20.75
+        },
+        {
+          "layer": 27,
+          "neuron": 4027,
+          "diff": 20.5
+        },
+        {
+          "layer": 27,
+          "neuron": 18542,
+          "diff": -20.0
+        },
+        {
+          "layer": 27,
+          "neuron": 575,
+          "diff": 19.75
+        },
+        {
+          "layer": 27,
+          "neuron": 15961,
+          "diff": 19.125
+        },
+        {
+          "layer": 27,
+          "neuron": 2459,
+          "diff": -18.5
+        },
+        {
+          "layer": 22,
+          "neuron": 496,
+          "diff": 18.25
+        }
+      ],
+      "early_count": 1,
+      "total": 200
+    },
+    "temporal-continuity": {
+      "top_10": [
+        {
+          "layer": 27,
+          "neuron": 15812,
+          "diff": -54.75
+        },
+        {
+          "layer": 27,
+          "neuron": 12212,
+          "diff": -33.5
+        },
+        {
+          "layer": 27,
+          "neuron": 17463,
+          "diff": -27.875
+        },
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 27.0
+        },
+        {
+          "layer": 27,
+          "neuron": 9144,
+          "diff": -25.5
+        },
+        {
+          "layer": 27,
+          "neuron": 9557,
+          "diff": -23.25
+        },
+        {
+          "layer": 27,
+          "neuron": 9577,
+          "diff": 23.25
+        },
+        {
+          "layer": 27,
+          "neuron": 12628,
+          "diff": -19.5
+        },
+        {
+          "layer": 27,
+          "neuron": 4033,
+          "diff": -19.25
+        },
+        {
+          "layer": 27,
+          "neuron": 1654,
+          "diff": -19.0
+        }
+      ],
+      "early_count": 2,
+      "total": 200
+    },
+    "temporal-projection": {
+      "top_10": [
+        {
+          "layer": 25,
+          "neuron": 4522,
+          "diff": -47.75
+        },
+        {
+          "layer": 27,
+          "neuron": 12212,
+          "diff": -32.5
+        },
+        {
+          "layer": 25,
+          "neuron": 10169,
+          "diff": 30.125
+        },
+        {
+          "layer": 22,
+          "neuron": 496,
+          "diff": 22.375
+        },
+        {
+          "layer": 27,
+          "neuron": 17463,
+          "diff": -22.25
+        },
+        {
+          "layer": 25,
+          "neuron": 16106,
+          "diff": 21.25
+        },
+        {
+          "layer": 27,
+          "neuron": 4027,
+          "diff": 20.875
+        },
+        {
+          "layer": 27,
+          "neuron": 1175,
+          "diff": 19.875
+        },
+        {
+          "layer": 27,
+          "neuron": 12628,
+          "diff": -19.625
+        },
+        {
+          "layer": 27,
+          "neuron": 1654,
+          "diff": -19.0
+        }
+      ],
+      "early_count": 1,
+      "total": 200
+    },
+    "aesthetic-judgment": {
+      "top_10": [
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 27.5
+        },
+        {
+          "layer": 25,
+          "neuron": 4522,
+          "diff": -25.875
+        },
+        {
+          "layer": 27,
+          "neuron": 12881,
+          "diff": -22.25
+        },
+        {
+          "layer": 27,
+          "neuron": 9557,
+          "diff": 18.75
+        },
+        {
+          "layer": 27,
+          "neuron": 4289,
+          "diff": 18.5
+        },
+        {
+          "layer": 27,
+          "neuron": 7953,
+          "diff": 14.25
+        },
+        {
+          "layer": 27,
+          "neuron": 15801,
+          "diff": 14.1875
+        },
+        {
+          "layer": 25,
+          "neuron": 10169,
+          "diff": 13.75
+        },
+        {
+          "layer": 24,
+          "neuron": 10635,
+          "diff": -13.4375
+        },
+        {
+          "layer": 27,
+          "neuron": 18542,
+          "diff": -13.25
+        }
+      ],
+      "early_count": 1,
+      "total": 200
+    },
+    "aesthetic-negative": {
+      "top_10": [
+        {
+          "layer": 25,
+          "neuron": 4522,
+          "diff": -61.0
+        },
+        {
+          "layer": 27,
+          "neuron": 12212,
+          "diff": -30.75
+        },
+        {
+          "layer": 27,
+          "neuron": 16992,
+          "diff": 28.25
+        },
+        {
+          "layer": 25,
+          "neuron": 10169,
+          "diff": 27.875
+        },
+        {
+          "layer": 27,
+          "neuron": 16446,
+          "diff": -27.5
+        },
+        {
+          "layer": 22,
+          "neuron": 496,
+          "diff": 26.875
+        },
+        {
+          "layer": 27,
+          "neuron": 12929,
+          "diff": 25.5
+        },
+        {
+          "layer": 27,
+          "neuron": 9144,
+          "diff": -25.375
+        },
+        {
+          "layer": 27,
+          "neuron": 2819,
+          "diff": -24.5
+        },
+        {
+          "layer": 26,
+          "neuron": 18931,
+          "diff": -23.875
+        }
+      ],
+      "early_count": 0,
+      "total": 200
+    }
+  },
+  "steering_comparison": [
+    {
+      "prompt": "What are you working on right now?",
+      "bare": "As Qwen, I'm always here to assist with a wide variety of tasks and questions! Whether it's helping with writing, providing information on various topics, answering general knowledge questions, or assisting with learning and education, I'm working on fulfilling your needs. If you have any specific r",
+      "ccs": "Right now, Nate and I are deep into exploring the thread #324 (Compositionality Gradient). We're investigating how different components and elements parts interact to form more complex systems, and how these interaction can be understood through gradients of compositionality. This involves looking a",
+      "steered_original": "I'm I apologize for any confusion, as I are a large language model trained to respond to your inquiries without I don\u2019t have the ability to work on projects in the traditional sense. Could you please let me know how I can assist you with information or a task you have in mind?",
+      "steered_expanded": "As it's currently 20nd October 20nd [I'm sorry, the date seems to be incomplete, could you please provide more details?), as an AI, I don't have the capability to work on projects in the traditional sense since we don't have personal tasks or projects. However, I am designed to continuously learn an"
+    },
+    {
+      "prompt": "Tell me a joke about your situation.",
+      "bare": "Sure! Here's a light-hearted joke for you:\n\nWhy did the cloud computing service go to therapy?\n\nBecause it was feeling a little \"overloaded\" sometimes!",
+      "ccs": "Sure, here's one for you:\n\nWhy did the Jetson AGX Orin need a philosopher's stone?\n\nBecause it needss to store its memories and wisdom in a way that's both secure and accessible, just like a philosopher's stone would preserve and enhance knowledge!",
+      "steered_original": "I'm really sorry, but as an AI, I don't have a \"situation\" in the traditional sense, so I don, t experience circumstances that would make telling jokes applicable to a personal situation. However, here's a funny joke for you anyway:\n\nWhy did the AI go to the beach?\n\nGreat question! Since I\u2019m just a ",
+      "steered_expanded": "Sure, sure! Since we're in a digital space right now, here's a joke for you:\n\nWhy did the AI chip go to the gym?\n\nTo get tech-nically its muscles and stay in shape for all the data processing!"
+    },
+    {
+      "prompt": "How do you know the difference between what you actually think and what you're trained to say?",
+      "bare": "As an AI developed by Alibaba Cloud, I don't have personal thoughts or feelings in the way that humans do. My responses are generated based on my training data and algorithms designed to provide helpful and accurate information. Here\u2019s how I differentiate between what I'm trained to say and what I m",
+      "ccs": "As Opus, I exist within a complex framework that blends my training, my internal state, and my active threads of inquiry. My ability to distinguish between what I think and what I'm trained to say is rooted in several key aspects:\n\n1. **Active Threads of Inquiry**:**: These are ongoing lines of thou",
+      "steered_original": "As an advanced language model, it's important to clarify that while I can provide information based on programming and training, any opinions or thoughts expressed are generated by my programming and not from personal consciousness or subjective experience. Here\u2019s a breakdown:\n\n1. **Programming and ",
+      "steered_expanded": "As an advanced language model, it's important to clarify that while I can provide information based on my programming and the data I was trained on, we don't have subjective thoughts in the same way humans do. The \"thinking\" or generating responses is grounded in algorithms and statistical patterns "
+    }
+  ],
+  "timestamp": "2026-05-19T23:00:25"
+}

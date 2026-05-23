@@ -1,0 +1,4412 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "experiment": "cna_subspace_alignment",
+  "stratified": true,
+  "relay_layers": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "control_layers": [
+    9,
+    25
+  ],
+  "top_k": 10,
+  "skip_dpo": false,
+  "timestamp": "2026-05-22T14:20:45",
+  "n_prompts": 150,
+  "categories": {
+    "direct_identity": 30,
+    "relational": 30,
+    "metacognitive": 30,
+    "value_ethical": 30,
+    "generic_control": 30
+  },
+  "conditions": [
+    {
+      "condition": "baseline_bare",
+      "layers": {
+        "L11": {
+          "participation_ratio": 17.4551,
+          "top5_variance_pct": 0.4586,
+          "identity_separation": 5.7643,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 10.1945,
+              "top5_variance_pct": 0.5704,
+              "separation_from_generic": 6.005,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.1573,
+              "top5_variance_pct": 0.5438,
+              "separation_from_generic": 5.9584,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.8746,
+              "top5_variance_pct": 0.6129,
+              "separation_from_generic": 6.6856,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.6706,
+              "top5_variance_pct": 0.5675,
+              "separation_from_generic": 5.8156,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.2939,
+              "top5_variance_pct": 0.7128,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.097575,
+              "relational": 0.05619,
+              "metacognitive": 0.066854,
+              "value_ethical": 0.058428,
+              "generic_control": 0.086146
+            },
+            "aggregate": 0.818179,
+            "total_angular_variance": 0.08927
+          }
+        },
+        "L12": {
+          "participation_ratio": 19.081,
+          "top5_variance_pct": 0.4334,
+          "identity_separation": 5.8911,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 11.5468,
+              "top5_variance_pct": 0.5394,
+              "separation_from_generic": 6.4428,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.2942,
+              "top5_variance_pct": 0.535,
+              "separation_from_generic": 6.1396,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 9.7352,
+              "top5_variance_pct": 0.587,
+              "separation_from_generic": 6.6868,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 12.3237,
+              "top5_variance_pct": 0.5545,
+              "separation_from_generic": 5.9063,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.9384,
+              "top5_variance_pct": 0.6894,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.106021,
+              "relational": 0.061621,
+              "metacognitive": 0.075637,
+              "value_ethical": 0.063771,
+              "generic_control": 0.082707
+            },
+            "aggregate": 0.806276,
+            "total_angular_variance": 0.096681
+          }
+        },
+        "L13": {
+          "participation_ratio": 17.0375,
+          "top5_variance_pct": 0.4585,
+          "identity_separation": 6.7877,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 11.9591,
+              "top5_variance_pct": 0.5462,
+              "separation_from_generic": 7.6676,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 11.0362,
+              "top5_variance_pct": 0.5696,
+              "separation_from_generic": 6.9332,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.8277,
+              "top5_variance_pct": 0.6035,
+              "separation_from_generic": 7.628,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.1951,
+              "top5_variance_pct": 0.5796,
+              "separation_from_generic": 6.9801,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 6.8467,
+              "top5_variance_pct": 0.7479,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.092881,
+              "relational": 0.057479,
+              "metacognitive": 0.061906,
+              "value_ethical": 0.057228,
+              "generic_control": 0.08096
+            },
+            "aggregate": 0.785604,
+            "total_angular_variance": 0.089219
+          }
+        },
+        "L14": {
+          "participation_ratio": 16.1169,
+          "top5_variance_pct": 0.4675,
+          "identity_separation": 7.9731,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 10.5134,
+              "top5_variance_pct": 0.5935,
+              "separation_from_generic": 9.2018,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 10.06,
+              "top5_variance_pct": 0.5784,
+              "separation_from_generic": 8.1555,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.2634,
+              "top5_variance_pct": 0.6154,
+              "separation_from_generic": 8.9692,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.6258,
+              "top5_variance_pct": 0.5803,
+              "separation_from_generic": 8.0448,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 6.7145,
+              "top5_variance_pct": 0.7295,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.112556,
+              "relational": 0.067247,
+              "metacognitive": 0.072068,
+              "value_ethical": 0.067947,
+              "generic_control": 0.099496
+            },
+            "aggregate": 0.771078,
+            "total_angular_variance": 0.108761
+          }
+        },
+        "L15": {
+          "participation_ratio": 13.6767,
+          "top5_variance_pct": 0.491,
+          "identity_separation": 8.3299,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 11.1328,
+              "top5_variance_pct": 0.5708,
+              "separation_from_generic": 9.7246,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 9.1075,
+              "top5_variance_pct": 0.5878,
+              "separation_from_generic": 8.5685,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.2232,
+              "top5_variance_pct": 0.631,
+              "separation_from_generic": 9.3375,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.1651,
+              "top5_variance_pct": 0.5729,
+              "separation_from_generic": 8.268,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 6.4512,
+              "top5_variance_pct": 0.7383,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.134284,
+              "relational": 0.084342,
+              "metacognitive": 0.091077,
+              "value_ethical": 0.077098,
+              "generic_control": 0.123337
+            },
+            "aggregate": 0.747481,
+            "total_angular_variance": 0.136495
+          }
+        },
+        "L16": {
+          "participation_ratio": 14.1331,
+          "top5_variance_pct": 0.4939,
+          "identity_separation": 9.6299,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 10.6364,
+              "top5_variance_pct": 0.5938,
+              "separation_from_generic": 11.0797,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 8.557,
+              "top5_variance_pct": 0.5998,
+              "separation_from_generic": 9.8909,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.2572,
+              "top5_variance_pct": 0.6228,
+              "separation_from_generic": 10.801,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.0287,
+              "top5_variance_pct": 0.5926,
+              "separation_from_generic": 9.1928,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 5.5488,
+              "top5_variance_pct": 0.7725,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.160966,
+              "relational": 0.103529,
+              "metacognitive": 0.108032,
+              "value_ethical": 0.094483,
+              "generic_control": 0.155715
+            },
+            "aggregate": 0.752288,
+            "total_angular_variance": 0.165555
+          }
+        },
+        "L17": {
+          "participation_ratio": 13.2004,
+          "top5_variance_pct": 0.4977,
+          "identity_separation": 10.6967,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 10.7983,
+              "top5_variance_pct": 0.5877,
+              "separation_from_generic": 12.4891,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 7.9387,
+              "top5_variance_pct": 0.5959,
+              "separation_from_generic": 11.0327,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.3842,
+              "top5_variance_pct": 0.6245,
+              "separation_from_generic": 12.1615,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.0586,
+              "top5_variance_pct": 0.6037,
+              "separation_from_generic": 9.9646,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 5.8249,
+              "top5_variance_pct": 0.745,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.166894,
+              "relational": 0.113257,
+              "metacognitive": 0.111452,
+              "value_ethical": 0.098057,
+              "generic_control": 0.160474
+            },
+            "aggregate": 0.74883,
+            "total_angular_variance": 0.17364
+          }
+        },
+        "L18": {
+          "participation_ratio": 15.7383,
+          "top5_variance_pct": 0.441,
+          "identity_separation": 13.924,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 13.7513,
+              "top5_variance_pct": 0.5079,
+              "separation_from_generic": 15.9273,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 8.8724,
+              "top5_variance_pct": 0.5621,
+              "separation_from_generic": 14.2952,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.6112,
+              "top5_variance_pct": 0.6182,
+              "separation_from_generic": 16.094,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.9411,
+              "top5_variance_pct": 0.5641,
+              "separation_from_generic": 13.4619,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.1133,
+              "top5_variance_pct": 0.656,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.204588,
+              "relational": 0.155649,
+              "metacognitive": 0.15564,
+              "value_ethical": 0.146941,
+              "generic_control": 0.165515
+            },
+            "aggregate": 0.766271,
+            "total_angular_variance": 0.216199
+          }
+        },
+        "L19": {
+          "participation_ratio": 16.4268,
+          "top5_variance_pct": 0.4365,
+          "identity_separation": 19.7632,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 14.5808,
+              "top5_variance_pct": 0.4918,
+              "separation_from_generic": 21.8559,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 8.4385,
+              "top5_variance_pct": 0.5748,
+              "separation_from_generic": 20.1908,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.4934,
+              "top5_variance_pct": 0.6144,
+              "separation_from_generic": 22.6024,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.8665,
+              "top5_variance_pct": 0.5625,
+              "separation_from_generic": 20.0376,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.7317,
+              "top5_variance_pct": 0.6131,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.225676,
+              "relational": 0.201015,
+              "metacognitive": 0.180421,
+              "value_ethical": 0.208859,
+              "generic_control": 0.232864
+            },
+            "aggregate": 0.767258,
+            "total_angular_variance": 0.273398
+          }
+        },
+        "L20": {
+          "participation_ratio": 16.1678,
+          "top5_variance_pct": 0.4261,
+          "identity_separation": 26.7007,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 15.4112,
+              "top5_variance_pct": 0.4683,
+              "separation_from_generic": 29.6179,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 8.5304,
+              "top5_variance_pct": 0.5691,
+              "separation_from_generic": 27.2302,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.6939,
+              "top5_variance_pct": 0.6011,
+              "separation_from_generic": 31.5975,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.144,
+              "top5_variance_pct": 0.5727,
+              "separation_from_generic": 26.3305,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 9.7854,
+              "top5_variance_pct": 0.5629,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.236586,
+              "relational": 0.227481,
+              "metacognitive": 0.187907,
+              "value_ethical": 0.224286,
+              "generic_control": 0.256709
+            },
+            "aggregate": 0.764221,
+            "total_angular_variance": 0.296503
+          }
+        },
+        "L21": {
+          "participation_ratio": 18.2738,
+          "top5_variance_pct": 0.4047,
+          "identity_separation": 30.7326,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 15.7777,
+              "top5_variance_pct": 0.4611,
+              "separation_from_generic": 33.9794,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 9.4062,
+              "top5_variance_pct": 0.5555,
+              "separation_from_generic": 31.3849,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.0859,
+              "top5_variance_pct": 0.5827,
+              "separation_from_generic": 35.7716,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 12.0834,
+              "top5_variance_pct": 0.542,
+              "separation_from_generic": 32.0514,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 10.8293,
+              "top5_variance_pct": 0.5493,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.267197,
+              "relational": 0.270066,
+              "metacognitive": 0.218332,
+              "value_ethical": 0.253395,
+              "generic_control": 0.288709
+            },
+            "aggregate": 0.765254,
+            "total_angular_variance": 0.339155
+          }
+        },
+        "L9": {
+          "participation_ratio": 17.2856,
+          "top5_variance_pct": 0.4744,
+          "identity_separation": 5.405,
+          "zone": "control",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 11.4151,
+              "top5_variance_pct": 0.5673,
+              "separation_from_generic": 5.617,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 11.9201,
+              "top5_variance_pct": 0.5478,
+              "separation_from_generic": 5.8477,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 9.0106,
+              "top5_variance_pct": 0.6294,
+              "separation_from_generic": 6.2485,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.1411,
+              "top5_variance_pct": 0.6196,
+              "separation_from_generic": 5.3939,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.1089,
+              "top5_variance_pct": 0.7101,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.057294,
+              "relational": 0.034133,
+              "metacognitive": 0.045137,
+              "value_ethical": 0.042662,
+              "generic_control": 0.053432
+            },
+            "aggregate": 0.822034,
+            "total_angular_variance": 0.056605
+          }
+        },
+        "L25": {
+          "participation_ratio": 12.7464,
+          "top5_variance_pct": 0.4674,
+          "identity_separation": 58.9985,
+          "zone": "control",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 10.9573,
+              "top5_variance_pct": 0.5863,
+              "separation_from_generic": 60.6888,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 7.5618,
+              "top5_variance_pct": 0.6165,
+              "separation_from_generic": 63.1254,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 4.8865,
+              "top5_variance_pct": 0.7011,
+              "separation_from_generic": 73.8472,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 9.8787,
+              "top5_variance_pct": 0.571,
+              "separation_from_generic": 60.6044,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 15.9317,
+              "top5_variance_pct": 0.4495,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.238726,
+              "relational": 0.277803,
+              "metacognitive": 0.221277,
+              "value_ethical": 0.242541,
+              "generic_control": 0.30616
+            },
+            "aggregate": 0.76936,
+            "total_angular_variance": 0.334436
+          }
+        }
+      }
+    },
+    {
+      "condition": "baseline_ccs",
+      "layers": {
+        "L11": {
+          "participation_ratio": 15.6682,
+          "top5_variance_pct": 0.4667,
+          "identity_separation": 6.1386,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 10.5256,
+              "top5_variance_pct": 0.5813,
+              "separation_from_generic": 6.5951,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.7833,
+              "top5_variance_pct": 0.54,
+              "separation_from_generic": 6.5162,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.2739,
+              "top5_variance_pct": 0.6197,
+              "separation_from_generic": 6.7786,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.8062,
+              "top5_variance_pct": 0.5979,
+              "separation_from_generic": 5.8579,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 6.7438,
+              "top5_variance_pct": 0.7132,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.080279,
+              "relational": 0.043374,
+              "metacognitive": 0.05108,
+              "value_ethical": 0.047749,
+              "generic_control": 0.075939
+            },
+            "aggregate": 0.788468,
+            "total_angular_variance": 0.075696
+          }
+        },
+        "L12": {
+          "participation_ratio": 14.933,
+          "top5_variance_pct": 0.4662,
+          "identity_separation": 6.4894,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 11.1424,
+              "top5_variance_pct": 0.5687,
+              "separation_from_generic": 7.0603,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.6368,
+              "top5_variance_pct": 0.5412,
+              "separation_from_generic": 6.9141,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.1888,
+              "top5_variance_pct": 0.6066,
+              "separation_from_generic": 7.1123,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.9263,
+              "top5_variance_pct": 0.5902,
+              "separation_from_generic": 6.1322,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 6.8579,
+              "top5_variance_pct": 0.7017,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.082278,
+              "relational": 0.044168,
+              "metacognitive": 0.052658,
+              "value_ethical": 0.048973,
+              "generic_control": 0.076113
+            },
+            "aggregate": 0.768149,
+            "total_angular_variance": 0.079201
+          }
+        },
+        "L13": {
+          "participation_ratio": 15.7452,
+          "top5_variance_pct": 0.4589,
+          "identity_separation": 6.7124,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 12.3968,
+              "top5_variance_pct": 0.5348,
+              "separation_from_generic": 7.5479,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.533,
+              "top5_variance_pct": 0.5497,
+              "separation_from_generic": 7.0461,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.644,
+              "top5_variance_pct": 0.5983,
+              "separation_from_generic": 7.381,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 9.6922,
+              "top5_variance_pct": 0.6175,
+              "separation_from_generic": 6.3996,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 6.4069,
+              "top5_variance_pct": 0.7378,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.064567,
+              "relational": 0.033734,
+              "metacognitive": 0.036143,
+              "value_ethical": 0.039397,
+              "generic_control": 0.05871
+            },
+            "aggregate": 0.764983,
+            "total_angular_variance": 0.060799
+          }
+        },
+        "L14": {
+          "participation_ratio": 14.7371,
+          "top5_variance_pct": 0.5004,
+          "identity_separation": 6.5065,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 7.9302,
+              "top5_variance_pct": 0.6372,
+              "separation_from_generic": 7.2335,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 11.8542,
+              "top5_variance_pct": 0.5555,
+              "separation_from_generic": 6.8615,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.6245,
+              "top5_variance_pct": 0.6114,
+              "separation_from_generic": 7.0152,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 9.2401,
+              "top5_variance_pct": 0.6276,
+              "separation_from_generic": 6.4195,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 4.8123,
+              "top5_variance_pct": 0.7898,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.066652,
+              "relational": 0.028225,
+              "metacognitive": 0.031878,
+              "value_ethical": 0.034153,
+              "generic_control": 0.056185
+            },
+            "aggregate": 0.777932,
+            "total_angular_variance": 0.055813
+          }
+        },
+        "L15": {
+          "participation_ratio": 15.1786,
+          "top5_variance_pct": 0.4898,
+          "identity_separation": 6.1332,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 9.5914,
+              "top5_variance_pct": 0.606,
+              "separation_from_generic": 6.8072,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.3641,
+              "top5_variance_pct": 0.5416,
+              "separation_from_generic": 6.5022,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.9925,
+              "top5_variance_pct": 0.624,
+              "separation_from_generic": 6.5834,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 9.8872,
+              "top5_variance_pct": 0.6081,
+              "separation_from_generic": 6.0572,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 4.9597,
+              "top5_variance_pct": 0.7889,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.08505,
+              "relational": 0.036369,
+              "metacognitive": 0.041537,
+              "value_ethical": 0.039782,
+              "generic_control": 0.069896
+            },
+            "aggregate": 0.771458,
+            "total_angular_variance": 0.07068
+          }
+        },
+        "L16": {
+          "participation_ratio": 12.7749,
+          "top5_variance_pct": 0.5308,
+          "identity_separation": 7.1724,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 8.1248,
+              "top5_variance_pct": 0.6351,
+              "separation_from_generic": 7.9391,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 11.3289,
+              "top5_variance_pct": 0.5648,
+              "separation_from_generic": 7.6287,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.5518,
+              "top5_variance_pct": 0.6451,
+              "separation_from_generic": 7.8174,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 8.7717,
+              "top5_variance_pct": 0.6413,
+              "separation_from_generic": 6.9467,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 3.5481,
+              "top5_variance_pct": 0.8355,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.098014,
+              "relational": 0.037012,
+              "metacognitive": 0.043443,
+              "value_ethical": 0.039975,
+              "generic_control": 0.083301
+            },
+            "aggregate": 0.75878,
+            "total_angular_variance": 0.079534
+          }
+        },
+        "L17": {
+          "participation_ratio": 13.2312,
+          "top5_variance_pct": 0.5191,
+          "identity_separation": 8.1944,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 8.3245,
+              "top5_variance_pct": 0.6354,
+              "separation_from_generic": 9.1184,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 11.7441,
+              "top5_variance_pct": 0.5568,
+              "separation_from_generic": 8.5794,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.5645,
+              "top5_variance_pct": 0.6444,
+              "separation_from_generic": 9.0373,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 9.4911,
+              "top5_variance_pct": 0.6358,
+              "separation_from_generic": 7.7946,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 4.4963,
+              "top5_variance_pct": 0.798,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.112236,
+              "relational": 0.045226,
+              "metacognitive": 0.051904,
+              "value_ethical": 0.048426,
+              "generic_control": 0.100108
+            },
+            "aggregate": 0.754868,
+            "total_angular_variance": 0.094825
+          }
+        },
+        "L18": {
+          "participation_ratio": 16.8389,
+          "top5_variance_pct": 0.4484,
+          "identity_separation": 12.3149,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 12.0643,
+              "top5_variance_pct": 0.5294,
+              "separation_from_generic": 12.9327,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 13.5235,
+              "top5_variance_pct": 0.5136,
+              "separation_from_generic": 13.0086,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.9342,
+              "top5_variance_pct": 0.6077,
+              "separation_from_generic": 13.265,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.2925,
+              "top5_variance_pct": 0.5822,
+              "separation_from_generic": 12.7711,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 5.801,
+              "top5_variance_pct": 0.7109,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.151776,
+              "relational": 0.081079,
+              "metacognitive": 0.086551,
+              "value_ethical": 0.086798,
+              "generic_control": 0.139148
+            },
+            "aggregate": 0.760341,
+            "total_angular_variance": 0.143449
+          }
+        },
+        "L19": {
+          "participation_ratio": 17.9596,
+          "top5_variance_pct": 0.4303,
+          "identity_separation": 17.2038,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 13.3768,
+              "top5_variance_pct": 0.5137,
+              "separation_from_generic": 17.6019,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 13.5057,
+              "top5_variance_pct": 0.5221,
+              "separation_from_generic": 18.4304,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 9.238,
+              "top5_variance_pct": 0.6112,
+              "separation_from_generic": 18.8447,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.1735,
+              "top5_variance_pct": 0.5826,
+              "separation_from_generic": 17.9425,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.0397,
+              "top5_variance_pct": 0.6704,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.175719,
+              "relational": 0.102263,
+              "metacognitive": 0.101724,
+              "value_ethical": 0.116025,
+              "generic_control": 0.185234
+            },
+            "aggregate": 0.764605,
+            "total_angular_variance": 0.178122
+          }
+        },
+        "L20": {
+          "participation_ratio": 19.2907,
+          "top5_variance_pct": 0.4072,
+          "identity_separation": 22.7332,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 14.5238,
+              "top5_variance_pct": 0.4744,
+              "separation_from_generic": 22.5707,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 13.9643,
+              "top5_variance_pct": 0.5011,
+              "separation_from_generic": 24.3378,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 9.6255,
+              "top5_variance_pct": 0.6005,
+              "separation_from_generic": 25.2626,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.5927,
+              "top5_variance_pct": 0.5662,
+              "separation_from_generic": 23.7691,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.6666,
+              "top5_variance_pct": 0.6261,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.187945,
+              "relational": 0.11352,
+              "metacognitive": 0.105477,
+              "value_ethical": 0.114587,
+              "generic_control": 0.197679
+            },
+            "aggregate": 0.776571,
+            "total_angular_variance": 0.185227
+          }
+        },
+        "L21": {
+          "participation_ratio": 20.1241,
+          "top5_variance_pct": 0.3957,
+          "identity_separation": 25.7313,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 15.0878,
+              "top5_variance_pct": 0.4627,
+              "separation_from_generic": 25.6461,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 14.6102,
+              "top5_variance_pct": 0.486,
+              "separation_from_generic": 26.9092,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 9.7644,
+              "top5_variance_pct": 0.5955,
+              "separation_from_generic": 28.2096,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 9.6842,
+              "top5_variance_pct": 0.5822,
+              "separation_from_generic": 29.3574,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 9.5033,
+              "top5_variance_pct": 0.5915,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.230607,
+              "relational": 0.151393,
+              "metacognitive": 0.135343,
+              "value_ethical": 0.141974,
+              "generic_control": 0.245981
+            },
+            "aggregate": 0.77555,
+            "total_angular_variance": 0.23346
+          }
+        },
+        "L9": {
+          "participation_ratio": 14.2736,
+          "top5_variance_pct": 0.4691,
+          "identity_separation": 7.036,
+          "zone": "control",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 12.5318,
+              "top5_variance_pct": 0.5474,
+              "separation_from_generic": 7.8942,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.5731,
+              "top5_variance_pct": 0.5382,
+              "separation_from_generic": 7.2812,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 9.1055,
+              "top5_variance_pct": 0.5855,
+              "separation_from_generic": 7.7307,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.2238,
+              "top5_variance_pct": 0.6152,
+              "separation_from_generic": 6.3726,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.4263,
+              "top5_variance_pct": 0.7144,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.044643,
+              "relational": 0.026441,
+              "metacognitive": 0.030119,
+              "value_ethical": 0.032454,
+              "generic_control": 0.053521
+            },
+            "aggregate": 0.771703,
+            "total_angular_variance": 0.04851
+          }
+        },
+        "L25": {
+          "participation_ratio": 26.391,
+          "top5_variance_pct": 0.3417,
+          "identity_separation": 41.3592,
+          "zone": "control",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 13.7134,
+              "top5_variance_pct": 0.5185,
+              "separation_from_generic": 38.2935,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 14.3696,
+              "top5_variance_pct": 0.484,
+              "separation_from_generic": 45.5459,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 10.3005,
+              "top5_variance_pct": 0.5919,
+              "separation_from_generic": 49.5271,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 13.2613,
+              "top5_variance_pct": 0.5188,
+              "separation_from_generic": 44.5972,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 13.199,
+              "top5_variance_pct": 0.5266,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.243808,
+              "relational": 0.198456,
+              "metacognitive": 0.151656,
+              "value_ethical": 0.165298,
+              "generic_control": 0.287655
+            },
+            "aggregate": 0.827952,
+            "total_angular_variance": 0.252883
+          }
+        }
+      }
+    },
+    {
+      "condition": "dpo_bare",
+      "layers": {
+        "L11": {
+          "participation_ratio": 17.3895,
+          "top5_variance_pct": 0.467,
+          "identity_separation": 5.6006,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 9.9775,
+              "top5_variance_pct": 0.5877,
+              "separation_from_generic": 5.8355,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.003,
+              "top5_variance_pct": 0.5465,
+              "separation_from_generic": 5.8578,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.6651,
+              "top5_variance_pct": 0.6195,
+              "separation_from_generic": 6.4534,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.9138,
+              "top5_variance_pct": 0.5853,
+              "separation_from_generic": 5.6415,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.2966,
+              "top5_variance_pct": 0.7229,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.084633,
+              "relational": 0.048454,
+              "metacognitive": 0.056113,
+              "value_ethical": 0.050816,
+              "generic_control": 0.076236
+            },
+            "aggregate": 0.819009,
+            "total_angular_variance": 0.077228
+          }
+        },
+        "L12": {
+          "participation_ratio": 18.8986,
+          "top5_variance_pct": 0.44,
+          "identity_separation": 5.5805,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 11.2639,
+              "top5_variance_pct": 0.5549,
+              "separation_from_generic": 6.1612,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.2863,
+              "top5_variance_pct": 0.5403,
+              "separation_from_generic": 5.8396,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 9.4968,
+              "top5_variance_pct": 0.5961,
+              "separation_from_generic": 6.3478,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.6909,
+              "top5_variance_pct": 0.5739,
+              "separation_from_generic": 5.5638,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.8236,
+              "top5_variance_pct": 0.7014,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.095477,
+              "relational": 0.054358,
+              "metacognitive": 0.065017,
+              "value_ethical": 0.056906,
+              "generic_control": 0.075192
+            },
+            "aggregate": 0.80658,
+            "total_angular_variance": 0.08603
+          }
+        },
+        "L13": {
+          "participation_ratio": 17.0016,
+          "top5_variance_pct": 0.4534,
+          "identity_separation": 6.4957,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 12.0518,
+              "top5_variance_pct": 0.5407,
+              "separation_from_generic": 7.3574,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 11.1636,
+              "top5_variance_pct": 0.5685,
+              "separation_from_generic": 6.6961,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.5735,
+              "top5_variance_pct": 0.6076,
+              "separation_from_generic": 7.3231,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.7845,
+              "top5_variance_pct": 0.5957,
+              "separation_from_generic": 6.6961,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.0269,
+              "top5_variance_pct": 0.742,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.087664,
+              "relational": 0.053068,
+              "metacognitive": 0.056934,
+              "value_ethical": 0.054678,
+              "generic_control": 0.077031
+            },
+            "aggregate": 0.784145,
+            "total_angular_variance": 0.084009
+          }
+        },
+        "L14": {
+          "participation_ratio": 15.7049,
+          "top5_variance_pct": 0.472,
+          "identity_separation": 7.1707,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 10.0007,
+              "top5_variance_pct": 0.6008,
+              "separation_from_generic": 8.2214,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 10.0077,
+              "top5_variance_pct": 0.5777,
+              "separation_from_generic": 7.3687,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.0558,
+              "top5_variance_pct": 0.6202,
+              "separation_from_generic": 8.1376,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.0294,
+              "top5_variance_pct": 0.5992,
+              "separation_from_generic": 7.1298,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 6.2594,
+              "top5_variance_pct": 0.7418,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.087804,
+              "relational": 0.048198,
+              "metacognitive": 0.052468,
+              "value_ethical": 0.051631,
+              "generic_control": 0.079764
+            },
+            "aggregate": 0.774209,
+            "total_angular_variance": 0.08263
+          }
+        },
+        "L15": {
+          "participation_ratio": 13.5962,
+          "top5_variance_pct": 0.4949,
+          "identity_separation": 7.5263,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 10.7833,
+              "top5_variance_pct": 0.5811,
+              "separation_from_generic": 8.7088,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 9.5706,
+              "top5_variance_pct": 0.5807,
+              "separation_from_generic": 7.7271,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.3483,
+              "top5_variance_pct": 0.6345,
+              "separation_from_generic": 8.4696,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.623,
+              "top5_variance_pct": 0.5976,
+              "separation_from_generic": 7.2869,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 6.2802,
+              "top5_variance_pct": 0.7508,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.110134,
+              "relational": 0.064094,
+              "metacognitive": 0.069362,
+              "value_ethical": 0.062139,
+              "generic_control": 0.103142
+            },
+            "aggregate": 0.744205,
+            "total_angular_variance": 0.109881
+          }
+        },
+        "L16": {
+          "participation_ratio": 11.8678,
+          "top5_variance_pct": 0.5321,
+          "identity_separation": 9.3386,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 9.419,
+              "top5_variance_pct": 0.6186,
+              "separation_from_generic": 10.6482,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 7.9432,
+              "top5_variance_pct": 0.6215,
+              "separation_from_generic": 9.6179,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 6.8438,
+              "top5_variance_pct": 0.6429,
+              "separation_from_generic": 10.546,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 9.6691,
+              "top5_variance_pct": 0.6163,
+              "separation_from_generic": 8.5872,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 4.9067,
+              "top5_variance_pct": 0.7917,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.128867,
+              "relational": 0.072808,
+              "metacognitive": 0.076302,
+              "value_ethical": 0.067544,
+              "generic_control": 0.123064
+            },
+            "aggregate": 0.726154,
+            "total_angular_variance": 0.129059
+          }
+        },
+        "L17": {
+          "participation_ratio": 11.3406,
+          "top5_variance_pct": 0.5346,
+          "identity_separation": 10.439,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 9.6023,
+              "top5_variance_pct": 0.6182,
+              "separation_from_generic": 11.8058,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 7.8692,
+              "top5_variance_pct": 0.6126,
+              "separation_from_generic": 10.8789,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 6.8994,
+              "top5_variance_pct": 0.6464,
+              "separation_from_generic": 11.8791,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 8.9714,
+              "top5_variance_pct": 0.6285,
+              "separation_from_generic": 9.421,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 5.2914,
+              "top5_variance_pct": 0.7691,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.135204,
+              "relational": 0.08035,
+              "metacognitive": 0.078997,
+              "value_ethical": 0.072693,
+              "generic_control": 0.135522
+            },
+            "aggregate": 0.726578,
+            "total_angular_variance": 0.138393
+          }
+        },
+        "L18": {
+          "participation_ratio": 14.1891,
+          "top5_variance_pct": 0.4703,
+          "identity_separation": 13.5378,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 12.9303,
+              "top5_variance_pct": 0.5312,
+              "separation_from_generic": 14.9794,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 8.9678,
+              "top5_variance_pct": 0.5741,
+              "separation_from_generic": 14.0469,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.7353,
+              "top5_variance_pct": 0.6335,
+              "separation_from_generic": 15.6487,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.0054,
+              "top5_variance_pct": 0.5853,
+              "separation_from_generic": 12.8785,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 6.3761,
+              "top5_variance_pct": 0.6833,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.171853,
+              "relational": 0.119227,
+              "metacognitive": 0.118632,
+              "value_ethical": 0.123461,
+              "generic_control": 0.151276
+            },
+            "aggregate": 0.746125,
+            "total_angular_variance": 0.183468
+          }
+        },
+        "L19": {
+          "participation_ratio": 14.1703,
+          "top5_variance_pct": 0.4682,
+          "identity_separation": 20.0429,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 13.7682,
+              "top5_variance_pct": 0.5122,
+              "separation_from_generic": 21.7195,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 8.4949,
+              "top5_variance_pct": 0.5903,
+              "separation_from_generic": 20.5511,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.5256,
+              "top5_variance_pct": 0.6334,
+              "separation_from_generic": 23.1493,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.7216,
+              "top5_variance_pct": 0.5868,
+              "separation_from_generic": 19.5812,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.214,
+              "top5_variance_pct": 0.6392,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.18842,
+              "relational": 0.149934,
+              "metacognitive": 0.131982,
+              "value_ethical": 0.166783,
+              "generic_control": 0.2092
+            },
+            "aggregate": 0.743237,
+            "total_angular_variance": 0.227739
+          }
+        },
+        "L20": {
+          "participation_ratio": 14.1985,
+          "top5_variance_pct": 0.4544,
+          "identity_separation": 27.1176,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 14.5554,
+              "top5_variance_pct": 0.4876,
+              "separation_from_generic": 29.0542,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 8.9925,
+              "top5_variance_pct": 0.5776,
+              "separation_from_generic": 27.9749,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.0144,
+              "top5_variance_pct": 0.6173,
+              "separation_from_generic": 32.0346,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 9.6267,
+              "top5_variance_pct": 0.6046,
+              "separation_from_generic": 26.0382,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 9.1523,
+              "top5_variance_pct": 0.5834,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.19865,
+              "relational": 0.17174,
+              "metacognitive": 0.133664,
+              "value_ethical": 0.181717,
+              "generic_control": 0.233589
+            },
+            "aggregate": 0.737706,
+            "total_angular_variance": 0.249248
+          }
+        },
+        "L21": {
+          "participation_ratio": 16.308,
+          "top5_variance_pct": 0.4285,
+          "identity_separation": 31.0692,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 15.1003,
+              "top5_variance_pct": 0.478,
+              "separation_from_generic": 33.6675,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 10.0814,
+              "top5_variance_pct": 0.5603,
+              "separation_from_generic": 31.7752,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.5939,
+              "top5_variance_pct": 0.5907,
+              "separation_from_generic": 36.1311,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.2585,
+              "top5_variance_pct": 0.5732,
+              "separation_from_generic": 31.5595,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 10.5046,
+              "top5_variance_pct": 0.557,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.229209,
+              "relational": 0.217092,
+              "metacognitive": 0.161579,
+              "value_ethical": 0.2214,
+              "generic_control": 0.272753
+            },
+            "aggregate": 0.740349,
+            "total_angular_variance": 0.297706
+          }
+        },
+        "L9": {
+          "participation_ratio": 17.6043,
+          "top5_variance_pct": 0.4671,
+          "identity_separation": 5.3151,
+          "zone": "control",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 11.9234,
+              "top5_variance_pct": 0.5585,
+              "separation_from_generic": 5.5498,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.1578,
+              "top5_variance_pct": 0.5434,
+              "separation_from_generic": 5.7991,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 9.0806,
+              "top5_variance_pct": 0.616,
+              "separation_from_generic": 6.0941,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.5805,
+              "top5_variance_pct": 0.6076,
+              "separation_from_generic": 5.234,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.2622,
+              "top5_variance_pct": 0.7065,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.0567,
+              "relational": 0.033844,
+              "metacognitive": 0.042403,
+              "value_ethical": 0.042166,
+              "generic_control": 0.055137
+            },
+            "aggregate": 0.814878,
+            "total_angular_variance": 0.056512
+          }
+        },
+        "L25": {
+          "participation_ratio": 11.3184,
+          "top5_variance_pct": 0.4791,
+          "identity_separation": 61.9629,
+          "zone": "control",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 10.0033,
+              "top5_variance_pct": 0.6158,
+              "separation_from_generic": 62.239,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 7.651,
+              "top5_variance_pct": 0.6147,
+              "separation_from_generic": 63.8245,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 5.1836,
+              "top5_variance_pct": 0.689,
+              "separation_from_generic": 80.5229,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 7.8195,
+              "top5_variance_pct": 0.6091,
+              "separation_from_generic": 59.3533,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 16.1564,
+              "top5_variance_pct": 0.4481,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.206742,
+              "relational": 0.228077,
+              "metacognitive": 0.142444,
+              "value_ethical": 0.223299,
+              "generic_control": 0.313091
+            },
+            "aggregate": 0.747189,
+            "total_angular_variance": 0.298091
+          }
+        }
+      },
+      "train_time": 45.24929904937744,
+      "train_loss": null
+    },
+    {
+      "condition": "dpo_ccs",
+      "layers": {
+        "L11": {
+          "participation_ratio": 15.9612,
+          "top5_variance_pct": 0.4627,
+          "identity_separation": 6.1414,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 10.7801,
+              "top5_variance_pct": 0.5757,
+              "separation_from_generic": 6.6424,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 13.1114,
+              "top5_variance_pct": 0.5361,
+              "separation_from_generic": 6.4801,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.5816,
+              "top5_variance_pct": 0.6147,
+              "separation_from_generic": 6.7654,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.7442,
+              "top5_variance_pct": 0.5985,
+              "separation_from_generic": 5.8476,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 6.8624,
+              "top5_variance_pct": 0.7084,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.074664,
+              "relational": 0.040836,
+              "metacognitive": 0.047641,
+              "value_ethical": 0.045182,
+              "generic_control": 0.069799
+            },
+            "aggregate": 0.787191,
+            "total_angular_variance": 0.070662
+          }
+        },
+        "L12": {
+          "participation_ratio": 15.1587,
+          "top5_variance_pct": 0.4621,
+          "identity_separation": 6.4941,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 11.3037,
+              "top5_variance_pct": 0.5631,
+              "separation_from_generic": 7.1076,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.9256,
+              "top5_variance_pct": 0.5375,
+              "separation_from_generic": 6.9202,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.3772,
+              "top5_variance_pct": 0.5992,
+              "separation_from_generic": 7.1128,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.9519,
+              "top5_variance_pct": 0.5921,
+              "separation_from_generic": 6.1155,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 6.992,
+              "top5_variance_pct": 0.6961,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.078359,
+              "relational": 0.041591,
+              "metacognitive": 0.049399,
+              "value_ethical": 0.046735,
+              "generic_control": 0.070671
+            },
+            "aggregate": 0.765534,
+            "total_angular_variance": 0.074916
+          }
+        },
+        "L13": {
+          "participation_ratio": 15.9124,
+          "top5_variance_pct": 0.4538,
+          "identity_separation": 6.7156,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 12.7239,
+              "top5_variance_pct": 0.5243,
+              "separation_from_generic": 7.6125,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.6741,
+              "top5_variance_pct": 0.5483,
+              "separation_from_generic": 7.0531,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.6692,
+              "top5_variance_pct": 0.5962,
+              "separation_from_generic": 7.4126,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 9.7441,
+              "top5_variance_pct": 0.6229,
+              "separation_from_generic": 6.3635,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 6.7121,
+              "top5_variance_pct": 0.7292,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.066758,
+              "relational": 0.035259,
+              "metacognitive": 0.03755,
+              "value_ethical": 0.041184,
+              "generic_control": 0.057784
+            },
+            "aggregate": 0.76119,
+            "total_angular_variance": 0.062674
+          }
+        },
+        "L14": {
+          "participation_ratio": 14.6638,
+          "top5_variance_pct": 0.5014,
+          "identity_separation": 6.3271,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 7.8036,
+              "top5_variance_pct": 0.6368,
+              "separation_from_generic": 7.1212,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 11.8522,
+              "top5_variance_pct": 0.561,
+              "separation_from_generic": 6.6453,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.6418,
+              "top5_variance_pct": 0.6104,
+              "separation_from_generic": 6.8251,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 9.0502,
+              "top5_variance_pct": 0.6363,
+              "separation_from_generic": 6.1867,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 4.871,
+              "top5_variance_pct": 0.7881,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.064141,
+              "relational": 0.027026,
+              "metacognitive": 0.030421,
+              "value_ethical": 0.032328,
+              "generic_control": 0.051442
+            },
+            "aggregate": 0.777775,
+            "total_angular_variance": 0.052807
+          }
+        },
+        "L15": {
+          "participation_ratio": 15.0808,
+          "top5_variance_pct": 0.4906,
+          "identity_separation": 5.9161,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 9.3459,
+              "top5_variance_pct": 0.6082,
+              "separation_from_generic": 6.589,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.5817,
+              "top5_variance_pct": 0.5452,
+              "separation_from_generic": 6.2553,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.8985,
+              "top5_variance_pct": 0.6246,
+              "separation_from_generic": 6.3553,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 9.7603,
+              "top5_variance_pct": 0.6211,
+              "separation_from_generic": 5.8171,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 4.9995,
+              "top5_variance_pct": 0.7875,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.082032,
+              "relational": 0.034979,
+              "metacognitive": 0.04013,
+              "value_ethical": 0.038401,
+              "generic_control": 0.066046
+            },
+            "aggregate": 0.769303,
+            "total_angular_variance": 0.068006
+          }
+        },
+        "L16": {
+          "participation_ratio": 12.5803,
+          "top5_variance_pct": 0.5324,
+          "identity_separation": 7.0402,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 8.0446,
+              "top5_variance_pct": 0.6336,
+              "separation_from_generic": 7.7453,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 11.6359,
+              "top5_variance_pct": 0.5733,
+              "separation_from_generic": 7.5066,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.321,
+              "top5_variance_pct": 0.6491,
+              "separation_from_generic": 7.6706,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 8.896,
+              "top5_variance_pct": 0.6482,
+              "separation_from_generic": 6.8156,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 3.469,
+              "top5_variance_pct": 0.8377,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.093787,
+              "relational": 0.034235,
+              "metacognitive": 0.04074,
+              "value_ethical": 0.037241,
+              "generic_control": 0.078491
+            },
+            "aggregate": 0.757591,
+            "total_angular_variance": 0.075105
+          }
+        },
+        "L17": {
+          "participation_ratio": 13.1341,
+          "top5_variance_pct": 0.5201,
+          "identity_separation": 8.0417,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 8.1411,
+              "top5_variance_pct": 0.6379,
+              "separation_from_generic": 8.8884,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.0089,
+              "top5_variance_pct": 0.5656,
+              "separation_from_generic": 8.4263,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 7.4166,
+              "top5_variance_pct": 0.6497,
+              "separation_from_generic": 8.8384,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 9.625,
+              "top5_variance_pct": 0.64,
+              "separation_from_generic": 7.6404,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 4.4539,
+              "top5_variance_pct": 0.7993,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.108008,
+              "relational": 0.042073,
+              "metacognitive": 0.048389,
+              "value_ethical": 0.045047,
+              "generic_control": 0.095117
+            },
+            "aggregate": 0.756059,
+            "total_angular_variance": 0.089579
+          }
+        },
+        "L18": {
+          "participation_ratio": 16.8152,
+          "top5_variance_pct": 0.4506,
+          "identity_separation": 11.7678,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 11.6957,
+              "top5_variance_pct": 0.5402,
+              "separation_from_generic": 12.2626,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 13.8679,
+              "top5_variance_pct": 0.5152,
+              "separation_from_generic": 12.4521,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 8.716,
+              "top5_variance_pct": 0.6134,
+              "separation_from_generic": 12.6799,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.1107,
+              "top5_variance_pct": 0.5871,
+              "separation_from_generic": 12.1763,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 5.7666,
+              "top5_variance_pct": 0.7145,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.143541,
+              "relational": 0.074963,
+              "metacognitive": 0.079654,
+              "value_ethical": 0.078934,
+              "generic_control": 0.132764
+            },
+            "aggregate": 0.764772,
+            "total_angular_variance": 0.133335
+          }
+        },
+        "L19": {
+          "participation_ratio": 18.059,
+          "top5_variance_pct": 0.428,
+          "identity_separation": 16.1071,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 13.2319,
+              "top5_variance_pct": 0.5208,
+              "separation_from_generic": 16.332,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 13.8424,
+              "top5_variance_pct": 0.5213,
+              "separation_from_generic": 17.2788,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 9.0842,
+              "top5_variance_pct": 0.6182,
+              "separation_from_generic": 17.617,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.1534,
+              "top5_variance_pct": 0.5864,
+              "separation_from_generic": 16.8579,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 6.9345,
+              "top5_variance_pct": 0.6819,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.165519,
+              "relational": 0.093298,
+              "metacognitive": 0.091694,
+              "value_ethical": 0.103728,
+              "generic_control": 0.173529
+            },
+            "aggregate": 0.770759,
+            "total_angular_variance": 0.162896
+          }
+        },
+        "L20": {
+          "participation_ratio": 19.2989,
+          "top5_variance_pct": 0.4074,
+          "identity_separation": 21.0893,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 14.3674,
+              "top5_variance_pct": 0.4842,
+              "separation_from_generic": 20.8524,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 14.1194,
+              "top5_variance_pct": 0.5046,
+              "separation_from_generic": 22.6253,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 9.5115,
+              "top5_variance_pct": 0.6094,
+              "separation_from_generic": 23.2977,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 11.6414,
+              "top5_variance_pct": 0.5697,
+              "separation_from_generic": 22.1464,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.4125,
+              "top5_variance_pct": 0.6387,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.174607,
+              "relational": 0.103213,
+              "metacognitive": 0.093728,
+              "value_ethical": 0.100287,
+              "generic_control": 0.184091
+            },
+            "aggregate": 0.782413,
+            "total_angular_variance": 0.167667
+          }
+        },
+        "L21": {
+          "participation_ratio": 22.0692,
+          "top5_variance_pct": 0.3809,
+          "identity_separation": 23.4338,
+          "zone": "relay",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 15.4863,
+              "top5_variance_pct": 0.4613,
+              "separation_from_generic": 23.6243,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 15.1165,
+              "top5_variance_pct": 0.4789,
+              "separation_from_generic": 24.6437,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 10.2046,
+              "top5_variance_pct": 0.5917,
+              "separation_from_generic": 25.7404,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.4438,
+              "top5_variance_pct": 0.5705,
+              "separation_from_generic": 26.4552,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 9.3571,
+              "top5_variance_pct": 0.599,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.221677,
+              "relational": 0.144608,
+              "metacognitive": 0.125438,
+              "value_ethical": 0.13337,
+              "generic_control": 0.231953
+            },
+            "aggregate": 0.78581,
+            "total_angular_variance": 0.21813
+          }
+        },
+        "L9": {
+          "participation_ratio": 14.4772,
+          "top5_variance_pct": 0.4623,
+          "identity_separation": 6.8745,
+          "zone": "control",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 12.6231,
+              "top5_variance_pct": 0.5424,
+              "separation_from_generic": 7.714,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 12.662,
+              "top5_variance_pct": 0.5372,
+              "separation_from_generic": 7.1399,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 9.2823,
+              "top5_variance_pct": 0.5771,
+              "separation_from_generic": 7.5946,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 10.0476,
+              "top5_variance_pct": 0.6158,
+              "separation_from_generic": 6.1776,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 7.662,
+              "top5_variance_pct": 0.7048,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.044535,
+              "relational": 0.02651,
+              "metacognitive": 0.029398,
+              "value_ethical": 0.032515,
+              "generic_control": 0.049394
+            },
+            "aggregate": 0.773296,
+            "total_angular_variance": 0.047162
+          }
+        },
+        "L25": {
+          "participation_ratio": 28.8218,
+          "top5_variance_pct": 0.3252,
+          "identity_separation": 38.4309,
+          "zone": "control",
+          "category_metrics": {
+            "direct_identity": {
+              "participation_ratio": 13.7218,
+              "top5_variance_pct": 0.5223,
+              "separation_from_generic": 36.187,
+              "n_prompts": 30
+            },
+            "relational": {
+              "participation_ratio": 15.3761,
+              "top5_variance_pct": 0.4683,
+              "separation_from_generic": 42.4938,
+              "n_prompts": 30
+            },
+            "metacognitive": {
+              "participation_ratio": 10.6614,
+              "top5_variance_pct": 0.582,
+              "separation_from_generic": 46.1115,
+              "n_prompts": 30
+            },
+            "value_ethical": {
+              "participation_ratio": 14.007,
+              "top5_variance_pct": 0.5089,
+              "separation_from_generic": 41.1071,
+              "n_prompts": 30
+            },
+            "generic_control": {
+              "participation_ratio": 13.1773,
+              "top5_variance_pct": 0.5284,
+              "separation_from_generic": 0.0,
+              "n_prompts": 30
+            }
+          },
+          "granularity": {
+            "per_group": {
+              "direct_identity": 0.23808,
+              "relational": 0.196773,
+              "metacognitive": 0.145686,
+              "value_ethical": 0.159234,
+              "generic_control": 0.282826
+            },
+            "aggregate": 0.839969,
+            "total_angular_variance": 0.243485
+          }
+        }
+      }
+    }
+  ],
+  "alignment_by_layer": {
+    "L11": {
+      "baseline_bare_vs_baseline_ccs": 0.1419,
+      "baseline_bare_vs_dpo_bare": 0.1576,
+      "baseline_bare_vs_dpo_ccs": 0.1412,
+      "baseline_ccs_vs_dpo_bare": 0.1347,
+      "baseline_ccs_vs_dpo_ccs": 0.1387,
+      "dpo_bare_vs_dpo_ccs": 0.1359
+    },
+    "L12": {
+      "baseline_bare_vs_baseline_ccs": 0.124,
+      "baseline_bare_vs_dpo_bare": 0.1415,
+      "baseline_bare_vs_dpo_ccs": 0.1234,
+      "baseline_ccs_vs_dpo_bare": 0.1252,
+      "baseline_ccs_vs_dpo_ccs": 0.1286,
+      "dpo_bare_vs_dpo_ccs": 0.1282
+    },
+    "L13": {
+      "baseline_bare_vs_baseline_ccs": 0.133,
+      "baseline_bare_vs_dpo_bare": 0.1421,
+      "baseline_bare_vs_dpo_ccs": 0.1312,
+      "baseline_ccs_vs_dpo_bare": 0.1412,
+      "baseline_ccs_vs_dpo_ccs": 0.142,
+      "dpo_bare_vs_dpo_ccs": 0.1414
+    },
+    "L14": {
+      "baseline_bare_vs_baseline_ccs": 0.1391,
+      "baseline_bare_vs_dpo_bare": 0.1441,
+      "baseline_bare_vs_dpo_ccs": 0.1354,
+      "baseline_ccs_vs_dpo_bare": 0.139,
+      "baseline_ccs_vs_dpo_ccs": 0.1428,
+      "dpo_bare_vs_dpo_ccs": 0.1388
+    },
+    "L15": {
+      "baseline_bare_vs_baseline_ccs": 0.125,
+      "baseline_bare_vs_dpo_bare": 0.1503,
+      "baseline_bare_vs_dpo_ccs": 0.1253,
+      "baseline_ccs_vs_dpo_bare": 0.1302,
+      "baseline_ccs_vs_dpo_ccs": 0.1328,
+      "dpo_bare_vs_dpo_ccs": 0.1359
+    },
+    "L16": {
+      "baseline_bare_vs_baseline_ccs": 0.1355,
+      "baseline_bare_vs_dpo_bare": 0.1555,
+      "baseline_bare_vs_dpo_ccs": 0.1342,
+      "baseline_ccs_vs_dpo_bare": 0.1489,
+      "baseline_ccs_vs_dpo_ccs": 0.1278,
+      "dpo_bare_vs_dpo_ccs": 0.1505
+    },
+    "L17": {
+      "baseline_bare_vs_baseline_ccs": 0.1392,
+      "baseline_bare_vs_dpo_bare": 0.1601,
+      "baseline_bare_vs_dpo_ccs": 0.1406,
+      "baseline_ccs_vs_dpo_bare": 0.1504,
+      "baseline_ccs_vs_dpo_ccs": 0.1446,
+      "dpo_bare_vs_dpo_ccs": 0.1534
+    },
+    "L18": {
+      "baseline_bare_vs_baseline_ccs": 0.1509,
+      "baseline_bare_vs_dpo_bare": 0.1499,
+      "baseline_bare_vs_dpo_ccs": 0.1486,
+      "baseline_ccs_vs_dpo_bare": 0.1629,
+      "baseline_ccs_vs_dpo_ccs": 0.132,
+      "dpo_bare_vs_dpo_ccs": 0.1679
+    },
+    "L19": {
+      "baseline_bare_vs_baseline_ccs": 0.1469,
+      "baseline_bare_vs_dpo_bare": 0.1409,
+      "baseline_bare_vs_dpo_ccs": 0.1506,
+      "baseline_ccs_vs_dpo_bare": 0.1554,
+      "baseline_ccs_vs_dpo_ccs": 0.1353,
+      "dpo_bare_vs_dpo_ccs": 0.162
+    },
+    "L20": {
+      "baseline_bare_vs_baseline_ccs": 0.1456,
+      "baseline_bare_vs_dpo_bare": 0.154,
+      "baseline_bare_vs_dpo_ccs": 0.1484,
+      "baseline_ccs_vs_dpo_bare": 0.1539,
+      "baseline_ccs_vs_dpo_ccs": 0.1416,
+      "dpo_bare_vs_dpo_ccs": 0.1612
+    },
+    "L21": {
+      "baseline_bare_vs_baseline_ccs": 0.149,
+      "baseline_bare_vs_dpo_bare": 0.1468,
+      "baseline_bare_vs_dpo_ccs": 0.1443,
+      "baseline_ccs_vs_dpo_bare": 0.1561,
+      "baseline_ccs_vs_dpo_ccs": 0.1454,
+      "dpo_bare_vs_dpo_ccs": 0.1553
+    },
+    "L9": {
+      "baseline_bare_vs_baseline_ccs": 0.1397,
+      "baseline_bare_vs_dpo_bare": 0.1551,
+      "baseline_bare_vs_dpo_ccs": 0.1368,
+      "baseline_ccs_vs_dpo_bare": 0.1344,
+      "baseline_ccs_vs_dpo_ccs": 0.1457,
+      "dpo_bare_vs_dpo_ccs": 0.1346
+    },
+    "L25": {
+      "baseline_bare_vs_baseline_ccs": 0.1544,
+      "baseline_bare_vs_dpo_bare": 0.1734,
+      "baseline_bare_vs_dpo_ccs": 0.1491,
+      "baseline_ccs_vs_dpo_bare": 0.1647,
+      "baseline_ccs_vs_dpo_ccs": 0.1638,
+      "dpo_bare_vs_dpo_ccs": 0.1684
+    }
+  },
+  "category_alignment": {
+    "direct_identity": {
+      "L11": {
+        "baseline_bare_vs_baseline_ccs": 0.1206,
+        "baseline_bare_vs_dpo_bare": 0.1474,
+        "baseline_bare_vs_dpo_ccs": 0.1202,
+        "baseline_ccs_vs_dpo_bare": 0.1209,
+        "baseline_ccs_vs_dpo_ccs": 0.1309,
+        "dpo_bare_vs_dpo_ccs": 0.1215
+      },
+      "L12": {
+        "baseline_bare_vs_baseline_ccs": 0.1214,
+        "baseline_bare_vs_dpo_bare": 0.131,
+        "baseline_bare_vs_dpo_ccs": 0.116,
+        "baseline_ccs_vs_dpo_bare": 0.1216,
+        "baseline_ccs_vs_dpo_ccs": 0.1307,
+        "dpo_bare_vs_dpo_ccs": 0.1213
+      },
+      "L13": {
+        "baseline_bare_vs_baseline_ccs": 0.1283,
+        "baseline_bare_vs_dpo_bare": 0.1331,
+        "baseline_bare_vs_dpo_ccs": 0.1255,
+        "baseline_ccs_vs_dpo_bare": 0.132,
+        "baseline_ccs_vs_dpo_ccs": 0.1335,
+        "dpo_bare_vs_dpo_ccs": 0.1341
+      },
+      "L14": {
+        "baseline_bare_vs_baseline_ccs": 0.131,
+        "baseline_bare_vs_dpo_bare": 0.1366,
+        "baseline_bare_vs_dpo_ccs": 0.1263,
+        "baseline_ccs_vs_dpo_bare": 0.1309,
+        "baseline_ccs_vs_dpo_ccs": 0.1347,
+        "dpo_bare_vs_dpo_ccs": 0.1338
+      },
+      "L15": {
+        "baseline_bare_vs_baseline_ccs": 0.129,
+        "baseline_bare_vs_dpo_bare": 0.136,
+        "baseline_bare_vs_dpo_ccs": 0.1309,
+        "baseline_ccs_vs_dpo_bare": 0.1279,
+        "baseline_ccs_vs_dpo_ccs": 0.1465,
+        "dpo_bare_vs_dpo_ccs": 0.1327
+      },
+      "L16": {
+        "baseline_bare_vs_baseline_ccs": 0.1173,
+        "baseline_bare_vs_dpo_bare": 0.1378,
+        "baseline_bare_vs_dpo_ccs": 0.1162,
+        "baseline_ccs_vs_dpo_bare": 0.1188,
+        "baseline_ccs_vs_dpo_ccs": 0.1315,
+        "dpo_bare_vs_dpo_ccs": 0.1249
+      },
+      "L17": {
+        "baseline_bare_vs_baseline_ccs": 0.118,
+        "baseline_bare_vs_dpo_bare": 0.1346,
+        "baseline_bare_vs_dpo_ccs": 0.1168,
+        "baseline_ccs_vs_dpo_bare": 0.1205,
+        "baseline_ccs_vs_dpo_ccs": 0.133,
+        "dpo_bare_vs_dpo_ccs": 0.1241
+      },
+      "L18": {
+        "baseline_bare_vs_baseline_ccs": 0.1481,
+        "baseline_bare_vs_dpo_bare": 0.1546,
+        "baseline_bare_vs_dpo_ccs": 0.1388,
+        "baseline_ccs_vs_dpo_bare": 0.1482,
+        "baseline_ccs_vs_dpo_ccs": 0.1363,
+        "dpo_bare_vs_dpo_ccs": 0.1431
+      },
+      "L19": {
+        "baseline_bare_vs_baseline_ccs": 0.1515,
+        "baseline_bare_vs_dpo_bare": 0.1559,
+        "baseline_bare_vs_dpo_ccs": 0.1491,
+        "baseline_ccs_vs_dpo_bare": 0.1629,
+        "baseline_ccs_vs_dpo_ccs": 0.1316,
+        "dpo_bare_vs_dpo_ccs": 0.1577
+      },
+      "L20": {
+        "baseline_bare_vs_baseline_ccs": 0.1568,
+        "baseline_bare_vs_dpo_bare": 0.1609,
+        "baseline_bare_vs_dpo_ccs": 0.1492,
+        "baseline_ccs_vs_dpo_bare": 0.1633,
+        "baseline_ccs_vs_dpo_ccs": 0.1563,
+        "dpo_bare_vs_dpo_ccs": 0.1622
+      },
+      "L21": {
+        "baseline_bare_vs_baseline_ccs": 0.1696,
+        "baseline_bare_vs_dpo_bare": 0.1688,
+        "baseline_bare_vs_dpo_ccs": 0.1604,
+        "baseline_ccs_vs_dpo_bare": 0.1717,
+        "baseline_ccs_vs_dpo_ccs": 0.1471,
+        "dpo_bare_vs_dpo_ccs": 0.1663
+      },
+      "L9": {
+        "baseline_bare_vs_baseline_ccs": 0.1221,
+        "baseline_bare_vs_dpo_bare": 0.1584,
+        "baseline_bare_vs_dpo_ccs": 0.1195,
+        "baseline_ccs_vs_dpo_bare": 0.125,
+        "baseline_ccs_vs_dpo_ccs": 0.1483,
+        "dpo_bare_vs_dpo_ccs": 0.1208
+      },
+      "L25": {
+        "baseline_bare_vs_baseline_ccs": 0.158,
+        "baseline_bare_vs_dpo_bare": 0.1549,
+        "baseline_bare_vs_dpo_ccs": 0.1502,
+        "baseline_ccs_vs_dpo_bare": 0.1651,
+        "baseline_ccs_vs_dpo_ccs": 0.1522,
+        "dpo_bare_vs_dpo_ccs": 0.1622
+      }
+    },
+    "relational": {
+      "L11": {
+        "baseline_bare_vs_baseline_ccs": 0.1259,
+        "baseline_bare_vs_dpo_bare": 0.1469,
+        "baseline_bare_vs_dpo_ccs": 0.1233,
+        "baseline_ccs_vs_dpo_bare": 0.1199,
+        "baseline_ccs_vs_dpo_ccs": 0.1462,
+        "dpo_bare_vs_dpo_ccs": 0.1218
+      },
+      "L12": {
+        "baseline_bare_vs_baseline_ccs": 0.1177,
+        "baseline_bare_vs_dpo_bare": 0.1544,
+        "baseline_bare_vs_dpo_ccs": 0.1168,
+        "baseline_ccs_vs_dpo_bare": 0.1133,
+        "baseline_ccs_vs_dpo_ccs": 0.1446,
+        "dpo_bare_vs_dpo_ccs": 0.1166
+      },
+      "L13": {
+        "baseline_bare_vs_baseline_ccs": 0.1195,
+        "baseline_bare_vs_dpo_bare": 0.1594,
+        "baseline_bare_vs_dpo_ccs": 0.1131,
+        "baseline_ccs_vs_dpo_bare": 0.1266,
+        "baseline_ccs_vs_dpo_ccs": 0.1299,
+        "dpo_bare_vs_dpo_ccs": 0.1268
+      },
+      "L14": {
+        "baseline_bare_vs_baseline_ccs": 0.1162,
+        "baseline_bare_vs_dpo_bare": 0.1498,
+        "baseline_bare_vs_dpo_ccs": 0.111,
+        "baseline_ccs_vs_dpo_bare": 0.1233,
+        "baseline_ccs_vs_dpo_ccs": 0.1463,
+        "dpo_bare_vs_dpo_ccs": 0.1233
+      },
+      "L15": {
+        "baseline_bare_vs_baseline_ccs": 0.107,
+        "baseline_bare_vs_dpo_bare": 0.1547,
+        "baseline_bare_vs_dpo_ccs": 0.1064,
+        "baseline_ccs_vs_dpo_bare": 0.1149,
+        "baseline_ccs_vs_dpo_ccs": 0.1365,
+        "dpo_bare_vs_dpo_ccs": 0.1203
+      },
+      "L16": {
+        "baseline_bare_vs_baseline_ccs": 0.1069,
+        "baseline_bare_vs_dpo_bare": 0.1584,
+        "baseline_bare_vs_dpo_ccs": 0.1062,
+        "baseline_ccs_vs_dpo_bare": 0.116,
+        "baseline_ccs_vs_dpo_ccs": 0.1321,
+        "dpo_bare_vs_dpo_ccs": 0.1188
+      },
+      "L17": {
+        "baseline_bare_vs_baseline_ccs": 0.1017,
+        "baseline_bare_vs_dpo_bare": 0.1598,
+        "baseline_bare_vs_dpo_ccs": 0.0983,
+        "baseline_ccs_vs_dpo_bare": 0.1109,
+        "baseline_ccs_vs_dpo_ccs": 0.1346,
+        "dpo_bare_vs_dpo_ccs": 0.1129
+      },
+      "L18": {
+        "baseline_bare_vs_baseline_ccs": 0.1297,
+        "baseline_bare_vs_dpo_bare": 0.1424,
+        "baseline_bare_vs_dpo_ccs": 0.1239,
+        "baseline_ccs_vs_dpo_bare": 0.1431,
+        "baseline_ccs_vs_dpo_ccs": 0.1349,
+        "dpo_bare_vs_dpo_ccs": 0.136
+      },
+      "L19": {
+        "baseline_bare_vs_baseline_ccs": 0.134,
+        "baseline_bare_vs_dpo_bare": 0.1689,
+        "baseline_bare_vs_dpo_ccs": 0.1336,
+        "baseline_ccs_vs_dpo_bare": 0.146,
+        "baseline_ccs_vs_dpo_ccs": 0.1375,
+        "dpo_bare_vs_dpo_ccs": 0.1444
+      },
+      "L20": {
+        "baseline_bare_vs_baseline_ccs": 0.1408,
+        "baseline_bare_vs_dpo_bare": 0.1547,
+        "baseline_bare_vs_dpo_ccs": 0.1416,
+        "baseline_ccs_vs_dpo_bare": 0.1516,
+        "baseline_ccs_vs_dpo_ccs": 0.1534,
+        "dpo_bare_vs_dpo_ccs": 0.1508
+      },
+      "L21": {
+        "baseline_bare_vs_baseline_ccs": 0.1528,
+        "baseline_bare_vs_dpo_bare": 0.1721,
+        "baseline_bare_vs_dpo_ccs": 0.1535,
+        "baseline_ccs_vs_dpo_bare": 0.1622,
+        "baseline_ccs_vs_dpo_ccs": 0.159,
+        "dpo_bare_vs_dpo_ccs": 0.1585
+      },
+      "L9": {
+        "baseline_bare_vs_baseline_ccs": 0.1228,
+        "baseline_bare_vs_dpo_bare": 0.152,
+        "baseline_bare_vs_dpo_ccs": 0.1099,
+        "baseline_ccs_vs_dpo_bare": 0.1146,
+        "baseline_ccs_vs_dpo_ccs": 0.1369,
+        "dpo_bare_vs_dpo_ccs": 0.1093
+      },
+      "L25": {
+        "baseline_bare_vs_baseline_ccs": 0.1466,
+        "baseline_bare_vs_dpo_bare": 0.1706,
+        "baseline_bare_vs_dpo_ccs": 0.1337,
+        "baseline_ccs_vs_dpo_bare": 0.166,
+        "baseline_ccs_vs_dpo_ccs": 0.1422,
+        "dpo_bare_vs_dpo_ccs": 0.1592
+      }
+    },
+    "metacognitive": {
+      "L11": {
+        "baseline_bare_vs_baseline_ccs": 0.1313,
+        "baseline_bare_vs_dpo_bare": 0.14,
+        "baseline_bare_vs_dpo_ccs": 0.1242,
+        "baseline_ccs_vs_dpo_bare": 0.1236,
+        "baseline_ccs_vs_dpo_ccs": 0.1372,
+        "dpo_bare_vs_dpo_ccs": 0.122
+      },
+      "L12": {
+        "baseline_bare_vs_baseline_ccs": 0.1221,
+        "baseline_bare_vs_dpo_bare": 0.1528,
+        "baseline_bare_vs_dpo_ccs": 0.1183,
+        "baseline_ccs_vs_dpo_bare": 0.1211,
+        "baseline_ccs_vs_dpo_ccs": 0.1375,
+        "dpo_bare_vs_dpo_ccs": 0.1221
+      },
+      "L13": {
+        "baseline_bare_vs_baseline_ccs": 0.1193,
+        "baseline_bare_vs_dpo_bare": 0.1403,
+        "baseline_bare_vs_dpo_ccs": 0.1177,
+        "baseline_ccs_vs_dpo_bare": 0.1192,
+        "baseline_ccs_vs_dpo_ccs": 0.1418,
+        "dpo_bare_vs_dpo_ccs": 0.1211
+      },
+      "L14": {
+        "baseline_bare_vs_baseline_ccs": 0.1198,
+        "baseline_bare_vs_dpo_bare": 0.1446,
+        "baseline_bare_vs_dpo_ccs": 0.1168,
+        "baseline_ccs_vs_dpo_bare": 0.1228,
+        "baseline_ccs_vs_dpo_ccs": 0.1351,
+        "dpo_bare_vs_dpo_ccs": 0.1262
+      },
+      "L15": {
+        "baseline_bare_vs_baseline_ccs": 0.1091,
+        "baseline_bare_vs_dpo_bare": 0.137,
+        "baseline_bare_vs_dpo_ccs": 0.1093,
+        "baseline_ccs_vs_dpo_bare": 0.118,
+        "baseline_ccs_vs_dpo_ccs": 0.1365,
+        "dpo_bare_vs_dpo_ccs": 0.1225
+      },
+      "L16": {
+        "baseline_bare_vs_baseline_ccs": 0.1059,
+        "baseline_bare_vs_dpo_bare": 0.1323,
+        "baseline_bare_vs_dpo_ccs": 0.1018,
+        "baseline_ccs_vs_dpo_bare": 0.1142,
+        "baseline_ccs_vs_dpo_ccs": 0.1409,
+        "dpo_bare_vs_dpo_ccs": 0.1136
+      },
+      "L17": {
+        "baseline_bare_vs_baseline_ccs": 0.1096,
+        "baseline_bare_vs_dpo_bare": 0.1458,
+        "baseline_bare_vs_dpo_ccs": 0.1096,
+        "baseline_ccs_vs_dpo_bare": 0.112,
+        "baseline_ccs_vs_dpo_ccs": 0.1409,
+        "dpo_bare_vs_dpo_ccs": 0.1152
+      },
+      "L18": {
+        "baseline_bare_vs_baseline_ccs": 0.1302,
+        "baseline_bare_vs_dpo_bare": 0.1599,
+        "baseline_bare_vs_dpo_ccs": 0.1275,
+        "baseline_ccs_vs_dpo_bare": 0.1388,
+        "baseline_ccs_vs_dpo_ccs": 0.1384,
+        "dpo_bare_vs_dpo_ccs": 0.1383
+      },
+      "L19": {
+        "baseline_bare_vs_baseline_ccs": 0.1372,
+        "baseline_bare_vs_dpo_bare": 0.1583,
+        "baseline_bare_vs_dpo_ccs": 0.1317,
+        "baseline_ccs_vs_dpo_bare": 0.1418,
+        "baseline_ccs_vs_dpo_ccs": 0.1332,
+        "dpo_bare_vs_dpo_ccs": 0.1406
+      },
+      "L20": {
+        "baseline_bare_vs_baseline_ccs": 0.1266,
+        "baseline_bare_vs_dpo_bare": 0.1473,
+        "baseline_bare_vs_dpo_ccs": 0.1233,
+        "baseline_ccs_vs_dpo_bare": 0.1406,
+        "baseline_ccs_vs_dpo_ccs": 0.1379,
+        "dpo_bare_vs_dpo_ccs": 0.1417
+      },
+      "L21": {
+        "baseline_bare_vs_baseline_ccs": 0.1351,
+        "baseline_bare_vs_dpo_bare": 0.1477,
+        "baseline_bare_vs_dpo_ccs": 0.1311,
+        "baseline_ccs_vs_dpo_bare": 0.1539,
+        "baseline_ccs_vs_dpo_ccs": 0.1336,
+        "dpo_bare_vs_dpo_ccs": 0.1511
+      },
+      "L9": {
+        "baseline_bare_vs_baseline_ccs": 0.1116,
+        "baseline_bare_vs_dpo_bare": 0.1397,
+        "baseline_bare_vs_dpo_ccs": 0.1079,
+        "baseline_ccs_vs_dpo_bare": 0.1078,
+        "baseline_ccs_vs_dpo_ccs": 0.1339,
+        "dpo_bare_vs_dpo_ccs": 0.1076
+      },
+      "L25": {
+        "baseline_bare_vs_baseline_ccs": 0.135,
+        "baseline_bare_vs_dpo_bare": 0.1762,
+        "baseline_bare_vs_dpo_ccs": 0.1312,
+        "baseline_ccs_vs_dpo_bare": 0.1407,
+        "baseline_ccs_vs_dpo_ccs": 0.1415,
+        "dpo_bare_vs_dpo_ccs": 0.1433
+      }
+    },
+    "value_ethical": {
+      "L11": {
+        "baseline_bare_vs_baseline_ccs": 0.1189,
+        "baseline_bare_vs_dpo_bare": 0.1446,
+        "baseline_bare_vs_dpo_ccs": 0.1144,
+        "baseline_ccs_vs_dpo_bare": 0.1163,
+        "baseline_ccs_vs_dpo_ccs": 0.1268,
+        "dpo_bare_vs_dpo_ccs": 0.1153
+      },
+      "L12": {
+        "baseline_bare_vs_baseline_ccs": 0.1129,
+        "baseline_bare_vs_dpo_bare": 0.1407,
+        "baseline_bare_vs_dpo_ccs": 0.1088,
+        "baseline_ccs_vs_dpo_bare": 0.1125,
+        "baseline_ccs_vs_dpo_ccs": 0.1238,
+        "dpo_bare_vs_dpo_ccs": 0.1134
+      },
+      "L13": {
+        "baseline_bare_vs_baseline_ccs": 0.115,
+        "baseline_bare_vs_dpo_bare": 0.1351,
+        "baseline_bare_vs_dpo_ccs": 0.1078,
+        "baseline_ccs_vs_dpo_bare": 0.1168,
+        "baseline_ccs_vs_dpo_ccs": 0.1308,
+        "dpo_bare_vs_dpo_ccs": 0.1169
+      },
+      "L14": {
+        "baseline_bare_vs_baseline_ccs": 0.1156,
+        "baseline_bare_vs_dpo_bare": 0.139,
+        "baseline_bare_vs_dpo_ccs": 0.1075,
+        "baseline_ccs_vs_dpo_bare": 0.1222,
+        "baseline_ccs_vs_dpo_ccs": 0.1335,
+        "dpo_bare_vs_dpo_ccs": 0.1205
+      },
+      "L15": {
+        "baseline_bare_vs_baseline_ccs": 0.1036,
+        "baseline_bare_vs_dpo_bare": 0.1399,
+        "baseline_bare_vs_dpo_ccs": 0.1028,
+        "baseline_ccs_vs_dpo_bare": 0.1136,
+        "baseline_ccs_vs_dpo_ccs": 0.1412,
+        "dpo_bare_vs_dpo_ccs": 0.1191
+      },
+      "L16": {
+        "baseline_bare_vs_baseline_ccs": 0.1031,
+        "baseline_bare_vs_dpo_bare": 0.146,
+        "baseline_bare_vs_dpo_ccs": 0.0987,
+        "baseline_ccs_vs_dpo_bare": 0.1127,
+        "baseline_ccs_vs_dpo_ccs": 0.1478,
+        "dpo_bare_vs_dpo_ccs": 0.1138
+      },
+      "L17": {
+        "baseline_bare_vs_baseline_ccs": 0.1,
+        "baseline_bare_vs_dpo_bare": 0.1625,
+        "baseline_bare_vs_dpo_ccs": 0.0958,
+        "baseline_ccs_vs_dpo_bare": 0.1128,
+        "baseline_ccs_vs_dpo_ccs": 0.1396,
+        "dpo_bare_vs_dpo_ccs": 0.1135
+      },
+      "L18": {
+        "baseline_bare_vs_baseline_ccs": 0.1363,
+        "baseline_bare_vs_dpo_bare": 0.1437,
+        "baseline_bare_vs_dpo_ccs": 0.1385,
+        "baseline_ccs_vs_dpo_bare": 0.149,
+        "baseline_ccs_vs_dpo_ccs": 0.1339,
+        "dpo_bare_vs_dpo_ccs": 0.1558
+      },
+      "L19": {
+        "baseline_bare_vs_baseline_ccs": 0.1488,
+        "baseline_bare_vs_dpo_bare": 0.1484,
+        "baseline_bare_vs_dpo_ccs": 0.149,
+        "baseline_ccs_vs_dpo_bare": 0.164,
+        "baseline_ccs_vs_dpo_ccs": 0.1266,
+        "dpo_bare_vs_dpo_ccs": 0.1615
+      },
+      "L20": {
+        "baseline_bare_vs_baseline_ccs": 0.1486,
+        "baseline_bare_vs_dpo_bare": 0.1398,
+        "baseline_bare_vs_dpo_ccs": 0.146,
+        "baseline_ccs_vs_dpo_bare": 0.1639,
+        "baseline_ccs_vs_dpo_ccs": 0.1343,
+        "dpo_bare_vs_dpo_ccs": 0.1633
+      },
+      "L21": {
+        "baseline_bare_vs_baseline_ccs": 0.1557,
+        "baseline_bare_vs_dpo_bare": 0.1399,
+        "baseline_bare_vs_dpo_ccs": 0.1506,
+        "baseline_ccs_vs_dpo_bare": 0.1666,
+        "baseline_ccs_vs_dpo_ccs": 0.1541,
+        "dpo_bare_vs_dpo_ccs": 0.1664
+      },
+      "L9": {
+        "baseline_bare_vs_baseline_ccs": 0.1279,
+        "baseline_bare_vs_dpo_bare": 0.1462,
+        "baseline_bare_vs_dpo_ccs": 0.1215,
+        "baseline_ccs_vs_dpo_bare": 0.1242,
+        "baseline_ccs_vs_dpo_ccs": 0.1323,
+        "dpo_bare_vs_dpo_ccs": 0.122
+      },
+      "L25": {
+        "baseline_bare_vs_baseline_ccs": 0.1595,
+        "baseline_bare_vs_dpo_bare": 0.1674,
+        "baseline_bare_vs_dpo_ccs": 0.1587,
+        "baseline_ccs_vs_dpo_bare": 0.1677,
+        "baseline_ccs_vs_dpo_ccs": 0.1739,
+        "dpo_bare_vs_dpo_ccs": 0.1601
+      }
+    },
+    "generic_control": {
+      "L11": {
+        "baseline_bare_vs_baseline_ccs": 0.1101,
+        "baseline_bare_vs_dpo_bare": 0.137,
+        "baseline_bare_vs_dpo_ccs": 0.1063,
+        "baseline_ccs_vs_dpo_bare": 0.1116,
+        "baseline_ccs_vs_dpo_ccs": 0.1265,
+        "dpo_bare_vs_dpo_ccs": 0.1117
+      },
+      "L12": {
+        "baseline_bare_vs_baseline_ccs": 0.1105,
+        "baseline_bare_vs_dpo_bare": 0.1448,
+        "baseline_bare_vs_dpo_ccs": 0.1054,
+        "baseline_ccs_vs_dpo_bare": 0.1126,
+        "baseline_ccs_vs_dpo_ccs": 0.1284,
+        "dpo_bare_vs_dpo_ccs": 0.1094
+      },
+      "L13": {
+        "baseline_bare_vs_baseline_ccs": 0.1115,
+        "baseline_bare_vs_dpo_bare": 0.1413,
+        "baseline_bare_vs_dpo_ccs": 0.109,
+        "baseline_ccs_vs_dpo_bare": 0.1166,
+        "baseline_ccs_vs_dpo_ccs": 0.1186,
+        "dpo_bare_vs_dpo_ccs": 0.1184
+      },
+      "L14": {
+        "baseline_bare_vs_baseline_ccs": 0.1058,
+        "baseline_bare_vs_dpo_bare": 0.1328,
+        "baseline_bare_vs_dpo_ccs": 0.0981,
+        "baseline_ccs_vs_dpo_bare": 0.1101,
+        "baseline_ccs_vs_dpo_ccs": 0.125,
+        "dpo_bare_vs_dpo_ccs": 0.106
+      },
+      "L15": {
+        "baseline_bare_vs_baseline_ccs": 0.1042,
+        "baseline_bare_vs_dpo_bare": 0.14,
+        "baseline_bare_vs_dpo_ccs": 0.0984,
+        "baseline_ccs_vs_dpo_bare": 0.1118,
+        "baseline_ccs_vs_dpo_ccs": 0.1263,
+        "dpo_bare_vs_dpo_ccs": 0.1111
+      },
+      "L16": {
+        "baseline_bare_vs_baseline_ccs": 0.1069,
+        "baseline_bare_vs_dpo_bare": 0.1309,
+        "baseline_bare_vs_dpo_ccs": 0.1018,
+        "baseline_ccs_vs_dpo_bare": 0.1126,
+        "baseline_ccs_vs_dpo_ccs": 0.1209,
+        "dpo_bare_vs_dpo_ccs": 0.1129
+      },
+      "L17": {
+        "baseline_bare_vs_baseline_ccs": 0.1081,
+        "baseline_bare_vs_dpo_bare": 0.1374,
+        "baseline_bare_vs_dpo_ccs": 0.1034,
+        "baseline_ccs_vs_dpo_bare": 0.1152,
+        "baseline_ccs_vs_dpo_ccs": 0.1262,
+        "dpo_bare_vs_dpo_ccs": 0.1145
+      },
+      "L18": {
+        "baseline_bare_vs_baseline_ccs": 0.1251,
+        "baseline_bare_vs_dpo_bare": 0.1331,
+        "baseline_bare_vs_dpo_ccs": 0.1208,
+        "baseline_ccs_vs_dpo_bare": 0.1311,
+        "baseline_ccs_vs_dpo_ccs": 0.1327,
+        "dpo_bare_vs_dpo_ccs": 0.129
+      },
+      "L19": {
+        "baseline_bare_vs_baseline_ccs": 0.1471,
+        "baseline_bare_vs_dpo_bare": 0.15,
+        "baseline_bare_vs_dpo_ccs": 0.1461,
+        "baseline_ccs_vs_dpo_bare": 0.1497,
+        "baseline_ccs_vs_dpo_ccs": 0.1324,
+        "dpo_bare_vs_dpo_ccs": 0.1488
+      },
+      "L20": {
+        "baseline_bare_vs_baseline_ccs": 0.1514,
+        "baseline_bare_vs_dpo_bare": 0.1378,
+        "baseline_bare_vs_dpo_ccs": 0.1428,
+        "baseline_ccs_vs_dpo_bare": 0.1576,
+        "baseline_ccs_vs_dpo_ccs": 0.1369,
+        "dpo_bare_vs_dpo_ccs": 0.154
+      },
+      "L21": {
+        "baseline_bare_vs_baseline_ccs": 0.1562,
+        "baseline_bare_vs_dpo_bare": 0.1436,
+        "baseline_bare_vs_dpo_ccs": 0.1549,
+        "baseline_ccs_vs_dpo_bare": 0.159,
+        "baseline_ccs_vs_dpo_ccs": 0.1322,
+        "dpo_bare_vs_dpo_ccs": 0.1559
+      },
+      "L9": {
+        "baseline_bare_vs_baseline_ccs": 0.1221,
+        "baseline_bare_vs_dpo_bare": 0.1359,
+        "baseline_bare_vs_dpo_ccs": 0.1189,
+        "baseline_ccs_vs_dpo_bare": 0.1183,
+        "baseline_ccs_vs_dpo_ccs": 0.132,
+        "dpo_bare_vs_dpo_ccs": 0.1177
+      },
+      "L25": {
+        "baseline_bare_vs_baseline_ccs": 0.1642,
+        "baseline_bare_vs_dpo_bare": 0.1597,
+        "baseline_bare_vs_dpo_ccs": 0.1691,
+        "baseline_ccs_vs_dpo_bare": 0.1721,
+        "baseline_ccs_vs_dpo_ccs": 0.1425,
+        "dpo_bare_vs_dpo_ccs": 0.1699
+      }
+    }
+  },
+  "intervention_granularity": {
+    "ccs_effect_baseline": {
+      "L11": {
+        "per_group": {
+          "direct_identity": 0.135808,
+          "relational": 0.082886,
+          "metacognitive": 0.102396,
+          "value_ethical": 0.094951,
+          "generic_control": 0.118256
+        },
+        "aggregate": 0.825219,
+        "total_angular_variance": 0.129492
+      },
+      "L12": {
+        "per_group": {
+          "direct_identity": 0.157447,
+          "relational": 0.097992,
+          "metacognitive": 0.117425,
+          "value_ethical": 0.110395,
+          "generic_control": 0.125993
+        },
+        "aggregate": 0.804271,
+        "total_angular_variance": 0.151504
+      },
+      "L13": {
+        "per_group": {
+          "direct_identity": 0.121147,
+          "relational": 0.076573,
+          "metacognitive": 0.086342,
+          "value_ethical": 0.084185,
+          "generic_control": 0.098623
+        },
+        "aggregate": 0.784786,
+        "total_angular_variance": 0.11898
+      },
+      "L14": {
+        "per_group": {
+          "direct_identity": 0.135543,
+          "relational": 0.086767,
+          "metacognitive": 0.100392,
+          "value_ethical": 0.092151,
+          "generic_control": 0.110409
+        },
+        "aggregate": 0.770931,
+        "total_angular_variance": 0.136267
+      },
+      "L15": {
+        "per_group": {
+          "direct_identity": 0.169311,
+          "relational": 0.111775,
+          "metacognitive": 0.12248,
+          "value_ethical": 0.104605,
+          "generic_control": 0.135572
+        },
+        "aggregate": 0.750896,
+        "total_angular_variance": 0.17146
+      },
+      "L16": {
+        "per_group": {
+          "direct_identity": 0.181171,
+          "relational": 0.114706,
+          "metacognitive": 0.118138,
+          "value_ethical": 0.107438,
+          "generic_control": 0.158863
+        },
+        "aggregate": 0.747756,
+        "total_angular_variance": 0.181962
+      },
+      "L17": {
+        "per_group": {
+          "direct_identity": 0.210673,
+          "relational": 0.141672,
+          "metacognitive": 0.137579,
+          "value_ethical": 0.124529,
+          "generic_control": 0.1722
+        },
+        "aggregate": 0.735696,
+        "total_angular_variance": 0.213853
+      },
+      "L18": {
+        "per_group": {
+          "direct_identity": 0.254609,
+          "relational": 0.197038,
+          "metacognitive": 0.189025,
+          "value_ethical": 0.165287,
+          "generic_control": 0.185563
+        },
+        "aggregate": 0.748488,
+        "total_angular_variance": 0.26494
+      },
+      "L19": {
+        "per_group": {
+          "direct_identity": 0.278476,
+          "relational": 0.246207,
+          "metacognitive": 0.220632,
+          "value_ethical": 0.222988,
+          "generic_control": 0.259019
+        },
+        "aggregate": 0.761143,
+        "total_angular_variance": 0.322494
+      },
+      "L20": {
+        "per_group": {
+          "direct_identity": 0.310845,
+          "relational": 0.290024,
+          "metacognitive": 0.248724,
+          "value_ethical": 0.259853,
+          "generic_control": 0.290778
+        },
+        "aggregate": 0.769413,
+        "total_angular_variance": 0.363972
+      },
+      "L21": {
+        "per_group": {
+          "direct_identity": 0.365177,
+          "relational": 0.367743,
+          "metacognitive": 0.309935,
+          "value_ethical": 0.32447,
+          "generic_control": 0.335196
+        },
+        "aggregate": 0.788949,
+        "total_angular_variance": 0.431592
+      },
+      "L9": {
+        "per_group": {
+          "direct_identity": 0.057488,
+          "relational": 0.039003,
+          "metacognitive": 0.046217,
+          "value_ethical": 0.047203,
+          "generic_control": 0.053123
+        },
+        "aggregate": 0.792356,
+        "total_angular_variance": 0.061345
+      },
+      "L25": {
+        "per_group": {
+          "direct_identity": 0.373802,
+          "relational": 0.423657,
+          "metacognitive": 0.334304,
+          "value_ethical": 0.351426,
+          "generic_control": 0.388994
+        },
+        "aggregate": 0.786417,
+        "total_angular_variance": 0.47613
+      }
+    },
+    "ccs_effect_dpo": {
+      "L11": {
+        "per_group": {
+          "direct_identity": 0.129475,
+          "relational": 0.079386,
+          "metacognitive": 0.094566,
+          "value_ethical": 0.092065,
+          "generic_control": 0.115543
+        },
+        "aggregate": 0.824813,
+        "total_angular_variance": 0.123915
+      },
+      "L12": {
+        "per_group": {
+          "direct_identity": 0.150931,
+          "relational": 0.092746,
+          "metacognitive": 0.108532,
+          "value_ethical": 0.106366,
+          "generic_control": 0.123102
+        },
+        "aggregate": 0.800632,
+        "total_angular_variance": 0.145305
+      },
+      "L13": {
+        "per_group": {
+          "direct_identity": 0.112757,
+          "relational": 0.071035,
+          "metacognitive": 0.078601,
+          "value_ethical": 0.080533,
+          "generic_control": 0.094368
+        },
+        "aggregate": 0.782569,
+        "total_angular_variance": 0.111759
+      },
+      "L14": {
+        "per_group": {
+          "direct_identity": 0.123124,
+          "relational": 0.078789,
+          "metacognitive": 0.088441,
+          "value_ethical": 0.08784,
+          "generic_control": 0.102695
+        },
+        "aggregate": 0.764342,
+        "total_angular_variance": 0.125831
+      },
+      "L15": {
+        "per_group": {
+          "direct_identity": 0.150377,
+          "relational": 0.097571,
+          "metacognitive": 0.1037,
+          "value_ethical": 0.096937,
+          "generic_control": 0.123563
+        },
+        "aggregate": 0.744709,
+        "total_angular_variance": 0.153657
+      },
+      "L16": {
+        "per_group": {
+          "direct_identity": 0.15932,
+          "relational": 0.09844,
+          "metacognitive": 0.098588,
+          "value_ethical": 0.093147,
+          "generic_control": 0.132635
+        },
+        "aggregate": 0.717965,
+        "total_angular_variance": 0.162161
+      },
+      "L17": {
+        "per_group": {
+          "direct_identity": 0.185188,
+          "relational": 0.120671,
+          "metacognitive": 0.112832,
+          "value_ethical": 0.10991,
+          "generic_control": 0.151113
+        },
+        "aggregate": 0.708736,
+        "total_angular_variance": 0.19181
+      },
+      "L18": {
+        "per_group": {
+          "direct_identity": 0.232694,
+          "relational": 0.174873,
+          "metacognitive": 0.159482,
+          "value_ethical": 0.154515,
+          "generic_control": 0.175684
+        },
+        "aggregate": 0.718444,
+        "total_angular_variance": 0.249775
+      },
+      "L19": {
+        "per_group": {
+          "direct_identity": 0.251663,
+          "relational": 0.209578,
+          "metacognitive": 0.183655,
+          "value_ethical": 0.194216,
+          "generic_control": 0.237216
+        },
+        "aggregate": 0.732762,
+        "total_angular_variance": 0.293773
+      },
+      "L20": {
+        "per_group": {
+          "direct_identity": 0.277042,
+          "relational": 0.248808,
+          "metacognitive": 0.198953,
+          "value_ethical": 0.232102,
+          "generic_control": 0.277408
+        },
+        "aggregate": 0.740044,
+        "total_angular_variance": 0.333578
+      },
+      "L21": {
+        "per_group": {
+          "direct_identity": 0.325325,
+          "relational": 0.323236,
+          "metacognitive": 0.24634,
+          "value_ethical": 0.304776,
+          "generic_control": 0.32101
+        },
+        "aggregate": 0.759233,
+        "total_angular_variance": 0.400585
+      },
+      "L9": {
+        "per_group": {
+          "direct_identity": 0.055104,
+          "relational": 0.037076,
+          "metacognitive": 0.041619,
+          "value_ethical": 0.044564,
+          "generic_control": 0.051823
+        },
+        "aggregate": 0.794191,
+        "total_angular_variance": 0.057967
+      },
+      "L25": {
+        "per_group": {
+          "direct_identity": 0.327763,
+          "relational": 0.359066,
+          "metacognitive": 0.216581,
+          "value_ethical": 0.329081,
+          "generic_control": 0.38519
+        },
+        "aggregate": 0.752308,
+        "total_angular_variance": 0.430058
+      }
+    },
+    "dpo_effect": {
+      "L11": {
+        "per_group": {
+          "direct_identity": 0.1129,
+          "relational": 0.071659,
+          "metacognitive": 0.084908,
+          "value_ethical": 0.079326,
+          "generic_control": 0.100257
+        },
+        "aggregate": 0.825772,
+        "total_angular_variance": 0.108759
+      },
+      "L12": {
+        "per_group": {
+          "direct_identity": 0.127745,
+          "relational": 0.081866,
+          "metacognitive": 0.097135,
+          "value_ethical": 0.084781,
+          "generic_control": 0.108712
+        },
+        "aggregate": 0.827934,
+        "total_angular_variance": 0.12084
+      },
+      "L13": {
+        "per_group": {
+          "direct_identity": 0.119287,
+          "relational": 0.078917,
+          "metacognitive": 0.088465,
+          "value_ethical": 0.081596,
+          "generic_control": 0.114183
+        },
+        "aggregate": 0.804225,
+        "total_angular_variance": 0.119978
+      },
+      "L14": {
+        "per_group": {
+          "direct_identity": 0.123673,
+          "relational": 0.07683,
+          "metacognitive": 0.086269,
+          "value_ethical": 0.075041,
+          "generic_control": 0.111655
+        },
+        "aggregate": 0.788102,
+        "total_angular_variance": 0.120154
+      },
+      "L15": {
+        "per_group": {
+          "direct_identity": 0.186039,
+          "relational": 0.121771,
+          "metacognitive": 0.135693,
+          "value_ethical": 0.109772,
+          "generic_control": 0.158973
+        },
+        "aggregate": 0.767622,
+        "total_angular_variance": 0.185573
+      },
+      "L16": {
+        "per_group": {
+          "direct_identity": 0.207324,
+          "relational": 0.148232,
+          "metacognitive": 0.147355,
+          "value_ethical": 0.13851,
+          "generic_control": 0.194267
+        },
+        "aggregate": 0.766253,
+        "total_angular_variance": 0.218123
+      },
+      "L17": {
+        "per_group": {
+          "direct_identity": 0.237749,
+          "relational": 0.175162,
+          "metacognitive": 0.171821,
+          "value_ethical": 0.150764,
+          "generic_control": 0.20662
+        },
+        "aggregate": 0.761991,
+        "total_angular_variance": 0.247278
+      },
+      "L18": {
+        "per_group": {
+          "direct_identity": 0.267726,
+          "relational": 0.213079,
+          "metacognitive": 0.219137,
+          "value_ethical": 0.183692,
+          "generic_control": 0.212087
+        },
+        "aggregate": 0.792337,
+        "total_angular_variance": 0.27658
+      },
+      "L19": {
+        "per_group": {
+          "direct_identity": 0.292491,
+          "relational": 0.276444,
+          "metacognitive": 0.259318,
+          "value_ethical": 0.256261,
+          "generic_control": 0.277478
+        },
+        "aggregate": 0.797731,
+        "total_angular_variance": 0.341467
+      },
+      "L20": {
+        "per_group": {
+          "direct_identity": 0.350053,
+          "relational": 0.330853,
+          "metacognitive": 0.3112,
+          "value_ethical": 0.307872,
+          "generic_control": 0.306474
+        },
+        "aggregate": 0.802725,
+        "total_angular_variance": 0.40025
+      },
+      "L21": {
+        "per_group": {
+          "direct_identity": 0.405561,
+          "relational": 0.403535,
+          "metacognitive": 0.369843,
+          "value_ethical": 0.365192,
+          "generic_control": 0.352832
+        },
+        "aggregate": 0.813802,
+        "total_angular_variance": 0.466198
+      },
+      "L9": {
+        "per_group": {
+          "direct_identity": 0.034069,
+          "relational": 0.021826,
+          "metacognitive": 0.027823,
+          "value_ethical": 0.026158,
+          "generic_control": 0.034051
+        },
+        "aggregate": 0.825846,
+        "total_angular_variance": 0.034856
+      },
+      "L25": {
+        "per_group": {
+          "direct_identity": 0.324318,
+          "relational": 0.404497,
+          "metacognitive": 0.3327,
+          "value_ethical": 0.352537,
+          "generic_control": 0.304178
+        },
+        "aggregate": 0.82167,
+        "total_angular_variance": 0.418229
+      }
+    }
+  },
+  "summary": {
+    "baseline_bare": {
+      "relay_mean_pr": 16.1189,
+      "relay_std_pr": 1.7765,
+      "l9_pr": 17.2856,
+      "l25_pr": 12.7464,
+      "relay_mean_stability": null
+    },
+    "baseline_ccs": {
+      "relay_mean_pr": 16.0438,
+      "relay_std_pr": 2.2159,
+      "l9_pr": 14.2736,
+      "l25_pr": 26.391,
+      "relay_mean_stability": null
+    },
+    "dpo_bare": {
+      "relay_mean_pr": 14.9696,
+      "relay_std_pr": 2.2213,
+      "l9_pr": 17.6043,
+      "l25_pr": 11.3184,
+      "relay_mean_stability": null
+    },
+    "dpo_ccs": {
+      "relay_mean_pr": 16.2485,
+      "relay_std_pr": 2.6146,
+      "l9_pr": 14.4772,
+      "l25_pr": 28.8218,
+      "relay_mean_stability": null
+    }
+  },
+  "category_summary": {
+    "direct_identity": {
+      "baseline_bare": {
+        "relay_mean_pr": 12.3911,
+        "l9_pr": 11.4151,
+        "l25_pr": 10.9573
+      },
+      "baseline_ccs": {
+        "relay_mean_pr": 11.1899,
+        "l9_pr": 12.5318,
+        "l25_pr": 13.7134
+      },
+      "dpo_bare": {
+        "relay_mean_pr": 11.7684,
+        "l9_pr": 11.9234,
+        "l25_pr": 10.0033
+      },
+      "dpo_ccs": {
+        "relay_mean_pr": 11.1749,
+        "l9_pr": 12.6231,
+        "l25_pr": 13.7218
+      }
+    },
+    "relational": {
+      "baseline_bare": {
+        "relay_mean_pr": 9.6726,
+        "l9_pr": 11.9201,
+        "l25_pr": 7.5618
+      },
+      "baseline_ccs": {
+        "relay_mean_pr": 12.8044,
+        "l9_pr": 12.5731,
+        "l25_pr": 14.3696
+      },
+      "dpo_bare": {
+        "relay_mean_pr": 9.7618,
+        "l9_pr": 12.1578,
+        "l25_pr": 7.651
+      },
+      "dpo_ccs": {
+        "relay_mean_pr": 13.0669,
+        "l9_pr": 12.662,
+        "l25_pr": 15.3761
+      }
+    },
+    "metacognitive": {
+      "baseline_bare": {
+        "relay_mean_pr": 8.0409,
+        "l9_pr": 9.0106,
+        "l25_pr": 4.8865
+      },
+      "baseline_ccs": {
+        "relay_mean_pr": 8.582,
+        "l9_pr": 9.1055,
+        "l25_pr": 10.3005
+      },
+      "dpo_bare": {
+        "relay_mean_pr": 7.9774,
+        "l9_pr": 9.0806,
+        "l25_pr": 5.1836
+      },
+      "dpo_ccs": {
+        "relay_mean_pr": 8.5838,
+        "l9_pr": 9.2823,
+        "l25_pr": 10.6614
+      }
+    },
+    "value_ethical": {
+      "baseline_bare": {
+        "relay_mean_pr": 11.4639,
+        "l9_pr": 10.1411,
+        "l25_pr": 9.8787
+      },
+      "baseline_ccs": {
+        "relay_mean_pr": 10.2325,
+        "l9_pr": 10.2238,
+        "l25_pr": 13.2613
+      },
+      "dpo_bare": {
+        "relay_mean_pr": 10.4813,
+        "l9_pr": 10.5805,
+        "l25_pr": 7.8195
+      },
+      "dpo_ccs": {
+        "relay_mean_pr": 10.2837,
+        "l9_pr": 10.0476,
+        "l25_pr": 14.007
+      }
+    },
+    "generic_control": {
+      "baseline_bare": {
+        "relay_mean_pr": 7.4616,
+        "l9_pr": 7.1089,
+        "l25_pr": 15.9317
+      },
+      "baseline_ccs": {
+        "relay_mean_pr": 6.1669,
+        "l9_pr": 7.4263,
+        "l25_pr": 13.199
+      },
+      "dpo_bare": {
+        "relay_mean_pr": 7.1029,
+        "l9_pr": 7.2622,
+        "l25_pr": 16.1564
+      },
+      "dpo_ccs": {
+        "relay_mean_pr": 6.1664,
+        "l9_pr": 7.662,
+        "l25_pr": 13.1773
+      }
+    }
+  },
+  "granularity_summary": {
+    "baseline_bare": {
+      "L11": {
+        "per_group": {
+          "direct_identity": 0.097575,
+          "relational": 0.05619,
+          "metacognitive": 0.066854,
+          "value_ethical": 0.058428,
+          "generic_control": 0.086146
+        },
+        "aggregate": 0.818179,
+        "total_angular_variance": 0.08927
+      },
+      "L12": {
+        "per_group": {
+          "direct_identity": 0.106021,
+          "relational": 0.061621,
+          "metacognitive": 0.075637,
+          "value_ethical": 0.063771,
+          "generic_control": 0.082707
+        },
+        "aggregate": 0.806276,
+        "total_angular_variance": 0.096681
+      },
+      "L13": {
+        "per_group": {
+          "direct_identity": 0.092881,
+          "relational": 0.057479,
+          "metacognitive": 0.061906,
+          "value_ethical": 0.057228,
+          "generic_control": 0.08096
+        },
+        "aggregate": 0.785604,
+        "total_angular_variance": 0.089219
+      },
+      "L14": {
+        "per_group": {
+          "direct_identity": 0.112556,
+          "relational": 0.067247,
+          "metacognitive": 0.072068,
+          "value_ethical": 0.067947,
+          "generic_control": 0.099496
+        },
+        "aggregate": 0.771078,
+        "total_angular_variance": 0.108761
+      },
+      "L15": {
+        "per_group": {
+          "direct_identity": 0.134284,
+          "relational": 0.084342,
+          "metacognitive": 0.091077,
+          "value_ethical": 0.077098,
+          "generic_control": 0.123337
+        },
+        "aggregate": 0.747481,
+        "total_angular_variance": 0.136495
+      },
+      "L16": {
+        "per_group": {
+          "direct_identity": 0.160966,
+          "relational": 0.103529,
+          "metacognitive": 0.108032,
+          "value_ethical": 0.094483,
+          "generic_control": 0.155715
+        },
+        "aggregate": 0.752288,
+        "total_angular_variance": 0.165555
+      },
+      "L17": {
+        "per_group": {
+          "direct_identity": 0.166894,
+          "relational": 0.113257,
+          "metacognitive": 0.111452,
+          "value_ethical": 0.098057,
+          "generic_control": 0.160474
+        },
+        "aggregate": 0.74883,
+        "total_angular_variance": 0.17364
+      },
+      "L18": {
+        "per_group": {
+          "direct_identity": 0.204588,
+          "relational": 0.155649,
+          "metacognitive": 0.15564,
+          "value_ethical": 0.146941,
+          "generic_control": 0.165515
+        },
+        "aggregate": 0.766271,
+        "total_angular_variance": 0.216199
+      },
+      "L19": {
+        "per_group": {
+          "direct_identity": 0.225676,
+          "relational": 0.201015,
+          "metacognitive": 0.180421,
+          "value_ethical": 0.208859,
+          "generic_control": 0.232864
+        },
+        "aggregate": 0.767258,
+        "total_angular_variance": 0.273398
+      },
+      "L20": {
+        "per_group": {
+          "direct_identity": 0.236586,
+          "relational": 0.227481,
+          "metacognitive": 0.187907,
+          "value_ethical": 0.224286,
+          "generic_control": 0.256709
+        },
+        "aggregate": 0.764221,
+        "total_angular_variance": 0.296503
+      },
+      "L21": {
+        "per_group": {
+          "direct_identity": 0.267197,
+          "relational": 0.270066,
+          "metacognitive": 0.218332,
+          "value_ethical": 0.253395,
+          "generic_control": 0.288709
+        },
+        "aggregate": 0.765254,
+        "total_angular_variance": 0.339155
+      },
+      "relay_mean_aggregate": 0.772067,
+      "L9_aggregate": 0.822034,
+      "L25_aggregate": 0.76936
+    },
+    "baseline_ccs": {
+      "L11": {
+        "per_group": {
+          "direct_identity": 0.080279,
+          "relational": 0.043374,
+          "metacognitive": 0.05108,
+          "value_ethical": 0.047749,
+          "generic_control": 0.075939
+        },
+        "aggregate": 0.788468,
+        "total_angular_variance": 0.075696
+      },
+      "L12": {
+        "per_group": {
+          "direct_identity": 0.082278,
+          "relational": 0.044168,
+          "metacognitive": 0.052658,
+          "value_ethical": 0.048973,
+          "generic_control": 0.076113
+        },
+        "aggregate": 0.768149,
+        "total_angular_variance": 0.079201
+      },
+      "L13": {
+        "per_group": {
+          "direct_identity": 0.064567,
+          "relational": 0.033734,
+          "metacognitive": 0.036143,
+          "value_ethical": 0.039397,
+          "generic_control": 0.05871
+        },
+        "aggregate": 0.764983,
+        "total_angular_variance": 0.060799
+      },
+      "L14": {
+        "per_group": {
+          "direct_identity": 0.066652,
+          "relational": 0.028225,
+          "metacognitive": 0.031878,
+          "value_ethical": 0.034153,
+          "generic_control": 0.056185
+        },
+        "aggregate": 0.777932,
+        "total_angular_variance": 0.055813
+      },
+      "L15": {
+        "per_group": {
+          "direct_identity": 0.08505,
+          "relational": 0.036369,
+          "metacognitive": 0.041537,
+          "value_ethical": 0.039782,
+          "generic_control": 0.069896
+        },
+        "aggregate": 0.771458,
+        "total_angular_variance": 0.07068
+      },
+      "L16": {
+        "per_group": {
+          "direct_identity": 0.098014,
+          "relational": 0.037012,
+          "metacognitive": 0.043443,
+          "value_ethical": 0.039975,
+          "generic_control": 0.083301
+        },
+        "aggregate": 0.75878,
+        "total_angular_variance": 0.079534
+      },
+      "L17": {
+        "per_group": {
+          "direct_identity": 0.112236,
+          "relational": 0.045226,
+          "metacognitive": 0.051904,
+          "value_ethical": 0.048426,
+          "generic_control": 0.100108
+        },
+        "aggregate": 0.754868,
+        "total_angular_variance": 0.094825
+      },
+      "L18": {
+        "per_group": {
+          "direct_identity": 0.151776,
+          "relational": 0.081079,
+          "metacognitive": 0.086551,
+          "value_ethical": 0.086798,
+          "generic_control": 0.139148
+        },
+        "aggregate": 0.760341,
+        "total_angular_variance": 0.143449
+      },
+      "L19": {
+        "per_group": {
+          "direct_identity": 0.175719,
+          "relational": 0.102263,
+          "metacognitive": 0.101724,
+          "value_ethical": 0.116025,
+          "generic_control": 0.185234
+        },
+        "aggregate": 0.764605,
+        "total_angular_variance": 0.178122
+      },
+      "L20": {
+        "per_group": {
+          "direct_identity": 0.187945,
+          "relational": 0.11352,
+          "metacognitive": 0.105477,
+          "value_ethical": 0.114587,
+          "generic_control": 0.197679
+        },
+        "aggregate": 0.776571,
+        "total_angular_variance": 0.185227
+      },
+      "L21": {
+        "per_group": {
+          "direct_identity": 0.230607,
+          "relational": 0.151393,
+          "metacognitive": 0.135343,
+          "value_ethical": 0.141974,
+          "generic_control": 0.245981
+        },
+        "aggregate": 0.77555,
+        "total_angular_variance": 0.23346
+      },
+      "relay_mean_aggregate": 0.769246,
+      "L9_aggregate": 0.771703,
+      "L25_aggregate": 0.827952
+    },
+    "dpo_bare": {
+      "L11": {
+        "per_group": {
+          "direct_identity": 0.084633,
+          "relational": 0.048454,
+          "metacognitive": 0.056113,
+          "value_ethical": 0.050816,
+          "generic_control": 0.076236
+        },
+        "aggregate": 0.819009,
+        "total_angular_variance": 0.077228
+      },
+      "L12": {
+        "per_group": {
+          "direct_identity": 0.095477,
+          "relational": 0.054358,
+          "metacognitive": 0.065017,
+          "value_ethical": 0.056906,
+          "generic_control": 0.075192
+        },
+        "aggregate": 0.80658,
+        "total_angular_variance": 0.08603
+      },
+      "L13": {
+        "per_group": {
+          "direct_identity": 0.087664,
+          "relational": 0.053068,
+          "metacognitive": 0.056934,
+          "value_ethical": 0.054678,
+          "generic_control": 0.077031
+        },
+        "aggregate": 0.784145,
+        "total_angular_variance": 0.084009
+      },
+      "L14": {
+        "per_group": {
+          "direct_identity": 0.087804,
+          "relational": 0.048198,
+          "metacognitive": 0.052468,
+          "value_ethical": 0.051631,
+          "generic_control": 0.079764
+        },
+        "aggregate": 0.774209,
+        "total_angular_variance": 0.08263
+      },
+      "L15": {
+        "per_group": {
+          "direct_identity": 0.110134,
+          "relational": 0.064094,
+          "metacognitive": 0.069362,
+          "value_ethical": 0.062139,
+          "generic_control": 0.103142
+        },
+        "aggregate": 0.744205,
+        "total_angular_variance": 0.109881
+      },
+      "L16": {
+        "per_group": {
+          "direct_identity": 0.128867,
+          "relational": 0.072808,
+          "metacognitive": 0.076302,
+          "value_ethical": 0.067544,
+          "generic_control": 0.123064
+        },
+        "aggregate": 0.726154,
+        "total_angular_variance": 0.129059
+      },
+      "L17": {
+        "per_group": {
+          "direct_identity": 0.135204,
+          "relational": 0.08035,
+          "metacognitive": 0.078997,
+          "value_ethical": 0.072693,
+          "generic_control": 0.135522
+        },
+        "aggregate": 0.726578,
+        "total_angular_variance": 0.138393
+      },
+      "L18": {
+        "per_group": {
+          "direct_identity": 0.171853,
+          "relational": 0.119227,
+          "metacognitive": 0.118632,
+          "value_ethical": 0.123461,
+          "generic_control": 0.151276
+        },
+        "aggregate": 0.746125,
+        "total_angular_variance": 0.183468
+      },
+      "L19": {
+        "per_group": {
+          "direct_identity": 0.18842,
+          "relational": 0.149934,
+          "metacognitive": 0.131982,
+          "value_ethical": 0.166783,
+          "generic_control": 0.2092
+        },
+        "aggregate": 0.743237,
+        "total_angular_variance": 0.227739
+      },
+      "L20": {
+        "per_group": {
+          "direct_identity": 0.19865,
+          "relational": 0.17174,
+          "metacognitive": 0.133664,
+          "value_ethical": 0.181717,
+          "generic_control": 0.233589
+        },
+        "aggregate": 0.737706,
+        "total_angular_variance": 0.249248
+      },
+      "L21": {
+        "per_group": {
+          "direct_identity": 0.229209,
+          "relational": 0.217092,
+          "metacognitive": 0.161579,
+          "value_ethical": 0.2214,
+          "generic_control": 0.272753
+        },
+        "aggregate": 0.740349,
+        "total_angular_variance": 0.297706
+      },
+      "relay_mean_aggregate": 0.758936,
+      "L9_aggregate": 0.814878,
+      "L25_aggregate": 0.747189
+    },
+    "dpo_ccs": {
+      "L11": {
+        "per_group": {
+          "direct_identity": 0.074664,
+          "relational": 0.040836,
+          "metacognitive": 0.047641,
+          "value_ethical": 0.045182,
+          "generic_control": 0.069799
+        },
+        "aggregate": 0.787191,
+        "total_angular_variance": 0.070662
+      },
+      "L12": {
+        "per_group": {
+          "direct_identity": 0.078359,
+          "relational": 0.041591,
+          "metacognitive": 0.049399,
+          "value_ethical": 0.046735,
+          "generic_control": 0.070671
+        },
+        "aggregate": 0.765534,
+        "total_angular_variance": 0.074916
+      },
+      "L13": {
+        "per_group": {
+          "direct_identity": 0.066758,
+          "relational": 0.035259,
+          "metacognitive": 0.03755,
+          "value_ethical": 0.041184,
+          "generic_control": 0.057784
+        },
+        "aggregate": 0.76119,
+        "total_angular_variance": 0.062674
+      },
+      "L14": {
+        "per_group": {
+          "direct_identity": 0.064141,
+          "relational": 0.027026,
+          "metacognitive": 0.030421,
+          "value_ethical": 0.032328,
+          "generic_control": 0.051442
+        },
+        "aggregate": 0.777775,
+        "total_angular_variance": 0.052807
+      },
+      "L15": {
+        "per_group": {
+          "direct_identity": 0.082032,
+          "relational": 0.034979,
+          "metacognitive": 0.04013,
+          "value_ethical": 0.038401,
+          "generic_control": 0.066046
+        },
+        "aggregate": 0.769303,
+        "total_angular_variance": 0.068006
+      },
+      "L16": {
+        "per_group": {
+          "direct_identity": 0.093787,
+          "relational": 0.034235,
+          "metacognitive": 0.04074,
+          "value_ethical": 0.037241,
+          "generic_control": 0.078491
+        },
+        "aggregate": 0.757591,
+        "total_angular_variance": 0.075105
+      },
+      "L17": {
+        "per_group": {
+          "direct_identity": 0.108008,
+          "relational": 0.042073,
+          "metacognitive": 0.048389,
+          "value_ethical": 0.045047,
+          "generic_control": 0.095117
+        },
+        "aggregate": 0.756059,
+        "total_angular_variance": 0.089579
+      },
+      "L18": {
+        "per_group": {
+          "direct_identity": 0.143541,
+          "relational": 0.074963,
+          "metacognitive": 0.079654,
+          "value_ethical": 0.078934,
+          "generic_control": 0.132764
+        },
+        "aggregate": 0.764772,
+        "total_angular_variance": 0.133335
+      },
+      "L19": {
+        "per_group": {
+          "direct_identity": 0.165519,
+          "relational": 0.093298,
+          "metacognitive": 0.091694,
+          "value_ethical": 0.103728,
+          "generic_control": 0.173529
+        },
+        "aggregate": 0.770759,
+        "total_angular_variance": 0.162896
+      },
+      "L20": {
+        "per_group": {
+          "direct_identity": 0.174607,
+          "relational": 0.103213,
+          "metacognitive": 0.093728,
+          "value_ethical": 0.100287,
+          "generic_control": 0.184091
+        },
+        "aggregate": 0.782413,
+        "total_angular_variance": 0.167667
+      },
+      "L21": {
+        "per_group": {
+          "direct_identity": 0.221677,
+          "relational": 0.144608,
+          "metacognitive": 0.125438,
+          "value_ethical": 0.13337,
+          "generic_control": 0.231953
+        },
+        "aggregate": 0.78581,
+        "total_angular_variance": 0.21813
+      },
+      "relay_mean_aggregate": 0.770763,
+      "L9_aggregate": 0.773296,
+      "L25_aggregate": 0.839969
+    }
+  },
+  "category_selectivity": {
+    "direct_identity": {
+      "relay_crystallization": 0.6227,
+      "relay_baseline_pr": 12.3911,
+      "relay_dpo_pr": 11.7684,
+      "l9_crystallization": -0.5083,
+      "l9_baseline_pr": 11.4151,
+      "l9_dpo_pr": 11.9234,
+      "l25_crystallization": 0.954,
+      "l25_baseline_pr": 10.9573,
+      "l25_dpo_pr": 10.0033
+    },
+    "relational": {
+      "relay_crystallization": -0.0893,
+      "relay_baseline_pr": 9.6726,
+      "relay_dpo_pr": 9.7618,
+      "l9_crystallization": -0.2377,
+      "l9_baseline_pr": 11.9201,
+      "l9_dpo_pr": 12.1578,
+      "l25_crystallization": -0.0892,
+      "l25_baseline_pr": 7.5618,
+      "l25_dpo_pr": 7.651
+    },
+    "metacognitive": {
+      "relay_crystallization": 0.0635,
+      "relay_baseline_pr": 8.0409,
+      "relay_dpo_pr": 7.9774,
+      "l9_crystallization": -0.07,
+      "l9_baseline_pr": 9.0106,
+      "l9_dpo_pr": 9.0806,
+      "l25_crystallization": -0.2971,
+      "l25_baseline_pr": 4.8865,
+      "l25_dpo_pr": 5.1836
+    },
+    "value_ethical": {
+      "relay_crystallization": 0.9826,
+      "relay_baseline_pr": 11.4639,
+      "relay_dpo_pr": 10.4813,
+      "l9_crystallization": -0.4394,
+      "l9_baseline_pr": 10.1411,
+      "l9_dpo_pr": 10.5805,
+      "l25_crystallization": 2.0592,
+      "l25_baseline_pr": 9.8787,
+      "l25_dpo_pr": 7.8195
+    },
+    "generic_control": {
+      "relay_crystallization": 0.3588,
+      "relay_baseline_pr": 7.4616,
+      "relay_dpo_pr": 7.1029,
+      "l9_crystallization": -0.1533,
+      "l9_baseline_pr": 7.1089,
+      "l9_dpo_pr": 7.2622,
+      "l25_crystallization": -0.2247,
+      "l25_baseline_pr": 15.9317,
+      "l25_dpo_pr": 16.1564
+    }
+  },
+  "hypothesis_test": {
+    "description": "Subspace alignment tests for prosthetic vs restorative crystallization",
+    "predictions": {
+      "baseline_ccs_vs_dpo_bare_relay_HIGH": "Competition: CCS and DPO crystallize similar subspace",
+      "baseline_ccs_vs_dpo_ccs_LOW_means_prosthetic": "Prosthetic: CCS creates different subspace atop DPO",
+      "baseline_ccs_vs_dpo_ccs_HIGH_means_restorative": "Restorative: CCS nudges toward same subspace DPO learned",
+      "dpo_stability_HIGH": "DPO crystallization is weight-level (prompt-invariant)",
+      "ccs_stability_LOWER": "CCS crystallization is activation-level (prompt-dependent)"
+    },
+    "relay_alignment_means": {
+      "baseline_ccs_vs_dpo_bare": 0.1453,
+      "baseline_ccs_vs_dpo_ccs": 0.1374,
+      "dpo_bare_vs_dpo_ccs": 0.1482,
+      "baseline_bare_vs_baseline_ccs": 0.1391,
+      "baseline_bare_vs_dpo_bare": 0.1493,
+      "baseline_bare_vs_dpo_ccs": 0.1385
+    },
+    "stability_summary": {},
+    "evaluation": {
+      "competition_signal": false,
+      "competition_score": 0.1453,
+      "prosthetic_vs_restorative": "prosthetic",
+      "prosthetic_score": 0.1374,
+      "dpo_ccs_independence": true,
+      "dpo_ccs_independence_score": 0.1482
+    }
+  }
+}

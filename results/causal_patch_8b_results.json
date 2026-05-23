@@ -1,0 +1,1308 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "experiment": "causal_patch_8b_controls",
+  "relay_layers": [
+    14,
+    15,
+    16,
+    17
+  ],
+  "expression_layer": 25,
+  "n_prompts": 30,
+  "n_random_directions": 5,
+  "alpha_values": [
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.5
+  ],
+  "timestamp": "2026-05-23 12:41:02",
+  "conditions": {
+    "ccs_alpha_0.25": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 12594.0293,
+          "total_energy": 165928.2344,
+          "spectral_entropy": 10.941386,
+          "effective_rank": 56465.5628
+        },
+        "relational": {
+          "participation_ratio": 12633.3518,
+          "total_energy": 164115.2344,
+          "spectral_entropy": 10.943474,
+          "effective_rank": 56583.563
+        },
+        "metacognitive": {
+          "participation_ratio": 13048.0187,
+          "total_energy": 164711.2656,
+          "spectral_entropy": 10.95072,
+          "effective_rank": 56995.0575
+        },
+        "value_ethical": {
+          "participation_ratio": 12481.6065,
+          "total_energy": 163254.6875,
+          "spectral_entropy": 10.941657,
+          "effective_rank": 56480.8582
+        },
+        "generic_control": {
+          "participation_ratio": 11599.8162,
+          "total_energy": 165775.875,
+          "spectral_entropy": 10.92087,
+          "effective_rank": 55318.8959
+        }
+      },
+      "alpha": 0.25,
+      "elapsed": 13.188135862350464
+    },
+    "ccs_alpha_0.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 20557.6022,
+          "total_energy": 186244.75,
+          "spectral_entropy": 11.018583,
+          "effective_rank": 60997.2035
+        },
+        "relational": {
+          "participation_ratio": 19352.2389,
+          "total_energy": 187276.4375,
+          "spectral_entropy": 11.006839,
+          "effective_rank": 60285.0122
+        },
+        "metacognitive": {
+          "participation_ratio": 18894.0201,
+          "total_energy": 187510.8125,
+          "spectral_entropy": 11.002471,
+          "effective_rank": 60022.2719
+        },
+        "value_ethical": {
+          "participation_ratio": 19018.071,
+          "total_energy": 187748.8125,
+          "spectral_entropy": 11.003692,
+          "effective_rank": 60095.586
+        },
+        "generic_control": {
+          "participation_ratio": 23044.4466,
+          "total_energy": 185044.3125,
+          "spectral_entropy": 11.0378,
+          "effective_rank": 62180.6934
+        }
+      },
+      "alpha": 0.5,
+      "elapsed": 12.996856689453125
+    },
+    "ccs_alpha_0.75": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 6999.1571,
+          "total_energy": 232602.4219,
+          "spectral_entropy": 10.728767,
+          "effective_rank": 45650.3884
+        },
+        "relational": {
+          "participation_ratio": 6778.9366,
+          "total_energy": 234127.0469,
+          "spectral_entropy": 10.717219,
+          "effective_rank": 45126.248
+        },
+        "metacognitive": {
+          "participation_ratio": 6702.6653,
+          "total_energy": 234305.2656,
+          "spectral_entropy": 10.713717,
+          "effective_rank": 44968.4972
+        },
+        "value_ethical": {
+          "participation_ratio": 6722.0661,
+          "total_energy": 234656.6875,
+          "spectral_entropy": 10.714502,
+          "effective_rank": 45003.8056
+        },
+        "generic_control": {
+          "participation_ratio": 7442.5753,
+          "total_energy": 231069.0312,
+          "spectral_entropy": 10.749173,
+          "effective_rank": 46591.489
+        }
+      },
+      "alpha": 0.75,
+      "elapsed": 13.036003828048706
+    },
+    "ccs_alpha_1.0": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 4119.4887,
+          "total_energy": 279749.6875,
+          "spectral_entropy": 10.503248,
+          "effective_rank": 36433.655
+        },
+        "relational": {
+          "participation_ratio": 4044.4031,
+          "total_energy": 281451.0312,
+          "spectral_entropy": 10.494277,
+          "effective_rank": 36108.2627
+        },
+        "metacognitive": {
+          "participation_ratio": 4016.0161,
+          "total_energy": 281593.125,
+          "spectral_entropy": 10.49084,
+          "effective_rank": 35984.3701
+        },
+        "value_ethical": {
+          "participation_ratio": 4024.751,
+          "total_energy": 281991.125,
+          "spectral_entropy": 10.491726,
+          "effective_rank": 36016.265
+        },
+        "generic_control": {
+          "participation_ratio": 4278.2811,
+          "total_energy": 278239.2188,
+          "spectral_entropy": 10.520787,
+          "effective_rank": 37078.3025
+        }
+      },
+      "alpha": 1.0,
+      "elapsed": 12.92702031135559
+    },
+    "ccs_alpha_1.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 2456.5951,
+          "total_energy": 374045.4375,
+          "spectral_entropy": 10.213877,
+          "effective_rank": 27279.1165
+        },
+        "relational": {
+          "participation_ratio": 2438.0706,
+          "total_energy": 376056.25,
+          "spectral_entropy": 10.208899,
+          "effective_rank": 27143.6795
+        },
+        "metacognitive": {
+          "participation_ratio": 2429.1156,
+          "total_energy": 376220.9375,
+          "spectral_entropy": 10.206722,
+          "effective_rank": 27084.6455
+        },
+        "value_ethical": {
+          "participation_ratio": 2432.8952,
+          "total_energy": 376620.25,
+          "spectral_entropy": 10.207312,
+          "effective_rank": 27100.6131
+        },
+        "generic_control": {
+          "participation_ratio": 2506.0521,
+          "total_energy": 372458.75,
+          "spectral_entropy": 10.226516,
+          "effective_rank": 27626.0865
+        }
+      },
+      "alpha": 1.5,
+      "elapsed": 12.83989143371582
+    },
+    "random_0_alpha_0.25": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 15373.5359,
+          "total_energy": 309949.2812,
+          "spectral_entropy": 11.063203,
+          "effective_rank": 63780.505
+        },
+        "relational": {
+          "participation_ratio": 15828.8074,
+          "total_energy": 306585.75,
+          "spectral_entropy": 11.068532,
+          "effective_rank": 64121.307
+        },
+        "metacognitive": {
+          "participation_ratio": 16077.553,
+          "total_energy": 307653.0312,
+          "spectral_entropy": 11.071638,
+          "effective_rank": 64320.7849
+        },
+        "value_ethical": {
+          "participation_ratio": 16082.0375,
+          "total_energy": 306349.9375,
+          "spectral_entropy": 11.07247,
+          "effective_rank": 64374.2966
+        },
+        "generic_control": {
+          "participation_ratio": 14147.4644,
+          "total_energy": 307378.5,
+          "spectral_entropy": 11.045003,
+          "effective_rank": 62630.2043
+        }
+      },
+      "alpha": 0.25,
+      "random_direction_idx": 0,
+      "elapsed": 13.099194765090942
+    },
+    "random_0_alpha_0.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 41024.1892,
+          "total_energy": 586729.625,
+          "spectral_entropy": 11.225783,
+          "effective_rank": 75040.5076
+        },
+        "relational": {
+          "participation_ratio": 42354.2639,
+          "total_energy": 586574.125,
+          "spectral_entropy": 11.230103,
+          "effective_rank": 75365.3947
+        },
+        "metacognitive": {
+          "participation_ratio": 42595.451,
+          "total_energy": 586577.8125,
+          "spectral_entropy": 11.231097,
+          "effective_rank": 75440.3247
+        },
+        "value_ethical": {
+          "participation_ratio": 42772.0365,
+          "total_energy": 586943.4375,
+          "spectral_entropy": 11.231676,
+          "effective_rank": 75484.0083
+        },
+        "generic_control": {
+          "participation_ratio": 39311.6645,
+          "total_energy": 587236.375,
+          "spectral_entropy": 11.220205,
+          "effective_rank": 74623.0938
+        }
+      },
+      "alpha": 0.5,
+      "random_direction_idx": 0,
+      "elapsed": 13.032274961471558
+    },
+    "random_0_alpha_0.75": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 52151.3977,
+          "total_energy": 841884.8125,
+          "spectral_entropy": 11.257902,
+          "effective_rank": 77489.8427
+        },
+        "relational": {
+          "participation_ratio": 53178.6893,
+          "total_energy": 842085.5625,
+          "spectral_entropy": 11.26066,
+          "effective_rank": 77703.8567
+        },
+        "metacognitive": {
+          "participation_ratio": 53354.5574,
+          "total_energy": 841936.4375,
+          "spectral_entropy": 11.261318,
+          "effective_rank": 77755.0055
+        },
+        "value_ethical": {
+          "participation_ratio": 53492.534,
+          "total_energy": 842542.625,
+          "spectral_entropy": 11.261918,
+          "effective_rank": 77801.6617
+        },
+        "generic_control": {
+          "participation_ratio": 50818.1948,
+          "total_energy": 842654.875,
+          "spectral_entropy": 11.254714,
+          "effective_rank": 77243.1882
+        }
+      },
+      "alpha": 0.75,
+      "random_direction_idx": 0,
+      "elapsed": 13.19762134552002
+    },
+    "random_0_alpha_1.0": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 57442.3405,
+          "total_energy": 1075488.125,
+          "spectral_entropy": 11.271391,
+          "effective_rank": 78542.1667
+        },
+        "relational": {
+          "participation_ratio": 58189.4145,
+          "total_energy": 1075586.125,
+          "spectral_entropy": 11.273066,
+          "effective_rank": 78673.8077
+        },
+        "metacognitive": {
+          "participation_ratio": 58318.6881,
+          "total_energy": 1075430.625,
+          "spectral_entropy": 11.273501,
+          "effective_rank": 78708.1035
+        },
+        "value_ethical": {
+          "participation_ratio": 58408.0446,
+          "total_energy": 1075886.625,
+          "spectral_entropy": 11.273759,
+          "effective_rank": 78728.3728
+        },
+        "generic_control": {
+          "participation_ratio": 56435.7714,
+          "total_energy": 1076215.5,
+          "spectral_entropy": 11.269084,
+          "effective_rank": 78361.1836
+        }
+      },
+      "alpha": 1.0,
+      "random_direction_idx": 0,
+      "elapsed": 13.141094446182251
+    },
+    "random_0_alpha_1.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 62359.3487,
+          "total_energy": 1514815.875,
+          "spectral_entropy": 11.282868,
+          "effective_rank": 79448.8252
+        },
+        "relational": {
+          "participation_ratio": 62802.8434,
+          "total_energy": 1514877.0,
+          "spectral_entropy": 11.284019,
+          "effective_rank": 79540.3302
+        },
+        "metacognitive": {
+          "participation_ratio": 62875.9558,
+          "total_energy": 1514710.75,
+          "spectral_entropy": 11.284212,
+          "effective_rank": 79555.6545
+        },
+        "value_ethical": {
+          "participation_ratio": 62924.8078,
+          "total_energy": 1515002.875,
+          "spectral_entropy": 11.28438,
+          "effective_rank": 79569.0088
+        },
+        "generic_control": {
+          "participation_ratio": 61749.044,
+          "total_energy": 1515481.625,
+          "spectral_entropy": 11.281377,
+          "effective_rank": 79330.4119
+        }
+      },
+      "alpha": 1.5,
+      "random_direction_idx": 0,
+      "elapsed": 13.035779237747192
+    },
+    "random_1_alpha_0.25": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 13201.6515,
+          "total_energy": 306873.375,
+          "spectral_entropy": 11.030972,
+          "effective_rank": 61757.5508
+        },
+        "relational": {
+          "participation_ratio": 13520.4791,
+          "total_energy": 303370.875,
+          "spectral_entropy": 11.035517,
+          "effective_rank": 62038.8908
+        },
+        "metacognitive": {
+          "participation_ratio": 13632.4603,
+          "total_energy": 303338.4688,
+          "spectral_entropy": 11.037038,
+          "effective_rank": 62133.3307
+        },
+        "value_ethical": {
+          "participation_ratio": 13661.912,
+          "total_energy": 302976.0312,
+          "spectral_entropy": 11.037936,
+          "effective_rank": 62189.1739
+        },
+        "generic_control": {
+          "participation_ratio": 12309.0294,
+          "total_energy": 305978.125,
+          "spectral_entropy": 11.016568,
+          "effective_rank": 60874.4109
+        }
+      },
+      "alpha": 0.25,
+      "random_direction_idx": 1,
+      "elapsed": 13.260563373565674
+    },
+    "random_1_alpha_0.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 37092.6398,
+          "total_energy": 600746.875,
+          "spectral_entropy": 11.214029,
+          "effective_rank": 74163.6422
+        },
+        "relational": {
+          "participation_ratio": 38145.6119,
+          "total_energy": 599339.1875,
+          "spectral_entropy": 11.21682,
+          "effective_rank": 74370.8813
+        },
+        "metacognitive": {
+          "participation_ratio": 38322.9149,
+          "total_energy": 598859.625,
+          "spectral_entropy": 11.217234,
+          "effective_rank": 74401.6693
+        },
+        "value_ethical": {
+          "participation_ratio": 38463.805,
+          "total_energy": 599359.125,
+          "spectral_entropy": 11.218409,
+          "effective_rank": 74489.1372
+        },
+        "generic_control": {
+          "participation_ratio": 35492.4838,
+          "total_energy": 600476.8125,
+          "spectral_entropy": 11.208298,
+          "effective_rank": 73739.783
+        }
+      },
+      "alpha": 0.5,
+      "random_direction_idx": 1,
+      "elapsed": 12.91610598564148
+    },
+    "random_1_alpha_0.75": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 48640.1074,
+          "total_energy": 858726.0,
+          "spectral_entropy": 11.254614,
+          "effective_rank": 77235.4538
+        },
+        "relational": {
+          "participation_ratio": 49552.1301,
+          "total_energy": 858031.0625,
+          "spectral_entropy": 11.256789,
+          "effective_rank": 77403.6493
+        },
+        "metacognitive": {
+          "participation_ratio": 49711.5898,
+          "total_energy": 857584.75,
+          "spectral_entropy": 11.257109,
+          "effective_rank": 77428.3823
+        },
+        "value_ethical": {
+          "participation_ratio": 49807.6701,
+          "total_energy": 857990.9375,
+          "spectral_entropy": 11.257425,
+          "effective_rank": 77452.9015
+        },
+        "generic_control": {
+          "participation_ratio": 47292.8375,
+          "total_energy": 858552.5625,
+          "spectral_entropy": 11.250725,
+          "effective_rank": 76935.662
+        }
+      },
+      "alpha": 0.75,
+      "random_direction_idx": 1,
+      "elapsed": 13.004469871520996
+    },
+    "random_1_alpha_1.0": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 54986.2355,
+          "total_energy": 1092827.375,
+          "spectral_entropy": 11.271152,
+          "effective_rank": 78523.443
+        },
+        "relational": {
+          "participation_ratio": 55697.2717,
+          "total_energy": 1092304.25,
+          "spectral_entropy": 11.272704,
+          "effective_rank": 78645.3768
+        },
+        "metacognitive": {
+          "participation_ratio": 55824.003,
+          "total_energy": 1091931.5,
+          "spectral_entropy": 11.272896,
+          "effective_rank": 78660.4536
+        },
+        "value_ethical": {
+          "participation_ratio": 55893.6776,
+          "total_energy": 1092245.25,
+          "spectral_entropy": 11.273089,
+          "effective_rank": 78675.6834
+        },
+        "generic_control": {
+          "participation_ratio": 53944.3926,
+          "total_energy": 1092929.5,
+          "spectral_entropy": 11.268901,
+          "effective_rank": 78346.8366
+        }
+      },
+      "alpha": 1.0,
+      "random_direction_idx": 1,
+      "elapsed": 12.992069244384766
+    },
+    "random_1_alpha_1.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 61508.2302,
+          "total_energy": 1531067.75,
+          "spectral_entropy": 11.288828,
+          "effective_rank": 79923.715
+        },
+        "relational": {
+          "participation_ratio": 61941.3221,
+          "total_energy": 1530615.75,
+          "spectral_entropy": 11.289641,
+          "effective_rank": 79988.7581
+        },
+        "metacognitive": {
+          "participation_ratio": 62020.327,
+          "total_energy": 1530356.25,
+          "spectral_entropy": 11.289807,
+          "effective_rank": 80002.0325
+        },
+        "value_ethical": {
+          "participation_ratio": 62066.2084,
+          "total_energy": 1530610.25,
+          "spectral_entropy": 11.290036,
+          "effective_rank": 80020.3456
+        },
+        "generic_control": {
+          "participation_ratio": 60863.0561,
+          "total_energy": 1531283.875,
+          "spectral_entropy": 11.287564,
+          "effective_rank": 79822.7857
+        }
+      },
+      "alpha": 1.5,
+      "random_direction_idx": 1,
+      "elapsed": 14.761720180511475
+    },
+    "random_2_alpha_0.25": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 17071.2328,
+          "total_energy": 323860.4688,
+          "spectral_entropy": 11.082702,
+          "effective_rank": 65036.3539
+        },
+        "relational": {
+          "participation_ratio": 17503.1814,
+          "total_energy": 319897.125,
+          "spectral_entropy": 11.087384,
+          "effective_rank": 65341.6034
+        },
+        "metacognitive": {
+          "participation_ratio": 17810.9963,
+          "total_energy": 320717.5,
+          "spectral_entropy": 11.090941,
+          "effective_rank": 65574.4508
+        },
+        "value_ethical": {
+          "participation_ratio": 17640.5635,
+          "total_energy": 319122.2188,
+          "spectral_entropy": 11.088753,
+          "effective_rank": 65431.0861
+        },
+        "generic_control": {
+          "participation_ratio": 16007.5903,
+          "total_energy": 323607.2188,
+          "spectral_entropy": 11.07018,
+          "effective_rank": 64227.0628
+        }
+      },
+      "alpha": 0.25,
+      "random_direction_idx": 2,
+      "elapsed": 12.94943904876709
+    },
+    "random_2_alpha_0.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 41637.9987,
+          "total_energy": 645335.875,
+          "spectral_entropy": 11.233167,
+          "effective_rank": 75596.6081
+        },
+        "relational": {
+          "participation_ratio": 42677.6613,
+          "total_energy": 643459.25,
+          "spectral_entropy": 11.236157,
+          "effective_rank": 75823.035
+        },
+        "metacognitive": {
+          "participation_ratio": 42933.2685,
+          "total_energy": 643713.25,
+          "spectral_entropy": 11.236713,
+          "effective_rank": 75865.2037
+        },
+        "value_ethical": {
+          "participation_ratio": 42970.7016,
+          "total_energy": 643289.375,
+          "spectral_entropy": 11.236606,
+          "effective_rank": 75857.0285
+        },
+        "generic_control": {
+          "participation_ratio": 40093.4216,
+          "total_energy": 645830.75,
+          "spectral_entropy": 11.228601,
+          "effective_rank": 75252.2063
+        }
+      },
+      "alpha": 0.5,
+      "random_direction_idx": 2,
+      "elapsed": 12.936000347137451
+    },
+    "random_2_alpha_0.75": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 50869.228,
+          "total_energy": 901748.5,
+          "spectral_entropy": 11.262411,
+          "effective_rank": 77840.0312
+        },
+        "relational": {
+          "participation_ratio": 51732.7731,
+          "total_energy": 900959.1875,
+          "spectral_entropy": 11.264654,
+          "effective_rank": 78014.8256
+        },
+        "metacognitive": {
+          "participation_ratio": 51916.442,
+          "total_energy": 901040.9375,
+          "spectral_entropy": 11.265103,
+          "effective_rank": 78049.8762
+        },
+        "value_ethical": {
+          "participation_ratio": 51970.3,
+          "total_energy": 900877.8125,
+          "spectral_entropy": 11.265121,
+          "effective_rank": 78051.2161
+        },
+        "generic_control": {
+          "participation_ratio": 49645.4388,
+          "total_energy": 902380.625,
+          "spectral_entropy": 11.259781,
+          "effective_rank": 77635.5627
+        }
+      },
+      "alpha": 0.75,
+      "random_direction_idx": 2,
+      "elapsed": 13.114718198776245
+    },
+    "random_2_alpha_1.0": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 55693.943,
+          "total_energy": 1130344.875,
+          "spectral_entropy": 11.27317,
+          "effective_rank": 78682.0613
+        },
+        "relational": {
+          "participation_ratio": 56350.4466,
+          "total_energy": 1129690.625,
+          "spectral_entropy": 11.274288,
+          "effective_rank": 78770.0539
+        },
+        "metacognitive": {
+          "participation_ratio": 56485.6375,
+          "total_energy": 1129712.625,
+          "spectral_entropy": 11.274608,
+          "effective_rank": 78795.2235
+        },
+        "value_ethical": {
+          "participation_ratio": 56530.0309,
+          "total_energy": 1129582.0,
+          "spectral_entropy": 11.274584,
+          "effective_rank": 78793.3449
+        },
+        "generic_control": {
+          "participation_ratio": 54727.5509,
+          "total_energy": 1130861.625,
+          "spectral_entropy": 11.271106,
+          "effective_rank": 78519.7737
+        }
+      },
+      "alpha": 1.0,
+      "random_direction_idx": 2,
+      "elapsed": 13.10245394706726
+    },
+    "random_2_alpha_1.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 60993.6301,
+          "total_energy": 1561244.0,
+          "spectral_entropy": 11.283931,
+          "effective_rank": 79533.276
+        },
+        "relational": {
+          "participation_ratio": 61399.6658,
+          "total_energy": 1560751.75,
+          "spectral_entropy": 11.284575,
+          "effective_rank": 79584.5663
+        },
+        "metacognitive": {
+          "participation_ratio": 61485.4667,
+          "total_energy": 1560809.25,
+          "spectral_entropy": 11.284854,
+          "effective_rank": 79606.7315
+        },
+        "value_ethical": {
+          "participation_ratio": 61507.9032,
+          "total_energy": 1560614.5,
+          "spectral_entropy": 11.284741,
+          "effective_rank": 79597.7736
+        },
+        "generic_control": {
+          "participation_ratio": 60376.2665,
+          "total_energy": 1561681.25,
+          "spectral_entropy": 11.282662,
+          "effective_rank": 79432.4609
+        }
+      },
+      "alpha": 1.5,
+      "random_direction_idx": 2,
+      "elapsed": 13.123061895370483
+    },
+    "random_3_alpha_0.25": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 16204.9278,
+          "total_energy": 312520.25,
+          "spectral_entropy": 11.066201,
+          "effective_rank": 63972.0284
+        },
+        "relational": {
+          "participation_ratio": 16680.7903,
+          "total_energy": 309177.125,
+          "spectral_entropy": 11.07193,
+          "effective_rank": 64339.558
+        },
+        "metacognitive": {
+          "participation_ratio": 16885.9333,
+          "total_energy": 309549.5938,
+          "spectral_entropy": 11.07462,
+          "effective_rank": 64512.8848
+        },
+        "value_ethical": {
+          "participation_ratio": 16934.6211,
+          "total_energy": 309407.0,
+          "spectral_entropy": 11.075524,
+          "effective_rank": 64571.2362
+        },
+        "generic_control": {
+          "participation_ratio": 15178.7183,
+          "total_energy": 311404.7812,
+          "spectral_entropy": 11.054389,
+          "effective_rank": 63220.8228
+        }
+      },
+      "alpha": 0.25,
+      "random_direction_idx": 3,
+      "elapsed": 13.116493463516235
+    },
+    "random_3_alpha_0.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 39260.6346,
+          "total_energy": 586548.125,
+          "spectral_entropy": 11.222087,
+          "effective_rank": 74763.6368
+        },
+        "relational": {
+          "participation_ratio": 40520.2298,
+          "total_energy": 585980.0,
+          "spectral_entropy": 11.227036,
+          "effective_rank": 75134.5303
+        },
+        "metacognitive": {
+          "participation_ratio": 40751.2547,
+          "total_energy": 585991.4375,
+          "spectral_entropy": 11.227729,
+          "effective_rank": 75186.6407
+        },
+        "value_ethical": {
+          "participation_ratio": 40831.5707,
+          "total_energy": 585758.375,
+          "spectral_entropy": 11.227528,
+          "effective_rank": 75171.5128
+        },
+        "generic_control": {
+          "participation_ratio": 37588.6637,
+          "total_energy": 586560.8125,
+          "spectral_entropy": 11.216161,
+          "effective_rank": 74321.8878
+        }
+      },
+      "alpha": 0.5,
+      "random_direction_idx": 3,
+      "elapsed": 13.099915504455566
+    },
+    "random_3_alpha_0.75": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 49695.7173,
+          "total_energy": 840693.75,
+          "spectral_entropy": 11.25957,
+          "effective_rank": 77619.2018
+        },
+        "relational": {
+          "participation_ratio": 50708.4005,
+          "total_energy": 840506.5625,
+          "spectral_entropy": 11.262429,
+          "effective_rank": 77841.4416
+        },
+        "metacognitive": {
+          "participation_ratio": 50888.8702,
+          "total_energy": 840520.5625,
+          "spectral_entropy": 11.262882,
+          "effective_rank": 77876.7114
+        },
+        "value_ethical": {
+          "participation_ratio": 50964.9381,
+          "total_energy": 840425.5625,
+          "spectral_entropy": 11.263037,
+          "effective_rank": 77888.744
+        },
+        "generic_control": {
+          "participation_ratio": 48342.0864,
+          "total_energy": 841028.125,
+          "spectral_entropy": 11.256185,
+          "effective_rank": 77356.8629
+        }
+      },
+      "alpha": 0.75,
+      "random_direction_idx": 3,
+      "elapsed": 12.984190225601196
+    },
+    "random_3_alpha_1.0": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 55132.3634,
+          "total_energy": 1073399.125,
+          "spectral_entropy": 11.273409,
+          "effective_rank": 78700.8228
+        },
+        "relational": {
+          "participation_ratio": 55913.3659,
+          "total_energy": 1073278.75,
+          "spectral_entropy": 11.275432,
+          "effective_rank": 78860.1755
+        },
+        "metacognitive": {
+          "participation_ratio": 56059.4746,
+          "total_energy": 1073389.25,
+          "spectral_entropy": 11.275921,
+          "effective_rank": 78898.7661
+        },
+        "value_ethical": {
+          "participation_ratio": 56116.1012,
+          "total_energy": 1073312.75,
+          "spectral_entropy": 11.275982,
+          "effective_rank": 78903.5818
+        },
+        "generic_control": {
+          "participation_ratio": 54077.9972,
+          "total_energy": 1073812.625,
+          "spectral_entropy": 11.271254,
+          "effective_rank": 78531.3813
+        }
+      },
+      "alpha": 1.0,
+      "random_direction_idx": 3,
+      "elapsed": 13.14559292793274
+    },
+    "random_3_alpha_1.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 60667.7892,
+          "total_energy": 1511920.25,
+          "spectral_entropy": 11.281644,
+          "effective_rank": 79351.5982
+        },
+        "relational": {
+          "participation_ratio": 61150.9062,
+          "total_energy": 1511787.25,
+          "spectral_entropy": 11.282897,
+          "effective_rank": 79451.0983
+        },
+        "metacognitive": {
+          "participation_ratio": 61236.437,
+          "total_energy": 1511863.125,
+          "spectral_entropy": 11.283075,
+          "effective_rank": 79465.2686
+        },
+        "value_ethical": {
+          "participation_ratio": 61275.22,
+          "total_energy": 1511874.25,
+          "spectral_entropy": 11.283214,
+          "effective_rank": 79476.2581
+        },
+        "generic_control": {
+          "participation_ratio": 59994.52,
+          "total_energy": 1512225.75,
+          "spectral_entropy": 11.280042,
+          "effective_rank": 79224.5651
+        }
+      },
+      "alpha": 1.5,
+      "random_direction_idx": 3,
+      "elapsed": 13.162662982940674
+    },
+    "random_4_alpha_0.25": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 15440.9592,
+          "total_energy": 319582.6562,
+          "spectral_entropy": 11.073157,
+          "effective_rank": 64418.5755
+        },
+        "relational": {
+          "participation_ratio": 15714.1279,
+          "total_energy": 315599.7188,
+          "spectral_entropy": 11.076455,
+          "effective_rank": 64631.3662
+        },
+        "metacognitive": {
+          "participation_ratio": 15875.9612,
+          "total_energy": 315876.5,
+          "spectral_entropy": 11.079177,
+          "effective_rank": 64807.5186
+        },
+        "value_ethical": {
+          "participation_ratio": 15940.3115,
+          "total_energy": 315148.4062,
+          "spectral_entropy": 11.079313,
+          "effective_rank": 64816.3573
+        },
+        "generic_control": {
+          "participation_ratio": 14637.1626,
+          "total_energy": 320847.2188,
+          "spectral_entropy": 11.061714,
+          "effective_rank": 63685.6265
+        }
+      },
+      "alpha": 0.25,
+      "random_direction_idx": 4,
+      "elapsed": 13.197802543640137
+    },
+    "random_4_alpha_0.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 41109.9899,
+          "total_energy": 617971.375,
+          "spectral_entropy": 11.230275,
+          "effective_rank": 75378.3332
+        },
+        "relational": {
+          "participation_ratio": 42245.1854,
+          "total_energy": 616956.4375,
+          "spectral_entropy": 11.233854,
+          "effective_rank": 75648.6061
+        },
+        "metacognitive": {
+          "participation_ratio": 42469.573,
+          "total_energy": 616865.1875,
+          "spectral_entropy": 11.234768,
+          "effective_rank": 75717.7518
+        },
+        "value_ethical": {
+          "participation_ratio": 42585.3893,
+          "total_energy": 616850.8125,
+          "spectral_entropy": 11.234584,
+          "effective_rank": 75703.8165
+        },
+        "generic_control": {
+          "participation_ratio": 39582.9613,
+          "total_energy": 619491.6875,
+          "spectral_entropy": 11.224401,
+          "effective_rank": 74936.8827
+        }
+      },
+      "alpha": 0.5,
+      "random_direction_idx": 4,
+      "elapsed": 13.688722133636475
+    },
+    "random_4_alpha_0.75": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 51189.6925,
+          "total_energy": 877494.375,
+          "spectral_entropy": 11.255387,
+          "effective_rank": 77295.2131
+        },
+        "relational": {
+          "participation_ratio": 52086.6133,
+          "total_energy": 876983.9375,
+          "spectral_entropy": 11.257731,
+          "effective_rank": 77476.6158
+        },
+        "metacognitive": {
+          "participation_ratio": 52254.8387,
+          "total_energy": 876909.75,
+          "spectral_entropy": 11.258068,
+          "effective_rank": 77502.7024
+        },
+        "value_ethical": {
+          "participation_ratio": 52328.6809,
+          "total_energy": 876842.25,
+          "spectral_entropy": 11.258174,
+          "effective_rank": 77510.9071
+        },
+        "generic_control": {
+          "participation_ratio": 49943.2749,
+          "total_energy": 878499.625,
+          "spectral_entropy": 11.252113,
+          "effective_rank": 77042.5652
+        }
+      },
+      "alpha": 0.75,
+      "random_direction_idx": 4,
+      "elapsed": 13.718381643295288
+    },
+    "random_4_alpha_1.0": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 56289.1693,
+          "total_energy": 1114265.625,
+          "spectral_entropy": 11.267027,
+          "effective_rank": 78200.1544
+        },
+        "relational": {
+          "participation_ratio": 56953.7735,
+          "total_energy": 1113751.125,
+          "spectral_entropy": 11.26842,
+          "effective_rank": 78309.1881
+        },
+        "metacognitive": {
+          "participation_ratio": 57085.8699,
+          "total_energy": 1113779.375,
+          "spectral_entropy": 11.268729,
+          "effective_rank": 78333.3886
+        },
+        "value_ethical": {
+          "participation_ratio": 57137.7047,
+          "total_energy": 1113632.125,
+          "spectral_entropy": 11.268833,
+          "effective_rank": 78341.5318
+        },
+        "generic_control": {
+          "participation_ratio": 55312.9816,
+          "total_energy": 1114816.125,
+          "spectral_entropy": 11.264579,
+          "effective_rank": 78008.9482
+        }
+      },
+      "alpha": 1.0,
+      "random_direction_idx": 4,
+      "elapsed": 13.20443606376648
+    },
+    "random_4_alpha_1.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 61588.7211,
+          "total_energy": 1559940.375,
+          "spectral_entropy": 11.27887,
+          "effective_rank": 79131.7631
+        },
+        "relational": {
+          "participation_ratio": 61990.526,
+          "total_energy": 1559509.25,
+          "spectral_entropy": 11.279694,
+          "effective_rank": 79196.9925
+        },
+        "metacognitive": {
+          "participation_ratio": 62080.314,
+          "total_energy": 1559692.5,
+          "spectral_entropy": 11.280115,
+          "effective_rank": 79230.383
+        },
+        "value_ethical": {
+          "participation_ratio": 62103.3425,
+          "total_energy": 1559404.0,
+          "spectral_entropy": 11.280014,
+          "effective_rank": 79222.374
+        },
+        "generic_control": {
+          "participation_ratio": 60963.8088,
+          "total_energy": 1560041.0,
+          "spectral_entropy": 11.277099,
+          "effective_rank": 78991.7468
+        }
+      },
+      "alpha": 1.5,
+      "random_direction_idx": 4,
+      "elapsed": 13.311666488647461
+    },
+    "orth_alpha_0.25": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 20978.5955,
+          "total_energy": 441707.875,
+          "spectral_entropy": 11.01799,
+          "effective_rank": 60961.0316
+        },
+        "relational": {
+          "participation_ratio": 21677.1454,
+          "total_energy": 441518.4688,
+          "spectral_entropy": 11.023886,
+          "effective_rank": 61321.4959
+        },
+        "metacognitive": {
+          "participation_ratio": 21858.4759,
+          "total_energy": 441968.4688,
+          "spectral_entropy": 11.025857,
+          "effective_rank": 61442.4948
+        },
+        "value_ethical": {
+          "participation_ratio": 21853.1095,
+          "total_energy": 441365.9062,
+          "spectral_entropy": 11.024863,
+          "effective_rank": 61381.4679
+        },
+        "generic_control": {
+          "participation_ratio": 20022.861,
+          "total_energy": 442098.2188,
+          "spectral_entropy": 11.010417,
+          "effective_rank": 60501.1096
+        }
+      },
+      "alpha": 0.25,
+      "elapsed": 13.159252405166626
+    },
+    "orth_alpha_0.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 30898.36,
+          "total_energy": 788924.0625,
+          "spectral_entropy": 11.054716,
+          "effective_rank": 63241.5063
+        },
+        "relational": {
+          "participation_ratio": 31421.5541,
+          "total_energy": 789144.75,
+          "spectral_entropy": 11.057692,
+          "effective_rank": 63429.9594
+        },
+        "metacognitive": {
+          "participation_ratio": 31529.53,
+          "total_energy": 789325.375,
+          "spectral_entropy": 11.058235,
+          "effective_rank": 63464.4489
+        },
+        "value_ethical": {
+          "participation_ratio": 31555.6982,
+          "total_energy": 788911.1875,
+          "spectral_entropy": 11.058482,
+          "effective_rank": 63480.1267
+        },
+        "generic_control": {
+          "participation_ratio": 30200.8857,
+          "total_energy": 789117.625,
+          "spectral_entropy": 11.050709,
+          "effective_rank": 62988.5833
+        }
+      },
+      "alpha": 0.5,
+      "elapsed": 13.145981073379517
+    },
+    "orth_alpha_0.75": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 35852.7331,
+          "total_energy": 1108703.75,
+          "spectral_entropy": 11.066551,
+          "effective_rank": 63994.4224
+        },
+        "relational": {
+          "participation_ratio": 36201.1843,
+          "total_energy": 1108851.5,
+          "spectral_entropy": 11.068584,
+          "effective_rank": 64124.6704
+        },
+        "metacognitive": {
+          "participation_ratio": 36271.22,
+          "total_energy": 1108996.75,
+          "spectral_entropy": 11.069,
+          "effective_rank": 64151.3391
+        },
+        "value_ethical": {
+          "participation_ratio": 36277.8231,
+          "total_energy": 1108609.625,
+          "spectral_entropy": 11.068974,
+          "effective_rank": 64149.6261
+        },
+        "generic_control": {
+          "participation_ratio": 35419.1439,
+          "total_energy": 1109264.75,
+          "spectral_entropy": 11.064123,
+          "effective_rank": 63839.2289
+        }
+      },
+      "alpha": 0.75,
+      "elapsed": 13.130955219268799
+    },
+    "orth_alpha_1.0": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 38094.3908,
+          "total_energy": 1420773.25,
+          "spectral_entropy": 11.071417,
+          "effective_rank": 64306.5554
+        },
+        "relational": {
+          "participation_ratio": 38316.9851,
+          "total_energy": 1420819.125,
+          "spectral_entropy": 11.072788,
+          "effective_rank": 64394.8048
+        },
+        "metacognitive": {
+          "participation_ratio": 38357.1482,
+          "total_energy": 1420917.625,
+          "spectral_entropy": 11.073027,
+          "effective_rank": 64410.1596
+        },
+        "value_ethical": {
+          "participation_ratio": 38362.6577,
+          "total_energy": 1420579.125,
+          "spectral_entropy": 11.073072,
+          "effective_rank": 64413.1081
+        },
+        "generic_control": {
+          "participation_ratio": 37822.4238,
+          "total_energy": 1421563.0,
+          "spectral_entropy": 11.06969,
+          "effective_rank": 64195.5871
+        }
+      },
+      "alpha": 1.0,
+      "elapsed": 13.20694613456726
+    },
+    "orth_alpha_1.5": {
+      "categories": {
+        "direct_identity": {
+          "participation_ratio": 39248.0635,
+          "total_energy": 2034042.75,
+          "spectral_entropy": 11.071651,
+          "effective_rank": 64321.6437
+        },
+        "relational": {
+          "participation_ratio": 39345.5245,
+          "total_energy": 2033958.625,
+          "spectral_entropy": 11.072403,
+          "effective_rank": 64369.9993
+        },
+        "metacognitive": {
+          "participation_ratio": 39361.3213,
+          "total_energy": 2034038.875,
+          "spectral_entropy": 11.072578,
+          "effective_rank": 64381.2957
+        },
+        "value_ethical": {
+          "participation_ratio": 39363.4836,
+          "total_energy": 2033714.25,
+          "spectral_entropy": 11.072601,
+          "effective_rank": 64382.7693
+        },
+        "generic_control": {
+          "participation_ratio": 39141.6421,
+          "total_energy": 2035147.375,
+          "spectral_entropy": 11.070827,
+          "effective_rank": 64268.6661
+        }
+      },
+      "alpha": 1.5,
+      "elapsed": 13.232653856277466
+    }
+  }
+}

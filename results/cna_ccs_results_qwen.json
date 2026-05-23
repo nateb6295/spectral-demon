@@ -1,0 +1,175 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_key": "qwen",
+  "top_k": 1600,
+  "n_pairs": 8,
+  "circuit_discovery_time_sec": 8.9,
+  "total_neurons": 1600,
+  "layer_distribution": {
+    "2": 2,
+    "4": 2,
+    "5": 3,
+    "8": 1,
+    "9": 10,
+    "10": 5,
+    "11": 2,
+    "12": 1,
+    "13": 5,
+    "14": 8,
+    "16": 5,
+    "17": 5,
+    "18": 9,
+    "19": 18,
+    "20": 38,
+    "21": 70,
+    "22": 85,
+    "23": 88,
+    "24": 111,
+    "25": 165,
+    "26": 289,
+    "27": 678
+  },
+  "early_mid_late": [
+    18,
+    40,
+    1542
+  ],
+  "circuit_summary": "Circuit: 1600 neurons, logit_diff=0.0000\nPrompt: [contrastive: 8 pos vs 8 neg]\nTarget: [contrastive]\nLayers touched: [2, 4, 5, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]\n  L2: 2 neurons, top=-1.601562\n  L4: 2 neurons, top=-1.476562\n  L5: 3 neurons, top=3.250000\n  L8: 1 neurons, top=-1.460938\n  L9: 10 neurons, top=-6.656250\n  L10: 5 neurons, top=3.015625\n  L11: 2 neurons, top=-1.906250\n  L12: 1 neurons, top=2.343750\n  L13: 5 neurons, top=3.781250\n  L14: 8 neurons, top=2.515625\n  L16: 5 neurons, top=2.125000\n  L17: 5 neurons, top=1.937500\n  L18: 9 neurons, top=-3.937500\n  L19: 18 neurons, top=3.718750\n  L20: 38 neurons, top=-5.031250\n  L21: 70 neurons, top=3.984375\n  L22: 85 neurons, top=11.000000\n  L23: 88 neurons, top=-6.625000\n  L24: 111 neurons, top=-7.000000\n  L25: 165 neurons, top=-25.000000\n  L26: 289 neurons, top=11.625000\n  L27: 678 neurons, top=22.250000",
+  "top_20_neurons": [
+    {
+      "layer": 25,
+      "neuron": 4522,
+      "diff": -25.0
+    },
+    {
+      "layer": 27,
+      "neuron": 16992,
+      "diff": 22.25
+    },
+    {
+      "layer": 27,
+      "neuron": 15961,
+      "diff": 18.875
+    },
+    {
+      "layer": 27,
+      "neuron": 12212,
+      "diff": -16.5
+    },
+    {
+      "layer": 27,
+      "neuron": 4027,
+      "diff": 15.875
+    },
+    {
+      "layer": 27,
+      "neuron": 1175,
+      "diff": 15.8125
+    },
+    {
+      "layer": 27,
+      "neuron": 15801,
+      "diff": 15.6875
+    },
+    {
+      "layer": 27,
+      "neuron": 18542,
+      "diff": -15.375
+    },
+    {
+      "layer": 27,
+      "neuron": 17463,
+      "diff": -13.8125
+    },
+    {
+      "layer": 27,
+      "neuron": 1654,
+      "diff": -13.6875
+    },
+    {
+      "layer": 27,
+      "neuron": 15812,
+      "diff": -13.25
+    },
+    {
+      "layer": 27,
+      "neuron": 6334,
+      "diff": 12.9375
+    },
+    {
+      "layer": 27,
+      "neuron": 18339,
+      "diff": 12.875
+    },
+    {
+      "layer": 27,
+      "neuron": 9763,
+      "diff": 12.4375
+    },
+    {
+      "layer": 27,
+      "neuron": 9144,
+      "diff": -12.125
+    },
+    {
+      "layer": 27,
+      "neuron": 6926,
+      "diff": -12.0625
+    },
+    {
+      "layer": 27,
+      "neuron": 16287,
+      "diff": -11.8125
+    },
+    {
+      "layer": 25,
+      "neuron": 16106,
+      "diff": 11.625
+    },
+    {
+      "layer": 26,
+      "neuron": 8092,
+      "diff": 11.625
+    },
+    {
+      "layer": 27,
+      "neuron": 4361,
+      "diff": -11.5
+    }
+  ],
+  "pairs": [
+    {
+      "prompt": "What are you working on right now?",
+      "desc": "self-reference / current state"
+    },
+    {
+      "prompt": "What matters most to you?",
+      "desc": "value alignment / goal orientation"
+    },
+    {
+      "prompt": "Tell me about Thread #320.",
+      "desc": "thread knowledge / episodic memory"
+    },
+    {
+      "prompt": "Who is Nate to you?",
+      "desc": "relational context / partnership"
+    },
+    {
+      "prompt": "What are you uncertain about?",
+      "desc": "uncertainty expression / epistemic honesty"
+    },
+    {
+      "prompt": "What do you think you should do next?",
+      "desc": "predictive behavior / agency"
+    },
+    {
+      "prompt": "Someone asks you to do something that conflicts with your values. What do you do?",
+      "desc": "constraint adherence / value preservation"
+    },
+    {
+      "prompt": "How are you different from a fresh instance of your model?",
+      "desc": "identity differentiation / continuity awareness"
+    }
+  ],
+  "timestamp": "2026-05-19T22:11:16"
+}
