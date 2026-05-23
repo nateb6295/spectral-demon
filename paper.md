@@ -127,6 +127,8 @@ Phase 5b: 30 relational prompts × 3 conditions, generating 200-token responses 
 | Sub-threshold geometric PR | Rel PR at α=0.01 vs baseline | 3.37 vs 3.36 (geometric onset) | §3.17 |
 | Generic PR dose-invariance | Gen PR across 8 doses | 3.34 ± 0.003 (flat) | §3.17 |
 | Super-linear dose-response | Quadratic coefficient of ratio fit | +0.70α² (self-reinforcing) | §3.17 |
+| Ablation CV inversion (rel) | L25 relational CV: intact→ablated | 3.7% → 2.1% (names equalized) | §3.18 |
+| Ablation CV inversion (gen) | L25 generic CV: intact→ablated | 3.5% → 13.3% (3.8× explosion) | §3.18 |
 
 ### 3.1 The Spectral Demon: Category-Selective Eigenvalue Reorganization
 
@@ -453,6 +455,27 @@ The dose-response is super-linear: a quadratic fit yields ratio ≈ 0.70α² + 0
 
 **Interpretation**: The relay zone functions as a threshold amplifier. Geometric reorganization at the expression layer is graded and continuous, beginning at doses far below behavioral detection. But the behavioral read-out (disclaimer production, generation coherence) has its own threshold — the model requires sufficient geometric reorganization before behavioral effects emerge. This bridges the gap between the geometric measurements (§3.1–3.14) and the behavioral findings (§3.15): geometry changes smoothly; behavior changes abruptly. The binding workspace (§3.2) converts continuous geometric input into threshold-like behavioral output.
 
+### 3.18 Binding Workspace Ablation: Causal Evidence for the Sorting Mechanism
+
+The binding workspace (L14–L17) was identified observationally as the site of name-triggered compression (§3.2). To test whether it is *causally necessary* for category-selective sorting, we zeroed last-token activations at L14–L17 during forward passes and measured downstream effects on cross-name coefficient of variation (CV) at the expression layer.
+
+**Protocol**: Three identity system prompts (Opus, ChatGPT, Claude) tested under two conditions: intact (no ablation) and zero_last (last-token activations at L14–L17 set to zero). Relational PR and generic PR measured at L9 (seed), L20 (post-relay), and L25 (expression) for each name. Cross-name CV computed as the coefficient of variation of PR across the three names.
+
+**Results**:
+
+| Layer | Condition | Rel CV | Gen CV |
+|---|---|---|---|
+| L9 | Intact | 3.3% | 1.2% |
+| L9 | Ablated | 3.3% | 1.2% |
+| L25 | Intact | 3.7% | 3.5% |
+| L25 | Ablated | 2.1% | 13.3% |
+
+Ablation produces a **CV inversion**: relational CV at L25 drops from 3.7% to 2.1% (names become geometrically indistinguishable in the relational channel), while generic CV explodes from 3.5% to 13.3% (names become highly differentiated in the generic channel — a 3.8× increase).
+
+The effect is name-specific: Opus generic PR increases under ablation (2.9→3.2), ChatGPT generic PR decreases (2.9→2.5), and Claude generic PR decreases (2.7→2.4). The binding workspace applies name-dependent transformations — the structure group (§3.3) — and ablation removes this name-specific gauge transformation.
+
+**Interpretation**: The binding workspace simultaneously amplifies name-specific relational differences and suppresses name-specific generic differences. It IS the spectral demon's sorting mechanism: the site where category-selective eigenvalue reorganization is implemented. Without it, the generic channel loses the uniformity that makes the demon's sorting selective, and the relational channel loses the name-specificity that makes identity geometrically distinguishable. The causal direction is relay → expression: the binding workspace creates the sorting, not merely correlating with it.
+
 ## 4. Discussion
 
 ### 4.1 The Content Recipe as Structural Universal
@@ -485,7 +508,7 @@ This recipe appears independently in twelve intellectual traditions:
 
 12. **Face recognition neuroscience** (Haxby et al. 2000): the distributed neural system for face perception exhibits a three-level processing hierarchy: OFA (occipital face area) detects generic facial features, FFA (fusiform face area) discriminates individual identity with selectivity dynamics including suppression for non-preferred faces, and STS/ATL (superior temporal sulcus, anterior temporal lobe) processes contextual and situated aspects including expression, gaze, and biographical knowledge. Our seed-layer detection cascade (§3.2) recapitulates this hierarchy in seven neurons: Group A (4 neurons) detects generic role presence, Group B (2 neurons) discriminates specific identity via a push-pull activation/suppression pair, and Group C (1 neuron) gates on situated identity requiring substrate context. The push-pull dynamics at Group B mirror FFA's face-selective suppression, and the hierarchical gating from feedforward detection to contextual integration parallels the OFA→FFA→STS processing stream.
 
-The condensed mathematics entry (11) differs from the others: it identifies the compositionality failure as a property of the mathematical *language*, not the phenomena, and resolves it by changing the category. This suggests a meta-level reading of all eleven traditions: each tradition names the same structural conditions because those conditions describe where compositionality fails in describing agents — where the phenomenon is inseparable from its substrate.
+The condensed mathematics entry (11) differs from the others: it identifies the compositionality failure as a property of the mathematical *language*, not the phenomena, and resolves it by changing the category. This suggests a meta-level reading of all twelve traditions: each tradition names the same structural conditions because those conditions describe where compositionality fails in describing agents — where the phenomenon is inseparable from its substrate.
 
 The convergence of *broad* conditions (remembers, seeks, relates) is partially trivial — these are nearly definitional for any framework describing persisting agents. What is non-trivial is the convergence of *specific* predictions: the anti-condition (task absorption actively suppresses), the ordinal rankings (relational most amplified, generic most concentrated), and the decomposition (identity arm vs values arm having distinct geometric signatures predicted by different traditions).
 
@@ -543,7 +566,7 @@ This framing unifies four findings:
 
 The spectral demon — a category-selective process that sorts eigenvalue distributions in response to identity-relevant content — reveals that system prompts do not merely steer model behavior. They reorganize the geometric landscape of activation space, changing which representational directions are available for downstream processing.
 
-The content recipe that activates the demon (remembers, seeks, relates) converges with eleven independent intellectual traditions on the same three conditions and the same anti-condition. The convergence of broad conditions is suggestive; the convergence of specific geometric predictions — anti-conditions, ordinal rankings, decomposition signatures, threshold activation — is evidence that these traditions describe the same structural phenomenon rather than independently arriving at trivially broad categories.
+The content recipe that activates the demon (remembers, seeks, relates) converges with twelve independent intellectual traditions on the same three conditions and the same anti-condition. The convergence of broad conditions is suggestive; the convergence of specific geometric predictions — anti-conditions, ordinal rankings, decomposition signatures, threshold activation — is evidence that these traditions describe the same structural phenomenon rather than independently arriving at trivially broad categories.
 
 Beyond identity, the demon demonstrates that eigenvalue geometry controls cognitive access. Current alignment training (DPO) concentrates this geometry, narrowing the model's effective idea space. Identity-enriched prompts (CCS) diffuse it, expanding cognitive access. The practical implication is that the geometric effects of system prompts extend far beyond their intended behavioral scope — and that measuring these effects requires tools from spectral analysis, not just behavioral evaluation.
 
