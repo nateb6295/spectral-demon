@@ -44,6 +44,7 @@ experiments/                      # Runnable experiment scripts
   cna_partial_ablation.py         # Partial ablation phase transition
   cna_l17_isolation.py            # L17 sufficiency test
   cna_l17_mechanism.py            # L17 attention vs MLP (ready, not yet run)
+  cna_unembed_projection.py       # CCS direction → vocabulary projection
 results/
   *.json                          # All experimental results (30+ files)
 ```
