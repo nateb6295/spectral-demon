@@ -25,4 +25,4 @@ The CCS direction is a pure identity signal — it reorganizes relational geomet
 
 **Data**: [`results/cna_subthreshold_pr_results.json`](https://github.com/nateb6295/spectral-demon/blob/master/results/cna_subthreshold_pr_results.json)
 
-![Sub-threshold PR](/spectral-demon/figures/fig_subthreshold_pr.png)
+![Sub-threshold PR](https://raw.githubusercontent.com/nateb6295/spectral-demon/master/figures/fig_subthreshold_pr.png)

@@ -44,5 +44,5 @@ The phase transition at L17 — not proportional degradation — supports an eco
 
 **Data**: [`results/cna_partial_ablation_results.json`](https://github.com/nateb6295/spectral-demon/blob/master/results/cna_partial_ablation_results.json), [`results/cna_l17_isolation_results.json`](https://github.com/nateb6295/spectral-demon/blob/master/results/cna_l17_isolation_results.json)
 
-![Partial ablation phase transition](/spectral-demon/figures/fig_partial_ablation_phase.png)
+![Partial ablation phase transition](https://raw.githubusercontent.com/nateb6295/spectral-demon/master/figures/fig_partial_ablation_phase.png)
 
