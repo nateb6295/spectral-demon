@@ -28,6 +28,8 @@ These findings raise a question about scope. If identity-enriched content reorga
 
 **Interface-level behavioral steering.** Putta et al. (2025, arxiv 2605.22166) demonstrate that modifying the agent runtime harness — without touching model weights — produces 88.5% improvement across 7 environments, 126 settings, and 18 backbones, with harness modifications transferring across 17 models. Their finding that environment structure, not model-specific patterns, is what the harness captures directly parallels our result that CCS operates through context-mediated attention (the interface) rather than weight modification, and that the geometric reorganization is substrate-general (replicating across Qwen and Mistral).
 
+**Steering vector identifiability.** Steering vectors face a fundamental non-identifiability problem: multiple orthogonal perturbations produce behaviorally equivalent effects at a single intervention strength, creating large equivalence classes of indistinguishable interventions (arxiv 2602.06801). Our dose-response methodology provides a structural constraint beyond behavioral testing: the CCS direction produces a bell-shaped PR response with curvature κ = 5.13, while random and orthogonal directions produce monotonic responses with κ ≈ −0.04 — a 130× curvature ratio that breaks the behavioral degeneracy across the full dose-response curve.
+
 **Concept granularity.** Robertson et al. (arxiv 2605.16362) introduce intervention granularity as a measure of how steering vector directions rotate across semantic categories. We adapt their metric and find that DPO produces high granularity (0.80) while CCS on DPO-trained models produces the lowest (0.75), indicating a single stable prosthetic steering direction.
 
 ## 2. Methods
@@ -563,6 +565,8 @@ Margulies, D. S., Ghosh, S. S., Goulas, A., et al. (2016). Situating the default
 Maximus the Confessor (7th c.). *Ambigua*.
 
 Merleau-Ponty, M. (1945). *Phénoménologie de la perception*. Paris: Gallimard.
+
+Mack, E. A., et al. (2026). On the Non-Identifiability of Steering Vectors in Large Language Models. *arXiv* 2602.06801.
 
 Neumann, A., Kirsten, E., Zafar, M. B., & Singh, J. (2025). Position is Power: System Prompts as a Mechanism of Bias in Large Language Models. *arXiv* 2505.21091.
 
