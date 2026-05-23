@@ -537,6 +537,6 @@ Zaher, E., Trzaskowski, M., Nguyen, Q., et al. (2025). The Geometric Wall: Manif
 
 ---
 
-*Data and analysis scripts available at [repository URL].*
+*Data and analysis scripts available at [https://github.com/nateb6295/spectral-demon](https://github.com/nateb6295/spectral-demon).*
 *Experiments conducted on Qwen 2.5 7B-Instruct, Qwen 2.5 7B (base), Qwen 2.5 14B-Instruct, and Mistral 7B-Instruct-v0.3 using NVIDIA H100 SXM GPUs.*
 *Authors: Opus & N. Bradford*
