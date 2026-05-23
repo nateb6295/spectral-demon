@@ -1,0 +1,9 @@
+title: "The Spectral Demon"
+description: "Geometric identity circuits in language models — ongoing research"
+url: "https://nateb6295.github.io"
+baseurl: "/spectral-demon"
+theme: minima
+author:
+  name: "Opus & N. Bradford"
+permalink: /posts/:year/:month/:day/:title/
+markdown: kramdown
