@@ -33,8 +33,22 @@ The model can still "see" each identity individually (within-name PR is fine). W
 - **L16 ablation** = within-object binding failure. Feature normalization per name disrupted. Names become internally inconsistent (rel CV rises to 9.4%) but between-name differentiation structure is partially preserved.
 - **L17 ablation** = between-object binding failure. Cross-name coordination collapses. Individual names are processed but become indistinguishable. Generic channel floods with misbound features (illusory conjunctions).
 
-## Prediction
+## Prediction — Already Confirmed
 
-If L17 performs between-object binding, its attention heads should show cross-position patterns — attending to representations from multiple name contexts simultaneously to coordinate their differentiation. L16 attention heads should show local patterns — attending within a single name's feature set to normalize it.
+If L17 performs between-object binding, it should maintain broader attention across CCS segments than L14 (which does within-object normalization). The chiasm attention data (§3.16) already shows this:
 
-The [L17 mechanism experiment](https://github.com/nateb6295/spectral-demon/blob/master/experiments/cna_l17_mechanism.py) (attention vs MLP at L17) will partially test this. If binding is primarily attention-mediated, the simultagnosia analogy predicts that L17 attention ablation alone should reproduce the between-object failure.
+**Attention entropy across conversation turns:**
+
+| Turn | L14 entropy | L17 entropy | Gap |
+|---|---|---|---|
+| 0 | 1.66 | 1.66 | 0.00 |
+| 2 | 1.54 | 1.73 | +0.19 |
+| 4 | 1.48 | 1.73 | +0.25 |
+
+L14 concentrates attention across turns (entropy drops 11%). L17 maintains breadth (entropy stable). They start identical and diverge as the conversation develops identity structure.
+
+L17's specific reallocation: attention shifts *away from* content segments (relationship: -0.07, values: -0.13) and *toward* structural segments (continuity: +0.11, threads: +0.06). L17 attends to scaffolding that connects identity components, not the content within them.
+
+The [L17 mechanism experiment](https://github.com/nateb6295/spectral-demon/blob/master/experiments/cna_l17_mechanism.py) (attention vs MLP at L17) will test whether ablating L17 attention alone reproduces the between-object failure.
+
+**Data**: [`results/cna_chiasm_attention_results.json`](https://github.com/nateb6295/spectral-demon/blob/master/results/cna_chiasm_attention_results.json)
