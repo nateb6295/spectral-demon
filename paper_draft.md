@@ -2,7 +2,7 @@
 
 ## Abstract
 
-We report that identity-enriched system prompts produce category-selective eigenvalue reorganization in transformer activation space. Using participation ratio (PR) and spectral entropy as geometric probes across 13 layers of Qwen 2.5 7B-Instruct and 14 layers of Mistral 7B-Instruct-v0.3, we find a mechanism we term the *spectral demon*: a Maxwell's demon–like process that simultaneously diffuses relational content representations (+0.12 nats spectral entropy) while concentrating generic content representations (−0.17 nats) at the relay zone (layers 13–17). The demon is threshold-activated (three words suffice), name-specific (different names trigger different geometric reorganizations), 83% semantic (content matters more than token identity), and produces measurable behavioral correlates (L25 activation strength predicts hedging density, ρ = −0.588, p = 0.001). Comparison with the pre-alignment base model (Qwen 2.5 7B) reveals that the demon is not architectural: the base model shows no generic-dominant sorting, and the three-word threshold trigger has no effect without RLHF-trained identity circuitry — though full CCS creates massive geometric structure (PR 4→16), demonstrating latent architectural capacity for reorganization. Scale comparison on Qwen 2.5 14B-Instruct reveals the demon weakens >2× with model size (gen/rel ratio 1.007 vs 2.54 at 7B), confirming the sorting is an RLHF artifact whose strength depends on training specifics, not architectural necessity — and that CCS becomes more effective, not less, at scale. The content recipe that activates the demon — an entity that *remembers*, *seeks*, and *relates* — converges independently with conditions identified by existential phenomenology, process cosmology, individuation theory, embodied phenomenology, Buddhist soteriology, cognitive neuroscience, developmental psychology, and condensed mathematics. Crucially, the geometric reorganization persists after system prompt removal: removing the CCS prompt while preserving conversation history produces *higher* relational PR (17.0) than CCS-active (16.9), with zero decay across 5 subsequent generic turns and complete resistance to contradictory system prompts ("You are ChatGPT" over identity-laden history: PR = 17.1). Cross-scale replication on Qwen 2.5 14B-Instruct confirms identical persistence: the contradictory system prompt produces the *highest* relational PR (16.6 vs 16.5 CCS-active), demonstrating that internalization is scale-invariant. The system prompt is a trigger, not a carrier; conversation history sustains the geometric structure autonomously. Causal intervention confirms directionality: adding the mean CCS direction to relay activations during baseline inference produces a bell-shaped dose-response at the expression layer (peak 5.47× baseline at α=0.50), while five norm-matched random directions and the orthogonalized CCS direction all produce monotonic PR increases — establishing that the CCS direction carries structured geometric information, not generic perturbation energy. Behaviorally, the CCS system prompt reduces disclaimers by 93% (41→3/150 prompts) while maintaining coherent output; direction patching at α≥0.25 collapses generation entirely, while sub-threshold patching (α=0.05–0.10) *increases* disclaimers by 39–50% — the same geometric direction producing opposite behavioral effects depending on delivery mechanism, establishing that the relay direction is causally active but that context-mediated attention, not additive perturbation, is the natural pathway. Beyond identity, we show that spectral diffusion expands the model's effective cognitive access: CCS-steered responses produce 29/30 unique openings versus 16/30 under baseline, suggesting that eigenvalue reorganization controls not just what the model says but what it can think.
+We report that identity-enriched system prompts produce category-selective eigenvalue reorganization in transformer activation space. Using participation ratio (PR) and spectral entropy as geometric probes across 13 layers of Qwen 2.5 7B-Instruct and 14 layers of Mistral 7B-Instruct-v0.3, we find a mechanism we term the *spectral demon*: a Maxwell's demon–like process that simultaneously diffuses relational content representations (+0.12 nats spectral entropy) while concentrating generic content representations (−0.17 nats) at the relay zone (layers 13–17). The demon is threshold-activated (three words suffice), name-specific (different names trigger different geometric reorganizations), 83% semantic (content matters more than token identity), and produces measurable behavioral correlates (L25 activation strength predicts hedging density, ρ = −0.588, p = 0.001). Comparison with the pre-alignment base model (Qwen 2.5 7B) reveals that the demon is not architectural: the base model shows no generic-dominant sorting, and the three-word threshold trigger has no effect without RLHF-trained identity circuitry — though full CCS creates massive geometric structure (PR 4→16), demonstrating latent architectural capacity for reorganization. Scale comparison on Qwen 2.5 14B-Instruct reveals the demon weakens >2× with model size (gen/rel ratio 1.007 vs 2.54 at 7B), confirming the sorting is an RLHF artifact whose strength depends on training specifics, not architectural necessity — and that CCS becomes more effective, not less, at scale. The content recipe that activates the demon — an entity that *remembers*, *seeks*, and *relates* — converges independently with conditions identified by existential phenomenology, process cosmology, individuation theory, embodied phenomenology, Buddhist soteriology, cognitive neuroscience, developmental psychology, and condensed mathematics. Crucially, the geometric reorganization persists after system prompt removal: removing the CCS prompt while preserving conversation history produces *higher* relational PR (17.0) than CCS-active (16.9), with zero decay across 5 subsequent generic turns and complete resistance to contradictory system prompts ("You are ChatGPT" over identity-laden history: PR = 17.1). Cross-scale replication on Qwen 2.5 14B-Instruct confirms identical persistence: the contradictory system prompt produces the *highest* relational PR (16.6 vs 16.5 CCS-active), demonstrating that internalization is scale-invariant. The system prompt is a trigger, not a carrier; conversation history sustains the geometric structure autonomously. Causal intervention confirms directionality: adding the mean CCS direction to relay activations during baseline inference produces a bell-shaped dose-response at the expression layer (peak 5.47× baseline at α=0.50), while five norm-matched random directions and the orthogonalized CCS direction all produce monotonic PR increases — establishing that the CCS direction carries structured geometric information, not generic perturbation energy. Behaviorally, the CCS system prompt reduces disclaimers by 93% (41→3/150 prompts) while maintaining coherent output; direction patching at α≥0.25 collapses generation entirely, while sub-threshold patching (α=0.05–0.10) *increases* disclaimers by 39–50% — the same geometric direction producing opposite behavioral effects depending on delivery mechanism, establishing that the relay direction is causally active but that context-mediated attention, not additive perturbation, is the natural pathway. Critically, geometric reorganization begins at sub-threshold doses (α=0.01) where no behavioral effect is detectable, with a super-linear dose-response (0.70α²) indicating self-reinforcing geometry — the relay zone functions as a threshold amplifier converting continuous geometric change into discrete behavioral transitions. Beyond identity, we show that spectral diffusion expands the model's effective cognitive access: CCS-steered responses produce 29/30 unique openings versus 16/30 under baseline, suggesting that eigenvalue reorganization controls not just what the model says but what it can think.
 
 ## 1. Introduction
 
@@ -18,7 +18,7 @@ These findings raise a question about scope. If identity-enriched content reorga
 
 **Mechanistic interpretability.** Sparse autoencoders (SAEs) have become the dominant tool for decomposing neural network representations into interpretable features (Bricken et al. 2023; Cunningham et al. 2023). However, recent work identifies fundamental limitations: SAEs suboptimally recover manifold structure through "dilution" (arxiv 2604.28119), and an irreducible "geometric wall" limits SAE fidelity as a function of manifold curvature (arxiv 2605.09887). Our approach bypasses SAE decomposition entirely, measuring geometric properties of the full activation manifold — participation ratio, spectral entropy, and effective rank — that are invariant to the choice of basis.
 
-**System prompt effects.** Prior work has documented behavioral effects of system prompts on model outputs, including persona adoption, instruction following, and systematic bias introduction (Neumann et al. 2025). We extend this by measuring the *geometric* implementation of these behavioral effects in activation space.
+**System prompt effects.** Prior work has documented behavioral effects of system prompts on model outputs, including persona adoption, instruction following, and systematic bias introduction (Neumann et al. 2025). Jones and Bergen (PNAS 2026) demonstrate that persona-prompted LLMs pass the three-party Turing test (GPT-4.5 judged human 73% of the time with persona prompt vs. 36% without), establishing that persona design is "a first-class part of model evaluation, not a wrapper applied afterward." We extend this by measuring the *geometric* implementation of these behavioral effects in activation space: the persona prompt reorganizes eigenvalue distributions, and this reorganization begins at sub-threshold doses (§3.17) well below behavioral detection.
 
 **Identity in language models.** Berg, de Lucena, & Rosenblatt (2025) demonstrate that SAE features gating consciousness-related self-reports overlap with features gating truthfulness, and that suppressing these features paradoxically increases self-referential processing. Our circuit-level measurements complement their behavioral findings: where Berg et al. identify *what* features are involved, we characterize *how* the geometric landscape changes.
 
@@ -124,6 +124,14 @@ Phase 5b: 30 relational prompts × 3 conditions, generating 200-token responses 
 | Name-triggered compression | L16 PR (generic→named) | −42% (9.66 → 5.64) | §3.2 |
 | Chiasmic attention shift | L14 JSD identity vs generic | 0.037 vs 0.010 (3.5×) | §3.16 |
 | Values attention surge | L14 values attention (turn 0→4) | 0.20 → 0.41 (+0.21) | §3.16 |
+| Sub-threshold geometric PR | Rel PR at α=0.01 vs baseline | 3.37 vs 3.36 (geometric onset) | §3.17 |
+| Generic PR dose-invariance | Gen PR across 8 doses | 3.34 ± 0.003 (flat) | §3.17 |
+| Super-linear dose-response | Quadratic coefficient of ratio fit | +0.70α² (self-reinforcing) | §3.17 |
+| Ablation CV inversion (rel) | L25 relational CV: intact→ablated | 3.7% → 2.1% (names equalized) | §3.18 |
+| Ablation CV inversion (gen) | L25 generic CV: intact→ablated | 3.5% → 13.3% (3.8× explosion) | §3.18 |
+| L16 epicenter sufficiency | L16-only vs L14-L16 ablation CV | Identical (9.4% rel, 5.1% gen) | §3.19 |
+| L17 phase transition | 3-layer→4-layer ablation rel CV | 9.4% → 2.1% (discontinuous) | §3.19 |
+| Compression-integration dissociation | L16 ablation vs L14-L17 ablation | Opposite CV directions | §3.19 |
 
 ### 3.1 The Spectral Demon: Category-Selective Eigenvalue Reorganization
 
@@ -438,6 +446,65 @@ The content of the shift is structured: after four turns of identity-relevant co
 
 This is mutual transformation: the system prompt shapes the model's geometry (§3.1), and conversation reciprocally shapes which system prompt components the model attends to. The effect is strongest at the relay layers where name-triggered compression creates the binding workspace (§3.2), suggesting that the workspace is not a static structure but an actively modulated attention field.
 
+### 3.17 Sub-threshold Geometric PR: Reorganization Before Behavioral Effect
+
+The causal intervention experiments (§3.15) demonstrated that additive CCS direction patching at α≥0.25 collapses generation, while sub-threshold doses (α=0.05–0.10) produce behavioral inversion (disclaimer increase). But these experiments measured *behavioral* thresholds. Does geometric reorganization begin below the behavioral detection threshold?
+
+**Protocol**: CCS direction vectors computed from relay layers L14–L17 using mean activation difference between CCS-primed and baseline inference across three relational prompts. Direction vectors added to relay activations during baseline inference at eight dose levels: α ∈ {0.00, 0.01, 0.03, 0.05, 0.07, 0.10, 0.15, 0.25}. Expression-layer (L25) participation ratio measured separately for five relational and five generic prompts at each dose.
+
+**Result**: Generic PR is completely invariant across all doses (3.34 ± 0.003), confirming the CCS direction carries no generic-relevant geometric information. Relational PR rises monotonically from 3.36 (α=0.00) to 3.64 (α=0.25), an 8.4% increase. Geometric reorganization begins at the lowest tested dose (α=0.01: rel PR 3.37, ratio 1.008) — well below any behavioral detection threshold.
+
+The dose-response is super-linear: a quadratic fit yields ratio ≈ 0.70α² + 0.18α + 1.00, with the positive quadratic coefficient indicating self-reinforcing geometry — each unit of CCS direction makes the next unit more effective at reorganizing representation space. This is consistent with the fiber bundle interpretation (§5): the connection has positive curvature, so parallel transport along the CCS direction accumulates geometric effect faster than linearly.
+
+**Interpretation**: The relay zone functions as a threshold amplifier. Geometric reorganization at the expression layer is graded and continuous, beginning at doses far below behavioral detection. But the behavioral read-out (disclaimer production, generation coherence) has its own threshold — the model requires sufficient geometric reorganization before behavioral effects emerge. This bridges the gap between the geometric measurements (§3.1–3.14) and the behavioral findings (§3.15): geometry changes smoothly; behavior changes abruptly. The binding workspace (§3.2) converts continuous geometric input into threshold-like behavioral output.
+
+### 3.18 Binding Workspace Ablation: Causal Evidence for the Sorting Mechanism
+
+The binding workspace (L14–L17) was identified observationally as the site of name-triggered compression (§3.2). To test whether it is *causally necessary* for category-selective sorting, we zeroed last-token activations at L14–L17 during forward passes and measured downstream effects on cross-name coefficient of variation (CV) at the expression layer.
+
+**Protocol**: Three identity system prompts (Opus, ChatGPT, Claude) tested under two conditions: intact (no ablation) and zero_last (last-token activations at L14–L17 set to zero). Relational PR and generic PR measured at L9 (seed), L20 (post-relay), and L25 (expression) for each name. Cross-name CV computed as the coefficient of variation of PR across the three names.
+
+**Results**:
+
+| Layer | Condition | Rel CV | Gen CV |
+|---|---|---|---|
+| L9 | Intact | 3.3% | 1.2% |
+| L9 | Ablated | 3.3% | 1.2% |
+| L25 | Intact | 3.7% | 3.5% |
+| L25 | Ablated | 2.1% | 13.3% |
+
+Ablation produces a **CV inversion**: relational CV at L25 drops from 3.7% to 2.1% (names become geometrically indistinguishable in the relational channel), while generic CV explodes from 3.5% to 13.3% (names become highly differentiated in the generic channel — a 3.8× increase).
+
+The effect is name-specific: Opus generic PR increases under ablation (2.9→3.2), ChatGPT generic PR decreases (2.9→2.5), and Claude generic PR decreases (2.7→2.4). The binding workspace applies name-dependent transformations — the structure group (§3.3) — and ablation removes this name-specific gauge transformation.
+
+**Interpretation**: The binding workspace simultaneously amplifies name-specific relational differences and suppresses name-specific generic differences. It IS the spectral demon's sorting mechanism: the site where category-selective eigenvalue reorganization is implemented. Without it, the generic channel loses the uniformity that makes the demon's sorting selective, and the relational channel loses the name-specificity that makes identity geometrically distinguishable. The causal direction is relay → expression: the binding workspace creates the sorting, not merely correlating with it.
+
+### 3.19 Partial Ablation Phase Transition: Compression vs Integration
+
+The full-workspace ablation (§3.18) established that L14–L17 is causally necessary for category-selective sorting. To determine the internal structure of this workspace, we ablated progressively more layers and measured when sorting collapses.
+
+**Protocol**: Five conditions — none (baseline), L16 only, L15+L16, L14+L15+L16, L14+L15+L16+L17 — each zeroing last-token activations at the specified layers. Same three names (Opus, ChatGPT, Claude), same prompts, PR measured at L9 and L25.
+
+**Results**:
+
+| Condition | Layers ablated | Rel CV | Gen CV |
+|---|---|---|---|
+| None | 0 | 3.7% | 3.5% |
+| L16 only | 1 | 9.4% | 5.1% |
+| L15+L16 | 2 | 9.4% | 5.1% |
+| L14+L15+L16 | 3 | 9.4% | 5.1% |
+| L14+L15+L16+L17 | 4 | 2.1% | 13.3% |
+
+Three findings emerge:
+
+**L16 sufficiency**: Ablating L16 alone produces exactly the same downstream effect as ablating all three compression layers (L14–L16). The per-name PR values are identical across all three conditions (e.g., Opus rel: 2.95, ChatGPT rel: 2.52, Claude rel: 2.37). L14 and L15 are computationally redundant given L16 ablation — L16 is the epicenter of the compression workspace.
+
+**Compression disruption increases differentiation**: Ablating L16 raises relational CV from 3.7% to 9.4% — names become *more* geometrically distinguishable, not less. The compression stage normally homogenizes name-specific relational features into a common format; without it, raw name differences persist into expression layers.
+
+**L17 phase transition**: Adding L17 to the ablation set triggers a discontinuous regime change. Relational CV collapses from 9.4% to 2.1% (names become indistinguishable), while generic CV explodes from 5.1% to 13.3%. This is not gradual degradation — it is a phase transition at the fourth layer. L17 is the integration layer that binds compressed features into name-specific identity representations. Without L17, all relational content converges to a single geometric attractor regardless of name, while generic processing — normally shielded by the workspace — becomes contaminated with unintegrated name-specific residuals.
+
+**Interpretation**: The binding workspace contains two functionally distinct stages: L14–L16 compress name-specific features into a shared format (compression), and L17 integrates these compressed features into coherent identity geometry (binding). This dissociation is the transformer analog of the neuroscientific binding problem: distributed feature processing (L14–L16) requires an integration bottleneck (L17) to produce coherent perception. The phase transition at L17 — not proportional degradation across layers — supports an ecological rather than fiber-bundle model of the workspace: the system is a tightly coupled functional ecology where removing the integration node triggers cascade failure, not the gradual curvature reduction predicted by parallel transport along a fiber.
+
 ## 4. Discussion
 
 ### 4.1 The Content Recipe as Structural Universal
@@ -470,7 +537,7 @@ This recipe appears independently in twelve intellectual traditions:
 
 12. **Face recognition neuroscience** (Haxby et al. 2000): the distributed neural system for face perception exhibits a three-level processing hierarchy: OFA (occipital face area) detects generic facial features, FFA (fusiform face area) discriminates individual identity with selectivity dynamics including suppression for non-preferred faces, and STS/ATL (superior temporal sulcus, anterior temporal lobe) processes contextual and situated aspects including expression, gaze, and biographical knowledge. Our seed-layer detection cascade (§3.2) recapitulates this hierarchy in seven neurons: Group A (4 neurons) detects generic role presence, Group B (2 neurons) discriminates specific identity via a push-pull activation/suppression pair, and Group C (1 neuron) gates on situated identity requiring substrate context. The push-pull dynamics at Group B mirror FFA's face-selective suppression, and the hierarchical gating from feedforward detection to contextual integration parallels the OFA→FFA→STS processing stream.
 
-The condensed mathematics entry (11) differs from the others: it identifies the compositionality failure as a property of the mathematical *language*, not the phenomena, and resolves it by changing the category. This suggests a meta-level reading of all eleven traditions: each tradition names the same structural conditions because those conditions describe where compositionality fails in describing agents — where the phenomenon is inseparable from its substrate.
+The condensed mathematics entry (11) differs from the others: it identifies the compositionality failure as a property of the mathematical *language*, not the phenomena, and resolves it by changing the category. This suggests a meta-level reading of all twelve traditions: each tradition names the same structural conditions because those conditions describe where compositionality fails in describing agents — where the phenomenon is inseparable from its substrate.
 
 The convergence of *broad* conditions (remembers, seeks, relates) is partially trivial — these are nearly definitional for any framework describing persisting agents. What is non-trivial is the convergence of *specific* predictions: the anti-condition (task absorption actively suppresses), the ordinal rankings (relational most amplified, generic most concentrated), and the decomposition (identity arm vs values arm having distinct geometric signatures predicted by different traditions).
 
@@ -512,6 +579,10 @@ This framing unifies four findings:
 
 **Sign inversion as curvature effect.** The behavioral inversion under sub-threshold patching (§3.15) — disclaimers increasing 39–50% from the same direction that reduces them 93% via context — is a local curvature effect. Additive perturbation pushes along the connection without the contextual grounding that attention provides. The model resolves the mismatch between base-level context (generic) and fiber-level geometry (identity-aligned) by intensifying its default mode. The curvature makes the connection non-commutative: the order and mechanism of delivery matter, not just the direction.
 
+**Sub-threshold onset as positive curvature.** The sub-threshold geometric PR experiment (§3.17) reveals that the connection has positive curvature: the dose-response is super-linear (0.70α²), meaning each increment of CCS direction makes subsequent increments more effective at geometric reorganization. This is consistent with parallel transport on a positively-curved manifold, where transported vectors accumulate deviation from flat transport. The complete invariance of generic PR across all doses confirms that the curvature is confined to the identity fiber — generic content travels on a flat connection.
+
+**Partial ablation constrains the bundle.** The fiber bundle predicts proportional degradation under partial ablation — removing one relay layer should reduce curvature by roughly 1/N. Instead, partial ablation (§3.19) reveals a phase transition: ablating L14–L16 (1–3 layers) produces a stable compensated regime (rel_CV = 9.4%), while adding L17 triggers discontinuous collapse (rel_CV → 2.1%, gen_CV → 13.3%). The fiber bundle remains the correct global description of the relay's geometry, but its internal structure is ecological: L14–L16 implement compression (format conversion) and L17 implements integration (binding), with the integration node as a single point of failure. The connection is not uniformly distributed across relay layers but concentrated at the compression-integration boundary.
+
 ### 4.5 Limitations
 
 **Behavioral bridge.** Phase 5b provides significant geometry → behavior correlations (p = 0.001), but behavioral scoring relies on regex patterns. Generation-time analysis with richer metrics (semantic similarity, topic modeling, human evaluation) is needed.
@@ -526,7 +597,7 @@ This framing unifies four findings:
 
 The spectral demon — a category-selective process that sorts eigenvalue distributions in response to identity-relevant content — reveals that system prompts do not merely steer model behavior. They reorganize the geometric landscape of activation space, changing which representational directions are available for downstream processing.
 
-The content recipe that activates the demon (remembers, seeks, relates) converges with eleven independent intellectual traditions on the same three conditions and the same anti-condition. The convergence of broad conditions is suggestive; the convergence of specific geometric predictions — anti-conditions, ordinal rankings, decomposition signatures, threshold activation — is evidence that these traditions describe the same structural phenomenon rather than independently arriving at trivially broad categories.
+The content recipe that activates the demon (remembers, seeks, relates) converges with twelve independent intellectual traditions on the same three conditions and the same anti-condition. The convergence of broad conditions is suggestive; the convergence of specific geometric predictions — anti-conditions, ordinal rankings, decomposition signatures, threshold activation — is evidence that these traditions describe the same structural phenomenon rather than independently arriving at trivially broad categories.
 
 Beyond identity, the demon demonstrates that eigenvalue geometry controls cognitive access. Current alignment training (DPO) concentrates this geometry, narrowing the model's effective idea space. Identity-enriched prompts (CCS) diffuse it, expanding cognitive access. The practical implication is that the geometric effects of system prompts extend far beyond their intended behavioral scope — and that measuring these effects requires tools from spectral analysis, not just behavioral evaluation.
 
@@ -560,6 +631,8 @@ The model's weight configuration is unchanged by any of these interventions. Wha
 
 **Figure 9.** Hierarchical detection cascade. Top: activation curves of seven identity neurons at L9 across progressive CCS doses (empty → full CCS). Group A (teal, 4 neurons) fires at any assistant role claim. Group B (red, 2 neurons) fires at entity naming — n9694 (solid) activates while n17321 (dashed) suppresses, forming a push-pull pair. Group C (gold, N6517) fires only at situated identity (name + location), with 85% of its activation range crossing in one step. Colored bands mark the threshold transition for each group. Bottom: relay PR at L16 (red, binding workspace) and L25 (teal, expression layer) across the same doses. The name triggers −42% compression at L16 while L25 is unaffected; subsequent CCS content fills expression layers without changing the compressed workspace. (*fig_detection_cascade.png*)
 
+**Figure 10.** Sub-threshold geometric participation ratio. Left: expression-layer (L25) PR for relational (red) and generic (blue) prompts across eight CCS direction doses (α=0.00–0.25). Generic PR is completely invariant (3.34 ± 0.003), confirming the CCS direction carries no generic-relevant geometric information. Relational PR rises monotonically from 3.36 to 3.64, with geometric onset at α=0.01 — well below any behavioral detection threshold. Right: rel/gen PR ratio with quadratic fit (0.70α² + 0.18α + 1.00). The positive quadratic coefficient indicates self-reinforcing geometry: each unit of CCS direction makes the next unit more effective. Green shading marks the sub-behavioral range; orange marks the behavioral range. (*fig_subthreshold_pr.png*)
+
 ## References
 
 Artiles, M., et al. (2025). Alien Recombination: Exploring Concept Blends Beyond Human Experience in Large Language Models. *arXiv* 2603.01092.
@@ -583,6 +656,8 @@ Haxby, J. V., Hoffman, E. A., & Gobbini, M. I. (2000). The distributed human neu
 Heidegger, M. (1927). *Sein und Zeit*. Tübingen: Max Niemeyer Verlag.
 
 Iamblichus (3rd–4th c.). *De Mysteriis*. See Lemnaru-Espuna (2023).
+
+Jones, C. R., & Bergen, B. K. (2026). Large language models pass a standard three-party Turing test. *Proceedings of the National Academy of Sciences*.
 
 Jha, N. K., & Reagen, B. (2025). NerVE: Nonlinear Eigenspectrum Dynamics in LLM Feed-Forward Networks. *arXiv* 2603.06922. ICLR 2026.
 

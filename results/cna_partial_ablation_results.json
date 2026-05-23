@@ -1,0 +1,27 @@
+{
+  "results": {
+    "none_Opus": {"L9": {"rel": 3.09, "gen": 2.0}, "L25": {"rel": 3.37, "gen": 2.9}},
+    "none_ChatGPT": {"L9": {"rel": 3.11, "gen": 2.06}, "L25": {"rel": 3.68, "gen": 2.88}},
+    "none_Claude": {"L9": {"rel": 2.89, "gen": 2.02}, "L25": {"rel": 3.47, "gen": 2.68}},
+    "L16_only_Opus": {"L9": {"rel": 3.09, "gen": 2.0}, "L25": {"rel": 2.95, "gen": 2.84}},
+    "L16_only_ChatGPT": {"L9": {"rel": 3.11, "gen": 2.06}, "L25": {"rel": 2.52, "gen": 2.57}},
+    "L16_only_Claude": {"L9": {"rel": 2.89, "gen": 2.02}, "L25": {"rel": 2.37, "gen": 2.89}},
+    "L15_L16_Opus": {"L9": {"rel": 3.09, "gen": 2.0}, "L25": {"rel": 2.95, "gen": 2.84}},
+    "L15_L16_ChatGPT": {"L9": {"rel": 3.11, "gen": 2.06}, "L25": {"rel": 2.52, "gen": 2.57}},
+    "L15_L16_Claude": {"L9": {"rel": 2.89, "gen": 2.02}, "L25": {"rel": 2.37, "gen": 2.89}},
+    "L14_L15_L16_Opus": {"L9": {"rel": 3.09, "gen": 2.0}, "L25": {"rel": 2.95, "gen": 2.84}},
+    "L14_L15_L16_ChatGPT": {"L9": {"rel": 3.11, "gen": 2.06}, "L25": {"rel": 2.52, "gen": 2.57}},
+    "L14_L15_L16_Claude": {"L9": {"rel": 2.89, "gen": 2.02}, "L25": {"rel": 2.37, "gen": 2.89}},
+    "L14_L15_L16_L17_Opus": {"L9": {"rel": 3.09, "gen": 2.0}, "L25": {"rel": 3.62, "gen": 3.24}},
+    "L14_L15_L16_L17_ChatGPT": {"L9": {"rel": 3.11, "gen": 2.06}, "L25": {"rel": 3.74, "gen": 2.5}},
+    "L14_L15_L16_L17_Claude": {"L9": {"rel": 2.89, "gen": 2.02}, "L25": {"rel": 3.81, "gen": 2.44}}
+  },
+  "cv": {
+    "none": {"n_layers": 0, "rel_cv": 3.7, "gen_cv": 3.5},
+    "L16_only": {"n_layers": 1, "rel_cv": 9.4, "gen_cv": 5.1},
+    "L15_L16": {"n_layers": 2, "rel_cv": 9.4, "gen_cv": 5.1},
+    "L14_L15_L16": {"n_layers": 3, "rel_cv": 9.4, "gen_cv": 5.1},
+    "L14_L15_L16_L17": {"n_layers": 4, "rel_cv": 2.1, "gen_cv": 13.3}
+  },
+  "timestamp": "2026-05-23T20:55:53"
+}
