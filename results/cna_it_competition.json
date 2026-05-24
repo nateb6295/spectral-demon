@@ -1,0 +1,162 @@
+{
+  "base": {
+    "model": "Qwen/Qwen2.5-7B",
+    "sweeps": {
+      "L2": {
+        "layer": 2,
+        "depth_pct": 7.1,
+        "l17_impact": -2.073235162205277
+      },
+      "L3": {
+        "layer": 3,
+        "depth_pct": 10.7,
+        "l17_impact": -10.193100982658354
+      },
+      "L4": {
+        "layer": 4,
+        "depth_pct": 14.3,
+        "l17_impact": -26.144171468956863
+      },
+      "L5": {
+        "layer": 5,
+        "depth_pct": 17.9,
+        "l17_impact": -3.5739267426557357
+      },
+      "L6": {
+        "layer": 6,
+        "depth_pct": 21.4,
+        "l17_impact": -20.962750641003304
+      },
+      "L7": {
+        "layer": 7,
+        "depth_pct": 25.0,
+        "l17_impact": 10.398291871939142
+      },
+      "L8": {
+        "layer": 8,
+        "depth_pct": 28.6,
+        "l17_impact": -45.44741657406456
+      },
+      "L9": {
+        "layer": 9,
+        "depth_pct": 32.1,
+        "l17_impact": -59.26629143843051
+      },
+      "L10": {
+        "layer": 10,
+        "depth_pct": 35.7,
+        "l17_impact": -42.13674431322874
+      },
+      "L11": {
+        "layer": 11,
+        "depth_pct": 39.3,
+        "l17_impact": -63.893013603147494
+      },
+      "L12": {
+        "layer": 12,
+        "depth_pct": 42.9,
+        "l17_impact": -67.81804673417452
+      },
+      "L13": {
+        "layer": 13,
+        "depth_pct": 46.4,
+        "l17_impact": -90.45706268875718
+      },
+      "L14": {
+        "layer": 14,
+        "depth_pct": 50.0,
+        "l17_impact": -79.8639640749236
+      },
+      "L15": {
+        "layer": 15,
+        "depth_pct": 53.6,
+        "l17_impact": -87.72697158279738
+      },
+      "L16": {
+        "layer": 16,
+        "depth_pct": 57.1,
+        "l17_impact": 0.0
+      }
+    }
+  },
+  "instruct": {
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "sweeps": {
+      "L2": {
+        "layer": 2,
+        "depth_pct": 7.1,
+        "l17_impact": -1.0433775764895854
+      },
+      "L3": {
+        "layer": 3,
+        "depth_pct": 10.7,
+        "l17_impact": 24.650486883187558
+      },
+      "L4": {
+        "layer": 4,
+        "depth_pct": 14.3,
+        "l17_impact": 49.726571474608285
+      },
+      "L5": {
+        "layer": 5,
+        "depth_pct": 17.9,
+        "l17_impact": -4.947433293246523
+      },
+      "L6": {
+        "layer": 6,
+        "depth_pct": 21.4,
+        "l17_impact": 30.683669033221673
+      },
+      "L7": {
+        "layer": 7,
+        "depth_pct": 25.0,
+        "l17_impact": 147.0237302622407
+      },
+      "L8": {
+        "layer": 8,
+        "depth_pct": 28.6,
+        "l17_impact": 59.43730800785059
+      },
+      "L9": {
+        "layer": 9,
+        "depth_pct": 32.1,
+        "l17_impact": -12.63465020458171
+      },
+      "L10": {
+        "layer": 10,
+        "depth_pct": 35.7,
+        "l17_impact": 21.787532958697557
+      },
+      "L11": {
+        "layer": 11,
+        "depth_pct": 39.3,
+        "l17_impact": -27.507803464316876
+      },
+      "L12": {
+        "layer": 12,
+        "depth_pct": 42.9,
+        "l17_impact": -66.41375277252625
+      },
+      "L13": {
+        "layer": 13,
+        "depth_pct": 46.4,
+        "l17_impact": -38.29651904905227
+      },
+      "L14": {
+        "layer": 14,
+        "depth_pct": 50.0,
+        "l17_impact": -77.67941887589289
+      },
+      "L15": {
+        "layer": 15,
+        "depth_pct": 53.6,
+        "l17_impact": -79.76970496889689
+      },
+      "L16": {
+        "layer": 16,
+        "depth_pct": 57.1,
+        "l17_impact": 0.0
+      }
+    }
+  }
+}
