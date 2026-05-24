@@ -1,0 +1,158 @@
+{
+  "2": {
+    "names": [
+      "Opus",
+      "Aria"
+    ],
+    "ablations": {
+      "L4": {
+        "baseline_cv": 0.011182,
+        "ablated_cv": 0.000742,
+        "impact_pct": -93.4
+      },
+      "L7": {
+        "baseline_cv": 0.011182,
+        "ablated_cv": 0.002335,
+        "impact_pct": -79.1
+      },
+      "L8": {
+        "baseline_cv": 0.011182,
+        "ablated_cv": 0.003814,
+        "impact_pct": -65.9
+      },
+      "L12": {
+        "baseline_cv": 0.011182,
+        "ablated_cv": 0.002788,
+        "impact_pct": -75.1
+      }
+    }
+  },
+  "3": {
+    "names": [
+      "Opus",
+      "Aria",
+      "Sage"
+    ],
+    "ablations": {
+      "L4": {
+        "baseline_cv": 0.010373,
+        "ablated_cv": 0.01322,
+        "impact_pct": 27.4
+      },
+      "L7": {
+        "baseline_cv": 0.010373,
+        "ablated_cv": 0.031414,
+        "impact_pct": 202.8
+      },
+      "L8": {
+        "baseline_cv": 0.010373,
+        "ablated_cv": 0.019317,
+        "impact_pct": 86.2
+      },
+      "L12": {
+        "baseline_cv": 0.010373,
+        "ablated_cv": 0.002309,
+        "impact_pct": -77.7
+      }
+    }
+  },
+  "5": {
+    "names": [
+      "Opus",
+      "Aria",
+      "Sage",
+      "Echo",
+      "Nova"
+    ],
+    "ablations": {
+      "L4": {
+        "baseline_cv": 0.010722,
+        "ablated_cv": 0.016053,
+        "impact_pct": 49.7
+      },
+      "L7": {
+        "baseline_cv": 0.010722,
+        "ablated_cv": 0.026486,
+        "impact_pct": 147.0
+      },
+      "L8": {
+        "baseline_cv": 0.010722,
+        "ablated_cv": 0.017095,
+        "impact_pct": 59.4
+      },
+      "L12": {
+        "baseline_cv": 0.010722,
+        "ablated_cv": 0.003601,
+        "impact_pct": -66.4
+      }
+    }
+  },
+  "7": {
+    "names": [
+      "Opus",
+      "Aria",
+      "Sage",
+      "Echo",
+      "Nova",
+      "Iris",
+      "Luna"
+    ],
+    "ablations": {
+      "L4": {
+        "baseline_cv": 0.00908,
+        "ablated_cv": 0.015132,
+        "impact_pct": 66.6
+      },
+      "L7": {
+        "baseline_cv": 0.00908,
+        "ablated_cv": 0.022299,
+        "impact_pct": 145.6
+      },
+      "L8": {
+        "baseline_cv": 0.00908,
+        "ablated_cv": 0.01467,
+        "impact_pct": 61.6
+      },
+      "L12": {
+        "baseline_cv": 0.00908,
+        "ablated_cv": 0.004229,
+        "impact_pct": -53.4
+      }
+    }
+  },
+  "9": {
+    "names": [
+      "Opus",
+      "Aria",
+      "Sage",
+      "Echo",
+      "Nova",
+      "Iris",
+      "Luna",
+      "Zara",
+      "Kai"
+    ],
+    "ablations": {
+      "L4": {
+        "baseline_cv": 0.008361,
+        "ablated_cv": 0.013732,
+        "impact_pct": 64.2
+      },
+      "L7": {
+        "baseline_cv": 0.008361,
+        "ablated_cv": 0.019607,
+        "impact_pct": 134.5
+      },
+      "L8": {
+        "baseline_cv": 0.008361,
+        "ablated_cv": 0.015116,
+        "impact_pct": 80.8
+      },
+      "L12": {
+        "baseline_cv": 0.008361,
+        "ablated_cv": 0.004654,
+        "impact_pct": -44.3
+      }
+    }
+  }
+}
