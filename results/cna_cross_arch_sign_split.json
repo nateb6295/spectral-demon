@@ -1,0 +1,247 @@
+{
+  "Mistral-7B-Instruct-v0.3": {
+    "n_layers": 32,
+    "layers": {
+      "L6": {
+        "depth": 18.75,
+        "consistent": 3150,
+        "flipping": 946,
+        "flip_pct": 23.095703125,
+        "consistent_cv": 0.008122634142637253,
+        "flipping_cv": 0.07441647350788116,
+        "hidden_dim": 4096
+      },
+      "L8": {
+        "depth": 25.0,
+        "consistent": 2841,
+        "flipping": 1255,
+        "flip_pct": 30.6396484375,
+        "consistent_cv": 0.011696972884237766,
+        "flipping_cv": 0.11840230226516724,
+        "hidden_dim": 4096
+      },
+      "L10": {
+        "depth": 31.25,
+        "consistent": 2683,
+        "flipping": 1413,
+        "flip_pct": 34.4970703125,
+        "consistent_cv": 0.03774777799844742,
+        "flipping_cv": 0.18437786400318146,
+        "hidden_dim": 4096
+      },
+      "L15": {
+        "depth": 46.875,
+        "consistent": 2438,
+        "flipping": 1658,
+        "flip_pct": 40.478515625,
+        "consistent_cv": 0.013416714034974575,
+        "flipping_cv": 0.1277170330286026,
+        "hidden_dim": 4096
+      },
+      "L18": {
+        "depth": 56.25,
+        "consistent": 2465,
+        "flipping": 1631,
+        "flip_pct": 39.8193359375,
+        "consistent_cv": 0.0160275399684906,
+        "flipping_cv": 0.15069030225276947,
+        "hidden_dim": 4096
+      },
+      "L22": {
+        "depth": 68.75,
+        "consistent": 2015,
+        "flipping": 2081,
+        "flip_pct": 50.8056640625,
+        "consistent_cv": 0.05262744426727295,
+        "flipping_cv": 0.12942683696746826,
+        "hidden_dim": 4096
+      },
+      "L27": {
+        "depth": 84.375,
+        "consistent": 1857,
+        "flipping": 2239,
+        "flip_pct": 54.6630859375,
+        "consistent_cv": 0.0753624215722084,
+        "flipping_cv": 0.10953988134860992,
+        "hidden_dim": 4096
+      }
+    }
+  },
+  "Qwen2.5-7B-Instruct": {
+    "n_layers": 28,
+    "layers": {
+      "L9": {
+        "depth": 32.142857142857146,
+        "consistent": 2690,
+        "flipping": 894,
+        "flip_pct": 24.944196428571427,
+        "consistent_cv": 0.01734074018895626,
+        "flipping_cv": 0.060962777584791183,
+        "hidden_dim": 3584
+      },
+      "L14": {
+        "depth": 50.0,
+        "consistent": 2753,
+        "flipping": 831,
+        "flip_pct": 23.186383928571427,
+        "consistent_cv": 0.01817679964005947,
+        "flipping_cv": 0.06453152000904083,
+        "hidden_dim": 3584
+      },
+      "L16": {
+        "depth": 57.14285714285714,
+        "consistent": 2830,
+        "flipping": 754,
+        "flip_pct": 21.037946428571427,
+        "consistent_cv": 0.023311814293265343,
+        "flipping_cv": 0.05268502235412598,
+        "hidden_dim": 3584
+      },
+      "L17": {
+        "depth": 60.71428571428571,
+        "consistent": 2819,
+        "flipping": 765,
+        "flip_pct": 21.344866071428573,
+        "consistent_cv": 0.018870821222662926,
+        "flipping_cv": 0.042588211596012115,
+        "hidden_dim": 3584
+      },
+      "L25": {
+        "depth": 89.28571428571429,
+        "consistent": 2197,
+        "flipping": 1387,
+        "flip_pct": 38.699776785714285,
+        "consistent_cv": 0.038206640630960464,
+        "flipping_cv": 0.09698686003684998,
+        "hidden_dim": 3584
+      },
+      "L27": {
+        "depth": 96.42857142857143,
+        "consistent": 2034,
+        "flipping": 1550,
+        "flip_pct": 43.247767857142854,
+        "consistent_cv": 0.03861547261476517,
+        "flipping_cv": 0.09935066848993301,
+        "hidden_dim": 3584
+      }
+    }
+  },
+  "internlm2_5-7b-chat": {
+    "n_layers": 32,
+    "layers": {
+      "L9": {
+        "depth": 28.125,
+        "consistent": 2913,
+        "flipping": 1183,
+        "flip_pct": 28.8818359375,
+        "consistent_cv": 0.016697268933057785,
+        "flipping_cv": 0.12378235906362534,
+        "hidden_dim": 4096
+      },
+      "L14": {
+        "depth": 43.75,
+        "consistent": 2902,
+        "flipping": 1194,
+        "flip_pct": 29.150390625,
+        "consistent_cv": 0.00994738657027483,
+        "flipping_cv": 0.12692494690418243,
+        "hidden_dim": 4096
+      },
+      "L16": {
+        "depth": 50.0,
+        "consistent": 2856,
+        "flipping": 1240,
+        "flip_pct": 30.2734375,
+        "consistent_cv": 0.006922939792275429,
+        "flipping_cv": 0.10455673933029175,
+        "hidden_dim": 4096
+      },
+      "L17": {
+        "depth": 53.125,
+        "consistent": 2842,
+        "flipping": 1254,
+        "flip_pct": 30.615234375,
+        "consistent_cv": 0.014731382019817829,
+        "flipping_cv": 0.05525845289230347,
+        "hidden_dim": 4096
+      },
+      "L25": {
+        "depth": 78.125,
+        "consistent": 2370,
+        "flipping": 1726,
+        "flip_pct": 42.138671875,
+        "consistent_cv": 0.033783309161663055,
+        "flipping_cv": 0.12636485695838928,
+        "hidden_dim": 4096
+      },
+      "L27": {
+        "depth": 84.375,
+        "consistent": 2345,
+        "flipping": 1751,
+        "flip_pct": 42.7490234375,
+        "consistent_cv": 0.031945597380399704,
+        "flipping_cv": 0.1253567636013031,
+        "hidden_dim": 4096
+      }
+    }
+  },
+  "gemma-2-9b-it": {
+    "n_layers": 42,
+    "layers": {
+      "L8": {
+        "depth": 19.047619047619047,
+        "consistent": 3183,
+        "flipping": 401,
+        "flip_pct": 11.188616071428571,
+        "consistent_cv": 0.005282304715365171,
+        "flipping_cv": 0.05998620390892029,
+        "hidden_dim": 3584
+      },
+      "L11": {
+        "depth": 26.190476190476193,
+        "consistent": 2997,
+        "flipping": 587,
+        "flip_pct": 16.378348214285715,
+        "consistent_cv": 0.005352179519832134,
+        "flipping_cv": 0.1280648410320282,
+        "hidden_dim": 3584
+      },
+      "L17": {
+        "depth": 40.476190476190474,
+        "consistent": 2899,
+        "flipping": 685,
+        "flip_pct": 19.112723214285715,
+        "consistent_cv": 0.013559041544795036,
+        "flipping_cv": 0.1564565747976303,
+        "hidden_dim": 3584
+      },
+      "L22": {
+        "depth": 52.38095238095239,
+        "consistent": 2803,
+        "flipping": 781,
+        "flip_pct": 21.791294642857142,
+        "consistent_cv": 0.03628602251410484,
+        "flipping_cv": 0.10292910039424896,
+        "hidden_dim": 3584
+      },
+      "L27": {
+        "depth": 64.28571428571429,
+        "consistent": 2504,
+        "flipping": 1080,
+        "flip_pct": 30.13392857142857,
+        "consistent_cv": 0.024511035531759262,
+        "flipping_cv": 0.026092415675520897,
+        "hidden_dim": 3584
+      },
+      "L35": {
+        "depth": 83.33333333333334,
+        "consistent": 1891,
+        "flipping": 1693,
+        "flip_pct": 47.237723214285715,
+        "consistent_cv": 0.03238674998283386,
+        "flipping_cv": 0.07869863510131836,
+        "hidden_dim": 3584
+      }
+    }
+  }
+}

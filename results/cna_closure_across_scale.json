@@ -1,0 +1,85 @@
+{
+  "Qwen/Qwen2.5-3B-Instruct": {
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "n_layers": 36,
+    "closure": {
+      "2_name": {
+        "seed_min_fraction": 0.6,
+        "layer_distribution": {
+          "L14": 5,
+          "L12": 1,
+          "L16": 2,
+          "L20": 2
+        },
+        "n_subsets": 10
+      },
+      "3_name": {
+        "seed_min_fraction": 0.9,
+        "layer_distribution": {
+          "L14": 5,
+          "L12": 4,
+          "L20": 1
+        },
+        "n_subsets": 10
+      },
+      "4_name": {
+        "seed_min_fraction": 1.0,
+        "layer_distribution": {
+          "L14": 3,
+          "L12": 2
+        },
+        "n_subsets": 5
+      },
+      "5_name": {
+        "seed_min_fraction": 1.0,
+        "layer_distribution": {
+          "L12": 1
+        },
+        "n_subsets": 1
+      }
+    }
+  },
+  "Qwen/Qwen2.5-14B-Instruct": {
+    "model": "Qwen/Qwen2.5-14B-Instruct",
+    "n_layers": 48,
+    "closure": {
+      "2_name": {
+        "seed_min_fraction": 0.7,
+        "layer_distribution": {
+          "L15": 2,
+          "L17": 5,
+          "L24": 1,
+          "L29": 1,
+          "L22": 1
+        },
+        "n_subsets": 10
+      },
+      "3_name": {
+        "seed_min_fraction": 0.7,
+        "layer_distribution": {
+          "L29": 1,
+          "L15": 2,
+          "L26": 1,
+          "L17": 5,
+          "L27": 1
+        },
+        "n_subsets": 10
+      },
+      "4_name": {
+        "seed_min_fraction": 0.8,
+        "layer_distribution": {
+          "L17": 4,
+          "L22": 1
+        },
+        "n_subsets": 5
+      },
+      "5_name": {
+        "seed_min_fraction": 1.0,
+        "layer_distribution": {
+          "L17": 1
+        },
+        "n_subsets": 1
+      }
+    }
+  }
+}

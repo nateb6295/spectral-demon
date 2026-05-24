@@ -1,0 +1,119 @@
+{
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "early": {
+    "2_name": {
+      "counts": {
+        "L6": 4,
+        "L7": 5,
+        "L8": 1,
+        "L9": 0,
+        "L10": 0
+      },
+      "dominant": "L7",
+      "dominant_pct": 50.0
+    },
+    "3_name": {
+      "counts": {
+        "L6": 6,
+        "L7": 4,
+        "L8": 0,
+        "L9": 0,
+        "L10": 0
+      },
+      "dominant": "L6",
+      "dominant_pct": 60.0
+    },
+    "4_name": {
+      "counts": {
+        "L6": 4,
+        "L7": 1,
+        "L8": 0,
+        "L9": 0,
+        "L10": 0
+      },
+      "dominant": "L6",
+      "dominant_pct": 80.0
+    },
+    "5_name": {
+      "counts": {
+        "L6": 1,
+        "L7": 0,
+        "L8": 0,
+        "L9": 0,
+        "L10": 0
+      },
+      "dominant": "L6",
+      "dominant_pct": 100.0
+    }
+  },
+  "deep": {
+    "2_name": {
+      "counts": {
+        "L18": 3,
+        "L19": 0,
+        "L20": 0,
+        "L21": 2,
+        "L22": 3,
+        "L23": 0,
+        "L24": 2
+      },
+      "dominant": "L18",
+      "dominant_pct": 30.0
+    },
+    "3_name": {
+      "counts": {
+        "L18": 1,
+        "L19": 0,
+        "L20": 0,
+        "L21": 2,
+        "L22": 4,
+        "L23": 0,
+        "L24": 3
+      },
+      "dominant": "L22",
+      "dominant_pct": 40.0
+    },
+    "4_name": {
+      "counts": {
+        "L18": 0,
+        "L19": 0,
+        "L20": 0,
+        "L21": 1,
+        "L22": 3,
+        "L23": 0,
+        "L24": 1
+      },
+      "dominant": "L22",
+      "dominant_pct": 60.0
+    },
+    "5_name": {
+      "counts": {
+        "L18": 0,
+        "L19": 0,
+        "L20": 0,
+        "L21": 0,
+        "L22": 1,
+        "L23": 0,
+        "L24": 0
+      },
+      "dominant": "L22",
+      "dominant_pct": 100.0
+    }
+  },
+  "cross_2": {
+    "early_wins": 6,
+    "deep_wins": 4
+  },
+  "cross_3": {
+    "early_wins": 8,
+    "deep_wins": 2
+  },
+  "cross_4": {
+    "early_wins": 5,
+    "deep_wins": 0
+  },
+  "cross_5": {
+    "early_wins": 1,
+    "deep_wins": 0
+  }
+}
