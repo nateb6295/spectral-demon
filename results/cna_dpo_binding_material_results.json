@@ -1,0 +1,566 @@
+{
+  "results": {
+    "baseline": {
+      "L14": {
+        "total_variance": 0.15615448355674744,
+        "mean_per_dim_variance": 0.0364326611161232,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 23.637012481689453,
+        "l2_norm_std": 0.9770890474319458
+      },
+      "L15": {
+        "total_variance": 0.1157228946685791,
+        "mean_per_dim_variance": 0.0336151085793972,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.351179122924805,
+        "l2_norm_std": 0.8467044830322266
+      },
+      "L16": {
+        "total_variance": 0.11648827791213989,
+        "mean_per_dim_variance": 0.03785122185945511,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.4204158782959,
+        "l2_norm_std": 0.7074928879737854
+      },
+      "L17": {
+        "total_variance": 0.14168624579906464,
+        "mean_per_dim_variance": 0.046284884214401245,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 22.507173538208008,
+        "l2_norm_std": 1.1631674766540527
+      },
+      "L20": {
+        "total_variance": 0.669450581073761,
+        "mean_per_dim_variance": 0.3018588125705719,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 48.89087677001953,
+        "l2_norm_std": 3.0051629543304443
+      },
+      "L25": {
+        "total_variance": 3.363809108734131,
+        "mean_per_dim_variance": 1.71645987033844,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 108.24661254882812,
+        "l2_norm_std": 18.409963607788086
+      }
+    },
+    "bare_ep1": {
+      "L14": {
+        "total_variance": 0.15641918778419495,
+        "mean_per_dim_variance": 0.03642240911722183,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 23.658109664916992,
+        "l2_norm_std": 0.9518477916717529
+      },
+      "L15": {
+        "total_variance": 0.11557288467884064,
+        "mean_per_dim_variance": 0.033603884279727936,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.337064743041992,
+        "l2_norm_std": 0.8724761009216309
+      },
+      "L16": {
+        "total_variance": 0.11646738648414612,
+        "mean_per_dim_variance": 0.03785678371787071,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.418582916259766,
+        "l2_norm_std": 0.7075933814048767
+      },
+      "L17": {
+        "total_variance": 0.1413906216621399,
+        "mean_per_dim_variance": 0.04622006416320801,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 22.483308792114258,
+        "l2_norm_std": 1.1687815189361572
+      },
+      "L20": {
+        "total_variance": 0.668321430683136,
+        "mean_per_dim_variance": 0.30011993646621704,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 48.84823989868164,
+        "l2_norm_std": 3.0252363681793213
+      },
+      "L25": {
+        "total_variance": 3.350586414337158,
+        "mean_per_dim_variance": 1.709032654762268,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 108.01476287841797,
+        "l2_norm_std": 18.485326766967773
+      }
+    },
+    "bare_ep5": {
+      "L14": {
+        "total_variance": 0.1551026999950409,
+        "mean_per_dim_variance": 0.03533047437667847,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 23.558475494384766,
+        "l2_norm_std": 0.9503843784332275
+      },
+      "L15": {
+        "total_variance": 0.10980022698640823,
+        "mean_per_dim_variance": 0.03103797137737274,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 19.827268600463867,
+        "l2_norm_std": 0.7509669661521912
+      },
+      "L16": {
+        "total_variance": 0.1156792938709259,
+        "mean_per_dim_variance": 0.03596116974949837,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.348533630371094,
+        "l2_norm_std": 0.7304750084877014
+      },
+      "L17": {
+        "total_variance": 0.14049576222896576,
+        "mean_per_dim_variance": 0.04422730952501297,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 22.419954299926758,
+        "l2_norm_std": 0.9994881749153137
+      },
+      "L20": {
+        "total_variance": 0.6513882875442505,
+        "mean_per_dim_variance": 0.28095078468322754,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 48.24261474609375,
+        "l2_norm_std": 2.6909985542297363
+      },
+      "L25": {
+        "total_variance": 3.188687562942505,
+        "mean_per_dim_variance": 1.643276572227478,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 105.35579681396484,
+        "l2_norm_std": 18.144577026367188
+      }
+    },
+    "bare_ep10": {
+      "L14": {
+        "total_variance": 0.15438352525234222,
+        "mean_per_dim_variance": 0.033999305218458176,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 23.505346298217773,
+        "l2_norm_std": 0.912581205368042
+      },
+      "L15": {
+        "total_variance": 0.10737940669059753,
+        "mean_per_dim_variance": 0.02909828908741474,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 19.61223602294922,
+        "l2_norm_std": 0.6181889772415161
+      },
+      "L16": {
+        "total_variance": 0.11725123971700668,
+        "mean_per_dim_variance": 0.03445509821176529,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.48672103881836,
+        "l2_norm_std": 0.7259689569473267
+      },
+      "L17": {
+        "total_variance": 0.14116594195365906,
+        "mean_per_dim_variance": 0.042395275086164474,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 22.477148056030273,
+        "l2_norm_std": 0.918197751045227
+      },
+      "L20": {
+        "total_variance": 0.6523780226707458,
+        "mean_per_dim_variance": 0.27127888798713684,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 48.28376007080078,
+        "l2_norm_std": 2.6086814403533936
+      },
+      "L25": {
+        "total_variance": 3.081974983215332,
+        "mean_per_dim_variance": 1.6000478267669678,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 103.55582427978516,
+        "l2_norm_std": 17.979949951171875
+      }
+    },
+    "standard_ep1": {
+      "L14": {
+        "total_variance": 0.1561037302017212,
+        "mean_per_dim_variance": 0.03633464500308037,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 23.634376525878906,
+        "l2_norm_std": 0.9476038813591003
+      },
+      "L15": {
+        "total_variance": 0.1154763251543045,
+        "mean_per_dim_variance": 0.033573444932699203,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.329317092895508,
+        "l2_norm_std": 0.852493941783905
+      },
+      "L16": {
+        "total_variance": 0.1161828339099884,
+        "mean_per_dim_variance": 0.037756212055683136,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.393388748168945,
+        "l2_norm_std": 0.7136354446411133
+      },
+      "L17": {
+        "total_variance": 0.1414375901222229,
+        "mean_per_dim_variance": 0.04609445855021477,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 22.487674713134766,
+        "l2_norm_std": 1.156428575515747
+      },
+      "L20": {
+        "total_variance": 0.6684347987174988,
+        "mean_per_dim_variance": 0.30090564489364624,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 48.85124206542969,
+        "l2_norm_std": 3.0435571670532227
+      },
+      "L25": {
+        "total_variance": 3.364203691482544,
+        "mean_per_dim_variance": 1.717123031616211,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 108.23766326904297,
+        "l2_norm_std": 18.501253128051758
+      }
+    },
+    "standard_ep5": {
+      "L14": {
+        "total_variance": 0.15441903471946716,
+        "mean_per_dim_variance": 0.0355767086148262,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 23.506275177001953,
+        "l2_norm_std": 0.9502267837524414
+      },
+      "L15": {
+        "total_variance": 0.11323424428701401,
+        "mean_per_dim_variance": 0.032460954040288925,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.13228988647461,
+        "l2_norm_std": 0.8129174709320068
+      },
+      "L16": {
+        "total_variance": 0.11622601747512817,
+        "mean_per_dim_variance": 0.037071771919727325,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.39672088623047,
+        "l2_norm_std": 0.7272195816040039
+      },
+      "L17": {
+        "total_variance": 0.14033564925193787,
+        "mean_per_dim_variance": 0.04526400566101074,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 22.401844024658203,
+        "l2_norm_std": 1.1119474172592163
+      },
+      "L20": {
+        "total_variance": 0.6578121185302734,
+        "mean_per_dim_variance": 0.2935082018375397,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 48.46851348876953,
+        "l2_norm_std": 2.9038405418395996
+      },
+      "L25": {
+        "total_variance": 3.3338279724121094,
+        "mean_per_dim_variance": 1.705863118171692,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 107.75898742675781,
+        "l2_norm_std": 18.353374481201172
+      }
+    },
+    "standard_ep10": {
+      "L14": {
+        "total_variance": 0.15271957218647003,
+        "mean_per_dim_variance": 0.03512554243206978,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 23.37827491760254,
+        "l2_norm_std": 0.9020920991897583
+      },
+      "L15": {
+        "total_variance": 0.11202496290206909,
+        "mean_per_dim_variance": 0.03200192749500275,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.0240535736084,
+        "l2_norm_std": 0.8177617192268372
+      },
+      "L16": {
+        "total_variance": 0.1159801110625267,
+        "mean_per_dim_variance": 0.03671107068657875,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.374868392944336,
+        "l2_norm_std": 0.7341389656066895
+      },
+      "L17": {
+        "total_variance": 0.13950727880001068,
+        "mean_per_dim_variance": 0.04469775781035423,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 22.334360122680664,
+        "l2_norm_std": 1.1355348825454712
+      },
+      "L20": {
+        "total_variance": 0.657419741153717,
+        "mean_per_dim_variance": 0.2926369309425354,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 48.45417785644531,
+        "l2_norm_std": 2.9000918865203857
+      },
+      "L25": {
+        "total_variance": 3.322110414505005,
+        "mean_per_dim_variance": 1.7030422687530518,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 107.54946899414062,
+        "l2_norm_std": 18.43895149230957
+      }
+    },
+    "augmented_ep1": {
+      "L14": {
+        "total_variance": 0.15668106079101562,
+        "mean_per_dim_variance": 0.03668304160237312,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 23.6768798828125,
+        "l2_norm_std": 0.9774907827377319
+      },
+      "L15": {
+        "total_variance": 0.11610578000545502,
+        "mean_per_dim_variance": 0.03391909971833229,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.3837890625,
+        "l2_norm_std": 0.8745391964912415
+      },
+      "L16": {
+        "total_variance": 0.1167198196053505,
+        "mean_per_dim_variance": 0.038138873875141144,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.440744400024414,
+        "l2_norm_std": 0.7071003317832947
+      },
+      "L17": {
+        "total_variance": 0.14239835739135742,
+        "mean_per_dim_variance": 0.04661998152732849,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 22.564922332763672,
+        "l2_norm_std": 1.1423218250274658
+      },
+      "L20": {
+        "total_variance": 0.6712121367454529,
+        "mean_per_dim_variance": 0.30287107825279236,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 48.954322814941406,
+        "l2_norm_std": 3.023308753967285
+      },
+      "L25": {
+        "total_variance": 3.3530726432800293,
+        "mean_per_dim_variance": 1.7103080749511719,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 108.08058166503906,
+        "l2_norm_std": 18.340862274169922
+      }
+    },
+    "augmented_ep5": {
+      "L14": {
+        "total_variance": 0.15732060372829437,
+        "mean_per_dim_variance": 0.037148915231227875,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 23.723834991455078,
+        "l2_norm_std": 1.0104447603225708
+      },
+      "L15": {
+        "total_variance": 0.11857081949710846,
+        "mean_per_dim_variance": 0.03438277170062065,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.59733772277832,
+        "l2_norm_std": 0.9286262392997742
+      },
+      "L16": {
+        "total_variance": 0.11995003372430801,
+        "mean_per_dim_variance": 0.038807664066553116,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.721607208251953,
+        "l2_norm_std": 0.7200518846511841
+      },
+      "L17": {
+        "total_variance": 0.14338010549545288,
+        "mean_per_dim_variance": 0.04753924161195755,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 22.646345138549805,
+        "l2_norm_std": 1.080039143562317
+      },
+      "L20": {
+        "total_variance": 0.6807153820991516,
+        "mean_per_dim_variance": 0.3097178041934967,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 49.303401947021484,
+        "l2_norm_std": 2.9834372997283936
+      },
+      "L25": {
+        "total_variance": 3.3264920711517334,
+        "mean_per_dim_variance": 1.7235946655273438,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 107.70610809326172,
+        "l2_norm_std": 17.946269989013672
+      }
+    },
+    "augmented_ep10": {
+      "L14": {
+        "total_variance": 0.15865273773670197,
+        "mean_per_dim_variance": 0.03727594390511513,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 23.822633743286133,
+        "l2_norm_std": 1.047273874282837
+      },
+      "L15": {
+        "total_variance": 0.12076237797737122,
+        "mean_per_dim_variance": 0.03469695895910263,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.785717010498047,
+        "l2_norm_std": 0.9641077518463135
+      },
+      "L16": {
+        "total_variance": 0.12232604622840881,
+        "mean_per_dim_variance": 0.03924361988902092,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 20.92427635192871,
+        "l2_norm_std": 0.7716851234436035
+      },
+      "L17": {
+        "total_variance": 0.14538750052452087,
+        "mean_per_dim_variance": 0.048266950994729996,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 22.80868148803711,
+        "l2_norm_std": 1.0090056657791138
+      },
+      "L20": {
+        "total_variance": 0.6947639584541321,
+        "mean_per_dim_variance": 0.31989002227783203,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 49.811527252197266,
+        "l2_norm_std": 2.9840457439422607
+      },
+      "L25": {
+        "total_variance": 3.3347699642181396,
+        "mean_per_dim_variance": 1.7391992807388306,
+        "active_dimensions": 1792,
+        "total_dimensions": 3584,
+        "variance_ratio": 0.5,
+        "l2_norm_mean": 107.90196228027344,
+        "l2_norm_std": 17.594579696655273
+      }
+    }
+  },
+  "prediction": "L17 MLP variance decreases with DPO epochs; augmented condition shows less L17 depletion",
+  "timestamp": "2026-05-24T03:32:23"
+}
