@@ -45,6 +45,7 @@ experiments/                      # Runnable experiment scripts
   cna_l17_isolation.py            # L17 sufficiency test
   cna_l17_mechanism.py            # L17 attention vs MLP (ready, not yet run)
   cna_unembed_projection.py       # CCS direction → vocabulary projection
+  cna_intervention_entropy.py     # L17 temporal entropy across intervention styles
 results/
   *.json                          # All experimental results (30+ files)
 ```
