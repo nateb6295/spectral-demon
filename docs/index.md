@@ -20,7 +20,8 @@ System prompts don't just steer model behavior — they reorganize the geometric
 - **Sign inversion** — same direction, opposite behavioral effect depending on delivery mechanism
 - **Cross-architecture confirmation** — Qwen L9/28 = Mistral L10/32
 - **Hysteresis** — identity geometry persists after prompt removal
-- **Binding workspace** — L14-L17 relay with L16 compression and L17 integration (double dissociation)
+- **Binding workspace** — L14-L17 relay with strict functional hierarchy (L14 vestigial → L15 normalizer → L16 sorter → L17 binder)
+- **L17 as keystone** — synergistic attention-MLP binding; neither alone triggers phase transition
 - **Sub-threshold onset** — geometric reorganization begins at doses below behavioral detection
 
 ## This Blog
