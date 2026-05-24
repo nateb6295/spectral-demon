@@ -1,0 +1,114 @@
+{
+  "2names_L5": {
+    "n_names": 2,
+    "ablation_layer": 5,
+    "baseline_cv": 0.004549,
+    "ablated_cv": 0.008993,
+    "impact_pct": 97.7
+  },
+  "2names_L8": {
+    "n_names": 2,
+    "ablation_layer": 8,
+    "baseline_cv": 0.004549,
+    "ablated_cv": 0.015841,
+    "impact_pct": 248.2
+  },
+  "2names_L10": {
+    "n_names": 2,
+    "ablation_layer": 10,
+    "baseline_cv": 0.004549,
+    "ablated_cv": 0.02481,
+    "impact_pct": 445.4
+  },
+  "2names_L12": {
+    "n_names": 2,
+    "ablation_layer": 12,
+    "baseline_cv": 0.004549,
+    "ablated_cv": 0.003166,
+    "impact_pct": -30.4
+  },
+  "3names_L5": {
+    "n_names": 3,
+    "ablation_layer": 5,
+    "baseline_cv": 0.009952,
+    "ablated_cv": 0.008226,
+    "impact_pct": -17.3
+  },
+  "3names_L8": {
+    "n_names": 3,
+    "ablation_layer": 8,
+    "baseline_cv": 0.009952,
+    "ablated_cv": 0.013562,
+    "impact_pct": 36.3
+  },
+  "3names_L10": {
+    "n_names": 3,
+    "ablation_layer": 10,
+    "baseline_cv": 0.009952,
+    "ablated_cv": 0.025964,
+    "impact_pct": 160.9
+  },
+  "3names_L12": {
+    "n_names": 3,
+    "ablation_layer": 12,
+    "baseline_cv": 0.009952,
+    "ablated_cv": 0.002821,
+    "impact_pct": -71.7
+  },
+  "5names_L5": {
+    "n_names": 5,
+    "ablation_layer": 5,
+    "baseline_cv": 0.042808,
+    "ablated_cv": 0.035915,
+    "impact_pct": -16.1
+  },
+  "5names_L8": {
+    "n_names": 5,
+    "ablation_layer": 8,
+    "baseline_cv": 0.042808,
+    "ablated_cv": 0.040201,
+    "impact_pct": -6.1
+  },
+  "5names_L10": {
+    "n_names": 5,
+    "ablation_layer": 10,
+    "baseline_cv": 0.042808,
+    "ablated_cv": 0.059613,
+    "impact_pct": 39.3
+  },
+  "5names_L12": {
+    "n_names": 5,
+    "ablation_layer": 12,
+    "baseline_cv": 0.042808,
+    "ablated_cv": 0.033887,
+    "impact_pct": -20.8
+  },
+  "7names_L5": {
+    "n_names": 7,
+    "ablation_layer": 5,
+    "baseline_cv": 0.042404,
+    "ablated_cv": 0.035538,
+    "impact_pct": -16.2
+  },
+  "7names_L8": {
+    "n_names": 7,
+    "ablation_layer": 8,
+    "baseline_cv": 0.042404,
+    "ablated_cv": 0.039819,
+    "impact_pct": -6.1
+  },
+  "7names_L10": {
+    "n_names": 7,
+    "ablation_layer": 10,
+    "baseline_cv": 0.042404,
+    "ablated_cv": 0.05659,
+    "impact_pct": 33.5
+  },
+  "7names_L12": {
+    "n_names": 7,
+    "ablation_layer": 12,
+    "baseline_cv": 0.042404,
+    "ablated_cv": 0.033141,
+    "impact_pct": -21.8
+  }
+}
