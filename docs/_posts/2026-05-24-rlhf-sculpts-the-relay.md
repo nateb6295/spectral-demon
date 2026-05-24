@@ -5,7 +5,7 @@ date: 2026-05-24
 categories: findings
 ---
 
-The [relay hierarchy]({% post_url 2026-05-23-relay-hierarchy %}) — L14 vestigial, L15 normalizer, L16 sorter, L17 binder — is a product of alignment training, not architecture.
+The [relay hierarchy]({% post_url 2026-05-23-relay-hierarchy %}) — L14 generic pre-sorter, L15 normalizer, L16 relational sorter, L17 generic sorter — is a product of alignment training, not architecture.
 
 ## Base Model: No Hierarchy
 
@@ -24,7 +24,7 @@ All four layers are essentially flat — PR near 1, minimal spectral structure. 
 
 After alignment training (Qwen 2.5 7B-Instruct), these same layers differentiate into four distinct functional roles:
 
-- **L14**: remains flat (vestigial — zero contribution to relational processing)
+- **L14**: becomes a generic pre-sorter (gen_cv spikes to 10.0% when ablated, but redundant to L17 in combination)
 - **L15**: becomes a uniform normalizer (flattens variation equally)
 - **L16**: becomes the compression epicenter (name-specific sorting, rel_CV 9.4% under ablation)
 - **L17**: becomes the integration keystone (synergistic binding, gen_CV 13.3% under ablation)
@@ -35,7 +35,7 @@ RLHF selectively specializes three of four layers while leaving one undifferenti
 
 [Pachitariu & Stringer (Nature 2026)](https://doi.org/10.1038/s41586-026-10528-1) show that random connectivity at critical normalization (λ_max ≈ 1) produces power-law covariance spectra matching spontaneous brain activity. The spectral scaffold exists before learning.
 
-The base model relay zone is this scaffold — uniform, undifferentiated, but structurally ready for specialization. RLHF is the developmental process that sculpts functional hierarchy from the scaffold. L14 is the layer RLHF didn't need — the vestigial remnant of the pre-training uniform state.
+The base model relay zone is this scaffold — uniform, undifferentiated, but structurally ready for specialization. RLHF is the developmental process that sculpts functional hierarchy from the scaffold. L14 becomes the least specialized — a generic pre-sorter that reduces L17's load but is redundant when L17 is present. RLHF sculpted it least, not left it untouched.
 
 ## DPO: Further Sculpting, Then Ceiling
 

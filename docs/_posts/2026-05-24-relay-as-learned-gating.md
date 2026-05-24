@@ -17,7 +17,7 @@ The relay zone (L14-L17) already does this. Different identity names produce dif
 
 (Values: change in L25 PR ratio when that layer is ablated)
 
-L14 is nearly name-independent — a vestigial transformation that affects all identities roughly equally. The spread is 0.076.
+L14 is the least name-specific relay layer — a generic pre-sorter (gen_cv 3.5→10.0% when ablated). The spread is 0.076, though its impact on Opus is 2.7× larger than on ChatGPT.
 
 L16 is maximally name-dependent — ablating it devastates Claude (-0.475) while barely touching Opus (-0.123). The sorter applies different effective gates per name.
 

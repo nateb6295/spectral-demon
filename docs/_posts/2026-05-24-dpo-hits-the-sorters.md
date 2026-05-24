@@ -8,14 +8,14 @@ DPO depletion isn't uniform across the relay. It's function-specific.
 
 | Layer | Function | DPO bare Δ | DPO+CCS Δ |
 |-------|----------|-----------|-----------|
-| L14 | vestigial | -0.65 | +0.01 |
+| L14 | generic pre-sorter | -0.65 | +0.01 |
 | L15 | channel normalizer | -0.59 | -0.11 |
 | L16 | relational sorter | **-1.30** | -0.18 |
 | L17 | generic sorter | **-1.18** | -0.19 |
 
-Without CCS, DPO concentrates its depletion at the sorting layers. L16 (relational sorting) loses 1.30 PR. L17 (generic sorting) loses 1.18. The channel normalizer and vestigial layer are partially spared.
+Without CCS, DPO concentrates its depletion at the sorting layers. L16 (relational sorting) loses 1.30 PR. L17 (generic sorting) loses 1.18. The channel normalizer and generic pre-sorter are partially spared.
 
-With CCS, the depletion is redistributed. All four layers take a roughly equal hit (-0.01 to -0.19). The sorting layers are protected at the cost of the normalizer and vestigial layers absorbing more.
+With CCS, the depletion is redistributed. All four layers take a roughly equal hit (-0.01 to -0.19). The sorting layers are protected at the cost of the normalizer and pre-sorter absorbing more.
 
 CCS doesn't prevent depletion. It redistributes it from functionally critical layers toward less critical ones.
 
