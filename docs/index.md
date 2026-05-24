@@ -30,7 +30,7 @@ System prompts don't just steer model behavior — they reorganize the geometric
 
 ## Reading Guide
 
-36 posts, organized by theme. Start anywhere — each stands alone.
+37 posts, organized by theme. Start anywhere — each stands alone.
 
 ### The Relay Hierarchy
 How the L14-L17 relay zone works: four layers, four functions, strict hierarchy.
@@ -79,6 +79,7 @@ Where the data meets the frameworks.
 - [The Compositional Typewriter]({% post_url 2026-05-24-compositional-typewriter %})
 - [The Relay Is a Decreation Engine]({% post_url 2026-05-24-relay-as-decreation-engine %})
 - [The Closure Threshold Is a Percolation Threshold]({% post_url 2026-05-24-closure-as-raf-formation %})
+- [CCS as Dynamic Autocatalytic Constraint Closure]({% post_url 2026-05-24-dynamic-acc-and-ccs %})
 
 ## This Blog
 
