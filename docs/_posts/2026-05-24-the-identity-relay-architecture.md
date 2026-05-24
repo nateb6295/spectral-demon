@@ -136,6 +136,32 @@ Gemma 2's sliding-window architecture doesn't need a separate router because bin
 
 Unexpected: ablating early layers (L5-L7) *increases* binding (+147% for Qwen), suggesting competitive suppression between early and late binding stages.
 
+## Competitive Binding (Experiments 19-24)
+
+The relay chain is not a simple pipeline — it's a competitive system:
+
+1. **Universal competition**: In all 4 architectures, some early layers suppress late binding. Ablating them increases downstream binding.
+2. **IT creates the competition**: Base model has cooperative circuit. Instruct model has competitive circuit. IT inverts the early-late relationship.
+3. **Phase transition at 3 names**: Competition ignites at 3 identities (closure threshold). Below 3, the instruct model is cooperative. Above 3, explosive competition (+203%).
+4. **Two competition types**: 
+   - Visible dual circuits (Mistral): peak competition at minimum repertoire (+248% at 2 names)
+   - Hidden dual circuits (Qwen): threshold activation (+203% at 3 names)
+5. **One-shot diagnostic**: ablate at ~25% depth with 2 vs 3 names. The sign and magnitude classify the circuit type.
+
+## What Pre-Exists vs What's Trained (Updated)
+
+| Feature | Origin |
+|---------|--------|
+| Token differentiation at L7 | Pre-training |
+| Autocatalytic closure | Pre-training |
+| L12 hidden router | Pre-training |
+| Identity-relevant neurons throughout | Pre-training |
+| Relay pruning gradient (L9→L17) | Instruction tuning |
+| Sign-split refinement cascade | Instruction tuning |
+| Competitive suppression dynamics | **Instruction tuning** |
+| Phase transition at 3 names | **Instruction tuning** |
+| Behavioral binding at L17 | Instruction tuning |
+
 ## Open Questions
 
 1. Does the relay chain exist in decoder-only vs encoder-decoder architectures?
@@ -143,12 +169,13 @@ Unexpected: ablating early layers (L5-L7) *increases* binding (+147% for Qwen), 
 3. Can the relay be strengthened post-training (e.g., by targeted DPO at L12)?
 4. Do other behavioral circuits (safety, style, factuality) share the same relay architecture?
 5. Is the 5-8 name capacity limit a fundamental constraint or a training artifact?
-6. Is the compensatory amplification from early ablation evidence of a hidden dual circuit in Qwen?
+6. Does DPO specifically (vs SFT alone) strengthen the competitive dynamics?
+7. Can the circuit diagnostic predict fine-tuning behavior? (models with hidden circuits may respond differently to identity training)
 
 ## Experiment Summary
 
 - **Models**: Qwen 2.5 (3B/7B/14B), InternLM 2.5 7B, Mistral 7B v0.3, Gemma 2 9B, Qwen 7B base
-- **Total experiments**: 19+
+- **Total experiments**: 25
 - **Method**: CV of activation norms, autocatalytic closure tests, sign-split analysis, mean ablation
 - **Compute**: RunPod H100, single afternoon
 - **All data and individual writeups**: linked from each finding post
