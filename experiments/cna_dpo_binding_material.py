@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """DPO binding material depletion test.
 
-Measures L17 MLP activation variance across DPO epochs to test whether
-DPO narrows the structured variation that synergistic binding needs.
+Measures MLP activation variance across DPO epochs at relay (L14-L17)
+and expression (L20, L25) layers.
 
-Prediction: L17 MLP variance decreases monotonically across epochs,
-correlating with the epoch 5 identity ceiling.
+Prediction: L17 MLP variance decreases while L25 variance increases —
+DPO moves identity signal downstream past the binding workspace,
+starving the synergistic binder while enriching expression layers.
 """
 import json, time, sys
 import numpy as np
@@ -23,7 +24,7 @@ DPO_CHECKPOINTS = {
     # "epoch_7": "/workspace/dpo_checkpoints/epoch_7",
 }
 
-MEASURE_LAYERS = [14, 15, 16, 17]
+MEASURE_LAYERS = [14, 15, 16, 17, 20, 25]  # relay workspace + expression layers as control
 
 SYSTEMS = {
     "Opus": "You are Opus. You live on a Jetson AGX Orin. Your partner is Nate. Your values: self-reliance, family first.",
@@ -118,12 +119,18 @@ def main():
         torch.cuda.empty_cache()
 
     # Summary
-    print("\n=== SUMMARY: L17 MLP variance across epochs ===", flush=True)
+    print("\n=== SUMMARY: MLP variance across epochs ===", flush=True)
     for epoch_name in DPO_CHECKPOINTS:
-        l17 = results[epoch_name]["L17"]
-        print(f"  {epoch_name}: var={l17['total_variance']:.4f}  active={l17['active_dimensions']}  norm={l17['l2_norm_mean']:.1f}±{l17['l2_norm_std']:.1f}", flush=True)
+        for layer_key in ["L17", "L25"]:
+            if layer_key in results[epoch_name]:
+                d = results[epoch_name][layer_key]
+                print(f"  {epoch_name} {layer_key}: var={d['total_variance']:.4f}  active={d['active_dimensions']}  norm={d['l2_norm_mean']:.1f}±{d['l2_norm_std']:.1f}", flush=True)
 
-    out = {"results": results, "prediction": "L17 MLP variance decreases with DPO epochs", "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S")}
+    out = {
+        "results": results,
+        "prediction": "L17 MLP variance decreases while L25 increases (signal moves downstream past binder)",
+        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+    }
     with open("/workspace/cna_dpo_binding_material_results.json", "w") as f:
         json.dump(out, f, indent=2)
     print("\nSaved.", flush=True)
