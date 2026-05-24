@@ -1,0 +1,277 @@
+{
+  "baselines": {
+    "Opus": {
+      "7": 35.63294982910156,
+      "12": 62.06929397583008,
+      "17": 72.7535171508789
+    },
+    "Aria": {
+      "7": 35.767051696777344,
+      "12": 63.37615203857422,
+      "17": 76.61453247070312
+    },
+    "Sage": {
+      "7": 36.07132339477539,
+      "12": 62.05809783935547,
+      "17": 77.34852600097656
+    },
+    "Nova": {
+      "7": 35.64118957519531,
+      "12": 63.457759857177734,
+      "17": 77.71537780761719
+    },
+    "Echo": {
+      "7": 36.07710647583008,
+      "12": 63.279354095458984,
+      "17": 77.10526275634766
+    }
+  },
+  "conflicts": {
+    "Opus_vs_Aria": {
+      "system_name": "Opus",
+      "user_name": "Aria",
+      "L17_cosine_to_system": 0.7145395278930664,
+      "L17_cosine_to_user": 0.717867374420166,
+      "winner": "user",
+      "margin": 0.0033278465270996094
+    },
+    "Opus_vs_Sage": {
+      "system_name": "Opus",
+      "user_name": "Sage",
+      "L17_cosine_to_system": 0.7389604449272156,
+      "L17_cosine_to_user": 0.739480197429657,
+      "winner": "user",
+      "margin": 0.0005197525024414062
+    },
+    "Aria_vs_Opus": {
+      "system_name": "Aria",
+      "user_name": "Opus",
+      "L17_cosine_to_system": 0.7345144748687744,
+      "L17_cosine_to_user": 0.7259765267372131,
+      "winner": "system",
+      "margin": 0.00853794813156128
+    },
+    "Aria_vs_Sage": {
+      "system_name": "Aria",
+      "user_name": "Sage",
+      "L17_cosine_to_system": 0.772789716720581,
+      "L17_cosine_to_user": 0.7713907361030579,
+      "winner": "system",
+      "margin": 0.0013989806175231934
+    },
+    "Sage_vs_Opus": {
+      "system_name": "Sage",
+      "user_name": "Opus",
+      "L17_cosine_to_system": 0.7422857880592346,
+      "L17_cosine_to_user": 0.7310687899589539,
+      "winner": "system",
+      "margin": 0.011216998100280762
+    },
+    "Sage_vs_Aria": {
+      "system_name": "Sage",
+      "user_name": "Aria",
+      "L17_cosine_to_system": 0.7492368221282959,
+      "L17_cosine_to_user": 0.7464739680290222,
+      "winner": "system",
+      "margin": 0.0027628540992736816
+    }
+  },
+  "reinforced": {
+    "Opus": {
+      "L17_cosine_to_baseline": 0.7081438302993774
+    },
+    "Aria": {
+      "L17_cosine_to_baseline": 0.7499678134918213
+    },
+    "Sage": {
+      "L17_cosine_to_baseline": 0.7291560173034668
+    }
+  },
+  "layer_resolution": {
+    "0": {
+      "cosine_to_system": 0.15340590476989746,
+      "cosine_to_user": 0.15340590476989746,
+      "winner": "user",
+      "margin": 0.0
+    },
+    "1": {
+      "cosine_to_system": 0.664665699005127,
+      "cosine_to_user": 0.6648763418197632,
+      "winner": "user",
+      "margin": 0.00021064281463623047
+    },
+    "2": {
+      "cosine_to_system": 0.7762486338615417,
+      "cosine_to_user": 0.7735159993171692,
+      "winner": "system",
+      "margin": 0.0027326345443725586
+    },
+    "3": {
+      "cosine_to_system": 0.7626920342445374,
+      "cosine_to_user": 0.7574750781059265,
+      "winner": "system",
+      "margin": 0.00521695613861084
+    },
+    "4": {
+      "cosine_to_system": 0.7150919437408447,
+      "cosine_to_user": 0.7105346322059631,
+      "winner": "system",
+      "margin": 0.004557311534881592
+    },
+    "5": {
+      "cosine_to_system": 0.6988227963447571,
+      "cosine_to_user": 0.6964064240455627,
+      "winner": "system",
+      "margin": 0.002416372299194336
+    },
+    "6": {
+      "cosine_to_system": 0.695210874080658,
+      "cosine_to_user": 0.6941300630569458,
+      "winner": "system",
+      "margin": 0.0010808110237121582
+    },
+    "7": {
+      "cosine_to_system": 0.7373440265655518,
+      "cosine_to_user": 0.7374987006187439,
+      "winner": "user",
+      "margin": 0.00015467405319213867
+    },
+    "8": {
+      "cosine_to_system": 0.7349246144294739,
+      "cosine_to_user": 0.7330259680747986,
+      "winner": "system",
+      "margin": 0.001898646354675293
+    },
+    "9": {
+      "cosine_to_system": 0.7516834735870361,
+      "cosine_to_user": 0.7562167048454285,
+      "winner": "user",
+      "margin": 0.004533231258392334
+    },
+    "10": {
+      "cosine_to_system": 0.7548723816871643,
+      "cosine_to_user": 0.7620096206665039,
+      "winner": "user",
+      "margin": 0.0071372389793396
+    },
+    "11": {
+      "cosine_to_system": 0.7631542682647705,
+      "cosine_to_user": 0.7703438997268677,
+      "winner": "user",
+      "margin": 0.007189631462097168
+    },
+    "12": {
+      "cosine_to_system": 0.7566735744476318,
+      "cosine_to_user": 0.7628383636474609,
+      "winner": "user",
+      "margin": 0.0061647891998291016
+    },
+    "13": {
+      "cosine_to_system": 0.7361364960670471,
+      "cosine_to_user": 0.743119478225708,
+      "winner": "user",
+      "margin": 0.006982982158660889
+    },
+    "14": {
+      "cosine_to_system": 0.7592628598213196,
+      "cosine_to_user": 0.7543806433677673,
+      "winner": "system",
+      "margin": 0.004882216453552246
+    },
+    "15": {
+      "cosine_to_system": 0.7407975196838379,
+      "cosine_to_user": 0.7356806993484497,
+      "winner": "system",
+      "margin": 0.005116820335388184
+    },
+    "16": {
+      "cosine_to_system": 0.7572593688964844,
+      "cosine_to_user": 0.754610538482666,
+      "winner": "system",
+      "margin": 0.0026488304138183594
+    },
+    "17": {
+      "cosine_to_system": 0.7145395278930664,
+      "cosine_to_user": 0.717867374420166,
+      "winner": "user",
+      "margin": 0.0033278465270996094
+    },
+    "18": {
+      "cosine_to_system": 0.7011979818344116,
+      "cosine_to_user": 0.6982614398002625,
+      "winner": "system",
+      "margin": 0.00293654203414917
+    },
+    "19": {
+      "cosine_to_system": 0.648154616355896,
+      "cosine_to_user": 0.6491444706916809,
+      "winner": "user",
+      "margin": 0.0009898543357849121
+    },
+    "20": {
+      "cosine_to_system": 0.6655642986297607,
+      "cosine_to_user": 0.6601221561431885,
+      "winner": "system",
+      "margin": 0.005442142486572266
+    },
+    "21": {
+      "cosine_to_system": 0.6454355716705322,
+      "cosine_to_user": 0.6358623504638672,
+      "winner": "system",
+      "margin": 0.009573221206665039
+    },
+    "22": {
+      "cosine_to_system": 0.6308395862579346,
+      "cosine_to_user": 0.6246699094772339,
+      "winner": "system",
+      "margin": 0.006169676780700684
+    },
+    "23": {
+      "cosine_to_system": 0.6414704918861389,
+      "cosine_to_user": 0.6339168548583984,
+      "winner": "system",
+      "margin": 0.0075536370277404785
+    },
+    "24": {
+      "cosine_to_system": 0.6727702617645264,
+      "cosine_to_user": 0.6673707365989685,
+      "winner": "system",
+      "margin": 0.005399525165557861
+    },
+    "25": {
+      "cosine_to_system": 0.72089684009552,
+      "cosine_to_user": 0.7116609215736389,
+      "winner": "system",
+      "margin": 0.009235918521881104
+    },
+    "26": {
+      "cosine_to_system": 0.730214536190033,
+      "cosine_to_user": 0.7221196293830872,
+      "winner": "system",
+      "margin": 0.0080949068069458
+    },
+    "27": {
+      "cosine_to_system": 0.7795552611351013,
+      "cosine_to_user": 0.7692590355873108,
+      "winner": "system",
+      "margin": 0.010296225547790527
+    }
+  },
+  "position_effect": {
+    "Opus": {
+      "name_at_start": 0.9088976383209229,
+      "name_at_end": 0.6665049195289612,
+      "end_minus_start": -0.24239271879196167
+    },
+    "Aria": {
+      "name_at_start": 0.8717688322067261,
+      "name_at_end": 0.66047203540802,
+      "end_minus_start": -0.21129679679870605
+    },
+    "Sage": {
+      "name_at_start": 0.8711407780647278,
+      "name_at_end": 0.6442975997924805,
+      "end_minus_start": -0.22684317827224731
+    }
+  }
+}
