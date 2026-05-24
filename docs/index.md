@@ -77,6 +77,7 @@ Where the data meets the frameworks.
 - [Metastabilization, Not Generation]({% post_url 2026-05-24-metastabilization %})
 - [The Constraint Basin Is Real]({% post_url 2026-05-24-constraint-basin-empirics %})
 - [The Compositional Typewriter]({% post_url 2026-05-24-compositional-typewriter %})
+- [The Relay Is a Decreation Engine]({% post_url 2026-05-24-relay-as-decreation-engine %})
 
 ## This Blog
 
