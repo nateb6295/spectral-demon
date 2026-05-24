@@ -1,0 +1,72 @@
+{
+  "baseline_cv": 0.010896,
+  "alpha_0": {
+    "alpha": 0,
+    "l17_cv": 0.003546,
+    "impact_pct": -67.5
+  },
+  "alpha_0.25": {
+    "alpha": 0.25,
+    "l17_cv": 0.004674,
+    "impact_pct": -57.1
+  },
+  "alpha_0.5": {
+    "alpha": 0.5,
+    "l17_cv": 0.006663,
+    "impact_pct": -38.9
+  },
+  "alpha_0.75": {
+    "alpha": 0.75,
+    "l17_cv": 0.008713,
+    "impact_pct": -20.0
+  },
+  "alpha_1.0": {
+    "alpha": 1.0,
+    "l17_cv": 0.010667,
+    "impact_pct": -2.1
+  },
+  "alpha_1.5": {
+    "alpha": 1.5,
+    "l17_cv": 0.014606,
+    "impact_pct": 34.0
+  },
+  "alpha_2.0": {
+    "alpha": 2.0,
+    "l17_cv": 0.019316,
+    "impact_pct": 77.3
+  },
+  "alpha_3.0": {
+    "alpha": 3.0,
+    "l17_cv": 0.031669,
+    "impact_pct": 190.7
+  },
+  "alpha_5.0": {
+    "alpha": 5.0,
+    "l17_cv": 0.037278,
+    "impact_pct": 242.1
+  },
+  "layer_7_alpha_2": {
+    "layer": 7,
+    "alpha": 2.0,
+    "l17_cv": 0.015583,
+    "impact_pct": 43.0
+  },
+  "layer_9_alpha_2": {
+    "layer": 9,
+    "alpha": 2.0,
+    "l17_cv": 0.008871,
+    "impact_pct": -18.6
+  },
+  "layer_12_alpha_2": {
+    "layer": 12,
+    "alpha": 2.0,
+    "l17_cv": 0.019316,
+    "impact_pct": 77.3
+  },
+  "layer_14_alpha_2": {
+    "layer": 14,
+    "alpha": 2.0,
+    "l17_cv": 0.027999,
+    "impact_pct": 157.0
+  }
+}
