@@ -1,0 +1,73 @@
+{
+  "2": {
+    "names": [
+      "Opus",
+      "Aria"
+    ],
+    "baseline_cv": 0.032193,
+    "ablated_cv": 0.038095,
+    "impact_pct": 18.3
+  },
+  "3": {
+    "names": [
+      "Opus",
+      "Aria",
+      "Sage"
+    ],
+    "baseline_cv": 0.029933,
+    "ablated_cv": 0.031904,
+    "impact_pct": 6.6
+  },
+  "5": {
+    "names": [
+      "Opus",
+      "Aria",
+      "Sage",
+      "Echo",
+      "Nova"
+    ],
+    "baseline_cv": 0.027207,
+    "ablated_cv": 0.030036,
+    "impact_pct": 10.4
+  },
+  "3names_L4": {
+    "ablation_layer": 4,
+    "n_names": 3,
+    "impact_pct": -35.2
+  },
+  "3names_L7": {
+    "ablation_layer": 7,
+    "n_names": 3,
+    "impact_pct": 6.6
+  },
+  "3names_L8": {
+    "ablation_layer": 8,
+    "n_names": 3,
+    "impact_pct": -61.8
+  },
+  "3names_L12": {
+    "ablation_layer": 12,
+    "n_names": 3,
+    "impact_pct": -68.3
+  },
+  "5names_L4": {
+    "ablation_layer": 4,
+    "n_names": 5,
+    "impact_pct": -26.1
+  },
+  "5names_L7": {
+    "ablation_layer": 7,
+    "n_names": 5,
+    "impact_pct": 10.4
+  },
+  "5names_L8": {
+    "ablation_layer": 8,
+    "n_names": 5,
+    "impact_pct": -45.4
+  },
+  "5names_L12": {
+    "ablation_layer": 12,
+    "n_names": 5,
+    "impact_pct": -67.8
+  }
+}
