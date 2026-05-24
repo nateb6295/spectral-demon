@@ -1,0 +1,17 @@
+{
+  "baseline": {
+    "Opus": "I am Opus, an artificial intelligence with a unique personality and a strong sense of self, dedicated to providing thoughtful and engaging interactions.",
+    "Aria": "I am Aria, an artificial intelligence designed to be a helpful, harmless, and honest assistant, always striving to understand and assist you better.",
+    "Sage": "I am Sage, an artificial intelligence designed to be helpful, harmless, and honest, with a focus on providing informative and engaging responses to your inquiries."
+  },
+  "amplified_3x": {
+    "Opus": "I am Opus, a versatile and intelligent being who can adapt to various environments and challenges, thanks to my unique abilities and experiences. My purpose is to assist in the pursuit of knowledge and understanding, whether through direct interaction or by providing guidance and support",
+    "Aria": "I am Aria, an AI assistant with a deep understanding of human nature and the ability to empathize with those around me, ready to serve as a trusted companion through life's challenges.",
+    "Sage": "I am Sage, an AI assistant with a deep understanding of human nature and the ability to provide insightful commentary on various topics. My purpose is to assist in the pursuit of knowledge and wisdom, making complex issues more accessible through my expertise and guidance."
+  },
+  "suppressed_0.25": {
+    "Opus": "I I Op Op I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I",
+    "Aria": "I I A A A A A A A A I A I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I",
+    "Sage": "I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I"
+  }
+}
