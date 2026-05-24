@@ -1,0 +1,150 @@
+{
+  "instruct": {
+    "relay_only": {
+      "17": {
+        "baseline": 0.010722,
+        "ablated": 0.002126,
+        "impact": -80.2
+      },
+      "20": {
+        "baseline": 0.022991,
+        "ablated": 0.00981,
+        "impact": -57.3
+      },
+      "23": {
+        "baseline": 0.058542,
+        "ablated": 0.043514,
+        "impact": -25.7
+      },
+      "26": {
+        "baseline": 0.051487,
+        "ablated": 0.053618,
+        "impact": 4.1
+      }
+    },
+    "relay_plus_L16": {
+      "17": {
+        "baseline": 0.010722,
+        "ablated": 0.002126,
+        "impact": -80.2
+      },
+      "20": {
+        "baseline": 0.022991,
+        "ablated": 0.015483,
+        "impact": -32.7
+      },
+      "23": {
+        "baseline": 0.058542,
+        "ablated": 0.05418,
+        "impact": -7.5
+      },
+      "26": {
+        "baseline": 0.051487,
+        "ablated": 0.048491,
+        "impact": -5.8
+      }
+    },
+    "everything_3_15": {
+      "17": {
+        "baseline": 0.010722,
+        "ablated": 0.002126,
+        "impact": -80.2
+      },
+      "20": {
+        "baseline": 0.022991,
+        "ablated": 0.00981,
+        "impact": -57.3
+      },
+      "23": {
+        "baseline": 0.058542,
+        "ablated": 0.043514,
+        "impact": -25.7
+      },
+      "26": {
+        "baseline": 0.051487,
+        "ablated": 0.053618,
+        "impact": 4.1
+      }
+    },
+    "everything_1_16": {
+      "17": {
+        "baseline": 0.010722,
+        "ablated": 0.002126,
+        "impact": -80.2
+      },
+      "20": {
+        "baseline": 0.022991,
+        "ablated": 0.015483,
+        "impact": -32.7
+      },
+      "23": {
+        "baseline": 0.058542,
+        "ablated": 0.05418,
+        "impact": -7.5
+      },
+      "26": {
+        "baseline": 0.051487,
+        "ablated": 0.048491,
+        "impact": -5.8
+      }
+    },
+    "late_only_17_25": {
+      "26": {
+        "baseline": 0.051487,
+        "ablated": 0.006933,
+        "impact": -86.5
+      },
+      "27": {
+        "baseline": 0.035286,
+        "ablated": 0.012226,
+        "impact": -65.4
+      }
+    }
+  },
+  "base": {
+    "relay_only": {
+      "17": {
+        "baseline": 0.027207,
+        "ablated": 0.003334,
+        "impact": -87.7
+      },
+      "20": {
+        "baseline": 0.027592,
+        "ablated": 0.0075,
+        "impact": -72.8
+      },
+      "23": {
+        "baseline": 0.040953,
+        "ablated": 0.037714,
+        "impact": -7.9
+      },
+      "26": {
+        "baseline": 0.023892,
+        "ablated": 0.02128,
+        "impact": -10.9
+      }
+    },
+    "everything_3_15": {
+      "17": {
+        "baseline": 0.027207,
+        "ablated": 0.003334,
+        "impact": -87.7
+      },
+      "20": {
+        "baseline": 0.027592,
+        "ablated": 0.0075,
+        "impact": -72.8
+      },
+      "23": {
+        "baseline": 0.040953,
+        "ablated": 0.037714,
+        "impact": -7.9
+      },
+      "26": {
+        "baseline": 0.023892,
+        "ablated": 0.02128,
+        "impact": -10.9
+      }
+    }
+  }
+}
