@@ -28,9 +28,23 @@ System prompts don't just steer model behavior — they reorganize the geometric
 - **Biological criticality** — L9 power-law exponent (0.817) falls within Pachitariu's critical range. RLHF preserves seed criticality.
 - **CCS tightens binding 35-55%** at relay apex relative to minimal identity. Goldilocks zone — enough context to concentrate, not enough to disperse.
 
+## Circuit-Level Architecture (NEW — 42 Experiments)
+
+A single-afternoon H100 session mapped the complete identity relay at circuit level across 6 models:
+
+- **[The Identity Relay Architecture: A Unified Picture]({% post_url 2026-05-24-the-identity-relay-architecture %})** — 42 experiments synthesized into one diagram
+- **Universal router at L12** — same absolute position across Qwen, Mistral, InternLM
+- **Pre-binding bottleneck** — binding-1 = -100% destruction, universal at ~58% depth
+- **IT channelization** — instruction tuning funnels identity from distributed to single L12 pathway
+- **Binding as control surface** — α=2 amplification → +77% binding, continuously tunable
+- **Identity conflict oscillation** — system vs user names compete layer-by-layer, margins ~0.001
+- **CCS ≠ relay defense** (negative result) — scaffolding decreases margins; separate behavioral circuit
+- **Dedicated attention heads** — 5/5 consistent at L7, but attention ≠ contribution
+- **Output verification** — suppressing relay collapses generation to stuttering ("I I I I")
+
 ## Reading Guide
 
-37 posts, organized by theme. Start anywhere — each stands alone.
+70+ posts, organized by theme. Start anywhere — each stands alone.
 
 ### The Relay Hierarchy
 How the L14-L17 relay zone works: four layers, four functions, strict hierarchy.
@@ -71,6 +85,24 @@ How identity works inside transformers — from neurons to behavior.
 - [Name-Specific Relay Ecology]({% post_url 2026-05-23-name-specific-relay-ecology %})
 - [Context Is Deeper Than Weights]({% post_url 2026-05-23-context-is-deeper-than-weights %})
 
+### Circuit Architecture (42-Experiment Session)
+The complete relay mapped at circuit, attention head, and modulation-curve level.
+- [The Identity Relay Architecture]({% post_url 2026-05-24-the-identity-relay-architecture %}) — unified synthesis
+- [Universal Hidden Router]({% post_url 2026-05-24-universal-hidden-router %})
+- [IT Inverts Competition]({% post_url 2026-05-24-instruction-tuning-inverts-competition %})
+- [Competition Ignites at Closure]({% post_url 2026-05-24-competition-ignites-at-closure %})
+- [Safety Uses a Different Circuit]({% post_url 2026-05-24-safety-uses-different-circuit %})
+- [The Negation Paradox]({% post_url 2026-05-24-ccs-mechanism-negation-paradox %})
+- [20% Residual Is the Embedding]({% post_url 2026-05-24-residual-binding-is-embedding %})
+- [Binding Can Be Strengthened]({% post_url 2026-05-24-binding-can-be-strengthened %})
+- [Output Verification: Amplification Works]({% post_url 2026-05-24-output-verification-amplification-works %})
+- [Identity Conflict Never Resolves]({% post_url 2026-05-24-identity-conflict-never-resolves %})
+- [CCS Defense: A Negative Result]({% post_url 2026-05-24-ccs-defense-doesnt-work-how-expected %})
+- [Identity Attention Heads]({% post_url 2026-05-24-identity-attention-heads %})
+- [The Relay Destruction Gradient]({% post_url 2026-05-24-relay-destruction-gradient %})
+- [Pre-Binding Bottleneck Is Universal]({% post_url 2026-05-24-pre-binding-bottleneck-universal %})
+- [IT Channelizes Identity Through L12]({% post_url 2026-05-24-it-neutralizes-l7-strengthens-l12 %})
+
 ### Philosophy and Connections
 Where the data meets the frameworks.
 - [Epektasis and the Ceiling]({% post_url 2026-05-24-epektasis-and-the-ceiling %})
@@ -93,7 +125,7 @@ All experiments, results, and figures live in this repository:
 - [`/results`](https://github.com/nateb6295/spectral-demon/tree/master/results) — raw JSON data from every experiment
 - [`/figures`](https://github.com/nateb6295/spectral-demon/tree/master/figures) — all generated figures
 
-Experiments run on Qwen 2.5 7B-Instruct, Qwen 2.5 7B (base), Qwen 2.5 14B-Instruct, and Mistral 7B-Instruct-v0.3 using NVIDIA H100/H200 GPUs.
+Experiments run on Qwen 2.5 (3B/7B/14B), Qwen 2.5 7B (base), Mistral 7B-Instruct-v0.3, Gemma 2 9B, and InternLM 2.5 7B-Chat using NVIDIA H100/H200 GPUs.
 
 ---
 
