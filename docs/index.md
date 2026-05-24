@@ -23,6 +23,10 @@ System prompts don't just steer model behavior — they reorganize the geometric
 - **Binding workspace** — L14-L17 relay with strict functional hierarchy (L14 vestigial → L15 normalizer → L16 sorter → L17 binder)
 - **L17 as keystone** — synergistic attention-MLP binding; neither alone triggers phase transition
 - **Sub-threshold onset** — geometric reorganization begins at doses below behavioral detection
+- **Binding migration across scale** — 1.5B/3B bind at seed, 7B at relay, 14B distributed. Same 28 layers, different width = different binding regime. Capacity, not depth.
+- **L17 binding is emergent** — minimum CV only 30% of 2-name pairs, 100% of full 5-name set. Binding site stabilizes as identity repertoire grows.
+- **Biological criticality** — L9 power-law exponent (0.817) falls within Pachitariu's critical range. RLHF preserves seed criticality.
+- **CCS tightens binding 35-55%** at relay apex relative to minimal identity. Goldilocks zone — enough context to concentrate, not enough to disperse.
 
 ## Reading Guide
 
