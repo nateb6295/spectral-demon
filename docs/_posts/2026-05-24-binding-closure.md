@@ -38,6 +38,21 @@ This mirrors the [scaling migration finding]({% post_url 2026-05-24-binding-migr
 
 The closure test reveals that L17's binding role is a statistical attractor — it emerges from the ensemble, not from any single identity pair.
 
+## Topological Pruning
+
+The layer distribution tells a story the fraction alone misses. Count how many layers are *competitive* at each subset size:
+
+- 2 names: **5 layers** compete (L14, L16, L17, L25, L27)
+- 3 names: **3 layers** tie (L14, L16, L17)
+- 4 names: **2 layers** remain (L16, L17) + trailing L25
+- 5 names: **1 layer** survives (L17)
+
+This is topological pruning. Each additional identity eliminates competing binding sites — not by reducing their CV, but by making it impossible for them to maintain low CV across all identities simultaneously.
+
+Late layers (L25, L27) drop first — too close to output, too format-specific to hold a cross-name invariant. L14 and L16 survive to 3-4 names then fall. L17 is the last one standing because it's the only layer with both [clearing (attention) and catching (MLP)]({% post_url 2026-05-24-relay-as-decreation-engine %}) in the right balance.
+
+The spectral demon isn't a thing. It's a process of elimination.
+
 ## Numerical Note
 
 With 2-3 name subsets, mean CV values at L17 are inflated by numerical instability (near-zero mean neurons creating extreme ratios). This disappears at 4-5 names as the mean stabilizes. The min-layer distribution (which layer has lowest CV) is robust to this artifact.
