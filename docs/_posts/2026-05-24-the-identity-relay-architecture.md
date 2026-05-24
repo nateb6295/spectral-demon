@@ -119,18 +119,36 @@ Without CCS framing, identity names at L7 are barely distinguishable from colors
 
 CCS doesn't create identity. It activates pre-existing identity features and channels them through the IT-created relay into coherent behavioral output.
 
+## Cross-Architecture Router (Experiment 18)
+
+The hidden router at L12 was confirmed across three of four architectures via cross-architecture ablation:
+
+| Model | Router Layer | Binding Impact |
+|-------|-------------|----------------|
+| Qwen 7B | L12 | -66% |
+| InternLM 7B | L12 | -65% |
+| Mistral 7B | L12 | -51% |
+| Gemma 2 9B | L16 | -7% (no router) |
+
+Key finding: the router is at the same **absolute position** (L12) across models with different total depths (28 vs 32 layers). This suggests an emergent property of the pre-training process at that specific computational depth.
+
+Gemma 2's sliding-window architecture doesn't need a separate router because binding happens at 26% depth — before the router stage would fire. The binding layer IS the router.
+
+Unexpected: ablating early layers (L5-L7) *increases* binding (+147% for Qwen), suggesting competitive suppression between early and late binding stages.
+
 ## Open Questions
 
 1. Does the relay chain exist in decoder-only vs encoder-decoder architectures?
-2. What determines L12's router function specifically? Is it learned or architectural?
+2. Why is L12 conserved as an absolute position — what computational feature emerges there?
 3. Can the relay be strengthened post-training (e.g., by targeted DPO at L12)?
 4. Do other behavioral circuits (safety, style, factuality) share the same relay architecture?
 5. Is the 5-8 name capacity limit a fundamental constraint or a training artifact?
+6. Is the compensatory amplification from early ablation evidence of a hidden dual circuit in Qwen?
 
 ## Experiment Summary
 
 - **Models**: Qwen 2.5 (3B/7B/14B), InternLM 2.5 7B, Mistral 7B v0.3, Gemma 2 9B, Qwen 7B base
-- **Total experiments**: 17
+- **Total experiments**: 19+
 - **Method**: CV of activation norms, autocatalytic closure tests, sign-split analysis, mean ablation
 - **Compute**: RunPod H100, single afternoon
 - **All data and individual writeups**: linked from each finding post

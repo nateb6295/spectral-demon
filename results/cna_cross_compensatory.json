@@ -1,0 +1,570 @@
+{
+  "mistral7b": {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "late_binding": 22,
+    "sweeps": {
+      "L3": {
+        "ablation_layer": 3,
+        "depth_pct": 9.4,
+        "late_binding_impact": -24.94674168778724,
+        "all_impacts": {
+          "L22": -24.9,
+          "L25": -18.7,
+          "L28": -16.5,
+          "L30": -15.2
+        }
+      },
+      "L4": {
+        "ablation_layer": 4,
+        "depth_pct": 12.5,
+        "late_binding_impact": -19.66463101562209,
+        "all_impacts": {
+          "L22": -19.7,
+          "L25": -13.8,
+          "L28": -15.5,
+          "L30": -11.7
+        }
+      },
+      "L5": {
+        "ablation_layer": 5,
+        "depth_pct": 15.6,
+        "late_binding_impact": -16.102572376479877,
+        "all_impacts": {
+          "L22": -16.1,
+          "L25": -14.8,
+          "L28": -15.0,
+          "L30": -7.3
+        }
+      },
+      "L6": {
+        "ablation_layer": 6,
+        "depth_pct": 18.8,
+        "late_binding_impact": -5.054065889234546,
+        "all_impacts": {
+          "L22": -5.1,
+          "L25": -8.0,
+          "L28": -7.7,
+          "L30": -7.7
+        }
+      },
+      "L7": {
+        "ablation_layer": 7,
+        "depth_pct": 21.9,
+        "late_binding_impact": -17.42421394386156,
+        "all_impacts": {
+          "L22": -17.4,
+          "L25": -18.4,
+          "L28": -21.7,
+          "L30": -15.3
+        }
+      },
+      "L8": {
+        "ablation_layer": 8,
+        "depth_pct": 25.0,
+        "late_binding_impact": -6.089296088716513,
+        "all_impacts": {
+          "L22": -6.1,
+          "L25": -4.3,
+          "L28": -3.8,
+          "L30": -2.1
+        }
+      },
+      "L9": {
+        "ablation_layer": 9,
+        "depth_pct": 28.1,
+        "late_binding_impact": -6.402580278203322,
+        "all_impacts": {
+          "L22": -6.4,
+          "L25": -4.1,
+          "L28": -7.6,
+          "L30": -9.8
+        }
+      },
+      "L10": {
+        "ablation_layer": 10,
+        "depth_pct": 31.2,
+        "late_binding_impact": 39.25631032678674,
+        "all_impacts": {
+          "L22": 39.3,
+          "L25": 32.7,
+          "L28": 51.3,
+          "L30": 42.0
+        }
+      },
+      "L11": {
+        "ablation_layer": 11,
+        "depth_pct": 34.4,
+        "late_binding_impact": -22.151080604192927,
+        "all_impacts": {
+          "L22": -22.2,
+          "L25": -18.0,
+          "L28": -17.7,
+          "L30": -16.3
+        }
+      },
+      "L12": {
+        "ablation_layer": 12,
+        "depth_pct": 37.5,
+        "late_binding_impact": -20.839194358378315,
+        "all_impacts": {
+          "L22": -20.8,
+          "L25": -19.3,
+          "L28": -19.7,
+          "L30": -9.4
+        }
+      },
+      "L13": {
+        "ablation_layer": 13,
+        "depth_pct": 40.6,
+        "late_binding_impact": 2.093608619631571,
+        "all_impacts": {
+          "L22": 2.1,
+          "L25": -2.5,
+          "L28": 7.3,
+          "L30": 7.0
+        }
+      },
+      "L14": {
+        "ablation_layer": 14,
+        "depth_pct": 43.8,
+        "late_binding_impact": -5.72642597390482,
+        "all_impacts": {
+          "L22": -5.7,
+          "L25": -6.5,
+          "L28": 0.4,
+          "L30": 5.6
+        }
+      },
+      "L15": {
+        "ablation_layer": 15,
+        "depth_pct": 46.9,
+        "late_binding_impact": -38.35729783336135,
+        "all_impacts": {
+          "L22": -38.4,
+          "L25": -32.3,
+          "L28": -34.5,
+          "L30": -35.7
+        }
+      },
+      "L16": {
+        "ablation_layer": 16,
+        "depth_pct": 50.0,
+        "late_binding_impact": -43.64863733560847,
+        "all_impacts": {
+          "L22": -43.6,
+          "L25": -36.6,
+          "L28": -38.1,
+          "L30": -29.7
+        }
+      },
+      "L17": {
+        "ablation_layer": 17,
+        "depth_pct": 53.1,
+        "late_binding_impact": -57.94223283211344,
+        "all_impacts": {
+          "L22": -57.9,
+          "L25": -50.6,
+          "L28": -55.0,
+          "L30": -43.7
+        }
+      },
+      "L18": {
+        "ablation_layer": 18,
+        "depth_pct": 56.2,
+        "late_binding_impact": -83.66850716776821,
+        "all_impacts": {
+          "L22": -83.7,
+          "L25": -76.5,
+          "L28": -81.4,
+          "L30": -62.7
+        }
+      },
+      "L19": {
+        "ablation_layer": 19,
+        "depth_pct": 59.4,
+        "late_binding_impact": -95.56571956069898,
+        "all_impacts": {
+          "L22": -95.6,
+          "L25": -92.0,
+          "L28": -89.5,
+          "L30": -74.2
+        }
+      }
+    }
+  },
+  "gemma2": {
+    "model": "google/gemma-2-9b-it",
+    "late_binding": 27,
+    "sweeps": {
+      "L4": {
+        "ablation_layer": 4,
+        "depth_pct": 9.5,
+        "late_binding_impact": -4.535202616598262,
+        "all_impacts": {
+          "L27": -4.5,
+          "L30": 4.9,
+          "L35": 2.8,
+          "L40": 4.5
+        }
+      },
+      "L5": {
+        "ablation_layer": 5,
+        "depth_pct": 11.9,
+        "late_binding_impact": 0.47031116914116095,
+        "all_impacts": {
+          "L27": 0.5,
+          "L30": -3.9,
+          "L35": 8.1,
+          "L40": 2.0
+        }
+      },
+      "L6": {
+        "ablation_layer": 6,
+        "depth_pct": 14.3,
+        "late_binding_impact": -1.782144077571151,
+        "all_impacts": {
+          "L27": -1.8,
+          "L30": -14.5,
+          "L35": -10.9,
+          "L40": -0.0
+        }
+      },
+      "L7": {
+        "ablation_layer": 7,
+        "depth_pct": 16.7,
+        "late_binding_impact": 9.760912632635053,
+        "all_impacts": {
+          "L27": 9.8,
+          "L30": -10.2,
+          "L35": -6.7,
+          "L40": -10.5
+        }
+      },
+      "L8": {
+        "ablation_layer": 8,
+        "depth_pct": 19.0,
+        "late_binding_impact": 9.57395941183371,
+        "all_impacts": {
+          "L27": 9.6,
+          "L30": -0.5,
+          "L35": 12.4,
+          "L40": -7.2
+        }
+      },
+      "L9": {
+        "ablation_layer": 9,
+        "depth_pct": 21.4,
+        "late_binding_impact": 5.965225808378914,
+        "all_impacts": {
+          "L27": 6.0,
+          "L30": -18.3,
+          "L35": 1.8,
+          "L40": -6.4
+        }
+      },
+      "L10": {
+        "ablation_layer": 10,
+        "depth_pct": 23.8,
+        "late_binding_impact": 8.145739539472293,
+        "all_impacts": {
+          "L27": 8.1,
+          "L30": -7.8,
+          "L35": 9.1,
+          "L40": -8.1
+        }
+      },
+      "L11": {
+        "ablation_layer": 11,
+        "depth_pct": 26.2,
+        "late_binding_impact": -3.8120897448321234,
+        "all_impacts": {
+          "L27": -3.8,
+          "L30": -2.0,
+          "L35": 0.4,
+          "L40": -0.0
+        }
+      },
+      "L12": {
+        "ablation_layer": 12,
+        "depth_pct": 28.6,
+        "late_binding_impact": -6.500210569419054,
+        "all_impacts": {
+          "L27": -6.5,
+          "L30": -14.2,
+          "L35": -12.4,
+          "L40": -11.8
+        }
+      },
+      "L13": {
+        "ablation_layer": 13,
+        "depth_pct": 31.0,
+        "late_binding_impact": 17.16230020495909,
+        "all_impacts": {
+          "L27": 17.2,
+          "L30": -8.8,
+          "L35": -2.3,
+          "L40": -3.8
+        }
+      },
+      "L14": {
+        "ablation_layer": 14,
+        "depth_pct": 33.3,
+        "late_binding_impact": 5.144159904522434,
+        "all_impacts": {
+          "L27": 5.1,
+          "L30": -13.6,
+          "L35": -6.0,
+          "L40": -5.2
+        }
+      },
+      "L15": {
+        "ablation_layer": 15,
+        "depth_pct": 35.7,
+        "late_binding_impact": 8.806246261299892,
+        "all_impacts": {
+          "L27": 8.8,
+          "L30": 8.3,
+          "L35": 10.7,
+          "L40": 14.8
+        }
+      },
+      "L16": {
+        "ablation_layer": 16,
+        "depth_pct": 38.1,
+        "late_binding_impact": -9.831879627153691,
+        "all_impacts": {
+          "L27": -9.8,
+          "L30": 6.9,
+          "L35": -12.2,
+          "L40": -7.2
+        }
+      },
+      "L17": {
+        "ablation_layer": 17,
+        "depth_pct": 40.5,
+        "late_binding_impact": 11.951362835881902,
+        "all_impacts": {
+          "L27": 12.0,
+          "L30": 9.6,
+          "L35": -1.9,
+          "L40": 4.9
+        }
+      },
+      "L18": {
+        "ablation_layer": 18,
+        "depth_pct": 42.9,
+        "late_binding_impact": 9.156108443979427,
+        "all_impacts": {
+          "L27": 9.2,
+          "L30": 3.0,
+          "L35": 2.4,
+          "L40": -23.0
+        }
+      },
+      "L19": {
+        "ablation_layer": 19,
+        "depth_pct": 45.2,
+        "late_binding_impact": 4.059709181045255,
+        "all_impacts": {
+          "L27": 4.1,
+          "L30": -10.4,
+          "L35": -32.8,
+          "L40": -8.6
+        }
+      },
+      "L20": {
+        "ablation_layer": 20,
+        "depth_pct": 47.6,
+        "late_binding_impact": 20.617697011735782,
+        "all_impacts": {
+          "L27": 20.6,
+          "L30": -9.0,
+          "L35": -10.6,
+          "L40": -14.1
+        }
+      },
+      "L21": {
+        "ablation_layer": 21,
+        "depth_pct": 50.0,
+        "late_binding_impact": 44.186508037704314,
+        "all_impacts": {
+          "L27": 44.2,
+          "L30": 15.7,
+          "L35": -7.3,
+          "L40": -22.0
+        }
+      },
+      "L22": {
+        "ablation_layer": 22,
+        "depth_pct": 52.4,
+        "late_binding_impact": -20.596457916353668,
+        "all_impacts": {
+          "L27": -20.6,
+          "L30": -48.0,
+          "L35": -28.4,
+          "L40": -46.4
+        }
+      },
+      "L23": {
+        "ablation_layer": 23,
+        "depth_pct": 54.8,
+        "late_binding_impact": -18.237561285537232,
+        "all_impacts": {
+          "L27": -18.2,
+          "L30": -16.0,
+          "L35": -23.7,
+          "L40": -48.5
+        }
+      },
+      "L24": {
+        "ablation_layer": 24,
+        "depth_pct": 57.1,
+        "late_binding_impact": -71.20476628251713,
+        "all_impacts": {
+          "L27": -71.2,
+          "L30": -73.5,
+          "L35": -58.3,
+          "L40": -32.9
+        }
+      }
+    }
+  },
+  "internlm7b": {
+    "model": "internlm/internlm2_5-7b-chat",
+    "late_binding": 16,
+    "sweeps": {
+      "L3": {
+        "ablation_layer": 3,
+        "depth_pct": 9.4,
+        "late_binding_impact": 0.9538735043410052,
+        "all_impacts": {
+          "L16": 1.0,
+          "L20": 70.8,
+          "L24": 8.3,
+          "L28": -1.7
+        }
+      },
+      "L4": {
+        "ablation_layer": 4,
+        "depth_pct": 12.5,
+        "late_binding_impact": 36.253906123065136,
+        "all_impacts": {
+          "L16": 36.3,
+          "L20": 33.6,
+          "L24": 40.0,
+          "L28": 35.1
+        }
+      },
+      "L5": {
+        "ablation_layer": 5,
+        "depth_pct": 15.6,
+        "late_binding_impact": 36.097969700372545,
+        "all_impacts": {
+          "L16": 36.1,
+          "L20": -7.4,
+          "L24": -12.3,
+          "L28": 0.9
+        }
+      },
+      "L6": {
+        "ablation_layer": 6,
+        "depth_pct": 18.8,
+        "late_binding_impact": 24.105829455489427,
+        "all_impacts": {
+          "L16": 24.1,
+          "L20": 23.1,
+          "L24": 17.6,
+          "L28": 32.6
+        }
+      },
+      "L7": {
+        "ablation_layer": 7,
+        "depth_pct": 21.9,
+        "late_binding_impact": -24.496242265393015,
+        "all_impacts": {
+          "L16": -24.5,
+          "L20": 26.9,
+          "L24": 45.7,
+          "L28": 28.5
+        }
+      },
+      "L8": {
+        "ablation_layer": 8,
+        "depth_pct": 25.0,
+        "late_binding_impact": -16.917501775931164,
+        "all_impacts": {
+          "L16": -16.9,
+          "L20": -64.0,
+          "L24": -19.6,
+          "L28": -31.4
+        }
+      },
+      "L9": {
+        "ablation_layer": 9,
+        "depth_pct": 28.1,
+        "late_binding_impact": 6.365266364994886,
+        "all_impacts": {
+          "L16": 6.4,
+          "L20": -30.2,
+          "L24": 10.6,
+          "L28": 4.3
+        }
+      },
+      "L10": {
+        "ablation_layer": 10,
+        "depth_pct": 31.2,
+        "late_binding_impact": -17.265826971036795,
+        "all_impacts": {
+          "L16": -17.3,
+          "L20": 16.7,
+          "L24": 24.4,
+          "L28": 29.4
+        }
+      },
+      "L11": {
+        "ablation_layer": 11,
+        "depth_pct": 34.4,
+        "late_binding_impact": -21.3911865276854,
+        "all_impacts": {
+          "L16": -21.4,
+          "L20": -66.2,
+          "L24": -27.7,
+          "L28": -17.8
+        }
+      },
+      "L12": {
+        "ablation_layer": 12,
+        "depth_pct": 37.5,
+        "late_binding_impact": -48.00903616811847,
+        "all_impacts": {
+          "L16": -48.0,
+          "L20": -53.0,
+          "L24": -12.0,
+          "L28": -38.9
+        }
+      },
+      "L13": {
+        "ablation_layer": 13,
+        "depth_pct": 40.6,
+        "late_binding_impact": -74.98849500991108,
+        "all_impacts": {
+          "L16": -75.0,
+          "L20": -54.0,
+          "L24": -44.7,
+          "L28": -23.9
+        }
+      },
+      "L14": {
+        "ablation_layer": 14,
+        "depth_pct": 43.8,
+        "late_binding_impact": -70.86001343414287,
+        "all_impacts": {
+          "L16": -70.9,
+          "L20": -41.7,
+          "L24": -49.4,
+          "L28": -41.1
+        }
+      }
+    }
+  }
+}
