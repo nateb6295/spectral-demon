@@ -46,6 +46,7 @@ Where identity binding happens and why — across architectures and scales.
 - [Binding Scales Differently Than Sorting]({% post_url 2026-05-24-binding-scales-differently %})
 - [Binding Migrates from Seed to Relay Across Scale]({% post_url 2026-05-24-binding-migration-across-scale %})
 - [L17 Binding Is Emergent: Closure Under Name Subsets]({% post_url 2026-05-24-binding-closure %})
+- [Binding Is Relative Depth, Not Absolute Layer]({% post_url 2026-05-24-binding-relative-depth %})
 
 ### DPO and the Ceiling
 What fine-tuning does to identity circuits — and where it stops.
