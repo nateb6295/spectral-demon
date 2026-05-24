@@ -18,6 +18,14 @@ The mechanism: L17 ablation collapses generic-channel sorting. ChatGPT's generic
 
 For Opus, the effect is minimal (1.16 → 1.12) because Opus has lower baseline generic PR (2.90) — less structure to lose.
 
+**L15 sorts by channel, not by name.** L15 ablation drops relational PR for all names (-0.24 to -0.68) and raises generic PR (+0.10 to +0.41), converging both toward ~3.0. CV stays low in both channels — name discrimination is preserved, channel discrimination is lost. L15 maintains the relational-vs-generic distinction that L16 and L17 then sort within. Without L15, there's nothing channel-specific for L16/L17 to operate on.
+
+The complete relay hierarchy:
+- L14: vestigial (redundant to any later layer)
+- L15: channel normalizer (creates rel/gen separation)
+- L16: name sorter, relational channel (rel_cv 3.7→9.4 when ablated)
+- L17: name sorter, generic channel (gen_cv 3.5→13.3 when ablated)
+
 Three additional findings from the same data:
 
 **L9 is immune.** Every relay ablation (L14, L15, L16, L17, all combinations) produces identical L9 PR values. The seed operates on a completely independent pathway. Downstream disruption doesn't propagate upstream.
