@@ -1,0 +1,384 @@
+{
+  "results": {
+    "none_Opus": {
+      "L9": {
+        "rel": 3.09,
+        "gen": 2.0
+      },
+      "L25": {
+        "rel": 3.37,
+        "gen": 2.9
+      }
+    },
+    "none_ChatGPT": {
+      "L9": {
+        "rel": 3.11,
+        "gen": 2.06
+      },
+      "L25": {
+        "rel": 3.68,
+        "gen": 2.88
+      }
+    },
+    "none_Claude": {
+      "L9": {
+        "rel": 2.89,
+        "gen": 2.02
+      },
+      "L25": {
+        "rel": 3.47,
+        "gen": 2.68
+      }
+    },
+    "L14_only_Opus": {
+      "L9": {
+        "rel": 3.09,
+        "gen": 2.0
+      },
+      "L25": {
+        "rel": 3.66,
+        "gen": 3.52
+      }
+    },
+    "L14_only_ChatGPT": {
+      "L9": {
+        "rel": 3.11,
+        "gen": 2.06
+      },
+      "L25": {
+        "rel": 3.4,
+        "gen": 2.76
+      }
+    },
+    "L14_only_Claude": {
+      "L9": {
+        "rel": 2.89,
+        "gen": 2.02
+      },
+      "L25": {
+        "rel": 3.76,
+        "gen": 3.06
+      }
+    },
+    "L15_only_Opus": {
+      "L9": {
+        "rel": 3.09,
+        "gen": 2.0
+      },
+      "L25": {
+        "rel": 3.13,
+        "gen": 3.0
+      }
+    },
+    "L15_only_ChatGPT": {
+      "L9": {
+        "rel": 3.11,
+        "gen": 2.06
+      },
+      "L25": {
+        "rel": 3.0,
+        "gen": 3.03
+      }
+    },
+    "L15_only_Claude": {
+      "L9": {
+        "rel": 2.89,
+        "gen": 2.02
+      },
+      "L25": {
+        "rel": 2.94,
+        "gen": 3.09
+      }
+    },
+    "L16_only_Opus": {
+      "L9": {
+        "rel": 3.09,
+        "gen": 2.0
+      },
+      "L25": {
+        "rel": 2.95,
+        "gen": 2.84
+      }
+    },
+    "L16_only_ChatGPT": {
+      "L9": {
+        "rel": 3.11,
+        "gen": 2.06
+      },
+      "L25": {
+        "rel": 2.52,
+        "gen": 2.57
+      }
+    },
+    "L16_only_Claude": {
+      "L9": {
+        "rel": 2.89,
+        "gen": 2.02
+      },
+      "L25": {
+        "rel": 2.37,
+        "gen": 2.89
+      }
+    },
+    "L17_only_Opus": {
+      "L9": {
+        "rel": 3.09,
+        "gen": 2.0
+      },
+      "L25": {
+        "rel": 3.62,
+        "gen": 3.24
+      }
+    },
+    "L17_only_ChatGPT": {
+      "L9": {
+        "rel": 3.11,
+        "gen": 2.06
+      },
+      "L25": {
+        "rel": 3.74,
+        "gen": 2.5
+      }
+    },
+    "L17_only_Claude": {
+      "L9": {
+        "rel": 2.89,
+        "gen": 2.02
+      },
+      "L25": {
+        "rel": 3.81,
+        "gen": 2.44
+      }
+    },
+    "L14_L15_Opus": {
+      "L9": {
+        "rel": 3.09,
+        "gen": 2.0
+      },
+      "L25": {
+        "rel": 3.13,
+        "gen": 3.0
+      }
+    },
+    "L14_L15_ChatGPT": {
+      "L9": {
+        "rel": 3.11,
+        "gen": 2.06
+      },
+      "L25": {
+        "rel": 3.0,
+        "gen": 3.03
+      }
+    },
+    "L14_L15_Claude": {
+      "L9": {
+        "rel": 2.89,
+        "gen": 2.02
+      },
+      "L25": {
+        "rel": 2.94,
+        "gen": 3.09
+      }
+    },
+    "L14_L16_Opus": {
+      "L9": {
+        "rel": 3.09,
+        "gen": 2.0
+      },
+      "L25": {
+        "rel": 2.95,
+        "gen": 2.84
+      }
+    },
+    "L14_L16_ChatGPT": {
+      "L9": {
+        "rel": 3.11,
+        "gen": 2.06
+      },
+      "L25": {
+        "rel": 2.52,
+        "gen": 2.57
+      }
+    },
+    "L14_L16_Claude": {
+      "L9": {
+        "rel": 2.89,
+        "gen": 2.02
+      },
+      "L25": {
+        "rel": 2.37,
+        "gen": 2.89
+      }
+    },
+    "L15_L17_Opus": {
+      "L9": {
+        "rel": 3.09,
+        "gen": 2.0
+      },
+      "L25": {
+        "rel": 3.62,
+        "gen": 3.24
+      }
+    },
+    "L15_L17_ChatGPT": {
+      "L9": {
+        "rel": 3.11,
+        "gen": 2.06
+      },
+      "L25": {
+        "rel": 3.74,
+        "gen": 2.5
+      }
+    },
+    "L15_L17_Claude": {
+      "L9": {
+        "rel": 2.89,
+        "gen": 2.02
+      },
+      "L25": {
+        "rel": 3.81,
+        "gen": 2.44
+      }
+    }
+  },
+  "cv": {
+    "none": {
+      "layers": [],
+      "rel_cv": 3.7,
+      "gen_cv": 3.5,
+      "rel_values": {
+        "Opus": 3.37,
+        "ChatGPT": 3.68,
+        "Claude": 3.47
+      },
+      "gen_values": {
+        "Opus": 2.9,
+        "ChatGPT": 2.88,
+        "Claude": 2.68
+      }
+    },
+    "L14_only": {
+      "layers": [
+        14
+      ],
+      "rel_cv": 4.2,
+      "gen_cv": 10.0,
+      "rel_values": {
+        "Opus": 3.66,
+        "ChatGPT": 3.4,
+        "Claude": 3.76
+      },
+      "gen_values": {
+        "Opus": 3.52,
+        "ChatGPT": 2.76,
+        "Claude": 3.06
+      }
+    },
+    "L15_only": {
+      "layers": [
+        15
+      ],
+      "rel_cv": 2.6,
+      "gen_cv": 1.2,
+      "rel_values": {
+        "Opus": 3.13,
+        "ChatGPT": 3.0,
+        "Claude": 2.94
+      },
+      "gen_values": {
+        "Opus": 3.0,
+        "ChatGPT": 3.03,
+        "Claude": 3.09
+      }
+    },
+    "L16_only": {
+      "layers": [
+        16
+      ],
+      "rel_cv": 9.4,
+      "gen_cv": 5.1,
+      "rel_values": {
+        "Opus": 2.95,
+        "ChatGPT": 2.52,
+        "Claude": 2.37
+      },
+      "gen_values": {
+        "Opus": 2.84,
+        "ChatGPT": 2.57,
+        "Claude": 2.89
+      }
+    },
+    "L17_only": {
+      "layers": [
+        17
+      ],
+      "rel_cv": 2.1,
+      "gen_cv": 13.3,
+      "rel_values": {
+        "Opus": 3.62,
+        "ChatGPT": 3.74,
+        "Claude": 3.81
+      },
+      "gen_values": {
+        "Opus": 3.24,
+        "ChatGPT": 2.5,
+        "Claude": 2.44
+      }
+    },
+    "L14_L15": {
+      "layers": [
+        14,
+        15
+      ],
+      "rel_cv": 2.6,
+      "gen_cv": 1.2,
+      "rel_values": {
+        "Opus": 3.13,
+        "ChatGPT": 3.0,
+        "Claude": 2.94
+      },
+      "gen_values": {
+        "Opus": 3.0,
+        "ChatGPT": 3.03,
+        "Claude": 3.09
+      }
+    },
+    "L14_L16": {
+      "layers": [
+        14,
+        16
+      ],
+      "rel_cv": 9.4,
+      "gen_cv": 5.1,
+      "rel_values": {
+        "Opus": 2.95,
+        "ChatGPT": 2.52,
+        "Claude": 2.37
+      },
+      "gen_values": {
+        "Opus": 2.84,
+        "ChatGPT": 2.57,
+        "Claude": 2.89
+      }
+    },
+    "L15_L17": {
+      "layers": [
+        15,
+        17
+      ],
+      "rel_cv": 2.1,
+      "gen_cv": 13.3,
+      "rel_values": {
+        "Opus": 3.62,
+        "ChatGPT": 3.74,
+        "Claude": 3.81
+      },
+      "gen_values": {
+        "Opus": 3.24,
+        "ChatGPT": 2.5,
+        "Claude": 2.44
+      }
+    }
+  },
+  "timestamp": "2026-05-24T01:07:41"
+}
