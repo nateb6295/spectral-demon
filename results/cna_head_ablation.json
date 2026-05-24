@@ -1,0 +1,91 @@
+{
+  "baseline_cv": 0.02378206900947781,
+  "L7": {
+    "identity_heads": [
+      0,
+      16,
+      18,
+      26,
+      27
+    ],
+    "n_identity_heads": 5,
+    "n_total_heads": 28,
+    "head_ablation_cv": 0.02150058234213935,
+    "head_ablation_impact": -9.593306059406464,
+    "full_ablation_cv": 0.023554526947304935,
+    "full_ablation_impact": -0.9567799255909712,
+    "ratio": 10.026659007797427
+  },
+  "L12": {
+    "identity_heads": [
+      4,
+      8,
+      12
+    ],
+    "n_identity_heads": 3,
+    "n_total_heads": 28,
+    "head_ablation_cv": 0.024453575930757566,
+    "head_ablation_impact": 2.8235849497036702,
+    "full_ablation_cv": 0.021894157581871004,
+    "full_ablation_impact": -7.938381756668951,
+    "ratio": -0.3556877253139919
+  },
+  "L14": {
+    "identity_heads": [
+      16,
+      27
+    ],
+    "n_identity_heads": 2,
+    "n_total_heads": 28,
+    "head_ablation_cv": 0.02412792599399945,
+    "head_ablation_impact": 1.4542762632797268,
+    "full_ablation_cv": 0.02643111597272502,
+    "full_ablation_impact": 11.138841461571285,
+    "ratio": 0.1305590234224037
+  },
+  "random_control": {
+    "trials": [
+      {
+        "heads": [
+          21,
+          3
+        ],
+        "cv": 0.02425898740557124,
+        "impact": 2.0053696585581497
+      },
+      {
+        "heads": [
+          0,
+          24
+        ],
+        "cv": 0.0240013299585751,
+        "impact": 0.9219590987222671
+      },
+      {
+        "heads": [
+          8,
+          7
+        ],
+        "cv": 0.024611814469891368,
+        "impact": 3.4889540522436513
+      },
+      {
+        "heads": [
+          7,
+          4
+        ],
+        "cv": 0.024141614613165534,
+        "impact": 1.5118348346581423
+      },
+      {
+        "heads": [
+          24,
+          3
+        ],
+        "cv": 0.024063371067498066,
+        "impact": 1.182832569816147
+      }
+    ],
+    "avg_impact": 1.8221900427996716
+  }
+}
