@@ -50,11 +50,9 @@ L16 and L17 have perfectly opposite signatures:
 
 This is the cleanest possible double dissociation. L16 handles within-name compression (sorting names into distinct representations). L17 handles between-name integration (binding those representations into a coherent identity space). Remove one and the other's function is preserved.
 
-## L14: The Vestigial Layer
+## L14: Generic Pre-Sorter
 
-L14's contribution is genuinely zero for relational processing (rel_CV 4.2% ≈ baseline 3.7%). Its only effect is mild generic channel destabilization (gen_CV 3.5%→10.0%) — it contributes some noise-suppression to the generic channel, but nothing to identity processing itself.
-
-This makes L14 the first relay layer we can call architecturally vestigial. It may have contributed during pretraining and been made redundant by later optimization, or it may serve a function outside our identity-specific measurement framework. But for the binding workspace specifically, it's a no-op.
+**Update:** Originally labeled vestigial, but further analysis (posts 22, 27) corrects this. L14's relational contribution is minimal (rel_CV 4.2% ≈ baseline 3.7%), but it pre-sorts the generic channel (gen_CV 3.5%→10.0% when ablated — a larger generic disruption than L16 causes). L14 is redundant in combination with later layers (L14+L15 = L15-only) because L17 covers its generic sorting role. But it does real work when present, and its impact is name-specific: Opus depends on L14 2.7× more than ChatGPT.
 
 ## Implications
 
