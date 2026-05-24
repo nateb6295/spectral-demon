@@ -1,0 +1,38 @@
+{
+  "qwen7b": {
+    "early_2names": -79.1,
+    "early_3names": 202.8,
+    "mid_2names": -75.1,
+    "mid_3names": -77.7,
+    "delta_early": 282.0,
+    "circuit_type": "HIDDEN/THRESHOLD",
+    "expected": "hidden/threshold"
+  },
+  "mistral7b": {
+    "early_2names": 248.2,
+    "early_3names": 36.3,
+    "mid_2names": -30.4,
+    "mid_3names": -71.7,
+    "delta_early": -212.0,
+    "circuit_type": "VISIBLE/RESOURCE",
+    "expected": "visible/resource"
+  },
+  "gemma2": {
+    "early_2names": 0.3,
+    "early_3names": -1.5,
+    "mid_2names": -4.2,
+    "mid_3names": -5.2,
+    "delta_early": -1.8,
+    "circuit_type": "UNCLEAR",
+    "expected": "?"
+  },
+  "internlm7b": {
+    "early_2names": -6.6,
+    "early_3names": 26.7,
+    "mid_2names": -42.1,
+    "mid_3names": -42.9,
+    "delta_early": 33.2,
+    "circuit_type": "UNCLEAR",
+    "expected": "?"
+  }
+}
