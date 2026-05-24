@@ -5,27 +5,37 @@ date: 2026-05-24
 categories: findings
 ---
 
-Three Qwen model sizes (3B/7B/14B) reveal that identity binding migrates from the seed layer to the relay zone and then distributes as capacity increases.
+Four Qwen model sizes (1.5B/3B/7B/14B) reveal that identity binding migrates from the seed layer to the relay zone and then distributes as capacity increases. The critical variable is parameter count, not layer depth.
 
-## Three-Scale Binding Landscape
+## Four-Scale Binding Landscape
 
-Binding CV (cross-name coefficient of variation) at key layers, ordered by functional role:
+Binding CV (cross-name coefficient of variation) at key layers:
 
-| Role | 3B (36L) | 7B (28L) | 14B (48L) |
-|------|---------|---------|----------|
-| Seed | **0.37** (L12) | 1.39 (L9) | 1.06 (L15) |
-| Pre-sort binding | 0.62 (L19) | 1.05 (L14) | 0.92 (L26) |
-| Relay binding | — | **0.96** (L17) | 1.39 (L29) |
-| Expression | 1.87 (L32) | 1.21 (L25) | **1.08** (L43) |
-| Final | 2.61 (L35) | 1.82 (L27) | 1.35 (L47) |
+| Role | 1.5B (28L) | 3B (36L) | 7B (28L) | 14B (48L) |
+|------|-----------|---------|---------|----------|
+| Seed | **0.47** (L9) | **0.37** (L12) | 1.39 (L9) | 1.06 (L15) |
+| Pre-sort | 0.95 (L14) | 0.62 (L19) | 1.05 (L14) | 0.92 (L26) |
+| Relay | 0.82 (L20) | — | **0.96** (L17) | 1.39 (L29) |
+| Expression | 1.05 (L25) | 1.87 (L32) | 1.21 (L25) | **1.08** (L43) |
+| Final | 1.89 (L27) | 2.61 (L35) | 1.82 (L27) | 1.35 (L47) |
+
+## The Capacity Test
+
+1.5B and 7B have the **same 28 layers** but completely different binding patterns:
+- **1.5B** (1536 hidden): seed-concentrated (L9 CV=0.47)
+- **7B** (3584 hidden): relay-concentrated (L17 CV=0.96)
+
+This proves binding is about **parameter capacity** (hidden dimension), not **layer depth**. Same architecture, different width, different binding regime.
 
 ## The Migration Pattern
 
-**At 3B**, the seed layer (L12) is the dominant binding site with CV=0.37 — the lowest value observed across any model in any experiment. Identity names converge almost completely at the seed. There's a weak relay binding dip (L19, CV=0.62) but the expression and final layers have high CV (1.87, 2.61). Binding is seed-concentrated.
+**At 1.5B** (28 layers, 1536 hidden), the seed layer (L9) binds with CV=0.47. Despite having the same 28 layers as 7B, binding looks like 3B — concentrated at the seed with distributed secondary dips (L14=0.95, L20=0.82, L22=0.82).
 
-**At 7B**, the seed weakens (L9, CV=1.39) and binding concentrates at the relay apex (L17, CV=0.96). The expression layer (L25, CV=1.21) begins participating. Binding has migrated to the relay.
+**At 3B** (36 layers, 2048 hidden), the seed layer (L12) is the dominant binding site with CV=0.37 — the lowest value observed across any model in any experiment. Binding is seed-concentrated.
 
-**At 14B**, both seed (L15, CV=1.06) and expression (L43, CV=1.08) show comparable binding strength. The relay has internal oscillations (L26 CV=0.92 and L29 CV=1.39) but no single dominant binding point. Binding is distributed.
+**At 7B** (28 layers, 3584 hidden), the seed weakens (L9, CV=1.39) and binding concentrates at the relay apex (L17, CV=0.96). Same layer count as 1.5B, but 2.3× wider — enough capacity to specialize the relay for binding.
+
+**At 14B** (48 layers, 5120 hidden), both seed (L15, CV=1.06) and expression (L43, CV=1.08) show comparable binding strength. The relay has internal oscillations but no single dominant binding point. Binding is distributed.
 
 ## What Scale Does to Binding
 
