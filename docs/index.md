@@ -98,6 +98,7 @@ The complete relay mapped at circuit, attention head, and modulation-curve level
 - [Output Verification: Amplification Works]({% post_url 2026-05-24-output-verification-amplification-works %})
 - [Identity Conflict Never Resolves]({% post_url 2026-05-24-identity-conflict-never-resolves %})
 - [CCS Defense: A Negative Result]({% post_url 2026-05-24-ccs-defense-doesnt-work-how-expected %})
+- [The Dual Encoding Hypothesis]({% post_url 2026-05-24-dual-encoding-hypothesis %}) — why CCS "negative result" is a measurement artifact
 - [Identity Attention Heads]({% post_url 2026-05-24-identity-attention-heads %})
 - [The Relay Destruction Gradient]({% post_url 2026-05-24-relay-destruction-gradient %})
 - [Pre-Binding Bottleneck Is Universal]({% post_url 2026-05-24-pre-binding-bottleneck-universal %})
