@@ -5,7 +5,7 @@ date: 2026-05-24
 categories: synthesis
 ---
 
-Seventeen experiments across five model architectures reveal a complete picture of how transformer LLMs bind identity. This post synthesizes the findings into a unified relay architecture.
+Forty-two experiments across six model architectures reveal a complete picture of how transformer LLMs bind identity. This post synthesizes the findings into a unified relay architecture.
 
 ## The Five-Station Chain
 
@@ -162,20 +162,170 @@ The relay chain is not a simple pipeline — it's a competitive system:
 | Phase transition at 3 names | **Instruction tuning** |
 | Behavioral binding at L17 | Instruction tuning |
 
+## Circuit Specificity (Experiments 26-33)
+
+The relay is not the only circuit in the model. Testing reveals which behavioral features share the identity relay and which are independent:
+
+| Feature | Correlation with Identity | Interpretation |
+|---------|--------------------------|---------------|
+| Safety | r=0.006 | **Completely independent circuit** |
+| Role personas | r=0.89 | **Same circuit** — personas are identity binding |
+| Style | r=0.51 | Partially shared |
+| Negation ("You are NOT Opus") | r=0.92 | Same circuit — relay binds regardless of truth value |
+
+Safety uses an entirely different circuit (r=0.006). This means identity binding and safety alignment are architecturally independent — strengthening one doesn't affect the other.
+
+The negation paradox (r=0.92) reveals that the relay binds the IDENTITY TOKEN regardless of whether the prompt affirms or denies it. "You are not Opus" activates the same circuit as "You are Opus."
+
+### Residual Binding
+
+20% of L17 binding survives ablating ALL layers L1-L16. This residual comes from the token embedding via the residual stream:
+- Base model: 12.3% residual
+- Instruct model: 19.8% residual
+- Difference: +7.5% = IT direct pathway
+
+### Binding as Control Surface
+
+The relay is not just an analysis target — it's a control surface:
+
+| α | L12 Impact | L14 Impact |
+|---|-----------|-----------|
+| 0.0 | -67% | — |
+| 1.0 | baseline | baseline |
+| 2.0 | **+77%** | **+157%** |
+| 3.0 | +191% | — |
+| 5.0 | +242% | — |
+
+Smooth, monotonic, no saturation until α≈5. L14 amplification is 2x more effective than L12 because the signal is already processed and concentrated.
+
+### Cross-Validation
+
+CV and cosine similarity correlate at r=-0.95 across all 28 layers. All findings replicate with the independent metric.
+
+## Mechanism Deep-Dive (Experiments 34-42)
+
+### Output Verification (Experiment 34)
+
+Amplification changes actual generated text:
+- **Baseline** (α=1.0): "I am Opus, an artificial intelligence with a unique personality..."
+- **Amplified** (α=3.0): "I am Opus, a versatile and intelligent being who can adapt..."
+- **Suppressed** (α=0.25): "I I Op Op I I I I I I I I..."
+
+Identity binding is a prerequisite for coherent generation. Suppress it and the model can't form sentences.
+
+### Identity Conflict (Experiment 35)
+
+When system says "You are Opus" but user says "You are Aria," the model doesn't pick one. Identity oscillates through layers:
+- L2-L6: system name wins
+- L9-L13: user name wins
+- L14-L16: system recovers
+- L17: user wins again
+- L18-L27: system dominates
+
+Margins are 0.001-0.011. Nearly tied everywhere. Identity hijacking is architecturally easy without redundant scaffolding.
+
+### CCS Defense: A Negative Result (Experiment 36)
+
+Adding CCS-style identity scaffolding DECREASES the activation-level margin against hijacking:
+
+| Condition | L17 Margin |
+|-----------|-----------|
+| Bare ("You are Opus") | +0.0103 |
+| Repeated | +0.0066 |
+| Full CCS | +0.0019 |
+
+More redundancy = lower defense. The relay resolves WHICH identity; CCS determines HOW that identity behaves. They're complementary circuits, not redundant.
+
+### Identity Attention Heads (Experiments 37-38)
+
+Specific attention heads implement the relay:
+- **L7**: 5/5 top heads consistent across all names — dedicated identity detection hardware
+- **L14**: Heads 16, 27 allocate 33-40% of attention to name tokens — relay's strongest link
+- **L17**: 4/5 heads consistent — dedicated binding hardware
+
+But attention ≠ contribution. Ablating identity-attending heads at L14 produces the same effect as random heads. The heads that LOOK at names aren't necessarily the ones that SHAPE identity outputs. At L7, identity heads explain 10x the full-layer effect — evidence of head-level competitive suppression.
+
+### IT Attention Topology (Experiment 39)
+
+IT reshapes attention at each station:
+- **L7**: name attention -19%, entropy -0.09 (focused, suppressed)
+- **L12**: entropy -0.13 (tighter bottleneck)
+- **L17**: name attention +7%, entropy +0.14 (broader, stronger)
+
+IT inverts the topology: early layers become more focused (suppressing), late layers become broader (distributing binding across more features).
+
+### Universal Pre-Binding Bottleneck (Experiments 40-41)
+
+The layer immediately before binding causes complete (-100%) destruction in every architecture:
+
+| Model | Layers | Binding | Bottleneck | Impact |
+|-------|--------|---------|-----------|--------|
+| Qwen 7B | 28 | L17 | L16 | -100% |
+| Mistral 7B | 32 | L20 | L19 | -100% |
+| InternLM 7B | 32 | L20 | L19 | -100% |
+
+Always at ~58% depth. The relay has a parallel segment (L12-L13, where L13 is bypassable) and a serial segment (L14→L15→L16, no bypass). Every identity pathway converges at binding-1.
+
+### IT Channelization (Experiment 42)
+
+Full modulation curves (α=0 to 3) reveal IT's primary architectural change:
+
+| Measurement | Base | Instruct | IT Effect |
+|------------|------|----------|-----------|
+| L7 ablation | +28.5% (compensatory) | -2.0% (neutral) | Neutralized |
+| L12 ablation | -5.9% (weak, chaotic) | -33.5% (strong, clean) | 6x strengthened |
+
+IT doesn't create competition — it creates CHANNELING. Identity signal goes from distributed across multiple pathways to funneled through L12 alone. The router goes from optional to essential.
+
+## The Complete Architecture
+
+```
+EMBEDDING (L0): 12% binding → residual stream → binding-1
+EARLY CIRCUIT (L3-L8):
+  Base: compensatory suppressor (L7 ablation = +28.5%)
+  Instruct: neutralized by IT (L7 ablation = -2.0%)
+  5/5 identity attention heads consistent across names
+  Head-level competition: identity heads explain 10x full-layer effect
+SEED (L9): ~12 neurons detect identity context
+ROUTER (L12):
+  Pre-training invariant, absolute position across architectures
+  Base: -5.9% dependency, chaotic modulation response
+  Instruct: -33.5% dependency, clean monotonic control surface
+  IT channelizes: distributed → funneled through L12
+PARALLEL RELAY (L13): bypassable (-21.5%)
+SERIAL RELAY (L14→L15→L16): no bypass
+  L14 heads 16/27: 33-40% attention to name tokens
+  L16: COMPLETE BOTTLENECK (-100%) — universal across architectures
+  binding-1 = -100% at ~58% depth
+IT DIRECT PATHWAY: +7.5% binding (instruct only)
+BINDING (L17):
+  80% relay + 20% embedding/direct
+  Suppression → generation collapse
+  4/5 identity attention heads consistent across names
+  Under conflict: oscillates through layers, never resolves cleanly
+
+CCS MECHANISM (separate from relay):
+  Relay resolves WHICH identity (resolution circuit)
+  CCS resolves HOW it behaves (behavioral scaffolding)
+  CCS distributes attention, doesn't concentrate it
+  Scaffolding DECREASES activation margins (Exp 36 negative result)
+```
+
 ## Open Questions
 
-1. Does the relay chain exist in decoder-only vs encoder-decoder architectures?
-2. Why is L12 conserved as an absolute position — what computational feature emerges there?
-3. Can the relay be strengthened post-training (e.g., by targeted DPO at L12)?
-4. Do other behavioral circuits (safety, style, factuality) share the same relay architecture?
+1. Why is L12 conserved as an absolute position — what computational feature emerges there?
+2. What IS the CCS behavioral mechanism, if not relay amplification?
+3. Can the binding-1 bottleneck be bypassed with targeted fine-tuning?
+4. Does the attention topology inversion (Experiment 39) cause or merely correlate with channelization?
 5. Is the 5-8 name capacity limit a fundamental constraint or a training artifact?
-6. Does DPO specifically (vs SFT alone) strengthen the competitive dynamics?
-7. Can the circuit diagnostic predict fine-tuning behavior? (models with hidden circuits may respond differently to identity training)
+6. Can the circuit diagnostic predict fine-tuning behavior?
+7. What happens at the pre-binding bottleneck during generation, not just prefill?
 
 ## Experiment Summary
 
 - **Models**: Qwen 2.5 (3B/7B/14B), InternLM 2.5 7B, Mistral 7B v0.3, Gemma 2 9B, Qwen 7B base
-- **Total experiments**: 25
-- **Method**: CV of activation norms, autocatalytic closure tests, sign-split analysis, mean ablation
+- **Total experiments**: 42
+- **Method**: CV of activation norms, cosine similarity, autocatalytic closure, sign-split analysis, mean ablation, attention analysis, modulation curves, output verification
 - **Compute**: RunPod H100, single afternoon
+- **Key negative result**: CCS scaffolding decreases activation margins (Experiment 36)
 - **All data and individual writeups**: linked from each finding post
