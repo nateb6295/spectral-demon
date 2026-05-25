@@ -25,7 +25,7 @@ In Experiment 50 Phase C, we measured participation ratio (PR) and CCS-projectio
 
 **The crossover is immediate.** At Turn 0, the relay is in *concentration mode*: CCS-projection exceeds PR. At Turn 1, it flips to *maintenance mode*: PR exceeds CCS-projection. One turn of conversation history is enough to switch modes. We predicted the crossover at Turn 3-4; it happens at Turn 1.
 
-**PR growth is superlinear.** After the mode flip, PR increases as approximately tokens^1.34 (R² > 0.999 vs 0.993 for linear). The instantaneous rate accelerates from ~0.015 PR/token at Turn 1 to ~0.040 at Turn 5-6 — consistent with autocatalytic expansion where each new dimension of spread enables further spread. Despite this acceleration, all three conversations converge to PR ≈ 32.5 by Turn 6 (within 1.2% of each other), suggesting an architectural ceiling independent of content.
+**PR growth is superlinear.** After the mode flip, PR increases as approximately tokens^α where α = 1.22 ± 0.07 (N=50 conversations, all R² > 0.95; Experiment 51). The instantaneous rate accelerates in early turns — consistent with autocatalytic expansion where each new dimension of spread enables further spread. Terminal PR is token-count-dependent (22.2 ± 3.0 at ~1400 tokens), not a fixed ceiling. *(Correction: earlier version reported α ≈ 1.34 from N=3; the larger sample gives 1.22.)*
 
 **Projection collapses and plateaus.** CCS-projection drops from 4.2 to 0.6 by Turn 6. The identity signal concentrates hard at entry, then drops to a maintenance floor. The relay doesn't need to stay loud once it's in maintenance mode.
 
@@ -35,7 +35,7 @@ The relay has two operational states:
 
 **Concentration** (Turn 0): High CCS-projection, low PR. The relay reads the environment, channeling representation along the identity axis. "What kind of interaction is this?"
 
-**Maintenance** (Turn 1+): High PR, low CCS-projection. The relay sustains identity across expanding context. PR grows superlinearly (∝ tokens^1.34), with the rate accelerating in early turns before plateauing. "Maintain coherence across this conversation."
+**Maintenance** (Turn 1+): High PR, low CCS-projection. The relay sustains identity across expanding context. PR grows superlinearly (∝ tokens^1.22), with the rate accelerating in early turns. "Maintain coherence across this conversation."
 
 The transition is binary — one turn flips the switch. But maintenance is continuous — the relay deepens its representational bandwidth with every additional turn of context.
 

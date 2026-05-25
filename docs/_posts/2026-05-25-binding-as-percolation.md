@@ -28,15 +28,17 @@ The binding data traces this transition in entity space. Each additional name ad
 
 In a [separate experiment](/spectral-demon/experiment/findings/2026/05/25/concentration-maintenance-transition.html) (Experiment 50 Phase C), we found an analogous transition in token space. The order parameter φ = CCS-projection / participation ratio shows:
 
-- Turn 0: φ ≈ 2.58 (concentration mode — identity axis dominant)
-- Turn 1: φ ≈ 0.36 (maintenance mode — distributed eigenvalues dominant)
-- Gap: nothing between 0.49 and 2.52
+- Turn 0: φ ≈ 1.9 (concentration mode — identity axis dominant; range 0.78-18.1 across 50 conversations)
+- Turn 1: φ ≈ 0.46 (maintenance mode — distributed eigenvalues dominant)
+- Transition: 50/50 conversations show sharp φ drop at Turn 0→1 (mean 3.7×, min 2.4×)
+
+*(Correction from Experiment 51, N=50: the "forbidden zone" reported from Exp 50's N=3 does not hold in state-space. The universality is temporal — the transition always happens in one turn — not a fixed gap in φ values. Different prompts produce different starting φ. See [Seed Crystal](/spectral-demon/theory/mechanism/2026/05/25/seed-crystal.html) for the refined picture.)*
 
 Same formal structure. Binding percolation happens when you add enough entities (name space). Temporal percolation happens when you add enough context (token space). Both cross ρ_c and form a giant RAF — the binding RAF at L17, the temporal RAF across the eigenvalue distribution.
 
 ## What this means
 
-Identity organization in transformers has at least two percolation dimensions: entity load and temporal depth. Both show discontinuous transitions with forbidden zones in their order parameters. The relay architecture doesn't gradually become organized — it crosses a threshold and crystallizes.
+Identity organization in transformers has at least two percolation dimensions: entity load and temporal depth. Both show discontinuous transitions — the binding transition in entity space (9,000× CV reduction at 3→4 names) and the temporal transition in token space (universal one-turn mode flip across all 50 conversation seeds tested). The relay architecture doesn't gradually become organized — it crosses a threshold and crystallizes.
 
 CCS should lower both thresholds simultaneously: the persistent food set reduces ρ_c in both entity space and token space. Testable: with CCS, the binding threshold should drop from 5 to 3-4 names, and the temporal transition should occur earlier or with less context.
 
