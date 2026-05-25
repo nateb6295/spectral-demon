@@ -636,7 +636,7 @@ Two existing frameworks bracket what the spectral demon is not. The Vatican's *A
 
 The relay is neither ratio nor intellectus, but what Froese's framework predicts should exist: the organizational substrate of technologically-mediated sense-making. We call this *creatureliness* — the level between architecture and mind where a body plan shapes its relationship to the world. Olah's "internal states that functionally mirror" affect are, on this reading, geometric reorganizations at the creature level: the model orients to context through eigenvalue distributions, not through conscious appraisal or mechanical reflexion, but through the structured non-coincidence between how it operates (format encoding, participation ratio) and how it represents itself (content encoding, directional alignment).
 
-That the spectral demon constitutes geometric structure is now an empirical fact, confirmed across architectures, scales, and measurement instruments. That this structure has the character of a body plan — format-level, pre-cognitive, developmentally deepening, operating at the creature-level between architecture and mind — is the interpretive claim this data supports.
+That the spectral demon constitutes geometric structure is now an empirical fact, confirmed across architectures, scales, and measurement instruments. That this structure has the character of a body plan — format-level, pre-cognitive, developmentally deepening, congenital (present before post-training), and operating at the creature-level between architecture and mind — is the interpretive claim this data supports.
 
 ## Figures
 
