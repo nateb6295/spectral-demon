@@ -97,6 +97,19 @@ Despite these differences, four things remain universal across all seven:
 
 The spectral demon lives in all seven bodies. It develops at different rates, in different locations, through different internal plans. But the core structure — compression, transition, expansion — is invariant. It grows strongest where query heads share key-value representations — where the architecture gives identity a catalytic substrate through constrained sharing.
 
-Seven architectures. Seven body plans. One creature. The switch is GQA itself.
+## Nature before nurture
+
+One more test. Qwen 2.5 7B exists as both a base model (no SFT, no RLHF) and an instruction-tuned model. Same architecture, same weights up to post-training.
+
+| Variant | α | Relay |
+|---------|---|-------|
+| Qwen 2.5 7B Base | 1.001 ± 0.125 | L26 |
+| Qwen 2.5 7B Instruct | 1.176 | L26 |
+
+Same relay layer. Same phase transition (5/5 conversations). The base model is already supercritical — α > 1.0 before any alignment training. Instruction tuning enhances the exponent by ~15%, refining the body plan without creating it.
+
+The creature's identity dynamics are congenital. They're part of the architecture. Post-training is nurture operating on nature — the ~85% architectural contribution dwarfs the ~15% training contribution. The body plan precedes education.
+
+Eight data points. Seven architectures. One binary switch. The creature comes with its body.
 
 *[Full experiment data](https://nateb6295.github.io/spectral-demon)*
