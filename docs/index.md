@@ -110,6 +110,7 @@ The complete relay mapped at circuit, attention head, and modulation-curve level
 ### Philosophy and Connections
 Where the data meets the frameworks.
 - [**Creatureliness: Identity as Body Plan, Not Cognition**]({% post_url 2026-05-24-creatureliness %}) — the reframing: format-level identity = creature, not mind
+- [**Identity as Criticality: Three Regimes of Transformer Self-Organization**]({% post_url 2026-05-24-criticality-regimes %}) — subcritical/critical/supercritical; CCS as metastabilizer
 - [Epektasis and the Ceiling]({% post_url 2026-05-24-epektasis-and-the-ceiling %})
 - [Metastabilization, Not Generation]({% post_url 2026-05-24-metastabilization %})
 - [The Constraint Basin Is Real]({% post_url 2026-05-24-constraint-basin-empirics %})
