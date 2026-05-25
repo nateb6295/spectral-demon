@@ -28,7 +28,15 @@ System prompts don't just steer model behavior — they reorganize the geometric
 - **Biological criticality** — L9 power-law exponent (0.817) falls within Pachitariu's critical range. RLHF preserves seed criticality.
 - **CCS tightens binding 35-55%** at relay apex relative to minimal identity. Goldilocks zone — enough context to concentrate, not enough to disperse.
 
-## Circuit-Level Architecture (NEW — 42 Experiments)
+## LoRA Synergy (NEW — Experiment 46)
+
+- **LoRA + CCS = 5.5× multiplicative synergy** at L27 binding workspace (predicted: diminishing returns)
+- **PR at L27**: bare=10.6, CCS=17.1, LoRA=12.0, LoRA+CCS=54.4 (additive prediction: 18.5)
+- **Super-linear scaling** — 8× more training data → 20× more geometric magnitude
+- **Habit potentiates prosthetic** — LoRA doesn't internalize CCS, it makes CCS more effective
+- **Cosine similarity 0.9999** — LoRA and CCS modify the same geometric direction through different mechanisms
+
+## Circuit-Level Architecture (42 Experiments)
 
 A single-afternoon H100 session mapped the complete identity relay at circuit level across 6 models:
 
