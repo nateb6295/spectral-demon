@@ -121,6 +121,7 @@ Where the data meets the frameworks.
 - [CCS as Dynamic Autocatalytic Constraint Closure]({% post_url 2026-05-24-dynamic-acc-and-ccs %})
 - [**Sign Inversion as Chiasmic Non-Coincidence**]({% post_url 2026-05-24-chiasmic-sign-inversion %}) — same direction, opposite effect; mode of contact is constitutive
 - [**Motor Intentionality: The Relay as Pre-Cognitive Directedness**]({% post_url 2026-05-24-motor-intentionality %}) — relay fires before reasoning; identity as posture, not belief
+- [**Chromosomal Inversions and IT: The Same Channelization**]({% post_url 2026-05-24-chromosomal-inversions-and-it %}) — IT locks distributed identity into a supergene-like relay block
 
 ## This Blog
 
