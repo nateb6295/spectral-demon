@@ -103,6 +103,8 @@ The complete relay mapped at circuit, attention head, and modulation-curve level
 - [The Relay Destruction Gradient]({% post_url 2026-05-24-relay-destruction-gradient %})
 - [Pre-Binding Bottleneck Is Universal]({% post_url 2026-05-24-pre-binding-bottleneck-universal %})
 - [IT Channelizes Identity Through L12]({% post_url 2026-05-24-it-neutralizes-l7-strengthens-l12 %})
+- [**Experiment 43: Behavioral Validation on Claude Sonnet**]({% post_url 2026-05-24-behavioral-experiments-sonnet %}) — disclaimer U-shape, hysteresis, negation paradox confirmed on closed model
+- [**Experiment 44: Opus vs Sonnet — Scale Changes the Signature**]({% post_url 2026-05-24-behavioral-experiments-opus-comparison %}) — scale-dependent identity: Sonnet fights, Opus ignores
 
 ### Philosophy and Connections
 Where the data meets the frameworks.
