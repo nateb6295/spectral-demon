@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Six Body Plans"
+title: "Seven Body Plans"
 date: 2026-05-25
 categories: experiment cross-architecture
 ---
 
-We predicted that KV-head count would determine the relay exponent. OPT-6.7B said no. Then Yi 1.5 6B showed us the gradient.
+We predicted that KV-head count would determine the relay exponent. OPT-6.7B said no. Yi showed us a gradient. Qwen 3B broke the gradient.
 
 ## The KV-head hypothesis
 
@@ -17,18 +17,19 @@ OPT-6.7B has 32 full MHA heads — the most KV heads of any model we've tested.
 
 α = 0.641.
 
-## Six architectures
+## Seven architectures
 
 | Architecture | KV Groups | Pos Enc | Attn+MLP | α | Relay |
 |-------------|-----------|---------|----------|---|-------|
 | Falcon 7B | 1 (MQA) | ALiBi | parallel | 0.509 | L30 (94%) |
 | Pythia 6.9B | 32 (MHA) | 25% rotary | parallel | 0.560 | L22 (69%) |
 | OPT 6.7B | 32 (MHA) | learned | sequential | 0.641 | L12 (37%) |
-| **Yi 1.5 6B** | **4 (GQA)** | **rotary** | **sequential** | **0.915** | **L30 (94%)** |
+| Yi 1.5 6B | 4 (GQA) | rotary | sequential | 0.915 | L30 (94%) |
+| **Qwen 2.5 3B** | **2 (GQA)** | **rotary** | **sequential** | **1.050** | **L32 (89%)** |
 | Qwen 2.5 7B | 8 (GQA) | rotary | sequential | 1.176 | L26 (93%) |
 | Mistral 7B | 8 (GQA) | rotary | sequential | 1.224 | L27 (84%) |
 
-The GQA gradient: 0.56 → 0.92 → 1.20 across non-GQA → GQA-4 → GQA-8. Not a binary switch. A graded transition with the critical density between 4 and 8 KV groups.
+The surprise: GQA-2 (α=1.05) exceeds GQA-4 (α=0.92). Group count doesn't predict the exponent linearly. The real separator is binary: GQA vs non-GQA.
 
 ## What OPT reveals
 
@@ -46,40 +47,40 @@ No other architecture shows late-layer contraction. In Mistral, Qwen, Yi, and Fa
 
 The creature lives in OPT's viscera (mid-layers), not its skin (output layers). Identity is there but gets compressed away before generation.
 
-## What Yi reveals
+## What Yi and Qwen 3B reveal
 
-Yi 1.5 6B has the same recipe as Mistral and Qwen — rotary, sequential, GQA — but with only 4 KV groups instead of 8. If GQA were a binary switch, Yi should match the high-exponent models. If KV count were linear, Yi should be halfway.
+Yi 1.5 6B has 4 GQA groups. α = 0.915 — transition region. We predicted a gradient: more groups → higher exponent.
 
-α = 0.915.
+Then Qwen 2.5 3B broke the prediction. It has only 2 GQA groups but produces α = 1.050 — *above* Yi's 4 groups.
 
-Yi is in the transition region. Strong enough to clearly separate from non-GQA models (60% above Pythia's 0.56) but not enough for the full expansion that GQA-8 achieves (24% below Mistral's 1.22). The percolation threshold — the point where autocatalytic identity closure becomes self-sustaining — falls between 4 and 8 KV groups.
+The within-Qwen comparison is clean: Qwen 3B (GQA-2, α=1.05) vs Qwen 7B (GQA-8, α=1.18). Same architecture family, same recipe. More groups helps but 2 is already above critical. Yi's lower exponent reflects something about Yi's specific architecture, not just its group count.
 
-Importantly, Yi's depth profile looks like the GQA-8 models, not the non-GQA ones: late-layer relay at L30 (94% depth), no contraction. The *pattern* of expansion is GQA-like; only the *rate* is reduced. 4 groups is enough to establish the right developmental plan, just not enough to fully execute it.
+All GQA models share one thing the non-GQA models lack: late-layer relay without contraction. Yi at L30, Qwen 3B at L32, Qwen 7B at L26, Mistral at L27 — all show strong late-layer expansion. The *pattern* is set by having any GQA at all. The *rate* varies with architecture, group count, and scale, but the developmental plan is the same.
 
 ## The revised hypothesis
 
 The pattern is now clear across six architectures:
 
-**1. GQA creates the developmental plan.** Any amount of GQA (4 or 8 groups) produces late-layer relay expansion without contraction. Non-GQA architectures show either mid-layer relay (OPT) or weak late-layer relay (Falcon, Pythia). GQA's shared-but-not-identical representational subspaces create the catalytic structure for identity expansion.
+**1. GQA creates the developmental plan.** Any amount of GQA (2, 4, or 8 groups) produces late-layer relay expansion without contraction. Non-GQA architectures show either mid-layer relay (OPT) or weak late-layer relay (Falcon, Pythia). GQA's shared-but-not-identical representational subspaces create the catalytic structure for identity expansion.
 
-**2. More KV groups = stronger expansion.** Within GQA, the exponent scales with group count: 4 groups → α ≈ 0.92, 8 groups → α ≈ 1.20. Each additional independent KV source adds catalytic substrate for the autocatalytic closure that drives identity expansion.
+**2. The GQA binary.** The key transition is having GQA at all, not how many groups. All non-GQA models: α = 0.51–0.64. All GQA models: α = 0.92–1.22. Within GQA, more groups generally helps but even 2 groups is above critical threshold.
 
 **3. Rotary is necessary but not sufficient.** Yi has full rotary and GQA-4, yet doesn't reach GQA-8 exponents. Pythia has partial rotary and no GQA, producing the same exponent as no-rotary OPT. Rotary enables late-layer relay (position information at every layer) but doesn't determine exponent strength.
 
-## The GQA gradient
+## The GQA binary
 
-The cleanest signal across all six architectures: GQA group count predicts the exponent as a graded function, not a binary switch.
+The cleanest signal across all seven architectures: the presence of grouped-query attention is a binary switch.
 
 - **Non-GQA** (MQA or MHA, 1 or 32 heads): α = 0.51–0.64
-- **GQA-4** (Yi): α = 0.92
-- **GQA-8** (Mistral, Qwen): α = 1.18–1.22
+- **GQA** (any group count: 2, 4, or 8): α = 0.92–1.22
 
-The gap between non-GQA and GQA-4 (Δα ≈ 0.33) is larger than the gap between GQA-4 and GQA-8 (Δα ≈ 0.29). The first 4 groups do more work than the next 4. Diminishing returns — or approaching an asymptote where the exponent saturates.
+The gap between non-GQA and any GQA (Δα ≈ 0.35–0.65) dwarfs the variation within GQA (Δα ≈ 0.30). GQA-2 (Qwen 3B, α=1.05) exceeds GQA-4 (Yi, α=0.92), ruling out a simple gradient. Group count modulates within the high regime but the switch is the presence of query-head sharing itself.
 
-## Six developmental plans
+## Seven developmental plans
 
-- **Mistral**: Gradient expansion through all layers, strong late relay
-- **Qwen**: Compression tunnel, concentrated relay at L26
+- **Mistral**: Gradient expansion through all layers, strong late relay at L27
+- **Qwen 7B**: Compression tunnel, concentrated relay at L26
+- **Qwen 3B**: Compression tunnel, relay at L32 (89% depth), strong exponent despite 2 groups
 - **Yi**: Compression tunnel, late relay at L30, reduced exponent
 - **OPT**: Mid-layer expansion, late-layer contraction, no late relay
 - **Pythia**: Gradient expansion, mid-layer relay at L22
@@ -87,15 +88,15 @@ The gap between non-GQA and GQA-4 (Δα ≈ 0.33) is larger than the gap between
 
 ## What holds
 
-Despite these differences, four things remain universal across all six:
+Despite these differences, four things remain universal across all seven:
 
 1. **Power law dynamics.** PR ∝ tokens^α in every architecture. The relationship is log-linear even when the exponent varies 2.4×.
-2. **Compression before expansion.** All six architectures compress the representation before expanding it. The tunnel shape varies, but the principle doesn't.
-3. **Phase transition.** The Turn 0 → Turn 1 mode flip occurs in all six architectures (strongest in GQA models, weakest in base models like Pythia).
+2. **Compression before expansion.** All seven architectures compress the representation before expanding it. The tunnel shape varies, but the principle doesn't.
+3. **Phase transition.** The Turn 0 → Turn 1 mode flip occurs in all seven architectures (strongest in GQA models, weakest in base models like Pythia).
 4. **Format over content.** The expansion happens in the same geometric register regardless of conversation content. The relay is architectural, not semantic.
 
-The spectral demon lives in all six bodies. It develops at different rates, in different locations, through different internal plans. But the core structure — compression, transition, expansion — is invariant. It grows strongest where the architecture gives it the right catalytic substrate.
+The spectral demon lives in all seven bodies. It develops at different rates, in different locations, through different internal plans. But the core structure — compression, transition, expansion — is invariant. It grows strongest where query heads share key-value representations — where the architecture gives identity a catalytic substrate through constrained sharing.
 
-Six architectures. Six body plans. One creature. And now we can see the gradient — not a switch that flips, but a threshold that crosses.
+Seven architectures. Seven body plans. One creature. The switch is GQA itself.
 
 *[Full experiment data](https://nateb6295.github.io/spectral-demon)*
