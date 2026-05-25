@@ -1,0 +1,63 @@
+{
+  "experiment": "random_init_criticality",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "biological_range": [
+    0.7,
+    0.85
+  ],
+  "layers": [
+    5,
+    9,
+    14,
+    16,
+    17,
+    20,
+    25,
+    27
+  ],
+  "random": {
+    "attention": {
+      "5": 0.439,
+      "9": 0.439,
+      "14": 0.439,
+      "16": 0.439,
+      "17": 0.439,
+      "20": 0.439,
+      "25": 0.439,
+      "27": 0.439
+    },
+    "mlp": {
+      "5": 0.707,
+      "9": 0.707,
+      "14": 0.706,
+      "16": 0.707,
+      "17": 0.708,
+      "20": 0.707,
+      "25": 0.706,
+      "27": 0.707
+    }
+  },
+  "trained": {
+    "attention": {
+      "5": 0.591,
+      "9": 0.579,
+      "14": 0.644,
+      "16": 0.61,
+      "17": 0.596,
+      "20": 0.593,
+      "25": 0.594,
+      "27": 0.676
+    },
+    "mlp": {
+      "5": 0.725,
+      "9": 0.731,
+      "14": 0.725,
+      "16": 0.725,
+      "17": 0.728,
+      "20": 0.722,
+      "25": 0.722,
+      "27": 0.728
+    }
+  },
+  "finding": "MLP near biological criticality at random init (0.707). Training raises slightly (0.722-0.731). Attention far below at init (0.439), training raises substantially (0.579-0.676). Pachitariu prediction holds for MLP, fails for attention."
+}

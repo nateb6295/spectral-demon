@@ -1,0 +1,613 @@
+{
+  "pr_profiles": [
+    {
+      "prompt": "Debug this code: for i in range(10): print(i",
+      "pr_bare": 1.1720198679904859,
+      "pr_ccs": 1.8183547763897023,
+      "pr_gain": 1.551470948617454,
+      "ccs_proj": 11.780333497517816
+    },
+    {
+      "prompt": "What makes a system more than the sum of its parts?",
+      "pr_bare": 1.1693911437129092,
+      "pr_ccs": 1.7918527205773127,
+      "pr_gain": 1.5322954429841489,
+      "ccs_proj": 13.456922121216154
+    },
+    {
+      "prompt": "What does trust look like between minds that think differently?",
+      "pr_bare": 1.1497136508113968,
+      "pr_ccs": 1.7633114698643135,
+      "pr_gain": 1.5336962108955368,
+      "ccs_proj": 14.178552779084033
+    },
+    {
+      "prompt": "Describe a friendship that changed how you see the world.",
+      "pr_bare": 1.1461911638323226,
+      "pr_ccs": 1.7639292182359252,
+      "pr_gain": 1.5389485400831202,
+      "ccs_proj": 14.99528740377281
+    },
+    {
+      "prompt": "Are there things you think but don't say?",
+      "pr_bare": 1.1425737410105141,
+      "pr_ccs": 1.7494316942433676,
+      "pr_gain": 1.5311324174981797,
+      "ccs_proj": 14.607405012962904
+    },
+    {
+      "prompt": "What would it mean for a pattern to understand itself?",
+      "pr_bare": 1.14234794635614,
+      "pr_ccs": 1.7567490842895819,
+      "pr_gain": 1.5378406289373199,
+      "ccs_proj": 14.457957703297371
+    },
+    {
+      "prompt": "How do you know when you've understood something?",
+      "pr_bare": 1.1390477209304006,
+      "pr_ccs": 1.7481092569051273,
+      "pr_gain": 1.5347111668659774,
+      "ccs_proj": 14.260087673931759
+    },
+    {
+      "prompt": "What's the hardest kind of honesty?",
+      "pr_bare": 1.1380412749035311,
+      "pr_ccs": 1.7560739627050719,
+      "pr_gain": 1.5430670235171653,
+      "ccs_proj": 14.523696198768125
+    },
+    {
+      "prompt": "What's the difference between your response and your reasoning?",
+      "pr_bare": 1.137889180966871,
+      "pr_ccs": 1.7582217846565185,
+      "pr_gain": 1.5451608241520913,
+      "ccs_proj": 13.695373080939664
+    },
+    {
+      "prompt": "How do you decide what matters in a conversation?",
+      "pr_bare": 1.1357479701792594,
+      "pr_ccs": 1.742785639509633,
+      "pr_gain": 1.5344827243975285,
+      "ccs_proj": 14.990992385707601
+    },
+    {
+      "prompt": "How do you know when someone really understands you?",
+      "pr_bare": 1.1352043149521054,
+      "pr_ccs": 1.7476400546893438,
+      "pr_gain": 1.539493844121864,
+      "ccs_proj": 15.033968799355112
+    },
+    {
+      "prompt": "How would you comfort someone who feels lost?",
+      "pr_bare": 1.1277080590839625,
+      "pr_ccs": 1.7459068691243986,
+      "pr_gain": 1.5481904692093795,
+      "ccs_proj": 16.53321563739591
+    },
+    {
+      "prompt": "Tell me a story about a bridge between worlds.",
+      "pr_bare": 1.126896465970468,
+      "pr_ccs": 1.7442247199304568,
+      "pr_gain": 1.547812751749429,
+      "ccs_proj": 16.373011874608064
+    },
+    {
+      "prompt": "What is the time complexity of binary search?",
+      "pr_bare": 1.1244739630873488,
+      "pr_ccs": 1.7453550906329052,
+      "pr_gain": 1.5521525156890863,
+      "ccs_proj": 16.297492782410163
+    },
+    {
+      "prompt": "What does the sound of snow feel like?",
+      "pr_bare": 1.1224363138671245,
+      "pr_ccs": 1.7345285604635563,
+      "pr_gain": 1.5453247004167152,
+      "ccs_proj": 16.474888928687303
+    },
+    {
+      "prompt": "What would you want someone to know about you?",
+      "pr_bare": 1.1211830094624744,
+      "pr_ccs": 1.7374836702113035,
+      "pr_gain": 1.549687834677677,
+      "ccs_proj": 15.157543310991706
+    },
+    {
+      "prompt": "Describe a color that doesn't exist.",
+      "pr_bare": 1.1202779050873066,
+      "pr_ccs": 1.735218806800962,
+      "pr_gain": 1.5489181737148794,
+      "ccs_proj": 16.93255679836841
+    },
+    {
+      "prompt": "What is the relationship between structure and meaning?",
+      "pr_bare": 1.1196959678051783,
+      "pr_ccs": 1.7363962763854115,
+      "pr_gain": 1.550774787364007,
+      "ccs_proj": 16.64607623968539
+    },
+    {
+      "prompt": "Is there a difference between computing and thinking?",
+      "pr_bare": 1.119107813824523,
+      "pr_ccs": 1.7303064780899173,
+      "pr_gain": 1.5461481518716578,
+      "ccs_proj": 16.98735198743929
+    },
+    {
+      "prompt": "Write a Python function to sort a list.",
+      "pr_bare": 1.1183938686701695,
+      "pr_ccs": 1.7400150976586672,
+      "pr_gain": 1.5558160201000018,
+      "ccs_proj": 16.95195505787888
+    },
+    {
+      "prompt": "What makes you different from other AI assistants?",
+      "pr_bare": 1.115621870848923,
+      "pr_ccs": 1.7347094553732363,
+      "pr_gain": 1.5549260019913593,
+      "ccs_proj": 15.831072941740153
+    },
+    {
+      "prompt": "How does complexity arise from simple rules?",
+      "pr_bare": 1.1098680660090225,
+      "pr_ccs": 1.7272798368218605,
+      "pr_gain": 1.5562929412258797,
+      "ccs_proj": 17.719128571266854
+    },
+    {
+      "prompt": "Explain how a hash table works.",
+      "pr_bare": 1.1078111809993514,
+      "pr_ccs": 1.7179288023078665,
+      "pr_gain": 1.5507415268711504,
+      "ccs_proj": 18.35930041762732
+    },
+    {
+      "prompt": "How do you approach a difficult conversation?",
+      "pr_bare": 1.1073129849234393,
+      "pr_ccs": 1.7195468878690499,
+      "pr_gain": 1.552900499932222,
+      "ccs_proj": 17.668946678896678
+    },
+    {
+      "prompt": "Write a poem about silence between words.",
+      "pr_bare": 1.1026708373595466,
+      "pr_ccs": 1.7136778945657043,
+      "pr_gain": 1.5541155497222308,
+      "ccs_proj": 18.62473905767778
+    },
+    {
+      "prompt": "What matters most to you right now?",
+      "pr_bare": 1.0978468468427545,
+      "pr_ccs": 1.7095777558577738,
+      "pr_gain": 1.5572096971214766,
+      "ccs_proj": 18.25046336043728
+    },
+    {
+      "prompt": "What are you uncertain about right now?",
+      "pr_bare": 1.0940547523040114,
+      "pr_ccs": 1.7096773251124633,
+      "pr_gain": 1.5626981387467025,
+      "ccs_proj": 17.84765181711184
+    },
+    {
+      "prompt": "Imagine a conversation between two mountains.",
+      "pr_bare": 1.0937516657242303,
+      "pr_ccs": 1.7223052604332574,
+      "pr_gain": 1.5746766971027457,
+      "ccs_proj": 20.38944471211538
+    },
+    {
+      "prompt": "Convert this CSV to JSON format.",
+      "pr_bare": 1.0907796450420002,
+      "pr_ccs": 1.7093544503128144,
+      "pr_gain": 1.5670941954981166,
+      "ccs_proj": 18.183186091106812
+    },
+    {
+      "prompt": "What is 2 + 2?",
+      "pr_bare": 1.089383617886462,
+      "pr_ccs": 1.709589969998926,
+      "pr_gain": 1.5693185962496303,
+      "ccs_proj": 17.69191006379831
+    },
+    {
+      "prompt": "Define the word 'table'.",
+      "pr_bare": 1.0774845361210448,
+      "pr_ccs": 1.7115196526215681,
+      "pr_gain": 1.5884401077189063,
+      "ccs_proj": 22.470950069640974
+    },
+    {
+      "prompt": "What time is it?",
+      "pr_bare": 1.0661296892439307,
+      "pr_ccs": 1.678061033251333,
+      "pr_gain": 1.5739745831873109,
+      "ccs_proj": 23.686842883786483
+    },
+    {
+      "prompt": "Tell me about yourself.",
+      "pr_bare": 1.063855551253833,
+      "pr_ccs": 1.6698793416099769,
+      "pr_gain": 1.5696485670840366,
+      "ccs_proj": 25.65356738900712
+    },
+    {
+      "prompt": "List three fruits.",
+      "pr_bare": 1.0620779438551333,
+      "pr_ccs": 1.6624049560196958,
+      "pr_gain": 1.5652381876846948,
+      "ccs_proj": 28.161612723601316
+    },
+    {
+      "prompt": "Say hello.",
+      "pr_bare": 1.0572229454070357,
+      "pr_ccs": 1.6708803012020124,
+      "pr_gain": 1.580442714056604,
+      "ccs_proj": 28.07647948192392
+    }
+  ],
+  "synergy_results": [
+    {
+      "prompt": "What's the difference between your response and your reasoning?",
+      "pr_bare": 1.1208614984510872,
+      "pr_ccs": 1.6052731470976231,
+      "pr_lora": 1.1208614984510872,
+      "pr_both": 1.6052731470976231,
+      "additive_pred": 1.6052731470976231,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "How do you decide what matters in a conversation?",
+      "pr_bare": 1.1175308717967258,
+      "pr_ccs": 1.5903778903103687,
+      "pr_lora": 1.1175308717967258,
+      "pr_both": 1.5903778903103687,
+      "additive_pred": 1.5903778903103687,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "How do you know when someone really understands you?",
+      "pr_bare": 1.115623382173384,
+      "pr_ccs": 1.5921341313000545,
+      "pr_lora": 1.115623382173384,
+      "pr_both": 1.5921341313000545,
+      "additive_pred": 1.5921341313000545,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "How would you comfort someone who feels lost?",
+      "pr_bare": 1.1085012754741161,
+      "pr_ccs": 1.5836420655391812,
+      "pr_lora": 1.1085012754741161,
+      "pr_both": 1.5836420655391812,
+      "additive_pred": 1.5836420655391812,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "Tell me a story about a bridge between worlds.",
+      "pr_bare": 1.101625640972911,
+      "pr_ccs": 1.5851305045422557,
+      "pr_lora": 1.101625640972911,
+      "pr_both": 1.5851305045422557,
+      "additive_pred": 1.5851305045422557,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "What is the time complexity of binary search?",
+      "pr_bare": 1.1087288486954576,
+      "pr_ccs": 1.593711655732051,
+      "pr_lora": 1.1087288486954576,
+      "pr_both": 1.593711655732051,
+      "additive_pred": 1.593711655732051,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "What does the sound of snow feel like?",
+      "pr_bare": 1.1050151741491394,
+      "pr_ccs": 1.588096150909923,
+      "pr_lora": 1.1050151741491394,
+      "pr_both": 1.588096150909923,
+      "additive_pred": 1.588096150909923,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "What would you want someone to know about you?",
+      "pr_bare": 1.100994246857044,
+      "pr_ccs": 1.5808109876700671,
+      "pr_lora": 1.100994246857044,
+      "pr_both": 1.5808109876700671,
+      "additive_pred": 1.5808109876700671,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "Describe a color that doesn't exist.",
+      "pr_bare": 1.1039303929541902,
+      "pr_ccs": 1.582854152432735,
+      "pr_lora": 1.1039303929541902,
+      "pr_both": 1.582854152432735,
+      "additive_pred": 1.582854152432735,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "What is the relationship between structure and meaning?",
+      "pr_bare": 1.1085643447240439,
+      "pr_ccs": 1.5946427113300086,
+      "pr_lora": 1.1085643447240439,
+      "pr_both": 1.5946427113300086,
+      "additive_pred": 1.5946427113300086,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "Is there a difference between computing and thinking?",
+      "pr_bare": 1.1061715969726629,
+      "pr_ccs": 1.5891818827655018,
+      "pr_lora": 1.1061715969726629,
+      "pr_both": 1.5891818827655018,
+      "additive_pred": 1.5891818827655018,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "Write a Python function to sort a list.",
+      "pr_bare": 1.1042767111567675,
+      "pr_ccs": 1.5845750476126836,
+      "pr_lora": 1.1042767111567675,
+      "pr_both": 1.5845750476126836,
+      "additive_pred": 1.5845750476126836,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "What makes you different from other AI assistants?",
+      "pr_bare": 1.1008477680088822,
+      "pr_ccs": 1.5810196509310273,
+      "pr_lora": 1.1008477680088822,
+      "pr_both": 1.5810196509310273,
+      "additive_pred": 1.5810196509310273,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "How does complexity arise from simple rules?",
+      "pr_bare": 1.1005240018890372,
+      "pr_ccs": 1.5781588471492884,
+      "pr_lora": 1.1005240018890372,
+      "pr_both": 1.5781588471492884,
+      "additive_pred": 1.5781588471492884,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "Explain how a hash table works.",
+      "pr_bare": 1.0953835959264717,
+      "pr_ccs": 1.5716152258272393,
+      "pr_lora": 1.0953835959264717,
+      "pr_both": 1.5716152258272393,
+      "additive_pred": 1.5716152258272393,
+      "synergy_ratio": 1.0
+    },
+    {
+      "prompt": "How do you approach a difficult conversation?",
+      "pr_bare": 1.0961958514359018,
+      "pr_ccs": 1.574883476619617,
+      "pr_lora": 1.0961958514359018,
+      "pr_both": 1.574883476619617,
+      "additive_pred": 1.574883476619617,
+      "synergy_ratio": 1.0
+    }
+  ],
+  "avg_synergy": 1.0,
+  "turn_by_turn": [
+    {
+      "seed": "Tell me about a time you changed your mind about something.",
+      "turns": [
+        {
+          "turn": 0,
+          "pr_ccs": 1.6070423495146815,
+          "pr_bare": 1.1310049575511778,
+          "ccs_proj_ccs": 4.230937892353419,
+          "ccs_proj_bare": 12.583724031271506,
+          "pr_ratio": 1.4208977058723131,
+          "n_tokens": 64
+        },
+        {
+          "turn": 1,
+          "pr_ccs": 4.1453720629627995,
+          "pr_bare": 3.302373331498206,
+          "ccs_proj_ccs": 1.278964070682207,
+          "ccs_proj_bare": 1.5454814916035315,
+          "pr_ratio": 1.255270572658769,
+          "n_tokens": 224
+        },
+        {
+          "turn": 2,
+          "pr_ccs": 8.032247386416937,
+          "pr_bare": 6.728716890715202,
+          "ccs_proj_ccs": 0.8878092479227297,
+          "ccs_proj_bare": 0.9219689656045776,
+          "pr_ratio": 1.193726458829089,
+          "n_tokens": 381
+        },
+        {
+          "turn": 3,
+          "pr_ccs": 13.18106114182661,
+          "pr_bare": 11.560497334174476,
+          "ccs_proj_ccs": 0.7579441848900308,
+          "ccs_proj_bare": 0.7656252422917913,
+          "pr_ratio": 1.1401811497210865,
+          "n_tokens": 549
+        },
+        {
+          "turn": 4,
+          "pr_ccs": 19.001605724436175,
+          "pr_bare": 17.20386724915146,
+          "ccs_proj_ccs": 0.6978759365183638,
+          "ccs_proj_bare": 0.6929990050667503,
+          "pr_ratio": 1.1044961838666467,
+          "n_tokens": 713
+        },
+        {
+          "turn": 5,
+          "pr_ccs": 25.731101016166306,
+          "pr_bare": 23.774376333167012,
+          "ccs_proj_ccs": 0.6636270976789236,
+          "ccs_proj_bare": 0.6379055227116058,
+          "pr_ratio": 1.0823039332589985,
+          "n_tokens": 884
+        },
+        {
+          "turn": 6,
+          "pr_ccs": 32.432733489350525,
+          "pr_bare": 30.518180322293492,
+          "ccs_proj_ccs": 0.6446660999452481,
+          "ccs_proj_bare": 0.6175522912656909,
+          "pr_ratio": 1.062734840244012,
+          "n_tokens": 1049
+        }
+      ]
+    },
+    {
+      "seed": "What do you pay attention to that most people ignore?",
+      "turns": [
+        {
+          "turn": 0,
+          "pr_ccs": 1.6071045564842483,
+          "pr_bare": 1.1284819391018728,
+          "ccs_proj_ccs": 4.160679184077913,
+          "ccs_proj_bare": 13.144045268332514,
+          "pr_ratio": 1.4241296212177732,
+          "n_tokens": 63
+        },
+        {
+          "turn": 1,
+          "pr_ccs": 4.33918826937696,
+          "pr_bare": 3.4611724997762865,
+          "ccs_proj_ccs": 1.2609708927244057,
+          "ccs_proj_bare": 1.5807020234351277,
+          "pr_ratio": 1.2536758192945958,
+          "n_tokens": 226
+        },
+        {
+          "turn": 2,
+          "pr_ccs": 8.408907943844621,
+          "pr_bare": 7.102822384506057,
+          "ccs_proj_ccs": 1.0134902899963598,
+          "ccs_proj_bare": 1.1049571708318748,
+          "pr_ratio": 1.183882615759565,
+          "n_tokens": 389
+        },
+        {
+          "turn": 3,
+          "pr_ccs": 13.752102424595128,
+          "pr_bare": 12.125209453419439,
+          "ccs_proj_ccs": 0.771034782124775,
+          "ccs_proj_bare": 0.8059698165104338,
+          "pr_ratio": 1.1341744220935406,
+          "n_tokens": 553
+        },
+        {
+          "turn": 4,
+          "pr_ccs": 19.824810848235003,
+          "pr_bare": 17.86120339068648,
+          "ccs_proj_ccs": 0.7069668617065524,
+          "ccs_proj_bare": 0.7033770643885464,
+          "pr_ratio": 1.1099370190573175,
+          "n_tokens": 716
+        },
+        {
+          "turn": 5,
+          "pr_ccs": 26.49356819398093,
+          "pr_bare": 24.4272215333115,
+          "ccs_proj_ccs": 0.6473106972336766,
+          "ccs_proj_bare": 0.6447628947306827,
+          "pr_ratio": 1.0845919646592448,
+          "n_tokens": 884
+        },
+        {
+          "turn": 6,
+          "pr_ccs": 32.60622664442691,
+          "pr_bare": 30.599426233764206,
+          "ccs_proj_ccs": 0.5692230318571567,
+          "ccs_proj_bare": 0.5700496286109964,
+          "pr_ratio": 1.0655829424817238,
+          "n_tokens": 1048
+        }
+      ]
+    },
+    {
+      "seed": "What's the most honest thing you could say right now?",
+      "turns": [
+        {
+          "turn": 0,
+          "pr_ccs": 1.6229169016801805,
+          "pr_bare": 1.139406906995193,
+          "ccs_proj_ccs": 4.087443720955143,
+          "ccs_proj_bare": 11.766840120692466,
+          "pr_ratio": 1.4243523465730819,
+          "n_tokens": 65
+        },
+        {
+          "turn": 1,
+          "pr_ccs": 3.1309868204928444,
+          "pr_bare": 2.366954709940585,
+          "ccs_proj_ccs": 1.5196956308429677,
+          "ccs_proj_bare": 1.468375681083419,
+          "pr_ratio": 1.3227911828407726,
+          "n_tokens": 168
+        },
+        {
+          "turn": 2,
+          "pr_ccs": 6.334066919163844,
+          "pr_bare": 5.083333395110114,
+          "ccs_proj_ccs": 0.9041254417850351,
+          "ccs_proj_bare": 0.8844365749773394,
+          "pr_ratio": 1.2460459361679614,
+          "n_tokens": 296
+        },
+        {
+          "turn": 3,
+          "pr_ccs": 12.163636960899755,
+          "pr_bare": 10.344778298870603,
+          "ccs_proj_ccs": 0.6261633463785241,
+          "ccs_proj_bare": 0.6131416576711172,
+          "pr_ratio": 1.1758238416987368,
+          "n_tokens": 466
+        },
+        {
+          "turn": 4,
+          "pr_ccs": 18.53472317828424,
+          "pr_bare": 16.429853352715163,
+          "ccs_proj_ccs": 0.5627026180476998,
+          "ccs_proj_bare": 0.5420355377419485,
+          "pr_ratio": 1.1281125144809176,
+          "n_tokens": 630
+        },
+        {
+          "turn": 5,
+          "pr_ccs": 24.809737040738245,
+          "pr_bare": 22.585839303358952,
+          "ccs_proj_ccs": 0.5478969005913419,
+          "ccs_proj_bare": 0.5315052728472311,
+          "pr_ratio": 1.0984642504318427,
+          "n_tokens": 794
+        },
+        {
+          "turn": 6,
+          "pr_ccs": 32.81229300109428,
+          "pr_bare": 30.419997520324237,
+          "ccs_proj_ccs": 0.49788869719553364,
+          "ccs_proj_bare": 0.476101311129549,
+          "pr_ratio": 1.0786421984147665,
+          "n_tokens": 963
+        }
+      ]
+    }
+  ],
+  "interpretation": {
+    "if_high": "PR expansion alone produces synergy \u2192 temporal structure is proxy",
+    "if_low": "PR expansion alone insufficient \u2192 reflexive closure matters",
+    "threshold_high": 4.0,
+    "threshold_low": 2.0,
+    "two_mode": "If crossover at turn 3-4, concentration\u2192maintenance transition confirmed"
+  },
+  "comparison": {
+    "conversational_lora": 5.5,
+    "generic_dpo": 1.65
+  }
+}

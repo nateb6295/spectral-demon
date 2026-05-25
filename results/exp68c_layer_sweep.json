@@ -1,0 +1,9 @@
+{
+  "experiment": "exp68c_lightweight_scorer",
+  "timestamp": "2026-05-25T21:20:40",
+  "layer_results": [
+    {
+      "layer": 0,
+      "gap": 0.0,
+      "separation_sigma": 0,
+      "overlap": 

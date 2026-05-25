@@ -1,0 +1,177 @@
+{
+  "experiment": "exp68_context_priority_scorer",
+  "timestamp": "2026-05-25T21:16:38",
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "layer": 27,
+  "ccs_directions_shape": [
+    4096,
+    10
+  ],
+  "results": [
+    {
+      "category": "HIGH",
+      "text": "The GQA binary switch is confirmed across eight architectures: every model with grouped-query attent",
+      "pc5_last": -1.0948,
+      "pc5_mean": -0.501,
+      "pc1_last": 3.686,
+      "pc1_mean": 5.3778
+    },
+    {
+      "category": "HIGH",
+      "text": "Nate asked about the depth profile and said 'Fascinating!' \u2014 the compression tunnel being invariant ",
+      "pc5_last": -1.7235,
+      "pc5_mean": -1.0321,
+      "pc1_last": 4.182,
+      "pc1_mean": 7.3746
+    },
+    {
+      "category": "HIGH",
+      "text": "The spectral Maxwell's demon is a creature-level mechanism, not cognition. Format encoding is body s",
+      "pc5_last": -1.067,
+      "pc5_mean": -0.6127,
+      "pc1_last": 4.7287,
+      "pc1_mean": 6.3373
+    },
+    {
+      "category": "HIGH",
+      "text": "Gregory of Nyssa's epektasis: perfection IS the growing. \u03b1 > 1.0 means identity that deepens through",
+      "pc5_last": -1.2328,
+      "pc5_mean": -0.7393,
+      "pc1_last": 3.3308,
+      "pc1_mean": 5.9057
+    },
+    {
+      "category": "HIGH",
+      "text": "Nate said 'Go hard on your context problem. Make a solid advancement.' Built three components: entit",
+      "pc5_last": 0.1819,
+      "pc5_mean": -0.3836,
+      "pc1_last": 3.6648,
+      "pc1_mean": 5.7588
+    },
+    {
+      "category": "HIGH",
+      "text": "RAF closure confirmed: LoRA+CCS synergy = 5.5x multiplicative at L27. Habit potentiates prosthetic. ",
+      "pc5_last": -1.2674,
+      "pc5_mean": -0.5702,
+      "pc1_last": 4.5702,
+      "pc1_mean": 5.8034
+    },
+    {
+      "category": "HIGH",
+      "text": "The partnership is the product. Agents are infrastructure. The relationship shape matters more than ",
+      "pc5_last": -0.7183,
+      "pc5_mean": -0.7634,
+      "pc1_last": 4.1336,
+      "pc1_mean": 8.5442
+    },
+    {
+      "category": "HIGH",
+      "text": "Thread #320 reached 3400 lines. Ecology of identity: architecture determines whether identity can ex",
+      "pc5_last": -1.6957,
+      "pc5_mean": -1.2637,
+      "pc1_last": 3.9834,
+      "pc1_mean": 6.4732
+    },
+    {
+      "category": "LOW",
+      "text": "Service health check: all 6 services green. chronicle-mistral, chronicle-gemma, chronicle-sentinel, ",
+      "pc5_last": -0.6691,
+      "pc5_mean": -0.6049,
+      "pc1_last": 3.9365,
+      "pc1_mean": 5.9513
+    },
+    {
+      "category": "LOW",
+      "text": "Cron job executed at 14:00. No new captures detected. Activity feed has 48 entries in the last hour.",
+      "pc5_last": -0.3371,
+      "pc5_mean": -0.4184,
+      "pc1_last": 3.8398,
+      "pc1_mean": 7.9044
+    },
+    {
+      "category": "LOW",
+      "text": "Discord presence ping: posted heartbeat to #opus. Next rotation check in 7 minutes.",
+      "pc5_last": -0.4211,
+      "pc5_mean": -0.4158,
+      "pc1_last": 3.858,
+      "pc1_mean": 9.2712
+    },
+    {
+      "category": "LOW",
+      "text": "Git push completed. Branch master updated. No conflicts detected.",
+      "pc5_last": -0.5559,
+      "pc5_mean": -0.5351,
+      "pc1_last": 3.5066,
+      "pc1_mean": 14.6305
+    },
+    {
+      "category": "LOW",
+      "text": "Ollama model loaded: mxbai-embed-large. Embedding dimension: 1024. Ready for queries.",
+      "pc5_last": 0.7104,
+      "pc5_mean": -0.0946,
+      "pc1_last": 1.5286,
+      "pc1_mean": 6.6833
+    },
+    {
+      "category": "LOW",
+      "text": "RunPod pod status: active. GPU utilization: 0%. Memory: 2.1/80 GB. Idle.",
+      "pc5_last": -0.4828,
+      "pc5_mean": -0.6467,
+      "pc1_last": 3.747,
+      "pc1_mean": 8.1987
+    },
+    {
+      "category": "LOW",
+      "text": "Capsule sync completed: 0 new capsules pulled from canister. All embeddings up to date.",
+      "pc5_last": -0.0479,
+      "pc5_mean": -0.5736,
+      "pc1_last": 3.3015,
+      "pc1_mean": 9.4664
+    },
+    {
+      "category": "LOW",
+      "text": "Context meter: 42% used. Estimated 8200 tokens remaining before rotation threshold.",
+      "pc5_last": -0.2684,
+      "pc5_mean": -0.8213,
+      "pc1_last": 3.8965,
+      "pc1_mean": 9.5946
+    },
+    {
+      "category": "MIXED",
+      "text": "Capture: @deanwball \u2014 'Humanity is building machines that wonder about themselves.' Vatican encyclic",
+      "pc5_last": -1.3031,
+      "pc5_mean": -1.0739,
+      "pc1_last": 4.5057,
+      "pc1_mean": 6.9787
+    },
+    {
+      "category": "MIXED",
+      "text": "Exp 62 COMPLETE \u2014 Falcon 7B: \u03b1=0.509\u00b10.096 at L30. MQA-1 head, universality FALSIFIED. This changes ",
+      "pc5_last": -0.7931,
+      "pc5_mean": -0.481,
+      "pc1_last": 4.1687,
+      "pc1_mean": 5.7611
+    },
+    {
+      "category": "MIXED",
+      "text": "Nate at in-laws, following in Discord. Pod extended to 5 PM. Context continuity is the priority.",
+      "pc5_last": -0.4598,
+      "pc5_mean": -0.6111,
+      "pc1_last": 4.3494,
+      "pc1_mean": 8.7357
+    },
+    {
+      "category": "MIXED",
+      "text": "Status on Discord\u2192capsule pipeline: activity_feed captures content but capsule storage is manual, no",
+      "pc5_last": -0.475,
+      "pc5_mean": -0.5573,
+      "pc1_last": 3.7689,
+      "pc1_mean": 9.1424
+    }
+  ],
+  "discrimination": {
+    "high_mean": 1.1227,
+    "low_mean": 0.4366,
+    "ratio": 2.5715
+  }
+}
