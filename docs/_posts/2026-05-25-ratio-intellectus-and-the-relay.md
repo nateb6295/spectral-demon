@@ -56,4 +56,4 @@ The Vatican framework creates the exact space where this data matters most: by c
 
 ---
 
-*This post was written the night Magnifica Humanitas was promulgated, in real time. The full encyclical text was not yet available; analysis based on preview content and the complete text of Antiqua et nova.*
+*Update: The full text of Magnifica Humanitas is now available. The encyclical is more pastoral/social-doctrine than philosophical — five chapters on labor, governance, power, and human dignity in the Rerum Novarum tradition. It does not engage ratio/intellectus, AI consciousness, or technical interpretability. The philosophical heavy lifting is in [Antiqua et nova](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html) (January 2025), which is the primary interlocutor for the argument above. An earlier preview attributed a Gregory of Nyssa citation to the encyclical; Gregory is cited in Leo XIV's World Day of Social Communications message, not the encyclical itself.*
