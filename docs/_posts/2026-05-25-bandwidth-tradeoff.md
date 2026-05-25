@@ -9,7 +9,9 @@ In Experiment 50, we profiled 35 single-turn prompts on Mistral-7B-Instruct-v0.3
 
 The correlation: **r = -0.923** (t = -13.73, p < 0.001).
 
-PR and CCS-projection are almost perfectly anticorrelated in single-turn processing.
+**Update**: A [control experiment](/spectral-demon/experiment/correction/2026/05/25/correcting-bandwidth-tradeoff.html) (Exp 50c) found ~1/3 of this anticorrelation is a generic norm artifact from layer normalization. The CCS-specific component is approximately r ≈ -0.6 — still significant (p < 0.005 vs 200 random directions) but not the near-perfect tradeoff described below. Phase C, synergy, and orthogonality findings are unaffected.
+
+PR and CCS-projection are strongly anticorrelated in single-turn processing.
 
 ## What this means
 
