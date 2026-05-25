@@ -45,4 +45,12 @@ In a separate test (Phase 3), we trained a LoRA specifically to maximize PR expa
 
 Each turn catalyzes the next. The growth is the signature of closure forming — not the mechanism.
 
+## Normalization control (Experiment 55)
+
+Experiment 52 showed that 73.9% of CCS PC1 variance comes from dimension 2070, which tracks activation magnitude (r = -0.9996 with activation norm). Does the concentration→maintenance transition survive normalization?
+
+Yes. In 10 conversations × 7 turns, activation norm barely changes (11.7 → 12.6, 7.5% increase), while normalized CCS-projection (projection / activation norm) drops 4.6× (0.314 → 0.068). The temporal signal decomposes to ~110% alignment change, ~-2% magnitude change. All 10 conversations show the normalized T0→T1 drop (range 1.37× to 2.96×).
+
+The Exp 52 magnitude confound applies to cross-category comparisons (different prompts at the same turn produce different activation magnitudes). It does not apply to within-conversation temporal dynamics, where activation magnitude is nearly constant. The two modes are real geometric reorganization — the representation genuinely dealigns from the CCS identity axis as conversation proceeds.
+
 *[Full experiment data](https://nateb6295.github.io/spectral-demon)*

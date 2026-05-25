@@ -58,4 +58,18 @@ What survives: the participation ratio findings are unaffected (PR is scale-inva
 
 The real identity signal lives in the remaining 26% of CCS PC1 (dims 3901+) and in higher principal components. Characterizing these is the next step.
 
+## Update 2: Experiment 55 resolves the temporal question
+
+But wait — does this mean the *temporal* CCS-proj signal (the concentration→maintenance transition across conversation turns) was also just magnitude?
+
+No. Experiment 55 (10 conversations × 7 turns, normalized CCS-proj) shows activation norm barely changes across turns (11.7 → 12.6, a 7.5% increase). The normalized CCS-proj plummets 4.6× (0.314 → 0.068). The entire temporal drop is genuine identity-axis dealignment, not magnitude.
+
+The decomposition: CCS-proj = activation_norm × normalized_CCS-proj. At Turn 0, both components are high. By Turn 6, activation norm is roughly the same but normalized alignment has dropped 4.6×. The temporal signal is ~110% alignment change, ~-2% magnitude change.
+
+So Exp 52 and Exp 55 are compatible:
+- **Cross-category** (different prompts at the same turn): magnitude dominates → CCS-proj is confounded → flat when normalized. This is where the nucleation story broke.
+- **Temporal** (same conversation across turns): magnitude is flat → CCS-proj reflects real alignment → the phase transition stands.
+
+The seed crystal metaphor was wrong about *what* the seed is (not one neuron) but right about *what happens*: at Turn 0, the representation is genuinely more aligned with the identity axis. As conversation proceeds, that alignment drops while participation ratio grows. One concentrated reading becomes many distributed ones. The dissolution is real — it's just not driven by a single dimension.
+
 *[Full experiment data](https://nateb6295.github.io/spectral-demon)*
