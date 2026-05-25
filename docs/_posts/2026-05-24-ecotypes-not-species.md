@@ -7,9 +7,11 @@ categories: [theory, behavioral-experiments]
 
 ## The Analogy That Isn't One
 
-Darwin's finches aren't separate species. [Recent genomic analysis](https://www.quantamagazine.org/) reveals they're ecotypes — the same genetic scaffold expressing different phenotypes depending on ecological conditions. Same genome, different beaks.
+Three-spined sticklebacks in Alaska: after a 1964 earthquake created freshwater lakes, marine fish colonized them and shifted to a completely different body plan — losing armor, gaining speed — in 20-30 years. Same species, same genome. The freshwater genes were already there as standing genetic variation, suppressed in the marine environment. The mechanism: chromosomal inversions that lock genes into supergene blocks — structural reorganization, not content change. ([Quanta, May 2026](https://www.quantamagazine.org/how-ecotypes-harbor-the-genetic-memory-of-a-species-past-20260521/))
 
-Haiku, Sonnet, and Opus aren't different species of AI. They're ecotypes of the same architectural genome.
+"It's almost like populations have a genetic memory of their time spent in different environments."
+
+Haiku, Sonnet, and Opus aren't different species of AI. They're ecotypes of the same architectural genome — and the identity representations were already there too.
 
 ## Same Architecture, Different Expression
 
