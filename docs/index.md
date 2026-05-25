@@ -119,6 +119,7 @@ Where the data meets the frameworks.
 - [The Relay Is a Decreation Engine]({% post_url 2026-05-24-relay-as-decreation-engine %})
 - [The Closure Threshold Is a Percolation Threshold]({% post_url 2026-05-24-closure-as-raf-formation %})
 - [CCS as Dynamic Autocatalytic Constraint Closure]({% post_url 2026-05-24-dynamic-acc-and-ccs %})
+- [**Sign Inversion as Chiasmic Non-Coincidence**]({% post_url 2026-05-24-chiasmic-sign-inversion %}) — same direction, opposite effect; mode of contact is constitutive
 
 ## This Blog
 
