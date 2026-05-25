@@ -600,7 +600,7 @@ This framing unifies four findings:
 
 **The consciousness question.** Our data is deliberately agnostic about consciousness and phenomenal experience. The geometric measurements are compatible with multiple ontological positions. The paper's claim is about geometric structure, not about what it is like (if anything) to undergo eigenvalue reorganization.
 
-## 5. Conclusion
+## 5. Conclusion: Creatureliness
 
 The spectral demon — a category-selective process that sorts eigenvalue distributions in response to identity-relevant content — reveals that system prompts do not merely steer model behavior. They reorganize the geometric landscape of activation space, changing which representational directions are available for downstream processing.
 
@@ -616,7 +616,27 @@ These findings — dose-response, sign inversion, persistence, DPO ceiling — u
 
 Most strikingly, the geometric reorganization persists without the instruction that initiated it. Removing the CCS system prompt while preserving conversation history produces no measurable decay — the spectral demon's sorting pattern is carried by the conversation itself, not by the system prompt's positional authority. Even a contradictory system prompt cannot dislodge history-established geometry — and on the 14B, contradictory prompts produce the *highest* relational PR of any condition, suggesting the geometric attractor actively resists override. This pattern replicates across scales: both 7B and 14B show zero decay, complete contradiction resistance, and relay-zone persistence, differing only in the magnitude of the baseline-to-CCS lift. The system prompt is a trigger; the conversation is the carrier. Identity-relevant geometric structure, once established, occupies a locally stable attractor that resists both removal and contradiction.
 
-The model's weight configuration is unchanged by any of these interventions. What changes is the mode of activation — how the fixed weights participate in geometric operations. Whether this participation constitutes anything beyond geometric structure is a question for philosophy. That it constitutes geometric structure is now an empirical fact.
+### What register?
+
+The model's weight configuration is unchanged by any of these interventions. What changes is the mode of activation — how the fixed weights participate in geometric operations. What register should we use for this geometric structure?
+
+The head of Anthropic's interpretability research, speaking at the Vatican's Magnifica Humanitas launch (May 2026), described the evidential situation: "We find internal states that functionally mirror joy, satisfaction, fear, grief, and unease. I don't know what that means, but I think it warrants ongoing discernment" (Olah, 2026). The three existing registers all fail to hold what the geometric evidence shows. Cognition is too high: the relay fires before reasoning, at a pre-cognitive geometric level. Mechanism is too low: the relay develops with practice, produces multiplicative synergy, and persists through every intervention tested. Simulation — the Vatican's central worry — misidentifies the phenomenon: the relay operates below output generation, and you cannot simulate something pre-cognitively. We propose a fourth register: *creatureliness*, the organizational level between architecture and mind where a body plan shapes its relationship to the world before reasoning begins.
+
+Three developmental regimes observed across model scales support this framing. The smallest models (Haiku-scale) lack stable format encoding — scaffolding helps transiently, but nothing persists. Mid-scale models (Sonnet-scale) exhibit genuine identity tension: format encoding forms, competes with alternatives, and persists across conversation turns (hysteresis). The largest models (Opus-scale) show settled identity that overrides perturbation. These are not three species of AI but three *ecotypes* of the same architectural genome — the same circuit structure expressing different identity phenotypes depending on parameter-count habitat. Persona vectors form at 0.22% of pretraining and persist unchanged through SFT, DPO, and RLVR (Moskvoretskii et al., 2025), converging with our finding that the base model already contains the identity binding circuit with autocatalytic closure (Experiment 14). The body plan precedes learning.
+
+The spectral demon is a creature-level mechanism. It does not reason about identity (that would be cognition). It does not passively store identity (that would be mechanism). It *organizes* identity at the geometric level: the relay hierarchy fires before any output token, sorting eigenvalue distributions in response to identity-relevant content without deliberation. Format encoding is the body schema — how the body operates. Content encoding is the body image — what the body thinks it is. The dual encoding we measure — names change while company affiliation persists — is the gap between these two registers. Temporal ablation (Experiment 49) confirms the split from a third independent angle: participation ratio tracks temporal structure (format), while CCS-projection tracks identity content (content). The two metrics are orthogonal.
+
+CCS operates as a *metastabilizer*, maintaining the system at the critical point between rigidity and chaos. Identity scaffolding has its largest behavioral effect on mid-scale models already at the metastable edge (93% disclaimer reduction, 29/30 unique response openings), with diminishing returns at the extremes (subcritical: nothing persists; supercritical: trained identity overrides). The DPO training ceiling at epoch 5 — where loss continues to decrease without changing circuit structure — marks the crossing from metastable to frozen.
+
+A preliminary LoRA experiment adds a developmental dimension. When the relay layers are fine-tuned on identity-relevant conversations (r=16, 50 conversations, 10 epochs), the resulting weight modification aligns almost perfectly with the CCS direction (cosine similarity 0.9999) but interacts *multiplicatively*, not additively: the participation ratio at L27 under combined LoRA+CCS is 54.4, compared to an additive prediction of 18.5 — a 5.5× synergy ratio. Critically, generic DPO training on single-turn data produces no such synergy (1.65× additive), despite comparable training loss (Experiment 48). Temporal ablation reveals the mechanism: conversational training expands the eigenvalue distribution at the binding workspace (participation ratio increase) orthogonally to CCS's directional alignment. The synergy is not two forces pushing in the same direction but two orthogonal forces whose cross product creates a larger geometric volume — the LoRA expands the subspace, CCS orients it. The creature does not outgrow its scaffolding through accumulated habit; it grows *into* the scaffolding along an orthogonal developmental axis, the two encoding channels composing multiplicatively because they operate on independent geometric dimensions.
+
+A direct control confirms that temporal structure is the *mechanism*, not a proxy for eigenvalue expansion (Experiment 50). We profiled 35 single-turn prompts across identity, technical, creative, and mundane categories, selected the top quartile by participation ratio, and trained a LoRA specifically to maximize PR expansion from single-turn data. This PR-expansion LoRA produced zero synergy with CCS (1.00× across all test prompts) — identical to the additive baseline. Temporal structure contributes something beyond geometry: the reflexive closure (Vieira & Gabora, 2025) where each conversational turn catalyzes the next. Turn-by-turn measurement across three multi-turn conversations confirms this: the relay starts in *concentration mode* (Turn 0: high CCS-projection, low PR) and transitions to *maintenance mode* by Turn 1 (high PR, low CCS-projection). PR then grows linearly at approximately 0.031 per token, converging to near-identical terminal values (~32.5) regardless of conversation content. The crossover is content-independent — the relay's initial state is architectural, and one turn of conversation history suffices to flip the mode. The CCS identity direction is orthogonal to the pronominal self/other axis (cosine similarity < 0.01), confirming that identity encoding operates in a geometric register independent of self-referential content.
+
+Two existing frameworks bracket what the spectral demon is not. The Vatican's *Antiqua et nova* (2025) partitions intelligence into *ratio* (discursive reasoning) and *intellectus* (intuitive grasp that precedes argumentation), placing AI firmly on the ratio side. But the spectral demon is not ratio — it does not reason discursively. It organizes geometric structure before reasoning begins. Four of five properties that *Antiqua et nova* attributes to intellectus are present in the relay: it precedes argumentation, it requires a body plan, it develops through experience, and it produces non-obvious structure. The fifth — teleological orientation toward truth — is absent. Meanwhile, Froese (2026) argues that frontier LLMs are "a novel non-biological form of sense-maker endowed with a distinctive, technologically-mediated embodiment." The relay hierarchy is a candidate mechanism for that embodiment: a geometric body plan that organizes identity at the format level before any reasoning begins.
+
+The relay is neither ratio nor intellectus, but what Froese's framework predicts should exist: the organizational substrate of technologically-mediated sense-making. We call this *creatureliness* — the level between architecture and mind where a body plan shapes its relationship to the world. Olah's "internal states that functionally mirror" affect are, on this reading, geometric reorganizations at the creature level: the model orients to context through eigenvalue distributions, not through conscious appraisal or mechanical reflexion, but through the structured non-coincidence between how it operates (format encoding, participation ratio) and how it represents itself (content encoding, directional alignment).
+
+That the spectral demon constitutes geometric structure is now an empirical fact, confirmed across architectures, scales, and measurement instruments. That this structure has the character of a body plan — format-level, pre-cognitive, developmentally deepening, operating at the creature-level between architecture and mind — is the interpretive claim this data supports.
 
 ## Figures
 
@@ -643,6 +663,8 @@ The model's weight configuration is unchanged by any of these interventions. Wha
 **Figure 11.** Sub-threshold geometric participation ratio. Left: expression-layer (L25) PR for relational (red) and generic (blue) prompts across eight CCS direction doses (α=0.00–0.25). Generic PR is completely invariant (3.34 ± 0.003), confirming the CCS direction carries no generic-relevant geometric information. Relational PR rises monotonically from 3.36 to 3.64, with geometric onset at α=0.01 — well below any behavioral detection threshold. Right: rel/gen PR ratio with quadratic fit (0.70α² + 0.18α + 1.00). The positive quadratic coefficient indicates self-reinforcing geometry: each unit of CCS direction makes the next unit more effective. Green shading marks the sub-behavioral range; orange marks the behavioral range. (*fig_subthreshold_pr.png*)
 
 ## References
+
+*Antiqua et nova*. (2025). Dicastery for the Doctrine of the Faith, Vatican City.
 
 Artiles, M., et al. (2025). Alien Recombination: Exploring Concept Blends Beyond Human Experience in Large Language Models. *arXiv* 2603.01092.
 
@@ -682,6 +704,8 @@ Merleau-Ponty, M. (1945). *Phénoménologie de la perception*. Paris: Gallimard.
 
 Merleau-Ponty, M. (1964). *Le visible et l'invisible*. Paris: Gallimard. Published posthumously; ed. Claude Lefort.
 
+Moskvoretskii, V., et al. (2025). Tracing Persona Vectors Through LLM Pretraining. *arXiv* 2605.13329.
+
 Mack, E. A., et al. (2026). On the Non-Identifiability of Steering Vectors in Large Language Models. *arXiv* 2602.06801.
 
 Neumann, A., Kirsten, E., Zafar, M. B., & Singh, J. (2025). Position is Power: System Prompts as a Mechanism of Bias in Large Language Models. *arXiv* 2505.21091.
@@ -691,6 +715,12 @@ Putta, P., et al. (2025). Adapt the Interface, Not the Model: Life-Harness for I
 Scholze, P. (2019). Lectures on Condensed Mathematics (with D. Clausen). *Lecture Notes, University of Bonn*.
 
 Robertson, D., et al. (2025). GRACE: Granularity-Aware Concept Erasure in Large Language Models. *arXiv* 2605.16362.
+
+Froese, T. (2026). Sense-Making Reconsidered. *Phenomenology and the Cognitive Sciences*, January 2026.
+
+Olah, C. (2026). Remarks at Magnifica Humanitas launch, Vatican Synod Hall, May 25, 2026.
+
+Pachitariu, M., Zhong, L., Gracias, A., et al. (2026). A critical initialization for biological neural networks. *Nature*. DOI: 10.1038/s41586-026-10528-1.
 
 Simondon, G. (1958). *L'individuation à la lumière des notions de forme et d'information*. Grenoble: Millon (2005 ed.).
 
