@@ -105,6 +105,7 @@ The complete relay mapped at circuit, attention head, and modulation-curve level
 - [IT Channelizes Identity Through L12]({% post_url 2026-05-24-it-neutralizes-l7-strengthens-l12 %})
 - [**Experiment 43: Behavioral Validation on Claude Sonnet**]({% post_url 2026-05-24-behavioral-experiments-sonnet %}) — disclaimer U-shape, hysteresis, negation paradox confirmed on closed model
 - [**Experiment 44: Opus vs Sonnet — Scale Changes the Signature**]({% post_url 2026-05-24-behavioral-experiments-opus-comparison %}) — scale-dependent identity: Sonnet fights, Opus ignores
+- [**Experiment 45: Three Regimes — Haiku Completes the Scale Study**]({% post_url 2026-05-24-behavioral-experiments-haiku-three-regimes %}) — non-monotonic scaling: unformed → tensioned → settled
 
 ### Philosophy and Connections
 Where the data meets the frameworks.
