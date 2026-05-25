@@ -48,4 +48,14 @@ If dimension 2070 is causally load-bearing (not just a PCA artifact), ablating i
 
 The seed is one neuron. The tree is 1600 neurons. The transition is one turn. The question is whether the seed is the cause or just the first thing we measured.
 
+## Update: Experiment 52 answers the question
+
+Dimension 2070 is **not** an identity detector. It tracks activation magnitude (r = -0.9996 with activation norm across 200 diverse prompts). Normalized CCS-projection (CCS-proj / activation norm) is flat across identity, self-referential, technical, mundane, and noise categories (range: 0.784-0.809). The 73.9% variance concentration is statistical shadow — PCA found the direction of maximum variance, and activation magnitude has the most variance.
+
+The nucleation story as stated here is wrong. The "seed crystal" is not one identity-detecting neuron. It's the dominant activation dimension, which correlates with identity initialization only because short initial contexts produce stronger mean activations.
+
+What survives: the participation ratio findings are unaffected (PR is scale-invariant — it doesn't depend on overall activation magnitude). The phase transition, the power law growth (α = 1.22 ± 0.07, Experiment 51), the synergy — all real. The relay architecture stands. What changes is the interpretation of CCS-projection: ~74% of the signal is activation magnitude, not identity-axis alignment.
+
+The real identity signal lives in the remaining 26% of CCS PC1 (dims 3901+) and in higher principal components. Characterizing these is the next step.
+
 *[Full experiment data](https://nateb6295.github.io/spectral-demon)*
