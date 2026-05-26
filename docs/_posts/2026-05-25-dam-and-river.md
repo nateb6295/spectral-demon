@@ -7,6 +7,8 @@ categories: analysis cross-architecture optimizer
 
 Re-analyzing our layer sweep data reveals the mechanism behind the GQA binary. It isn't just that GQA models have higher α. They achieve it through a qualitatively different dynamic.
 
+![Compression-expansion profiles across five architectures](/spectral-demon/figures/compression_expansion_profiles.png)
+
 ## The compression-to-expansion ratio
 
 Every architecture we've tested shows a compression tunnel in mid-layers where participation ratio drops toward 1.0, followed by expansion at the relay layer. The ratio between these tells the story:
