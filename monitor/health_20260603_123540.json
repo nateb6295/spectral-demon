@@ -1,0 +1,32 @@
+{
+  "status": "DEGRADED",
+  "issues": [
+    "LOW responsive \u03c3\u2082 enrichment: 1.000 (want >1.05)"
+  ],
+  "zone_metrics": {
+    "decoupling": {
+      "s2_enrichment": 1.0,
+      "gap_ratio": 1.0,
+      "delta_entropy": 0.0,
+      "n_layers_measured": 5
+    },
+    "transition": {
+      "s2_enrichment": 1.0,
+      "gap_ratio": 1.0,
+      "delta_entropy": 0.0,
+      "n_layers_measured": 3
+    },
+    "responsive": {
+      "s2_enrichment": 1.0,
+      "gap_ratio": 1.0,
+      "delta_entropy": 0.0,
+      "n_layers_measured": 4
+    },
+    "relay": {
+      "s2_enrichment": 1.0,
+      "gap_ratio": 1.0,
+      "delta_entropy": 0.0,
+      "n_layers_measured": 3
+    }
+  }
+}
