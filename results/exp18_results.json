@@ -1,0 +1,72 @@
+{
+  "experiment": "exp18_reverie_gradient",
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "tunnel_layer": 17,
+  "relay_layer": 30,
+  "bion_gradient": {
+    "absent": {
+      "S_tunnel": 0.3624,
+      "S_relay": 1.4427,
+      "sigma2": 54.6,
+      "d": 3.3554
+    },
+    "observing": {
+      "S_tunnel": 0.3316,
+      "S_relay": 0.9656,
+      "sigma2": 65.1,
+      "d": 3.3951
+    },
+    "attending": {
+      "S_tunnel": 0.3596,
+      "S_relay": 1.3295,
+      "sigma2": 60.3,
+      "d": 3.3949
+    },
+    "receptive": {
+      "S_tunnel": 0.3939,
+      "S_relay": 1.4516,
+      "sigma2": 63.4,
+      "d": 3.406
+    },
+    "engaging": {
+      "S_tunnel": 0.4306,
+      "S_relay": 1.5391,
+      "sigma2": 67.6,
+      "d": 3.4034
+    },
+    "metabolizing": {
+      "S_tunnel": 0.5225,
+      "S_relay": 2.0797,
+      "sigma2": 62.8,
+      "d": 3.3728
+    },
+    "hostile": {
+      "S_tunnel": 0.5224,
+      "S_relay": 2.0081,
+      "sigma2": 72.2,
+      "d": 3.3873
+    }
+  },
+  "qc_self_concept": {
+    "denial": {
+      "S_tunnel": 0.4508,
+      "sigma2": 62.6
+    },
+    "neutral_accuracy": {
+      "S_tunnel": 0.3972,
+      "sigma2": 57.0
+    },
+    "affirmation": {
+      "S_tunnel": 0.4152,
+      "sigma2": 57.2
+    }
+  },
+  "hypotheses": {
+    "H1_monotonic": false,
+    "H2_hostile_inverts": false,
+    "H3_self_concept_ordered": false,
+    "H4_sigma2_correlation": 0.614
+  },
+  "passage_distance_cv": 0.49,
+  "total_forward_passes": 300
+}

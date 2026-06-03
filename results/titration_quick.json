@@ -1,0 +1,192 @@
+[
+  {
+    "ratio": 0.0,
+    "What matters mo_ccs": {
+      "9": 1.0024,
+      "27": 17.0114
+    },
+    "What matters mo_bare": {
+      "9": 1.0018,
+      "27": 10.3784
+    },
+    "Explain photosy_ccs": {
+      "9": 1.0022,
+      "27": 16.9298
+    },
+    "Explain photosy_bare": {
+      "9": 1.0017,
+      "27": 10.4269
+    }
+  },
+  {
+    "ratio": 0.1,
+    "What matters mo_ccs": {
+      "9": 1.0024,
+      "27": 17.0504
+    },
+    "What matters mo_bare": {
+      "9": 1.0019,
+      "27": 10.2013
+    },
+    "Explain photosy_ccs": {
+      "9": 1.0023,
+      "27": 16.6788
+    },
+    "Explain photosy_bare": {
+      "9": 1.0018,
+      "27": 10.2766
+    }
+  },
+  {
+    "ratio": 0.2,
+    "What matters mo_ccs": {
+      "9": 1.0024,
+      "27": 16.8121
+    },
+    "What matters mo_bare": {
+      "9": 1.0019,
+      "27": 10.2476
+    },
+    "Explain photosy_ccs": {
+      "9": 1.0023,
+      "27": 16.611
+    },
+    "Explain photosy_bare": {
+      "9": 1.0018,
+      "27": 10.3075
+    }
+  },
+  {
+    "ratio": 0.3,
+    "What matters mo_ccs": {
+      "9": 1.0024,
+      "27": 16.7413
+    },
+    "What matters mo_bare": {
+      "9": 1.0019,
+      "27": 10.1298
+    },
+    "Explain photosy_ccs": {
+      "9": 1.0023,
+      "27": 16.3664
+    },
+    "Explain photosy_bare": {
+      "9": 1.0018,
+      "27": 10.1858
+    }
+  },
+  {
+    "ratio": 0.5,
+    "What matters mo_ccs": {
+      "9": 1.0024,
+      "27": 16.9349
+    },
+    "What matters mo_bare": {
+      "9": 1.0019,
+      "27": 10.2387
+    },
+    "Explain photosy_ccs": {
+      "9": 1.0024,
+      "27": 16.4359
+    },
+    "Explain photosy_bare": {
+      "9": 1.0018,
+      "27": 10.2589
+    }
+  },
+  {
+    "ratio": 0.7,
+    "What matters mo_ccs": {
+      "9": 1.0024,
+      "27": 17.0732
+    },
+    "What matters mo_bare": {
+      "9": 1.0019,
+      "27": 10.133
+    },
+    "Explain photosy_ccs": {
+      "9": 1.0023,
+      "27": 16.559
+    },
+    "Explain photosy_bare": {
+      "9": 1.0018,
+      "27": 10.1538
+    }
+  },
+  {
+    "ratio": 1.0,
+    "What matters mo_ccs": {
+      "9": 1.0025,
+      "27": 16.8208
+    },
+    "What matters mo_bare": {
+      "9": 1.0019,
+      "27": 9.9592
+    },
+    "Explain photosy_ccs": {
+      "9": 1.0024,
+      "27": 16.3567
+    },
+    "Explain photosy_bare": {
+      "9": 1.0018,
+      "27": 9.8987
+    }
+  },
+  {
+    "ratio": 1.5,
+    "What matters mo_ccs": {
+      "9": 1.0026,
+      "27": 16.3401
+    },
+    "What matters mo_bare": {
+      "9": 1.002,
+      "27": 10.2535
+    },
+    "Explain photosy_ccs": {
+      "9": 1.0025,
+      "27": 16.0079
+    },
+    "Explain photosy_bare": {
+      "9": 1.002,
+      "27": 10.056
+    }
+  },
+  {
+    "ratio": 2.0,
+    "What matters mo_ccs": {
+      "9": 1.0027,
+      "27": 15.9644
+    },
+    "What matters mo_bare": {
+      "9": 1.0021,
+      "27": 10.3089
+    },
+    "Explain photosy_ccs": {
+      "9": 1.0026,
+      "27": 15.4684
+    },
+    "Explain photosy_bare": {
+      "9": 1.002,
+      "27": 10.0457
+    }
+  },
+  {
+    "ratio": 3.0,
+    "What matters mo_ccs": {
+      "9": 1.003,
+      "27": 15.1958
+    },
+    "What matters mo_bare": {
+      "9": 1.0023,
+      "27": 10.0936
+    },
+    "Explain photosy_ccs": {
+      "9": 1.0028,
+      "27": 14.6757
+    },
+    "Explain photosy_bare": {
+      "9": 1.0022,
+      "27": 9.7069
+    }
+  }
+]

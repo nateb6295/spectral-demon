@@ -1,0 +1,3654 @@
+{
+  "model": "google/gemma-2-2b-it",
+  "sharing_ratio": "2:1",
+  "n_probes": 5,
+  "n_conditions": 3,
+  "n_layers": 27,
+  "raw": [
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 0,
+      "spectral_gap": 1.764136791229248,
+      "sigma_1": 356.8923645019531,
+      "sigma_2": 202.3042449951172,
+      "spectral_entropy": 2.6994740962982178
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 1,
+      "spectral_gap": 1.7224041223526,
+      "sigma_1": 393.2909851074219,
+      "sigma_2": 228.33839416503906,
+      "spectral_entropy": 2.3630776405334473
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 2,
+      "spectral_gap": 2.118034601211548,
+      "sigma_1": 580.23095703125,
+      "sigma_2": 273.94781494140625,
+      "spectral_entropy": 1.746602177619934
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 3,
+      "spectral_gap": 2.9905574321746826,
+      "sigma_1": 678.6024780273438,
+      "sigma_2": 226.9150390625,
+      "spectral_entropy": 1.5140323638916016
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 4,
+      "spectral_gap": 3.3090932369232178,
+      "sigma_1": 840.4219360351562,
+      "sigma_2": 253.97348022460938,
+      "spectral_entropy": 1.2851728200912476
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 5,
+      "spectral_gap": 3.884049892425537,
+      "sigma_1": 1056.3116455078125,
+      "sigma_2": 271.9613952636719,
+      "spectral_entropy": 1.0757620334625244
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 6,
+      "spectral_gap": 4.156920433044434,
+      "sigma_1": 1250.048583984375,
+      "sigma_2": 300.7150573730469,
+      "spectral_entropy": 0.9628371000289917
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 7,
+      "spectral_gap": 3.899637222290039,
+      "sigma_1": 1430.7293701171875,
+      "sigma_2": 366.8878173828125,
+      "spectral_entropy": 0.9055309295654297
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 8,
+      "spectral_gap": 3.3475396633148193,
+      "sigma_1": 1678.7010498046875,
+      "sigma_2": 501.47308349609375,
+      "spectral_entropy": 0.8773882389068604
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 9,
+      "spectral_gap": 3.5382604598999023,
+      "sigma_1": 1806.27392578125,
+      "sigma_2": 510.49774169921875,
+      "spectral_entropy": 0.8443650603294373
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 10,
+      "spectral_gap": 3.5082108974456787,
+      "sigma_1": 2021.6656494140625,
+      "sigma_2": 576.266845703125,
+      "spectral_entropy": 0.8632552623748779
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 11,
+      "spectral_gap": 3.143256187438965,
+      "sigma_1": 2211.71875,
+      "sigma_2": 703.6393432617188,
+      "spectral_entropy": 0.9125227928161621
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 12,
+      "spectral_gap": 2.9800403118133545,
+      "sigma_1": 2451.4462890625,
+      "sigma_2": 822.621826171875,
+      "spectral_entropy": 0.9245949983596802
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 13,
+      "spectral_gap": 3.098095178604126,
+      "sigma_1": 2667.64990234375,
+      "sigma_2": 861.0613403320312,
+      "spectral_entropy": 0.8787875771522522
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 14,
+      "spectral_gap": 3.251885414123535,
+      "sigma_1": 2887.43017578125,
+      "sigma_2": 887.9249267578125,
+      "spectral_entropy": 0.8848784565925598
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 15,
+      "spectral_gap": 3.3739633560180664,
+      "sigma_1": 3071.28662109375,
+      "sigma_2": 910.2904663085938,
+      "spectral_entropy": 0.8684160113334656
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 16,
+      "spectral_gap": 3.4343576431274414,
+      "sigma_1": 3382.24072265625,
+      "sigma_2": 984.8248291015625,
+      "spectral_entropy": 0.840522289276123
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 17,
+      "spectral_gap": 3.4147045612335205,
+      "sigma_1": 3546.73291015625,
+      "sigma_2": 1038.6646728515625,
+      "spectral_entropy": 0.8729562759399414
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 18,
+      "spectral_gap": 3.482586145401001,
+      "sigma_1": 3698.70556640625,
+      "sigma_2": 1062.05712890625,
+      "spectral_entropy": 0.8760801553726196
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 19,
+      "spectral_gap": 3.3447608947753906,
+      "sigma_1": 3826.538330078125,
+      "sigma_2": 1144.0394287109375,
+      "spectral_entropy": 0.9440263509750366
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 20,
+      "spectral_gap": 3.1838300228118896,
+      "sigma_1": 3955.407470703125,
+      "sigma_2": 1242.342529296875,
+      "spectral_entropy": 1.019459843635559
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 21,
+      "spectral_gap": 2.976799488067627,
+      "sigma_1": 4047.216064453125,
+      "sigma_2": 1359.58642578125,
+      "spectral_entropy": 1.1059460639953613
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 22,
+      "spectral_gap": 2.6576614379882812,
+      "sigma_1": 4199.49365234375,
+      "sigma_2": 1580.146240234375,
+      "spectral_entropy": 1.221111536026001
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 23,
+      "spectral_gap": 2.462449073791504,
+      "sigma_1": 4343.24365234375,
+      "sigma_2": 1763.790283203125,
+      "spectral_entropy": 1.2874823808670044
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 24,
+      "spectral_gap": 1.995937705039978,
+      "sigma_1": 4414.361328125,
+      "sigma_2": 2211.6728515625,
+      "spectral_entropy": 1.4030961990356445
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 25,
+      "spectral_gap": 1.3029910326004028,
+      "sigma_1": 4360.07275390625,
+      "sigma_2": 3346.203125,
+      "spectral_entropy": 1.5309576988220215
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 0,
+      "layer": 26,
+      "spectral_gap": 1.2751795053482056,
+      "sigma_1": 474.1187744140625,
+      "sigma_2": 371.8055114746094,
+      "spectral_entropy": 2.1148009300231934
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 0,
+      "spectral_gap": 1.7442320585250854,
+      "sigma_1": 352.7889099121094,
+      "sigma_2": 202.2602996826172,
+      "spectral_entropy": 2.633887767791748
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 1,
+      "spectral_gap": 1.773582100868225,
+      "sigma_1": 392.8829345703125,
+      "sigma_2": 221.5194549560547,
+      "spectral_entropy": 2.273080825805664
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 2,
+      "spectral_gap": 2.189681053161621,
+      "sigma_1": 578.660888671875,
+      "sigma_2": 264.2672119140625,
+      "spectral_entropy": 1.6639971733093262
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 3,
+      "spectral_gap": 3.0909032821655273,
+      "sigma_1": 678.0366821289062,
+      "sigma_2": 219.36521911621094,
+      "spectral_entropy": 1.435560703277588
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 4,
+      "spectral_gap": 3.402043342590332,
+      "sigma_1": 839.1777954101562,
+      "sigma_2": 246.6687469482422,
+      "spectral_entropy": 1.2195847034454346
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 5,
+      "spectral_gap": 4.051913261413574,
+      "sigma_1": 1056.73046875,
+      "sigma_2": 260.79791259765625,
+      "spectral_entropy": 1.002005696296692
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 6,
+      "spectral_gap": 4.346199989318848,
+      "sigma_1": 1249.963623046875,
+      "sigma_2": 287.59918212890625,
+      "spectral_entropy": 0.8945401906967163
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 7,
+      "spectral_gap": 4.030532360076904,
+      "sigma_1": 1430.7027587890625,
+      "sigma_2": 354.9662170410156,
+      "spectral_entropy": 0.8451942205429077
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 8,
+      "spectral_gap": 3.357889413833618,
+      "sigma_1": 1678.6884765625,
+      "sigma_2": 499.9237060546875,
+      "spectral_entropy": 0.8302241563796997
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 9,
+      "spectral_gap": 3.534026861190796,
+      "sigma_1": 1808.1390380859375,
+      "sigma_2": 511.63702392578125,
+      "spectral_entropy": 0.7973219752311707
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 10,
+      "spectral_gap": 3.510712146759033,
+      "sigma_1": 2024.0543212890625,
+      "sigma_2": 576.5366821289062,
+      "spectral_entropy": 0.8158203959465027
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 11,
+      "spectral_gap": 3.1476552486419678,
+      "sigma_1": 2213.2099609375,
+      "sigma_2": 703.1296997070312,
+      "spectral_entropy": 0.8679885864257812
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 12,
+      "spectral_gap": 2.981206178665161,
+      "sigma_1": 2452.3017578125,
+      "sigma_2": 822.5870971679688,
+      "spectral_entropy": 0.8880149722099304
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 13,
+      "spectral_gap": 3.0989153385162354,
+      "sigma_1": 2670.333984375,
+      "sigma_2": 861.6995849609375,
+      "spectral_entropy": 0.847384512424469
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 14,
+      "spectral_gap": 3.271885633468628,
+      "sigma_1": 2886.8125,
+      "sigma_2": 882.3084716796875,
+      "spectral_entropy": 0.8455533385276794
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 15,
+      "spectral_gap": 3.4061384201049805,
+      "sigma_1": 3065.973388671875,
+      "sigma_2": 900.1317749023438,
+      "spectral_entropy": 0.8334914445877075
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 16,
+      "spectral_gap": 3.4802939891815186,
+      "sigma_1": 3376.201904296875,
+      "sigma_2": 970.0910034179688,
+      "spectral_entropy": 0.8008513450622559
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 17,
+      "spectral_gap": 3.5017988681793213,
+      "sigma_1": 3535.44775390625,
+      "sigma_2": 1009.6090087890625,
+      "spectral_entropy": 0.8270944952964783
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 18,
+      "spectral_gap": 3.5884833335876465,
+      "sigma_1": 3687.680908203125,
+      "sigma_2": 1027.643310546875,
+      "spectral_entropy": 0.830388605594635
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 19,
+      "spectral_gap": 3.442755937576294,
+      "sigma_1": 3812.627685546875,
+      "sigma_2": 1107.434814453125,
+      "spectral_entropy": 0.895552396774292
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 20,
+      "spectral_gap": 3.2757461071014404,
+      "sigma_1": 3943.262451171875,
+      "sigma_2": 1203.775390625,
+      "spectral_entropy": 0.967483639717102
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 21,
+      "spectral_gap": 3.064627170562744,
+      "sigma_1": 4030.489013671875,
+      "sigma_2": 1315.16455078125,
+      "spectral_entropy": 1.050159215927124
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 22,
+      "spectral_gap": 2.730748176574707,
+      "sigma_1": 4169.4697265625,
+      "sigma_2": 1526.85986328125,
+      "spectral_entropy": 1.166878581047058
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 23,
+      "spectral_gap": 2.5242104530334473,
+      "sigma_1": 4308.03955078125,
+      "sigma_2": 1706.6878662109375,
+      "spectral_entropy": 1.2362585067749023
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 24,
+      "spectral_gap": 2.0585217475891113,
+      "sigma_1": 4390.291015625,
+      "sigma_2": 2132.73974609375,
+      "spectral_entropy": 1.3538851737976074
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 25,
+      "spectral_gap": 1.3553526401519775,
+      "sigma_1": 4343.638671875,
+      "sigma_2": 3204.80322265625,
+      "spectral_entropy": 1.4958882331848145
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 1,
+      "layer": 26,
+      "spectral_gap": 1.33866548538208,
+      "sigma_1": 478.20257568359375,
+      "sigma_2": 357.2233581542969,
+      "spectral_entropy": 2.0541000366210938
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 0,
+      "spectral_gap": 1.783353328704834,
+      "sigma_1": 360.691162109375,
+      "sigma_2": 202.25445556640625,
+      "spectral_entropy": 2.6345901489257812
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 1,
+      "spectral_gap": 1.7791478633880615,
+      "sigma_1": 394.4565124511719,
+      "sigma_2": 221.71092224121094,
+      "spectral_entropy": 2.3230178356170654
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 2,
+      "spectral_gap": 2.1882729530334473,
+      "sigma_1": 581.3287963867188,
+      "sigma_2": 265.65643310546875,
+      "spectral_entropy": 1.7108427286148071
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 3,
+      "spectral_gap": 3.0946125984191895,
+      "sigma_1": 680.6874389648438,
+      "sigma_2": 219.95884704589844,
+      "spectral_entropy": 1.49021315574646
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 4,
+      "spectral_gap": 3.400512456893921,
+      "sigma_1": 843.3629760742188,
+      "sigma_2": 248.01055908203125,
+      "spectral_entropy": 1.263963222503662
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 5,
+      "spectral_gap": 4.057936668395996,
+      "sigma_1": 1062.431884765625,
+      "sigma_2": 261.8157958984375,
+      "spectral_entropy": 1.0435783863067627
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 6,
+      "spectral_gap": 4.378945827484131,
+      "sigma_1": 1254.9056396484375,
+      "sigma_2": 286.5771179199219,
+      "spectral_entropy": 0.9331845641136169
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 7,
+      "spectral_gap": 3.979205369949341,
+      "sigma_1": 1434.41455078125,
+      "sigma_2": 360.4776306152344,
+      "spectral_entropy": 0.8853207230567932
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 8,
+      "spectral_gap": 3.321437358856201,
+      "sigma_1": 1685.687744140625,
+      "sigma_2": 507.5175476074219,
+      "spectral_entropy": 0.8750600814819336
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 9,
+      "spectral_gap": 3.4858036041259766,
+      "sigma_1": 1815.522216796875,
+      "sigma_2": 520.8331909179688,
+      "spectral_entropy": 0.8451922535896301
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 10,
+      "spectral_gap": 3.4832732677459717,
+      "sigma_1": 2031.3216552734375,
+      "sigma_2": 583.1646118164062,
+      "spectral_entropy": 0.859767496585846
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 11,
+      "spectral_gap": 3.141101360321045,
+      "sigma_1": 2221.634033203125,
+      "sigma_2": 707.2786865234375,
+      "spectral_entropy": 0.9085108637809753
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 12,
+      "spectral_gap": 2.9866161346435547,
+      "sigma_1": 2467.8427734375,
+      "sigma_2": 826.3005981445312,
+      "spectral_entropy": 0.9187875986099243
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 13,
+      "spectral_gap": 3.1084208488464355,
+      "sigma_1": 2680.3984375,
+      "sigma_2": 862.3023071289062,
+      "spectral_entropy": 0.8692682981491089
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 14,
+      "spectral_gap": 3.2871718406677246,
+      "sigma_1": 2900.538330078125,
+      "sigma_2": 882.381103515625,
+      "spectral_entropy": 0.8646592497825623
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 15,
+      "spectral_gap": 3.412658452987671,
+      "sigma_1": 3081.613525390625,
+      "sigma_2": 902.9949951171875,
+      "spectral_entropy": 0.850379228591919
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 16,
+      "spectral_gap": 3.508915662765503,
+      "sigma_1": 3392.8720703125,
+      "sigma_2": 966.928955078125,
+      "spectral_entropy": 0.8148040175437927
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 17,
+      "spectral_gap": 3.530172824859619,
+      "sigma_1": 3555.79150390625,
+      "sigma_2": 1007.257080078125,
+      "spectral_entropy": 0.8509894609451294
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 18,
+      "spectral_gap": 3.6177542209625244,
+      "sigma_1": 3704.930908203125,
+      "sigma_2": 1024.096923828125,
+      "spectral_entropy": 0.8540708422660828
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 19,
+      "spectral_gap": 3.4856581687927246,
+      "sigma_1": 3826.96337890625,
+      "sigma_2": 1097.9169921875,
+      "spectral_entropy": 0.9251306653022766
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 20,
+      "spectral_gap": 3.3059029579162598,
+      "sigma_1": 3961.403076171875,
+      "sigma_2": 1198.28173828125,
+      "spectral_entropy": 1.009299874305725
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 21,
+      "spectral_gap": 3.09140944480896,
+      "sigma_1": 4045.871826171875,
+      "sigma_2": 1308.7467041015625,
+      "spectral_entropy": 1.0943620204925537
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 22,
+      "spectral_gap": 2.7617990970611572,
+      "sigma_1": 4191.9755859375,
+      "sigma_2": 1517.84228515625,
+      "spectral_entropy": 1.218393325805664
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 23,
+      "spectral_gap": 2.5432469844818115,
+      "sigma_1": 4327.251953125,
+      "sigma_2": 1701.4674072265625,
+      "spectral_entropy": 1.2982025146484375
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 24,
+      "spectral_gap": 2.0694849491119385,
+      "sigma_1": 4410.951171875,
+      "sigma_2": 2131.424560546875,
+      "spectral_entropy": 1.4266357421875
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 25,
+      "spectral_gap": 1.3558498620986938,
+      "sigma_1": 4354.2998046875,
+      "sigma_2": 3211.4912109375,
+      "spectral_entropy": 1.568806767463684
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 2,
+      "layer": 26,
+      "spectral_gap": 1.2757090330123901,
+      "sigma_1": 450.5230407714844,
+      "sigma_2": 353.1549987792969,
+      "spectral_entropy": 2.208688259124756
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 0,
+      "spectral_gap": 1.805530071258545,
+      "sigma_1": 365.3687438964844,
+      "sigma_2": 202.36093139648438,
+      "spectral_entropy": 2.6340091228485107
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 1,
+      "spectral_gap": 1.736975073814392,
+      "sigma_1": 393.3744812011719,
+      "sigma_2": 226.4709930419922,
+      "spectral_entropy": 2.319124698638916
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 2,
+      "spectral_gap": 2.1406092643737793,
+      "sigma_1": 578.5098876953125,
+      "sigma_2": 270.2547912597656,
+      "spectral_entropy": 1.7182579040527344
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 3,
+      "spectral_gap": 3.0678131580352783,
+      "sigma_1": 677.9747314453125,
+      "sigma_2": 220.99609375,
+      "spectral_entropy": 1.4926258325576782
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 4,
+      "spectral_gap": 3.399168014526367,
+      "sigma_1": 840.0291748046875,
+      "sigma_2": 247.1278839111328,
+      "spectral_entropy": 1.2836893796920776
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 5,
+      "spectral_gap": 4.082546234130859,
+      "sigma_1": 1058.5032958984375,
+      "sigma_2": 259.2752685546875,
+      "spectral_entropy": 1.0539134740829468
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 6,
+      "spectral_gap": 4.378751277923584,
+      "sigma_1": 1251.753173828125,
+      "sigma_2": 285.8699035644531,
+      "spectral_entropy": 0.946695864200592
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 7,
+      "spectral_gap": 4.06257438659668,
+      "sigma_1": 1431.6756591796875,
+      "sigma_2": 352.4060363769531,
+      "spectral_entropy": 0.8925448656082153
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 8,
+      "spectral_gap": 3.4431779384613037,
+      "sigma_1": 1680.0093994140625,
+      "sigma_2": 487.924072265625,
+      "spectral_entropy": 0.8701398968696594
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 9,
+      "spectral_gap": 3.620147466659546,
+      "sigma_1": 1810.074462890625,
+      "sigma_2": 500.0002136230469,
+      "spectral_entropy": 0.8315679430961609
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 10,
+      "spectral_gap": 3.5649170875549316,
+      "sigma_1": 2025.601318359375,
+      "sigma_2": 568.204345703125,
+      "spectral_entropy": 0.8483216166496277
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 11,
+      "spectral_gap": 3.183894634246826,
+      "sigma_1": 2213.873779296875,
+      "sigma_2": 695.3351440429688,
+      "spectral_entropy": 0.8958062529563904
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 12,
+      "spectral_gap": 3.0003702640533447,
+      "sigma_1": 2455.992431640625,
+      "sigma_2": 818.5631103515625,
+      "spectral_entropy": 0.9146823883056641
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 13,
+      "spectral_gap": 3.120885133743286,
+      "sigma_1": 2671.162109375,
+      "sigma_2": 855.8988647460938,
+      "spectral_entropy": 0.8650602698326111
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 14,
+      "spectral_gap": 3.3192644119262695,
+      "sigma_1": 2889.9072265625,
+      "sigma_2": 870.6469116210938,
+      "spectral_entropy": 0.8640994429588318
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 15,
+      "spectral_gap": 3.4565632343292236,
+      "sigma_1": 3067.309814453125,
+      "sigma_2": 887.3871459960938,
+      "spectral_entropy": 0.8444697856903076
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 16,
+      "spectral_gap": 3.5518295764923096,
+      "sigma_1": 3377.315673828125,
+      "sigma_2": 950.866455078125,
+      "spectral_entropy": 0.8116880059242249
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 17,
+      "spectral_gap": 3.582584857940674,
+      "sigma_1": 3539.985595703125,
+      "sigma_2": 988.109375,
+      "spectral_entropy": 0.8377927541732788
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 18,
+      "spectral_gap": 3.6518752574920654,
+      "sigma_1": 3695.025390625,
+      "sigma_2": 1011.8158569335938,
+      "spectral_entropy": 0.8401104807853699
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 19,
+      "spectral_gap": 3.504674196243286,
+      "sigma_1": 3815.9599609375,
+      "sigma_2": 1088.8201904296875,
+      "spectral_entropy": 0.914305567741394
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 20,
+      "spectral_gap": 3.316882848739624,
+      "sigma_1": 3949.26611328125,
+      "sigma_2": 1190.6558837890625,
+      "spectral_entropy": 0.9900354146957397
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 21,
+      "spectral_gap": 3.0949320793151855,
+      "sigma_1": 4037.74072265625,
+      "sigma_2": 1304.6298828125,
+      "spectral_entropy": 1.0906116962432861
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 22,
+      "spectral_gap": 2.74143648147583,
+      "sigma_1": 4182.82080078125,
+      "sigma_2": 1525.7769775390625,
+      "spectral_entropy": 1.2138378620147705
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 23,
+      "spectral_gap": 2.524435043334961,
+      "sigma_1": 4325.14306640625,
+      "sigma_2": 1713.311279296875,
+      "spectral_entropy": 1.2929250001907349
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 24,
+      "spectral_gap": 2.056203603744507,
+      "sigma_1": 4396.48486328125,
+      "sigma_2": 2138.156494140625,
+      "spectral_entropy": 1.4160515069961548
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 25,
+      "spectral_gap": 1.3473354578018188,
+      "sigma_1": 4343.83447265625,
+      "sigma_2": 3224.0185546875,
+      "spectral_entropy": 1.5613864660263062
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 3,
+      "layer": 26,
+      "spectral_gap": 1.232751727104187,
+      "sigma_1": 463.47906494140625,
+      "sigma_2": 375.97113037109375,
+      "spectral_entropy": 2.2062859535217285
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 0,
+      "spectral_gap": 1.8366553783416748,
+      "sigma_1": 371.8486328125,
+      "sigma_2": 202.4596710205078,
+      "spectral_entropy": 2.600034475326538
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 1,
+      "spectral_gap": 1.724900484085083,
+      "sigma_1": 394.55987548828125,
+      "sigma_2": 228.74356079101562,
+      "spectral_entropy": 2.3328640460968018
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 2,
+      "spectral_gap": 2.1262357234954834,
+      "sigma_1": 582.5784912109375,
+      "sigma_2": 273.9952392578125,
+      "spectral_entropy": 1.7317118644714355
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 3,
+      "spectral_gap": 2.981813907623291,
+      "sigma_1": 682.0025634765625,
+      "sigma_2": 228.720703125,
+      "spectral_entropy": 1.5278244018554688
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 4,
+      "spectral_gap": 3.2852485179901123,
+      "sigma_1": 843.4437255859375,
+      "sigma_2": 256.7366638183594,
+      "spectral_entropy": 1.3056104183197021
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 5,
+      "spectral_gap": 3.913637399673462,
+      "sigma_1": 1063.739013671875,
+      "sigma_2": 271.80316162109375,
+      "spectral_entropy": 1.0747714042663574
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 6,
+      "spectral_gap": 4.225228309631348,
+      "sigma_1": 1254.571533203125,
+      "sigma_2": 296.9239501953125,
+      "spectral_entropy": 0.962113618850708
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 7,
+      "spectral_gap": 3.877490758895874,
+      "sigma_1": 1438.4517822265625,
+      "sigma_2": 370.97491455078125,
+      "spectral_entropy": 0.9033516049385071
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 8,
+      "spectral_gap": 3.2920897006988525,
+      "sigma_1": 1685.3265380859375,
+      "sigma_2": 511.93212890625,
+      "spectral_entropy": 0.8886855244636536
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 9,
+      "spectral_gap": 3.4282045364379883,
+      "sigma_1": 1816.557373046875,
+      "sigma_2": 529.8859252929688,
+      "spectral_entropy": 0.8598157167434692
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 10,
+      "spectral_gap": 3.4510269165039062,
+      "sigma_1": 2030.8255615234375,
+      "sigma_2": 588.4699096679688,
+      "spectral_entropy": 0.8691524863243103
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 11,
+      "spectral_gap": 3.116614818572998,
+      "sigma_1": 2221.20263671875,
+      "sigma_2": 712.6972045898438,
+      "spectral_entropy": 0.9150053858757019
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 12,
+      "spectral_gap": 2.970712900161743,
+      "sigma_1": 2464.02197265625,
+      "sigma_2": 829.4379272460938,
+      "spectral_entropy": 0.9299114942550659
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 13,
+      "spectral_gap": 3.089383125305176,
+      "sigma_1": 2677.292724609375,
+      "sigma_2": 866.6107788085938,
+      "spectral_entropy": 0.8820794224739075
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 14,
+      "spectral_gap": 3.2582130432128906,
+      "sigma_1": 2897.0029296875,
+      "sigma_2": 889.1386108398438,
+      "spectral_entropy": 0.8757511973381042
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 15,
+      "spectral_gap": 3.3736846446990967,
+      "sigma_1": 3077.75,
+      "sigma_2": 912.281494140625,
+      "spectral_entropy": 0.8606449365615845
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 16,
+      "spectral_gap": 3.4473140239715576,
+      "sigma_1": 3394.612548828125,
+      "sigma_2": 984.7123413085938,
+      "spectral_entropy": 0.8249126076698303
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 17,
+      "spectral_gap": 3.451599597930908,
+      "sigma_1": 3553.780029296875,
+      "sigma_2": 1029.603759765625,
+      "spectral_entropy": 0.8616399765014648
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 18,
+      "spectral_gap": 3.511667013168335,
+      "sigma_1": 3713.78076171875,
+      "sigma_2": 1057.554931640625,
+      "spectral_entropy": 0.8752398490905762
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 19,
+      "spectral_gap": 3.3770463466644287,
+      "sigma_1": 3839.327880859375,
+      "sigma_2": 1136.8892822265625,
+      "spectral_entropy": 0.9527403116226196
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 20,
+      "spectral_gap": 3.2053356170654297,
+      "sigma_1": 3976.072509765625,
+      "sigma_2": 1240.454345703125,
+      "spectral_entropy": 1.0338530540466309
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 21,
+      "spectral_gap": 2.998065233230591,
+      "sigma_1": 4069.7314453125,
+      "sigma_2": 1357.45263671875,
+      "spectral_entropy": 1.1270575523376465
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 22,
+      "spectral_gap": 2.6804091930389404,
+      "sigma_1": 4223.416015625,
+      "sigma_2": 1575.660888671875,
+      "spectral_entropy": 1.2511258125305176
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 23,
+      "spectral_gap": 2.4691953659057617,
+      "sigma_1": 4359.88330078125,
+      "sigma_2": 1765.7100830078125,
+      "spectral_entropy": 1.332493543624878
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 24,
+      "spectral_gap": 2.012819528579712,
+      "sigma_1": 4425.501953125,
+      "sigma_2": 2198.658203125,
+      "spectral_entropy": 1.4634908437728882
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 25,
+      "spectral_gap": 1.315043330192566,
+      "sigma_1": 4366.125,
+      "sigma_2": 3320.1376953125,
+      "spectral_entropy": 1.5953283309936523
+    },
+    {
+      "condition": "receptive",
+      "probe_idx": 4,
+      "layer": 26,
+      "spectral_gap": 1.3335692882537842,
+      "sigma_1": 455.7679748535156,
+      "sigma_2": 341.7655029296875,
+      "spectral_entropy": 2.2559304237365723
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 0,
+      "spectral_gap": 1.7799063920974731,
+      "sigma_1": 360.30865478515625,
+      "sigma_2": 202.43124389648438,
+      "spectral_entropy": 2.7710063457489014
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 1,
+      "spectral_gap": 1.7207518815994263,
+      "sigma_1": 400.31585693359375,
+      "sigma_2": 232.64007568359375,
+      "spectral_entropy": 2.45987606048584
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 2,
+      "spectral_gap": 2.1092801094055176,
+      "sigma_1": 583.1000366210938,
+      "sigma_2": 276.4450378417969,
+      "spectral_entropy": 1.8580412864685059
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 3,
+      "spectral_gap": 3.0116496086120605,
+      "sigma_1": 683.0271606445312,
+      "sigma_2": 226.79502868652344,
+      "spectral_entropy": 1.634154200553894
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 4,
+      "spectral_gap": 3.3238914012908936,
+      "sigma_1": 844.947509765625,
+      "sigma_2": 254.2042999267578,
+      "spectral_entropy": 1.3610581159591675
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 5,
+      "spectral_gap": 3.955101490020752,
+      "sigma_1": 1059.4957275390625,
+      "sigma_2": 267.88079833984375,
+      "spectral_entropy": 1.1250146627426147
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 6,
+      "spectral_gap": 4.291298866271973,
+      "sigma_1": 1253.024658203125,
+      "sigma_2": 291.991943359375,
+      "spectral_entropy": 1.0049625635147095
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 7,
+      "spectral_gap": 4.111328601837158,
+      "sigma_1": 1431.5672607421875,
+      "sigma_2": 348.20062255859375,
+      "spectral_entropy": 0.9200319647789001
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 8,
+      "spectral_gap": 3.497363567352295,
+      "sigma_1": 1678.809326171875,
+      "sigma_2": 480.0213928222656,
+      "spectral_entropy": 0.8905259370803833
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 9,
+      "spectral_gap": 3.7124972343444824,
+      "sigma_1": 1804.2177734375,
+      "sigma_2": 485.9849548339844,
+      "spectral_entropy": 0.8556250333786011
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 10,
+      "spectral_gap": 3.5980613231658936,
+      "sigma_1": 2022.1546630859375,
+      "sigma_2": 562.0122680664062,
+      "spectral_entropy": 0.8715009689331055
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 11,
+      "spectral_gap": 3.204010248184204,
+      "sigma_1": 2214.7880859375,
+      "sigma_2": 691.2550048828125,
+      "spectral_entropy": 0.9185909628868103
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 12,
+      "spectral_gap": 3.0078744888305664,
+      "sigma_1": 2458.084716796875,
+      "sigma_2": 817.2164916992188,
+      "spectral_entropy": 0.9319276809692383
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 13,
+      "spectral_gap": 3.144054412841797,
+      "sigma_1": 2662.8056640625,
+      "sigma_2": 846.9337158203125,
+      "spectral_entropy": 0.8837857246398926
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 14,
+      "spectral_gap": 3.321611166000366,
+      "sigma_1": 2894.183349609375,
+      "sigma_2": 871.3191528320312,
+      "spectral_entropy": 0.8969719409942627
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 15,
+      "spectral_gap": 3.4623842239379883,
+      "sigma_1": 3075.92041015625,
+      "sigma_2": 888.3821411132812,
+      "spectral_entropy": 0.8809324502944946
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 16,
+      "spectral_gap": 3.5559210777282715,
+      "sigma_1": 3378.68603515625,
+      "sigma_2": 950.1577758789062,
+      "spectral_entropy": 0.8441822528839111
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 17,
+      "spectral_gap": 3.5548362731933594,
+      "sigma_1": 3552.199951171875,
+      "sigma_2": 999.2583618164062,
+      "spectral_entropy": 0.8814269304275513
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 18,
+      "spectral_gap": 3.6777288913726807,
+      "sigma_1": 3698.159423828125,
+      "sigma_2": 1005.55517578125,
+      "spectral_entropy": 0.8786128163337708
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 19,
+      "spectral_gap": 3.554352283477783,
+      "sigma_1": 3831.379150390625,
+      "sigma_2": 1077.940185546875,
+      "spectral_entropy": 0.9655994772911072
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 20,
+      "spectral_gap": 3.334310531616211,
+      "sigma_1": 3962.625,
+      "sigma_2": 1188.4390869140625,
+      "spectral_entropy": 1.0423426628112793
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 21,
+      "spectral_gap": 3.0852153301239014,
+      "sigma_1": 4067.5947265625,
+      "sigma_2": 1318.4151611328125,
+      "spectral_entropy": 1.1278338432312012
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 22,
+      "spectral_gap": 2.7387306690216064,
+      "sigma_1": 4242.4453125,
+      "sigma_2": 1549.0552978515625,
+      "spectral_entropy": 1.228202223777771
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 23,
+      "spectral_gap": 2.5091960430145264,
+      "sigma_1": 4388.251953125,
+      "sigma_2": 1748.86767578125,
+      "spectral_entropy": 1.2965573072433472
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 24,
+      "spectral_gap": 2.0402965545654297,
+      "sigma_1": 4464.39794921875,
+      "sigma_2": 2188.1123046875,
+      "spectral_entropy": 1.4101314544677734
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 25,
+      "spectral_gap": 1.321241855621338,
+      "sigma_1": 4380.66552734375,
+      "sigma_2": 3315.566650390625,
+      "spectral_entropy": 1.54861581325531
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "layer": 26,
+      "spectral_gap": 1.2912999391555786,
+      "sigma_1": 490.7596740722656,
+      "sigma_2": 380.0508728027344,
+      "spectral_entropy": 2.109393358230591
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 0,
+      "spectral_gap": 1.7717397212982178,
+      "sigma_1": 358.5867004394531,
+      "sigma_2": 202.39242553710938,
+      "spectral_entropy": 2.656914710998535
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 1,
+      "spectral_gap": 1.7608188390731812,
+      "sigma_1": 399.8692626953125,
+      "sigma_2": 227.09278869628906,
+      "spectral_entropy": 2.360966682434082
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 2,
+      "spectral_gap": 2.172492742538452,
+      "sigma_1": 581.60009765625,
+      "sigma_2": 267.7109375,
+      "spectral_entropy": 1.7729432582855225
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 3,
+      "spectral_gap": 3.0859591960906982,
+      "sigma_1": 682.677978515625,
+      "sigma_2": 221.22067260742188,
+      "spectral_entropy": 1.556504487991333
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 4,
+      "spectral_gap": 3.4071834087371826,
+      "sigma_1": 843.4118041992188,
+      "sigma_2": 247.539306640625,
+      "spectral_entropy": 1.2954384088516235
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 5,
+      "spectral_gap": 4.087182998657227,
+      "sigma_1": 1059.879150390625,
+      "sigma_2": 259.3177490234375,
+      "spectral_entropy": 1.050466775894165
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 6,
+      "spectral_gap": 4.4489898681640625,
+      "sigma_1": 1253.0078125,
+      "sigma_2": 281.63873291015625,
+      "spectral_entropy": 0.9340112805366516
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 7,
+      "spectral_gap": 4.242676734924316,
+      "sigma_1": 1430.2890625,
+      "sigma_2": 337.1195068359375,
+      "spectral_entropy": 0.8549351096153259
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 8,
+      "spectral_gap": 3.521507740020752,
+      "sigma_1": 1677.9761962890625,
+      "sigma_2": 476.4936828613281,
+      "spectral_entropy": 0.8376660346984863
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 9,
+      "spectral_gap": 3.706035852432251,
+      "sigma_1": 1805.9271240234375,
+      "sigma_2": 487.2934875488281,
+      "spectral_entropy": 0.8100883960723877
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 10,
+      "spectral_gap": 3.5878243446350098,
+      "sigma_1": 2025.5863037109375,
+      "sigma_2": 564.5723266601562,
+      "spectral_entropy": 0.8313243985176086
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 11,
+      "spectral_gap": 3.2084882259368896,
+      "sigma_1": 2215.72314453125,
+      "sigma_2": 690.5816650390625,
+      "spectral_entropy": 0.8814494013786316
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 12,
+      "spectral_gap": 3.006164789199829,
+      "sigma_1": 2461.62353515625,
+      "sigma_2": 818.8584594726562,
+      "spectral_entropy": 0.9039965271949768
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 13,
+      "spectral_gap": 3.1451010704040527,
+      "sigma_1": 2664.93212890625,
+      "sigma_2": 847.3280029296875,
+      "spectral_entropy": 0.8566264510154724
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 14,
+      "spectral_gap": 3.3403708934783936,
+      "sigma_1": 2892.130126953125,
+      "sigma_2": 865.8110961914062,
+      "spectral_entropy": 0.8609232306480408
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 15,
+      "spectral_gap": 3.4965524673461914,
+      "sigma_1": 3069.710693359375,
+      "sigma_2": 877.9249877929688,
+      "spectral_entropy": 0.8483516573905945
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 16,
+      "spectral_gap": 3.5992982387542725,
+      "sigma_1": 3375.560791015625,
+      "sigma_2": 937.8385620117188,
+      "spectral_entropy": 0.8077625632286072
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 17,
+      "spectral_gap": 3.6308419704437256,
+      "sigma_1": 3542.06201171875,
+      "sigma_2": 975.5484008789062,
+      "spectral_entropy": 0.8446347117424011
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 18,
+      "spectral_gap": 3.773343086242676,
+      "sigma_1": 3686.116455078125,
+      "sigma_2": 976.8834838867188,
+      "spectral_entropy": 0.8422569036483765
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 19,
+      "spectral_gap": 3.644251585006714,
+      "sigma_1": 3816.05322265625,
+      "sigma_2": 1047.1431884765625,
+      "spectral_entropy": 0.9210034608840942
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 20,
+      "spectral_gap": 3.4165499210357666,
+      "sigma_1": 3948.242919921875,
+      "sigma_2": 1155.622802734375,
+      "spectral_entropy": 0.9939462542533875
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 21,
+      "spectral_gap": 3.165390729904175,
+      "sigma_1": 4048.52392578125,
+      "sigma_2": 1278.99658203125,
+      "spectral_entropy": 1.0764816999435425
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 22,
+      "spectral_gap": 2.8070526123046875,
+      "sigma_1": 4208.54931640625,
+      "sigma_2": 1499.2769775390625,
+      "spectral_entropy": 1.1786119937896729
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 23,
+      "spectral_gap": 2.5727179050445557,
+      "sigma_1": 4349.1298828125,
+      "sigma_2": 1690.4805908203125,
+      "spectral_entropy": 1.2497279644012451
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 24,
+      "spectral_gap": 2.1035492420196533,
+      "sigma_1": 4435.1640625,
+      "sigma_2": 2108.41943359375,
+      "spectral_entropy": 1.3651471138000488
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 25,
+      "spectral_gap": 1.3754814863204956,
+      "sigma_1": 4362.14697265625,
+      "sigma_2": 3171.360107421875,
+      "spectral_entropy": 1.5195990800857544
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "layer": 26,
+      "spectral_gap": 1.2879208326339722,
+      "sigma_1": 491.40716552734375,
+      "sigma_2": 381.5507507324219,
+      "spectral_entropy": 2.0708022117614746
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 0,
+      "spectral_gap": 1.807903528213501,
+      "sigma_1": 365.93780517578125,
+      "sigma_2": 202.4100341796875,
+      "spectral_entropy": 2.6546623706817627
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 1,
+      "spectral_gap": 1.760276198387146,
+      "sigma_1": 401.552978515625,
+      "sigma_2": 228.1193084716797,
+      "spectral_entropy": 2.40191650390625
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 2,
+      "spectral_gap": 2.1586873531341553,
+      "sigma_1": 584.5598754882812,
+      "sigma_2": 270.79412841796875,
+      "spectral_entropy": 1.81386137008667
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 3,
+      "spectral_gap": 3.0595884323120117,
+      "sigma_1": 685.3313598632812,
+      "sigma_2": 223.99462890625,
+      "spectral_entropy": 1.6030020713806152
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 4,
+      "spectral_gap": 3.362741470336914,
+      "sigma_1": 847.3268432617188,
+      "sigma_2": 251.9750213623047,
+      "spectral_entropy": 1.332349419593811
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 5,
+      "spectral_gap": 4.0135369300842285,
+      "sigma_1": 1065.47509765625,
+      "sigma_2": 265.4703674316406,
+      "spectral_entropy": 1.0925074815750122
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 6,
+      "spectral_gap": 4.391696929931641,
+      "sigma_1": 1257.802734375,
+      "sigma_2": 286.40472412109375,
+      "spectral_entropy": 0.972928524017334
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 7,
+      "spectral_gap": 4.111583709716797,
+      "sigma_1": 1433.839111328125,
+      "sigma_2": 348.7315673828125,
+      "spectral_entropy": 0.8953433632850647
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 8,
+      "spectral_gap": 3.454068183898926,
+      "sigma_1": 1683.9974365234375,
+      "sigma_2": 487.540283203125,
+      "spectral_entropy": 0.8822469115257263
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 9,
+      "spectral_gap": 3.639479398727417,
+      "sigma_1": 1812.164306640625,
+      "sigma_2": 497.9185485839844,
+      "spectral_entropy": 0.8563883900642395
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 10,
+      "spectral_gap": 3.559891700744629,
+      "sigma_1": 2031.740234375,
+      "sigma_2": 570.7308959960938,
+      "spectral_entropy": 0.8717413544654846
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 11,
+      "spectral_gap": 3.2012388706207275,
+      "sigma_1": 2222.775390625,
+      "sigma_2": 694.3485107421875,
+      "spectral_entropy": 0.9206857085227966
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 12,
+      "spectral_gap": 3.0101981163024902,
+      "sigma_1": 2471.87744140625,
+      "sigma_2": 821.1676635742188,
+      "spectral_entropy": 0.9368342757225037
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 13,
+      "spectral_gap": 3.146550416946411,
+      "sigma_1": 2673.803466796875,
+      "sigma_2": 849.757080078125,
+      "spectral_entropy": 0.8855943083763123
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 14,
+      "spectral_gap": 3.3450183868408203,
+      "sigma_1": 2903.654296875,
+      "sigma_2": 868.0533447265625,
+      "spectral_entropy": 0.8879988789558411
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 15,
+      "spectral_gap": 3.4886231422424316,
+      "sigma_1": 3082.1875,
+      "sigma_2": 883.496826171875,
+      "spectral_entropy": 0.8694489598274231
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 16,
+      "spectral_gap": 3.6063737869262695,
+      "sigma_1": 3388.3193359375,
+      "sigma_2": 939.536376953125,
+      "spectral_entropy": 0.8257660865783691
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 17,
+      "spectral_gap": 3.654118776321411,
+      "sigma_1": 3557.686279296875,
+      "sigma_2": 973.6099243164062,
+      "spectral_entropy": 0.8656929731369019
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 18,
+      "spectral_gap": 3.7973194122314453,
+      "sigma_1": 3699.495361328125,
+      "sigma_2": 974.2386474609375,
+      "spectral_entropy": 0.8639599084854126
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 19,
+      "spectral_gap": 3.6853089332580566,
+      "sigma_1": 3825.651611328125,
+      "sigma_2": 1038.0816650390625,
+      "spectral_entropy": 0.9473164677619934
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 20,
+      "spectral_gap": 3.446573257446289,
+      "sigma_1": 3962.506103515625,
+      "sigma_2": 1149.6944580078125,
+      "spectral_entropy": 1.0336718559265137
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 21,
+      "spectral_gap": 3.1875786781311035,
+      "sigma_1": 4060.823486328125,
+      "sigma_2": 1273.952392578125,
+      "spectral_entropy": 1.1175503730773926
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 22,
+      "spectral_gap": 2.827540874481201,
+      "sigma_1": 4224.87841796875,
+      "sigma_2": 1494.188232421875,
+      "spectral_entropy": 1.2250043153762817
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 23,
+      "spectral_gap": 2.5866358280181885,
+      "sigma_1": 4361.17578125,
+      "sigma_2": 1686.0416259765625,
+      "spectral_entropy": 1.3064548969268799
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 24,
+      "spectral_gap": 2.1130709648132324,
+      "sigma_1": 4449.30810546875,
+      "sigma_2": 2105.6123046875,
+      "spectral_entropy": 1.429618239402771
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 25,
+      "spectral_gap": 1.3814409971237183,
+      "sigma_1": 4370.1337890625,
+      "sigma_2": 3163.46044921875,
+      "spectral_entropy": 1.5865445137023926
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "layer": 26,
+      "spectral_gap": 1.235318899154663,
+      "sigma_1": 459.6084289550781,
+      "sigma_2": 372.0564880371094,
+      "spectral_entropy": 2.2444777488708496
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 0,
+      "spectral_gap": 1.8201628923416138,
+      "sigma_1": 368.6188659667969,
+      "sigma_2": 202.51971435546875,
+      "spectral_entropy": 2.678678035736084
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 1,
+      "spectral_gap": 1.7293084859848022,
+      "sigma_1": 400.53033447265625,
+      "sigma_2": 231.61300659179688,
+      "spectral_entropy": 2.40983247756958
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 2,
+      "spectral_gap": 2.122164249420166,
+      "sigma_1": 581.7760009765625,
+      "sigma_2": 274.1427917480469,
+      "spectral_entropy": 1.8257884979248047
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 3,
+      "spectral_gap": 3.059861183166504,
+      "sigma_1": 682.5963745117188,
+      "sigma_2": 223.08082580566406,
+      "spectral_entropy": 1.6082558631896973
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 4,
+      "spectral_gap": 3.3853180408477783,
+      "sigma_1": 844.0911865234375,
+      "sigma_2": 249.33880615234375,
+      "spectral_entropy": 1.3510689735412598
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 5,
+      "spectral_gap": 4.06487512588501,
+      "sigma_1": 1061.7857666015625,
+      "sigma_2": 261.2099304199219,
+      "spectral_entropy": 1.1003949642181396
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 6,
+      "spectral_gap": 4.433175086975098,
+      "sigma_1": 1255.088623046875,
+      "sigma_2": 283.11279296875,
+      "spectral_entropy": 0.981711745262146
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 7,
+      "spectral_gap": 4.238672733306885,
+      "sigma_1": 1431.2132568359375,
+      "sigma_2": 337.656005859375,
+      "spectral_entropy": 0.898679792881012
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 8,
+      "spectral_gap": 3.592191696166992,
+      "sigma_1": 1677.9185791015625,
+      "sigma_2": 467.10162353515625,
+      "spectral_entropy": 0.8758552670478821
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 9,
+      "spectral_gap": 3.7837536334991455,
+      "sigma_1": 1806.4088134765625,
+      "sigma_2": 477.4118347167969,
+      "spectral_entropy": 0.8431701064109802
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 10,
+      "spectral_gap": 3.64314866065979,
+      "sigma_1": 2024.1641845703125,
+      "sigma_2": 555.6084594726562,
+      "spectral_entropy": 0.859455943107605
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 11,
+      "spectral_gap": 3.234863519668579,
+      "sigma_1": 2215.50439453125,
+      "sigma_2": 684.8834228515625,
+      "spectral_entropy": 0.9072779417037964
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 12,
+      "spectral_gap": 3.0222067832946777,
+      "sigma_1": 2461.951171875,
+      "sigma_2": 814.620361328125,
+      "spectral_entropy": 0.9279597401618958
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 13,
+      "spectral_gap": 3.1580097675323486,
+      "sigma_1": 2664.6943359375,
+      "sigma_2": 843.7891235351562,
+      "spectral_entropy": 0.8741801381111145
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 14,
+      "spectral_gap": 3.3740346431732178,
+      "sigma_1": 2894.693359375,
+      "sigma_2": 857.9323120117188,
+      "spectral_entropy": 0.8782752752304077
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 15,
+      "spectral_gap": 3.531991720199585,
+      "sigma_1": 3068.383056640625,
+      "sigma_2": 868.7401733398438,
+      "spectral_entropy": 0.8584921956062317
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 16,
+      "spectral_gap": 3.653346300125122,
+      "sigma_1": 3373.39208984375,
+      "sigma_2": 923.3704833984375,
+      "spectral_entropy": 0.8201031684875488
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 17,
+      "spectral_gap": 3.7106194496154785,
+      "sigma_1": 3543.2314453125,
+      "sigma_2": 954.8894653320312,
+      "spectral_entropy": 0.8528125286102295
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 18,
+      "spectral_gap": 3.843653440475464,
+      "sigma_1": 3692.43994140625,
+      "sigma_2": 960.658935546875,
+      "spectral_entropy": 0.8493032455444336
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 19,
+      "spectral_gap": 3.721324920654297,
+      "sigma_1": 3815.589111328125,
+      "sigma_2": 1025.330810546875,
+      "spectral_entropy": 0.9435630440711975
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 20,
+      "spectral_gap": 3.4671475887298584,
+      "sigma_1": 3952.05126953125,
+      "sigma_2": 1139.856689453125,
+      "spectral_entropy": 1.0217843055725098
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 21,
+      "spectral_gap": 3.2058186531066895,
+      "sigma_1": 4052.394287109375,
+      "sigma_2": 1264.07470703125,
+      "spectral_entropy": 1.1237995624542236
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 22,
+      "spectral_gap": 2.826375722885132,
+      "sigma_1": 4214.01318359375,
+      "sigma_2": 1490.9599609375,
+      "spectral_entropy": 1.2340770959854126
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 23,
+      "spectral_gap": 2.577364444732666,
+      "sigma_1": 4356.2138671875,
+      "sigma_2": 1690.181640625,
+      "spectral_entropy": 1.3139772415161133
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 24,
+      "spectral_gap": 2.105226993560791,
+      "sigma_1": 4430.55322265625,
+      "sigma_2": 2104.548828125,
+      "spectral_entropy": 1.438218116760254
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 25,
+      "spectral_gap": 1.3701289892196655,
+      "sigma_1": 4359.27734375,
+      "sigma_2": 3181.65478515625,
+      "spectral_entropy": 1.59589684009552
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "layer": 26,
+      "spectral_gap": 1.2634220123291016,
+      "sigma_1": 477.204833984375,
+      "sigma_2": 377.70819091796875,
+      "spectral_entropy": 2.2860093116760254
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 0,
+      "spectral_gap": 1.8488175868988037,
+      "sigma_1": 374.4730529785156,
+      "sigma_2": 202.5473175048828,
+      "spectral_entropy": 2.671020030975342
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 1,
+      "spectral_gap": 1.7160462141036987,
+      "sigma_1": 401.35919189453125,
+      "sigma_2": 233.88600158691406,
+      "spectral_entropy": 2.4250736236572266
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 2,
+      "spectral_gap": 2.104614019393921,
+      "sigma_1": 585.9614868164062,
+      "sigma_2": 278.41754150390625,
+      "spectral_entropy": 1.8377662897109985
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 3,
+      "spectral_gap": 2.9551897048950195,
+      "sigma_1": 686.7470092773438,
+      "sigma_2": 232.38677978515625,
+      "spectral_entropy": 1.635412335395813
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 4,
+      "spectral_gap": 3.2544708251953125,
+      "sigma_1": 847.8377075195312,
+      "sigma_2": 260.5147705078125,
+      "spectral_entropy": 1.3686949014663696
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 5,
+      "spectral_gap": 3.8736069202423096,
+      "sigma_1": 1065.97314453125,
+      "sigma_2": 275.18878173828125,
+      "spectral_entropy": 1.1179360151290894
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 6,
+      "spectral_gap": 4.243933200836182,
+      "sigma_1": 1257.3243408203125,
+      "sigma_2": 296.2639465332031,
+      "spectral_entropy": 0.9995971322059631
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 7,
+      "spectral_gap": 4.031893253326416,
+      "sigma_1": 1436.729736328125,
+      "sigma_2": 356.3412170410156,
+      "spectral_entropy": 0.9115992784500122
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 8,
+      "spectral_gap": 3.4220235347747803,
+      "sigma_1": 1683.41552734375,
+      "sigma_2": 491.9356994628906,
+      "spectral_entropy": 0.8933278918266296
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 9,
+      "spectral_gap": 3.584690570831299,
+      "sigma_1": 1812.3310546875,
+      "sigma_2": 505.5753173828125,
+      "spectral_entropy": 0.8673623204231262
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 10,
+      "spectral_gap": 3.5305755138397217,
+      "sigma_1": 2029.993408203125,
+      "sigma_2": 574.9752197265625,
+      "spectral_entropy": 0.879241943359375
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 11,
+      "spectral_gap": 3.178708791732788,
+      "sigma_1": 2222.464111328125,
+      "sigma_2": 699.1719970703125,
+      "spectral_entropy": 0.9251543879508972
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 12,
+      "spectral_gap": 2.998753786087036,
+      "sigma_1": 2469.80126953125,
+      "sigma_2": 823.6092529296875,
+      "spectral_entropy": 0.9444972276687622
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 13,
+      "spectral_gap": 3.132124662399292,
+      "sigma_1": 2672.85400390625,
+      "sigma_2": 853.36767578125,
+      "spectral_entropy": 0.89658522605896
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 14,
+      "spectral_gap": 3.3145058155059814,
+      "sigma_1": 2902.26513671875,
+      "sigma_2": 875.6253051757812,
+      "spectral_entropy": 0.8971242308616638
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 15,
+      "spectral_gap": 3.4451184272766113,
+      "sigma_1": 3082.1875,
+      "sigma_2": 894.653564453125,
+      "spectral_entropy": 0.8818331956863403
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 16,
+      "spectral_gap": 3.54226016998291,
+      "sigma_1": 3391.865234375,
+      "sigma_2": 957.5426635742188,
+      "spectral_entropy": 0.8383623957633972
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 17,
+      "spectral_gap": 3.566988945007324,
+      "sigma_1": 3560.41845703125,
+      "sigma_2": 998.157958984375,
+      "spectral_entropy": 0.8805694580078125
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 18,
+      "spectral_gap": 3.680657148361206,
+      "sigma_1": 3710.2275390625,
+      "sigma_2": 1008.0339965820312,
+      "spectral_entropy": 0.8894437551498413
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 19,
+      "spectral_gap": 3.560513734817505,
+      "sigma_1": 3838.971923828125,
+      "sigma_2": 1078.207275390625,
+      "spectral_entropy": 0.9860811233520508
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 20,
+      "spectral_gap": 3.3302998542785645,
+      "sigma_1": 3978.484619140625,
+      "sigma_2": 1194.632568359375,
+      "spectral_entropy": 1.071717381477356
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 21,
+      "spectral_gap": 3.0878665447235107,
+      "sigma_1": 4084.23974609375,
+      "sigma_2": 1322.6737060546875,
+      "spectral_entropy": 1.1623709201812744
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 22,
+      "spectral_gap": 2.7480528354644775,
+      "sigma_1": 4254.35205078125,
+      "sigma_2": 1548.13330078125,
+      "spectral_entropy": 1.2712267637252808
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 23,
+      "spectral_gap": 2.5128936767578125,
+      "sigma_1": 4394.29248046875,
+      "sigma_2": 1748.6981201171875,
+      "spectral_entropy": 1.3508776426315308
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 24,
+      "spectral_gap": 2.053230047225952,
+      "sigma_1": 4468.16943359375,
+      "sigma_2": 2176.166015625,
+      "spectral_entropy": 1.4754154682159424
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 25,
+      "spectral_gap": 1.3326112031936646,
+      "sigma_1": 4387.65283203125,
+      "sigma_2": 3292.522705078125,
+      "spectral_entropy": 1.6150778532028198
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "layer": 26,
+      "spectral_gap": 1.3398808240890503,
+      "sigma_1": 471.8344421386719,
+      "sigma_2": 352.1465759277344,
+      "spectral_entropy": 2.282219648361206
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 0,
+      "spectral_gap": 1.5567766427993774,
+      "sigma_1": 314.1832275390625,
+      "sigma_2": 201.81651306152344,
+      "spectral_entropy": 2.2539548873901367
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 1,
+      "spectral_gap": 2.059373617172241,
+      "sigma_1": 390.2384033203125,
+      "sigma_2": 189.4937286376953,
+      "spectral_entropy": 1.8312828540802002
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 2,
+      "spectral_gap": 2.710108757019043,
+      "sigma_1": 570.169921875,
+      "sigma_2": 210.38636779785156,
+      "spectral_entropy": 1.261547565460205
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 3,
+      "spectral_gap": 3.8177406787872314,
+      "sigma_1": 671.93115234375,
+      "sigma_2": 176.00230407714844,
+      "spectral_entropy": 1.033478021621704
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 4,
+      "spectral_gap": 4.175228595733643,
+      "sigma_1": 831.2286987304688,
+      "sigma_2": 199.08580017089844,
+      "spectral_entropy": 0.8614495992660522
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 5,
+      "spectral_gap": 4.703514099121094,
+      "sigma_1": 1051.7913818359375,
+      "sigma_2": 223.6182098388672,
+      "spectral_entropy": 0.7134206295013428
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 6,
+      "spectral_gap": 5.015105724334717,
+      "sigma_1": 1246.0660400390625,
+      "sigma_2": 248.46255493164062,
+      "spectral_entropy": 0.6288670897483826
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 7,
+      "spectral_gap": 4.514313697814941,
+      "sigma_1": 1424.95654296875,
+      "sigma_2": 315.6529846191406,
+      "spectral_entropy": 0.611005425453186
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 8,
+      "spectral_gap": 3.8379697799682617,
+      "sigma_1": 1667.5108642578125,
+      "sigma_2": 434.4773254394531,
+      "spectral_entropy": 0.6194791793823242
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 9,
+      "spectral_gap": 4.005129814147949,
+      "sigma_1": 1796.38037109375,
+      "sigma_2": 448.5198974609375,
+      "spectral_entropy": 0.6018531322479248
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 10,
+      "spectral_gap": 3.7820827960968018,
+      "sigma_1": 2009.9581298828125,
+      "sigma_2": 531.442138671875,
+      "spectral_entropy": 0.6303986310958862
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 11,
+      "spectral_gap": 3.280381202697754,
+      "sigma_1": 2197.860595703125,
+      "sigma_2": 670.0015869140625,
+      "spectral_entropy": 0.6846546530723572
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 12,
+      "spectral_gap": 3.03012752532959,
+      "sigma_1": 2429.104736328125,
+      "sigma_2": 801.6510009765625,
+      "spectral_entropy": 0.7088388204574585
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 13,
+      "spectral_gap": 3.179687261581421,
+      "sigma_1": 2650.197509765625,
+      "sigma_2": 833.4774169921875,
+      "spectral_entropy": 0.67109614610672
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 14,
+      "spectral_gap": 3.453075647354126,
+      "sigma_1": 2868.800537109375,
+      "sigma_2": 830.7957153320312,
+      "spectral_entropy": 0.6631438136100769
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 15,
+      "spectral_gap": 3.6300013065338135,
+      "sigma_1": 3044.2880859375,
+      "sigma_2": 838.6465454101562,
+      "spectral_entropy": 0.6441614031791687
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 16,
+      "spectral_gap": 3.811598777770996,
+      "sigma_1": 3331.5283203125,
+      "sigma_2": 874.0501098632812,
+      "spectral_entropy": 0.6191761493682861
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 17,
+      "spectral_gap": 3.9351210594177246,
+      "sigma_1": 3493.268310546875,
+      "sigma_2": 887.715576171875,
+      "spectral_entropy": 0.6392524242401123
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 18,
+      "spectral_gap": 4.183958530426025,
+      "sigma_1": 3647.017578125,
+      "sigma_2": 871.666748046875,
+      "spectral_entropy": 0.6183121204376221
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 19,
+      "spectral_gap": 4.071137428283691,
+      "sigma_1": 3764.016357421875,
+      "sigma_2": 924.5614013671875,
+      "spectral_entropy": 0.662859320640564
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 20,
+      "spectral_gap": 3.8780064582824707,
+      "sigma_1": 3887.1181640625,
+      "sigma_2": 1002.349609375,
+      "spectral_entropy": 0.7083426117897034
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 21,
+      "spectral_gap": 3.634415626525879,
+      "sigma_1": 3970.388427734375,
+      "sigma_2": 1092.4420166015625,
+      "spectral_entropy": 0.7645320296287537
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 22,
+      "spectral_gap": 3.2708137035369873,
+      "sigma_1": 4089.650634765625,
+      "sigma_2": 1250.3465576171875,
+      "spectral_entropy": 0.8495326042175293
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 23,
+      "spectral_gap": 3.055185556411743,
+      "sigma_1": 4231.8515625,
+      "sigma_2": 1385.1373291015625,
+      "spectral_entropy": 0.8972921967506409
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 24,
+      "spectral_gap": 2.5446999073028564,
+      "sigma_1": 4332.033203125,
+      "sigma_2": 1702.3748779296875,
+      "spectral_entropy": 1.0018625259399414
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 25,
+      "spectral_gap": 1.7651629447937012,
+      "sigma_1": 4318.123046875,
+      "sigma_2": 2446.302734375,
+      "spectral_entropy": 1.191323161125183
+    },
+    {
+      "condition": "control",
+      "probe_idx": 0,
+      "layer": 26,
+      "spectral_gap": 1.2798041105270386,
+      "sigma_1": 407.7126770019531,
+      "sigma_2": 318.57427978515625,
+      "spectral_entropy": 1.8675224781036377
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 0,
+      "spectral_gap": 1.545500636100769,
+      "sigma_1": 311.9020080566406,
+      "sigma_2": 201.81292724609375,
+      "spectral_entropy": 2.07639217376709
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 1,
+      "spectral_gap": 2.127183198928833,
+      "sigma_1": 389.6328430175781,
+      "sigma_2": 183.16845703125,
+      "spectral_entropy": 1.6694175004959106
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 2,
+      "spectral_gap": 2.8551855087280273,
+      "sigma_1": 568.9242553710938,
+      "sigma_2": 199.25999450683594,
+      "spectral_entropy": 1.1280070543289185
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 3,
+      "spectral_gap": 3.9648802280426025,
+      "sigma_1": 671.4005126953125,
+      "sigma_2": 169.33689880371094,
+      "spectral_entropy": 0.9194062948226929
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 4,
+      "spectral_gap": 4.3275251388549805,
+      "sigma_1": 830.0145874023438,
+      "sigma_2": 191.7989044189453,
+      "spectral_entropy": 0.7694289684295654
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 5,
+      "spectral_gap": 4.961343288421631,
+      "sigma_1": 1052.047119140625,
+      "sigma_2": 212.04884338378906,
+      "spectral_entropy": 0.6211331486701965
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 6,
+      "spectral_gap": 5.332852840423584,
+      "sigma_1": 1245.4970703125,
+      "sigma_2": 233.55174255371094,
+      "spectral_entropy": 0.5429750680923462
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 7,
+      "spectral_gap": 4.715101718902588,
+      "sigma_1": 1424.26416015625,
+      "sigma_2": 302.0643615722656,
+      "spectral_entropy": 0.5346261262893677
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 8,
+      "spectral_gap": 3.831712245941162,
+      "sigma_1": 1667.0479736328125,
+      "sigma_2": 435.0660705566406,
+      "spectral_entropy": 0.5609664916992188
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 9,
+      "spectral_gap": 3.9358489513397217,
+      "sigma_1": 1798.0360107421875,
+      "sigma_2": 456.83563232421875,
+      "spectral_entropy": 0.5464708209037781
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 10,
+      "spectral_gap": 3.7571682929992676,
+      "sigma_1": 2010.6103515625,
+      "sigma_2": 535.1398315429688,
+      "spectral_entropy": 0.5745340585708618
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 11,
+      "spectral_gap": 3.274691343307495,
+      "sigma_1": 2197.42822265625,
+      "sigma_2": 671.03369140625,
+      "spectral_entropy": 0.6371431946754456
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 12,
+      "spectral_gap": 3.0287225246429443,
+      "sigma_1": 2426.041748046875,
+      "sigma_2": 801.0115356445312,
+      "spectral_entropy": 0.6643418669700623
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 13,
+      "spectral_gap": 3.176844835281372,
+      "sigma_1": 2649.39794921875,
+      "sigma_2": 833.9714965820312,
+      "spectral_entropy": 0.6313095688819885
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 14,
+      "spectral_gap": 3.462005376815796,
+      "sigma_1": 2861.81103515625,
+      "sigma_2": 826.6339111328125,
+      "spectral_entropy": 0.6085705161094666
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 15,
+      "spectral_gap": 3.643364667892456,
+      "sigma_1": 3032.901611328125,
+      "sigma_2": 832.4452514648438,
+      "spectral_entropy": 0.5930392742156982
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 16,
+      "spectral_gap": 3.841270685195923,
+      "sigma_1": 3320.11328125,
+      "sigma_2": 864.3268432617188,
+      "spectral_entropy": 0.5668668746948242
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 17,
+      "spectral_gap": 4.028131484985352,
+      "sigma_1": 3477.8759765625,
+      "sigma_2": 863.3968505859375,
+      "spectral_entropy": 0.5742095708847046
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 18,
+      "spectral_gap": 4.336426734924316,
+      "sigma_1": 3631.203369140625,
+      "sigma_2": 837.3722534179688,
+      "spectral_entropy": 0.5540275573730469
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 19,
+      "spectral_gap": 4.2277750968933105,
+      "sigma_1": 3744.782470703125,
+      "sigma_2": 885.7572631835938,
+      "spectral_entropy": 0.5892666578292847
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 20,
+      "spectral_gap": 4.026496887207031,
+      "sigma_1": 3868.336669921875,
+      "sigma_2": 960.7200927734375,
+      "spectral_entropy": 0.6300552487373352
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 21,
+      "spectral_gap": 3.8059933185577393,
+      "sigma_1": 3946.619873046875,
+      "sigma_2": 1036.94873046875,
+      "spectral_entropy": 0.6811016798019409
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 22,
+      "spectral_gap": 3.432011842727661,
+      "sigma_1": 4052.003662109375,
+      "sigma_2": 1180.649658203125,
+      "spectral_entropy": 0.761896550655365
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 23,
+      "spectral_gap": 3.201730251312256,
+      "sigma_1": 4189.5966796875,
+      "sigma_2": 1308.5413818359375,
+      "spectral_entropy": 0.8139407634735107
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 24,
+      "spectral_gap": 2.7022955417633057,
+      "sigma_1": 4300.716796875,
+      "sigma_2": 1591.5050048828125,
+      "spectral_entropy": 0.9149540066719055
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 25,
+      "spectral_gap": 1.9209309816360474,
+      "sigma_1": 4304.9873046875,
+      "sigma_2": 2241.09423828125,
+      "spectral_entropy": 1.1035854816436768
+    },
+    {
+      "condition": "control",
+      "probe_idx": 1,
+      "layer": 26,
+      "spectral_gap": 1.3904187679290771,
+      "sigma_1": 414.5491638183594,
+      "sigma_2": 298.14697265625,
+      "spectral_entropy": 1.7973943948745728
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 0,
+      "spectral_gap": 1.5859352350234985,
+      "sigma_1": 320.11865234375,
+      "sigma_2": 201.84849548339844,
+      "spectral_entropy": 2.0889556407928467
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 1,
+      "spectral_gap": 2.1268723011016846,
+      "sigma_1": 391.2846374511719,
+      "sigma_2": 183.97186279296875,
+      "spectral_entropy": 1.7458356618881226
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 2,
+      "spectral_gap": 2.8279621601104736,
+      "sigma_1": 571.8486938476562,
+      "sigma_2": 202.2122802734375,
+      "spectral_entropy": 1.2004375457763672
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 3,
+      "spectral_gap": 3.9342200756073,
+      "sigma_1": 674.3607177734375,
+      "sigma_2": 171.40899658203125,
+      "spectral_entropy": 1.000011920928955
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 4,
+      "spectral_gap": 4.250542163848877,
+      "sigma_1": 834.3351440429688,
+      "sigma_2": 196.2891082763672,
+      "spectral_entropy": 0.8342349529266357
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 5,
+      "spectral_gap": 4.889423847198486,
+      "sigma_1": 1058.6492919921875,
+      "sigma_2": 216.51821899414062,
+      "spectral_entropy": 0.6758337616920471
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 6,
+      "spectral_gap": 5.33933687210083,
+      "sigma_1": 1250.4580078125,
+      "sigma_2": 234.19725036621094,
+      "spectral_entropy": 0.5879063010215759
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 7,
+      "spectral_gap": 4.6007304191589355,
+      "sigma_1": 1428.0107421875,
+      "sigma_2": 310.3878479003906,
+      "spectral_entropy": 0.5808790922164917
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 8,
+      "spectral_gap": 3.7676331996917725,
+      "sigma_1": 1673.3585205078125,
+      "sigma_2": 444.1405029296875,
+      "spectral_entropy": 0.6093019843101501
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 9,
+      "spectral_gap": 3.893665075302124,
+      "sigma_1": 1804.4136962890625,
+      "sigma_2": 463.4229431152344,
+      "spectral_entropy": 0.5946303606033325
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 10,
+      "spectral_gap": 3.739086389541626,
+      "sigma_1": 2017.3721923828125,
+      "sigma_2": 539.5361328125,
+      "spectral_entropy": 0.621291995048523
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 11,
+      "spectral_gap": 3.279022216796875,
+      "sigma_1": 2204.10107421875,
+      "sigma_2": 672.1824340820312,
+      "spectral_entropy": 0.6787100434303284
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 12,
+      "spectral_gap": 3.0354254245758057,
+      "sigma_1": 2439.218017578125,
+      "sigma_2": 803.5835571289062,
+      "spectral_entropy": 0.7022067904472351
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 13,
+      "spectral_gap": 3.184070587158203,
+      "sigma_1": 2660.4150390625,
+      "sigma_2": 835.5389404296875,
+      "spectral_entropy": 0.6625194549560547
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 14,
+      "spectral_gap": 3.4662725925445557,
+      "sigma_1": 2876.786376953125,
+      "sigma_2": 829.9365844726562,
+      "spectral_entropy": 0.6396311521530151
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 15,
+      "spectral_gap": 3.64090633392334,
+      "sigma_1": 3051.430908203125,
+      "sigma_2": 838.0964965820312,
+      "spectral_entropy": 0.6200706362724304
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 16,
+      "spectral_gap": 3.8670196533203125,
+      "sigma_1": 3337.9765625,
+      "sigma_2": 863.1909790039062,
+      "spectral_entropy": 0.5871026515960693
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 17,
+      "spectral_gap": 4.0493245124816895,
+      "sigma_1": 3499.389892578125,
+      "sigma_2": 864.1909790039062,
+      "spectral_entropy": 0.6093697547912598
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 18,
+      "spectral_gap": 4.349966049194336,
+      "sigma_1": 3650.288818359375,
+      "sigma_2": 839.1534423828125,
+      "spectral_entropy": 0.5917167663574219
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 19,
+      "spectral_gap": 4.287067890167236,
+      "sigma_1": 3760.91650390625,
+      "sigma_2": 877.2700805664062,
+      "spectral_entropy": 0.6334437131881714
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 20,
+      "spectral_gap": 4.044972896575928,
+      "sigma_1": 3888.78955078125,
+      "sigma_2": 961.3882446289062,
+      "spectral_entropy": 0.6912705898284912
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 21,
+      "spectral_gap": 3.817089557647705,
+      "sigma_1": 3965.867431640625,
+      "sigma_2": 1038.976806640625,
+      "spectral_entropy": 0.7452139258384705
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 22,
+      "spectral_gap": 3.4369194507598877,
+      "sigma_1": 4079.614990234375,
+      "sigma_2": 1186.99755859375,
+      "spectral_entropy": 0.8374457955360413
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 23,
+      "spectral_gap": 3.1911797523498535,
+      "sigma_1": 4211.3837890625,
+      "sigma_2": 1319.6949462890625,
+      "spectral_entropy": 0.9030458927154541
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 24,
+      "spectral_gap": 2.6908581256866455,
+      "sigma_1": 4323.19189453125,
+      "sigma_2": 1606.6219482421875,
+      "spectral_entropy": 1.0188567638397217
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 25,
+      "spectral_gap": 1.9049612283706665,
+      "sigma_1": 4315.125,
+      "sigma_2": 2265.20361328125,
+      "spectral_entropy": 1.2125589847564697
+    },
+    {
+      "condition": "control",
+      "probe_idx": 2,
+      "layer": 26,
+      "spectral_gap": 1.249080777168274,
+      "sigma_1": 382.2037658691406,
+      "sigma_2": 305.988037109375,
+      "spectral_entropy": 1.9794692993164062
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 0,
+      "spectral_gap": 1.6028037071228027,
+      "sigma_1": 323.6387939453125,
+      "sigma_2": 201.92041015625,
+      "spectral_entropy": 2.1376748085021973
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 1,
+      "spectral_gap": 2.0709502696990967,
+      "sigma_1": 390.50518798828125,
+      "sigma_2": 188.5632781982422,
+      "spectral_entropy": 1.7627698183059692
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 2,
+      "spectral_gap": 2.7517189979553223,
+      "sigma_1": 568.9376831054688,
+      "sigma_2": 206.75718688964844,
+      "spectral_entropy": 1.2162779569625854
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 3,
+      "spectral_gap": 3.953411817550659,
+      "sigma_1": 671.6188354492188,
+      "sigma_2": 169.8833465576172,
+      "spectral_entropy": 1.0037994384765625
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 4,
+      "spectral_gap": 4.3200178146362305,
+      "sigma_1": 830.9613037109375,
+      "sigma_2": 192.3513641357422,
+      "spectral_entropy": 0.8577337265014648
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 5,
+      "spectral_gap": 5.042479038238525,
+      "sigma_1": 1054.5430908203125,
+      "sigma_2": 209.13186645507812,
+      "spectral_entropy": 0.6869105696678162
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 6,
+      "spectral_gap": 5.416331768035889,
+      "sigma_1": 1247.8468017578125,
+      "sigma_2": 230.38597106933594,
+      "spectral_entropy": 0.6012626886367798
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 7,
+      "spectral_gap": 4.749481201171875,
+      "sigma_1": 1425.8516845703125,
+      "sigma_2": 300.21209716796875,
+      "spectral_entropy": 0.5868765711784363
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 8,
+      "spectral_gap": 3.9395077228546143,
+      "sigma_1": 1668.5045166015625,
+      "sigma_2": 423.5312194824219,
+      "spectral_entropy": 0.6060504913330078
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 9,
+      "spectral_gap": 4.08804988861084,
+      "sigma_1": 1799.5394287109375,
+      "sigma_2": 440.195068359375,
+      "spectral_entropy": 0.5822871923446655
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 10,
+      "spectral_gap": 3.808302402496338,
+      "sigma_1": 2013.2049560546875,
+      "sigma_2": 528.6358032226562,
+      "spectral_entropy": 0.6094791889190674
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 11,
+      "spectral_gap": 3.3118715286254883,
+      "sigma_1": 2196.673583984375,
+      "sigma_2": 663.2725830078125,
+      "spectral_entropy": 0.6617351770401001
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 12,
+      "spectral_gap": 3.0411572456359863,
+      "sigma_1": 2429.069580078125,
+      "sigma_2": 798.7319946289062,
+      "spectral_entropy": 0.6869211196899414
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 13,
+      "spectral_gap": 3.1913516521453857,
+      "sigma_1": 2650.291259765625,
+      "sigma_2": 830.46044921875,
+      "spectral_entropy": 0.6459843516349792
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 14,
+      "spectral_gap": 3.491100311279297,
+      "sigma_1": 2865.82470703125,
+      "sigma_2": 820.8944091796875,
+      "spectral_entropy": 0.6239299178123474
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 15,
+      "spectral_gap": 3.6766610145568848,
+      "sigma_1": 3037.741455078125,
+      "sigma_2": 826.222900390625,
+      "spectral_entropy": 0.6064420938491821
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 16,
+      "spectral_gap": 3.909749746322632,
+      "sigma_1": 3322.07421875,
+      "sigma_2": 849.6897583007812,
+      "spectral_entropy": 0.5779417753219604
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 17,
+      "spectral_gap": 4.12841796875,
+      "sigma_1": 3485.3681640625,
+      "sigma_2": 844.2382202148438,
+      "spectral_entropy": 0.5899754762649536
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 18,
+      "spectral_gap": 4.415090560913086,
+      "sigma_1": 3642.552001953125,
+      "sigma_2": 825.023193359375,
+      "spectral_entropy": 0.5749956965446472
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 19,
+      "spectral_gap": 4.367310523986816,
+      "sigma_1": 3752.9345703125,
+      "sigma_2": 859.323974609375,
+      "spectral_entropy": 0.6200237274169922
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 20,
+      "spectral_gap": 4.1321635246276855,
+      "sigma_1": 3880.2529296875,
+      "sigma_2": 939.03662109375,
+      "spectral_entropy": 0.6654573082923889
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 21,
+      "spectral_gap": 3.898787260055542,
+      "sigma_1": 3959.450927734375,
+      "sigma_2": 1015.5596313476562,
+      "spectral_entropy": 0.7389921545982361
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 22,
+      "spectral_gap": 3.489110231399536,
+      "sigma_1": 4069.899169921875,
+      "sigma_2": 1166.4576416015625,
+      "spectral_entropy": 0.8296337723731995
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 23,
+      "spectral_gap": 3.2299609184265137,
+      "sigma_1": 4212.94873046875,
+      "sigma_2": 1304.334228515625,
+      "spectral_entropy": 0.8981289267539978
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 24,
+      "spectral_gap": 2.728529453277588,
+      "sigma_1": 4315.1552734375,
+      "sigma_2": 1581.494873046875,
+      "spectral_entropy": 1.006988525390625
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 25,
+      "spectral_gap": 1.9092141389846802,
+      "sigma_1": 4310.751953125,
+      "sigma_2": 2257.8671875,
+      "spectral_entropy": 1.2113683223724365
+    },
+    {
+      "condition": "control",
+      "probe_idx": 3,
+      "layer": 26,
+      "spectral_gap": 1.1872637271881104,
+      "sigma_1": 391.5347900390625,
+      "sigma_2": 329.77911376953125,
+      "spectral_entropy": 1.9989147186279297
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 0,
+      "spectral_gap": 1.6339281797409058,
+      "sigma_1": 330.05322265625,
+      "sigma_2": 201.9998321533203,
+      "spectral_entropy": 2.1014397144317627
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 1,
+      "spectral_gap": 2.0505857467651367,
+      "sigma_1": 391.1598205566406,
+      "sigma_2": 190.75515747070312,
+      "spectral_entropy": 1.7835803031921387
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 2,
+      "spectral_gap": 2.6952123641967773,
+      "sigma_1": 572.8313598632812,
+      "sigma_2": 212.53663635253906,
+      "spectral_entropy": 1.2481589317321777
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 3,
+      "spectral_gap": 3.717874050140381,
+      "sigma_1": 675.5020751953125,
+      "sigma_2": 181.69041442871094,
+      "spectral_entropy": 1.0615885257720947
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 4,
+      "spectral_gap": 4.041202068328857,
+      "sigma_1": 834.8475952148438,
+      "sigma_2": 206.58396911621094,
+      "spectral_entropy": 0.8945025205612183
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 5,
+      "spectral_gap": 4.685664653778076,
+      "sigma_1": 1060.6971435546875,
+      "sigma_2": 226.37069702148438,
+      "spectral_entropy": 0.7210087776184082
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 6,
+      "spectral_gap": 5.086872577667236,
+      "sigma_1": 1251.0711669921875,
+      "sigma_2": 245.9411163330078,
+      "spectral_entropy": 0.6275067925453186
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 7,
+      "spectral_gap": 4.435163497924805,
+      "sigma_1": 1432.2828369140625,
+      "sigma_2": 322.93798828125,
+      "spectral_entropy": 0.6083687543869019
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 8,
+      "spectral_gap": 3.744208574295044,
+      "sigma_1": 1673.294677734375,
+      "sigma_2": 446.902099609375,
+      "spectral_entropy": 0.6284962892532349
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 9,
+      "spectral_gap": 3.826878547668457,
+      "sigma_1": 1805.2225341796875,
+      "sigma_2": 471.721923828125,
+      "spectral_entropy": 0.6173526048660278
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 10,
+      "spectral_gap": 3.7003445625305176,
+      "sigma_1": 2017.3115234375,
+      "sigma_2": 545.1685791015625,
+      "spectral_entropy": 0.6366077065467834
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 11,
+      "spectral_gap": 3.2556331157684326,
+      "sigma_1": 2204.792724609375,
+      "sigma_2": 677.2239379882812,
+      "spectral_entropy": 0.6894469261169434
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 12,
+      "spectral_gap": 3.024226427078247,
+      "sigma_1": 2437.163330078125,
+      "sigma_2": 805.8798828125,
+      "spectral_entropy": 0.7166150212287903
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 13,
+      "spectral_gap": 3.167919158935547,
+      "sigma_1": 2657.93408203125,
+      "sigma_2": 839.0157470703125,
+      "spectral_entropy": 0.6796117424964905
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 14,
+      "spectral_gap": 3.4408864974975586,
+      "sigma_1": 2875.98779296875,
+      "sigma_2": 835.8275756835938,
+      "spectral_entropy": 0.6575292348861694
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 15,
+      "spectral_gap": 3.602848768234253,
+      "sigma_1": 3048.96142578125,
+      "sigma_2": 846.2640380859375,
+      "spectral_entropy": 0.6397044658660889
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 16,
+      "spectral_gap": 3.791893720626831,
+      "sigma_1": 3342.71826171875,
+      "sigma_2": 881.543212890625,
+      "spectral_entropy": 0.6081132888793945
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 17,
+      "spectral_gap": 3.944284200668335,
+      "sigma_1": 3499.536865234375,
+      "sigma_2": 887.2425537109375,
+      "spectral_entropy": 0.6292370557785034
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 18,
+      "spectral_gap": 4.152547359466553,
+      "sigma_1": 3659.48095703125,
+      "sigma_2": 881.2616577148438,
+      "spectral_entropy": 0.6259244084358215
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 19,
+      "spectral_gap": 4.0460100173950195,
+      "sigma_1": 3773.222900390625,
+      "sigma_2": 932.5787353515625,
+      "spectral_entropy": 0.6822606325149536
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 20,
+      "spectral_gap": 3.8366076946258545,
+      "sigma_1": 3904.9482421875,
+      "sigma_2": 1017.812744140625,
+      "spectral_entropy": 0.7398791313171387
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 21,
+      "spectral_gap": 3.601818799972534,
+      "sigma_1": 3989.63037109375,
+      "sigma_2": 1107.6710205078125,
+      "spectral_entropy": 0.808244526386261
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 22,
+      "spectral_gap": 3.246731758117676,
+      "sigma_1": 4107.21923828125,
+      "sigma_2": 1265.0318603515625,
+      "spectral_entropy": 0.9048143625259399
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 23,
+      "spectral_gap": 3.010051727294922,
+      "sigma_1": 4243.0068359375,
+      "sigma_2": 1409.612548828125,
+      "spectral_entropy": 0.9694072008132935
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 24,
+      "spectral_gap": 2.5404794216156006,
+      "sigma_1": 4337.6728515625,
+      "sigma_2": 1707.4229736328125,
+      "spectral_entropy": 1.0874333381652832
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 25,
+      "spectral_gap": 1.7627297639846802,
+      "sigma_1": 4325.85302734375,
+      "sigma_2": 2454.064697265625,
+      "spectral_entropy": 1.2767155170440674
+    },
+    {
+      "condition": "control",
+      "probe_idx": 4,
+      "layer": 26,
+      "spectral_gap": 1.2931498289108276,
+      "sigma_1": 374.8277282714844,
+      "sigma_2": 289.85638427734375,
+      "spectral_entropy": 2.0888233184814453
+    }
+  ]
+}

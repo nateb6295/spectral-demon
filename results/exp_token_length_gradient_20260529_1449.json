@@ -1,0 +1,773 @@
+{
+  "experiment": "token_length_gradient",
+  "model": "mistralai/Mistral-7B-v0.1",
+  "measure_layer": 17,
+  "padding_levels": [
+    0,
+    10,
+    20,
+    30,
+    40
+  ],
+  "timestamp": "2026-05-29T14:49:18.034319",
+  "delta_S_by_padding": {
+    "0": 0.0023003935813903365,
+    "10": 0.0024723410606384277,
+    "20": 0.0026979088783264382,
+    "30": 0.0025604963302612305,
+    "40": 0.0026035964488982932
+  },
+  "delta_cv": 0.05325147931155735,
+  "raw": [
+    {
+      "S": 0.2671435475349426,
+      "sigma_1": 437.5429992675781,
+      "sigma_2": 100.86895751953125,
+      "gap": 4.337736901691055,
+      "n_tokens": 40,
+      "probe_idx": 0,
+      "condition": "receptive",
+      "padding_level": 0
+    },
+    {
+      "S": 0.26192066073417664,
+      "sigma_1": 437.53424072265625,
+      "sigma_2": 100.86895751953125,
+      "gap": 4.337650070765691,
+      "n_tokens": 37,
+      "probe_idx": 1,
+      "condition": "receptive",
+      "padding_level": 0
+    },
+    {
+      "S": 0.27205294370651245,
+      "sigma_1": 437.5494079589844,
+      "sigma_2": 100.872314453125,
+      "gap": 4.337656078688588,
+      "n_tokens": 42,
+      "probe_idx": 2,
+      "condition": "receptive",
+      "padding_level": 0
+    },
+    {
+      "S": 0.27580249309539795,
+      "sigma_1": 437.5486755371094,
+      "sigma_2": 100.87020111083984,
+      "gap": 4.337739696348131,
+      "n_tokens": 45,
+      "probe_idx": 3,
+      "condition": "receptive",
+      "padding_level": 0
+    },
+    {
+      "S": 0.26993733644485474,
+      "sigma_1": 437.5399169921875,
+      "sigma_2": 100.8695068359375,
+      "gap": 4.33768272213166,
+      "n_tokens": 42,
+      "probe_idx": 4,
+      "condition": "receptive",
+      "padding_level": 0
+    },
+    {
+      "S": 0.26955610513687134,
+      "sigma_1": 436.1630554199219,
+      "sigma_2": 100.54597473144531,
+      "gap": 4.337946462649526,
+      "n_tokens": 40,
+      "probe_idx": 0,
+      "condition": "control",
+      "padding_level": 0
+    },
+    {
+      "S": 0.2644258737564087,
+      "sigma_1": 436.154541015625,
+      "sigma_2": 100.54537200927734,
+      "gap": 4.3378877843863455,
+      "n_tokens": 37,
+      "probe_idx": 1,
+      "condition": "control",
+      "padding_level": 0
+    },
+    {
+      "S": 0.27447986602783203,
+      "sigma_1": 436.1696472167969,
+      "sigma_2": 100.54764556884766,
+      "gap": 4.337939936327399,
+      "n_tokens": 42,
+      "probe_idx": 2,
+      "condition": "control",
+      "padding_level": 0
+    },
+    {
+      "S": 0.27863624691963196,
+      "sigma_1": 436.1669921875,
+      "sigma_2": 100.54617309570312,
+      "gap": 4.337977058284874,
+      "n_tokens": 45,
+      "probe_idx": 3,
+      "condition": "control",
+      "padding_level": 0
+    },
+    {
+      "S": 0.27216553688049316,
+      "sigma_1": 436.16131591796875,
+      "sigma_2": 100.54569244384766,
+      "gap": 4.3379413410629635,
+      "n_tokens": 42,
+      "probe_idx": 4,
+      "condition": "control",
+      "padding_level": 0
+    },
+    {
+      "S": 0.26479077339172363,
+      "sigma_1": 437.3863525390625,
+      "sigma_2": 99.73860168457031,
+      "gap": 4.3853266954987475,
+      "n_tokens": 40,
+      "probe_idx": 0,
+      "condition": "absent",
+      "padding_level": 0
+    },
+    {
+      "S": 0.2596939206123352,
+      "sigma_1": 437.3752746582031,
+      "sigma_2": 99.7381820678711,
+      "gap": 4.385234075758193,
+      "n_tokens": 37,
+      "probe_idx": 1,
+      "condition": "absent",
+      "padding_level": 0
+    },
+    {
+      "S": 0.2696537673473358,
+      "sigma_1": 437.3906555175781,
+      "sigma_2": 99.7409896850586,
+      "gap": 4.385264843457836,
+      "n_tokens": 42,
+      "probe_idx": 2,
+      "condition": "absent",
+      "padding_level": 0
+    },
+    {
+      "S": 0.2737169563770294,
+      "sigma_1": 437.3876647949219,
+      "sigma_2": 99.73931884765625,
+      "gap": 4.385308320212174,
+      "n_tokens": 45,
+      "probe_idx": 3,
+      "condition": "absent",
+      "padding_level": 0
+    },
+    {
+      "S": 0.2674995958805084,
+      "sigma_1": 437.3831787109375,
+      "sigma_2": 99.73897552490234,
+      "gap": 4.385278437131468,
+      "n_tokens": 42,
+      "probe_idx": 4,
+      "condition": "absent",
+      "padding_level": 0
+    },
+    {
+      "S": 0.2792508602142334,
+      "sigma_1": 437.55255126953125,
+      "sigma_2": 100.86988830566406,
+      "gap": 4.337791571094282,
+      "n_tokens": 48,
+      "probe_idx": 0,
+      "condition": "receptive",
+      "padding_level": 10
+    },
+    {
+      "S": 0.2740688621997833,
+      "sigma_1": 437.5486145019531,
+      "sigma_2": 100.8702621459961,
+      "gap": 4.337736466558009,
+      "n_tokens": 45,
+      "probe_idx": 1,
+      "condition": "receptive",
+      "padding_level": 10
+    },
+    {
+      "S": 0.2841487526893616,
+      "sigma_1": 437.55841064453125,
+      "sigma_2": 100.87322998046875,
+      "gap": 4.337705957559326,
+      "n_tokens": 50,
+      "probe_idx": 2,
+      "condition": "receptive",
+      "padding_level": 10
+    },
+    {
+      "S": 0.2879282832145691,
+      "sigma_1": 437.55828857421875,
+      "sigma_2": 100.87110900878906,
+      "gap": 4.337795954400517,
+      "n_tokens": 53,
+      "probe_idx": 3,
+      "condition": "receptive",
+      "padding_level": 10
+    },
+    {
+      "S": 0.28224027156829834,
+      "sigma_1": 437.55096435546875,
+      "sigma_2": 100.87037658691406,
+      "gap": 4.337754841020712,
+      "n_tokens": 50,
+      "probe_idx": 4,
+      "condition": "receptive",
+      "padding_level": 10
+    },
+    {
+      "S": 0.2815888822078705,
+      "sigma_1": 436.16912841796875,
+      "sigma_2": 100.5470962524414,
+      "gap": 4.3379584759254355,
+      "n_tokens": 48,
+      "probe_idx": 0,
+      "condition": "control",
+      "padding_level": 10
+    },
+    {
+      "S": 0.2764154374599457,
+      "sigma_1": 436.16571044921875,
+      "sigma_2": 100.54724884033203,
+      "gap": 4.337917899094835,
+      "n_tokens": 45,
+      "probe_idx": 1,
+      "condition": "control",
+      "padding_level": 10
+    },
+    {
+      "S": 0.2865143418312073,
+      "sigma_1": 436.17486572265625,
+      "sigma_2": 100.5489501953125,
+      "gap": 4.337935551543833,
+      "n_tokens": 50,
+      "probe_idx": 2,
+      "condition": "control",
+      "padding_level": 10
+    },
+    {
+      "S": 0.2905021607875824,
+      "sigma_1": 436.1745300292969,
+      "sigma_2": 100.547607421875,
+      "gap": 4.3379901443025615,
+      "n_tokens": 53,
+      "probe_idx": 3,
+      "condition": "control",
+      "padding_level": 10
+    },
+    {
+      "S": 0.2843163013458252,
+      "sigma_1": 436.1699523925781,
+      "sigma_2": 100.54713439941406,
+      "gap": 4.3379650250392405,
+      "n_tokens": 50,
+      "probe_idx": 4,
+      "condition": "control",
+      "padding_level": 10
+    },
+    {
+      "S": 0.27677568793296814,
+      "sigma_1": 437.3985900878906,
+      "sigma_2": 99.74028015136719,
+      "gap": 4.385375591727722,
+      "n_tokens": 48,
+      "probe_idx": 0,
+      "condition": "absent",
+      "padding_level": 10
+    },
+    {
+      "S": 0.27178123593330383,
+      "sigma_1": 437.39111328125,
+      "sigma_2": 99.74005889892578,
+      "gap": 4.38531035683959,
+      "n_tokens": 45,
+      "probe_idx": 1,
+      "condition": "absent",
+      "padding_level": 10
+    },
+    {
+      "S": 0.2814265787601471,
+      "sigma_1": 437.4026184082031,
+      "sigma_2": 99.74269104003906,
+      "gap": 4.385309979581556,
+      "n_tokens": 50,
+      "probe_idx": 2,
+      "condition": "absent",
+      "padding_level": 10
+    },
+    {
+      "S": 0.2856568694114685,
+      "sigma_1": 437.4021301269531,
+      "sigma_2": 99.74095916748047,
+      "gap": 4.385381229315104,
+      "n_tokens": 53,
+      "probe_idx": 3,
+      "condition": "absent",
+      "padding_level": 10
+    },
+    {
+      "S": 0.279634952545166,
+      "sigma_1": 437.3984680175781,
+      "sigma_2": 99.74089050292969,
+      "gap": 4.38534753211102,
+      "n_tokens": 50,
+      "probe_idx": 4,
+      "condition": "absent",
+      "padding_level": 10
+    },
+    {
+      "S": 0.29235875606536865,
+      "sigma_1": 437.5546569824219,
+      "sigma_2": 100.87059783935547,
+      "gap": 4.3377819340305965,
+      "n_tokens": 58,
+      "probe_idx": 0,
+      "condition": "receptive",
+      "padding_level": 20
+    },
+    {
+      "S": 0.2872962951660156,
+      "sigma_1": 437.5508728027344,
+      "sigma_2": 100.87100982666016,
+      "gap": 4.337726702197542,
+      "n_tokens": 55,
+      "probe_idx": 1,
+      "condition": "receptive",
+      "padding_level": 20
+    },
+    {
+      "S": 0.2971966862678528,
+      "sigma_1": 437.55926513671875,
+      "sigma_2": 100.87346649169922,
+      "gap": 4.337704258163122,
+      "n_tokens": 60,
+      "probe_idx": 2,
+      "condition": "receptive",
+      "padding_level": 20
+    },
+    {
+      "S": 0.3008148670196533,
+      "sigma_1": 437.5602111816406,
+      "sigma_2": 100.8716812133789,
+      "gap": 4.337790407756243,
+      "n_tokens": 63,
+      "probe_idx": 3,
+      "condition": "receptive",
+      "padding_level": 20
+    },
+    {
+      "S": 0.29529693722724915,
+      "sigma_1": 437.552734375,
+      "sigma_2": 100.87104797363281,
+      "gap": 4.337743516745995,
+      "n_tokens": 60,
+      "probe_idx": 4,
+      "condition": "receptive",
+      "padding_level": 20
+    },
+    {
+      "S": 0.2945873737335205,
+      "sigma_1": 436.1716003417969,
+      "sigma_2": 100.54820251464844,
+      "gap": 4.337935332839519,
+      "n_tokens": 58,
+      "probe_idx": 0,
+      "condition": "control",
+      "padding_level": 20
+    },
+    {
+      "S": 0.28955188393592834,
+      "sigma_1": 436.1669006347656,
+      "sigma_2": 100.54832458496094,
+      "gap": 4.337883325606435,
+      "n_tokens": 55,
+      "probe_idx": 1,
+      "condition": "control",
+      "padding_level": 20
+    },
+    {
+      "S": 0.29941225051879883,
+      "sigma_1": 436.17706298828125,
+      "sigma_2": 100.55006408691406,
+      "gap": 4.337909348434188,
+      "n_tokens": 60,
+      "probe_idx": 2,
+      "condition": "control",
+      "padding_level": 20
+    },
+    {
+      "S": 0.30321457982063293,
+      "sigma_1": 436.1769104003906,
+      "sigma_2": 100.54853057861328,
+      "gap": 4.337973990175503,
+      "n_tokens": 63,
+      "probe_idx": 3,
+      "condition": "control",
+      "padding_level": 20
+    },
+    {
+      "S": 0.29732999205589294,
+      "sigma_1": 436.17132568359375,
+      "sigma_2": 100.5481948852539,
+      "gap": 4.337932930385818,
+      "n_tokens": 60,
+      "probe_idx": 4,
+      "condition": "control",
+      "padding_level": 20
+    },
+    {
+      "S": 0.2895575165748596,
+      "sigma_1": 437.40240478515625,
+      "sigma_2": 99.74058532714844,
+      "gap": 4.3854004200043475,
+      "n_tokens": 58,
+      "probe_idx": 0,
+      "condition": "absent",
+      "padding_level": 20
+    },
+    {
+      "S": 0.2848297953605652,
+      "sigma_1": 437.39300537109375,
+      "sigma_2": 99.7405014038086,
+      "gap": 4.385309871265514,
+      "n_tokens": 55,
+      "probe_idx": 1,
+      "condition": "absent",
+      "padding_level": 20
+    },
+    {
+      "S": 0.29428157210350037,
+      "sigma_1": 437.4054870605469,
+      "sigma_2": 99.74298858642578,
+      "gap": 4.385325658069105,
+      "n_tokens": 60,
+      "probe_idx": 2,
+      "condition": "absent",
+      "padding_level": 20
+    },
+    {
+      "S": 0.2982766926288605,
+      "sigma_1": 437.4059143066406,
+      "sigma_2": 99.74150848388672,
+      "gap": 4.385395017133751,
+      "n_tokens": 63,
+      "probe_idx": 3,
+      "condition": "absent",
+      "padding_level": 20
+    },
+    {
+      "S": 0.2925284206867218,
+      "sigma_1": 437.4006652832031,
+      "sigma_2": 99.74112701416016,
+      "gap": 4.385359163037187,
+      "n_tokens": 60,
+      "probe_idx": 4,
+      "condition": "absent",
+      "padding_level": 20
+    },
+    {
+      "S": 0.3031163811683655,
+      "sigma_1": 437.5584411621094,
+      "sigma_2": 100.87120056152344,
+      "gap": 4.337793530029748,
+      "n_tokens": 68,
+      "probe_idx": 0,
+      "condition": "receptive",
+      "padding_level": 30
+    },
+    {
+      "S": 0.297978937625885,
+      "sigma_1": 437.5533447265625,
+      "sigma_2": 100.8716049194336,
+      "gap": 4.3377256173928975,
+      "n_tokens": 65,
+      "probe_idx": 1,
+      "condition": "receptive",
+      "padding_level": 30
+    },
+    {
+      "S": 0.3079434335231781,
+      "sigma_1": 437.56182861328125,
+      "sigma_2": 100.87410736083984,
+      "gap": 4.337702112674618,
+      "n_tokens": 70,
+      "probe_idx": 2,
+      "condition": "receptive",
+      "padding_level": 30
+    },
+    {
+      "S": 0.3113301694393158,
+      "sigma_1": 437.5621643066406,
+      "sigma_2": 100.87215423583984,
+      "gap": 4.33778942882113,
+      "n_tokens": 73,
+      "probe_idx": 3,
+      "condition": "receptive",
+      "padding_level": 30
+    },
+    {
+      "S": 0.3060557544231415,
+      "sigma_1": 437.55535888671875,
+      "sigma_2": 100.87162780761719,
+      "gap": 4.337744600704038,
+      "n_tokens": 70,
+      "probe_idx": 4,
+      "condition": "receptive",
+      "padding_level": 30
+    },
+    {
+      "S": 0.3055798411369324,
+      "sigma_1": 436.1745910644531,
+      "sigma_2": 100.54881286621094,
+      "gap": 4.337938744685349,
+      "n_tokens": 68,
+      "probe_idx": 0,
+      "condition": "control",
+      "padding_level": 30
+    },
+    {
+      "S": 0.3004215657711029,
+      "sigma_1": 436.1697692871094,
+      "sigma_2": 100.54890441894531,
+      "gap": 4.337886840315753,
+      "n_tokens": 65,
+      "probe_idx": 1,
+      "condition": "control",
+      "padding_level": 30
+    },
+    {
+      "S": 0.3103751242160797,
+      "sigma_1": 436.1796875,
+      "sigma_2": 100.55089569091797,
+      "gap": 4.337899573175029,
+      "n_tokens": 70,
+      "probe_idx": 2,
+      "condition": "control",
+      "padding_level": 30
+    },
+    {
+      "S": 0.31407293677330017,
+      "sigma_1": 436.1798095703125,
+      "sigma_2": 100.54924011230469,
+      "gap": 4.337972212252802,
+      "n_tokens": 73,
+      "probe_idx": 3,
+      "condition": "control",
+      "padding_level": 30
+    },
+    {
+      "S": 0.3082398474216461,
+      "sigma_1": 436.17425537109375,
+      "sigma_2": 100.5488052368164,
+      "gap": 4.337935735226285,
+      "n_tokens": 70,
+      "probe_idx": 4,
+      "condition": "control",
+      "padding_level": 30
+    },
+    {
+      "S": 0.3004421293735504,
+      "sigma_1": 437.4075927734375,
+      "sigma_2": 99.74095153808594,
+      "gap": 4.3854363331035,
+      "n_tokens": 68,
+      "probe_idx": 0,
+      "condition": "absent",
+      "padding_level": 30
+    },
+    {
+      "S": 0.2956097722053528,
+      "sigma_1": 437.3973083496094,
+      "sigma_2": 99.74085235595703,
+      "gap": 4.385337582524537,
+      "n_tokens": 65,
+      "probe_idx": 1,
+      "condition": "absent",
+      "padding_level": 30
+    },
+    {
+      "S": 0.3051871359348297,
+      "sigma_1": 437.4100646972656,
+      "sigma_2": 99.74357604980469,
+      "gap": 4.385345723707108,
+      "n_tokens": 70,
+      "probe_idx": 2,
+      "condition": "absent",
+      "padding_level": 30
+    },
+    {
+      "S": 0.30898189544677734,
+      "sigma_1": 437.40997314453125,
+      "sigma_2": 99.7419662475586,
+      "gap": 4.385415583836436,
+      "n_tokens": 73,
+      "probe_idx": 3,
+      "condition": "absent",
+      "padding_level": 30
+    },
+    {
+      "S": 0.30340126156806946,
+      "sigma_1": 437.4052429199219,
+      "sigma_2": 99.74152374267578,
+      "gap": 4.385387614975567,
+      "n_tokens": 70,
+      "probe_idx": 4,
+      "condition": "absent",
+      "padding_level": 30
+    },
+    {
+      "S": 0.3132109045982361,
+      "sigma_1": 437.56060791015625,
+      "sigma_2": 100.87151336669922,
+      "gap": 4.3378015586966345,
+      "n_tokens": 78,
+      "probe_idx": 0,
+      "condition": "receptive",
+      "padding_level": 40
+    },
+    {
+      "S": 0.30810850858688354,
+      "sigma_1": 437.55419921875,
+      "sigma_2": 100.87181091308594,
+      "gap": 4.337725230250494,
+      "n_tokens": 75,
+      "probe_idx": 1,
+      "condition": "receptive",
+      "padding_level": 40
+    },
+    {
+      "S": 0.3179512023925781,
+      "sigma_1": 437.5636901855469,
+      "sigma_2": 100.87431335449219,
+      "gap": 4.337711709103407,
+      "n_tokens": 80,
+      "probe_idx": 2,
+      "condition": "receptive",
+      "padding_level": 40
+    },
+    {
+      "S": 0.3212762176990509,
+      "sigma_1": 437.5640869140625,
+      "sigma_2": 100.8724365234375,
+      "gap": 4.337796349475463,
+      "n_tokens": 83,
+      "probe_idx": 3,
+      "condition": "receptive",
+      "padding_level": 40
+    },
+    {
+      "S": 0.31630903482437134,
+      "sigma_1": 437.5570373535156,
+      "sigma_2": 100.87188720703125,
+      "gap": 4.337750085466983,
+      "n_tokens": 80,
+      "probe_idx": 4,
+      "condition": "receptive",
+      "padding_level": 40
+    },
+    {
+      "S": 0.3156771957874298,
+      "sigma_1": 436.1783752441406,
+      "sigma_2": 100.54898834228516,
+      "gap": 4.337968809385911,
+      "n_tokens": 78,
+      "probe_idx": 0,
+      "condition": "control",
+      "padding_level": 40
+    },
+    {
+      "S": 0.31054455041885376,
+      "sigma_1": 436.1712341308594,
+      "sigma_2": 100.54910278320312,
+      "gap": 4.337892850931758,
+      "n_tokens": 75,
+      "probe_idx": 1,
+      "condition": "control",
+      "padding_level": 40
+    },
+    {
+      "S": 0.320527046918869,
+      "sigma_1": 436.1823425292969,
+      "sigma_2": 100.55125427246094,
+      "gap": 4.33791050828054,
+      "n_tokens": 80,
+      "probe_idx": 2,
+      "condition": "control",
+      "padding_level": 40
+    },
+    {
+      "S": 0.32413768768310547,
+      "sigma_1": 436.1832275390625,
+      "sigma_2": 100.54955291748047,
+      "gap": 4.337992709893316,
+      "n_tokens": 83,
+      "probe_idx": 3,
+      "condition": "control",
+      "padding_level": 40
+    },
+    {
+      "S": 0.31839171051979065,
+      "sigma_1": 436.17791748046875,
+      "sigma_2": 100.5490951538086,
+      "gap": 4.3379596486000525,
+      "n_tokens": 80,
+      "probe_idx": 4,
+      "condition": "control",
+      "padding_level": 40
+    },
+    {
+      "S": 0.31051963567733765,
+      "sigma_1": 437.4116516113281,
+      "sigma_2": 99.74101257324219,
+      "gap": 4.38547434326603,
+      "n_tokens": 78,
+      "probe_idx": 0,
+      "condition": "absent",
+      "padding_level": 40
+    },
+    {
+      "S": 0.3057703971862793,
+      "sigma_1": 437.4002990722656,
+      "sigma_2": 99.74090576171875,
+      "gap": 4.385365219333539,
+      "n_tokens": 75,
+      "probe_idx": 1,
+      "condition": "absent",
+      "padding_level": 40
+    },
+    {
+      "S": 0.31517931818962097,
+      "sigma_1": 437.41375732421875,
+      "sigma_2": 99.74356842041016,
+      "gap": 4.385383080346185,
+      "n_tokens": 80,
+      "probe_idx": 2,
+      "condition": "absent",
+      "padding_level": 40
+    },
+    {
+      "S": 0.31893637776374817,
+      "sigma_1": 437.41455078125,
+      "sigma_2": 99.74201202392578,
+      "gap": 4.385459465930208,
+      "n_tokens": 83,
+      "probe_idx": 3,
+      "condition": "absent",
+      "padding_level": 40
+    },
+    {
+      "S": 0.31343215703964233,
+      "sigma_1": 437.4091796875,
+      "sigma_2": 99.74147033691406,
+      "gap": 4.385429432812522,
+      "n_tokens": 80,
+      "probe_idx": 4,
+      "condition": "absent",
+      "padding_level": 40
+    }
+  ]
+}

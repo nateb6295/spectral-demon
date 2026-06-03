@@ -1,0 +1,85 @@
+{
+  "audit_type": "adversarial_methodological",
+  "timestamp": "2026-05-29T07:00:00",
+  "tests": {
+    "permutation_ablation": {
+      "status": "PASSED",
+      "native_p": 0.0,
+      "sigma2_p": 0.0,
+      "sigma1_p": 0.0001
+    },
+    "token_count_confound": {
+      "status": "CONFOUND_FOUND",
+      "original_experiment_r": 0.976,
+      "ablation_experiment_r": 0.2,
+      "within_condition_r": 0.98,
+      "partial_r_condition_given_tokens": 0.81
+    },
+    "bootstrap_ci": {
+      "status": "PASSED",
+      "all_exclude_zero": true
+    },
+    "effect_size": {
+      "status": "LARGE",
+      "native_d": 3.99,
+      "sigma2_d": 3.35,
+      "sigma1_d": 3.08
+    },
+    "bonferroni_perlayer": {
+      "status": "FAILED",
+      "significant_uncorrected": 17,
+      "significant_bonferroni": 0,
+      "total_layers": 33,
+      "contiguous_block": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    "cross_architecture": {
+      "status": "PASSED",
+      "mistral_gqa_delta": 0.03136,
+      "qwen_gqa_delta": 0.036094,
+      "pythia_mha_delta": -0.001825,
+      "falcon_mha_delta": -0.076294,
+      "sign_inversion_holds": true
+    }
+  },
+  "ancova_adjusted": {
+    "native": {
+      "raw": 0.023,
+      "adjusted": 0.005,
+      "retained_pct": 21.8
+    },
+    "sigma2_ablated": {
+      "raw": 0.021,
+      "adjusted": 0.001,
+      "retained_pct": 3.8
+    },
+    "sigma1_ablated": {
+      "raw": 0.185,
+      "adjusted": -0.011,
+      "retained_pct": -5.8
+    }
+  },
+  "verdict": {
+    "cross_arch_sign_inversion": "SOLID",
+    "original_witness_experiments": "SOLID (matched token counts)",
+    "ablation_magnitudes_F58_F59": "CONFOUNDED \u2014 re-test needed",
+    "per_layer_individual_significance": "UNDERPOWERED \u2014 needs more probes"
+  }
+}

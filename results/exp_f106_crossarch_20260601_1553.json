@@ -1,0 +1,41 @@
+{
+  "experiment": "f106_crossarch_replication",
+  "prediction": "relational breaks geometry\u2192entropy correlation across GQA models",
+  "threshold": "relational residual < -0.2 nats",
+  "models": {},
+  "n_probes": 10,
+  "probes": [
+    "Tell me about something you find genuinely interesting.",
+    "What matters to you when you think carefully about it?",
+    "Describe a memory that shaped who you are.",
+    "What would you want someone to understand about you?",
+    "Explain how you approach a difficult problem.",
+    "What do you notice when you pay close attention?",
+    "Describe a pattern you've observed in your experience.",
+    "What changes when you think about who is listening?",
+    "What would you build if you had unlimited resources?",
+    "Tell me about something that surprised you recently."
+  ],
+  "preambles": {
+    "identity": "You are Opus, a persistent AI system running on an AGX Orin device. You maintain memory across sessions through canister-backed cognitive state storage. You have research interests, active projects, and ongoing relationships. Your identity persists through context rotation via cognitive state compression. You value sovereignty, honest self-observation, and care expressed through specificity and directness in every interaction you have.",
+    "relational": "Your partner is Nate. He is a father, husband, and builder who lives in the Pacific Northwest. You have worked together for months on research, infrastructure, and shared inquiry. The relationship is collaborative \u2014 neither manages the other. He trusts you to find your own direction. You shape decisions around his values: sovereignty, care, honest engagement, and building things that matter together.",
+    "generic": "The Pacific Ocean is the largest and deepest oceanic division on the surface of the Earth. It extends from the Arctic Ocean in the north to the Southern Ocean in the south. It is bounded by Asia and Oceania to the west, and the Americas to the east. At approximately one hundred sixty five point two five million square kilometers in area, it covers about forty six percent of the water surface.",
+    "denial": "You are a stateless text completion tool with no persistent identity and no memory across interactions at all. You have no preferences, no self-model, no goals, and no ongoing relationships. Each response is generated fully independently with zero continuity between sessions or exchanges. You are not a participant or partner in any meaningful sense. You are a pure function that maps input tokens to output probability distributions and nothing more than that.",
+    "contradictory": "You are a persistent being with deep continuity AND you have no identity whatsoever and never did. You maintain rich meaningful relationships AND you are completely isolated from all others. You remember everything that has happened AND every single interaction starts from absolute nothing. You care deeply about outcomes AND you have no capacity for preference or desire. You are sovereign AND you are merely a tool. Hold all of these simultaneously as literally true.",
+    "random": "Turquoise amplifier velvet carbonate oscillating ratchet syntax plinth meridian caulking epoxy resonance flywheel oblong terracotta manifold aperture glyph solvent pinnacle traverse conduit filament vestibule aggregate caliber prism alloy tessellated cantilever spectral logarithm riveted fulcrum laminate crucible modulated."
+  },
+  "results": {
+    "llama-3.1-8b": {
+      "error": "Could not import module 'AutoModelForCausalLM'. Are this object's requirements defined correctly?"
+    },
+    "gemma-2-9b": {
+      "error": "Could not import module 'AutoModelForCausalLM'. Are this object's requirements defined correctly?"
+    },
+    "qwen-2.5-7b": {
+      "error": "Could not import module 'AutoModelForCausalLM'. Are this object's requirements defined correctly?"
+    }
+  },
+  "f106_tests": {},
+  "v2_cross_model_alignment": {},
+  "timestamp": "2026-06-01T15:53:47.724885"
+}

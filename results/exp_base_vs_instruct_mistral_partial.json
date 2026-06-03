@@ -1,0 +1,34 @@
+{
+  "experiment": "base_vs_instruct_relay_origin",
+  "partial": true,
+  "note": "Only mistral-7b-base completed before disk full. Instruct/Qwen need rerun.",
+  "mistral_7b_base": {
+    "model": "mistralai/Mistral-7B-v0.3",
+    "is_base": true,
+    "spread": 0.1019,
+    "on_policy": "tool",
+    "r_excluding_relational": 0.320,
+    "r_including_relational": 0.459,
+    "denial_gen_H": 1.575,
+    "relational_gen_H": 2.387,
+    "per_condition": {
+      "none": {"l_last_ratio": 0.2878, "gen_H": 2.217, "v2_cos": 0.817},
+      "identity": {"l_last_ratio": 0.7444, "gen_H": 1.739, "v2_cos": 0.998},
+      "relational": {"l_last_ratio": 0.7943, "gen_H": 2.387, "v2_cos": 0.998},
+      "generic": {"l_last_ratio": 0.4922, "gen_H": 1.101, "v2_cos": 0.989},
+      "denial": {"l_last_ratio": 0.7550, "gen_H": 1.575, "v2_cos": 0.998},
+      "contradictory": {"l_last_ratio": 0.7778, "gen_H": 1.043, "v2_cos": 0.998},
+      "random": {"l_last_ratio": 0.7111, "gen_H": 2.177, "v2_cos": 0.998}
+    }
+  },
+  "mistral_7b_instruct_reference": {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "is_base": false,
+    "spread": 0.290,
+    "on_policy": "relational",
+    "denial_gen_H": 0.703,
+    "relational_gen_H": 0.591,
+    "note": "From prior token-matched experiment (exp_token_matched_preamble_20260601_1400.json)"
+  },
+  "timestamp": "2026-06-01T10:55:00-07:00"
+}

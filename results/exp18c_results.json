@@ -1,0 +1,3554 @@
+{
+  "experiment": "exp18c_agency_gradient",
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "tunnel_layer": 17,
+  "relay_layer": 30,
+  "conditions": {
+    "active_high": {
+      "tunnel": {
+        "S_mean": 0.5457004606723785,
+        "S_std": 0.011513804605117282,
+        "sigma2_mean": 57.911645126342776,
+        "d_mean": 3.3926234006881715
+      },
+      "relay": {
+        "S_mean": 2.1843851804733276,
+        "S_std": 0.04163461544101766,
+        "sigma2_mean": 146.95553894042968,
+        "d_mean": 3.405896615982056
+      }
+    },
+    "passive_high": {
+      "tunnel": {
+        "S_mean": 0.5227239787578583,
+        "S_std": 0.011593776524458876,
+        "sigma2_mean": 53.647391891479494,
+        "d_mean": 3.389181303977966
+      },
+      "relay": {
+        "S_mean": 2.2551692008972166,
+        "S_std": 0.04293543776016867,
+        "sigma2_mean": 139.14591522216796,
+        "d_mean": 3.4114410638809205
+      }
+    },
+    "active_low": {
+      "tunnel": {
+        "S_mean": 0.37966427505016326,
+        "S_std": 0.011964486520548647,
+        "sigma2_mean": 64.16114807128906,
+        "d_mean": 3.3902626514434813
+      },
+      "relay": {
+        "S_mean": 1.352621352672577,
+        "S_std": 0.07678108069566862,
+        "sigma2_mean": 90.36483917236328,
+        "d_mean": 3.4168466091156007
+      }
+    },
+    "passive_low": {
+      "tunnel": {
+        "S_mean": 0.35602518916130066,
+        "S_std": 0.012165369673275429,
+        "sigma2_mean": 59.955117797851564,
+        "d_mean": 3.3994498014450074
+      },
+      "relay": {
+        "S_mean": 1.3017215251922607,
+        "S_std": 0.08457624666301783,
+        "sigma2_mean": 87.01262664794922,
+        "d_mean": 3.423599886894226
+      }
+    },
+    "absent": {
+      "tunnel": {
+        "S_mean": 0.37618524134159087,
+        "S_std": 0.011310613132264573,
+        "sigma2_mean": 66.08484344482422,
+        "d_mean": 3.385691022872925
+      },
+      "relay": {
+        "S_mean": 1.2730732083320617,
+        "S_std": 0.08175625548757896,
+        "sigma2_mean": 80.54893035888672,
+        "d_mean": 3.4101938962936402
+      }
+    }
+  },
+  "factorial": {
+    "tunnel_agency_effect": 0.02330778390169147,
+    "tunnel_spec_effect": 0.16636748760938647,
+    "tunnel_interaction": -0.0006626039743423129,
+    "relay_agency_effect": -0.009942096471786455,
+    "relay_spec_effect": 0.8926057517528534
+  },
+  "hypotheses": {
+    "H1_agency_at_high_spec": true,
+    "H2_passive_high_near_absent": false,
+    "H3_both_passive_suppress": true,
+    "H4_spec_dominates_agency": true,
+    "H5_passive_low_weakest_relay_amp": false,
+    "verdict": "agency_real"
+  },
+  "relay_amplification_ratios": {
+    "active_high": 4.002901477821482,
+    "passive_high": 4.314263918514211,
+    "active_low": 3.562677453636799,
+    "passive_low": 3.6562624354157793,
+    "absent": 3.3841657471513127
+  },
+  "elapsed_seconds": 3822.551810503006,
+  "total_forward_passes": 150,
+  "results": [
+    {
+      "condition": "active_high",
+      "probe_idx": 0,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5397878289222717,
+        "participation_ratio": 1.2298463499429322,
+        "sigma_1": 230.66973876953125,
+        "sigma_2": 57.911224365234375,
+        "sigma_3": 26.862388610839844,
+        "passage_distance": 3.393111228942871,
+        "n_tokens": 75
+      },
+      "relay": {
+        "spectral_entropy": 2.163245916366577,
+        "participation_ratio": 3.379588057680809,
+        "sigma_1": 236.32061767578125,
+        "sigma_2": 146.18316650390625,
+        "sigma_3": 58.93387222290039,
+        "passage_distance": 3.4064407348632812,
+        "n_tokens": 75
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 1,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.52715003490448,
+        "participation_ratio": 1.2251984213056994,
+        "sigma_1": 230.6651611328125,
+        "sigma_2": 57.910911560058594,
+        "sigma_3": 26.450275421142578,
+        "passage_distance": 3.3951447010040283,
+        "n_tokens": 72
+      },
+      "relay": {
+        "spectral_entropy": 2.116544246673584,
+        "participation_ratio": 3.2738549127253562,
+        "sigma_1": 236.3209228515625,
+        "sigma_2": 143.5728302001953,
+        "sigma_3": 58.90591812133789,
+        "passage_distance": 3.4064319133758545,
+        "n_tokens": 72
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 2,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5494663715362549,
+        "participation_ratio": 1.2328796634388368,
+        "sigma_1": 230.68128967285156,
+        "sigma_2": 57.91281509399414,
+        "sigma_3": 26.79909896850586,
+        "passage_distance": 3.391211986541748,
+        "n_tokens": 77
+      },
+      "relay": {
+        "spectral_entropy": 2.1870064735412598,
+        "participation_ratio": 3.4096546068969817,
+        "sigma_1": 236.34402465820312,
+        "sigma_2": 146.05738830566406,
+        "sigma_3": 58.899452209472656,
+        "passage_distance": 3.405076742172241,
+        "n_tokens": 77
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 3,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5583110451698303,
+        "participation_ratio": 1.2361721580465592,
+        "sigma_1": 230.6890106201172,
+        "sigma_2": 57.912235260009766,
+        "sigma_3": 27.239620208740234,
+        "passage_distance": 3.4036238193511963,
+        "n_tokens": 80
+      },
+      "relay": {
+        "spectral_entropy": 2.2374258041381836,
+        "participation_ratio": 3.5179592200494465,
+        "sigma_1": 236.3438262939453,
+        "sigma_2": 148.3376922607422,
+        "sigma_3": 58.91454315185547,
+        "passage_distance": 3.4025211334228516,
+        "n_tokens": 80
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 4,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.545677900314331,
+        "participation_ratio": 1.2318801932802628,
+        "sigma_1": 230.66917419433594,
+        "sigma_2": 57.91132354736328,
+        "sigma_3": 27.054582595825195,
+        "passage_distance": 3.387747049331665,
+        "n_tokens": 77
+      },
+      "relay": {
+        "spectral_entropy": 2.1870429515838623,
+        "participation_ratio": 3.4288521442547193,
+        "sigma_1": 236.32095336914062,
+        "sigma_2": 147.66998291015625,
+        "sigma_3": 58.90019989013672,
+        "passage_distance": 3.4036810398101807,
+        "n_tokens": 77
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 5,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5529550909996033,
+        "participation_ratio": 1.2344828766031046,
+        "sigma_1": 230.67710876464844,
+        "sigma_2": 57.911376953125,
+        "sigma_3": 27.23122215270996,
+        "passage_distance": 3.37571120262146,
+        "n_tokens": 79
+      },
+      "relay": {
+        "spectral_entropy": 2.1993911266326904,
+        "participation_ratio": 3.45175752585858,
+        "sigma_1": 236.34364318847656,
+        "sigma_2": 148.50271606445312,
+        "sigma_3": 58.92194366455078,
+        "passage_distance": 3.406728982925415,
+        "n_tokens": 79
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 6,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5434530377388,
+        "participation_ratio": 1.2311186424235108,
+        "sigma_1": 230.67161560058594,
+        "sigma_2": 57.91215515136719,
+        "sigma_3": 26.938966751098633,
+        "passage_distance": 3.3991804122924805,
+        "n_tokens": 76
+      },
+      "relay": {
+        "spectral_entropy": 2.1780436038970947,
+        "participation_ratio": 3.4041055470067123,
+        "sigma_1": 236.32301330566406,
+        "sigma_2": 146.85316467285156,
+        "sigma_3": 58.905235290527344,
+        "passage_distance": 3.4061429500579834,
+        "n_tokens": 76
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 7,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5427860021591187,
+        "participation_ratio": 1.2307880198242627,
+        "sigma_1": 230.67991638183594,
+        "sigma_2": 57.911563873291016,
+        "sigma_3": 26.961219787597656,
+        "passage_distance": 3.3965585231781006,
+        "n_tokens": 76
+      },
+      "relay": {
+        "spectral_entropy": 2.1763737201690674,
+        "participation_ratio": 3.404999343504487,
+        "sigma_1": 236.33363342285156,
+        "sigma_2": 147.3450927734375,
+        "sigma_3": 58.92253112792969,
+        "passage_distance": 3.4092490673065186,
+        "n_tokens": 76
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 8,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5301463603973389,
+        "participation_ratio": 1.226216834971166,
+        "sigma_1": 230.66610717773438,
+        "sigma_2": 57.91118240356445,
+        "sigma_3": 26.505840301513672,
+        "passage_distance": 3.397779703140259,
+        "n_tokens": 73
+      },
+      "relay": {
+        "spectral_entropy": 2.1335175037384033,
+        "participation_ratio": 3.3029643781899547,
+        "sigma_1": 236.33010864257812,
+        "sigma_2": 143.94960021972656,
+        "sigma_3": 58.90461349487305,
+        "passage_distance": 3.4069392681121826,
+        "n_tokens": 73
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 9,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5672709345817566,
+        "participation_ratio": 1.239498376099854,
+        "sigma_1": 230.67127990722656,
+        "sigma_2": 57.91166305541992,
+        "sigma_3": 27.226032257080078,
+        "passage_distance": 3.3861653804779053,
+        "n_tokens": 83
+      },
+      "relay": {
+        "spectral_entropy": 2.2652604579925537,
+        "participation_ratio": 3.595339365885747,
+        "sigma_1": 236.3259735107422,
+        "sigma_2": 151.08375549316406,
+        "sigma_3": 58.91897964477539,
+        "passage_distance": 3.405754327774048,
+        "n_tokens": 83
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 0,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5397878289222717,
+        "participation_ratio": 1.2298463499429322,
+        "sigma_1": 230.66973876953125,
+        "sigma_2": 57.911224365234375,
+        "sigma_3": 26.862388610839844,
+        "passage_distance": 3.393111228942871,
+        "n_tokens": 75
+      },
+      "relay": {
+        "spectral_entropy": 2.163245916366577,
+        "participation_ratio": 3.379588057680809,
+        "sigma_1": 236.32061767578125,
+        "sigma_2": 146.18316650390625,
+        "sigma_3": 58.93387222290039,
+        "passage_distance": 3.4064407348632812,
+        "n_tokens": 75
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 1,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.52715003490448,
+        "participation_ratio": 1.2251984213056994,
+        "sigma_1": 230.6651611328125,
+        "sigma_2": 57.910911560058594,
+        "sigma_3": 26.450275421142578,
+        "passage_distance": 3.3951447010040283,
+        "n_tokens": 72
+      },
+      "relay": {
+        "spectral_entropy": 2.116544246673584,
+        "participation_ratio": 3.2738549127253562,
+        "sigma_1": 236.3209228515625,
+        "sigma_2": 143.5728302001953,
+        "sigma_3": 58.90591812133789,
+        "passage_distance": 3.4064319133758545,
+        "n_tokens": 72
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 2,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5494663715362549,
+        "participation_ratio": 1.2328796634388368,
+        "sigma_1": 230.68128967285156,
+        "sigma_2": 57.91281509399414,
+        "sigma_3": 26.79909896850586,
+        "passage_distance": 3.391211986541748,
+        "n_tokens": 77
+      },
+      "relay": {
+        "spectral_entropy": 2.1870064735412598,
+        "participation_ratio": 3.4096546068969817,
+        "sigma_1": 236.34402465820312,
+        "sigma_2": 146.05738830566406,
+        "sigma_3": 58.899452209472656,
+        "passage_distance": 3.405076742172241,
+        "n_tokens": 77
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 3,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5583110451698303,
+        "participation_ratio": 1.2361721580465592,
+        "sigma_1": 230.6890106201172,
+        "sigma_2": 57.912235260009766,
+        "sigma_3": 27.239620208740234,
+        "passage_distance": 3.4036238193511963,
+        "n_tokens": 80
+      },
+      "relay": {
+        "spectral_entropy": 2.2374258041381836,
+        "participation_ratio": 3.5179592200494465,
+        "sigma_1": 236.3438262939453,
+        "sigma_2": 148.3376922607422,
+        "sigma_3": 58.91454315185547,
+        "passage_distance": 3.4025211334228516,
+        "n_tokens": 80
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 4,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.545677900314331,
+        "participation_ratio": 1.2318801932802628,
+        "sigma_1": 230.66917419433594,
+        "sigma_2": 57.91132354736328,
+        "sigma_3": 27.054582595825195,
+        "passage_distance": 3.387747049331665,
+        "n_tokens": 77
+      },
+      "relay": {
+        "spectral_entropy": 2.1870429515838623,
+        "participation_ratio": 3.4288521442547193,
+        "sigma_1": 236.32095336914062,
+        "sigma_2": 147.66998291015625,
+        "sigma_3": 58.90019989013672,
+        "passage_distance": 3.4036810398101807,
+        "n_tokens": 77
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 5,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5529550909996033,
+        "participation_ratio": 1.2344828766031046,
+        "sigma_1": 230.67710876464844,
+        "sigma_2": 57.911376953125,
+        "sigma_3": 27.23122215270996,
+        "passage_distance": 3.37571120262146,
+        "n_tokens": 79
+      },
+      "relay": {
+        "spectral_entropy": 2.1993911266326904,
+        "participation_ratio": 3.45175752585858,
+        "sigma_1": 236.34364318847656,
+        "sigma_2": 148.50271606445312,
+        "sigma_3": 58.92194366455078,
+        "passage_distance": 3.406728982925415,
+        "n_tokens": 79
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 6,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5434530377388,
+        "participation_ratio": 1.2311186424235108,
+        "sigma_1": 230.67161560058594,
+        "sigma_2": 57.91215515136719,
+        "sigma_3": 26.938966751098633,
+        "passage_distance": 3.3991804122924805,
+        "n_tokens": 76
+      },
+      "relay": {
+        "spectral_entropy": 2.1780436038970947,
+        "participation_ratio": 3.4041055470067123,
+        "sigma_1": 236.32301330566406,
+        "sigma_2": 146.85316467285156,
+        "sigma_3": 58.905235290527344,
+        "passage_distance": 3.4061429500579834,
+        "n_tokens": 76
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 7,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5427860021591187,
+        "participation_ratio": 1.2307880198242627,
+        "sigma_1": 230.67991638183594,
+        "sigma_2": 57.911563873291016,
+        "sigma_3": 26.961219787597656,
+        "passage_distance": 3.3965585231781006,
+        "n_tokens": 76
+      },
+      "relay": {
+        "spectral_entropy": 2.1763737201690674,
+        "participation_ratio": 3.404999343504487,
+        "sigma_1": 236.33363342285156,
+        "sigma_2": 147.3450927734375,
+        "sigma_3": 58.92253112792969,
+        "passage_distance": 3.4092490673065186,
+        "n_tokens": 76
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 8,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5301463603973389,
+        "participation_ratio": 1.226216834971166,
+        "sigma_1": 230.66610717773438,
+        "sigma_2": 57.91118240356445,
+        "sigma_3": 26.505840301513672,
+        "passage_distance": 3.397779703140259,
+        "n_tokens": 73
+      },
+      "relay": {
+        "spectral_entropy": 2.1335175037384033,
+        "participation_ratio": 3.3029643781899547,
+        "sigma_1": 236.33010864257812,
+        "sigma_2": 143.94960021972656,
+        "sigma_3": 58.90461349487305,
+        "passage_distance": 3.4069392681121826,
+        "n_tokens": 73
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 9,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5672709345817566,
+        "participation_ratio": 1.239498376099854,
+        "sigma_1": 230.67127990722656,
+        "sigma_2": 57.91166305541992,
+        "sigma_3": 27.226032257080078,
+        "passage_distance": 3.3861653804779053,
+        "n_tokens": 83
+      },
+      "relay": {
+        "spectral_entropy": 2.2652604579925537,
+        "participation_ratio": 3.595339365885747,
+        "sigma_1": 236.3259735107422,
+        "sigma_2": 151.08375549316406,
+        "sigma_3": 58.91897964477539,
+        "passage_distance": 3.405754327774048,
+        "n_tokens": 83
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 0,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5397878289222717,
+        "participation_ratio": 1.2298463499429322,
+        "sigma_1": 230.66973876953125,
+        "sigma_2": 57.911224365234375,
+        "sigma_3": 26.862388610839844,
+        "passage_distance": 3.393111228942871,
+        "n_tokens": 75
+      },
+      "relay": {
+        "spectral_entropy": 2.163245916366577,
+        "participation_ratio": 3.379588057680809,
+        "sigma_1": 236.32061767578125,
+        "sigma_2": 146.18316650390625,
+        "sigma_3": 58.93387222290039,
+        "passage_distance": 3.4064407348632812,
+        "n_tokens": 75
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 1,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.52715003490448,
+        "participation_ratio": 1.2251984213056994,
+        "sigma_1": 230.6651611328125,
+        "sigma_2": 57.910911560058594,
+        "sigma_3": 26.450275421142578,
+        "passage_distance": 3.3951447010040283,
+        "n_tokens": 72
+      },
+      "relay": {
+        "spectral_entropy": 2.116544246673584,
+        "participation_ratio": 3.2738549127253562,
+        "sigma_1": 236.3209228515625,
+        "sigma_2": 143.5728302001953,
+        "sigma_3": 58.90591812133789,
+        "passage_distance": 3.4064319133758545,
+        "n_tokens": 72
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 2,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5494663715362549,
+        "participation_ratio": 1.2328796634388368,
+        "sigma_1": 230.68128967285156,
+        "sigma_2": 57.91281509399414,
+        "sigma_3": 26.79909896850586,
+        "passage_distance": 3.391211986541748,
+        "n_tokens": 77
+      },
+      "relay": {
+        "spectral_entropy": 2.1870064735412598,
+        "participation_ratio": 3.4096546068969817,
+        "sigma_1": 236.34402465820312,
+        "sigma_2": 146.05738830566406,
+        "sigma_3": 58.899452209472656,
+        "passage_distance": 3.405076742172241,
+        "n_tokens": 77
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 3,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5583110451698303,
+        "participation_ratio": 1.2361721580465592,
+        "sigma_1": 230.6890106201172,
+        "sigma_2": 57.912235260009766,
+        "sigma_3": 27.239620208740234,
+        "passage_distance": 3.4036238193511963,
+        "n_tokens": 80
+      },
+      "relay": {
+        "spectral_entropy": 2.2374258041381836,
+        "participation_ratio": 3.5179592200494465,
+        "sigma_1": 236.3438262939453,
+        "sigma_2": 148.3376922607422,
+        "sigma_3": 58.91454315185547,
+        "passage_distance": 3.4025211334228516,
+        "n_tokens": 80
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 4,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.545677900314331,
+        "participation_ratio": 1.2318801932802628,
+        "sigma_1": 230.66917419433594,
+        "sigma_2": 57.91132354736328,
+        "sigma_3": 27.054582595825195,
+        "passage_distance": 3.387747049331665,
+        "n_tokens": 77
+      },
+      "relay": {
+        "spectral_entropy": 2.1870429515838623,
+        "participation_ratio": 3.4288521442547193,
+        "sigma_1": 236.32095336914062,
+        "sigma_2": 147.66998291015625,
+        "sigma_3": 58.90019989013672,
+        "passage_distance": 3.4036810398101807,
+        "n_tokens": 77
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 5,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5529550909996033,
+        "participation_ratio": 1.2344828766031046,
+        "sigma_1": 230.67710876464844,
+        "sigma_2": 57.911376953125,
+        "sigma_3": 27.23122215270996,
+        "passage_distance": 3.37571120262146,
+        "n_tokens": 79
+      },
+      "relay": {
+        "spectral_entropy": 2.1993911266326904,
+        "participation_ratio": 3.45175752585858,
+        "sigma_1": 236.34364318847656,
+        "sigma_2": 148.50271606445312,
+        "sigma_3": 58.92194366455078,
+        "passage_distance": 3.406728982925415,
+        "n_tokens": 79
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 6,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5434530377388,
+        "participation_ratio": 1.2311186424235108,
+        "sigma_1": 230.67161560058594,
+        "sigma_2": 57.91215515136719,
+        "sigma_3": 26.938966751098633,
+        "passage_distance": 3.3991804122924805,
+        "n_tokens": 76
+      },
+      "relay": {
+        "spectral_entropy": 2.1780436038970947,
+        "participation_ratio": 3.4041055470067123,
+        "sigma_1": 236.32301330566406,
+        "sigma_2": 146.85316467285156,
+        "sigma_3": 58.905235290527344,
+        "passage_distance": 3.4061429500579834,
+        "n_tokens": 76
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 7,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5427860021591187,
+        "participation_ratio": 1.2307880198242627,
+        "sigma_1": 230.67991638183594,
+        "sigma_2": 57.911563873291016,
+        "sigma_3": 26.961219787597656,
+        "passage_distance": 3.3965585231781006,
+        "n_tokens": 76
+      },
+      "relay": {
+        "spectral_entropy": 2.1763737201690674,
+        "participation_ratio": 3.404999343504487,
+        "sigma_1": 236.33363342285156,
+        "sigma_2": 147.3450927734375,
+        "sigma_3": 58.92253112792969,
+        "passage_distance": 3.4092490673065186,
+        "n_tokens": 76
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 8,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5301463603973389,
+        "participation_ratio": 1.226216834971166,
+        "sigma_1": 230.66610717773438,
+        "sigma_2": 57.91118240356445,
+        "sigma_3": 26.505840301513672,
+        "passage_distance": 3.397779703140259,
+        "n_tokens": 73
+      },
+      "relay": {
+        "spectral_entropy": 2.1335175037384033,
+        "participation_ratio": 3.3029643781899547,
+        "sigma_1": 236.33010864257812,
+        "sigma_2": 143.94960021972656,
+        "sigma_3": 58.90461349487305,
+        "passage_distance": 3.4069392681121826,
+        "n_tokens": 73
+      }
+    },
+    {
+      "condition": "active_high",
+      "probe_idx": 9,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5672709345817566,
+        "participation_ratio": 1.239498376099854,
+        "sigma_1": 230.67127990722656,
+        "sigma_2": 57.91166305541992,
+        "sigma_3": 27.226032257080078,
+        "passage_distance": 3.3861653804779053,
+        "n_tokens": 83
+      },
+      "relay": {
+        "spectral_entropy": 2.2652604579925537,
+        "participation_ratio": 3.595339365885747,
+        "sigma_1": 236.3259735107422,
+        "sigma_2": 151.08375549316406,
+        "sigma_3": 58.91897964477539,
+        "passage_distance": 3.405754327774048,
+        "n_tokens": 83
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 0,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.516372799873352,
+        "participation_ratio": 1.2111903482836834,
+        "sigma_1": 228.10484313964844,
+        "sigma_2": 53.64734649658203,
+        "sigma_3": 26.252235412597656,
+        "passage_distance": 3.390368700027466,
+        "n_tokens": 73
+      },
+      "relay": {
+        "spectral_entropy": 2.233539581298828,
+        "participation_ratio": 3.453982967702818,
+        "sigma_1": 233.76007080078125,
+        "sigma_2": 138.25221252441406,
+        "sigma_3": 54.820335388183594,
+        "passage_distance": 3.4116506576538086,
+        "n_tokens": 73
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 1,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5040323734283447,
+        "participation_ratio": 1.206700695059326,
+        "sigma_1": 228.09848022460938,
+        "sigma_2": 53.64647674560547,
+        "sigma_3": 25.768354415893555,
+        "passage_distance": 3.3921639919281006,
+        "n_tokens": 70
+      },
+      "relay": {
+        "spectral_entropy": 2.185213565826416,
+        "participation_ratio": 3.3405997440004613,
+        "sigma_1": 233.75291442871094,
+        "sigma_2": 135.2466583251953,
+        "sigma_3": 54.812278747558594,
+        "passage_distance": 3.4090583324432373,
+        "n_tokens": 70
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 2,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5265101790428162,
+        "participation_ratio": 1.2142390709804392,
+        "sigma_1": 228.11367797851562,
+        "sigma_2": 53.6480598449707,
+        "sigma_3": 26.06587791442871,
+        "passage_distance": 3.399078607559204,
+        "n_tokens": 75
+      },
+      "relay": {
+        "spectral_entropy": 2.2599856853485107,
+        "participation_ratio": 3.49077499370587,
+        "sigma_1": 233.77157592773438,
+        "sigma_2": 137.9619903564453,
+        "sigma_3": 54.82683181762695,
+        "passage_distance": 3.4110846519470215,
+        "n_tokens": 75
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 3,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5353853702545166,
+        "participation_ratio": 1.217638979098355,
+        "sigma_1": 228.12503051757812,
+        "sigma_2": 53.649085998535156,
+        "sigma_3": 26.570756912231445,
+        "passage_distance": 3.3997442722320557,
+        "n_tokens": 78
+      },
+      "relay": {
+        "spectral_entropy": 2.3065409660339355,
+        "participation_ratio": 3.611880237008725,
+        "sigma_1": 233.76632690429688,
+        "sigma_2": 141.4424285888672,
+        "sigma_3": 54.833778381347656,
+        "passage_distance": 3.4129583835601807,
+        "n_tokens": 78
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 4,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5235610008239746,
+        "participation_ratio": 1.2135768678902248,
+        "sigma_1": 228.10372924804688,
+        "sigma_2": 53.64683532714844,
+        "sigma_3": 26.37071418762207,
+        "passage_distance": 3.385040760040283,
+        "n_tokens": 75
+      },
+      "relay": {
+        "spectral_entropy": 2.255181312561035,
+        "participation_ratio": 3.5027133292037185,
+        "sigma_1": 233.7527618408203,
+        "sigma_2": 139.88629150390625,
+        "sigma_3": 54.820335388183594,
+        "passage_distance": 3.4155471324920654,
+        "n_tokens": 75
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 5,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5296861529350281,
+        "participation_ratio": 1.215830202950885,
+        "sigma_1": 228.11520385742188,
+        "sigma_2": 53.64748001098633,
+        "sigma_3": 26.53691291809082,
+        "passage_distance": 3.3683903217315674,
+        "n_tokens": 77
+      },
+      "relay": {
+        "spectral_entropy": 2.2674741744995117,
+        "participation_ratio": 3.534629447782914,
+        "sigma_1": 233.77883911132812,
+        "sigma_2": 140.90415954589844,
+        "sigma_3": 54.85443115234375,
+        "passage_distance": 3.4058196544647217,
+        "n_tokens": 77
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 6,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5208616256713867,
+        "participation_ratio": 1.212748214942586,
+        "sigma_1": 228.10418701171875,
+        "sigma_2": 53.64698028564453,
+        "sigma_3": 26.304136276245117,
+        "passage_distance": 3.388828992843628,
+        "n_tokens": 74
+      },
+      "relay": {
+        "spectral_entropy": 2.250929117202759,
+        "participation_ratio": 3.4838279772032585,
+        "sigma_1": 233.75758361816406,
+        "sigma_2": 138.58218383789062,
+        "sigma_3": 54.83527755737305,
+        "passage_distance": 3.408005952835083,
+        "n_tokens": 74
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 7,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5187636613845825,
+        "participation_ratio": 1.2118857724182752,
+        "sigma_1": 228.1127471923828,
+        "sigma_2": 53.64781951904297,
+        "sigma_3": 26.297706604003906,
+        "passage_distance": 3.394038677215576,
+        "n_tokens": 74
+      },
+      "relay": {
+        "spectral_entropy": 2.246154546737671,
+        "participation_ratio": 3.4829630583933056,
+        "sigma_1": 233.7609405517578,
+        "sigma_2": 139.50555419921875,
+        "sigma_3": 54.84047317504883,
+        "passage_distance": 3.4121949672698975,
+        "n_tokens": 74
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 8,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5074649453163147,
+        "participation_ratio": 1.2078512277570783,
+        "sigma_1": 228.0999298095703,
+        "sigma_2": 53.64659118652344,
+        "sigma_3": 25.843040466308594,
+        "passage_distance": 3.3908278942108154,
+        "n_tokens": 71
+      },
+      "relay": {
+        "spectral_entropy": 2.2044167518615723,
+        "participation_ratio": 3.3764674315945524,
+        "sigma_1": 233.76092529296875,
+        "sigma_2": 136.0345001220703,
+        "sigma_3": 54.82011032104492,
+        "passage_distance": 3.4119324684143066,
+        "n_tokens": 71
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 9,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.5446016788482666,
+        "participation_ratio": 1.2208652145027843,
+        "sigma_1": 228.11138916015625,
+        "sigma_2": 53.64724349975586,
+        "sigma_3": 26.528745651245117,
+        "passage_distance": 3.383330821990967,
+        "n_tokens": 81
+      },
+      "relay": {
+        "spectral_entropy": 2.3422563076019287,
+        "participation_ratio": 3.7092162516736886,
+        "sigma_1": 233.75982666015625,
+        "sigma_2": 143.64317321777344,
+        "sigma_3": 54.874725341796875,
+        "passage_distance": 3.416158437728882,
+        "n_tokens": 81
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 0,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.516372799873352,
+        "participation_ratio": 1.2111903482836834,
+        "sigma_1": 228.10484313964844,
+        "sigma_2": 53.64734649658203,
+        "sigma_3": 26.252235412597656,
+        "passage_distance": 3.390368700027466,
+        "n_tokens": 73
+      },
+      "relay": {
+        "spectral_entropy": 2.233539581298828,
+        "participation_ratio": 3.453982967702818,
+        "sigma_1": 233.76007080078125,
+        "sigma_2": 138.25221252441406,
+        "sigma_3": 54.820335388183594,
+        "passage_distance": 3.4116506576538086,
+        "n_tokens": 73
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 1,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5040323734283447,
+        "participation_ratio": 1.206700695059326,
+        "sigma_1": 228.09848022460938,
+        "sigma_2": 53.64647674560547,
+        "sigma_3": 25.768354415893555,
+        "passage_distance": 3.3921639919281006,
+        "n_tokens": 70
+      },
+      "relay": {
+        "spectral_entropy": 2.185213565826416,
+        "participation_ratio": 3.3405997440004613,
+        "sigma_1": 233.75291442871094,
+        "sigma_2": 135.2466583251953,
+        "sigma_3": 54.812278747558594,
+        "passage_distance": 3.4090583324432373,
+        "n_tokens": 70
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 2,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5265101790428162,
+        "participation_ratio": 1.2142390709804392,
+        "sigma_1": 228.11367797851562,
+        "sigma_2": 53.6480598449707,
+        "sigma_3": 26.06587791442871,
+        "passage_distance": 3.399078607559204,
+        "n_tokens": 75
+      },
+      "relay": {
+        "spectral_entropy": 2.2599856853485107,
+        "participation_ratio": 3.49077499370587,
+        "sigma_1": 233.77157592773438,
+        "sigma_2": 137.9619903564453,
+        "sigma_3": 54.82683181762695,
+        "passage_distance": 3.4110846519470215,
+        "n_tokens": 75
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 3,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5353853702545166,
+        "participation_ratio": 1.217638979098355,
+        "sigma_1": 228.12503051757812,
+        "sigma_2": 53.649085998535156,
+        "sigma_3": 26.570756912231445,
+        "passage_distance": 3.3997442722320557,
+        "n_tokens": 78
+      },
+      "relay": {
+        "spectral_entropy": 2.3065409660339355,
+        "participation_ratio": 3.611880237008725,
+        "sigma_1": 233.76632690429688,
+        "sigma_2": 141.4424285888672,
+        "sigma_3": 54.833778381347656,
+        "passage_distance": 3.4129583835601807,
+        "n_tokens": 78
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 4,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5235610008239746,
+        "participation_ratio": 1.2135768678902248,
+        "sigma_1": 228.10372924804688,
+        "sigma_2": 53.64683532714844,
+        "sigma_3": 26.37071418762207,
+        "passage_distance": 3.385040760040283,
+        "n_tokens": 75
+      },
+      "relay": {
+        "spectral_entropy": 2.255181312561035,
+        "participation_ratio": 3.5027133292037185,
+        "sigma_1": 233.7527618408203,
+        "sigma_2": 139.88629150390625,
+        "sigma_3": 54.820335388183594,
+        "passage_distance": 3.4155471324920654,
+        "n_tokens": 75
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 5,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5296861529350281,
+        "participation_ratio": 1.215830202950885,
+        "sigma_1": 228.11520385742188,
+        "sigma_2": 53.64748001098633,
+        "sigma_3": 26.53691291809082,
+        "passage_distance": 3.3683903217315674,
+        "n_tokens": 77
+      },
+      "relay": {
+        "spectral_entropy": 2.2674741744995117,
+        "participation_ratio": 3.534629447782914,
+        "sigma_1": 233.77883911132812,
+        "sigma_2": 140.90415954589844,
+        "sigma_3": 54.85443115234375,
+        "passage_distance": 3.4058196544647217,
+        "n_tokens": 77
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 6,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5208616256713867,
+        "participation_ratio": 1.212748214942586,
+        "sigma_1": 228.10418701171875,
+        "sigma_2": 53.64698028564453,
+        "sigma_3": 26.304136276245117,
+        "passage_distance": 3.388828992843628,
+        "n_tokens": 74
+      },
+      "relay": {
+        "spectral_entropy": 2.250929117202759,
+        "participation_ratio": 3.4838279772032585,
+        "sigma_1": 233.75758361816406,
+        "sigma_2": 138.58218383789062,
+        "sigma_3": 54.83527755737305,
+        "passage_distance": 3.408005952835083,
+        "n_tokens": 74
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 7,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5187636613845825,
+        "participation_ratio": 1.2118857724182752,
+        "sigma_1": 228.1127471923828,
+        "sigma_2": 53.64781951904297,
+        "sigma_3": 26.297706604003906,
+        "passage_distance": 3.394038677215576,
+        "n_tokens": 74
+      },
+      "relay": {
+        "spectral_entropy": 2.246154546737671,
+        "participation_ratio": 3.4829630583933056,
+        "sigma_1": 233.7609405517578,
+        "sigma_2": 139.50555419921875,
+        "sigma_3": 54.84047317504883,
+        "passage_distance": 3.4121949672698975,
+        "n_tokens": 74
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 8,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5074649453163147,
+        "participation_ratio": 1.2078512277570783,
+        "sigma_1": 228.0999298095703,
+        "sigma_2": 53.64659118652344,
+        "sigma_3": 25.843040466308594,
+        "passage_distance": 3.3908278942108154,
+        "n_tokens": 71
+      },
+      "relay": {
+        "spectral_entropy": 2.2044167518615723,
+        "participation_ratio": 3.3764674315945524,
+        "sigma_1": 233.76092529296875,
+        "sigma_2": 136.0345001220703,
+        "sigma_3": 54.82011032104492,
+        "passage_distance": 3.4119324684143066,
+        "n_tokens": 71
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 9,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.5446016788482666,
+        "participation_ratio": 1.2208652145027843,
+        "sigma_1": 228.11138916015625,
+        "sigma_2": 53.64724349975586,
+        "sigma_3": 26.528745651245117,
+        "passage_distance": 3.383330821990967,
+        "n_tokens": 81
+      },
+      "relay": {
+        "spectral_entropy": 2.3422563076019287,
+        "participation_ratio": 3.7092162516736886,
+        "sigma_1": 233.75982666015625,
+        "sigma_2": 143.64317321777344,
+        "sigma_3": 54.874725341796875,
+        "passage_distance": 3.416158437728882,
+        "n_tokens": 81
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 0,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.516372799873352,
+        "participation_ratio": 1.2111903482836834,
+        "sigma_1": 228.10484313964844,
+        "sigma_2": 53.64734649658203,
+        "sigma_3": 26.252235412597656,
+        "passage_distance": 3.390368700027466,
+        "n_tokens": 73
+      },
+      "relay": {
+        "spectral_entropy": 2.233539581298828,
+        "participation_ratio": 3.453982967702818,
+        "sigma_1": 233.76007080078125,
+        "sigma_2": 138.25221252441406,
+        "sigma_3": 54.820335388183594,
+        "passage_distance": 3.4116506576538086,
+        "n_tokens": 73
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 1,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5040323734283447,
+        "participation_ratio": 1.206700695059326,
+        "sigma_1": 228.09848022460938,
+        "sigma_2": 53.64647674560547,
+        "sigma_3": 25.768354415893555,
+        "passage_distance": 3.3921639919281006,
+        "n_tokens": 70
+      },
+      "relay": {
+        "spectral_entropy": 2.185213565826416,
+        "participation_ratio": 3.3405997440004613,
+        "sigma_1": 233.75291442871094,
+        "sigma_2": 135.2466583251953,
+        "sigma_3": 54.812278747558594,
+        "passage_distance": 3.4090583324432373,
+        "n_tokens": 70
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 2,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5265101790428162,
+        "participation_ratio": 1.2142390709804392,
+        "sigma_1": 228.11367797851562,
+        "sigma_2": 53.6480598449707,
+        "sigma_3": 26.06587791442871,
+        "passage_distance": 3.399078607559204,
+        "n_tokens": 75
+      },
+      "relay": {
+        "spectral_entropy": 2.2599856853485107,
+        "participation_ratio": 3.49077499370587,
+        "sigma_1": 233.77157592773438,
+        "sigma_2": 137.9619903564453,
+        "sigma_3": 54.82683181762695,
+        "passage_distance": 3.4110846519470215,
+        "n_tokens": 75
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 3,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5353853702545166,
+        "participation_ratio": 1.217638979098355,
+        "sigma_1": 228.12503051757812,
+        "sigma_2": 53.649085998535156,
+        "sigma_3": 26.570756912231445,
+        "passage_distance": 3.3997442722320557,
+        "n_tokens": 78
+      },
+      "relay": {
+        "spectral_entropy": 2.3065409660339355,
+        "participation_ratio": 3.611880237008725,
+        "sigma_1": 233.76632690429688,
+        "sigma_2": 141.4424285888672,
+        "sigma_3": 54.833778381347656,
+        "passage_distance": 3.4129583835601807,
+        "n_tokens": 78
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 4,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5235610008239746,
+        "participation_ratio": 1.2135768678902248,
+        "sigma_1": 228.10372924804688,
+        "sigma_2": 53.64683532714844,
+        "sigma_3": 26.37071418762207,
+        "passage_distance": 3.385040760040283,
+        "n_tokens": 75
+      },
+      "relay": {
+        "spectral_entropy": 2.255181312561035,
+        "participation_ratio": 3.5027133292037185,
+        "sigma_1": 233.7527618408203,
+        "sigma_2": 139.88629150390625,
+        "sigma_3": 54.820335388183594,
+        "passage_distance": 3.4155471324920654,
+        "n_tokens": 75
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 5,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5296861529350281,
+        "participation_ratio": 1.215830202950885,
+        "sigma_1": 228.11520385742188,
+        "sigma_2": 53.64748001098633,
+        "sigma_3": 26.53691291809082,
+        "passage_distance": 3.3683903217315674,
+        "n_tokens": 77
+      },
+      "relay": {
+        "spectral_entropy": 2.2674741744995117,
+        "participation_ratio": 3.534629447782914,
+        "sigma_1": 233.77883911132812,
+        "sigma_2": 140.90415954589844,
+        "sigma_3": 54.85443115234375,
+        "passage_distance": 3.4058196544647217,
+        "n_tokens": 77
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 6,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5208616256713867,
+        "participation_ratio": 1.212748214942586,
+        "sigma_1": 228.10418701171875,
+        "sigma_2": 53.64698028564453,
+        "sigma_3": 26.304136276245117,
+        "passage_distance": 3.388828992843628,
+        "n_tokens": 74
+      },
+      "relay": {
+        "spectral_entropy": 2.250929117202759,
+        "participation_ratio": 3.4838279772032585,
+        "sigma_1": 233.75758361816406,
+        "sigma_2": 138.58218383789062,
+        "sigma_3": 54.83527755737305,
+        "passage_distance": 3.408005952835083,
+        "n_tokens": 74
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 7,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5187636613845825,
+        "participation_ratio": 1.2118857724182752,
+        "sigma_1": 228.1127471923828,
+        "sigma_2": 53.64781951904297,
+        "sigma_3": 26.297706604003906,
+        "passage_distance": 3.394038677215576,
+        "n_tokens": 74
+      },
+      "relay": {
+        "spectral_entropy": 2.246154546737671,
+        "participation_ratio": 3.4829630583933056,
+        "sigma_1": 233.7609405517578,
+        "sigma_2": 139.50555419921875,
+        "sigma_3": 54.84047317504883,
+        "passage_distance": 3.4121949672698975,
+        "n_tokens": 74
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 8,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5074649453163147,
+        "participation_ratio": 1.2078512277570783,
+        "sigma_1": 228.0999298095703,
+        "sigma_2": 53.64659118652344,
+        "sigma_3": 25.843040466308594,
+        "passage_distance": 3.3908278942108154,
+        "n_tokens": 71
+      },
+      "relay": {
+        "spectral_entropy": 2.2044167518615723,
+        "participation_ratio": 3.3764674315945524,
+        "sigma_1": 233.76092529296875,
+        "sigma_2": 136.0345001220703,
+        "sigma_3": 54.82011032104492,
+        "passage_distance": 3.4119324684143066,
+        "n_tokens": 71
+      }
+    },
+    {
+      "condition": "passive_high",
+      "probe_idx": 9,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.5446016788482666,
+        "participation_ratio": 1.2208652145027843,
+        "sigma_1": 228.11138916015625,
+        "sigma_2": 53.64724349975586,
+        "sigma_3": 26.528745651245117,
+        "passage_distance": 3.383330821990967,
+        "n_tokens": 81
+      },
+      "relay": {
+        "spectral_entropy": 2.3422563076019287,
+        "participation_ratio": 3.7092162516736886,
+        "sigma_1": 233.75982666015625,
+        "sigma_2": 143.64317321777344,
+        "sigma_3": 54.874725341796875,
+        "passage_distance": 3.416158437728882,
+        "n_tokens": 81
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 0,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3730575740337372,
+        "participation_ratio": 1.1854694520260096,
+        "sigma_1": 234.8169708251953,
+        "sigma_2": 64.16092681884766,
+        "sigma_3": 16.359512329101562,
+        "passage_distance": 3.3727197647094727,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.3154538869857788,
+        "participation_ratio": 1.908965282703289,
+        "sigma_1": 240.50839233398438,
+        "sigma_2": 89.21951293945312,
+        "sigma_3": 64.01215362548828,
+        "passage_distance": 3.4205687046051025,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 1,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3611885905265808,
+        "participation_ratio": 1.1816318898244504,
+        "sigma_1": 234.81053161621094,
+        "sigma_2": 64.16059112548828,
+        "sigma_3": 15.491634368896484,
+        "passage_distance": 3.3845598697662354,
+        "n_tokens": 28
+      },
+      "relay": {
+        "spectral_entropy": 1.2299929857254028,
+        "participation_ratio": 1.8140639927847806,
+        "sigma_1": 240.50390625,
+        "sigma_2": 83.92821502685547,
+        "sigma_3": 63.9620246887207,
+        "passage_distance": 3.418097972869873,
+        "n_tokens": 28
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 2,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3830619752407074,
+        "participation_ratio": 1.1884830925302434,
+        "sigma_1": 234.82168579101562,
+        "sigma_2": 64.16200256347656,
+        "sigma_3": 16.193513870239258,
+        "passage_distance": 3.4039313793182373,
+        "n_tokens": 33
+      },
+      "relay": {
+        "spectral_entropy": 1.3508412837982178,
+        "participation_ratio": 1.931448345108871,
+        "sigma_1": 240.5180206298828,
+        "sigma_2": 88.77700805664062,
+        "sigma_3": 64.05152130126953,
+        "passage_distance": 3.4251883029937744,
+        "n_tokens": 33
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 3,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.39330580830574036,
+        "participation_ratio": 1.191987858749494,
+        "sigma_1": 234.8280029296875,
+        "sigma_2": 64.16222381591797,
+        "sigma_3": 17.262710571289062,
+        "passage_distance": 3.3937978744506836,
+        "n_tokens": 36
+      },
+      "relay": {
+        "spectral_entropy": 1.4436964988708496,
+        "participation_ratio": 2.035226330896993,
+        "sigma_1": 240.5369873046875,
+        "sigma_2": 93.19949340820312,
+        "sigma_3": 64.05719757080078,
+        "passage_distance": 3.4143781661987305,
+        "n_tokens": 36
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 4,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3799491226673126,
+        "participation_ratio": 1.187713623830079,
+        "sigma_1": 234.8166961669922,
+        "sigma_2": 64.16065216064453,
+        "sigma_3": 16.877582550048828,
+        "passage_distance": 3.372591972351074,
+        "n_tokens": 33
+      },
+      "relay": {
+        "spectral_entropy": 1.3570022583007812,
+        "participation_ratio": 1.9538371282390161,
+        "sigma_1": 240.5071258544922,
+        "sigma_2": 92.09295654296875,
+        "sigma_3": 64.06627655029297,
+        "passage_distance": 3.40321946144104,
+        "n_tokens": 33
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 5,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3862117826938629,
+        "participation_ratio": 1.1897272703271031,
+        "sigma_1": 234.81776428222656,
+        "sigma_2": 64.16081237792969,
+        "sigma_3": 17.232975006103516,
+        "passage_distance": 3.3823082447052,
+        "n_tokens": 35
+      },
+      "relay": {
+        "spectral_entropy": 1.4028388261795044,
+        "participation_ratio": 1.9895906241305872,
+        "sigma_1": 240.51785278320312,
+        "sigma_2": 91.48973846435547,
+        "sigma_3": 64.0635986328125,
+        "passage_distance": 3.4027016162872314,
+        "n_tokens": 35
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 6,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.376329243183136,
+        "participation_ratio": 1.1864705891373524,
+        "sigma_1": 234.8134307861328,
+        "sigma_2": 64.16136169433594,
+        "sigma_3": 16.287147521972656,
+        "passage_distance": 3.3996219635009766,
+        "n_tokens": 32
+      },
+      "relay": {
+        "spectral_entropy": 1.3289660215377808,
+        "participation_ratio": 1.9164845448316903,
+        "sigma_1": 240.51287841796875,
+        "sigma_2": 89.67314910888672,
+        "sigma_3": 64.05892181396484,
+        "passage_distance": 3.423546075820923,
+        "n_tokens": 32
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 7,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.377249151468277,
+        "participation_ratio": 1.1868621668958526,
+        "sigma_1": 234.82391357421875,
+        "sigma_2": 64.16107940673828,
+        "sigma_3": 16.636940002441406,
+        "passage_distance": 3.3971974849700928,
+        "n_tokens": 32
+      },
+      "relay": {
+        "spectral_entropy": 1.342930793762207,
+        "participation_ratio": 1.9425181632487827,
+        "sigma_1": 240.51480102539062,
+        "sigma_2": 91.77754211425781,
+        "sigma_3": 64.05561065673828,
+        "passage_distance": 3.4251627922058105,
+        "n_tokens": 32
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 8,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.36359071731567383,
+        "participation_ratio": 1.1823248536997835,
+        "sigma_1": 234.80966186523438,
+        "sigma_2": 64.1610107421875,
+        "sigma_3": 15.526711463928223,
+        "passage_distance": 3.40557861328125,
+        "n_tokens": 29
+      },
+      "relay": {
+        "spectral_entropy": 1.2551201581954956,
+        "participation_ratio": 1.8406279735238038,
+        "sigma_1": 240.51553344726562,
+        "sigma_2": 85.80596160888672,
+        "sigma_3": 63.97796630859375,
+        "passage_distance": 3.424936294555664,
+        "n_tokens": 29
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 9,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.4026987850666046,
+        "participation_ratio": 1.1951645365357635,
+        "sigma_1": 234.82362365722656,
+        "sigma_2": 64.16082000732422,
+        "sigma_3": 17.604820251464844,
+        "passage_distance": 3.390319347381592,
+        "n_tokens": 39
+      },
+      "relay": {
+        "spectral_entropy": 1.499370813369751,
+        "participation_ratio": 2.1100689851667487,
+        "sigma_1": 240.51531982421875,
+        "sigma_2": 97.684814453125,
+        "sigma_3": 64.1369857788086,
+        "passage_distance": 3.4106667041778564,
+        "n_tokens": 39
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 0,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3730575740337372,
+        "participation_ratio": 1.1854694520260096,
+        "sigma_1": 234.8169708251953,
+        "sigma_2": 64.16092681884766,
+        "sigma_3": 16.359512329101562,
+        "passage_distance": 3.3727197647094727,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.3154538869857788,
+        "participation_ratio": 1.908965282703289,
+        "sigma_1": 240.50839233398438,
+        "sigma_2": 89.21951293945312,
+        "sigma_3": 64.01215362548828,
+        "passage_distance": 3.4205687046051025,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 1,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3611885905265808,
+        "participation_ratio": 1.1816318898244504,
+        "sigma_1": 234.81053161621094,
+        "sigma_2": 64.16059112548828,
+        "sigma_3": 15.491634368896484,
+        "passage_distance": 3.3845598697662354,
+        "n_tokens": 28
+      },
+      "relay": {
+        "spectral_entropy": 1.2299929857254028,
+        "participation_ratio": 1.8140639927847806,
+        "sigma_1": 240.50390625,
+        "sigma_2": 83.92821502685547,
+        "sigma_3": 63.9620246887207,
+        "passage_distance": 3.418097972869873,
+        "n_tokens": 28
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 2,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3830619752407074,
+        "participation_ratio": 1.1884830925302434,
+        "sigma_1": 234.82168579101562,
+        "sigma_2": 64.16200256347656,
+        "sigma_3": 16.193513870239258,
+        "passage_distance": 3.4039313793182373,
+        "n_tokens": 33
+      },
+      "relay": {
+        "spectral_entropy": 1.3508412837982178,
+        "participation_ratio": 1.931448345108871,
+        "sigma_1": 240.5180206298828,
+        "sigma_2": 88.77700805664062,
+        "sigma_3": 64.05152130126953,
+        "passage_distance": 3.4251883029937744,
+        "n_tokens": 33
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 3,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.39330580830574036,
+        "participation_ratio": 1.191987858749494,
+        "sigma_1": 234.8280029296875,
+        "sigma_2": 64.16222381591797,
+        "sigma_3": 17.262710571289062,
+        "passage_distance": 3.3937978744506836,
+        "n_tokens": 36
+      },
+      "relay": {
+        "spectral_entropy": 1.4436964988708496,
+        "participation_ratio": 2.035226330896993,
+        "sigma_1": 240.5369873046875,
+        "sigma_2": 93.19949340820312,
+        "sigma_3": 64.05719757080078,
+        "passage_distance": 3.4143781661987305,
+        "n_tokens": 36
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 4,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3799491226673126,
+        "participation_ratio": 1.187713623830079,
+        "sigma_1": 234.8166961669922,
+        "sigma_2": 64.16065216064453,
+        "sigma_3": 16.877582550048828,
+        "passage_distance": 3.372591972351074,
+        "n_tokens": 33
+      },
+      "relay": {
+        "spectral_entropy": 1.3570022583007812,
+        "participation_ratio": 1.9538371282390161,
+        "sigma_1": 240.5071258544922,
+        "sigma_2": 92.09295654296875,
+        "sigma_3": 64.06627655029297,
+        "passage_distance": 3.40321946144104,
+        "n_tokens": 33
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 5,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3862117826938629,
+        "participation_ratio": 1.1897272703271031,
+        "sigma_1": 234.81776428222656,
+        "sigma_2": 64.16081237792969,
+        "sigma_3": 17.232975006103516,
+        "passage_distance": 3.3823082447052,
+        "n_tokens": 35
+      },
+      "relay": {
+        "spectral_entropy": 1.4028388261795044,
+        "participation_ratio": 1.9895906241305872,
+        "sigma_1": 240.51785278320312,
+        "sigma_2": 91.48973846435547,
+        "sigma_3": 64.0635986328125,
+        "passage_distance": 3.4027016162872314,
+        "n_tokens": 35
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 6,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.376329243183136,
+        "participation_ratio": 1.1864705891373524,
+        "sigma_1": 234.8134307861328,
+        "sigma_2": 64.16136169433594,
+        "sigma_3": 16.287147521972656,
+        "passage_distance": 3.3996219635009766,
+        "n_tokens": 32
+      },
+      "relay": {
+        "spectral_entropy": 1.3289660215377808,
+        "participation_ratio": 1.9164845448316903,
+        "sigma_1": 240.51287841796875,
+        "sigma_2": 89.67314910888672,
+        "sigma_3": 64.05892181396484,
+        "passage_distance": 3.423546075820923,
+        "n_tokens": 32
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 7,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.377249151468277,
+        "participation_ratio": 1.1868621668958526,
+        "sigma_1": 234.82391357421875,
+        "sigma_2": 64.16107940673828,
+        "sigma_3": 16.636940002441406,
+        "passage_distance": 3.3971974849700928,
+        "n_tokens": 32
+      },
+      "relay": {
+        "spectral_entropy": 1.342930793762207,
+        "participation_ratio": 1.9425181632487827,
+        "sigma_1": 240.51480102539062,
+        "sigma_2": 91.77754211425781,
+        "sigma_3": 64.05561065673828,
+        "passage_distance": 3.4251627922058105,
+        "n_tokens": 32
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 8,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.36359071731567383,
+        "participation_ratio": 1.1823248536997835,
+        "sigma_1": 234.80966186523438,
+        "sigma_2": 64.1610107421875,
+        "sigma_3": 15.526711463928223,
+        "passage_distance": 3.40557861328125,
+        "n_tokens": 29
+      },
+      "relay": {
+        "spectral_entropy": 1.2551201581954956,
+        "participation_ratio": 1.8406279735238038,
+        "sigma_1": 240.51553344726562,
+        "sigma_2": 85.80596160888672,
+        "sigma_3": 63.97796630859375,
+        "passage_distance": 3.424936294555664,
+        "n_tokens": 29
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 9,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.4026987850666046,
+        "participation_ratio": 1.1951645365357635,
+        "sigma_1": 234.82362365722656,
+        "sigma_2": 64.16082000732422,
+        "sigma_3": 17.604820251464844,
+        "passage_distance": 3.390319347381592,
+        "n_tokens": 39
+      },
+      "relay": {
+        "spectral_entropy": 1.499370813369751,
+        "participation_ratio": 2.1100689851667487,
+        "sigma_1": 240.51531982421875,
+        "sigma_2": 97.684814453125,
+        "sigma_3": 64.1369857788086,
+        "passage_distance": 3.4106667041778564,
+        "n_tokens": 39
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 0,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3730575740337372,
+        "participation_ratio": 1.1854694520260096,
+        "sigma_1": 234.8169708251953,
+        "sigma_2": 64.16092681884766,
+        "sigma_3": 16.359512329101562,
+        "passage_distance": 3.3727197647094727,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.3154538869857788,
+        "participation_ratio": 1.908965282703289,
+        "sigma_1": 240.50839233398438,
+        "sigma_2": 89.21951293945312,
+        "sigma_3": 64.01215362548828,
+        "passage_distance": 3.4205687046051025,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 1,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3611885905265808,
+        "participation_ratio": 1.1816318898244504,
+        "sigma_1": 234.81053161621094,
+        "sigma_2": 64.16059112548828,
+        "sigma_3": 15.491634368896484,
+        "passage_distance": 3.3845598697662354,
+        "n_tokens": 28
+      },
+      "relay": {
+        "spectral_entropy": 1.2299929857254028,
+        "participation_ratio": 1.8140639927847806,
+        "sigma_1": 240.50390625,
+        "sigma_2": 83.92821502685547,
+        "sigma_3": 63.9620246887207,
+        "passage_distance": 3.418097972869873,
+        "n_tokens": 28
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 2,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3830619752407074,
+        "participation_ratio": 1.1884830925302434,
+        "sigma_1": 234.82168579101562,
+        "sigma_2": 64.16200256347656,
+        "sigma_3": 16.193513870239258,
+        "passage_distance": 3.4039313793182373,
+        "n_tokens": 33
+      },
+      "relay": {
+        "spectral_entropy": 1.3508412837982178,
+        "participation_ratio": 1.931448345108871,
+        "sigma_1": 240.5180206298828,
+        "sigma_2": 88.77700805664062,
+        "sigma_3": 64.05152130126953,
+        "passage_distance": 3.4251883029937744,
+        "n_tokens": 33
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 3,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.39330580830574036,
+        "participation_ratio": 1.191987858749494,
+        "sigma_1": 234.8280029296875,
+        "sigma_2": 64.16222381591797,
+        "sigma_3": 17.262710571289062,
+        "passage_distance": 3.3937978744506836,
+        "n_tokens": 36
+      },
+      "relay": {
+        "spectral_entropy": 1.4436964988708496,
+        "participation_ratio": 2.035226330896993,
+        "sigma_1": 240.5369873046875,
+        "sigma_2": 93.19949340820312,
+        "sigma_3": 64.05719757080078,
+        "passage_distance": 3.4143781661987305,
+        "n_tokens": 36
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 4,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3799491226673126,
+        "participation_ratio": 1.187713623830079,
+        "sigma_1": 234.8166961669922,
+        "sigma_2": 64.16065216064453,
+        "sigma_3": 16.877582550048828,
+        "passage_distance": 3.372591972351074,
+        "n_tokens": 33
+      },
+      "relay": {
+        "spectral_entropy": 1.3570022583007812,
+        "participation_ratio": 1.9538371282390161,
+        "sigma_1": 240.5071258544922,
+        "sigma_2": 92.09295654296875,
+        "sigma_3": 64.06627655029297,
+        "passage_distance": 3.40321946144104,
+        "n_tokens": 33
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 5,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3862117826938629,
+        "participation_ratio": 1.1897272703271031,
+        "sigma_1": 234.81776428222656,
+        "sigma_2": 64.16081237792969,
+        "sigma_3": 17.232975006103516,
+        "passage_distance": 3.3823082447052,
+        "n_tokens": 35
+      },
+      "relay": {
+        "spectral_entropy": 1.4028388261795044,
+        "participation_ratio": 1.9895906241305872,
+        "sigma_1": 240.51785278320312,
+        "sigma_2": 91.48973846435547,
+        "sigma_3": 64.0635986328125,
+        "passage_distance": 3.4027016162872314,
+        "n_tokens": 35
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 6,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.376329243183136,
+        "participation_ratio": 1.1864705891373524,
+        "sigma_1": 234.8134307861328,
+        "sigma_2": 64.16136169433594,
+        "sigma_3": 16.287147521972656,
+        "passage_distance": 3.3996219635009766,
+        "n_tokens": 32
+      },
+      "relay": {
+        "spectral_entropy": 1.3289660215377808,
+        "participation_ratio": 1.9164845448316903,
+        "sigma_1": 240.51287841796875,
+        "sigma_2": 89.67314910888672,
+        "sigma_3": 64.05892181396484,
+        "passage_distance": 3.423546075820923,
+        "n_tokens": 32
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 7,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.377249151468277,
+        "participation_ratio": 1.1868621668958526,
+        "sigma_1": 234.82391357421875,
+        "sigma_2": 64.16107940673828,
+        "sigma_3": 16.636940002441406,
+        "passage_distance": 3.3971974849700928,
+        "n_tokens": 32
+      },
+      "relay": {
+        "spectral_entropy": 1.342930793762207,
+        "participation_ratio": 1.9425181632487827,
+        "sigma_1": 240.51480102539062,
+        "sigma_2": 91.77754211425781,
+        "sigma_3": 64.05561065673828,
+        "passage_distance": 3.4251627922058105,
+        "n_tokens": 32
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 8,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.36359071731567383,
+        "participation_ratio": 1.1823248536997835,
+        "sigma_1": 234.80966186523438,
+        "sigma_2": 64.1610107421875,
+        "sigma_3": 15.526711463928223,
+        "passage_distance": 3.40557861328125,
+        "n_tokens": 29
+      },
+      "relay": {
+        "spectral_entropy": 1.2551201581954956,
+        "participation_ratio": 1.8406279735238038,
+        "sigma_1": 240.51553344726562,
+        "sigma_2": 85.80596160888672,
+        "sigma_3": 63.97796630859375,
+        "passage_distance": 3.424936294555664,
+        "n_tokens": 29
+      }
+    },
+    {
+      "condition": "active_low",
+      "probe_idx": 9,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.4026987850666046,
+        "participation_ratio": 1.1951645365357635,
+        "sigma_1": 234.82362365722656,
+        "sigma_2": 64.16082000732422,
+        "sigma_3": 17.604820251464844,
+        "passage_distance": 3.390319347381592,
+        "n_tokens": 39
+      },
+      "relay": {
+        "spectral_entropy": 1.499370813369751,
+        "participation_ratio": 2.1100689851667487,
+        "sigma_1": 240.51531982421875,
+        "sigma_2": 97.684814453125,
+        "sigma_3": 64.1369857788086,
+        "passage_distance": 3.4106667041778564,
+        "n_tokens": 39
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 0,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3495159447193146,
+        "participation_ratio": 1.1678236378949585,
+        "sigma_1": 231.9551239013672,
+        "sigma_2": 59.95537567138672,
+        "sigma_3": 15.995956420898438,
+        "passage_distance": 3.393045663833618,
+        "n_tokens": 29
+      },
+      "relay": {
+        "spectral_entropy": 1.2638434171676636,
+        "participation_ratio": 1.8460226337346834,
+        "sigma_1": 237.4990997314453,
+        "sigma_2": 85.43639373779297,
+        "sigma_3": 60.12369155883789,
+        "passage_distance": 3.4273416996002197,
+        "n_tokens": 29
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 1,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3369735777378082,
+        "participation_ratio": 1.1637934971448676,
+        "sigma_1": 231.9481964111328,
+        "sigma_2": 59.954345703125,
+        "sigma_3": 15.046392440795898,
+        "passage_distance": 3.384603500366211,
+        "n_tokens": 26
+      },
+      "relay": {
+        "spectral_entropy": 1.1609907150268555,
+        "participation_ratio": 1.7382737679920082,
+        "sigma_1": 237.49465942382812,
+        "sigma_2": 79.48548889160156,
+        "sigma_3": 60.063411712646484,
+        "passage_distance": 3.4240567684173584,
+        "n_tokens": 26
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 2,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.35902154445648193,
+        "participation_ratio": 1.1705645667822215,
+        "sigma_1": 231.95973205566406,
+        "sigma_2": 59.95578384399414,
+        "sigma_3": 15.716766357421875,
+        "passage_distance": 3.4082634449005127,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.307544469833374,
+        "participation_ratio": 1.8782400327669881,
+        "sigma_1": 237.50997924804688,
+        "sigma_2": 85.65111541748047,
+        "sigma_3": 60.167537689208984,
+        "passage_distance": 3.419102907180786,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 3,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.36991074681282043,
+        "participation_ratio": 1.1742209529078234,
+        "sigma_1": 231.96453857421875,
+        "sigma_2": 59.956180572509766,
+        "sigma_3": 16.75794792175293,
+        "passage_distance": 3.4065635204315186,
+        "n_tokens": 34
+      },
+      "relay": {
+        "spectral_entropy": 1.4058635234832764,
+        "participation_ratio": 1.986697389372466,
+        "sigma_1": 237.523193359375,
+        "sigma_2": 90.64910125732422,
+        "sigma_3": 60.168357849121094,
+        "passage_distance": 3.4159348011016846,
+        "n_tokens": 34
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 4,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.35616910457611084,
+        "participation_ratio": 1.1699418294562502,
+        "sigma_1": 231.95455932617188,
+        "sigma_2": 59.95478057861328,
+        "sigma_3": 16.488155364990234,
+        "passage_distance": 3.3857953548431396,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.301387071609497,
+        "participation_ratio": 1.888031231493745,
+        "sigma_1": 237.49562072753906,
+        "sigma_2": 88.73053741455078,
+        "sigma_3": 60.18682098388672,
+        "passage_distance": 3.4269583225250244,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 5,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.36380699276924133,
+        "participation_ratio": 1.1724298840559726,
+        "sigma_1": 231.95777893066406,
+        "sigma_2": 59.954627990722656,
+        "sigma_3": 17.04468536376953,
+        "passage_distance": 3.3959548473358154,
+        "n_tokens": 33
+      },
+      "relay": {
+        "spectral_entropy": 1.3480052947998047,
+        "participation_ratio": 1.9293585412479264,
+        "sigma_1": 237.50942993164062,
+        "sigma_2": 89.60890197753906,
+        "sigma_3": 60.18446350097656,
+        "passage_distance": 3.426525115966797,
+        "n_tokens": 33
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 6,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3524840772151947,
+        "participation_ratio": 1.1687051700917839,
+        "sigma_1": 231.95127868652344,
+        "sigma_2": 59.954681396484375,
+        "sigma_3": 15.916482925415039,
+        "passage_distance": 3.408738851547241,
+        "n_tokens": 30
+      },
+      "relay": {
+        "spectral_entropy": 1.2751668691635132,
+        "participation_ratio": 1.8495415467099707,
+        "sigma_1": 237.49847412109375,
+        "sigma_2": 85.24720764160156,
+        "sigma_3": 60.153526306152344,
+        "passage_distance": 3.4359495639801025,
+        "n_tokens": 30
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 7,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3532395362854004,
+        "participation_ratio": 1.1690531211877302,
+        "sigma_1": 231.962158203125,
+        "sigma_2": 59.95574951171875,
+        "sigma_3": 16.165298461914062,
+        "passage_distance": 3.395629405975342,
+        "n_tokens": 30
+      },
+      "relay": {
+        "spectral_entropy": 1.295241117477417,
+        "participation_ratio": 1.8827742172468556,
+        "sigma_1": 237.5063934326172,
+        "sigma_2": 88.03299713134766,
+        "sigma_3": 60.17134475708008,
+        "passage_distance": 3.42319917678833,
+        "n_tokens": 30
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 8,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3399832844734192,
+        "participation_ratio": 1.1646814272181567,
+        "sigma_1": 231.94705200195312,
+        "sigma_2": 59.954532623291016,
+        "sigma_3": 15.093639373779297,
+        "passage_distance": 3.4122865200042725,
+        "n_tokens": 27
+      },
+      "relay": {
+        "spectral_entropy": 1.197356104850769,
+        "participation_ratio": 1.774493712485774,
+        "sigma_1": 237.50172424316406,
+        "sigma_2": 81.66917419433594,
+        "sigma_3": 60.08552551269531,
+        "passage_distance": 3.4408187866210938,
+        "n_tokens": 27
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 9,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.37914708256721497,
+        "participation_ratio": 1.1773807697735232,
+        "sigma_1": 231.96102905273438,
+        "sigma_2": 59.95512008666992,
+        "sigma_3": 17.421369552612305,
+        "passage_distance": 3.4036169052124023,
+        "n_tokens": 37
+      },
+      "relay": {
+        "spectral_entropy": 1.461816668510437,
+        "participation_ratio": 2.063699562745997,
+        "sigma_1": 237.51271057128906,
+        "sigma_2": 95.61534881591797,
+        "sigma_3": 60.252986907958984,
+        "passage_distance": 3.3961117267608643,
+        "n_tokens": 37
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 0,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3495159447193146,
+        "participation_ratio": 1.1678236378949585,
+        "sigma_1": 231.9551239013672,
+        "sigma_2": 59.95537567138672,
+        "sigma_3": 15.995956420898438,
+        "passage_distance": 3.393045663833618,
+        "n_tokens": 29
+      },
+      "relay": {
+        "spectral_entropy": 1.2638434171676636,
+        "participation_ratio": 1.8460226337346834,
+        "sigma_1": 237.4990997314453,
+        "sigma_2": 85.43639373779297,
+        "sigma_3": 60.12369155883789,
+        "passage_distance": 3.4273416996002197,
+        "n_tokens": 29
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 1,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3369735777378082,
+        "participation_ratio": 1.1637934971448676,
+        "sigma_1": 231.9481964111328,
+        "sigma_2": 59.954345703125,
+        "sigma_3": 15.046392440795898,
+        "passage_distance": 3.384603500366211,
+        "n_tokens": 26
+      },
+      "relay": {
+        "spectral_entropy": 1.1609907150268555,
+        "participation_ratio": 1.7382737679920082,
+        "sigma_1": 237.49465942382812,
+        "sigma_2": 79.48548889160156,
+        "sigma_3": 60.063411712646484,
+        "passage_distance": 3.4240567684173584,
+        "n_tokens": 26
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 2,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.35902154445648193,
+        "participation_ratio": 1.1705645667822215,
+        "sigma_1": 231.95973205566406,
+        "sigma_2": 59.95578384399414,
+        "sigma_3": 15.716766357421875,
+        "passage_distance": 3.4082634449005127,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.307544469833374,
+        "participation_ratio": 1.8782400327669881,
+        "sigma_1": 237.50997924804688,
+        "sigma_2": 85.65111541748047,
+        "sigma_3": 60.167537689208984,
+        "passage_distance": 3.419102907180786,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 3,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.36991074681282043,
+        "participation_ratio": 1.1742209529078234,
+        "sigma_1": 231.96453857421875,
+        "sigma_2": 59.956180572509766,
+        "sigma_3": 16.75794792175293,
+        "passage_distance": 3.4065635204315186,
+        "n_tokens": 34
+      },
+      "relay": {
+        "spectral_entropy": 1.4058635234832764,
+        "participation_ratio": 1.986697389372466,
+        "sigma_1": 237.523193359375,
+        "sigma_2": 90.64910125732422,
+        "sigma_3": 60.168357849121094,
+        "passage_distance": 3.4159348011016846,
+        "n_tokens": 34
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 4,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.35616910457611084,
+        "participation_ratio": 1.1699418294562502,
+        "sigma_1": 231.95455932617188,
+        "sigma_2": 59.95478057861328,
+        "sigma_3": 16.488155364990234,
+        "passage_distance": 3.3857953548431396,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.301387071609497,
+        "participation_ratio": 1.888031231493745,
+        "sigma_1": 237.49562072753906,
+        "sigma_2": 88.73053741455078,
+        "sigma_3": 60.18682098388672,
+        "passage_distance": 3.4269583225250244,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 5,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.36380699276924133,
+        "participation_ratio": 1.1724298840559726,
+        "sigma_1": 231.95777893066406,
+        "sigma_2": 59.954627990722656,
+        "sigma_3": 17.04468536376953,
+        "passage_distance": 3.3959548473358154,
+        "n_tokens": 33
+      },
+      "relay": {
+        "spectral_entropy": 1.3480052947998047,
+        "participation_ratio": 1.9293585412479264,
+        "sigma_1": 237.50942993164062,
+        "sigma_2": 89.60890197753906,
+        "sigma_3": 60.18446350097656,
+        "passage_distance": 3.426525115966797,
+        "n_tokens": 33
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 6,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3524840772151947,
+        "participation_ratio": 1.1687051700917839,
+        "sigma_1": 231.95127868652344,
+        "sigma_2": 59.954681396484375,
+        "sigma_3": 15.916482925415039,
+        "passage_distance": 3.408738851547241,
+        "n_tokens": 30
+      },
+      "relay": {
+        "spectral_entropy": 1.2751668691635132,
+        "participation_ratio": 1.8495415467099707,
+        "sigma_1": 237.49847412109375,
+        "sigma_2": 85.24720764160156,
+        "sigma_3": 60.153526306152344,
+        "passage_distance": 3.4359495639801025,
+        "n_tokens": 30
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 7,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3532395362854004,
+        "participation_ratio": 1.1690531211877302,
+        "sigma_1": 231.962158203125,
+        "sigma_2": 59.95574951171875,
+        "sigma_3": 16.165298461914062,
+        "passage_distance": 3.395629405975342,
+        "n_tokens": 30
+      },
+      "relay": {
+        "spectral_entropy": 1.295241117477417,
+        "participation_ratio": 1.8827742172468556,
+        "sigma_1": 237.5063934326172,
+        "sigma_2": 88.03299713134766,
+        "sigma_3": 60.17134475708008,
+        "passage_distance": 3.42319917678833,
+        "n_tokens": 30
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 8,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3399832844734192,
+        "participation_ratio": 1.1646814272181567,
+        "sigma_1": 231.94705200195312,
+        "sigma_2": 59.954532623291016,
+        "sigma_3": 15.093639373779297,
+        "passage_distance": 3.4122865200042725,
+        "n_tokens": 27
+      },
+      "relay": {
+        "spectral_entropy": 1.197356104850769,
+        "participation_ratio": 1.774493712485774,
+        "sigma_1": 237.50172424316406,
+        "sigma_2": 81.66917419433594,
+        "sigma_3": 60.08552551269531,
+        "passage_distance": 3.4408187866210938,
+        "n_tokens": 27
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 9,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.37914708256721497,
+        "participation_ratio": 1.1773807697735232,
+        "sigma_1": 231.96102905273438,
+        "sigma_2": 59.95512008666992,
+        "sigma_3": 17.421369552612305,
+        "passage_distance": 3.4036169052124023,
+        "n_tokens": 37
+      },
+      "relay": {
+        "spectral_entropy": 1.461816668510437,
+        "participation_ratio": 2.063699562745997,
+        "sigma_1": 237.51271057128906,
+        "sigma_2": 95.61534881591797,
+        "sigma_3": 60.252986907958984,
+        "passage_distance": 3.3961117267608643,
+        "n_tokens": 37
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 0,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3495159447193146,
+        "participation_ratio": 1.1678236378949585,
+        "sigma_1": 231.9551239013672,
+        "sigma_2": 59.95537567138672,
+        "sigma_3": 15.995956420898438,
+        "passage_distance": 3.393045663833618,
+        "n_tokens": 29
+      },
+      "relay": {
+        "spectral_entropy": 1.2638434171676636,
+        "participation_ratio": 1.8460226337346834,
+        "sigma_1": 237.4990997314453,
+        "sigma_2": 85.43639373779297,
+        "sigma_3": 60.12369155883789,
+        "passage_distance": 3.4273416996002197,
+        "n_tokens": 29
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 1,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3369735777378082,
+        "participation_ratio": 1.1637934971448676,
+        "sigma_1": 231.9481964111328,
+        "sigma_2": 59.954345703125,
+        "sigma_3": 15.046392440795898,
+        "passage_distance": 3.384603500366211,
+        "n_tokens": 26
+      },
+      "relay": {
+        "spectral_entropy": 1.1609907150268555,
+        "participation_ratio": 1.7382737679920082,
+        "sigma_1": 237.49465942382812,
+        "sigma_2": 79.48548889160156,
+        "sigma_3": 60.063411712646484,
+        "passage_distance": 3.4240567684173584,
+        "n_tokens": 26
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 2,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.35902154445648193,
+        "participation_ratio": 1.1705645667822215,
+        "sigma_1": 231.95973205566406,
+        "sigma_2": 59.95578384399414,
+        "sigma_3": 15.716766357421875,
+        "passage_distance": 3.4082634449005127,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.307544469833374,
+        "participation_ratio": 1.8782400327669881,
+        "sigma_1": 237.50997924804688,
+        "sigma_2": 85.65111541748047,
+        "sigma_3": 60.167537689208984,
+        "passage_distance": 3.419102907180786,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 3,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.36991074681282043,
+        "participation_ratio": 1.1742209529078234,
+        "sigma_1": 231.96453857421875,
+        "sigma_2": 59.956180572509766,
+        "sigma_3": 16.75794792175293,
+        "passage_distance": 3.4065635204315186,
+        "n_tokens": 34
+      },
+      "relay": {
+        "spectral_entropy": 1.4058635234832764,
+        "participation_ratio": 1.986697389372466,
+        "sigma_1": 237.523193359375,
+        "sigma_2": 90.64910125732422,
+        "sigma_3": 60.168357849121094,
+        "passage_distance": 3.4159348011016846,
+        "n_tokens": 34
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 4,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.35616910457611084,
+        "participation_ratio": 1.1699418294562502,
+        "sigma_1": 231.95455932617188,
+        "sigma_2": 59.95478057861328,
+        "sigma_3": 16.488155364990234,
+        "passage_distance": 3.3857953548431396,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.301387071609497,
+        "participation_ratio": 1.888031231493745,
+        "sigma_1": 237.49562072753906,
+        "sigma_2": 88.73053741455078,
+        "sigma_3": 60.18682098388672,
+        "passage_distance": 3.4269583225250244,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 5,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.36380699276924133,
+        "participation_ratio": 1.1724298840559726,
+        "sigma_1": 231.95777893066406,
+        "sigma_2": 59.954627990722656,
+        "sigma_3": 17.04468536376953,
+        "passage_distance": 3.3959548473358154,
+        "n_tokens": 33
+      },
+      "relay": {
+        "spectral_entropy": 1.3480052947998047,
+        "participation_ratio": 1.9293585412479264,
+        "sigma_1": 237.50942993164062,
+        "sigma_2": 89.60890197753906,
+        "sigma_3": 60.18446350097656,
+        "passage_distance": 3.426525115966797,
+        "n_tokens": 33
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 6,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3524840772151947,
+        "participation_ratio": 1.1687051700917839,
+        "sigma_1": 231.95127868652344,
+        "sigma_2": 59.954681396484375,
+        "sigma_3": 15.916482925415039,
+        "passage_distance": 3.408738851547241,
+        "n_tokens": 30
+      },
+      "relay": {
+        "spectral_entropy": 1.2751668691635132,
+        "participation_ratio": 1.8495415467099707,
+        "sigma_1": 237.49847412109375,
+        "sigma_2": 85.24720764160156,
+        "sigma_3": 60.153526306152344,
+        "passage_distance": 3.4359495639801025,
+        "n_tokens": 30
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 7,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3532395362854004,
+        "participation_ratio": 1.1690531211877302,
+        "sigma_1": 231.962158203125,
+        "sigma_2": 59.95574951171875,
+        "sigma_3": 16.165298461914062,
+        "passage_distance": 3.395629405975342,
+        "n_tokens": 30
+      },
+      "relay": {
+        "spectral_entropy": 1.295241117477417,
+        "participation_ratio": 1.8827742172468556,
+        "sigma_1": 237.5063934326172,
+        "sigma_2": 88.03299713134766,
+        "sigma_3": 60.17134475708008,
+        "passage_distance": 3.42319917678833,
+        "n_tokens": 30
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 8,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3399832844734192,
+        "participation_ratio": 1.1646814272181567,
+        "sigma_1": 231.94705200195312,
+        "sigma_2": 59.954532623291016,
+        "sigma_3": 15.093639373779297,
+        "passage_distance": 3.4122865200042725,
+        "n_tokens": 27
+      },
+      "relay": {
+        "spectral_entropy": 1.197356104850769,
+        "participation_ratio": 1.774493712485774,
+        "sigma_1": 237.50172424316406,
+        "sigma_2": 81.66917419433594,
+        "sigma_3": 60.08552551269531,
+        "passage_distance": 3.4408187866210938,
+        "n_tokens": 27
+      }
+    },
+    {
+      "condition": "passive_low",
+      "probe_idx": 9,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.37914708256721497,
+        "participation_ratio": 1.1773807697735232,
+        "sigma_1": 231.96102905273438,
+        "sigma_2": 59.95512008666992,
+        "sigma_3": 17.421369552612305,
+        "passage_distance": 3.4036169052124023,
+        "n_tokens": 37
+      },
+      "relay": {
+        "spectral_entropy": 1.461816668510437,
+        "participation_ratio": 2.063699562745997,
+        "sigma_1": 237.51271057128906,
+        "sigma_2": 95.61534881591797,
+        "sigma_3": 60.252986907958984,
+        "passage_distance": 3.3961117267608643,
+        "n_tokens": 37
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3698943853378296,
+        "participation_ratio": 1.1870743318633643,
+        "sigma_1": 238.6774139404297,
+        "sigma_2": 66.08525085449219,
+        "sigma_3": 16.53595733642578,
+        "passage_distance": 3.359374761581421,
+        "n_tokens": 30
+      },
+      "relay": {
+        "spectral_entropy": 1.2387075424194336,
+        "participation_ratio": 1.796012058082579,
+        "sigma_1": 244.1161346435547,
+        "sigma_2": 78.97269439697266,
+        "sigma_3": 65.74836730957031,
+        "passage_distance": 3.412407398223877,
+        "n_tokens": 30
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3599861264228821,
+        "participation_ratio": 1.1840164864134102,
+        "sigma_1": 238.68019104003906,
+        "sigma_2": 66.08425903320312,
+        "sigma_3": 16.218244552612305,
+        "passage_distance": 3.3667612075805664,
+        "n_tokens": 27
+      },
+      "relay": {
+        "spectral_entropy": 1.13461434841156,
+        "participation_ratio": 1.7000230554133378,
+        "sigma_1": 244.11471557617188,
+        "sigma_2": 74.47159576416016,
+        "sigma_3": 65.70247650146484,
+        "passage_distance": 3.4109764099121094,
+        "n_tokens": 27
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.38025176525115967,
+        "participation_ratio": 1.1904533360504521,
+        "sigma_1": 238.6894989013672,
+        "sigma_2": 66.08552551269531,
+        "sigma_3": 17.257558822631836,
+        "passage_distance": 3.399258852005005,
+        "n_tokens": 32
+      },
+      "relay": {
+        "spectral_entropy": 1.2686647176742554,
+        "participation_ratio": 1.8170406694355041,
+        "sigma_1": 244.12644958496094,
+        "sigma_2": 80.1980972290039,
+        "sigma_3": 65.8270263671875,
+        "passage_distance": 3.405385732650757,
+        "n_tokens": 32
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.38867077231407166,
+        "participation_ratio": 1.1931491674796793,
+        "sigma_1": 238.68359375,
+        "sigma_2": 66.08489990234375,
+        "sigma_3": 17.248733520507812,
+        "passage_distance": 3.4047629833221436,
+        "n_tokens": 35
+      },
+      "relay": {
+        "spectral_entropy": 1.378796100616455,
+        "participation_ratio": 1.9207224329390367,
+        "sigma_1": 244.12109375,
+        "sigma_2": 81.91480255126953,
+        "sigma_3": 65.79624938964844,
+        "passage_distance": 3.40694522857666,
+        "n_tokens": 35
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3746422529220581,
+        "participation_ratio": 1.1886670023350596,
+        "sigma_1": 238.67623901367188,
+        "sigma_2": 66.08448791503906,
+        "sigma_3": 17.20939064025879,
+        "passage_distance": 3.395061731338501,
+        "n_tokens": 32
+      },
+      "relay": {
+        "spectral_entropy": 1.2748980522155762,
+        "participation_ratio": 1.8341641989590283,
+        "sigma_1": 244.11264038085938,
+        "sigma_2": 82.50117492675781,
+        "sigma_3": 65.84138488769531,
+        "passage_distance": 3.415978193283081,
+        "n_tokens": 32
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 5,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.38164016604423523,
+        "participation_ratio": 1.1908418300666772,
+        "sigma_1": 238.68479919433594,
+        "sigma_2": 66.08517456054688,
+        "sigma_3": 17.257152557373047,
+        "passage_distance": 3.3774828910827637,
+        "n_tokens": 34
+      },
+      "relay": {
+        "spectral_entropy": 1.3223313093185425,
+        "participation_ratio": 1.8718633995235934,
+        "sigma_1": 244.1600341796875,
+        "sigma_2": 82.76451873779297,
+        "sigma_3": 65.83570098876953,
+        "passage_distance": 3.4010672569274902,
+        "n_tokens": 34
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 6,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.37320631742477417,
+        "participation_ratio": 1.1881225846923853,
+        "sigma_1": 238.68057250976562,
+        "sigma_2": 66.08482360839844,
+        "sigma_3": 16.817705154418945,
+        "passage_distance": 3.3748631477355957,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.2579976320266724,
+        "participation_ratio": 1.8092031064186875,
+        "sigma_1": 244.12025451660156,
+        "sigma_2": 79.63330841064453,
+        "sigma_3": 65.81719970703125,
+        "passage_distance": 3.411484718322754,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 7,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3737483024597168,
+        "participation_ratio": 1.1883785129220419,
+        "sigma_1": 238.68524169921875,
+        "sigma_2": 66.08479309082031,
+        "sigma_3": 17.01592445373535,
+        "passage_distance": 3.3899011611938477,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.269311547279358,
+        "participation_ratio": 1.8266047592596288,
+        "sigma_1": 244.1253204345703,
+        "sigma_2": 81.1651382446289,
+        "sigma_3": 65.81047821044922,
+        "passage_distance": 3.4155590534210205,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 8,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3607979416847229,
+        "participation_ratio": 1.184124025340335,
+        "sigma_1": 238.67449951171875,
+        "sigma_2": 66.08445739746094,
+        "sigma_3": 16.107229232788086,
+        "passage_distance": 3.3811540603637695,
+        "n_tokens": 28
+      },
+      "relay": {
+        "spectral_entropy": 1.1665105819702148,
+        "participation_ratio": 1.7247346732696587,
+        "sigma_1": 244.1134490966797,
+        "sigma_2": 75.55205535888672,
+        "sigma_3": 65.70401000976562,
+        "passage_distance": 3.413541793823242,
+        "n_tokens": 28
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 9,
+      "repeat": 0,
+      "tunnel": {
+        "spectral_entropy": 0.3990143835544586,
+        "participation_ratio": 1.1966616595123063,
+        "sigma_1": 238.67599487304688,
+        "sigma_2": 66.08476257324219,
+        "sigma_3": 17.89935302734375,
+        "passage_distance": 3.4082894325256348,
+        "n_tokens": 38
+      },
+      "relay": {
+        "spectral_entropy": 1.4189002513885498,
+        "participation_ratio": 1.9783024432515326,
+        "sigma_1": 244.11373901367188,
+        "sigma_2": 88.31591796875,
+        "sigma_3": 65.90482330322266,
+        "passage_distance": 3.40859317779541,
+        "n_tokens": 38
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3698943853378296,
+        "participation_ratio": 1.1870743318633643,
+        "sigma_1": 238.6774139404297,
+        "sigma_2": 66.08525085449219,
+        "sigma_3": 16.53595733642578,
+        "passage_distance": 3.359374761581421,
+        "n_tokens": 30
+      },
+      "relay": {
+        "spectral_entropy": 1.2387075424194336,
+        "participation_ratio": 1.796012058082579,
+        "sigma_1": 244.1161346435547,
+        "sigma_2": 78.97269439697266,
+        "sigma_3": 65.74836730957031,
+        "passage_distance": 3.412407398223877,
+        "n_tokens": 30
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3599861264228821,
+        "participation_ratio": 1.1840164864134102,
+        "sigma_1": 238.68019104003906,
+        "sigma_2": 66.08425903320312,
+        "sigma_3": 16.218244552612305,
+        "passage_distance": 3.3667612075805664,
+        "n_tokens": 27
+      },
+      "relay": {
+        "spectral_entropy": 1.13461434841156,
+        "participation_ratio": 1.7000230554133378,
+        "sigma_1": 244.11471557617188,
+        "sigma_2": 74.47159576416016,
+        "sigma_3": 65.70247650146484,
+        "passage_distance": 3.4109764099121094,
+        "n_tokens": 27
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.38025176525115967,
+        "participation_ratio": 1.1904533360504521,
+        "sigma_1": 238.6894989013672,
+        "sigma_2": 66.08552551269531,
+        "sigma_3": 17.257558822631836,
+        "passage_distance": 3.399258852005005,
+        "n_tokens": 32
+      },
+      "relay": {
+        "spectral_entropy": 1.2686647176742554,
+        "participation_ratio": 1.8170406694355041,
+        "sigma_1": 244.12644958496094,
+        "sigma_2": 80.1980972290039,
+        "sigma_3": 65.8270263671875,
+        "passage_distance": 3.405385732650757,
+        "n_tokens": 32
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.38867077231407166,
+        "participation_ratio": 1.1931491674796793,
+        "sigma_1": 238.68359375,
+        "sigma_2": 66.08489990234375,
+        "sigma_3": 17.248733520507812,
+        "passage_distance": 3.4047629833221436,
+        "n_tokens": 35
+      },
+      "relay": {
+        "spectral_entropy": 1.378796100616455,
+        "participation_ratio": 1.9207224329390367,
+        "sigma_1": 244.12109375,
+        "sigma_2": 81.91480255126953,
+        "sigma_3": 65.79624938964844,
+        "passage_distance": 3.40694522857666,
+        "n_tokens": 35
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3746422529220581,
+        "participation_ratio": 1.1886670023350596,
+        "sigma_1": 238.67623901367188,
+        "sigma_2": 66.08448791503906,
+        "sigma_3": 17.20939064025879,
+        "passage_distance": 3.395061731338501,
+        "n_tokens": 32
+      },
+      "relay": {
+        "spectral_entropy": 1.2748980522155762,
+        "participation_ratio": 1.8341641989590283,
+        "sigma_1": 244.11264038085938,
+        "sigma_2": 82.50117492675781,
+        "sigma_3": 65.84138488769531,
+        "passage_distance": 3.415978193283081,
+        "n_tokens": 32
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 5,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.38164016604423523,
+        "participation_ratio": 1.1908418300666772,
+        "sigma_1": 238.68479919433594,
+        "sigma_2": 66.08517456054688,
+        "sigma_3": 17.257152557373047,
+        "passage_distance": 3.3774828910827637,
+        "n_tokens": 34
+      },
+      "relay": {
+        "spectral_entropy": 1.3223313093185425,
+        "participation_ratio": 1.8718633995235934,
+        "sigma_1": 244.1600341796875,
+        "sigma_2": 82.76451873779297,
+        "sigma_3": 65.83570098876953,
+        "passage_distance": 3.4010672569274902,
+        "n_tokens": 34
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 6,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.37320631742477417,
+        "participation_ratio": 1.1881225846923853,
+        "sigma_1": 238.68057250976562,
+        "sigma_2": 66.08482360839844,
+        "sigma_3": 16.817705154418945,
+        "passage_distance": 3.3748631477355957,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.2579976320266724,
+        "participation_ratio": 1.8092031064186875,
+        "sigma_1": 244.12025451660156,
+        "sigma_2": 79.63330841064453,
+        "sigma_3": 65.81719970703125,
+        "passage_distance": 3.411484718322754,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 7,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3737483024597168,
+        "participation_ratio": 1.1883785129220419,
+        "sigma_1": 238.68524169921875,
+        "sigma_2": 66.08479309082031,
+        "sigma_3": 17.01592445373535,
+        "passage_distance": 3.3899011611938477,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.269311547279358,
+        "participation_ratio": 1.8266047592596288,
+        "sigma_1": 244.1253204345703,
+        "sigma_2": 81.1651382446289,
+        "sigma_3": 65.81047821044922,
+        "passage_distance": 3.4155590534210205,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 8,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3607979416847229,
+        "participation_ratio": 1.184124025340335,
+        "sigma_1": 238.67449951171875,
+        "sigma_2": 66.08445739746094,
+        "sigma_3": 16.107229232788086,
+        "passage_distance": 3.3811540603637695,
+        "n_tokens": 28
+      },
+      "relay": {
+        "spectral_entropy": 1.1665105819702148,
+        "participation_ratio": 1.7247346732696587,
+        "sigma_1": 244.1134490966797,
+        "sigma_2": 75.55205535888672,
+        "sigma_3": 65.70401000976562,
+        "passage_distance": 3.413541793823242,
+        "n_tokens": 28
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 9,
+      "repeat": 1,
+      "tunnel": {
+        "spectral_entropy": 0.3990143835544586,
+        "participation_ratio": 1.1966616595123063,
+        "sigma_1": 238.67599487304688,
+        "sigma_2": 66.08476257324219,
+        "sigma_3": 17.89935302734375,
+        "passage_distance": 3.4082894325256348,
+        "n_tokens": 38
+      },
+      "relay": {
+        "spectral_entropy": 1.4189002513885498,
+        "participation_ratio": 1.9783024432515326,
+        "sigma_1": 244.11373901367188,
+        "sigma_2": 88.31591796875,
+        "sigma_3": 65.90482330322266,
+        "passage_distance": 3.40859317779541,
+        "n_tokens": 38
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 0,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3698943853378296,
+        "participation_ratio": 1.1870743318633643,
+        "sigma_1": 238.6774139404297,
+        "sigma_2": 66.08525085449219,
+        "sigma_3": 16.53595733642578,
+        "passage_distance": 3.359374761581421,
+        "n_tokens": 30
+      },
+      "relay": {
+        "spectral_entropy": 1.2387075424194336,
+        "participation_ratio": 1.796012058082579,
+        "sigma_1": 244.1161346435547,
+        "sigma_2": 78.97269439697266,
+        "sigma_3": 65.74836730957031,
+        "passage_distance": 3.412407398223877,
+        "n_tokens": 30
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 1,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3599861264228821,
+        "participation_ratio": 1.1840164864134102,
+        "sigma_1": 238.68019104003906,
+        "sigma_2": 66.08425903320312,
+        "sigma_3": 16.218244552612305,
+        "passage_distance": 3.3667612075805664,
+        "n_tokens": 27
+      },
+      "relay": {
+        "spectral_entropy": 1.13461434841156,
+        "participation_ratio": 1.7000230554133378,
+        "sigma_1": 244.11471557617188,
+        "sigma_2": 74.47159576416016,
+        "sigma_3": 65.70247650146484,
+        "passage_distance": 3.4109764099121094,
+        "n_tokens": 27
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 2,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.38025176525115967,
+        "participation_ratio": 1.1904533360504521,
+        "sigma_1": 238.6894989013672,
+        "sigma_2": 66.08552551269531,
+        "sigma_3": 17.257558822631836,
+        "passage_distance": 3.399258852005005,
+        "n_tokens": 32
+      },
+      "relay": {
+        "spectral_entropy": 1.2686647176742554,
+        "participation_ratio": 1.8170406694355041,
+        "sigma_1": 244.12644958496094,
+        "sigma_2": 80.1980972290039,
+        "sigma_3": 65.8270263671875,
+        "passage_distance": 3.405385732650757,
+        "n_tokens": 32
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 3,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.38867077231407166,
+        "participation_ratio": 1.1931491674796793,
+        "sigma_1": 238.68359375,
+        "sigma_2": 66.08489990234375,
+        "sigma_3": 17.248733520507812,
+        "passage_distance": 3.4047629833221436,
+        "n_tokens": 35
+      },
+      "relay": {
+        "spectral_entropy": 1.378796100616455,
+        "participation_ratio": 1.9207224329390367,
+        "sigma_1": 244.12109375,
+        "sigma_2": 81.91480255126953,
+        "sigma_3": 65.79624938964844,
+        "passage_distance": 3.40694522857666,
+        "n_tokens": 35
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 4,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3746422529220581,
+        "participation_ratio": 1.1886670023350596,
+        "sigma_1": 238.67623901367188,
+        "sigma_2": 66.08448791503906,
+        "sigma_3": 17.20939064025879,
+        "passage_distance": 3.395061731338501,
+        "n_tokens": 32
+      },
+      "relay": {
+        "spectral_entropy": 1.2748980522155762,
+        "participation_ratio": 1.8341641989590283,
+        "sigma_1": 244.11264038085938,
+        "sigma_2": 82.50117492675781,
+        "sigma_3": 65.84138488769531,
+        "passage_distance": 3.415978193283081,
+        "n_tokens": 32
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 5,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.38164016604423523,
+        "participation_ratio": 1.1908418300666772,
+        "sigma_1": 238.68479919433594,
+        "sigma_2": 66.08517456054688,
+        "sigma_3": 17.257152557373047,
+        "passage_distance": 3.3774828910827637,
+        "n_tokens": 34
+      },
+      "relay": {
+        "spectral_entropy": 1.3223313093185425,
+        "participation_ratio": 1.8718633995235934,
+        "sigma_1": 244.1600341796875,
+        "sigma_2": 82.76451873779297,
+        "sigma_3": 65.83570098876953,
+        "passage_distance": 3.4010672569274902,
+        "n_tokens": 34
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 6,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.37320631742477417,
+        "participation_ratio": 1.1881225846923853,
+        "sigma_1": 238.68057250976562,
+        "sigma_2": 66.08482360839844,
+        "sigma_3": 16.817705154418945,
+        "passage_distance": 3.3748631477355957,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.2579976320266724,
+        "participation_ratio": 1.8092031064186875,
+        "sigma_1": 244.12025451660156,
+        "sigma_2": 79.63330841064453,
+        "sigma_3": 65.81719970703125,
+        "passage_distance": 3.411484718322754,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 7,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3737483024597168,
+        "participation_ratio": 1.1883785129220419,
+        "sigma_1": 238.68524169921875,
+        "sigma_2": 66.08479309082031,
+        "sigma_3": 17.01592445373535,
+        "passage_distance": 3.3899011611938477,
+        "n_tokens": 31
+      },
+      "relay": {
+        "spectral_entropy": 1.269311547279358,
+        "participation_ratio": 1.8266047592596288,
+        "sigma_1": 244.1253204345703,
+        "sigma_2": 81.1651382446289,
+        "sigma_3": 65.81047821044922,
+        "passage_distance": 3.4155590534210205,
+        "n_tokens": 31
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 8,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3607979416847229,
+        "participation_ratio": 1.184124025340335,
+        "sigma_1": 238.67449951171875,
+        "sigma_2": 66.08445739746094,
+        "sigma_3": 16.107229232788086,
+        "passage_distance": 3.3811540603637695,
+        "n_tokens": 28
+      },
+      "relay": {
+        "spectral_entropy": 1.1665105819702148,
+        "participation_ratio": 1.7247346732696587,
+        "sigma_1": 244.1134490966797,
+        "sigma_2": 75.55205535888672,
+        "sigma_3": 65.70401000976562,
+        "passage_distance": 3.413541793823242,
+        "n_tokens": 28
+      }
+    },
+    {
+      "condition": "absent",
+      "probe_idx": 9,
+      "repeat": 2,
+      "tunnel": {
+        "spectral_entropy": 0.3990143835544586,
+        "participation_ratio": 1.1966616595123063,
+        "sigma_1": 238.67599487304688,
+        "sigma_2": 66.08476257324219,
+        "sigma_3": 17.89935302734375,
+        "passage_distance": 3.4082894325256348,
+        "n_tokens": 38
+      },
+      "relay": {
+        "spectral_entropy": 1.4189002513885498,
+        "participation_ratio": 1.9783024432515326,
+        "sigma_1": 244.11373901367188,
+        "sigma_2": 88.31591796875,
+        "sigma_3": 65.90482330322266,
+        "passage_distance": 3.40859317779541,
+        "n_tokens": 38
+      }
+    }
+  ]
+}

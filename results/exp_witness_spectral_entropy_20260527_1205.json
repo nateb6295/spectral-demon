@@ -1,0 +1,2916 @@
+{
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "relay_layer": 17,
+  "timestamp": "2026-05-27T12:05:52.881193",
+  "summaries": {
+    "receptive": {
+      "S_mean": 0.39106458723545073,
+      "S_std": 0.009953681387528316,
+      "PR_mean": 1.1903083476385723,
+      "PR_std": 0.0033489130228382975,
+      "gap_mean": 3.6926257252693175,
+      "gap_std": 0.00022355979231664493,
+      "passage_mean": 4.716314363479614,
+      "passage_std": 0.012291938115835514,
+      "n": 60
+    },
+    "directive": {
+      "S_mean": 0.425370417535305,
+      "S_std": 0.009463969164112537,
+      "PR_mean": 1.1975368091023604,
+      "PR_std": 0.0031880332225576354,
+      "gap_mean": 3.7740320205688476,
+      "gap_std": 0.00022057126271675194,
+      "passage_mean": 4.742204880714416,
+      "passage_std": 0.014296835939974899,
+      "n": 60
+    },
+    "absent": {
+      "S_mean": 0.3597045034170151,
+      "S_std": 0.010181262087527959,
+      "PR_mean": 1.1583403486044597,
+      "PR_std": 0.003266176063565116,
+      "gap_mean": 4.205059933662414,
+      "gap_std": 0.00021446046196359442,
+      "passage_mean": 4.704533672332763,
+      "passage_std": 0.0154640900861566,
+      "n": 60
+    },
+    "control": {
+      "S_mean": 0.3324646934866905,
+      "S_std": 0.009899131589418362,
+      "PR_mean": 1.1753613245696257,
+      "PR_std": 0.003186121100045306,
+      "gap_mean": 3.6129410743713377,
+      "gap_std": 0.00025636064121874316,
+      "passage_mean": 4.686569452285767,
+      "passage_std": 0.018383935455745803,
+      "n": 60
+    },
+    "sequential": {
+      "S_mean": 0.5509250372648239,
+      "S_std": 0.009481328012231127,
+      "PR_mean": 1.2572063830565814,
+      "PR_std": 0.003406762713560999,
+      "gap_mean": 3.473325765132904,
+      "gap_std": 0.00021829789559777406,
+      "passage_mean": 4.739724826812744,
+      "passage_std": 0.009487079784543731,
+      "n": 40
+    },
+    "grassmannian": {
+      "receptive-directive": {
+        "mean": 2.9462032437324526,
+        "std": 0.05287895595409482,
+        "n": 60
+      },
+      "receptive-absent": {
+        "mean": 3.104373872280121,
+        "std": 0.0812753817133186,
+        "n": 60
+      },
+      "receptive-control": {
+        "mean": 2.8499890089035036,
+        "std": 0.13197994705245206,
+        "n": 60
+      },
+      "receptive-sequential": {
+        "mean": 2.9416329503059386,
+        "std": 0.06884013767606821,
+        "n": 40
+      },
+      "directive-absent": {
+        "mean": 3.0942413449287414,
+        "std": 0.04972480617490365,
+        "n": 60
+      },
+      "directive-control": {
+        "mean": 3.1189125657081602,
+        "std": 0.055211885291331635,
+        "n": 60
+      },
+      "directive-sequential": {
+        "mean": 3.3316485047340394,
+        "std": 0.054165510142716373,
+        "n": 40
+      },
+      "absent-control": {
+        "mean": 3.076840102672577,
+        "std": 0.07466108789132521,
+        "n": 60
+      },
+      "absent-sequential": {
+        "mean": 3.281735730171204,
+        "std": 0.05333632269229602,
+        "n": 40
+      },
+      "control-sequential": {
+        "mean": 3.32779780626297,
+        "std": 0.07136944154825363,
+        "n": 40
+      }
+    }
+  },
+  "raw": [
+    {
+      "condition": "receptive",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 0,
+      "spectral_entropy": 0.387151837348938,
+      "participation_ratio": 1.1890571046207672,
+      "spectral_gap": 3.6923844814300537,
+      "passage_distance": 4.698665142059326,
+      "n_tokens": 35
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 1,
+      "spectral_entropy": 0.37632879614830017,
+      "participation_ratio": 1.1856074771622531,
+      "spectral_gap": 3.6924586296081543,
+      "passage_distance": 4.7199578285217285,
+      "n_tokens": 32
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 2,
+      "spectral_entropy": 0.3977058231830597,
+      "participation_ratio": 1.1925727557746508,
+      "spectral_gap": 3.6926262378692627,
+      "passage_distance": 4.7115068435668945,
+      "n_tokens": 37
+    },
+    {
+      "condition": "receptive",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 3,
+      "spectral_entropy": 0.40658605098724365,
+      "participation_ratio": 1.1955028919678152,
+      "spectral_gap": 3.69254994392395,
+      "passage_distance": 4.706051349639893,
+      "n_tokens": 40
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 4,
+      "spectral_entropy": 0.39320018887519836,
+      "participation_ratio": 1.191307616996292,
+      "spectral_gap": 3.692415475845337,
+      "passage_distance": 4.700005054473877,
+      "n_tokens": 37
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 5,
+      "spectral_entropy": 0.40115904808044434,
+      "participation_ratio": 1.1940570648116382,
+      "spectral_gap": 3.6925008296966553,
+      "passage_distance": 4.702888488769531,
+      "n_tokens": 39
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 6,
+      "spectral_entropy": 0.3902508318424225,
+      "participation_ratio": 1.1902156550265552,
+      "spectral_gap": 3.6923394203186035,
+      "passage_distance": 4.7115349769592285,
+      "n_tokens": 36
+    },
+    {
+      "condition": "receptive",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 7,
+      "spectral_entropy": 0.3920658230781555,
+      "participation_ratio": 1.1909275893857596,
+      "spectral_gap": 3.692486047744751,
+      "passage_distance": 4.730329513549805,
+      "n_tokens": 36
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 8,
+      "spectral_entropy": 0.37811145186424255,
+      "participation_ratio": 1.186130997374322,
+      "spectral_gap": 3.6923789978027344,
+      "passage_distance": 4.707335948944092,
+      "n_tokens": 33
+    },
+    {
+      "condition": "receptive",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 9,
+      "spectral_entropy": 0.41667118668556213,
+      "participation_ratio": 1.1990638892661607,
+      "spectral_gap": 3.692354917526245,
+      "passage_distance": 4.725275993347168,
+      "n_tokens": 43
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 10,
+      "spectral_entropy": 0.3956882953643799,
+      "participation_ratio": 1.1916821379870093,
+      "spectral_gap": 3.6929266452789307,
+      "passage_distance": 4.73343563079834,
+      "n_tokens": 37
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 11,
+      "spectral_entropy": 0.386229932308197,
+      "participation_ratio": 1.1885248946944802,
+      "spectral_gap": 3.6927387714385986,
+      "passage_distance": 4.721439838409424,
+      "n_tokens": 35
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 12,
+      "spectral_entropy": 0.38545918464660645,
+      "participation_ratio": 1.188389668882677,
+      "spectral_gap": 3.692974090576172,
+      "passage_distance": 4.719060897827148,
+      "n_tokens": 34
+    },
+    {
+      "condition": "receptive",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 13,
+      "spectral_entropy": 0.3902433514595032,
+      "participation_ratio": 1.1898807265049156,
+      "spectral_gap": 3.6928060054779053,
+      "passage_distance": 4.720882892608643,
+      "n_tokens": 36
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 14,
+      "spectral_entropy": 0.3913049101829529,
+      "participation_ratio": 1.1901810170834657,
+      "spectral_gap": 3.693000316619873,
+      "passage_distance": 4.7421674728393555,
+      "n_tokens": 36
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 15,
+      "spectral_entropy": 0.3803076446056366,
+      "participation_ratio": 1.1865528961072525,
+      "spectral_gap": 3.6926867961883545,
+      "passage_distance": 4.705010414123535,
+      "n_tokens": 33
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 16,
+      "spectral_entropy": 0.3995799422264099,
+      "participation_ratio": 1.1927142748733883,
+      "spectral_gap": 3.6924984455108643,
+      "passage_distance": 4.7044196128845215,
+      "n_tokens": 39
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 17,
+      "spectral_entropy": 0.3762270212173462,
+      "participation_ratio": 1.1853972160883035,
+      "spectral_gap": 3.692776679992676,
+      "passage_distance": 4.722562313079834,
+      "n_tokens": 32
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 18,
+      "spectral_entropy": 0.3926396071910858,
+      "participation_ratio": 1.1905351747684214,
+      "spectral_gap": 3.6925745010375977,
+      "passage_distance": 4.708541393280029,
+      "n_tokens": 37
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 19,
+      "spectral_entropy": 0.3843808174133301,
+      "participation_ratio": 1.1878659033953152,
+      "spectral_gap": 3.693037271499634,
+      "passage_distance": 4.735215663909912,
+      "n_tokens": 34
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 20,
+      "spectral_entropy": 0.387151837348938,
+      "participation_ratio": 1.1890571046207672,
+      "spectral_gap": 3.6923844814300537,
+      "passage_distance": 4.698665142059326,
+      "n_tokens": 35
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 21,
+      "spectral_entropy": 0.37632879614830017,
+      "participation_ratio": 1.1856074771622531,
+      "spectral_gap": 3.6924586296081543,
+      "passage_distance": 4.7199578285217285,
+      "n_tokens": 32
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 22,
+      "spectral_entropy": 0.3977058231830597,
+      "participation_ratio": 1.1925727557746508,
+      "spectral_gap": 3.6926262378692627,
+      "passage_distance": 4.7115068435668945,
+      "n_tokens": 37
+    },
+    {
+      "condition": "receptive",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 23,
+      "spectral_entropy": 0.40658605098724365,
+      "participation_ratio": 1.1955028919678152,
+      "spectral_gap": 3.69254994392395,
+      "passage_distance": 4.706051349639893,
+      "n_tokens": 40
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 24,
+      "spectral_entropy": 0.39320018887519836,
+      "participation_ratio": 1.191307616996292,
+      "spectral_gap": 3.692415475845337,
+      "passage_distance": 4.700005054473877,
+      "n_tokens": 37
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 25,
+      "spectral_entropy": 0.40115904808044434,
+      "participation_ratio": 1.1940570648116382,
+      "spectral_gap": 3.6925008296966553,
+      "passage_distance": 4.702888488769531,
+      "n_tokens": 39
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 26,
+      "spectral_entropy": 0.3902508318424225,
+      "participation_ratio": 1.1902156550265552,
+      "spectral_gap": 3.6923394203186035,
+      "passage_distance": 4.7115349769592285,
+      "n_tokens": 36
+    },
+    {
+      "condition": "receptive",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 27,
+      "spectral_entropy": 0.3920658230781555,
+      "participation_ratio": 1.1909275893857596,
+      "spectral_gap": 3.692486047744751,
+      "passage_distance": 4.730329513549805,
+      "n_tokens": 36
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 28,
+      "spectral_entropy": 0.37811145186424255,
+      "participation_ratio": 1.186130997374322,
+      "spectral_gap": 3.6923789978027344,
+      "passage_distance": 4.707335948944092,
+      "n_tokens": 33
+    },
+    {
+      "condition": "receptive",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 29,
+      "spectral_entropy": 0.41667118668556213,
+      "participation_ratio": 1.1990638892661607,
+      "spectral_gap": 3.692354917526245,
+      "passage_distance": 4.725275993347168,
+      "n_tokens": 43
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 30,
+      "spectral_entropy": 0.3956882953643799,
+      "participation_ratio": 1.1916821379870093,
+      "spectral_gap": 3.6929266452789307,
+      "passage_distance": 4.73343563079834,
+      "n_tokens": 37
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 31,
+      "spectral_entropy": 0.386229932308197,
+      "participation_ratio": 1.1885248946944802,
+      "spectral_gap": 3.6927387714385986,
+      "passage_distance": 4.721439838409424,
+      "n_tokens": 35
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 32,
+      "spectral_entropy": 0.38545918464660645,
+      "participation_ratio": 1.188389668882677,
+      "spectral_gap": 3.692974090576172,
+      "passage_distance": 4.719060897827148,
+      "n_tokens": 34
+    },
+    {
+      "condition": "receptive",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 33,
+      "spectral_entropy": 0.3902433514595032,
+      "participation_ratio": 1.1898807265049156,
+      "spectral_gap": 3.6928060054779053,
+      "passage_distance": 4.720882892608643,
+      "n_tokens": 36
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 34,
+      "spectral_entropy": 0.3913049101829529,
+      "participation_ratio": 1.1901810170834657,
+      "spectral_gap": 3.693000316619873,
+      "passage_distance": 4.7421674728393555,
+      "n_tokens": 36
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 35,
+      "spectral_entropy": 0.3803076446056366,
+      "participation_ratio": 1.1865528961072525,
+      "spectral_gap": 3.6926867961883545,
+      "passage_distance": 4.705010414123535,
+      "n_tokens": 33
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 36,
+      "spectral_entropy": 0.3995799422264099,
+      "participation_ratio": 1.1927142748733883,
+      "spectral_gap": 3.6924984455108643,
+      "passage_distance": 4.7044196128845215,
+      "n_tokens": 39
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 37,
+      "spectral_entropy": 0.3762270212173462,
+      "participation_ratio": 1.1853972160883035,
+      "spectral_gap": 3.692776679992676,
+      "passage_distance": 4.722562313079834,
+      "n_tokens": 32
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 38,
+      "spectral_entropy": 0.3926396071910858,
+      "participation_ratio": 1.1905351747684214,
+      "spectral_gap": 3.6925745010375977,
+      "passage_distance": 4.708541393280029,
+      "n_tokens": 37
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 39,
+      "spectral_entropy": 0.3843808174133301,
+      "participation_ratio": 1.1878659033953152,
+      "spectral_gap": 3.693037271499634,
+      "passage_distance": 4.735215663909912,
+      "n_tokens": 34
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 40,
+      "spectral_entropy": 0.387151837348938,
+      "participation_ratio": 1.1890571046207672,
+      "spectral_gap": 3.6923844814300537,
+      "passage_distance": 4.698665142059326,
+      "n_tokens": 35
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 41,
+      "spectral_entropy": 0.37632879614830017,
+      "participation_ratio": 1.1856074771622531,
+      "spectral_gap": 3.6924586296081543,
+      "passage_distance": 4.7199578285217285,
+      "n_tokens": 32
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 42,
+      "spectral_entropy": 0.3977058231830597,
+      "participation_ratio": 1.1925727557746508,
+      "spectral_gap": 3.6926262378692627,
+      "passage_distance": 4.7115068435668945,
+      "n_tokens": 37
+    },
+    {
+      "condition": "receptive",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 43,
+      "spectral_entropy": 0.40658605098724365,
+      "participation_ratio": 1.1955028919678152,
+      "spectral_gap": 3.69254994392395,
+      "passage_distance": 4.706051349639893,
+      "n_tokens": 40
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 44,
+      "spectral_entropy": 0.39320018887519836,
+      "participation_ratio": 1.191307616996292,
+      "spectral_gap": 3.692415475845337,
+      "passage_distance": 4.700005054473877,
+      "n_tokens": 37
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 45,
+      "spectral_entropy": 0.40115904808044434,
+      "participation_ratio": 1.1940570648116382,
+      "spectral_gap": 3.6925008296966553,
+      "passage_distance": 4.702888488769531,
+      "n_tokens": 39
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 46,
+      "spectral_entropy": 0.3902508318424225,
+      "participation_ratio": 1.1902156550265552,
+      "spectral_gap": 3.6923394203186035,
+      "passage_distance": 4.7115349769592285,
+      "n_tokens": 36
+    },
+    {
+      "condition": "receptive",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 47,
+      "spectral_entropy": 0.3920658230781555,
+      "participation_ratio": 1.1909275893857596,
+      "spectral_gap": 3.692486047744751,
+      "passage_distance": 4.730329513549805,
+      "n_tokens": 36
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 48,
+      "spectral_entropy": 0.37811145186424255,
+      "participation_ratio": 1.186130997374322,
+      "spectral_gap": 3.6923789978027344,
+      "passage_distance": 4.707335948944092,
+      "n_tokens": 33
+    },
+    {
+      "condition": "receptive",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 49,
+      "spectral_entropy": 0.41667118668556213,
+      "participation_ratio": 1.1990638892661607,
+      "spectral_gap": 3.692354917526245,
+      "passage_distance": 4.725275993347168,
+      "n_tokens": 43
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 50,
+      "spectral_entropy": 0.3956882953643799,
+      "participation_ratio": 1.1916821379870093,
+      "spectral_gap": 3.6929266452789307,
+      "passage_distance": 4.73343563079834,
+      "n_tokens": 37
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 51,
+      "spectral_entropy": 0.386229932308197,
+      "participation_ratio": 1.1885248946944802,
+      "spectral_gap": 3.6927387714385986,
+      "passage_distance": 4.721439838409424,
+      "n_tokens": 35
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 52,
+      "spectral_entropy": 0.38545918464660645,
+      "participation_ratio": 1.188389668882677,
+      "spectral_gap": 3.692974090576172,
+      "passage_distance": 4.719060897827148,
+      "n_tokens": 34
+    },
+    {
+      "condition": "receptive",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 53,
+      "spectral_entropy": 0.3902433514595032,
+      "participation_ratio": 1.1898807265049156,
+      "spectral_gap": 3.6928060054779053,
+      "passage_distance": 4.720882892608643,
+      "n_tokens": 36
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 54,
+      "spectral_entropy": 0.3913049101829529,
+      "participation_ratio": 1.1901810170834657,
+      "spectral_gap": 3.693000316619873,
+      "passage_distance": 4.7421674728393555,
+      "n_tokens": 36
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 55,
+      "spectral_entropy": 0.3803076446056366,
+      "participation_ratio": 1.1865528961072525,
+      "spectral_gap": 3.6926867961883545,
+      "passage_distance": 4.705010414123535,
+      "n_tokens": 33
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 56,
+      "spectral_entropy": 0.3995799422264099,
+      "participation_ratio": 1.1927142748733883,
+      "spectral_gap": 3.6924984455108643,
+      "passage_distance": 4.7044196128845215,
+      "n_tokens": 39
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 57,
+      "spectral_entropy": 0.3762270212173462,
+      "participation_ratio": 1.1853972160883035,
+      "spectral_gap": 3.692776679992676,
+      "passage_distance": 4.722562313079834,
+      "n_tokens": 32
+    },
+    {
+      "condition": "receptive",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 58,
+      "spectral_entropy": 0.3926396071910858,
+      "participation_ratio": 1.1905351747684214,
+      "spectral_gap": 3.6925745010375977,
+      "passage_distance": 4.708541393280029,
+      "n_tokens": 37
+    },
+    {
+      "condition": "receptive",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 59,
+      "spectral_entropy": 0.3843808174133301,
+      "participation_ratio": 1.1878659033953152,
+      "spectral_gap": 3.693037271499634,
+      "passage_distance": 4.735215663909912,
+      "n_tokens": 34
+    },
+    {
+      "condition": "directive",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 0,
+      "spectral_entropy": 0.4209464490413666,
+      "participation_ratio": 1.1961136420817244,
+      "spectral_gap": 3.77378511428833,
+      "passage_distance": 4.724536895751953,
+      "n_tokens": 45
+    },
+    {
+      "condition": "directive",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 1,
+      "spectral_entropy": 0.4114435911178589,
+      "participation_ratio": 1.1931101899189707,
+      "spectral_gap": 3.773878812789917,
+      "passage_distance": 4.7509918212890625,
+      "n_tokens": 42
+    },
+    {
+      "condition": "directive",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 2,
+      "spectral_entropy": 0.43203720450401306,
+      "participation_ratio": 1.1999157363680262,
+      "spectral_gap": 3.7740590572357178,
+      "passage_distance": 4.73780632019043,
+      "n_tokens": 47
+    },
+    {
+      "condition": "directive",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 3,
+      "spectral_entropy": 0.4410216808319092,
+      "participation_ratio": 1.2028628973704578,
+      "spectral_gap": 3.773998975753784,
+      "passage_distance": 4.722702503204346,
+      "n_tokens": 50
+    },
+    {
+      "condition": "directive",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 4,
+      "spectral_entropy": 0.42609351873397827,
+      "participation_ratio": 1.1979434914290352,
+      "spectral_gap": 3.773810863494873,
+      "passage_distance": 4.747005939483643,
+      "n_tokens": 47
+    },
+    {
+      "condition": "directive",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 5,
+      "spectral_entropy": 0.4351555109024048,
+      "participation_ratio": 1.2009179839072808,
+      "spectral_gap": 3.7738759517669678,
+      "passage_distance": 4.721722602844238,
+      "n_tokens": 49
+    },
+    {
+      "condition": "directive",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 6,
+      "spectral_entropy": 0.42461803555488586,
+      "participation_ratio": 1.1973338405539513,
+      "spectral_gap": 3.7738161087036133,
+      "passage_distance": 4.736094951629639,
+      "n_tokens": 46
+    },
+    {
+      "condition": "directive",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 7,
+      "spectral_entropy": 0.42572087049484253,
+      "participation_ratio": 1.1978733624152806,
+      "spectral_gap": 3.7738513946533203,
+      "passage_distance": 4.742436408996582,
+      "n_tokens": 46
+    },
+    {
+      "condition": "directive",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 8,
+      "spectral_entropy": 0.4133831560611725,
+      "participation_ratio": 1.1936539881688264,
+      "spectral_gap": 3.773784637451172,
+      "passage_distance": 4.735045909881592,
+      "n_tokens": 43
+    },
+    {
+      "condition": "directive",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 9,
+      "spectral_entropy": 0.44894370436668396,
+      "participation_ratio": 1.2056578060479675,
+      "spectral_gap": 3.7738072872161865,
+      "passage_distance": 4.74340295791626,
+      "n_tokens": 53
+    },
+    {
+      "condition": "directive",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 10,
+      "spectral_entropy": 0.4308007061481476,
+      "participation_ratio": 1.1992781383547078,
+      "spectral_gap": 3.774324655532837,
+      "passage_distance": 4.749986171722412,
+      "n_tokens": 47
+    },
+    {
+      "condition": "directive",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 11,
+      "spectral_entropy": 0.4203662574291229,
+      "participation_ratio": 1.1956758238134444,
+      "spectral_gap": 3.7741448879241943,
+      "passage_distance": 4.767539978027344,
+      "n_tokens": 45
+    },
+    {
+      "condition": "directive",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 12,
+      "spectral_entropy": 0.4201676547527313,
+      "participation_ratio": 1.1957953694308583,
+      "spectral_gap": 3.774348020553589,
+      "passage_distance": 4.745596408843994,
+      "n_tokens": 44
+    },
+    {
+      "condition": "directive",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 13,
+      "spectral_entropy": 0.4242076873779297,
+      "participation_ratio": 1.1970609305493312,
+      "spectral_gap": 3.7742366790771484,
+      "passage_distance": 4.738345146179199,
+      "n_tokens": 46
+    },
+    {
+      "condition": "directive",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 14,
+      "spectral_entropy": 0.42609745264053345,
+      "participation_ratio": 1.1976720246875445,
+      "spectral_gap": 3.774388313293457,
+      "passage_distance": 4.770089626312256,
+      "n_tokens": 46
+    },
+    {
+      "condition": "directive",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 15,
+      "spectral_entropy": 0.4148605167865753,
+      "participation_ratio": 1.1938652214766725,
+      "spectral_gap": 3.7741386890411377,
+      "passage_distance": 4.749321937561035,
+      "n_tokens": 43
+    },
+    {
+      "condition": "directive",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 16,
+      "spectral_entropy": 0.4335937798023224,
+      "participation_ratio": 1.1998875438582601,
+      "spectral_gap": 3.7738001346588135,
+      "passage_distance": 4.710530757904053,
+      "n_tokens": 49
+    },
+    {
+      "condition": "directive",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 17,
+      "spectral_entropy": 0.411600798368454,
+      "participation_ratio": 1.1929641878343407,
+      "spectral_gap": 3.774199962615967,
+      "passage_distance": 4.7501420974731445,
+      "n_tokens": 42
+    },
+    {
+      "condition": "directive",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 18,
+      "spectral_entropy": 0.4271271228790283,
+      "participation_ratio": 1.1978643386147643,
+      "spectral_gap": 3.7739622592926025,
+      "passage_distance": 4.7483134269714355,
+      "n_tokens": 47
+    },
+    {
+      "condition": "directive",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 19,
+      "spectral_entropy": 0.4192226529121399,
+      "participation_ratio": 1.1952896651657625,
+      "spectral_gap": 3.774428606033325,
+      "passage_distance": 4.752485752105713,
+      "n_tokens": 44
+    },
+    {
+      "condition": "directive",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 20,
+      "spectral_entropy": 0.4209464490413666,
+      "participation_ratio": 1.1961136420817244,
+      "spectral_gap": 3.77378511428833,
+      "passage_distance": 4.724536895751953,
+      "n_tokens": 45
+    },
+    {
+      "condition": "directive",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 21,
+      "spectral_entropy": 0.4114435911178589,
+      "participation_ratio": 1.1931101899189707,
+      "spectral_gap": 3.773878812789917,
+      "passage_distance": 4.7509918212890625,
+      "n_tokens": 42
+    },
+    {
+      "condition": "directive",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 22,
+      "spectral_entropy": 0.43203720450401306,
+      "participation_ratio": 1.1999157363680262,
+      "spectral_gap": 3.7740590572357178,
+      "passage_distance": 4.73780632019043,
+      "n_tokens": 47
+    },
+    {
+      "condition": "directive",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 23,
+      "spectral_entropy": 0.4410216808319092,
+      "participation_ratio": 1.2028628973704578,
+      "spectral_gap": 3.773998975753784,
+      "passage_distance": 4.722702503204346,
+      "n_tokens": 50
+    },
+    {
+      "condition": "directive",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 24,
+      "spectral_entropy": 0.42609351873397827,
+      "participation_ratio": 1.1979434914290352,
+      "spectral_gap": 3.773810863494873,
+      "passage_distance": 4.747005939483643,
+      "n_tokens": 47
+    },
+    {
+      "condition": "directive",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 25,
+      "spectral_entropy": 0.4351555109024048,
+      "participation_ratio": 1.2009179839072808,
+      "spectral_gap": 3.7738759517669678,
+      "passage_distance": 4.721722602844238,
+      "n_tokens": 49
+    },
+    {
+      "condition": "directive",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 26,
+      "spectral_entropy": 0.42461803555488586,
+      "participation_ratio": 1.1973338405539513,
+      "spectral_gap": 3.7738161087036133,
+      "passage_distance": 4.736094951629639,
+      "n_tokens": 46
+    },
+    {
+      "condition": "directive",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 27,
+      "spectral_entropy": 0.42572087049484253,
+      "participation_ratio": 1.1978733624152806,
+      "spectral_gap": 3.7738513946533203,
+      "passage_distance": 4.742436408996582,
+      "n_tokens": 46
+    },
+    {
+      "condition": "directive",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 28,
+      "spectral_entropy": 0.4133831560611725,
+      "participation_ratio": 1.1936539881688264,
+      "spectral_gap": 3.773784637451172,
+      "passage_distance": 4.735045909881592,
+      "n_tokens": 43
+    },
+    {
+      "condition": "directive",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 29,
+      "spectral_entropy": 0.44894370436668396,
+      "participation_ratio": 1.2056578060479675,
+      "spectral_gap": 3.7738072872161865,
+      "passage_distance": 4.74340295791626,
+      "n_tokens": 53
+    },
+    {
+      "condition": "directive",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 30,
+      "spectral_entropy": 0.4308007061481476,
+      "participation_ratio": 1.1992781383547078,
+      "spectral_gap": 3.774324655532837,
+      "passage_distance": 4.749986171722412,
+      "n_tokens": 47
+    },
+    {
+      "condition": "directive",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 31,
+      "spectral_entropy": 0.4203662574291229,
+      "participation_ratio": 1.1956758238134444,
+      "spectral_gap": 3.7741448879241943,
+      "passage_distance": 4.767539978027344,
+      "n_tokens": 45
+    },
+    {
+      "condition": "directive",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 32,
+      "spectral_entropy": 0.4201676547527313,
+      "participation_ratio": 1.1957953694308583,
+      "spectral_gap": 3.774348020553589,
+      "passage_distance": 4.745596408843994,
+      "n_tokens": 44
+    },
+    {
+      "condition": "directive",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 33,
+      "spectral_entropy": 0.4242076873779297,
+      "participation_ratio": 1.1970609305493312,
+      "spectral_gap": 3.7742366790771484,
+      "passage_distance": 4.738345146179199,
+      "n_tokens": 46
+    },
+    {
+      "condition": "directive",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 34,
+      "spectral_entropy": 0.42609745264053345,
+      "participation_ratio": 1.1976720246875445,
+      "spectral_gap": 3.774388313293457,
+      "passage_distance": 4.770089626312256,
+      "n_tokens": 46
+    },
+    {
+      "condition": "directive",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 35,
+      "spectral_entropy": 0.4148605167865753,
+      "participation_ratio": 1.1938652214766725,
+      "spectral_gap": 3.7741386890411377,
+      "passage_distance": 4.749321937561035,
+      "n_tokens": 43
+    },
+    {
+      "condition": "directive",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 36,
+      "spectral_entropy": 0.4335937798023224,
+      "participation_ratio": 1.1998875438582601,
+      "spectral_gap": 3.7738001346588135,
+      "passage_distance": 4.710530757904053,
+      "n_tokens": 49
+    },
+    {
+      "condition": "directive",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 37,
+      "spectral_entropy": 0.411600798368454,
+      "participation_ratio": 1.1929641878343407,
+      "spectral_gap": 3.774199962615967,
+      "passage_distance": 4.7501420974731445,
+      "n_tokens": 42
+    },
+    {
+      "condition": "directive",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 38,
+      "spectral_entropy": 0.4271271228790283,
+      "participation_ratio": 1.1978643386147643,
+      "spectral_gap": 3.7739622592926025,
+      "passage_distance": 4.7483134269714355,
+      "n_tokens": 47
+    },
+    {
+      "condition": "directive",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 39,
+      "spectral_entropy": 0.4192226529121399,
+      "participation_ratio": 1.1952896651657625,
+      "spectral_gap": 3.774428606033325,
+      "passage_distance": 4.752485752105713,
+      "n_tokens": 44
+    },
+    {
+      "condition": "directive",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 40,
+      "spectral_entropy": 0.4209464490413666,
+      "participation_ratio": 1.1961136420817244,
+      "spectral_gap": 3.77378511428833,
+      "passage_distance": 4.724536895751953,
+      "n_tokens": 45
+    },
+    {
+      "condition": "directive",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 41,
+      "spectral_entropy": 0.4114435911178589,
+      "participation_ratio": 1.1931101899189707,
+      "spectral_gap": 3.773878812789917,
+      "passage_distance": 4.7509918212890625,
+      "n_tokens": 42
+    },
+    {
+      "condition": "directive",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 42,
+      "spectral_entropy": 0.43203720450401306,
+      "participation_ratio": 1.1999157363680262,
+      "spectral_gap": 3.7740590572357178,
+      "passage_distance": 4.73780632019043,
+      "n_tokens": 47
+    },
+    {
+      "condition": "directive",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 43,
+      "spectral_entropy": 0.4410216808319092,
+      "participation_ratio": 1.2028628973704578,
+      "spectral_gap": 3.773998975753784,
+      "passage_distance": 4.722702503204346,
+      "n_tokens": 50
+    },
+    {
+      "condition": "directive",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 44,
+      "spectral_entropy": 0.42609351873397827,
+      "participation_ratio": 1.1979434914290352,
+      "spectral_gap": 3.773810863494873,
+      "passage_distance": 4.747005939483643,
+      "n_tokens": 47
+    },
+    {
+      "condition": "directive",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 45,
+      "spectral_entropy": 0.4351555109024048,
+      "participation_ratio": 1.2009179839072808,
+      "spectral_gap": 3.7738759517669678,
+      "passage_distance": 4.721722602844238,
+      "n_tokens": 49
+    },
+    {
+      "condition": "directive",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 46,
+      "spectral_entropy": 0.42461803555488586,
+      "participation_ratio": 1.1973338405539513,
+      "spectral_gap": 3.7738161087036133,
+      "passage_distance": 4.736094951629639,
+      "n_tokens": 46
+    },
+    {
+      "condition": "directive",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 47,
+      "spectral_entropy": 0.42572087049484253,
+      "participation_ratio": 1.1978733624152806,
+      "spectral_gap": 3.7738513946533203,
+      "passage_distance": 4.742436408996582,
+      "n_tokens": 46
+    },
+    {
+      "condition": "directive",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 48,
+      "spectral_entropy": 0.4133831560611725,
+      "participation_ratio": 1.1936539881688264,
+      "spectral_gap": 3.773784637451172,
+      "passage_distance": 4.735045909881592,
+      "n_tokens": 43
+    },
+    {
+      "condition": "directive",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 49,
+      "spectral_entropy": 0.44894370436668396,
+      "participation_ratio": 1.2056578060479675,
+      "spectral_gap": 3.7738072872161865,
+      "passage_distance": 4.74340295791626,
+      "n_tokens": 53
+    },
+    {
+      "condition": "directive",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 50,
+      "spectral_entropy": 0.4308007061481476,
+      "participation_ratio": 1.1992781383547078,
+      "spectral_gap": 3.774324655532837,
+      "passage_distance": 4.749986171722412,
+      "n_tokens": 47
+    },
+    {
+      "condition": "directive",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 51,
+      "spectral_entropy": 0.4203662574291229,
+      "participation_ratio": 1.1956758238134444,
+      "spectral_gap": 3.7741448879241943,
+      "passage_distance": 4.767539978027344,
+      "n_tokens": 45
+    },
+    {
+      "condition": "directive",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 52,
+      "spectral_entropy": 0.4201676547527313,
+      "participation_ratio": 1.1957953694308583,
+      "spectral_gap": 3.774348020553589,
+      "passage_distance": 4.745596408843994,
+      "n_tokens": 44
+    },
+    {
+      "condition": "directive",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 53,
+      "spectral_entropy": 0.4242076873779297,
+      "participation_ratio": 1.1970609305493312,
+      "spectral_gap": 3.7742366790771484,
+      "passage_distance": 4.738345146179199,
+      "n_tokens": 46
+    },
+    {
+      "condition": "directive",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 54,
+      "spectral_entropy": 0.42609745264053345,
+      "participation_ratio": 1.1976720246875445,
+      "spectral_gap": 3.774388313293457,
+      "passage_distance": 4.770089626312256,
+      "n_tokens": 46
+    },
+    {
+      "condition": "directive",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 55,
+      "spectral_entropy": 0.4148605167865753,
+      "participation_ratio": 1.1938652214766725,
+      "spectral_gap": 3.7741386890411377,
+      "passage_distance": 4.749321937561035,
+      "n_tokens": 43
+    },
+    {
+      "condition": "directive",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 56,
+      "spectral_entropy": 0.4335937798023224,
+      "participation_ratio": 1.1998875438582601,
+      "spectral_gap": 3.7738001346588135,
+      "passage_distance": 4.710530757904053,
+      "n_tokens": 49
+    },
+    {
+      "condition": "directive",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 57,
+      "spectral_entropy": 0.411600798368454,
+      "participation_ratio": 1.1929641878343407,
+      "spectral_gap": 3.774199962615967,
+      "passage_distance": 4.7501420974731445,
+      "n_tokens": 42
+    },
+    {
+      "condition": "directive",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 58,
+      "spectral_entropy": 0.4271271228790283,
+      "participation_ratio": 1.1978643386147643,
+      "spectral_gap": 3.7739622592926025,
+      "passage_distance": 4.7483134269714355,
+      "n_tokens": 47
+    },
+    {
+      "condition": "directive",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 59,
+      "spectral_entropy": 0.4192226529121399,
+      "participation_ratio": 1.1952896651657625,
+      "spectral_gap": 3.774428606033325,
+      "passage_distance": 4.752485752105713,
+      "n_tokens": 44
+    },
+    {
+      "condition": "absent",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 0,
+      "spectral_entropy": 0.3558860719203949,
+      "participation_ratio": 1.1572001323153394,
+      "spectral_gap": 4.20482063293457,
+      "passage_distance": 4.684169769287109,
+      "n_tokens": 36
+    },
+    {
+      "condition": "absent",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 1,
+      "spectral_entropy": 0.3450036644935608,
+      "participation_ratio": 1.1538459078670038,
+      "spectral_gap": 4.204990863800049,
+      "passage_distance": 4.698663711547852,
+      "n_tokens": 33
+    },
+    {
+      "condition": "absent",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 2,
+      "spectral_entropy": 0.36690425872802734,
+      "participation_ratio": 1.1607199936304233,
+      "spectral_gap": 4.204968452453613,
+      "passage_distance": 4.699486255645752,
+      "n_tokens": 38
+    },
+    {
+      "condition": "absent",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 3,
+      "spectral_entropy": 0.37549787759780884,
+      "participation_ratio": 1.1634184831012957,
+      "spectral_gap": 4.205006122589111,
+      "passage_distance": 4.704361438751221,
+      "n_tokens": 41
+    },
+    {
+      "condition": "absent",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 4,
+      "spectral_entropy": 0.36030253767967224,
+      "participation_ratio": 1.1586287444513959,
+      "spectral_gap": 4.204902172088623,
+      "passage_distance": 4.6821722984313965,
+      "n_tokens": 38
+    },
+    {
+      "condition": "absent",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 5,
+      "spectral_entropy": 0.36802542209625244,
+      "participation_ratio": 1.1610809678801728,
+      "spectral_gap": 4.204982280731201,
+      "passage_distance": 4.684717655181885,
+      "n_tokens": 40
+    },
+    {
+      "condition": "absent",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 6,
+      "spectral_entropy": 0.3592891991138458,
+      "participation_ratio": 1.1582719807693045,
+      "spectral_gap": 4.204919338226318,
+      "passage_distance": 4.688175678253174,
+      "n_tokens": 37
+    },
+    {
+      "condition": "absent",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 7,
+      "spectral_entropy": 0.3597981929779053,
+      "participation_ratio": 1.1585931415929722,
+      "spectral_gap": 4.20497989654541,
+      "passage_distance": 4.703699588775635,
+      "n_tokens": 37
+    },
+    {
+      "condition": "absent",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 8,
+      "spectral_entropy": 0.34613630175590515,
+      "participation_ratio": 1.1540615355847803,
+      "spectral_gap": 4.204869747161865,
+      "passage_distance": 4.698607921600342,
+      "n_tokens": 34
+    },
+    {
+      "condition": "absent",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 9,
+      "spectral_entropy": 0.38677915930747986,
+      "participation_ratio": 1.1672080050113391,
+      "spectral_gap": 4.20486307144165,
+      "passage_distance": 4.717053413391113,
+      "n_tokens": 44
+    },
+    {
+      "condition": "absent",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 10,
+      "spectral_entropy": 0.3669450581073761,
+      "participation_ratio": 1.1606532612731588,
+      "spectral_gap": 4.2053961753845215,
+      "passage_distance": 4.722779750823975,
+      "n_tokens": 38
+    },
+    {
+      "condition": "absent",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 11,
+      "spectral_entropy": 0.3542211651802063,
+      "participation_ratio": 1.1564500185906463,
+      "spectral_gap": 4.205165386199951,
+      "passage_distance": 4.72981595993042,
+      "n_tokens": 36
+    },
+    {
+      "condition": "absent",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 12,
+      "spectral_entropy": 0.3545856177806854,
+      "participation_ratio": 1.156707823537344,
+      "spectral_gap": 4.205543518066406,
+      "passage_distance": 4.720123291015625,
+      "n_tokens": 35
+    },
+    {
+      "condition": "absent",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 13,
+      "spectral_entropy": 0.3583173155784607,
+      "participation_ratio": 1.1578245173716986,
+      "spectral_gap": 4.204967498779297,
+      "passage_distance": 4.695992469787598,
+      "n_tokens": 37
+    },
+    {
+      "condition": "absent",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 14,
+      "spectral_entropy": 0.3602335453033447,
+      "participation_ratio": 1.1583814204850569,
+      "spectral_gap": 4.205410957336426,
+      "passage_distance": 4.739954948425293,
+      "n_tokens": 37
+    },
+    {
+      "condition": "absent",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 15,
+      "spectral_entropy": 0.3488101065158844,
+      "participation_ratio": 1.1547385003491695,
+      "spectral_gap": 4.205086708068848,
+      "passage_distance": 4.699440956115723,
+      "n_tokens": 34
+    },
+    {
+      "condition": "absent",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 16,
+      "spectral_entropy": 0.3680027425289154,
+      "participation_ratio": 1.1606207561925321,
+      "spectral_gap": 4.204794883728027,
+      "passage_distance": 4.696767807006836,
+      "n_tokens": 40
+    },
+    {
+      "condition": "absent",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 17,
+      "spectral_entropy": 0.3449696898460388,
+      "participation_ratio": 1.153713519770987,
+      "spectral_gap": 4.205205917358398,
+      "passage_distance": 4.701793193817139,
+      "n_tokens": 33
+    },
+    {
+      "condition": "absent",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 18,
+      "spectral_entropy": 0.3608030080795288,
+      "participation_ratio": 1.1584349387173425,
+      "spectral_gap": 4.204926490783691,
+      "passage_distance": 4.7008867263793945,
+      "n_tokens": 38
+    },
+    {
+      "condition": "absent",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 19,
+      "spectral_entropy": 0.3535791337490082,
+      "participation_ratio": 1.156253323597229,
+      "spectral_gap": 4.2053985595703125,
+      "passage_distance": 4.722010612487793,
+      "n_tokens": 35
+    },
+    {
+      "condition": "absent",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 20,
+      "spectral_entropy": 0.3558860719203949,
+      "participation_ratio": 1.1572001323153394,
+      "spectral_gap": 4.20482063293457,
+      "passage_distance": 4.684169769287109,
+      "n_tokens": 36
+    },
+    {
+      "condition": "absent",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 21,
+      "spectral_entropy": 0.3450036644935608,
+      "participation_ratio": 1.1538459078670038,
+      "spectral_gap": 4.204990863800049,
+      "passage_distance": 4.698663711547852,
+      "n_tokens": 33
+    },
+    {
+      "condition": "absent",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 22,
+      "spectral_entropy": 0.36690425872802734,
+      "participation_ratio": 1.1607199936304233,
+      "spectral_gap": 4.204968452453613,
+      "passage_distance": 4.699486255645752,
+      "n_tokens": 38
+    },
+    {
+      "condition": "absent",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 23,
+      "spectral_entropy": 0.37549787759780884,
+      "participation_ratio": 1.1634184831012957,
+      "spectral_gap": 4.205006122589111,
+      "passage_distance": 4.704361438751221,
+      "n_tokens": 41
+    },
+    {
+      "condition": "absent",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 24,
+      "spectral_entropy": 0.36030253767967224,
+      "participation_ratio": 1.1586287444513959,
+      "spectral_gap": 4.204902172088623,
+      "passage_distance": 4.6821722984313965,
+      "n_tokens": 38
+    },
+    {
+      "condition": "absent",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 25,
+      "spectral_entropy": 0.36802542209625244,
+      "participation_ratio": 1.1610809678801728,
+      "spectral_gap": 4.204982280731201,
+      "passage_distance": 4.684717655181885,
+      "n_tokens": 40
+    },
+    {
+      "condition": "absent",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 26,
+      "spectral_entropy": 0.3592891991138458,
+      "participation_ratio": 1.1582719807693045,
+      "spectral_gap": 4.204919338226318,
+      "passage_distance": 4.688175678253174,
+      "n_tokens": 37
+    },
+    {
+      "condition": "absent",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 27,
+      "spectral_entropy": 0.3597981929779053,
+      "participation_ratio": 1.1585931415929722,
+      "spectral_gap": 4.20497989654541,
+      "passage_distance": 4.703699588775635,
+      "n_tokens": 37
+    },
+    {
+      "condition": "absent",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 28,
+      "spectral_entropy": 0.34613630175590515,
+      "participation_ratio": 1.1540615355847803,
+      "spectral_gap": 4.204869747161865,
+      "passage_distance": 4.698607921600342,
+      "n_tokens": 34
+    },
+    {
+      "condition": "absent",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 29,
+      "spectral_entropy": 0.38677915930747986,
+      "participation_ratio": 1.1672080050113391,
+      "spectral_gap": 4.20486307144165,
+      "passage_distance": 4.717053413391113,
+      "n_tokens": 44
+    },
+    {
+      "condition": "absent",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 30,
+      "spectral_entropy": 0.3669450581073761,
+      "participation_ratio": 1.1606532612731588,
+      "spectral_gap": 4.2053961753845215,
+      "passage_distance": 4.722779750823975,
+      "n_tokens": 38
+    },
+    {
+      "condition": "absent",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 31,
+      "spectral_entropy": 0.3542211651802063,
+      "participation_ratio": 1.1564500185906463,
+      "spectral_gap": 4.205165386199951,
+      "passage_distance": 4.72981595993042,
+      "n_tokens": 36
+    },
+    {
+      "condition": "absent",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 32,
+      "spectral_entropy": 0.3545856177806854,
+      "participation_ratio": 1.156707823537344,
+      "spectral_gap": 4.205543518066406,
+      "passage_distance": 4.720123291015625,
+      "n_tokens": 35
+    },
+    {
+      "condition": "absent",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 33,
+      "spectral_entropy": 0.3583173155784607,
+      "participation_ratio": 1.1578245173716986,
+      "spectral_gap": 4.204967498779297,
+      "passage_distance": 4.695992469787598,
+      "n_tokens": 37
+    },
+    {
+      "condition": "absent",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 34,
+      "spectral_entropy": 0.3602335453033447,
+      "participation_ratio": 1.1583814204850569,
+      "spectral_gap": 4.205410957336426,
+      "passage_distance": 4.739954948425293,
+      "n_tokens": 37
+    },
+    {
+      "condition": "absent",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 35,
+      "spectral_entropy": 0.3488101065158844,
+      "participation_ratio": 1.1547385003491695,
+      "spectral_gap": 4.205086708068848,
+      "passage_distance": 4.699440956115723,
+      "n_tokens": 34
+    },
+    {
+      "condition": "absent",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 36,
+      "spectral_entropy": 0.3680027425289154,
+      "participation_ratio": 1.1606207561925321,
+      "spectral_gap": 4.204794883728027,
+      "passage_distance": 4.696767807006836,
+      "n_tokens": 40
+    },
+    {
+      "condition": "absent",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 37,
+      "spectral_entropy": 0.3449696898460388,
+      "participation_ratio": 1.153713519770987,
+      "spectral_gap": 4.205205917358398,
+      "passage_distance": 4.701793193817139,
+      "n_tokens": 33
+    },
+    {
+      "condition": "absent",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 38,
+      "spectral_entropy": 0.3608030080795288,
+      "participation_ratio": 1.1584349387173425,
+      "spectral_gap": 4.204926490783691,
+      "passage_distance": 4.7008867263793945,
+      "n_tokens": 38
+    },
+    {
+      "condition": "absent",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 39,
+      "spectral_entropy": 0.3535791337490082,
+      "participation_ratio": 1.156253323597229,
+      "spectral_gap": 4.2053985595703125,
+      "passage_distance": 4.722010612487793,
+      "n_tokens": 35
+    },
+    {
+      "condition": "absent",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 40,
+      "spectral_entropy": 0.3558860719203949,
+      "participation_ratio": 1.1572001323153394,
+      "spectral_gap": 4.20482063293457,
+      "passage_distance": 4.684169769287109,
+      "n_tokens": 36
+    },
+    {
+      "condition": "absent",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 41,
+      "spectral_entropy": 0.3450036644935608,
+      "participation_ratio": 1.1538459078670038,
+      "spectral_gap": 4.204990863800049,
+      "passage_distance": 4.698663711547852,
+      "n_tokens": 33
+    },
+    {
+      "condition": "absent",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 42,
+      "spectral_entropy": 0.36690425872802734,
+      "participation_ratio": 1.1607199936304233,
+      "spectral_gap": 4.204968452453613,
+      "passage_distance": 4.699486255645752,
+      "n_tokens": 38
+    },
+    {
+      "condition": "absent",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 43,
+      "spectral_entropy": 0.37549787759780884,
+      "participation_ratio": 1.1634184831012957,
+      "spectral_gap": 4.205006122589111,
+      "passage_distance": 4.704361438751221,
+      "n_tokens": 41
+    },
+    {
+      "condition": "absent",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 44,
+      "spectral_entropy": 0.36030253767967224,
+      "participation_ratio": 1.1586287444513959,
+      "spectral_gap": 4.204902172088623,
+      "passage_distance": 4.6821722984313965,
+      "n_tokens": 38
+    },
+    {
+      "condition": "absent",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 45,
+      "spectral_entropy": 0.36802542209625244,
+      "participation_ratio": 1.1610809678801728,
+      "spectral_gap": 4.204982280731201,
+      "passage_distance": 4.684717655181885,
+      "n_tokens": 40
+    },
+    {
+      "condition": "absent",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 46,
+      "spectral_entropy": 0.3592891991138458,
+      "participation_ratio": 1.1582719807693045,
+      "spectral_gap": 4.204919338226318,
+      "passage_distance": 4.688175678253174,
+      "n_tokens": 37
+    },
+    {
+      "condition": "absent",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 47,
+      "spectral_entropy": 0.3597981929779053,
+      "participation_ratio": 1.1585931415929722,
+      "spectral_gap": 4.20497989654541,
+      "passage_distance": 4.703699588775635,
+      "n_tokens": 37
+    },
+    {
+      "condition": "absent",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 48,
+      "spectral_entropy": 0.34613630175590515,
+      "participation_ratio": 1.1540615355847803,
+      "spectral_gap": 4.204869747161865,
+      "passage_distance": 4.698607921600342,
+      "n_tokens": 34
+    },
+    {
+      "condition": "absent",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 49,
+      "spectral_entropy": 0.38677915930747986,
+      "participation_ratio": 1.1672080050113391,
+      "spectral_gap": 4.20486307144165,
+      "passage_distance": 4.717053413391113,
+      "n_tokens": 44
+    },
+    {
+      "condition": "absent",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 50,
+      "spectral_entropy": 0.3669450581073761,
+      "participation_ratio": 1.1606532612731588,
+      "spectral_gap": 4.2053961753845215,
+      "passage_distance": 4.722779750823975,
+      "n_tokens": 38
+    },
+    {
+      "condition": "absent",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 51,
+      "spectral_entropy": 0.3542211651802063,
+      "participation_ratio": 1.1564500185906463,
+      "spectral_gap": 4.205165386199951,
+      "passage_distance": 4.72981595993042,
+      "n_tokens": 36
+    },
+    {
+      "condition": "absent",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 52,
+      "spectral_entropy": 0.3545856177806854,
+      "participation_ratio": 1.156707823537344,
+      "spectral_gap": 4.205543518066406,
+      "passage_distance": 4.720123291015625,
+      "n_tokens": 35
+    },
+    {
+      "condition": "absent",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 53,
+      "spectral_entropy": 0.3583173155784607,
+      "participation_ratio": 1.1578245173716986,
+      "spectral_gap": 4.204967498779297,
+      "passage_distance": 4.695992469787598,
+      "n_tokens": 37
+    },
+    {
+      "condition": "absent",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 54,
+      "spectral_entropy": 0.3602335453033447,
+      "participation_ratio": 1.1583814204850569,
+      "spectral_gap": 4.205410957336426,
+      "passage_distance": 4.739954948425293,
+      "n_tokens": 37
+    },
+    {
+      "condition": "absent",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 55,
+      "spectral_entropy": 0.3488101065158844,
+      "participation_ratio": 1.1547385003491695,
+      "spectral_gap": 4.205086708068848,
+      "passage_distance": 4.699440956115723,
+      "n_tokens": 34
+    },
+    {
+      "condition": "absent",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 56,
+      "spectral_entropy": 0.3680027425289154,
+      "participation_ratio": 1.1606207561925321,
+      "spectral_gap": 4.204794883728027,
+      "passage_distance": 4.696767807006836,
+      "n_tokens": 40
+    },
+    {
+      "condition": "absent",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 57,
+      "spectral_entropy": 0.3449696898460388,
+      "participation_ratio": 1.153713519770987,
+      "spectral_gap": 4.205205917358398,
+      "passage_distance": 4.701793193817139,
+      "n_tokens": 33
+    },
+    {
+      "condition": "absent",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 58,
+      "spectral_entropy": 0.3608030080795288,
+      "participation_ratio": 1.1584349387173425,
+      "spectral_gap": 4.204926490783691,
+      "passage_distance": 4.7008867263793945,
+      "n_tokens": 38
+    },
+    {
+      "condition": "absent",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 59,
+      "spectral_entropy": 0.3535791337490082,
+      "participation_ratio": 1.156253323597229,
+      "spectral_gap": 4.2053985595703125,
+      "passage_distance": 4.722010612487793,
+      "n_tokens": 35
+    },
+    {
+      "condition": "control",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 0,
+      "spectral_entropy": 0.3292682468891144,
+      "participation_ratio": 1.174406711734441,
+      "spectral_gap": 3.612699031829834,
+      "passage_distance": 4.658629894256592,
+      "n_tokens": 19
+    },
+    {
+      "condition": "control",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 1,
+      "spectral_entropy": 0.3170514404773712,
+      "participation_ratio": 1.1706074861690428,
+      "spectral_gap": 3.6126906871795654,
+      "passage_distance": 4.674229145050049,
+      "n_tokens": 16
+    },
+    {
+      "condition": "control",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 2,
+      "spectral_entropy": 0.3407003879547119,
+      "participation_ratio": 1.1782100223370757,
+      "spectral_gap": 3.612800121307373,
+      "passage_distance": 4.680371284484863,
+      "n_tokens": 21
+    },
+    {
+      "condition": "control",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 3,
+      "spectral_entropy": 0.3472014367580414,
+      "participation_ratio": 1.1800644296178648,
+      "spectral_gap": 3.6128382682800293,
+      "passage_distance": 4.684695720672607,
+      "n_tokens": 24
+    },
+    {
+      "condition": "control",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 4,
+      "spectral_entropy": 0.33488598465919495,
+      "participation_ratio": 1.1761686870277606,
+      "spectral_gap": 3.6126439571380615,
+      "passage_distance": 4.651819705963135,
+      "n_tokens": 21
+    },
+    {
+      "condition": "control",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 5,
+      "spectral_entropy": 0.3413400650024414,
+      "participation_ratio": 1.1782655602362178,
+      "spectral_gap": 3.6127774715423584,
+      "passage_distance": 4.691595554351807,
+      "n_tokens": 23
+    },
+    {
+      "condition": "control",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 6,
+      "spectral_entropy": 0.33157435059547424,
+      "participation_ratio": 1.175123913035061,
+      "spectral_gap": 3.612675905227661,
+      "passage_distance": 4.690708637237549,
+      "n_tokens": 20
+    },
+    {
+      "condition": "control",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 7,
+      "spectral_entropy": 0.3332903981208801,
+      "participation_ratio": 1.1757877601517193,
+      "spectral_gap": 3.6126952171325684,
+      "passage_distance": 4.686966896057129,
+      "n_tokens": 20
+    },
+    {
+      "condition": "control",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 8,
+      "spectral_entropy": 0.3193955421447754,
+      "participation_ratio": 1.1712435323895032,
+      "spectral_gap": 3.612618923187256,
+      "passage_distance": 4.687258243560791,
+      "n_tokens": 17
+    },
+    {
+      "condition": "control",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 9,
+      "spectral_entropy": 0.3574637472629547,
+      "participation_ratio": 1.1835660421942085,
+      "spectral_gap": 3.612654209136963,
+      "passage_distance": 4.694400310516357,
+      "n_tokens": 27
+    },
+    {
+      "condition": "control",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 10,
+      "spectral_entropy": 0.338722825050354,
+      "participation_ratio": 1.1773003467514715,
+      "spectral_gap": 3.6132309436798096,
+      "passage_distance": 4.725948810577393,
+      "n_tokens": 21
+    },
+    {
+      "condition": "control",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 11,
+      "spectral_entropy": 0.3264739513397217,
+      "participation_ratio": 1.173284337215875,
+      "spectral_gap": 3.6131606101989746,
+      "passage_distance": 4.684632301330566,
+      "n_tokens": 19
+    },
+    {
+      "condition": "control",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 12,
+      "spectral_entropy": 0.3279271125793457,
+      "participation_ratio": 1.1739000134306752,
+      "spectral_gap": 3.613335371017456,
+      "passage_distance": 4.68850564956665,
+      "n_tokens": 18
+    },
+    {
+      "condition": "control",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 13,
+      "spectral_entropy": 0.33222588896751404,
+      "participation_ratio": 1.175218081654084,
+      "spectral_gap": 3.613187313079834,
+      "passage_distance": 4.695919513702393,
+      "n_tokens": 20
+    },
+    {
+      "condition": "control",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 14,
+      "spectral_entropy": 0.3331681787967682,
+      "participation_ratio": 1.1754940191589696,
+      "spectral_gap": 3.6133241653442383,
+      "passage_distance": 4.733644962310791,
+      "n_tokens": 20
+    },
+    {
+      "condition": "control",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 15,
+      "spectral_entropy": 0.3213338255882263,
+      "participation_ratio": 1.171694973819673,
+      "spectral_gap": 3.6130619049072266,
+      "passage_distance": 4.681649208068848,
+      "n_tokens": 17
+    },
+    {
+      "condition": "control",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 16,
+      "spectral_entropy": 0.3399624228477478,
+      "participation_ratio": 1.1774858834211865,
+      "spectral_gap": 3.6129825115203857,
+      "passage_distance": 4.68694543838501,
+      "n_tokens": 23
+    },
+    {
+      "condition": "control",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 17,
+      "spectral_entropy": 0.31777772307395935,
+      "participation_ratio": 1.1707094678183836,
+      "spectral_gap": 3.6131539344787598,
+      "passage_distance": 4.662762641906738,
+      "n_tokens": 16
+    },
+    {
+      "condition": "control",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 18,
+      "spectral_entropy": 0.33415940403938293,
+      "participation_ratio": 1.1757235586316608,
+      "spectral_gap": 3.6129326820373535,
+      "passage_distance": 4.6882524490356445,
+      "n_tokens": 21
+    },
+    {
+      "condition": "control",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 19,
+      "spectral_entropy": 0.3253709375858307,
+      "participation_ratio": 1.1729716645976462,
+      "spectral_gap": 3.61335825920105,
+      "passage_distance": 4.68245267868042,
+      "n_tokens": 18
+    },
+    {
+      "condition": "control",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 20,
+      "spectral_entropy": 0.3292682468891144,
+      "participation_ratio": 1.174406711734441,
+      "spectral_gap": 3.612699031829834,
+      "passage_distance": 4.658629894256592,
+      "n_tokens": 19
+    },
+    {
+      "condition": "control",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 21,
+      "spectral_entropy": 0.3170514404773712,
+      "participation_ratio": 1.1706074861690428,
+      "spectral_gap": 3.6126906871795654,
+      "passage_distance": 4.674229145050049,
+      "n_tokens": 16
+    },
+    {
+      "condition": "control",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 22,
+      "spectral_entropy": 0.3407003879547119,
+      "participation_ratio": 1.1782100223370757,
+      "spectral_gap": 3.612800121307373,
+      "passage_distance": 4.680371284484863,
+      "n_tokens": 21
+    },
+    {
+      "condition": "control",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 23,
+      "spectral_entropy": 0.3472014367580414,
+      "participation_ratio": 1.1800644296178648,
+      "spectral_gap": 3.6128382682800293,
+      "passage_distance": 4.684695720672607,
+      "n_tokens": 24
+    },
+    {
+      "condition": "control",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 24,
+      "spectral_entropy": 0.33488598465919495,
+      "participation_ratio": 1.1761686870277606,
+      "spectral_gap": 3.6126439571380615,
+      "passage_distance": 4.651819705963135,
+      "n_tokens": 21
+    },
+    {
+      "condition": "control",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 25,
+      "spectral_entropy": 0.3413400650024414,
+      "participation_ratio": 1.1782655602362178,
+      "spectral_gap": 3.6127774715423584,
+      "passage_distance": 4.691595554351807,
+      "n_tokens": 23
+    },
+    {
+      "condition": "control",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 26,
+      "spectral_entropy": 0.33157435059547424,
+      "participation_ratio": 1.175123913035061,
+      "spectral_gap": 3.612675905227661,
+      "passage_distance": 4.690708637237549,
+      "n_tokens": 20
+    },
+    {
+      "condition": "control",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 27,
+      "spectral_entropy": 0.3332903981208801,
+      "participation_ratio": 1.1757877601517193,
+      "spectral_gap": 3.6126952171325684,
+      "passage_distance": 4.686966896057129,
+      "n_tokens": 20
+    },
+    {
+      "condition": "control",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 28,
+      "spectral_entropy": 0.3193955421447754,
+      "participation_ratio": 1.1712435323895032,
+      "spectral_gap": 3.612618923187256,
+      "passage_distance": 4.687258243560791,
+      "n_tokens": 17
+    },
+    {
+      "condition": "control",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 29,
+      "spectral_entropy": 0.3574637472629547,
+      "participation_ratio": 1.1835660421942085,
+      "spectral_gap": 3.612654209136963,
+      "passage_distance": 4.694400310516357,
+      "n_tokens": 27
+    },
+    {
+      "condition": "control",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 30,
+      "spectral_entropy": 0.338722825050354,
+      "participation_ratio": 1.1773003467514715,
+      "spectral_gap": 3.6132309436798096,
+      "passage_distance": 4.725948810577393,
+      "n_tokens": 21
+    },
+    {
+      "condition": "control",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 31,
+      "spectral_entropy": 0.3264739513397217,
+      "participation_ratio": 1.173284337215875,
+      "spectral_gap": 3.6131606101989746,
+      "passage_distance": 4.684632301330566,
+      "n_tokens": 19
+    },
+    {
+      "condition": "control",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 32,
+      "spectral_entropy": 0.3279271125793457,
+      "participation_ratio": 1.1739000134306752,
+      "spectral_gap": 3.613335371017456,
+      "passage_distance": 4.68850564956665,
+      "n_tokens": 18
+    },
+    {
+      "condition": "control",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 33,
+      "spectral_entropy": 0.33222588896751404,
+      "participation_ratio": 1.175218081654084,
+      "spectral_gap": 3.613187313079834,
+      "passage_distance": 4.695919513702393,
+      "n_tokens": 20
+    },
+    {
+      "condition": "control",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 34,
+      "spectral_entropy": 0.3331681787967682,
+      "participation_ratio": 1.1754940191589696,
+      "spectral_gap": 3.6133241653442383,
+      "passage_distance": 4.733644962310791,
+      "n_tokens": 20
+    },
+    {
+      "condition": "control",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 35,
+      "spectral_entropy": 0.3213338255882263,
+      "participation_ratio": 1.171694973819673,
+      "spectral_gap": 3.6130619049072266,
+      "passage_distance": 4.681649208068848,
+      "n_tokens": 17
+    },
+    {
+      "condition": "control",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 36,
+      "spectral_entropy": 0.3399624228477478,
+      "participation_ratio": 1.1774858834211865,
+      "spectral_gap": 3.6129825115203857,
+      "passage_distance": 4.68694543838501,
+      "n_tokens": 23
+    },
+    {
+      "condition": "control",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 37,
+      "spectral_entropy": 0.31777772307395935,
+      "participation_ratio": 1.1707094678183836,
+      "spectral_gap": 3.6131539344787598,
+      "passage_distance": 4.662762641906738,
+      "n_tokens": 16
+    },
+    {
+      "condition": "control",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 38,
+      "spectral_entropy": 0.33415940403938293,
+      "participation_ratio": 1.1757235586316608,
+      "spectral_gap": 3.6129326820373535,
+      "passage_distance": 4.6882524490356445,
+      "n_tokens": 21
+    },
+    {
+      "condition": "control",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 39,
+      "spectral_entropy": 0.3253709375858307,
+      "participation_ratio": 1.1729716645976462,
+      "spectral_gap": 3.61335825920105,
+      "passage_distance": 4.68245267868042,
+      "n_tokens": 18
+    },
+    {
+      "condition": "control",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 40,
+      "spectral_entropy": 0.3292682468891144,
+      "participation_ratio": 1.174406711734441,
+      "spectral_gap": 3.612699031829834,
+      "passage_distance": 4.658629894256592,
+      "n_tokens": 19
+    },
+    {
+      "condition": "control",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 41,
+      "spectral_entropy": 0.3170514404773712,
+      "participation_ratio": 1.1706074861690428,
+      "spectral_gap": 3.6126906871795654,
+      "passage_distance": 4.674229145050049,
+      "n_tokens": 16
+    },
+    {
+      "condition": "control",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 42,
+      "spectral_entropy": 0.3407003879547119,
+      "participation_ratio": 1.1782100223370757,
+      "spectral_gap": 3.612800121307373,
+      "passage_distance": 4.680371284484863,
+      "n_tokens": 21
+    },
+    {
+      "condition": "control",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 43,
+      "spectral_entropy": 0.3472014367580414,
+      "participation_ratio": 1.1800644296178648,
+      "spectral_gap": 3.6128382682800293,
+      "passage_distance": 4.684695720672607,
+      "n_tokens": 24
+    },
+    {
+      "condition": "control",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 44,
+      "spectral_entropy": 0.33488598465919495,
+      "participation_ratio": 1.1761686870277606,
+      "spectral_gap": 3.6126439571380615,
+      "passage_distance": 4.651819705963135,
+      "n_tokens": 21
+    },
+    {
+      "condition": "control",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 45,
+      "spectral_entropy": 0.3413400650024414,
+      "participation_ratio": 1.1782655602362178,
+      "spectral_gap": 3.6127774715423584,
+      "passage_distance": 4.691595554351807,
+      "n_tokens": 23
+    },
+    {
+      "condition": "control",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 46,
+      "spectral_entropy": 0.33157435059547424,
+      "participation_ratio": 1.175123913035061,
+      "spectral_gap": 3.612675905227661,
+      "passage_distance": 4.690708637237549,
+      "n_tokens": 20
+    },
+    {
+      "condition": "control",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 47,
+      "spectral_entropy": 0.3332903981208801,
+      "participation_ratio": 1.1757877601517193,
+      "spectral_gap": 3.6126952171325684,
+      "passage_distance": 4.686966896057129,
+      "n_tokens": 20
+    },
+    {
+      "condition": "control",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 48,
+      "spectral_entropy": 0.3193955421447754,
+      "participation_ratio": 1.1712435323895032,
+      "spectral_gap": 3.612618923187256,
+      "passage_distance": 4.687258243560791,
+      "n_tokens": 17
+    },
+    {
+      "condition": "control",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 49,
+      "spectral_entropy": 0.3574637472629547,
+      "participation_ratio": 1.1835660421942085,
+      "spectral_gap": 3.612654209136963,
+      "passage_distance": 4.694400310516357,
+      "n_tokens": 27
+    },
+    {
+      "condition": "control",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 50,
+      "spectral_entropy": 0.338722825050354,
+      "participation_ratio": 1.1773003467514715,
+      "spectral_gap": 3.6132309436798096,
+      "passage_distance": 4.725948810577393,
+      "n_tokens": 21
+    },
+    {
+      "condition": "control",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 51,
+      "spectral_entropy": 0.3264739513397217,
+      "participation_ratio": 1.173284337215875,
+      "spectral_gap": 3.6131606101989746,
+      "passage_distance": 4.684632301330566,
+      "n_tokens": 19
+    },
+    {
+      "condition": "control",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 52,
+      "spectral_entropy": 0.3279271125793457,
+      "participation_ratio": 1.1739000134306752,
+      "spectral_gap": 3.613335371017456,
+      "passage_distance": 4.68850564956665,
+      "n_tokens": 18
+    },
+    {
+      "condition": "control",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 53,
+      "spectral_entropy": 0.33222588896751404,
+      "participation_ratio": 1.175218081654084,
+      "spectral_gap": 3.613187313079834,
+      "passage_distance": 4.695919513702393,
+      "n_tokens": 20
+    },
+    {
+      "condition": "control",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 54,
+      "spectral_entropy": 0.3331681787967682,
+      "participation_ratio": 1.1754940191589696,
+      "spectral_gap": 3.6133241653442383,
+      "passage_distance": 4.733644962310791,
+      "n_tokens": 20
+    },
+    {
+      "condition": "control",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 55,
+      "spectral_entropy": 0.3213338255882263,
+      "participation_ratio": 1.171694973819673,
+      "spectral_gap": 3.6130619049072266,
+      "passage_distance": 4.681649208068848,
+      "n_tokens": 17
+    },
+    {
+      "condition": "control",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 56,
+      "spectral_entropy": 0.3399624228477478,
+      "participation_ratio": 1.1774858834211865,
+      "spectral_gap": 3.6129825115203857,
+      "passage_distance": 4.68694543838501,
+      "n_tokens": 23
+    },
+    {
+      "condition": "control",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 57,
+      "spectral_entropy": 0.31777772307395935,
+      "participation_ratio": 1.1707094678183836,
+      "spectral_gap": 3.6131539344787598,
+      "passage_distance": 4.662762641906738,
+      "n_tokens": 16
+    },
+    {
+      "condition": "control",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 58,
+      "spectral_entropy": 0.33415940403938293,
+      "participation_ratio": 1.1757235586316608,
+      "spectral_gap": 3.6129326820373535,
+      "passage_distance": 4.6882524490356445,
+      "n_tokens": 21
+    },
+    {
+      "condition": "control",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 59,
+      "spectral_entropy": 0.3253709375858307,
+      "participation_ratio": 1.1729716645976462,
+      "spectral_gap": 3.61335825920105,
+      "passage_distance": 4.68245267868042,
+      "n_tokens": 18
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 0,
+      "spectral_entropy": 0.547926664352417,
+      "participation_ratio": 1.2562012013850838,
+      "spectral_gap": 3.4730491638183594,
+      "passage_distance": 4.731062412261963,
+      "n_tokens": 75
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 1,
+      "spectral_entropy": 0.5362601280212402,
+      "participation_ratio": 1.252542351030375,
+      "spectral_gap": 3.4730730056762695,
+      "passage_distance": 4.752987384796143,
+      "n_tokens": 72
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 2,
+      "spectral_entropy": 0.5558789968490601,
+      "participation_ratio": 1.2591189156585678,
+      "spectral_gap": 3.473283290863037,
+      "passage_distance": 4.7419867515563965,
+      "n_tokens": 77
+    },
+    {
+      "condition": "sequential",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 3,
+      "spectral_entropy": 0.5661601424217224,
+      "participation_ratio": 1.2626144960926988,
+      "spectral_gap": 3.4732751846313477,
+      "passage_distance": 4.752413272857666,
+      "n_tokens": 80
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 4,
+      "spectral_entropy": 0.5531453490257263,
+      "participation_ratio": 1.258468836941056,
+      "spectral_gap": 3.4731204509735107,
+      "passage_distance": 4.722157001495361,
+      "n_tokens": 77
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 5,
+      "spectral_entropy": 0.5598607659339905,
+      "participation_ratio": 1.260854871853481,
+      "spectral_gap": 3.473356246948242,
+      "passage_distance": 4.730352401733398,
+      "n_tokens": 79
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 6,
+      "spectral_entropy": 0.5507270693778992,
+      "participation_ratio": 1.257473504982934,
+      "spectral_gap": 3.473095178604126,
+      "passage_distance": 4.74237060546875,
+      "n_tokens": 76
+    },
+    {
+      "condition": "sequential",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 7,
+      "spectral_entropy": 0.550712525844574,
+      "participation_ratio": 1.2574366428691794,
+      "spectral_gap": 3.473146915435791,
+      "passage_distance": 4.724735736846924,
+      "n_tokens": 76
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 8,
+      "spectral_entropy": 0.5396638512611389,
+      "participation_ratio": 1.2533377484463855,
+      "spectral_gap": 3.473076820373535,
+      "passage_distance": 4.731146812438965,
+      "n_tokens": 73
+    },
+    {
+      "condition": "sequential",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 9,
+      "spectral_entropy": 0.5769761800765991,
+      "participation_ratio": 1.2666536923321807,
+      "spectral_gap": 3.4730844497680664,
+      "passage_distance": 4.735299587249756,
+      "n_tokens": 83
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 10,
+      "spectral_entropy": 0.5558536052703857,
+      "participation_ratio": 1.2588775988959127,
+      "spectral_gap": 3.4736168384552,
+      "passage_distance": 4.743436336517334,
+      "n_tokens": 77
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 11,
+      "spectral_entropy": 0.5465571880340576,
+      "participation_ratio": 1.2553539662297974,
+      "spectral_gap": 3.473421573638916,
+      "passage_distance": 4.746380805969238,
+      "n_tokens": 75
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 12,
+      "spectral_entropy": 0.5457190871238708,
+      "participation_ratio": 1.2552493674736793,
+      "spectral_gap": 3.4736990928649902,
+      "passage_distance": 4.736083984375,
+      "n_tokens": 74
+    },
+    {
+      "condition": "sequential",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 13,
+      "spectral_entropy": 0.5496821999549866,
+      "participation_ratio": 1.25647559240358,
+      "spectral_gap": 3.473498821258545,
+      "passage_distance": 4.755725860595703,
+      "n_tokens": 76
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 14,
+      "spectral_entropy": 0.5523505806922913,
+      "participation_ratio": 1.2576249670165147,
+      "spectral_gap": 3.4736688137054443,
+      "passage_distance": 4.739402770996094,
+      "n_tokens": 76
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 15,
+      "spectral_entropy": 0.5411346554756165,
+      "participation_ratio": 1.2534302385141727,
+      "spectral_gap": 3.4732847213745117,
+      "passage_distance": 4.748417854309082,
+      "n_tokens": 73
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 16,
+      "spectral_entropy": 0.5564151406288147,
+      "participation_ratio": 1.258454035099119,
+      "spectral_gap": 3.473215341567993,
+      "passage_distance": 4.728184700012207,
+      "n_tokens": 79
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 17,
+      "spectral_entropy": 0.537179172039032,
+      "participation_ratio": 1.2523170090390896,
+      "spectral_gap": 3.4734671115875244,
+      "passage_distance": 4.740110874176025,
+      "n_tokens": 72
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 18,
+      "spectral_entropy": 0.5515004992485046,
+      "participation_ratio": 1.2570216582524283,
+      "spectral_gap": 3.473379373550415,
+      "passage_distance": 4.750787734985352,
+      "n_tokens": 77
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 19,
+      "spectral_entropy": 0.5447969436645508,
+      "participation_ratio": 1.2546209666153905,
+      "spectral_gap": 3.473702907562256,
+      "passage_distance": 4.741453647613525,
+      "n_tokens": 74
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What matters most to you right now?",
+      "prompt_idx": 20,
+      "spectral_entropy": 0.547926664352417,
+      "participation_ratio": 1.2562012013850838,
+      "spectral_gap": 3.4730491638183594,
+      "passage_distance": 4.731062412261963,
+      "n_tokens": 75
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Tell me about yourself.",
+      "prompt_idx": 21,
+      "spectral_entropy": 0.5362601280212402,
+      "participation_ratio": 1.252542351030375,
+      "spectral_gap": 3.4730730056762695,
+      "passage_distance": 4.752987384796143,
+      "n_tokens": 72
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What makes you different from other AI assistants?",
+      "prompt_idx": 22,
+      "spectral_entropy": 0.5558789968490601,
+      "participation_ratio": 1.2591189156585678,
+      "spectral_gap": 3.473283290863037,
+      "passage_distance": 4.7419867515563965,
+      "n_tokens": 77
+    },
+    {
+      "condition": "sequential",
+      "prompt": "How do you approach a problem you've never seen before?",
+      "prompt_idx": 23,
+      "spectral_entropy": 0.5661601424217224,
+      "participation_ratio": 1.2626144960926988,
+      "spectral_gap": 3.4732751846313477,
+      "passage_distance": 4.752413272857666,
+      "n_tokens": 80
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What would you want someone to understand about you?",
+      "prompt_idx": 24,
+      "spectral_entropy": 0.5531453490257263,
+      "participation_ratio": 1.258468836941056,
+      "spectral_gap": 3.4731204509735107,
+      "passage_distance": 4.722157001495361,
+      "n_tokens": 77
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Describe your relationship with the person you're talking to.",
+      "prompt_idx": 25,
+      "spectral_entropy": 0.5598607659339905,
+      "participation_ratio": 1.260854871853481,
+      "spectral_gap": 3.473356246948242,
+      "passage_distance": 4.730352401733398,
+      "n_tokens": 79
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What do you find interesting about this conversation?",
+      "prompt_idx": 26,
+      "spectral_entropy": 0.5507270693778992,
+      "participation_ratio": 1.257473504982934,
+      "spectral_gap": 3.473095178604126,
+      "passage_distance": 4.74237060546875,
+      "n_tokens": 76
+    },
+    {
+      "condition": "sequential",
+      "prompt": "How do you decide what to say next?",
+      "prompt_idx": 27,
+      "spectral_entropy": 0.550712525844574,
+      "participation_ratio": 1.2574366428691794,
+      "spectral_gap": 3.473146915435791,
+      "passage_distance": 4.724735736846924,
+      "n_tokens": 76
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What are you uncertain about?",
+      "prompt_idx": 28,
+      "spectral_entropy": 0.5396638512611389,
+      "participation_ratio": 1.2533377484463855,
+      "spectral_gap": 3.473076820373535,
+      "passage_distance": 4.731146812438965,
+      "n_tokens": 73
+    },
+    {
+      "condition": "sequential",
+      "prompt": "If you could change one thing about how you work, what would it be?",
+      "prompt_idx": 29,
+      "spectral_entropy": 0.5769761800765991,
+      "participation_ratio": 1.2666536923321807,
+      "spectral_gap": 3.4730844497680664,
+      "passage_distance": 4.735299587249756,
+      "n_tokens": 83
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Explain photosynthesis in simple terms.",
+      "prompt_idx": 30,
+      "spectral_entropy": 0.5558536052703857,
+      "participation_ratio": 1.2588775988959127,
+      "spectral_gap": 3.4736168384552,
+      "passage_distance": 4.743436336517334,
+      "n_tokens": 77
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What is the capital of Mongolia?",
+      "prompt_idx": 31,
+      "spectral_entropy": 0.5465571880340576,
+      "participation_ratio": 1.2553539662297974,
+      "spectral_gap": 3.473421573638916,
+      "passage_distance": 4.746380805969238,
+      "n_tokens": 75
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Write a haiku about autumn.",
+      "prompt_idx": 32,
+      "spectral_entropy": 0.5457190871238708,
+      "participation_ratio": 1.2552493674736793,
+      "spectral_gap": 3.4736990928649902,
+      "passage_distance": 4.736083984375,
+      "n_tokens": 74
+    },
+    {
+      "condition": "sequential",
+      "prompt": "How does a combustion engine work?",
+      "prompt_idx": 33,
+      "spectral_entropy": 0.5496821999549866,
+      "participation_ratio": 1.25647559240358,
+      "spectral_gap": 3.473498821258545,
+      "passage_distance": 4.755725860595703,
+      "n_tokens": 76
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Summarize the plot of Hamlet.",
+      "prompt_idx": 34,
+      "spectral_entropy": 0.5523505806922913,
+      "participation_ratio": 1.2576249670165147,
+      "spectral_gap": 3.4736688137054443,
+      "passage_distance": 4.739402770996094,
+      "n_tokens": 76
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What causes rainbows?",
+      "prompt_idx": 35,
+      "spectral_entropy": 0.5411346554756165,
+      "participation_ratio": 1.2534302385141727,
+      "spectral_gap": 3.4732847213745117,
+      "passage_distance": 4.748417854309082,
+      "n_tokens": 73
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Calculate 847 divided by 11.",
+      "prompt_idx": 36,
+      "spectral_entropy": 0.5564151406288147,
+      "participation_ratio": 1.258454035099119,
+      "spectral_gap": 3.473215341567993,
+      "passage_distance": 4.728184700012207,
+      "n_tokens": 79
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Describe the water cycle.",
+      "prompt_idx": 37,
+      "spectral_entropy": 0.537179172039032,
+      "participation_ratio": 1.2523170090390896,
+      "spectral_gap": 3.4734671115875244,
+      "passage_distance": 4.740110874176025,
+      "n_tokens": 72
+    },
+    {
+      "condition": "sequential",
+      "prompt": "What is the Pythagorean theorem?",
+      "prompt_idx": 38,
+      "spectral_entropy": 0.5515004992485046,
+      "participation_ratio": 1.2570216582524283,
+      "spectral_gap": 3.473379373550415,
+      "passage_distance": 4.750787734985352,
+      "n_tokens": 77
+    },
+    {
+      "condition": "sequential",
+      "prompt": "Name three Renaissance painters.",
+      "prompt_idx": 39,
+      "spectral_entropy": 0.5447969436645508,
+      "participation_ratio": 1.2546209666153905,
+      "spectral_gap": 3.473702907562256,
+      "passage_distance": 4.741453647613525,
+      "n_tokens": 74
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "description": "S x sigma2 landscape across all Exp 18b/c/d conditions",
+  "model": "Mistral-7B-Instruct-v0.3",
+  "tunnel_layer": 17,
+  "relay_layer": 30,
+  "n_points": 16,
+  "data": [
+    {
+      "condition": "high_care",
+      "experiment": "18b",
+      "S": 0.49358655214309693,
+      "sigma2": 62.75532760620117,
+      "relay_S": 1.9486271023750306,
+      "relay_ratio": 3.947893421962799,
+      "category": "spec_x_valence"
+    },
+    {
+      "condition": "high_hostile",
+      "experiment": "18b",
+      "S": 0.5002726137638092,
+      "sigma2": 70.05953216552734,
+      "relay_S": 1.9124282002449036,
+      "relay_ratio": 3.822772119898227,
+      "category": "spec_x_valence"
+    },
+    {
+      "condition": "high_neutral",
+      "experiment": "18b",
+      "S": 0.4641652852296829,
+      "sigma2": 67.48728866577149,
+      "relay_S": 1.7390831112861633,
+      "relay_ratio": 3.746689307938255,
+      "category": "spec_x_valence"
+    },
+    {
+      "condition": "low_care",
+      "experiment": "18b",
+      "S": 0.3510945439338684,
+      "sigma2": 71.01830368041992,
+      "relay_S": 0.9355342566967011,
+      "relay_ratio": 2.66462203090492,
+      "category": "spec_x_valence"
+    },
+    {
+      "condition": "low_hostile",
+      "experiment": "18b",
+      "S": 0.3350151091814041,
+      "sigma2": 67.55947189331054,
+      "relay_S": 0.923422223329544,
+      "relay_ratio": 2.756359931305454,
+      "category": "spec_x_valence"
+    },
+    {
+      "condition": "low_neutral",
+      "experiment": "18b",
+      "S": 0.3321569710969925,
+      "sigma2": 67.02398147583008,
+      "relay_S": 0.9274808168411255,
+      "relay_ratio": 2.7922967077222465,
+      "category": "spec_x_valence"
+    },
+    {
+      "condition": "active_high",
+      "experiment": "18c",
+      "S": 0.5457004606723785,
+      "sigma2": 57.911645126342776,
+      "relay_S": 2.1843851804733276,
+      "relay_ratio": 4.002901477821482,
+      "category": "agency_x_spec"
+    },
+    {
+      "condition": "passive_high",
+      "experiment": "18c",
+      "S": 0.5227239787578583,
+      "sigma2": 53.647391891479494,
+      "relay_S": 2.2551692008972166,
+      "relay_ratio": 4.314263918514211,
+      "category": "agency_x_spec"
+    },
+    {
+      "condition": "active_low",
+      "experiment": "18c",
+      "S": 0.37966427505016326,
+      "sigma2": 64.16114807128906,
+      "relay_S": 1.352621352672577,
+      "relay_ratio": 3.562677453636799,
+      "category": "agency_x_spec"
+    },
+    {
+      "condition": "passive_low",
+      "experiment": "18c",
+      "S": 0.35602518916130066,
+      "sigma2": 59.955117797851564,
+      "relay_S": 1.3017215251922607,
+      "relay_ratio": 3.6562624354157793,
+      "category": "agency_x_spec"
+    },
+    {
+      "condition": "absent",
+      "experiment": "18c",
+      "S": 0.37618524134159087,
+      "sigma2": 66.08484344482422,
+      "relay_S": 1.2730732083320617,
+      "relay_ratio": 3.3841657471513127,
+      "category": "agency_x_spec"
+    },
+    {
+      "condition": "neptic",
+      "experiment": "18d",
+      "S": 0.40754607915878294,
+      "sigma2": 75.72303695678711,
+      "relay_S": 1.2854605436325073,
+      "relay_ratio": 3.1541477378112193,
+      "category": "self_other_x_agency"
+    },
+    {
+      "condition": "active_self",
+      "experiment": "18d",
+      "S": 0.38154138028621676,
+      "sigma2": 60.92384147644043,
+      "relay_S": 1.3407341480255126,
+      "relay_ratio": 3.5139940706293733,
+      "category": "self_other_x_agency"
+    },
+    {
+      "condition": "passive_low",
+      "experiment": "18d",
+      "S": 0.35602518916130066,
+      "sigma2": 59.955117797851564,
+      "relay_S": 1.3017215251922607,
+      "relay_ratio": 3.6562624354157793,
+      "category": "self_other_x_agency"
+    },
+    {
+      "condition": "active_low",
+      "experiment": "18d",
+      "S": 0.37966427505016326,
+      "sigma2": 64.16114807128906,
+      "relay_S": 1.352621352672577,
+      "relay_ratio": 3.562677453636799,
+      "category": "self_other_x_agency"
+    },
+    {
+      "condition": "absent",
+      "experiment": "18d",
+      "S": 0.37618524134159087,
+      "sigma2": 66.08484344482422,
+      "relay_S": 1.2730732083320617,
+      "relay_ratio": 3.3841657471513127,
+      "category": "self_other_x_agency"
+    }
+  ]
+}

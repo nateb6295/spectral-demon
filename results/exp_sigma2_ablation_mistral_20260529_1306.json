@@ -1,0 +1,1006 @@
+{
+  "results": {
+    "native": {
+      "control": {
+        "S": 0.24865283221006393,
+        "S_std": 0.005991043953976711,
+        "gap": 4.264681241997146,
+        "gap_std": 0.0006425103289973488,
+        "sigma_1": 423.44777221679686,
+        "sigma_2": 99.29177780151367
+      },
+      "receptive": {
+        "S": 0.27250292599201204,
+        "S_std": 0.005340397275157461,
+        "gap": 4.300630007053384,
+        "gap_std": 4.861476401736288e-05,
+        "sigma_1": 434.67749938964846,
+        "sigma_2": 101.07298202514649
+      },
+      "absent": {
+        "S": 0.2496707633137703,
+        "S_std": 0.005523704601280745,
+        "gap": 4.357358194629993,
+        "gap_std": 4.429436679873108e-05,
+        "sigma_1": 431.0611572265625,
+        "sigma_2": 98.92717971801758
+      },
+      "delta_S": 0.02283216267824173,
+      "delta_gap": -0.056728187576609024,
+      "delta_sigma2": 2.1458023071289034
+    },
+    "ablate_sigma2": {
+      "control": {
+        "S": 0.04714856669306755,
+        "S_std": 0.006466177316670411,
+        "gap": 25.310496879732302,
+        "gap_std": 1.445330607748044,
+        "sigma_1": 423.51820983886716,
+        "sigma_2": 16.788597774505615
+      },
+      "receptive": {
+        "S": 0.07522689253091812,
+        "S_std": 0.005724612216734864,
+        "gap": 20.03708220372474,
+        "gap_std": 0.41764865026771986,
+        "sigma_1": 434.77570190429685,
+        "sigma_2": 21.707928466796876
+      },
+      "absent": {
+        "S": 0.05464454293251038,
+        "S_std": 0.005915969176861131,
+        "gap": 23.88010977581729,
+        "gap_std": 0.9040648163132672,
+        "sigma_1": 431.0469970703125,
+        "sigma_2": 18.076346969604494
+      },
+      "delta_S": 0.02058234959840774,
+      "delta_gap": -3.8430275720925486,
+      "delta_sigma2": 3.631581497192382
+    },
+    "ablate_sigma1": {
+      "control": {
+        "S": 0.5305343508720398,
+        "S_std": 0.06540439717259236,
+        "gap": 5.934210733846514,
+        "gap_std": 0.34023538514157536,
+        "sigma_1": 99.29572982788086,
+        "sigma_2": 16.788666439056396
+      },
+      "receptive": {
+        "S": 0.8121529519557953,
+        "S_std": 0.053387926233985215,
+        "gap": 4.657393429100799,
+        "gap_std": 0.09716241472296999,
+        "sigma_1": 101.05907592773437,
+        "sigma_2": 21.7080171585083
+      },
+      "absent": {
+        "S": 0.6275890409946442,
+        "S_std": 0.060229967358646656,
+        "gap": 5.480169576856577,
+        "gap_std": 0.2075063290157751,
+        "sigma_1": 98.9196388244629,
+        "sigma_2": 18.076361083984374
+      },
+      "delta_S": 0.1845639109611511,
+      "delta_gap": -0.8227761477557776,
+      "delta_sigma2": 3.631656074523928
+    }
+  },
+  "raw": [
+    {
+      "S": 0.24511343240737915,
+      "sigma_1": 423.4533996582031,
+      "sigma_2": 99.30744934082031,
+      "gap": 4.264064805500373,
+      "n_tokens": 23,
+      "probe_idx": 0,
+      "mode": "native",
+      "condition": "control"
+    },
+    {
+      "S": 0.23935145139694214,
+      "sigma_1": 423.4406433105469,
+      "sigma_2": 99.30730438232422,
+      "gap": 4.263942576472909,
+      "n_tokens": 20,
+      "probe_idx": 1,
+      "mode": "native",
+      "condition": "control"
+    },
+    {
+      "S": 0.2514570355415344,
+      "sigma_1": 423.44732666015625,
+      "sigma_2": 99.27708435058594,
+      "gap": 4.265307844505176,
+      "n_tokens": 25,
+      "probe_idx": 2,
+      "mode": "native",
+      "condition": "control"
+    },
+    {
+      "S": 0.25418710708618164,
+      "sigma_1": 423.4439392089844,
+      "sigma_2": 99.27543640136719,
+      "gap": 4.265344525880653,
+      "n_tokens": 28,
+      "probe_idx": 3,
+      "mode": "native",
+      "condition": "control"
+    },
+    {
+      "S": 0.2479131519794464,
+      "sigma_1": 423.4366455078125,
+      "sigma_2": 99.27549743652344,
+      "gap": 4.265268434223229,
+      "n_tokens": 25,
+      "probe_idx": 4,
+      "mode": "native",
+      "condition": "control"
+    },
+    {
+      "S": 0.25114864110946655,
+      "sigma_1": 423.4490051269531,
+      "sigma_2": 99.2764892578125,
+      "gap": 4.265350319019567,
+      "n_tokens": 27,
+      "probe_idx": 5,
+      "mode": "native",
+      "condition": "control"
+    },
+    {
+      "S": 0.24686379730701447,
+      "sigma_1": 423.458984375,
+      "sigma_2": 99.30772399902344,
+      "gap": 4.26410924873441,
+      "n_tokens": 24,
+      "probe_idx": 6,
+      "mode": "native",
+      "condition": "control"
+    },
+    {
+      "S": 0.24787628650665283,
+      "sigma_1": 423.4537658691406,
+      "sigma_2": 99.30756378173828,
+      "gap": 4.264063579284076,
+      "n_tokens": 24,
+      "probe_idx": 7,
+      "mode": "native",
+      "condition": "control"
+    },
+    {
+      "S": 0.24139145016670227,
+      "sigma_1": 423.44866943359375,
+      "sigma_2": 99.3073501586914,
+      "gap": 4.2640214320181755,
+      "n_tokens": 21,
+      "probe_idx": 8,
+      "mode": "native",
+      "condition": "control"
+    },
+    {
+      "S": 0.26122596859931946,
+      "sigma_1": 423.4453430175781,
+      "sigma_2": 99.27587890625,
+      "gap": 4.265339654332889,
+      "n_tokens": 31,
+      "probe_idx": 9,
+      "mode": "native",
+      "condition": "control"
+    },
+    {
+      "S": 0.26911690831184387,
+      "sigma_1": 434.67474365234375,
+      "sigma_2": 101.07283020019531,
+      "gap": 4.300609202209753,
+      "n_tokens": 39,
+      "probe_idx": 0,
+      "mode": "native",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.2642732858657837,
+      "sigma_1": 434.66766357421875,
+      "sigma_2": 101.07235717773438,
+      "gap": 4.300559279624413,
+      "n_tokens": 36,
+      "probe_idx": 1,
+      "mode": "native",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.27483105659484863,
+      "sigma_1": 434.6863098144531,
+      "sigma_2": 101.07402801513672,
+      "gap": 4.300672668841842,
+      "n_tokens": 41,
+      "probe_idx": 2,
+      "mode": "native",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.2779848575592041,
+      "sigma_1": 434.6778564453125,
+      "sigma_2": 101.07402801513672,
+      "gap": 4.300589033418315,
+      "n_tokens": 44,
+      "probe_idx": 3,
+      "mode": "native",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.2725670337677002,
+      "sigma_1": 434.6724853515625,
+      "sigma_2": 101.07295989990234,
+      "gap": 4.300581340271825,
+      "n_tokens": 41,
+      "probe_idx": 4,
+      "mode": "native",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.2747361660003662,
+      "sigma_1": 434.68133544921875,
+      "sigma_2": 101.0744857788086,
+      "gap": 4.300603976363287,
+      "n_tokens": 43,
+      "probe_idx": 5,
+      "mode": "native",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.27087119221687317,
+      "sigma_1": 434.681396484375,
+      "sigma_2": 101.07230377197266,
+      "gap": 4.300697424143528,
+      "n_tokens": 40,
+      "probe_idx": 6,
+      "mode": "native",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.2714422643184662,
+      "sigma_1": 434.6792907714844,
+      "sigma_2": 101.07213592529297,
+      "gap": 4.3006837323866955,
+      "n_tokens": 40,
+      "probe_idx": 7,
+      "mode": "native",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.2658587396144867,
+      "sigma_1": 434.6724853515625,
+      "sigma_2": 101.07225799560547,
+      "gap": 4.300611205999392,
+      "n_tokens": 37,
+      "probe_idx": 8,
+      "mode": "native",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.2833477556705475,
+      "sigma_1": 434.6814270019531,
+      "sigma_2": 101.07243347167969,
+      "gap": 4.300692207274796,
+      "n_tokens": 47,
+      "probe_idx": 9,
+      "mode": "native",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.24610896408557892,
+      "sigma_1": 431.0583190917969,
+      "sigma_2": 98.92689514160156,
+      "gap": 4.357342040046748,
+      "n_tokens": 28,
+      "probe_idx": 0,
+      "mode": "native",
+      "condition": "absent"
+    },
+    {
+      "S": 0.24114114046096802,
+      "sigma_1": 431.04833984375,
+      "sigma_2": 98.92646789550781,
+      "gap": 4.357259983233705,
+      "n_tokens": 25,
+      "probe_idx": 1,
+      "mode": "native",
+      "condition": "absent"
+    },
+    {
+      "S": 0.2521376609802246,
+      "sigma_1": 431.0673828125,
+      "sigma_2": 98.92876434326172,
+      "gap": 4.357351329253321,
+      "n_tokens": 30,
+      "probe_idx": 2,
+      "mode": "native",
+      "condition": "absent"
+    },
+    {
+      "S": 0.2551437020301819,
+      "sigma_1": 431.0621337890625,
+      "sigma_2": 98.92675018310547,
+      "gap": 4.357386985736428,
+      "n_tokens": 33,
+      "probe_idx": 3,
+      "mode": "native",
+      "condition": "absent"
+    },
+    {
+      "S": 0.249250128865242,
+      "sigma_1": 431.0579528808594,
+      "sigma_2": 98.92681884765625,
+      "gap": 4.357341698661847,
+      "n_tokens": 30,
+      "probe_idx": 4,
+      "mode": "native",
+      "condition": "absent"
+    },
+    {
+      "S": 0.2519746720790863,
+      "sigma_1": 431.0674133300781,
+      "sigma_2": 98.92774200439453,
+      "gap": 4.3573966674679525,
+      "n_tokens": 32,
+      "probe_idx": 5,
+      "mode": "native",
+      "condition": "absent"
+    },
+    {
+      "S": 0.2484251707792282,
+      "sigma_1": 431.06695556640625,
+      "sigma_2": 98.92710876464844,
+      "gap": 4.3574199322041425,
+      "n_tokens": 29,
+      "probe_idx": 6,
+      "mode": "native",
+      "condition": "absent"
+    },
+    {
+      "S": 0.2486259788274765,
+      "sigma_1": 431.0631408691406,
+      "sigma_2": 98.92708587646484,
+      "gap": 4.357382379659202,
+      "n_tokens": 29,
+      "probe_idx": 7,
+      "mode": "native",
+      "condition": "absent"
+    },
+    {
+      "S": 0.2428639978170395,
+      "sigma_1": 431.054443359375,
+      "sigma_2": 98.92662811279297,
+      "gap": 4.35731462380281,
+      "n_tokens": 26,
+      "probe_idx": 8,
+      "mode": "native",
+      "condition": "absent"
+    },
+    {
+      "S": 0.261036217212677,
+      "sigma_1": 431.06549072265625,
+      "sigma_2": 98.92753601074219,
+      "gap": 4.357386306233771,
+      "n_tokens": 36,
+      "probe_idx": 9,
+      "mode": "native",
+      "condition": "absent"
+    },
+    {
+      "S": 0.04330594092607498,
+      "sigma_1": 423.5238342285156,
+      "sigma_2": 16.200244903564453,
+      "gap": 26.14305133963314,
+      "n_tokens": 23,
+      "probe_idx": 0,
+      "mode": "ablate_sigma2",
+      "condition": "control"
+    },
+    {
+      "S": 0.03711448237299919,
+      "sigma_1": 423.51068115234375,
+      "sigma_2": 15.2177095413208,
+      "gap": 27.83011990092076,
+      "n_tokens": 20,
+      "probe_idx": 1,
+      "mode": "ablate_sigma2",
+      "condition": "control"
+    },
+    {
+      "S": 0.050204552710056305,
+      "sigma_1": 423.51385498046875,
+      "sigma_2": 17.283016204833984,
+      "gap": 24.50462638934596,
+      "n_tokens": 25,
+      "probe_idx": 2,
+      "mode": "ablate_sigma2",
+      "condition": "control"
+    },
+    {
+      "S": 0.05313095077872276,
+      "sigma_1": 423.520751953125,
+      "sigma_2": 17.245468139648438,
+      "gap": 24.55837954200986,
+      "n_tokens": 28,
+      "probe_idx": 3,
+      "mode": "ablate_sigma2",
+      "condition": "control"
+    },
+    {
+      "S": 0.0463910810649395,
+      "sigma_1": 423.5133972167969,
+      "sigma_2": 16.391036987304688,
+      "gap": 25.83810881183538,
+      "n_tokens": 25,
+      "probe_idx": 4,
+      "mode": "ablate_sigma2",
+      "condition": "control"
+    },
+    {
+      "S": 0.04987535625696182,
+      "sigma_1": 423.51544189453125,
+      "sigma_2": 17.66466522216797,
+      "gap": 23.975288326610787,
+      "n_tokens": 27,
+      "probe_idx": 5,
+      "mode": "ablate_sigma2",
+      "condition": "control"
+    },
+    {
+      "S": 0.04518694058060646,
+      "sigma_1": 423.5292053222656,
+      "sigma_2": 16.539112091064453,
+      "gap": 25.60773534820438,
+      "n_tokens": 24,
+      "probe_idx": 6,
+      "mode": "ablate_sigma2",
+      "condition": "control"
+    },
+    {
+      "S": 0.04627278447151184,
+      "sigma_1": 423.5242919921875,
+      "sigma_2": 16.7109317779541,
+      "gap": 25.34414583338327,
+      "n_tokens": 24,
+      "probe_idx": 7,
+      "mode": "ablate_sigma2",
+      "condition": "control"
+    },
+    {
+      "S": 0.039309922605752945,
+      "sigma_1": 423.5189208984375,
+      "sigma_2": 15.776863098144531,
+      "gap": 26.844304743206287,
+      "n_tokens": 21,
+      "probe_idx": 8,
+      "mode": "ablate_sigma2",
+      "condition": "control"
+    },
+    {
+      "S": 0.0606936551630497,
+      "sigma_1": 423.51171875,
+      "sigma_2": 18.856929779052734,
+      "gap": 22.459208562173202,
+      "n_tokens": 31,
+      "probe_idx": 9,
+      "mode": "ablate_sigma2",
+      "condition": "control"
+    },
+    {
+      "S": 0.0715959295630455,
+      "sigma_1": 434.7729187011719,
+      "sigma_2": 21.3668270111084,
+      "gap": 20.34803382248276,
+      "n_tokens": 39,
+      "probe_idx": 0,
+      "mode": "ablate_sigma2",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.06640194356441498,
+      "sigma_1": 434.7657775878906,
+      "sigma_2": 20.872079849243164,
+      "gap": 20.830016976178612,
+      "n_tokens": 36,
+      "probe_idx": 1,
+      "mode": "ablate_sigma2",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.07772458344697952,
+      "sigma_1": 434.7845764160156,
+      "sigma_2": 21.768285751342773,
+      "gap": 19.973303427863904,
+      "n_tokens": 41,
+      "probe_idx": 2,
+      "mode": "ablate_sigma2",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.0810968354344368,
+      "sigma_1": 434.776123046875,
+      "sigma_2": 22.053218841552734,
+      "gap": 19.714860046990903,
+      "n_tokens": 44,
+      "probe_idx": 3,
+      "mode": "ablate_sigma2",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.07529061287641525,
+      "sigma_1": 434.7705993652344,
+      "sigma_2": 21.73270606994629,
+      "gap": 20.00535957031461,
+      "n_tokens": 41,
+      "probe_idx": 4,
+      "mode": "ablate_sigma2",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.07761780172586441,
+      "sigma_1": 434.7796325683594,
+      "sigma_2": 22.1084041595459,
+      "gap": 19.665808053388222,
+      "n_tokens": 43,
+      "probe_idx": 5,
+      "mode": "ablate_sigma2",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.07348410785198212,
+      "sigma_1": 434.7796630859375,
+      "sigma_2": 21.779842376708984,
+      "gap": 19.962479781345156,
+      "n_tokens": 40,
+      "probe_idx": 6,
+      "mode": "ablate_sigma2",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.0740961879491806,
+      "sigma_1": 434.7774353027344,
+      "sigma_2": 21.769908905029297,
+      "gap": 19.971486201409498,
+      "n_tokens": 40,
+      "probe_idx": 7,
+      "mode": "ablate_sigma2",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.0681060254573822,
+      "sigma_1": 434.770751953125,
+      "sigma_2": 21.145530700683594,
+      "gap": 20.560881545482786,
+      "n_tokens": 37,
+      "probe_idx": 8,
+      "mode": "ablate_sigma2",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.08685489743947983,
+      "sigma_1": 434.779541015625,
+      "sigma_2": 22.482481002807617,
+      "gap": 19.338592611790915,
+      "n_tokens": 47,
+      "probe_idx": 9,
+      "mode": "ablate_sigma2",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.050827693194150925,
+      "sigma_1": 431.052490234375,
+      "sigma_2": 17.409074783325195,
+      "gap": 24.760218196503285,
+      "n_tokens": 28,
+      "probe_idx": 0,
+      "mode": "ablate_sigma2",
+      "condition": "absent"
+    },
+    {
+      "S": 0.04550524428486824,
+      "sigma_1": 431.04290771484375,
+      "sigma_2": 16.877992630004883,
+      "gap": 25.538754350950267,
+      "n_tokens": 25,
+      "probe_idx": 1,
+      "mode": "ablate_sigma2",
+      "condition": "absent"
+    },
+    {
+      "S": 0.05728529393672943,
+      "sigma_1": 431.05096435546875,
+      "sigma_2": 18.215030670166016,
+      "gap": 23.664575270876558,
+      "n_tokens": 30,
+      "probe_idx": 2,
+      "mode": "ablate_sigma2",
+      "condition": "absent"
+    },
+    {
+      "S": 0.06050271540880203,
+      "sigma_1": 431.0457458496094,
+      "sigma_2": 18.4248046875,
+      "gap": 23.39486106694228,
+      "n_tokens": 33,
+      "probe_idx": 3,
+      "mode": "ablate_sigma2",
+      "condition": "absent"
+    },
+    {
+      "S": 0.05419269949197769,
+      "sigma_1": 431.04180908203125,
+      "sigma_2": 18.179248809814453,
+      "gap": 23.710650180953802,
+      "n_tokens": 30,
+      "probe_idx": 4,
+      "mode": "ablate_sigma2",
+      "condition": "absent"
+    },
+    {
+      "S": 0.057111795991659164,
+      "sigma_1": 431.0511474609375,
+      "sigma_2": 18.407085418701172,
+      "gap": 23.41767518626276,
+      "n_tokens": 32,
+      "probe_idx": 5,
+      "mode": "ablate_sigma2",
+      "condition": "absent"
+    },
+    {
+      "S": 0.053317390382289886,
+      "sigma_1": 431.05078125,
+      "sigma_2": 18.252216339111328,
+      "gap": 23.61635284402876,
+      "n_tokens": 29,
+      "probe_idx": 6,
+      "mode": "ablate_sigma2",
+      "condition": "absent"
+    },
+    {
+      "S": 0.05352955311536789,
+      "sigma_1": 431.04656982421875,
+      "sigma_2": 18.198017120361328,
+      "gap": 23.68645808899317,
+      "n_tokens": 29,
+      "probe_idx": 7,
+      "mode": "ablate_sigma2",
+      "condition": "absent"
+    },
+    {
+      "S": 0.04735570773482323,
+      "sigma_1": 431.038330078125,
+      "sigma_2": 17.329919815063477,
+      "gap": 24.87249419950915,
+      "n_tokens": 26,
+      "probe_idx": 8,
+      "mode": "ablate_sigma2",
+      "condition": "absent"
+    },
+    {
+      "S": 0.06681733578443527,
+      "sigma_1": 431.0492248535156,
+      "sigma_2": 19.47007942199707,
+      "gap": 22.13905837315287,
+      "n_tokens": 36,
+      "probe_idx": 9,
+      "mode": "ablate_sigma2",
+      "condition": "absent"
+    },
+    {
+      "S": 0.49168676137924194,
+      "sigma_1": 99.33769989013672,
+      "sigma_2": 16.200239181518555,
+      "gap": 6.131866250682426,
+      "n_tokens": 23,
+      "probe_idx": 0,
+      "mode": "ablate_sigma1",
+      "condition": "control"
+    },
+    {
+      "S": 0.4268670678138733,
+      "sigma_1": 99.33897399902344,
+      "sigma_2": 15.217765808105469,
+      "gap": 6.527829068450529,
+      "n_tokens": 20,
+      "probe_idx": 1,
+      "mode": "ablate_sigma1",
+      "condition": "control"
+    },
+    {
+      "S": 0.5619162321090698,
+      "sigma_1": 99.27265930175781,
+      "sigma_2": 17.283079147338867,
+      "gap": 5.743922043951477,
+      "n_tokens": 25,
+      "probe_idx": 2,
+      "mode": "ablate_sigma1",
+      "condition": "control"
+    },
+    {
+      "S": 0.5927708745002747,
+      "sigma_1": 99.27113342285156,
+      "sigma_2": 17.24551010131836,
+      "gap": 5.7563465991801905,
+      "n_tokens": 28,
+      "probe_idx": 3,
+      "mode": "ablate_sigma1",
+      "condition": "control"
+    },
+    {
+      "S": 0.5253399014472961,
+      "sigma_1": 99.2712173461914,
+      "sigma_2": 16.39104652404785,
+      "gap": 6.056429478163416,
+      "n_tokens": 25,
+      "probe_idx": 4,
+      "mode": "ablate_sigma1",
+      "condition": "control"
+    },
+    {
+      "S": 0.5590319633483887,
+      "sigma_1": 99.27140045166016,
+      "sigma_2": 17.664770126342773,
+      "gap": 5.619739161146549,
+      "n_tokens": 27,
+      "probe_idx": 5,
+      "mode": "ablate_sigma1",
+      "condition": "control"
+    },
+    {
+      "S": 0.5117624998092651,
+      "sigma_1": 99.29158782958984,
+      "sigma_2": 16.539241790771484,
+      "gap": 6.0033941752391735,
+      "n_tokens": 24,
+      "probe_idx": 6,
+      "mode": "ablate_sigma1",
+      "condition": "control"
+    },
+    {
+      "S": 0.5220372080802917,
+      "sigma_1": 99.29153442382812,
+      "sigma_2": 16.7109317779541,
+      "gap": 5.941711434356909,
+      "n_tokens": 24,
+      "probe_idx": 7,
+      "mode": "ablate_sigma1",
+      "condition": "control"
+    },
+    {
+      "S": 0.4497222900390625,
+      "sigma_1": 99.33826446533203,
+      "sigma_2": 15.777117729187012,
+      "gap": 6.296350586365999,
+      "n_tokens": 21,
+      "probe_idx": 8,
+      "mode": "ablate_sigma1",
+      "condition": "control"
+    },
+    {
+      "S": 0.664208710193634,
+      "sigma_1": 99.2728271484375,
+      "sigma_2": 18.856962203979492,
+      "gap": 5.264518540928474,
+      "n_tokens": 31,
+      "probe_idx": 9,
+      "mode": "ablate_sigma1",
+      "condition": "control"
+    },
+    {
+      "S": 0.7787451148033142,
+      "sigma_1": 101.0611343383789,
+      "sigma_2": 21.36703872680664,
+      "gap": 4.729767921073205,
+      "n_tokens": 39,
+      "probe_idx": 0,
+      "mode": "ablate_sigma1",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.7289838194847107,
+      "sigma_1": 101.06079864501953,
+      "sigma_2": 20.872196197509766,
+      "gap": 4.841886195812828,
+      "n_tokens": 36,
+      "probe_idx": 1,
+      "mode": "ablate_sigma1",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.8361390233039856,
+      "sigma_1": 101.05896759033203,
+      "sigma_2": 21.768404006958008,
+      "gap": 4.64246104390702,
+      "n_tokens": 41,
+      "probe_idx": 2,
+      "mode": "ablate_sigma1",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.8678786158561707,
+      "sigma_1": 101.05996704101562,
+      "sigma_2": 22.053245544433594,
+      "gap": 4.582543954240056,
+      "n_tokens": 44,
+      "probe_idx": 3,
+      "mode": "ablate_sigma1",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.8137602210044861,
+      "sigma_1": 101.06050872802734,
+      "sigma_2": 21.732807159423828,
+      "gap": 4.650135989643899,
+      "n_tokens": 41,
+      "probe_idx": 4,
+      "mode": "ablate_sigma1",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.835336446762085,
+      "sigma_1": 101.05819702148438,
+      "sigma_2": 22.10847282409668,
+      "gap": 4.571016633556798,
+      "n_tokens": 43,
+      "probe_idx": 5,
+      "mode": "ablate_sigma1",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.795958936214447,
+      "sigma_1": 101.0571060180664,
+      "sigma_2": 21.779829025268555,
+      "gap": 4.639940281478878,
+      "n_tokens": 40,
+      "probe_idx": 6,
+      "mode": "ablate_sigma1",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.8012645244598389,
+      "sigma_1": 101.056884765625,
+      "sigma_2": 21.770000457763672,
+      "gap": 4.6420249260760045,
+      "n_tokens": 40,
+      "probe_idx": 7,
+      "mode": "ablate_sigma1",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.7448368072509766,
+      "sigma_1": 101.05975341796875,
+      "sigma_2": 21.145532608032227,
+      "gap": 4.779248425248023,
+      "n_tokens": 37,
+      "probe_idx": 8,
+      "mode": "ablate_sigma1",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.9186260104179382,
+      "sigma_1": 101.05744171142578,
+      "sigma_2": 22.48264503479004,
+      "gap": 4.494908919971281,
+      "n_tokens": 47,
+      "probe_idx": 9,
+      "mode": "ablate_sigma1",
+      "condition": "receptive"
+    },
+    {
+      "S": 0.5894526839256287,
+      "sigma_1": 98.91883087158203,
+      "sigma_2": 17.40904998779297,
+      "gap": 5.6820349726689745,
+      "n_tokens": 28,
+      "probe_idx": 0,
+      "mode": "ablate_sigma1",
+      "condition": "absent"
+    },
+    {
+      "S": 0.5330506563186646,
+      "sigma_1": 98.92012786865234,
+      "sigma_2": 16.877952575683594,
+      "gap": 5.860908035206152,
+      "n_tokens": 25,
+      "probe_idx": 1,
+      "mode": "ablate_sigma1",
+      "condition": "absent"
+    },
+    {
+      "S": 0.6551690697669983,
+      "sigma_1": 98.92098999023438,
+      "sigma_2": 18.214950561523438,
+      "gap": 5.430758082824077,
+      "n_tokens": 30,
+      "probe_idx": 2,
+      "mode": "ablate_sigma1",
+      "condition": "absent"
+    },
+    {
+      "S": 0.6888055205345154,
+      "sigma_1": 98.91837310791016,
+      "sigma_2": 18.4248046875,
+      "gap": 5.3687610146022156,
+      "n_tokens": 33,
+      "probe_idx": 3,
+      "mode": "ablate_sigma1",
+      "condition": "absent"
+    },
+    {
+      "S": 0.6239163279533386,
+      "sigma_1": 98.918701171875,
+      "sigma_2": 18.179384231567383,
+      "gap": 5.441256970635384,
+      "n_tokens": 30,
+      "probe_idx": 4,
+      "mode": "ablate_sigma1",
+      "condition": "absent"
+    },
+    {
+      "S": 0.654221773147583,
+      "sigma_1": 98.91943359375,
+      "sigma_2": 18.407209396362305,
+      "gap": 5.373950579021435,
+      "n_tokens": 32,
+      "probe_idx": 5,
+      "mode": "ablate_sigma1",
+      "condition": "absent"
+    },
+    {
+      "S": 0.613997220993042,
+      "sigma_1": 98.92019653320312,
+      "sigma_2": 18.252172470092773,
+      "gap": 5.419639590590628,
+      "n_tokens": 29,
+      "probe_idx": 6,
+      "mode": "ablate_sigma1",
+      "condition": "absent"
+    },
+    {
+      "S": 0.6162502765655518,
+      "sigma_1": 98.9198226928711,
+      "sigma_2": 18.19805335998535,
+      "gap": 5.435736489836884,
+      "n_tokens": 29,
+      "probe_idx": 7,
+      "mode": "ablate_sigma1",
+      "condition": "absent"
+    },
+    {
+      "S": 0.5523061752319336,
+      "sigma_1": 98.9201889038086,
+      "sigma_2": 17.32993507385254,
+      "gap": 5.708053058609532,
+      "n_tokens": 26,
+      "probe_idx": 8,
+      "mode": "ablate_sigma1",
+      "condition": "absent"
+    },
+    {
+      "S": 0.7487207055091858,
+      "sigma_1": 98.91972351074219,
+      "sigma_2": 19.4700984954834,
+      "gap": 5.080596974570479,
+      "n_tokens": 36,
+      "probe_idx": 9,
+      "mode": "ablate_sigma1",
+      "condition": "absent"
+    }
+  ],
+  "meta": {
+    "experiment": "sigma2_ablation",
+    "model": "mistralai/Mistral-7B-v0.1",
+    "ablation_layer": 16,
+    "measure_layer": 17,
+    "k_subspace": 5,
+    "n_probes": 10,
+    "n_conditions": 3,
+    "n_modes": 3,
+    "total_forward_passes": 90,
+    "timestamp": "2026-05-29T13:06:57.007640",
+    "verdict": "Witness effect is DISTRIBUTED (\u03c3\u2082 ablation doesn't reduce \u0394S)"
+  }
+}

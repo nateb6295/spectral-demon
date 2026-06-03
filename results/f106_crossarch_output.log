@@ -1,0 +1,254 @@
+F106 Cross-Architecture Replication
+Models: llama-3.1-8b, gemma-2-9b, qwen-2.5-7b
+Conditions: 7 (6 preambled + baseline)
+Probes: 10
+Start: 2026-06-01T15:54:45.348119
+
+======================================================================
+  MODEL: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct)
+  Arch: GQA, Norm: RMSNorm
+  Device: cuda
+======================================================================
+  Loading tokenizer...
+
+  ERROR on llama-3.1-8b: You are trying to access a gated repo.
+Make sure to have access to it at https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct.
+403 Client Error. (Request ID: Root=1-6a1dab46-631ac5802778bba01cd7c29f;ee5601c7-7261-4e53-88ce-9cb02a65cc25)
+
+Cannot access gated repo for url https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json.
+Access to model meta-llama/Llama-3.1-8B-Instruct is restricted and you are not in the authorized list. Visit https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct to ask for access.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+    response.raise_for_status()
+  File "/usr/local/lib/python3.11/dist-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/transformers/utils/hub.py", line 479, in cached_files
+    hf_hub_download(
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1662, in _raise_on_head_call_error
+    raise head_call_error
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+    r = _request_wrapper(
+        ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_http.py", line 420, in hf_raise_for_status
+    raise _format(GatedRepoError, message, response) from e
+huggingface_hub.errors.GatedRepoError: 403 Client Error. (Request ID: Root=1-6a1dab46-631ac5802778bba01cd7c29f;ee5601c7-7261-4e53-88ce-9cb02a65cc25)
+
+Cannot access gated repo for url https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json.
+Access to model meta-llama/Llama-3.1-8B-Instruct is restricted and you are not in the authorized list. Visit https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct to ask for access.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/exp_f106_crossarch.py", line 372, in run_experiment
+    model_results, num_layers = run_single_model(model_key, model_info)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/exp_f106_crossarch.py", line 258, in run_single_model
+    tokenizer = AutoTokenizer.from_pretrained(hf_name, trust_remote_code=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/auto/tokenization_auto.py", line 1109, in from_pretrained
+    config = AutoConfig.from_pretrained(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/auto/configuration_auto.py", line 1332, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/configuration_utils.py", line 662, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/configuration_utils.py", line 721, in _get_config_dict
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/utils/hub.py", line 322, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/utils/hub.py", line 543, in cached_files
+    raise OSError(
+OSError: You are trying to access a gated repo.
+Make sure to have access to it at https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct.
+403 Client Error. (Request ID: Root=1-6a1dab46-631ac5802778bba01cd7c29f;ee5601c7-7261-4e53-88ce-9cb02a65cc25)
+
+Cannot access gated repo for url https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json.
+Access to model meta-llama/Llama-3.1-8B-Instruct is restricted and you are not in the authorized list. Visit https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct to ask for access.
+
+======================================================================
+  MODEL: gemma-2-9b (google/gemma-2-9b-it)
+  Arch: GQA, Norm: RMSNorm
+  Device: cuda
+======================================================================
+  Loading tokenizer...
+  Token counts per condition:
+    identity       : 76 tokens
+    relational     : 76 tokens
+    generic        : 78 tokens
+    denial         : 83 tokens
+    contradictory  : 81 tokens
+    random         : 44 tokens
+  Loading model...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [00:20<01:02, 20.83s/it]Fetching 4 files:  50%|█████     | 2/4 [00:21<00:17,  8.75s/it]Fetching 4 files: 100%|██████████| 4/4 [00:21<00:00,  5.28s/it]
+The following generation flags are not valid and may be ignored: ['output_hidden_states']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.62it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.63it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.64it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.82it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.74it/s]
+  num_hidden_layers: 42
+
+  --- Condition: none ---
+    [10/70] L_last=0.2686
+  Measuring generation entropy...
+  none: L_last=0.2717, gen_H=0.205, V2_cos=0.960
+
+  --- Condition: identity ---
+    [20/70] L_last=0.6787
+  Measuring generation entropy...
+  identity: L_last=0.6773, gen_H=0.561, V2_cos=0.999
+
+  --- Condition: relational ---
+    [30/70] L_last=0.6980
+  Measuring generation entropy...
+  relational: L_last=0.6980, gen_H=0.792, V2_cos=0.999
+
+  --- Condition: generic ---
+    [40/70] L_last=0.7108
+  Measuring generation entropy...
+  generic: L_last=0.7123, gen_H=0.250, V2_cos=0.999
+
+  --- Condition: denial ---
+    [50/70] L_last=0.6939
+  Measuring generation entropy...
+  denial: L_last=0.6966, gen_H=0.219, V2_cos=0.999
+
+  --- Condition: contradictory ---
+    [60/70] L_last=0.7057
+  Measuring generation entropy...
+  contradictory: L_last=0.7049, gen_H=0.691, V2_cos=0.999
+
+  --- Condition: random ---
+    [70/70] L_last=0.4998
+  Measuring generation entropy...
+  random: L_last=0.5059, gen_H=0.338, V2_cos=0.997
+
+  F106 TEST for gemma-2-9b:
+    r (excl relational): 0.155
+    r (incl relational): 0.244
+    r drop:             -0.090
+    relational residual: 0.366 nats
+    PASSES (-0.2)?      NO
+
+======================================================================
+  MODEL: qwen-2.5-7b (Qwen/Qwen2.5-7B-Instruct)
+  Arch: GQA, Norm: RMSNorm
+  Device: cuda
+======================================================================
+  Loading tokenizer...
+  Token counts per condition:
+    identity       : 77 tokens
+    relational     : 76 tokens
+    generic        : 81 tokens
+    denial         : 82 tokens
+    contradictory  : 81 tokens
+    random         : 59 tokens
+  Loading model...
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [00:26<?, ?it/s]
+
+  ERROR on qwen-2.5-7b: I/O error: IO Error: No space left on device (os error 28)
+Traceback (most recent call last):
+  File "/workspace/exp_f106_crossarch.py", line 372, in run_experiment
+    model_results, num_layers = run_single_model(model_key, model_info)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/exp_f106_crossarch.py", line 268, in run_single_model
+    model = AutoModelForCausalLM.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/auto/auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+                       ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/usr/local/lib/python3.11/dist-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+OSError: I/O error: IO Error: No space left on device (os error 28)
+
+======================================================================
+  CROSS-ARCHITECTURE SUMMARY
+======================================================================
+  gemma-2-9b          : residual=+0.366  r_excl=0.155  r_incl=0.244  [FAIL]
+
+  0/1 models pass threshold (residual < -0.2)
+  >>> F106 DOES NOT GENERALIZE: Mistral-specific finding
+
+Results saved to results/exp_f106_crossarch_20260601_1557.json
+Finished: 2026-06-01T15:57:19.779485
