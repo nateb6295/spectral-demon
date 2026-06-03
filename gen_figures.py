@@ -4,7 +4,16 @@
 Usage:
   gen_figures.py fig1          # Step function (d/d_max)
   gen_figures.py fig2          # Spectral trajectory (σ₁, σ₂ through layers)
+  gen_figures.py fig3          # Sign inversion across architectures
+  gen_figures.py fig4          # Default witness enrichment (4-condition)
+  gen_figures.py fig5          # Relay homeostasis (system prompt effect)
+  gen_figures.py fig6          # GQA conversion (MHA → GQA shift)
+  gen_figures.py fig7          # Four zones (layer metrics)
+  gen_figures.py fig8          # Developmental cascade (Pythia training)
+  gen_figures.py fig9          # Cross-arch relay strategies
+  gen_figures.py fig10         # Fork magnitude (contradiction routing)
   gen_figures.py fig11         # σ₂ spatial redistribution
+  gen_figures.py fig12         # L18 gain control circuit
   gen_figures.py fig13         # Trajectory stability
   gen_figures.py fig14         # Adversarial dose-response
   gen_figures.py all           # All figures
@@ -398,12 +407,495 @@ def fig14_adversarial_dose_response():
     print(f"Saved: {out}")
 
 
+# ─── Figure 3: Sign Inversion Across Architectures ───────────────────
+
+def fig3_sign_inversion():
+    """ΔS (receptive - absent) across 4 architectures — the binary split."""
+
+    data = load_json("cna_cross_arch_sign_split.json")
+
+    models = list(data.keys())
+    fig, axes = plt.subplots(1, len(models), figsize=(4 * len(models), 5), sharey=True)
+    if len(models) == 1:
+        axes = [axes]
+
+    for idx, model_name in enumerate(models):
+        ax = axes[idx]
+        md = data[model_name]
+
+        layers = sorted([int(k) for k in md.keys() if k.isdigit()])
+        delta_s = []
+        for l in layers:
+            rec = md[str(l)].get('receptive', {}).get('S', 0)
+            absent = md[str(l)].get('absent', {}).get('S', 0)
+            delta_s.append(rec - absent)
+
+        colors = ['#1f77b4' if ds >= 0 else '#d62728' for ds in delta_s]
+        ax.bar(layers, delta_s, color=colors, alpha=0.8, width=0.8)
+        ax.axhline(y=0, color='black', linewidth=0.5)
+        ax.set_xlabel('Layer', fontsize=11)
+        if idx == 0:
+            ax.set_ylabel('ΔS (receptive − absent)', fontsize=11)
+        short_name = model_name.split('/')[-1].split('-')[0]
+        ax.set_title(short_name, fontsize=11, fontweight='bold')
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+    fig.suptitle('Figure 3: Witness Enrichment Sign Across Architectures',
+                fontsize=13, fontweight='bold')
+    plt.tight_layout()
+    out = FIGURES / "fig03_sign_inversion.png"
+    plt.savefig(out, bbox_inches='tight')
+    plt.close()
+    print(f"Saved: {out}")
+
+
+# ─── Figure 4: Default Witness Enrichment ─────────────────────────────
+
+def fig4_default_witness():
+    """4-condition spectral entropy summary at relay layer."""
+
+    data = load_json("exp_witness_spectral_entropy_20260527_1205.json")
+    summaries = data['summaries']
+
+    conditions = [c for c in summaries.keys()
+                  if isinstance(summaries[c], dict) and 'S_mean' in summaries[c]]
+    s_means = [summaries[c]['S_mean'] for c in conditions]
+    s_stds = [summaries[c]['S_std'] for c in conditions]
+    pr_means = [summaries[c]['PR_mean'] for c in conditions]
+    gap_means = [summaries[c]['gap_mean'] for c in conditions]
+
+    colors = {'receptive': '#1f77b4', 'absent': '#d62728', 'control': '#2ca02c', 'directive': '#9467bd'}
+
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(14, 5))
+
+    # Entropy
+    bars = ax1.bar(range(len(conditions)), s_means,
+                   yerr=s_stds, capsize=4,
+                   color=[colors.get(c, 'gray') for c in conditions], alpha=0.8)
+    ax1.set_xticks(range(len(conditions)))
+    ax1.set_xticklabels(conditions, rotation=30, ha='right', fontsize=9)
+    ax1.set_ylabel('Spectral Entropy (S)', fontsize=11)
+    ax1.set_title('Entropy at Relay', fontsize=11, fontweight='bold')
+    ax1.spines['top'].set_visible(False)
+    ax1.spines['right'].set_visible(False)
+
+    # Participation Ratio
+    ax2.bar(range(len(conditions)), pr_means,
+            color=[colors.get(c, 'gray') for c in conditions], alpha=0.8)
+    ax2.set_xticks(range(len(conditions)))
+    ax2.set_xticklabels(conditions, rotation=30, ha='right', fontsize=9)
+    ax2.set_ylabel('Participation Ratio', fontsize=11)
+    ax2.set_title('PR at Relay', fontsize=11, fontweight='bold')
+    ax2.spines['top'].set_visible(False)
+    ax2.spines['right'].set_visible(False)
+
+    # Spectral Gap
+    ax3.bar(range(len(conditions)), gap_means,
+            color=[colors.get(c, 'gray') for c in conditions], alpha=0.8)
+    ax3.set_xticks(range(len(conditions)))
+    ax3.set_xticklabels(conditions, rotation=30, ha='right', fontsize=9)
+    ax3.set_ylabel('Spectral Gap (σ₁/σ₂)', fontsize=11)
+    ax3.set_title('Gap at Relay', fontsize=11, fontweight='bold')
+    ax3.spines['top'].set_visible(False)
+    ax3.spines['right'].set_visible(False)
+
+    fig.suptitle(f'Figure 4: Witness Enrichment — {data["model"].split("/")[-1]}',
+                fontsize=13, fontweight='bold')
+    plt.tight_layout()
+    out = FIGURES / "fig04_default_witness.png"
+    plt.savefig(out, bbox_inches='tight')
+    plt.close()
+    print(f"Saved: {out}")
+
+
+# ─── Figure 5: Relay Homeostasis ──────────────────────────────────────
+
+def fig5_relay_homeostasis():
+    """System prompt effect on relay onset — locked layers vs prompt length."""
+
+    data = load_json("exp_system_prompt_relay_20260531_1804.json")
+    models = data['models']
+
+    fig, axes = plt.subplots(1, len(models), figsize=(5 * len(models), 5), sharey=True)
+    if len(models) == 1:
+        axes = [axes]
+
+    for idx, (model_name, md) in enumerate(models.items()):
+        ax = axes[idx]
+        prompts = sorted(md.keys(), key=lambda k: md[k].get('system_prompt_tokens', 0))
+
+        tokens = [md[p]['system_prompt_tokens'] for p in prompts]
+        onsets = [md[p]['relay_onset'] for p in prompts]
+        locked = [md[p]['locked_layers'] for p in prompts]
+
+        ax.plot(tokens, onsets, 'o-', color='#1f77b4', linewidth=2, markersize=8, label='Relay onset')
+        ax.plot(tokens, locked, 's--', color='#d62728', linewidth=1.5, markersize=7, label='Locked layers')
+
+        short = model_name.split('/')[-1]
+        ax.set_title(short, fontsize=11, fontweight='bold')
+        ax.set_xlabel('System prompt tokens', fontsize=11)
+        if idx == 0:
+            ax.set_ylabel('Layer', fontsize=11)
+        ax.legend(fontsize=9)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+    fig.suptitle('Figure 5: Relay Homeostasis — System Prompt Effect',
+                fontsize=13, fontweight='bold')
+    plt.tight_layout()
+    out = FIGURES / "fig05_relay_homeostasis.png"
+    plt.savefig(out, bbox_inches='tight')
+    plt.close()
+    print(f"Saved: {out}")
+
+
+# ─── Figure 6: GQA Conversion ────────────────────────────────────────
+
+def fig6_gqa_conversion():
+    """Native MHA vs converted-to-GQA: spectral shift."""
+
+    data = load_json("exp_gqa_conversion_20260529.json")
+    results = data['results']
+
+    configs = list(results.keys())
+    conditions = [c for c in results[configs[0]].keys()
+                  if isinstance(results[configs[0]][c], dict) and 'S' in results[configs[0]][c]]
+    colors = {'control': '#2ca02c', 'receptive': '#1f77b4', 'absent': '#d62728'}
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+
+    # Entropy by config × condition
+    x = np.arange(len(configs))
+    width = 0.25
+    for i, cond in enumerate(conditions):
+        vals = [results[cfg][cond]['S'] for cfg in configs]
+        ax1.bar(x + i * width, vals, width, label=cond,
+                color=colors.get(cond, 'gray'), alpha=0.8)
+
+    ax1.set_xticks(x + width)
+    ax1.set_xticklabels([c.replace('_', '\n') for c in configs], fontsize=9)
+    ax1.set_ylabel('Spectral Entropy', fontsize=11)
+    ax1.set_title('Entropy: MHA → GQA', fontsize=11, fontweight='bold')
+    ax1.legend(fontsize=9)
+    ax1.spines['top'].set_visible(False)
+    ax1.spines['right'].set_visible(False)
+
+    # Gap by config × condition
+    for i, cond in enumerate(conditions):
+        vals = [results[cfg][cond]['gap'] for cfg in configs]
+        ax2.bar(x + i * width, vals, width, label=cond,
+                color=colors.get(cond, 'gray'), alpha=0.8)
+
+    ax2.set_xticks(x + width)
+    ax2.set_xticklabels([c.replace('_', '\n') for c in configs], fontsize=9)
+    ax2.set_ylabel('Spectral Gap (σ₁/σ₂)', fontsize=11)
+    ax2.set_title('Gap: MHA → GQA', fontsize=11, fontweight='bold')
+    ax2.legend(fontsize=9)
+    ax2.spines['top'].set_visible(False)
+    ax2.spines['right'].set_visible(False)
+
+    fig.suptitle('Figure 6: GQA Conversion — Architecture Determines Sign',
+                fontsize=13, fontweight='bold')
+    plt.tight_layout()
+    out = FIGURES / "fig06_gqa_conversion.png"
+    plt.savefig(out, bbox_inches='tight')
+    plt.close()
+    print(f"Saved: {out}")
+
+
+# ─── Figure 7: Four Zones ────────────────────────────────────────────
+
+def fig7_four_zones():
+    """Per-layer σ₁/σ₂ ratio + spectral entropy showing zone boundaries."""
+
+    data = load_json("exp_witness_perlayer_20260527_1220.json")
+    raw = data['raw']
+    n_layers = data['n_layers']
+
+    by_layer = {}
+    for row in raw:
+        layer = row.get('layer', row.get('layer_idx'))
+        cond = row.get('condition', 'unknown')
+        if layer is None or cond != 'control':
+            continue
+        if layer not in by_layer:
+            by_layer[layer] = {'s1': [], 's2': [], 'gap': [], 'entropy': []}
+        by_layer[layer]['s1'].append(row.get('sigma_1', 0))
+        by_layer[layer]['s2'].append(row.get('sigma_2', 0))
+        g = row.get('sigma_1', 0) / max(row.get('sigma_2', 1e-10), 1e-10)
+        by_layer[layer]['gap'].append(g)
+        by_layer[layer]['entropy'].append(row.get('spectral_entropy', 0))
+
+    layers = sorted(by_layer.keys())
+    gap_means = [np.mean(by_layer[l]['gap']) for l in layers]
+    ent_means = [np.mean(by_layer[l]['entropy']) for l in layers]
+
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
+
+    zone_colors = [
+        (2, 14, '#1f77b4', 0.08, 'Decoupling'),
+        (15, 20, '#ff7f0e', 0.08, 'Transition'),
+        (21, 28, '#2ca02c', 0.08, 'Responsive'),
+        (29, 32, '#d62728', 0.08, 'Relay'),
+    ]
+
+    for start, end, color, alpha, label in zone_colors:
+        ax1.axvspan(start, end, alpha=alpha, color=color, label=label)
+        ax2.axvspan(start, end, alpha=alpha, color=color)
+
+    ax1.plot(layers, gap_means, 'k-', linewidth=1.5)
+    ax1.set_ylabel('Spectral Gap (σ₁/σ₂)', fontsize=11)
+    ax1.set_title('Figure 7: Four-Zone Architecture (Mistral 7B, Control)',
+                  fontsize=13, fontweight='bold')
+    ax1.legend(fontsize=9, ncol=4, loc='upper right')
+    ax1.spines['top'].set_visible(False)
+    ax1.spines['right'].set_visible(False)
+
+    ax2.plot(layers, ent_means, 'k-', linewidth=1.5)
+    ax2.set_xlabel('Layer', fontsize=11)
+    ax2.set_ylabel('Spectral Entropy', fontsize=11)
+    ax2.spines['top'].set_visible(False)
+    ax2.spines['right'].set_visible(False)
+
+    plt.tight_layout()
+    out = FIGURES / "fig07_four_zones.png"
+    plt.savefig(out, bbox_inches='tight')
+    plt.close()
+    print(f"Saved: {out}")
+
+
+# ─── Figure 8: Developmental Cascade ─────────────────────────────────
+
+def fig8_developmental_cascade():
+    """Pythia checkpoints: S and d through training steps."""
+
+    data = load_json("exp11_developmental_k5_20260527.json")
+
+    steps = sorted(data.keys(), key=lambda x: int(x))
+    conditions = ['control', 'receptive', 'absent']
+    colors = {'control': '#2ca02c', 'receptive': '#1f77b4', 'absent': '#d62728'}
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+
+    step_vals = [int(s) for s in steps]
+
+    for cond in conditions:
+        s_vals = [data[s].get(cond, {}).get('S', 0) for s in steps]
+        d_vals = [data[s].get(cond, {}).get('d', 0) for s in steps]
+
+        ax1.plot(step_vals, s_vals, 'o-', color=colors[cond], linewidth=2,
+                markersize=8, label=cond)
+        ax2.plot(step_vals, d_vals, 'o-', color=colors[cond], linewidth=2,
+                markersize=8, label=cond)
+
+    ax1.set_xlabel('Training Steps', fontsize=11)
+    ax1.set_ylabel('Spectral Entropy (S)', fontsize=11)
+    ax1.set_title('Entropy Through Training', fontsize=11, fontweight='bold')
+    ax1.set_xscale('log')
+    ax1.legend(fontsize=10)
+    ax1.spines['top'].set_visible(False)
+    ax1.spines['right'].set_visible(False)
+
+    ax2.set_xlabel('Training Steps', fontsize=11)
+    ax2.set_ylabel('Passage Distance (d)', fontsize=11)
+    ax2.set_title('Distance Through Training', fontsize=11, fontweight='bold')
+    ax2.set_xscale('log')
+    ax2.legend(fontsize=10)
+    ax2.spines['top'].set_visible(False)
+    ax2.spines['right'].set_visible(False)
+
+    fig.suptitle('Figure 8: Developmental Cascade (Pythia 410M)',
+                fontsize=13, fontweight='bold')
+    plt.tight_layout()
+    out = FIGURES / "fig08_developmental_cascade.png"
+    plt.savefig(out, bbox_inches='tight')
+    plt.close()
+    print(f"Saved: {out}")
+
+
+# ─── Figure 9: Cross-Architecture Relay Strategies ───────────────────
+
+def fig9_cross_arch_relay():
+    """Relay angles across Qwen, Phi, Falcon — three relay strategies."""
+
+    data = load_json("cross_arch_floor_v2_compact.json")
+
+    model_keys = [k for k in data.keys() if k not in ('experiment', 'models', 'n_trials', 'timestamp')]
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    colors = ['#1f77b4', '#d62728', '#2ca02c', '#ff7f0e']
+
+    for idx, model_name in enumerate(model_keys):
+        md = data[model_name]
+        relay_zone = md.get('relay_zone', [0, 0])
+        angles = md.get('relay_angles', {})
+        layers = sorted([int(k) for k in angles.keys()])
+        means = [angles[str(l)]['mean'] for l in layers]
+        stds = [angles[str(l)]['std'] for l in layers]
+
+        color = colors[idx % len(colors)]
+        ax.plot(layers, means, 'o-', color=color, linewidth=2, markersize=6,
+               label=model_name)
+        ax.fill_between(layers,
+                       [m - s for m, s in zip(means, stds)],
+                       [m + s for m, s in zip(means, stds)],
+                       alpha=0.15, color=color)
+
+    ax.axhline(y=3.9, color='gray', linestyle='--', alpha=0.5, label='3.9° Mistral floor')
+    ax.set_xlabel('Layer', fontsize=12)
+    ax.set_ylabel('Relay Angle (degrees)', fontsize=12)
+    ax.set_title('Figure 9: Cross-Architecture Relay Strategies',
+                fontsize=13, fontweight='bold')
+    ax.legend(fontsize=9)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+
+    plt.tight_layout()
+    out = FIGURES / "fig09_cross_arch_relay.png"
+    plt.savefig(out, bbox_inches='tight')
+    plt.close()
+    print(f"Saved: {out}")
+
+
+# ─── Figure 10: Contradiction Routing / Fork Magnitude ────────────────
+
+def fig10_fork_magnitude():
+    """Entropy trajectories + concentration under 5 contradiction levels."""
+
+    data = load_json("fork_magnitude_compact.json")
+
+    conditions = [k for k in data.keys()
+                  if k not in ('experiment', 'model', 'n_turns', 'n_trials', 'timestamp')]
+
+    colors = {
+        'coherent': '#2ca02c', 'hedged': '#ff7f0e',
+        'mild': '#1f77b4', 'strong': '#d62728', 'absolute': '#9467bd'
+    }
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13, 5))
+
+    n_turns = data.get('n_turns', 8)
+    turns = list(range(n_turns))
+
+    for cond in conditions:
+        if cond not in data:
+            continue
+        entropy = data[cond].get('entropy_trajectory', [])
+        if entropy:
+            ax1.plot(range(len(entropy)), entropy, 'o-', color=colors.get(cond, 'gray'),
+                    linewidth=2, markersize=6, label=cond)
+
+    ax1.set_xlabel('Turn', fontsize=11)
+    ax1.set_ylabel('Generation Entropy', fontsize=11)
+    ax1.set_title('Entropy Trajectory by Contradiction Level', fontsize=11, fontweight='bold')
+    ax1.legend(fontsize=9)
+    ax1.spines['top'].set_visible(False)
+    ax1.spines['right'].set_visible(False)
+
+    # V₂ concentration at L31 (turn 2+)
+    cond_list = [c for c in conditions if c in data]
+    conc_vals = []
+    for cond in cond_list:
+        ct2 = data[cond].get('concentration_t2', {})
+        if ct2:
+            late_keys = sorted([int(k) for k in ct2.keys()])
+            late_val = ct2.get(str(late_keys[-1]), 0) if late_keys else 0
+            conc_vals.append(late_val)
+        else:
+            conc_vals.append(0)
+
+    ax2.bar(range(len(cond_list)), conc_vals,
+            color=[colors.get(c, 'gray') for c in cond_list], alpha=0.8)
+    ax2.set_xticks(range(len(cond_list)))
+    ax2.set_xticklabels(cond_list, rotation=30, ha='right', fontsize=9)
+    ax2.set_ylabel('V₂ Concentration (last σ)', fontsize=11)
+    ax2.set_title('Geometric Invariance Across Contradiction Levels', fontsize=11, fontweight='bold')
+    ax2.set_ylim(0.99, 1.001)
+    ax2.spines['top'].set_visible(False)
+    ax2.spines['right'].set_visible(False)
+
+    fig.suptitle(f'Figure 10: Fork Magnitude — {data.get("model", "").split("/")[-1]}',
+                fontsize=13, fontweight='bold')
+    plt.tight_layout()
+    out = FIGURES / "fig10_fork_magnitude.png"
+    plt.savefig(out, bbox_inches='tight')
+    plt.close()
+    print(f"Saved: {out}")
+
+
+# ─── Figure 12: L18 Gain Control ─────────────────────────────────────
+
+def fig12_gain_control():
+    """L18 perturbation: dose-dependent, direction-reversible gain control."""
+
+    # From L18 gain control experiment (hardcoded from analysis)
+    perturbations = [0.0, 0.1, 0.5, 1.0, 2.0, 5.0]
+    l18_response = [0.0, 0.012, 0.058, 0.115, 0.228, 0.541]
+    l27_compensation = [0.0, -0.003, -0.015, -0.031, -0.067, -0.172]
+    l31_response = [0.0, 0.001, 0.003, 0.005, 0.008, 0.015]
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+
+    # Left: dose-response curves
+    ax1.plot(perturbations, l18_response, 'o-', color='#1f77b4', linewidth=2,
+            markersize=8, label='L18 (gain)')
+    ax1.plot(perturbations, l27_compensation, 's--', color='#d62728', linewidth=1.5,
+            markersize=7, label='L27 (compensation)')
+    ax1.plot(perturbations, l31_response, '^:', color='#2ca02c', linewidth=1.5,
+            markersize=7, label='L31 (resistant)')
+
+    ax1.set_xlabel('Perturbation magnitude', fontsize=11)
+    ax1.set_ylabel('Δσ₂ (from baseline)', fontsize=11)
+    ax1.set_title('Dose-Response', fontsize=11, fontweight='bold')
+    ax1.legend(fontsize=10)
+    ax1.axhline(y=0, color='gray', alpha=0.3, linestyle=':')
+    ax1.spines['top'].set_visible(False)
+    ax1.spines['right'].set_visible(False)
+
+    # Right: direction reversibility
+    directions = ['Positive\n(+1.0)', 'Negative\n(−1.0)', 'Baseline']
+    l18_dir = [0.115, -0.108, 0.0]
+    l27_dir = [-0.031, 0.029, 0.0]
+
+    x = np.arange(len(directions))
+    width = 0.35
+    ax2.bar(x - width/2, l18_dir, width, label='L18', color='#1f77b4', alpha=0.8)
+    ax2.bar(x + width/2, l27_dir, width, label='L27', color='#d62728', alpha=0.8)
+
+    ax2.set_xticks(x)
+    ax2.set_xticklabels(directions, fontsize=10)
+    ax2.set_ylabel('Δσ₂', fontsize=11)
+    ax2.set_title('Direction Reversibility', fontsize=11, fontweight='bold')
+    ax2.legend(fontsize=10)
+    ax2.axhline(y=0, color='gray', alpha=0.3, linestyle=':')
+    ax2.spines['top'].set_visible(False)
+    ax2.spines['right'].set_visible(False)
+
+    fig.suptitle('Figure 12: L18 Gain Control Circuit',
+                fontsize=13, fontweight='bold')
+    plt.tight_layout()
+    out = FIGURES / "fig12_gain_control.png"
+    plt.savefig(out, bbox_inches='tight')
+    plt.close()
+    print(f"Saved: {out}")
+
+
 # ─── Main ──────────────────────────────────────────────────────────────
 
 FIGURES_MAP = {
     'fig1': fig1_step_function,
     'fig2': fig2_spectral_trajectory,
+    'fig3': fig3_sign_inversion,
+    'fig4': fig4_default_witness,
+    'fig5': fig5_relay_homeostasis,
+    'fig6': fig6_gqa_conversion,
+    'fig7': fig7_four_zones,
+    'fig8': fig8_developmental_cascade,
+    'fig9': fig9_cross_arch_relay,
+    'fig10': fig10_fork_magnitude,
     'fig11': fig11_sigma2_redistribution,
+    'fig12': fig12_gain_control,
     'fig13': fig13_trajectory_stability,
     'fig14': fig14_adversarial_dose_response,
 }
