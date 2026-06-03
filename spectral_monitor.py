@@ -250,6 +250,129 @@ def load_model(model_name, device):
     return model, tokenizer, n_layers
 
 
+def plot_drift(drift_path, output_path=None):
+    """Visualize a drift JSON as trajectory plot. No model needed."""
+    try:
+        import matplotlib
+        matplotlib.use('Agg')
+        import matplotlib.pyplot as plt
+    except ImportError:
+        print("ERROR: matplotlib required for plotting")
+        sys.exit(1)
+
+    with open(drift_path) as f:
+        drift = json.load(f)
+
+    if not drift:
+        print("Empty drift data")
+        return
+
+    keys = [k for k in drift[0].keys() if k != "turn"]
+    turns = [d["turn"] for d in drift]
+
+    zone_colors = {
+        "responsive": "#2ca02c",
+        "relay": "#d62728",
+        "transition": "#ff7f0e",
+        "decoupling": "#1f77b4",
+    }
+
+    fig, axes = plt.subplots(len(keys), 1, figsize=(10, 3 * len(keys)), sharex=True)
+    if len(keys) == 1:
+        axes = [axes]
+
+    for idx, key in enumerate(keys):
+        ax = axes[idx]
+        vals = [d.get(key, 0) for d in drift]
+
+        color = "#333333"
+        for zone_name, c in zone_colors.items():
+            if zone_name in key:
+                color = c
+                break
+
+        ax.plot(turns, vals, '-', color=color, linewidth=2)
+        ax.fill_between(turns, vals, alpha=0.1, color=color)
+        ax.axhline(y=1.0, color='gray', linestyle=':', alpha=0.5)
+        ax.axhline(y=0.9, color='orange', linestyle='--', alpha=0.3)
+        ax.axhline(y=0.7, color='red', linestyle='--', alpha=0.3)
+        ax.set_ylabel(key, fontsize=10)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+        final = vals[-1]
+        label = "STABLE" if abs(1.0 - final) < 0.1 else "DRIFTING" if abs(1.0 - final) < 0.3 else "WANDERING"
+        ax.annotate(f"{final:.4f} ({label})", xy=(turns[-1], final),
+                    fontsize=9, ha='right', va='bottom', color=color)
+
+    axes[-1].set_xlabel("Turn", fontsize=11)
+    fig.suptitle(f"Spectral Drift Trajectory ({len(turns)} turns)",
+                 fontsize=13, fontweight='bold')
+    plt.tight_layout()
+
+    if output_path is None:
+        output_path = str(drift_path).replace('.json', '.png')
+    plt.savefig(output_path, bbox_inches='tight', dpi=200)
+    plt.close()
+    print(f"Saved: {output_path}")
+
+
+def plot_health(health_path, output_path=None):
+    """Visualize a health JSON as zone bar chart."""
+    try:
+        import matplotlib
+        matplotlib.use('Agg')
+        import matplotlib.pyplot as plt
+    except ImportError:
+        print("ERROR: matplotlib required for plotting")
+        sys.exit(1)
+
+    with open(health_path) as f:
+        report = json.load(f)
+
+    zones = report.get("zone_metrics", {})
+    zone_names = list(zones.keys())
+    metrics = ["s2_enrichment", "gap_ratio", "delta_entropy"]
+    colors = ["#1f77b4", "#2ca02c", "#ff7f0e"]
+
+    fig, axes = plt.subplots(1, len(metrics), figsize=(5 * len(metrics), 5))
+
+    for idx, metric in enumerate(metrics):
+        ax = axes[idx]
+        vals = [zones[z].get(metric, 0) for z in zone_names]
+        bar_colors = []
+        for v in vals:
+            if metric == "s2_enrichment":
+                bar_colors.append("#2ca02c" if v > 1.05 else "#d62728" if v < 0.95 else "#ff7f0e")
+            elif metric == "delta_entropy":
+                bar_colors.append("#2ca02c" if v > 0 else "#d62728")
+            else:
+                bar_colors.append(colors[idx])
+
+        ax.bar(range(len(zone_names)), vals, color=bar_colors, alpha=0.8)
+        ax.set_xticks(range(len(zone_names)))
+        ax.set_xticklabels(zone_names, rotation=30, ha='right', fontsize=9)
+        ax.set_title(metric, fontsize=11, fontweight='bold')
+        if metric in ("s2_enrichment", "gap_ratio"):
+            ax.axhline(y=1.0, color='gray', linestyle=':', alpha=0.5)
+        else:
+            ax.axhline(y=0, color='gray', linestyle=':', alpha=0.5)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+    status = report.get("status", "UNKNOWN")
+    status_color = {"HEALTHY": "green", "DEGRADED": "orange", "CRITICAL": "red"}.get(status, "gray")
+    fig.suptitle(f"Spectral Health: {status}",
+                 fontsize=14, fontweight='bold', color=status_color)
+    plt.tight_layout()
+
+    if output_path is None:
+        output_path = str(health_path).replace('.json', '.png')
+    plt.savefig(output_path, bbox_inches='tight', dpi=200)
+    plt.close()
+    print(f"Saved: {output_path}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Spectral Monitor — live spectral diagnostics")
     sub = parser.add_subparsers(dest="command")
@@ -270,7 +393,21 @@ def main():
     drift_p.add_argument("--turns", type=int, default=20)
     drift_p.add_argument("--device", default="cpu")
 
+    plot_p = sub.add_parser("plot", help="Visualize saved drift or health JSON")
+    plot_p.add_argument("file", help="Path to drift_*.json or health_*.json")
+    plot_p.add_argument("--output", help="Output image path")
+
     args = parser.parse_args()
+
+    if args.command == "plot":
+        fpath = args.file
+        if "drift" in fpath:
+            plot_drift(fpath, args.output)
+        elif "health" in fpath:
+            plot_health(fpath, args.output)
+        else:
+            print("Cannot determine file type. Name should contain 'drift' or 'health'.")
+        sys.exit(0)
 
     if not HAS_TORCH:
         print("ERROR: torch and transformers required")
