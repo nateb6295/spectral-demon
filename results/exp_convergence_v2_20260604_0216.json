@@ -1,0 +1,218 @@
+{
+  "experiment": "convergence_v2_accumulated",
+  "models": {
+    "falcon": {
+      "model": "tiiuae/Falcon3-7B-Instruct",
+      "n_layers": 28,
+      "entries": [
+        {
+          "phase": "ccs_first",
+          "turn": 1,
+          "global_turn": 1
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 2,
+          "global_turn": 2,
+          "resp_drift": 0.040458222230275474,
+          "relay_drift": 0.0284385879834493,
+          "resp_s2_shift": 0.15969382022042203
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 3,
+          "global_turn": 3,
+          "resp_drift": 0.009074350198109945,
+          "relay_drift": 0.006317595640818278,
+          "resp_s2_shift": 0.13174653628127986
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 4,
+          "global_turn": 4,
+          "resp_drift": 0.0035757323106129966,
+          "relay_drift": 0.002572298049926758,
+          "resp_s2_shift": 0.0956081019403111
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 5,
+          "global_turn": 5,
+          "resp_drift": 0.001893619696299235,
+          "relay_drift": 0.0015422900517781575,
+          "resp_s2_shift": 0.07122705055377251
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 6,
+          "global_turn": 6,
+          "resp_drift": 0.000991135835647583,
+          "relay_drift": 0.0008798042933146158,
+          "resp_s2_shift": 0.05288590664739043
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 7,
+          "global_turn": 7,
+          "resp_drift": 0.0006996989250183105,
+          "relay_drift": 0.0007027983665466309,
+          "resp_s2_shift": 0.04274561640014247
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 8,
+          "global_turn": 8,
+          "resp_drift": 0.0006149013837178549,
+          "relay_drift": 0.000553270181020101,
+          "resp_s2_shift": 0.03506993715460661
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 9,
+          "global_turn": 9,
+          "resp_drift": 0.00027005871136983234,
+          "relay_drift": 0.00023194154103597006,
+          "resp_s2_shift": 0.02652218220911129
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 10,
+          "global_turn": 10,
+          "resp_drift": 0.00020166238149007162,
+          "relay_drift": 0.00019617875417073569,
+          "resp_s2_shift": 0.022159468602706612
+        },
+        {
+          "phase": "vanilla",
+          "turn": 1,
+          "global_turn": 11,
+          "resp_drift": 0.0021408796310424805,
+          "relay_drift": 0.003545701503753662,
+          "resp_s2_shift": 0.006226300604629014
+        },
+        {
+          "phase": "vanilla",
+          "turn": 2,
+          "global_turn": 12,
+          "resp_drift": 0.00021953384081522623,
+          "relay_drift": 0.00020627180735270181,
+          "resp_s2_shift": 0.011285499359303645
+        },
+        {
+          "phase": "vanilla",
+          "turn": 3,
+          "global_turn": 13,
+          "resp_drift": 0.000635296106338501,
+          "relay_drift": 0.0007304946581522623,
+          "resp_s2_shift": 0.014235166131532882
+        },
+        {
+          "phase": "vanilla",
+          "turn": 4,
+          "global_turn": 14,
+          "resp_drift": 0.0005057851473490397,
+          "relay_drift": 0.0005225539207458496,
+          "resp_s2_shift": 0.01416078857476419
+        },
+        {
+          "phase": "vanilla",
+          "turn": 5,
+          "global_turn": 15,
+          "resp_drift": 0.0005495051542917887,
+          "relay_drift": 0.00047133366266886395,
+          "resp_s2_shift": 0.012606858426352988
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 1,
+          "global_turn": 16,
+          "resp_drift": 0.0014502406120300293,
+          "relay_drift": 0.0024746060371398926,
+          "resp_s2_shift": 0.01611345679393089
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 2,
+          "global_turn": 17,
+          "resp_drift": 0.00013916691144307455,
+          "relay_drift": 0.00010228157043457031,
+          "resp_s2_shift": 0.010800531683151893
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 3,
+          "global_turn": 18,
+          "resp_drift": 0.00013435880343119302,
+          "relay_drift": 0.00010158618291219075,
+          "resp_s2_shift": 0.00924893456068863
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 4,
+          "global_turn": 19,
+          "resp_drift": 0.00019968549410502115,
+          "relay_drift": 0.00011607011159261067,
+          "resp_s2_shift": 0.006107954060408535
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 5,
+          "global_turn": 20,
+          "resp_drift": 0.00018710891405741373,
+          "relay_drift": 0.0001171429951985677,
+          "resp_s2_shift": 0.0057640379840511215
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 6,
+          "global_turn": 21,
+          "resp_drift": 0.00014612078666687012,
+          "relay_drift": 9.651978810628255e-05,
+          "resp_s2_shift": 0.005467539854001391
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 7,
+          "global_turn": 22,
+          "resp_drift": 0.0001363058884938558,
+          "relay_drift": 8.896986643473308e-05,
+          "resp_s2_shift": 0.00537077388612332
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 8,
+          "global_turn": 23,
+          "resp_drift": 0.00012057026227315266,
+          "relay_drift": 7.828076680501302e-05,
+          "resp_s2_shift": 0.005206407275647504
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 9,
+          "global_turn": 24,
+          "resp_drift": 8.872151374816895e-05,
+          "relay_drift": 5.537271499633789e-05,
+          "resp_s2_shift": 0.004370686111689147
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 10,
+          "global_turn": 25,
+          "resp_drift": 7.374087969462077e-05,
+          "relay_drift": 5.066394805908203e-05,
+          "resp_s2_shift": 0.004036681383263629
+        }
+      ],
+      "summary": {
+        "phase1_mean_drift": 0.006419931296949034,
+        "phase2_mean_drift": 0.0008101999759674072,
+        "phase3_mean_drift": 0.00026760200659434,
+        "transition_to_vanilla": 0.0021408796310424805,
+        "transition_to_reapply": 0.0014502406120300293,
+        "steady_ccs": 0.00036220749219258624
+      }
+    }
+  },
+  "total_elapsed_s": 1632.2394297122955,
+  "timestamp": "2026-06-04T02:16:20.709486"
+}
