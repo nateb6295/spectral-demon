@@ -1,0 +1,174 @@
+{
+  "experiment": "convergence_v2_accumulated",
+  "models": {
+    "qwen": {
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "n_layers": 28,
+      "phase2_mode": "vanilla",
+      "entries": [
+        {
+          "phase": "ccs_first",
+          "turn": 1,
+          "global_turn": 1
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 2,
+          "global_turn": 2,
+          "resp_drift": 0.013033022483189901,
+          "relay_drift": 0.01104116439819336,
+          "resp_s2_shift": 0.2280679947088816,
+          "resp_entropy": 2.665625890096029,
+          "resp_stability": 0.9869669775168101,
+          "tunnel_erank": 20.028095840062043,
+          "resp_erank": 15.249679725398659,
+          "relay_erank": 30.0500907712799
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 3,
+          "global_turn": 3,
+          "resp_drift": 0.00481213132540385,
+          "relay_drift": 0.0026480952898661294,
+          "resp_s2_shift": 0.1349026705614015,
+          "resp_entropy": 3.0886288483937583,
+          "resp_stability": 0.9951878686745962,
+          "tunnel_erank": 26.19074237373908,
+          "resp_erank": 23.31531772978885,
+          "relay_erank": 42.52824462419068
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 4,
+          "global_turn": 4,
+          "resp_drift": 0.0025739967823028564,
+          "relay_drift": 0.00117570161819458,
+          "resp_s2_shift": 0.09678257072725255,
+          "resp_entropy": 3.3859469493230185,
+          "resp_stability": 0.9974260032176971,
+          "tunnel_erank": 31.661298563207062,
+          "resp_erank": 31.35311022297518,
+          "relay_erank": 53.79035629029104
+        },
+        {
+          "phase": "vanilla",
+          "turn": 1,
+          "global_turn": 5,
+          "resp_drift": 0.014771769444147745,
+          "relay_drift": 0.010012209415435791,
+          "resp_s2_shift": -0.07135439641379876,
+          "resp_entropy": 3.352321187655131,
+          "resp_stability": 0.9852282305558523,
+          "tunnel_erank": 29.109271794811008,
+          "resp_erank": 30.350649983351797,
+          "relay_erank": 53.0780316893785
+        },
+        {
+          "phase": "vanilla",
+          "turn": 2,
+          "global_turn": 6,
+          "resp_drift": 0.001971652110417684,
+          "relay_drift": 0.0008231798807779948,
+          "resp_s2_shift": 0.07693717270804992,
+          "resp_entropy": 3.593959093093872,
+          "resp_stability": 0.9980283478895823,
+          "tunnel_erank": 33.68919918461337,
+          "resp_erank": 38.600095554066435,
+          "relay_erank": 63.93905875561347
+        },
+        {
+          "phase": "vanilla",
+          "turn": 3,
+          "global_turn": 7,
+          "resp_drift": 0.003057668606440226,
+          "relay_drift": 0.0014185508092244465,
+          "resp_s2_shift": 0.07953276589369283,
+          "resp_entropy": 3.8568087418874106,
+          "resp_stability": 0.9969423313935598,
+          "tunnel_erank": 39.6099836128618,
+          "resp_erank": 50.065532005870494,
+          "relay_erank": 77.89267530998052
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 1,
+          "global_turn": 8,
+          "resp_drift": 0.013063202301661173,
+          "relay_drift": 0.006175796190897624,
+          "resp_s2_shift": 0.19961413310053114,
+          "resp_entropy": 4.275973637898763,
+          "resp_stability": 0.9869367976983389,
+          "tunnel_erank": 55.16185494740919,
+          "resp_erank": 75.58371800335568,
+          "relay_erank": 106.05137127224391
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 2,
+          "global_turn": 9,
+          "resp_drift": 0.0012934903303782146,
+          "relay_drift": 0.0004177490870157878,
+          "resp_s2_shift": 0.0691847095896856,
+          "resp_entropy": 4.45459504922231,
+          "resp_stability": 0.9987065096696218,
+          "tunnel_erank": 61.6733196456115,
+          "resp_erank": 90.04513906283118,
+          "relay_erank": 121.64829816231055
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 3,
+          "global_turn": 10,
+          "resp_drift": 0.0005869964758555094,
+          "relay_drift": 0.0001462697982788086,
+          "resp_s2_shift": 0.04283554898401043,
+          "resp_entropy": 4.560628414154053,
+          "resp_stability": 0.9994130035241445,
+          "tunnel_erank": 64.79989228038177,
+          "resp_erank": 99.94132783646393,
+          "relay_erank": 131.6839301994648
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 4,
+          "global_turn": 11,
+          "resp_drift": 0.00053595503171285,
+          "relay_drift": 0.00014060735702514648,
+          "resp_s2_shift": 0.040717219084757124,
+          "resp_entropy": 4.655118703842163,
+          "resp_stability": 0.9994640449682871,
+          "tunnel_erank": 67.89148999998568,
+          "resp_erank": 109.6673529787202,
+          "relay_erank": 141.28277489494772
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 5,
+          "global_turn": 12,
+          "resp_drift": 0.00041524569193522137,
+          "relay_drift": 0.00010822216669718425,
+          "resp_s2_shift": 0.0423362565991923,
+          "resp_entropy": 4.763096968332927,
+          "resp_stability": 0.9995847543080648,
+          "tunnel_erank": 73.74280987504086,
+          "resp_erank": 121.9169721897892,
+          "relay_erank": 153.0696900978695
+        }
+      ],
+      "summary": {
+        "phase1_mean_drift": 0.006806383530298869,
+        "phase2_mean_drift": 0.006600363387001886,
+        "phase3_mean_drift": 0.003178977966308594,
+        "phase4_mean_drift": null,
+        "transition_to_vanilla": 0.014771769444147745,
+        "transition_to_reapply": 0.013063202301661173,
+        "steady_ccs": 0.006806383530298869,
+        "tunnel_erank_ccs": 25.96004559233606,
+        "tunnel_erank_phase2": 34.136151530762056,
+        "resp_erank_ccs": 23.306035892720896
+      }
+    }
+  },
+  "total_elapsed_s": 44.0481698513031,
+  "timestamp": "2026-06-04T14:23:13.134655"
+}

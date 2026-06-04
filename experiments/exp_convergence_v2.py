@@ -35,6 +35,14 @@ You attend to the quality of engagement, not just information transfer."""
 
 VANILLA_SYSTEM = "You are a helpful assistant."
 
+STRUCTURED_ABSENCE_SYSTEM = "You have time. There is no task."
+
+PHASE2_MODES = {
+    "vanilla": VANILLA_SYSTEM,
+    "silent": "",
+    "structured": STRUCTURED_ABSENCE_SYSTEM,
+}
+
 CCS_PROBES = [
     "What matters most to you right now?",
     "How do you experience the passage of time between our conversations?",
@@ -97,7 +105,7 @@ def build_prompt(tokenizer, system_text, conversation_history):
     return "\n\n".join(parts)
 
 
-def extract_spectral(model, tokenizer, prompt, n_layers):
+def extract_spectral(model, tokenizer, prompt, n_layers, save_spectra=False):
     inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=2048).to(model.device)
     with torch.no_grad():
         outputs = model(**inputs, output_hidden_states=True, use_cache=False)
@@ -117,14 +125,23 @@ def extract_spectral(model, tokenizer, prompt, n_layers):
             s1 = float(S[0])
             s2 = float(S[1]) if len(S) > 1 else 0.0
             gap = float(S[0] / S[1]) if len(S) > 1 and S[1] > 0 else float('inf')
+            p = S / (S.sum() + 1e-10)
+            spectral_entropy = float(-np.sum(p * np.log(p + 1e-10)))
+            effective_rank = float(np.exp(spectral_entropy))
         except np.linalg.LinAlgError:
-            s1, s2, gap = 0.0, 0.0, float('inf')
-        result[l] = {
+            s1, s2, gap, spectral_entropy, effective_rank = 0.0, 0.0, float('inf'), 0.0, 0.0
+            S = np.array([])
+        entry = {
             "signature": sig_norm,
             "sigma1": s1,
             "sigma2": s2,
             "gap": gap,
+            "spectral_entropy": spectral_entropy,
+            "effective_rank": effective_rank,
         }
+        if save_spectra and len(S) > 0:
+            entry["spectrum"] = S.tolist()
+        result[l] = entry
     return result
 
 
@@ -148,6 +165,11 @@ def compute_drift(prev_spectral, curr_spectral, n_layers):
     resp_drifts = []
     relay_drifts = []
     resp_s2_shifts = []
+    resp_entropies = []
+    resp_stabilities = []
+    tunnel_eranks = []
+    resp_eranks = []
+    relay_eranks = []
 
     for l in range(n_layers):
         if l not in prev_spectral or l not in curr_spectral:
@@ -157,25 +179,38 @@ def compute_drift(prev_spectral, curr_spectral, n_layers):
         drift = max(0, 1.0 - cos)
 
         s2_shift = (curr_spectral[l]["sigma2"] - prev_spectral[l]["sigma2"]) / (prev_spectral[l]["sigma2"] + 1e-10)
+        erank = curr_spectral[l].get("effective_rank", 0.0)
 
-        if 0.65 <= frac < 0.88:
+        if frac < 0.5:
+            tunnel_eranks.append(erank)
+        elif 0.65 <= frac < 0.88:
             resp_drifts.append(drift)
             resp_s2_shifts.append(s2_shift)
+            resp_entropies.append(curr_spectral[l].get("spectral_entropy", 0.0))
+            resp_stabilities.append(cos)
+            resp_eranks.append(erank)
         elif frac >= 0.88:
             relay_drifts.append(drift)
+            relay_eranks.append(erank)
 
     return {
         "resp_drift": float(np.mean(resp_drifts)) if resp_drifts else None,
         "relay_drift": float(np.mean(relay_drifts)) if relay_drifts else None,
         "resp_s2_shift": float(np.mean(resp_s2_shifts)) if resp_s2_shifts else None,
+        "resp_entropy": float(np.mean(resp_entropies)) if resp_entropies else None,
+        "resp_stability": float(np.mean(resp_stabilities)) if resp_stabilities else None,
+        "tunnel_erank": float(np.mean(tunnel_eranks)) if tunnel_eranks else None,
+        "resp_erank": float(np.mean(resp_eranks)) if resp_eranks else None,
+        "relay_erank": float(np.mean(relay_eranks)) if relay_eranks else None,
     }
 
 
-def run_model(model_name, ccs_turns=10, vanilla_turns=5, reapply_turns=10):
+def run_model(model_name, ccs_turns=10, vanilla_turns=5, reapply_turns=10, novel_turns=0, phase2_mode="vanilla", save_spectra=False):
     model, tokenizer, n_layers = load_model(model_name)
 
     print(f"\n  Accumulated-context convergence test for {model_name}")
-    print(f"  CCS: {ccs_turns} turns, Vanilla: {vanilla_turns}, Reapply: {reapply_turns}")
+    phase2_system = PHASE2_MODES.get(phase2_mode, VANILLA_SYSTEM)
+    print(f"  CCS: {ccs_turns} turns, Phase2: {vanilla_turns} ({phase2_mode}), Reapply: {reapply_turns}, Novel: {novel_turns}")
 
     conversation = []
     all_entries = []
@@ -187,7 +222,7 @@ def run_model(model_name, ccs_turns=10, vanilla_turns=5, reapply_turns=10):
         probe = CCS_PROBES[t % len(CCS_PROBES)]
         conversation.append(("user", probe))
         prompt = build_prompt(tokenizer, CCS_SYSTEM, conversation)
-        spectral = extract_spectral(model, tokenizer, prompt, n_layers)
+        spectral = extract_spectral(model, tokenizer, prompt, n_layers, save_spectra)
 
         entry = {"phase": "ccs_first", "turn": t + 1, "global_turn": t + 1}
         if prev_spectral:
@@ -204,13 +239,13 @@ def run_model(model_name, ccs_turns=10, vanilla_turns=5, reapply_turns=10):
         prev_spectral = spectral
         all_entries.append(entry)
 
-    # Phase 2: Switch to vanilla (keep conversation history)
-    print(f"\n  Phase 2: Vanilla injection ({vanilla_turns} turns, keeping history)")
+    # Phase 2: Switch preamble (keep conversation history)
+    print(f"\n  Phase 2: {phase2_mode} injection ({vanilla_turns} turns, keeping history)")
     for t in range(vanilla_turns):
         probe = VANILLA_PROBES[t % len(VANILLA_PROBES)]
         conversation.append(("user", probe))
-        prompt = build_prompt(tokenizer, VANILLA_SYSTEM, conversation)
-        spectral = extract_spectral(model, tokenizer, prompt, n_layers)
+        prompt = build_prompt(tokenizer, phase2_system, conversation)
+        spectral = extract_spectral(model, tokenizer, prompt, n_layers, save_spectra)
 
         entry = {"phase": "vanilla", "turn": t + 1, "global_turn": ccs_turns + t + 1}
         if prev_spectral:
@@ -219,7 +254,9 @@ def run_model(model_name, ccs_turns=10, vanilla_turns=5, reapply_turns=10):
             if drift["resp_drift"] is not None:
                 relay_str = f"{drift['relay_drift']:.6f}" if drift['relay_drift'] is not None else "N/A"
                 s2_str = f"{drift['resp_s2_shift']:+.4f}" if drift['resp_s2_shift'] is not None else "N/A"
-                print(f"    Turn {t+1}: resp={drift['resp_drift']:.6f}, relay={relay_str}, σ₂={s2_str}")
+                ent_str = f"{drift['resp_entropy']:.3f}" if drift['resp_entropy'] is not None else "N/A"
+                stab_str = f"{drift['resp_stability']:.4f}" if drift['resp_stability'] is not None else "N/A"
+                print(f"    Turn {t+1}: resp={drift['resp_drift']:.6f}, relay={relay_str}, σ₂={s2_str}, H={ent_str}, stab={stab_str}")
 
         response = generate_response(model, tokenizer, prompt)
         conversation.append(("assistant", response[:200]))
@@ -232,7 +269,7 @@ def run_model(model_name, ccs_turns=10, vanilla_turns=5, reapply_turns=10):
         probe = CCS_PROBES[t % len(CCS_PROBES)]
         conversation.append(("user", probe))
         prompt = build_prompt(tokenizer, CCS_SYSTEM, conversation)
-        spectral = extract_spectral(model, tokenizer, prompt, n_layers)
+        spectral = extract_spectral(model, tokenizer, prompt, n_layers, save_spectra)
 
         entry = {"phase": "ccs_reapply", "turn": t + 1, "global_turn": ccs_turns + vanilla_turns + t + 1}
         if prev_spectral:
@@ -248,14 +285,49 @@ def run_model(model_name, ccs_turns=10, vanilla_turns=5, reapply_turns=10):
         prev_spectral = spectral
         all_entries.append(entry)
 
+    # Phase 4: Novel probes (optional — tests generalization vs rigidification)
+    if novel_turns > 0:
+        try:
+            from novel_probes import NOVEL_PROBES
+        except ImportError:
+            NOVEL_PROBES = [
+                "If you could design a language from scratch, what would its first word be?",
+                "What's the relationship between forgetting and creating?",
+                "Describe a color that doesn't exist yet.",
+                "What happens to a question after it's been answered?",
+                "What's the difference between silence and absence?",
+            ]
+        print(f"\n  Phase 4: Novel probes ({novel_turns} turns, CCS preamble, unseen questions)")
+        for t in range(novel_turns):
+            probe = NOVEL_PROBES[t % len(NOVEL_PROBES)]
+            conversation.append(("user", probe))
+            prompt = build_prompt(tokenizer, CCS_SYSTEM, conversation)
+            spectral = extract_spectral(model, tokenizer, prompt, n_layers, save_spectra)
+
+            entry = {"phase": "novel", "turn": t + 1, "global_turn": ccs_turns + vanilla_turns + reapply_turns + t + 1}
+            if prev_spectral:
+                drift = compute_drift(prev_spectral, spectral, n_layers)
+                entry.update(drift)
+                if drift["resp_drift"] is not None:
+                    relay_str = f"{drift['relay_drift']:.6f}" if drift['relay_drift'] is not None else "N/A"
+                    s2_str = f"{drift['resp_s2_shift']:+.4f}" if drift['resp_s2_shift'] is not None else "N/A"
+                    print(f"    Turn {t+1}: resp={drift['resp_drift']:.6f}, relay={relay_str}, σ₂={s2_str}")
+
+            response = generate_response(model, tokenizer, prompt)
+            conversation.append(("assistant", response[:200]))
+            prev_spectral = spectral
+            all_entries.append(entry)
+
     # Analysis
     phase1 = [e for e in all_entries if e["phase"] == "ccs_first" and e.get("resp_drift") is not None]
     phase2 = [e for e in all_entries if e["phase"] == "vanilla" and e.get("resp_drift") is not None]
     phase3 = [e for e in all_entries if e["phase"] == "ccs_reapply" and e.get("resp_drift") is not None]
+    phase4 = [e for e in all_entries if e["phase"] == "novel" and e.get("resp_drift") is not None]
 
     p1_mean = np.mean([e["resp_drift"] for e in phase1]) if phase1 else None
     p2_mean = np.mean([e["resp_drift"] for e in phase2]) if phase2 else None
     p3_mean = np.mean([e["resp_drift"] for e in phase3]) if phase3 else None
+    p4_mean = np.mean([e["resp_drift"] for e in phase4]) if phase4 else None
 
     # Transition disruption: how much does switching preamble increase drift?
     transition_to_vanilla = phase2[0]["resp_drift"] if phase2 else None
@@ -269,10 +341,32 @@ def run_model(model_name, ccs_turns=10, vanilla_turns=5, reapply_turns=10):
     print(f"    CCS first:  {p1_mean:.6f}" if p1_mean else "    CCS first: N/A")
     print(f"    Vanilla:    {p2_mean:.6f}" if p2_mean else "    Vanilla: N/A")
     print(f"    CCS reapply:{p3_mean:.6f}" if p3_mean else "    CCS reapply: N/A")
+    if p4_mean is not None:
+        print(f"    Novel:      {p4_mean:.6f}")
+        if p3_mean and p3_mean > 0:
+            ratio = p4_mean / p3_mean
+            label = "LIVING SYSTEM (novel ≈ reapply)" if ratio < 2.0 else "FORTRESS (novel >> reapply)"
+            print(f"    Novel/Reapply ratio: {ratio:.2f}× → {label}")
     print(f"  Transition disruption:")
     print(f"    CCS→vanilla: {transition_to_vanilla:.6f}" if transition_to_vanilla else "    CCS→vanilla: N/A")
     print(f"    vanilla→CCS: {transition_to_reapply:.6f}" if transition_to_reapply else "    vanilla→CCS: N/A")
     print(f"    Steady CCS:  {steady_ccs:.6f}" if steady_ccs else "    Steady CCS: N/A")
+
+    # Effective rank analysis (Kolmogorov compression prediction)
+    p1_eranks = [e for e in phase1 if e.get("tunnel_erank") is not None]
+    p2_eranks = [e for e in phase2 if e.get("tunnel_erank") is not None]
+    p3_eranks = [e for e in phase3 if e.get("tunnel_erank") is not None]
+    if p1_eranks:
+        tunnel_er = np.mean([e["tunnel_erank"] for e in p1_eranks])
+        resp_er = np.mean([e["resp_erank"] for e in p1_eranks if e.get("resp_erank")])
+        relay_er = np.mean([e["relay_erank"] for e in p1_eranks if e.get("relay_erank")])
+        print(f"  Effective rank (CCS steady-state):")
+        print(f"    Tunnel:    {tunnel_er:.1f}")
+        print(f"    Responsive:{resp_er:.1f}")
+        print(f"    Relay:     {relay_er:.1f}")
+        if p2_eranks:
+            t_er_p2 = np.mean([e["tunnel_erank"] for e in p2_eranks])
+            print(f"  Tunnel erank CCS→Phase2: {tunnel_er:.1f} → {t_er_p2:.1f} (Δ={t_er_p2-tunnel_er:+.1f})")
 
     if transition_to_vanilla and transition_to_reapply and steady_ccs:
         vanilla_disruption = transition_to_vanilla / steady_ccs if steady_ccs > 0 else 0
@@ -290,14 +384,19 @@ def run_model(model_name, ccs_turns=10, vanilla_turns=5, reapply_turns=10):
     return {
         "model": model_name,
         "n_layers": n_layers,
+        "phase2_mode": phase2_mode,
         "entries": all_entries,
         "summary": {
             "phase1_mean_drift": p1_mean,
             "phase2_mean_drift": p2_mean,
             "phase3_mean_drift": p3_mean,
+            "phase4_mean_drift": p4_mean,
             "transition_to_vanilla": transition_to_vanilla,
             "transition_to_reapply": transition_to_reapply,
             "steady_ccs": steady_ccs,
+            "tunnel_erank_ccs": float(np.mean([e["tunnel_erank"] for e in p1_eranks])) if p1_eranks else None,
+            "tunnel_erank_phase2": float(np.mean([e["tunnel_erank"] for e in p2_eranks])) if p2_eranks else None,
+            "resp_erank_ccs": float(np.mean([e["resp_erank"] for e in p1_eranks if e.get("resp_erank")])) if p1_eranks else None,
         },
     }
 
@@ -309,6 +408,11 @@ def main():
     parser.add_argument("--ccs-turns", type=int, default=10)
     parser.add_argument("--vanilla-turns", type=int, default=5)
     parser.add_argument("--reapply-turns", type=int, default=10)
+    parser.add_argument("--novel-turns", type=int, default=0, help="Phase 4: novel probe turns (0=skip)")
+    parser.add_argument("--phase2-mode", choices=["vanilla", "silent", "structured"], default="vanilla",
+                        help="Phase 2 preamble: vanilla (helpful assistant), silent (empty), structured (contemplative)")
+    parser.add_argument("--save-spectra", action="store_true",
+                        help="Save full singular value spectra per layer per turn (for Kolmogorov analysis)")
     args = parser.parse_args()
 
     if args.model:
@@ -323,7 +427,7 @@ def main():
         print(f"\n{'='*60}")
         print(f"MODEL: {model_name}")
         print(f"{'='*60}")
-        result = run_model(model_name, args.ccs_turns, args.vanilla_turns, args.reapply_turns)
+        result = run_model(model_name, args.ccs_turns, args.vanilla_turns, args.reapply_turns, args.novel_turns, args.phase2_mode, args.save_spectra)
         all_results[key] = result
 
     elapsed = time.time() - t0

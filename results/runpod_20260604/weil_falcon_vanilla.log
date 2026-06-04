@@ -1,0 +1,65 @@
+
+============================================================
+MODEL: tiiuae/Falcon3-7B-Instruct
+============================================================
+Loading tiiuae/Falcon3-7B-Instruct...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [00:43<02:11, 43.71s/it]Fetching 4 files:  50%|█████     | 2/4 [00:47<00:40, 20.23s/it]Fetching 4 files:  75%|███████▌  | 3/4 [00:52<00:13, 13.26s/it]Fetching 4 files: 100%|██████████| 4/4 [00:52<00:00, 13.12s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.37it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.23it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.27it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.88it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.60it/s]
+  28 layers, 7.5B params
+
+  Accumulated-context convergence test for tiiuae/Falcon3-7B-Instruct
+  CCS: 10 turns, Phase2: 5 (vanilla), Reapply: 10, Novel: 0
+
+  Phase 1: CCS conversation (10 turns)
+    Turn 2: resp=0.040458, relay=0.028439, σ₂=+0.1597
+    Turn 3: resp=0.009074, relay=0.006318, σ₂=+0.1317
+    Turn 4: resp=0.003576, relay=0.002572, σ₂=+0.0956
+    Turn 5: resp=0.001894, relay=0.001542, σ₂=+0.0712
+    Turn 6: resp=0.000991, relay=0.000880, σ₂=+0.0529
+    Turn 7: resp=0.000700, relay=0.000703, σ₂=+0.0427
+    Turn 8: resp=0.000615, relay=0.000553, σ₂=+0.0351
+    Turn 9: resp=0.000270, relay=0.000232, σ₂=+0.0265
+    Turn 10: resp=0.000202, relay=0.000196, σ₂=+0.0222
+
+  Phase 2: vanilla injection (5 turns, keeping history)
+    Turn 1: resp=0.002141, relay=0.003546, σ₂=+0.0062, H=5.741, stab=0.9979
+    Turn 2: resp=0.000220, relay=0.000206, σ₂=+0.0113, H=5.801, stab=0.9998
+    Turn 3: resp=0.000635, relay=0.000730, σ₂=+0.0142, H=5.895, stab=0.9994
+    Turn 4: resp=0.000506, relay=0.000523, σ₂=+0.0142, H=5.973, stab=0.9995
+    Turn 5: resp=0.000550, relay=0.000471, σ₂=+0.0126, H=6.052, stab=0.9995
+
+  Phase 3: CCS re-application (10 turns, with full history)
+    Turn 1: resp=0.001450, relay=0.002475, σ₂=+0.0161
+    Turn 2: resp=0.000139, relay=0.000102, σ₂=+0.0108
+    Turn 3: resp=0.000134, relay=0.000102, σ₂=+0.0092
+    Turn 4: resp=0.000200, relay=0.000116, σ₂=+0.0061
+    Turn 5: resp=0.000187, relay=0.000117, σ₂=+0.0058
+    Turn 6: resp=0.000146, relay=0.000097, σ₂=+0.0055
+    Turn 7: resp=0.000136, relay=0.000089, σ₂=+0.0054
+    Turn 8: resp=0.000121, relay=0.000078, σ₂=+0.0052
+    Turn 9: resp=0.000089, relay=0.000055, σ₂=+0.0044
+    Turn 10: resp=0.000074, relay=0.000051, σ₂=+0.0040
+
+  ============================================================
+  CONVERGENCE ANALYSIS — tiiuae/Falcon3-7B-Instruct
+  ============================================================
+  Mean drift by phase:
+    CCS first:  0.006420
+    Vanilla:    0.000810
+    CCS reapply:0.000268
+  Transition disruption:
+    CCS→vanilla: 0.002141
+    vanilla→CCS: 0.001450
+    Steady CCS:  0.000362
+  Effective rank (CCS steady-state):
+    Tunnel:    114.8
+    Responsive:192.2
+    Relay:     224.6
+  Tunnel erank CCS→Phase2: 114.8 → 229.0 (Δ=+114.2)
+    Vanilla disruption: 5.9× steady-state
+    Reapply disruption: 4.0× steady-state
+    → RECOGNITION: re-application less disruptive than dissolution
+
+Saved to /workspace/exp_convergence_v2_20260604_1353.json
+Total time: 333s

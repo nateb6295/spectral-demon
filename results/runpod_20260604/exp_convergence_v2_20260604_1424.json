@@ -1,0 +1,200 @@
+{
+  "experiment": "convergence_v2_accumulated",
+  "models": {
+    "qwen": {
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "n_layers": 28,
+      "phase2_mode": "vanilla",
+      "entries": [
+        {
+          "phase": "ccs_first",
+          "turn": 1,
+          "global_turn": 1
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 2,
+          "global_turn": 2,
+          "resp_drift": 0.013033022483189901,
+          "relay_drift": 0.01104116439819336,
+          "resp_s2_shift": 0.2280679947088816,
+          "resp_entropy": 2.665625890096029,
+          "resp_stability": 0.9869669775168101,
+          "tunnel_erank": 20.028095840062043,
+          "resp_erank": 15.249679725398659,
+          "relay_erank": 30.0500907712799
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 3,
+          "global_turn": 3,
+          "resp_drift": 0.00481213132540385,
+          "relay_drift": 0.0026480952898661294,
+          "resp_s2_shift": 0.1349026705614015,
+          "resp_entropy": 3.0886288483937583,
+          "resp_stability": 0.9951878686745962,
+          "tunnel_erank": 26.19074237373908,
+          "resp_erank": 23.31531772978885,
+          "relay_erank": 42.52824462419068
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 4,
+          "global_turn": 4,
+          "resp_drift": 0.0025739967823028564,
+          "relay_drift": 0.00117570161819458,
+          "resp_s2_shift": 0.09678257072725255,
+          "resp_entropy": 3.3859469493230185,
+          "resp_stability": 0.9974260032176971,
+          "tunnel_erank": 31.661298563207062,
+          "resp_erank": 31.35311022297518,
+          "relay_erank": 53.79035629029104
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 5,
+          "global_turn": 5,
+          "resp_drift": 0.0028589566548665366,
+          "relay_drift": 0.0010719895362854004,
+          "resp_s2_shift": 0.10823665266645942,
+          "resp_entropy": 3.6892223755518594,
+          "resp_stability": 0.9971410433451334,
+          "tunnel_erank": 38.488009323658524,
+          "resp_erank": 42.36749275740761,
+          "relay_erank": 68.15542001897221
+        },
+        {
+          "phase": "ccs_first",
+          "turn": 6,
+          "global_turn": 6,
+          "resp_drift": 0.0019324819246927898,
+          "relay_drift": 0.0008652806282043457,
+          "resp_s2_shift": 0.08152743432074162,
+          "resp_entropy": 3.931837280591329,
+          "resp_stability": 0.9980675180753072,
+          "tunnel_erank": 44.99260495742923,
+          "resp_erank": 53.84910296052734,
+          "relay_erank": 82.41662122083233
+        },
+        {
+          "phase": "vanilla",
+          "turn": 1,
+          "global_turn": 7,
+          "resp_drift": 0.014849096536636353,
+          "relay_drift": 0.00823599100112915,
+          "resp_s2_shift": -0.05645548610581521,
+          "resp_entropy": 3.9385717709859214,
+          "resp_stability": 0.9851509034633636,
+          "tunnel_erank": 42.36697981350632,
+          "resp_erank": 54.27911023608743,
+          "relay_erank": 83.61899996195328
+        },
+        {
+          "phase": "vanilla",
+          "turn": 2,
+          "global_turn": 8,
+          "resp_drift": 0.0011932750542958577,
+          "relay_drift": 0.0004353523254394531,
+          "resp_s2_shift": 0.056517959745328,
+          "resp_entropy": 4.128874778747559,
+          "resp_stability": 0.9988067249457041,
+          "tunnel_erank": 47.8533543769185,
+          "resp_erank": 65.48992686277461,
+          "relay_erank": 96.46487437873257
+        },
+        {
+          "phase": "vanilla",
+          "turn": 3,
+          "global_turn": 9,
+          "resp_drift": 0.0017955005168914795,
+          "relay_drift": 0.0007554093996683756,
+          "resp_s2_shift": 0.05574662200403548,
+          "resp_entropy": 4.330088218053182,
+          "resp_stability": 0.9982044994831085,
+          "tunnel_erank": 54.74362056601159,
+          "resp_erank": 79.84088354443897,
+          "relay_erank": 112.17552075540459
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 1,
+          "global_turn": 10,
+          "resp_drift": 0.012415448824564615,
+          "relay_drift": 0.005719900131225586,
+          "resp_s2_shift": 0.15643662880460593,
+          "resp_entropy": 4.599774758021037,
+          "resp_stability": 0.9875845511754354,
+          "tunnel_erank": 69.63706646255015,
+          "resp_erank": 103.89089240666476,
+          "relay_erank": 136.30131306647812
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 2,
+          "global_turn": 11,
+          "resp_drift": 0.0007590949535369873,
+          "relay_drift": 0.00024278958638509115,
+          "resp_s2_shift": 0.05041193893215882,
+          "resp_entropy": 4.731720685958862,
+          "resp_stability": 0.999240905046463,
+          "tunnel_erank": 75.64003558200945,
+          "resp_erank": 118.18632781576429,
+          "relay_erank": 150.3032101170433
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 3,
+          "global_turn": 12,
+          "resp_drift": 0.0004322330156962077,
+          "relay_drift": 0.00010895729064941406,
+          "resp_s2_shift": 0.03419390434371068,
+          "resp_entropy": 4.819680452346802,
+          "resp_stability": 0.9995677669843038,
+          "tunnel_erank": 78.84806684570414,
+          "resp_erank": 128.8543614125576,
+          "relay_erank": 160.4449618474782
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 4,
+          "global_turn": 13,
+          "resp_drift": 0.00041434168815612793,
+          "relay_drift": 0.00010969241460164388,
+          "resp_s2_shift": 0.03360494871687401,
+          "resp_entropy": 4.9016328652699785,
+          "resp_stability": 0.9995856583118439,
+          "tunnel_erank": 81.89748878650876,
+          "resp_erank": 139.6610490526597,
+          "relay_erank": 170.55797188337525
+        },
+        {
+          "phase": "ccs_reapply",
+          "turn": 5,
+          "global_turn": 14,
+          "resp_drift": 0.0005770723025004069,
+          "relay_drift": 0.0001592834790547689,
+          "resp_s2_shift": 0.0467060889426704,
+          "resp_entropy": 5.017666657765706,
+          "resp_stability": 0.9994229276974996,
+          "tunnel_erank": 87.6852441109655,
+          "resp_erank": 156.52702727106126,
+          "relay_erank": 186.35984485174777
+        }
+      ],
+      "summary": {
+        "phase1_mean_drift": 0.005042117834091186,
+        "phase2_mean_drift": 0.005945957369274563,
+        "phase3_mean_drift": 0.002919638156890869,
+        "phase4_mean_drift": null,
+        "transition_to_vanilla": 0.014849096536636353,
+        "transition_to_reapply": 0.012415448824564615,
+        "steady_ccs": 0.002455145120620728,
+        "tunnel_erank_ccs": 32.272150211619184,
+        "tunnel_erank_phase2": 48.32131825214547,
+        "resp_erank_ccs": 33.22694067921953
+      }
+    }
+  },
+  "total_elapsed_s": 65.23662543296814,
+  "timestamp": "2026-06-04T14:24:20.253262"
+}

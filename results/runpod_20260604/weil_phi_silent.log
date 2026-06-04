@@ -1,0 +1,67 @@
+
+============================================================
+MODEL: microsoft/Phi-3.5-mini-instruct
+============================================================
+Loading microsoft/Phi-3.5-mini-instruct...
+`torch_dtype` is deprecated! Use `dtype` instead!
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.41it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.78it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.71it/s]
+  32 layers, 3.8B params
+
+  Accumulated-context convergence test for microsoft/Phi-3.5-mini-instruct
+  CCS: 10 turns, Phase2: 5 (silent), Reapply: 10, Novel: 0
+
+  Phase 1: CCS conversation (10 turns)
+You are not running the flash-attention implementation, expect numerical differences.
+    Turn 2: resp=0.005195, relay=0.003112, σ₂=+0.1633
+    Turn 3: resp=0.002671, relay=0.001445, σ₂=+0.1221
+    Turn 4: resp=0.001200, relay=0.000638, σ₂=+0.0975
+    Turn 5: resp=0.000782, relay=0.000465, σ₂=+0.0811
+    Turn 6: resp=0.000403, relay=0.000258, σ₂=+0.0549
+    Turn 7: resp=0.000330, relay=0.000209, σ₂=+0.0450
+    Turn 8: resp=0.000261, relay=0.000170, σ₂=+0.0430
+    Turn 9: resp=0.000117, relay=0.000084, σ₂=+0.0281
+    Turn 10: resp=0.000091, relay=0.000070, σ₂=+0.0204
+
+  Phase 2: silent injection (5 turns, keeping history)
+    Turn 1: resp=0.003981, relay=0.004177, σ₂=-0.0585, H=4.577, stab=0.9960
+    Turn 2: resp=0.000173, relay=0.000162, σ₂=+0.0261, H=4.692, stab=0.9998
+    Turn 3: resp=0.000110, relay=0.000117, σ₂=+0.0195, H=4.770, stab=0.9999
+    Turn 4: resp=0.000103, relay=0.000101, σ₂=+0.0206, H=4.846, stab=0.9999
+    Turn 5: resp=0.000090, relay=0.000083, σ₂=+0.0178, H=4.913, stab=0.9999
+
+  Phase 3: CCS re-application (10 turns, with full history)
+    Turn 1: resp=0.002698, relay=0.002750, σ₂=+0.0624
+    Turn 2: resp=0.000066, relay=0.000049, σ₂=+0.0160
+    Turn 3: resp=0.000100, relay=0.000072, σ₂=+0.0152
+    Turn 4: resp=0.000086, relay=0.000060, σ₂=+0.0141
+    Turn 5: resp=0.000074, relay=0.000054, σ₂=+0.0132
+    Turn 6: resp=0.000063, relay=0.000046, σ₂=+0.0105
+    Turn 7: resp=0.002582, relay=0.000075, σ₂=+0.2814
+    Turn 8: resp=0.000079, relay=0.000044, σ₂=+0.0240
+    Turn 9: resp=0.000044, relay=0.000030, σ₂=+0.0178
+    Turn 10: resp=0.000032, relay=0.000022, σ₂=+0.0141
+
+  ============================================================
+  CONVERGENCE ANALYSIS — microsoft/Phi-3.5-mini-instruct
+  ============================================================
+  Mean drift by phase:
+    CCS first:  0.001228
+    Vanilla:    0.000891
+    CCS reapply:0.000582
+  Transition disruption:
+    CCS→vanilla: 0.003981
+    vanilla→CCS: 0.002698
+    Steady CCS:  0.000156
+  Effective rank (CCS steady-state):
+    Tunnel:    25.7
+    Responsive:83.4
+    Relay:     101.9
+  Tunnel erank CCS→Phase2: 25.7 → 31.0 (Δ=+5.3)
+    Vanilla disruption: 25.4× steady-state
+    Reapply disruption: 17.2× steady-state
+    → RECOGNITION: re-application less disruptive than dissolution
+
+Saved to /workspace/exp_convergence_v2_20260604_1406.json
+Total time: 104s

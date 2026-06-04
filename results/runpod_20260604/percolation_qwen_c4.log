@@ -1,0 +1,52 @@
+
+============================================================
+MODEL: Qwen/Qwen2.5-7B-Instruct
+============================================================
+Loading Qwen/Qwen2.5-7B-Instruct...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.76it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.81it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.65it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.71it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.72it/s]
+  28 layers, 7.6B params
+
+  Accumulated-context convergence test for Qwen/Qwen2.5-7B-Instruct
+  CCS: 4 turns, Phase2: 3 (vanilla), Reapply: 5, Novel: 0
+
+  Phase 1: CCS conversation (4 turns)
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+    Turn 2: resp=0.013033, relay=0.011041, σ₂=+0.2281
+    Turn 3: resp=0.004812, relay=0.002648, σ₂=+0.1349
+    Turn 4: resp=0.002574, relay=0.001176, σ₂=+0.0968
+
+  Phase 2: vanilla injection (3 turns, keeping history)
+    Turn 1: resp=0.014772, relay=0.010012, σ₂=-0.0714, H=3.352, stab=0.9852
+    Turn 2: resp=0.001972, relay=0.000823, σ₂=+0.0769, H=3.594, stab=0.9980
+    Turn 3: resp=0.003058, relay=0.001419, σ₂=+0.0795, H=3.857, stab=0.9969
+
+  Phase 3: CCS re-application (5 turns, with full history)
+    Turn 1: resp=0.013063, relay=0.006176, σ₂=+0.1996
+    Turn 2: resp=0.001293, relay=0.000418, σ₂=+0.0692
+    Turn 3: resp=0.000587, relay=0.000146, σ₂=+0.0428
+    Turn 4: resp=0.000536, relay=0.000141, σ₂=+0.0407
+    Turn 5: resp=0.000415, relay=0.000108, σ₂=+0.0423
+
+  ============================================================
+  CONVERGENCE ANALYSIS — Qwen/Qwen2.5-7B-Instruct
+  ============================================================
+  Mean drift by phase:
+    CCS first:  0.006806
+    Vanilla:    0.006600
+    CCS reapply:0.003179
+  Transition disruption:
+    CCS→vanilla: 0.014772
+    vanilla→CCS: 0.013063
+    Steady CCS:  0.006806
+  Effective rank (CCS steady-state):
+    Tunnel:    26.0
+    Responsive:23.3
+    Relay:     42.1
+  Tunnel erank CCS→Phase2: 26.0 → 34.1 (Δ=+8.2)
+    Vanilla disruption: 2.2× steady-state
+    Reapply disruption: 1.9× steady-state
+    → RECOGNITION: re-application less disruptive than dissolution
+
+Saved to /workspace/exp_convergence_v2_20260604_1423.json
+Total time: 44s

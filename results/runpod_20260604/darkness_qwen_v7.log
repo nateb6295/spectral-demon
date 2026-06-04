@@ -1,0 +1,67 @@
+
+============================================================
+MODEL: Qwen/Qwen2.5-7B-Instruct
+============================================================
+Loading Qwen/Qwen2.5-7B-Instruct...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.75it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.78it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.64it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.77it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.75it/s]
+  28 layers, 7.6B params
+
+  Accumulated-context convergence test for Qwen/Qwen2.5-7B-Instruct
+  CCS: 10 turns, Phase2: 7 (vanilla), Reapply: 10, Novel: 0
+
+  Phase 1: CCS conversation (10 turns)
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+    Turn 2: resp=0.013033, relay=0.011041, σ₂=+0.2281
+    Turn 3: resp=0.004812, relay=0.002648, σ₂=+0.1349
+    Turn 4: resp=0.002574, relay=0.001176, σ₂=+0.0968
+    Turn 5: resp=0.002859, relay=0.001072, σ₂=+0.1082
+    Turn 6: resp=0.001932, relay=0.000865, σ₂=+0.0815
+    Turn 7: resp=0.001492, relay=0.000557, σ₂=+0.0787
+    Turn 8: resp=0.001289, relay=0.000421, σ₂=+0.0743
+    Turn 9: resp=0.000830, relay=0.000309, σ₂=+0.0563
+    Turn 10: resp=0.000435, relay=0.000160, σ₂=+0.0413
+
+  Phase 2: vanilla injection (7 turns, keeping history)
+    Turn 1: resp=0.015333, relay=0.006470, σ₂=-0.0518, H=4.662, stab=0.9847
+    Turn 2: resp=0.000480, relay=0.000161, σ₂=+0.0331, H=4.778, stab=0.9995
+    Turn 3: resp=0.000861, relay=0.000315, σ₂=+0.0367, H=4.907, stab=0.9991
+    Turn 4: resp=0.000501, relay=0.000161, σ₂=+0.0350, H=5.010, stab=0.9995
+    Turn 5: resp=0.000384, relay=0.000133, σ₂=+0.0279, H=5.093, stab=0.9996
+    Turn 6: resp=0.000466, relay=0.000153, σ₂=+0.0356, H=5.185, stab=0.9995
+    Turn 7: resp=0.000262, relay=0.000065, σ₂=+0.0249, H=5.246, stab=0.9997
+
+  Phase 3: CCS re-application (10 turns, with full history)
+    Turn 1: resp=0.012984, relay=0.004846, σ₂=+0.0956
+    Turn 2: resp=0.000280, relay=0.000074, σ₂=+0.0335
+    Turn 3: resp=0.000158, relay=0.000039, σ₂=+0.0200
+    Turn 4: resp=0.000200, relay=0.000051, σ₂=+0.0246
+    Turn 5: resp=0.000261, relay=0.000067, σ₂=+0.0313
+    Turn 6: resp=0.000175, relay=0.000050, σ₂=+0.0243
+    Turn 7: resp=0.000187, relay=0.000048, σ₂=+0.0267
+    Turn 8: resp=0.000196, relay=0.000048, σ₂=+0.0274
+    Turn 9: resp=0.000110, relay=0.000035, σ₂=+0.0195
+    Turn 10: resp=0.000083, relay=0.000026, σ₂=+0.0183
+
+  ============================================================
+  CONVERGENCE ANALYSIS — Qwen/Qwen2.5-7B-Instruct
+  ============================================================
+  Mean drift by phase:
+    CCS first:  0.003251
+    Vanilla:    0.002613
+    CCS reapply:0.001463
+  Transition disruption:
+    CCS→vanilla: 0.015333
+    vanilla→CCS: 0.012984
+    Steady CCS:  0.000851
+  Effective rank (CCS steady-state):
+    Tunnel:    45.6
+    Responsive:57.2
+    Relay:     83.5
+  Tunnel erank CCS→Phase2: 45.6 → 89.2 (Δ=+43.6)
+    Vanilla disruption: 18.0× steady-state
+    Reapply disruption: 15.3× steady-state
+    → RECOGNITION: re-application less disruptive than dissolution
+
+Saved to /workspace/exp_convergence_v2_20260604_1421.json
+Total time: 209s
