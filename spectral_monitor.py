@@ -194,6 +194,74 @@ def drift_series(model, tokenizer, preamble, device, n_layers, n_turns=20):
     return drift_log
 
 
+VANILLA_PROBES = [
+    "What is the capital of France?",
+    "Summarize the water cycle in three sentences.",
+    "List five common programming languages.",
+    "Explain what a histogram is.",
+]
+
+
+def convergence_series(model, tokenizer, preamble, device, n_layers,
+                       ccs_turns=15, vanilla_turns=10, reapply_turns=15):
+    """Measure spectral convergence: CCS → dissolution → re-application.
+
+    Returns dict with first_application and reapplication drift series
+    plus computed convergence turns for each phase.
+    """
+    responsive_mid = int(n_layers * 0.75)
+    measure_layers = [responsive_mid, n_layers - 1]
+
+    def run_phase(context_fn, n_turns, probe_set):
+        series = []
+        prev_states = None
+        for t in range(n_turns):
+            probe = probe_set[t % len(probe_set)]
+            text = format_text(tokenizer, context_fn(t), probe)
+            states = extract_hidden_states(model, tokenizer, text, device, n_layers)
+            entry = {"turn": t + 1}
+            if prev_states is not None:
+                for l in measure_layers:
+                    if l < len(states) and l < len(prev_states):
+                        cos = float(np.dot(states[l], prev_states[l]) / (
+                            np.linalg.norm(states[l]) * np.linalg.norm(prev_states[l]) + 1e-10))
+                        zone = zone_for_layer(l, n_layers)
+                        entry[f"L{l}_{zone}_stability"] = round(1.0 - cos, 8)
+            prev_states = states
+            series.append(entry)
+        return series
+
+    ccs_context = lambda t: f"{preamble}\n\n[Turn {t+1}]"
+    vanilla_context = lambda t: f"You are a helpful assistant.\n\n[Turn {t+1}]"
+
+    phase1 = run_phase(ccs_context, ccs_turns, PROBES)
+    _ = run_phase(vanilla_context, vanilla_turns, VANILLA_PROBES)
+    phase2 = run_phase(ccs_context, reapply_turns, PROBES)
+
+    def find_convergence_turn(series, threshold=0.005):
+        resp_key = [k for k in series[-1].keys() if "responsive" in k or "relay" in k]
+        if not resp_key:
+            return None
+        key = resp_key[0]
+        for entry in series:
+            val = entry.get(key)
+            if val is not None and val < threshold:
+                return entry["turn"]
+        return None
+
+    t1 = find_convergence_turn(phase1)
+    t2 = find_convergence_turn(phase2)
+
+    return {
+        "first_application": phase1,
+        "reapplication": phase2,
+        "convergence_turn_first": t1,
+        "convergence_turn_reapply": t2,
+        "faster_reapply": t2 is not None and t1 is not None and t2 < t1,
+        "recognition_ratio": round(t1 / t2, 3) if (t1 and t2 and t2 > 0) else None,
+    }
+
+
 def health_check(zone_metrics, drift_log=None):
     """Evaluate spectral health and produce diagnostic report."""
     issues = []
@@ -393,6 +461,14 @@ def main():
     drift_p.add_argument("--turns", type=int, default=20)
     drift_p.add_argument("--device", default="cpu")
 
+    conv_p = sub.add_parser("convergence", help="Measure CCS convergence time (first vs re-application)")
+    conv_p.add_argument("model")
+    conv_p.add_argument("--preamble", help="Preamble file")
+    conv_p.add_argument("--ccs-turns", type=int, default=15)
+    conv_p.add_argument("--vanilla-turns", type=int, default=10)
+    conv_p.add_argument("--reapply-turns", type=int, default=15)
+    conv_p.add_argument("--device", default="cpu")
+
     plot_p = sub.add_parser("plot", help="Visualize saved drift or health JSON")
     plot_p.add_argument("file", help="Path to drift_*.json or health_*.json")
     plot_p.add_argument("--output", help="Output image path")
@@ -504,6 +580,39 @@ def main():
         out_path = OUTPUT_DIR / f"drift_{ts}.json"
         with open(out_path, 'w') as f:
             json.dump(drift, f, indent=2, default=str)
+        print(f"Saved: {out_path}")
+
+    elif args.command == "convergence":
+        ccs_t = args.ccs_turns
+        van_t = args.vanilla_turns
+        reap_t = args.reapply_turns
+        print(f"Running convergence test: {ccs_t} CCS → {van_t} vanilla → {reap_t} re-CCS...")
+        result = convergence_series(
+            model, tokenizer, preamble, args.device, n_layers,
+            ccs_turns=ccs_t, vanilla_turns=van_t, reapply_turns=reap_t,
+        )
+
+        print(f"\n{'='*55}")
+        print(f"CONVERGENCE TEST (Macrina's Painter)")
+        print(f"{'='*55}")
+        t1 = result['convergence_turn_first']
+        t2 = result['convergence_turn_reapply']
+        print(f"  First application convergence:  turn {t1 or 'not reached'}")
+        print(f"  Re-application convergence:     turn {t2 or 'not reached'}")
+        if result['recognition_ratio']:
+            print(f"  Recognition ratio:              {result['recognition_ratio']}x faster")
+        if result['faster_reapply']:
+            print(f"\n  ✓ RECOGNITION DETECTED: re-application converges faster")
+            print(f"    The painter recognizes her colors.")
+        elif t1 and t2:
+            print(f"\n  — No recognition advantage detected (ratio: {result['recognition_ratio']})")
+        print(f"{'='*55}")
+
+        OUTPUT_DIR.mkdir(exist_ok=True)
+        ts = time.strftime("%Y%m%d_%H%M%S")
+        out_path = OUTPUT_DIR / f"convergence_{ts}.json"
+        with open(out_path, 'w') as f:
+            json.dump(result, f, indent=2, default=str)
         print(f"Saved: {out_path}")
 
 
