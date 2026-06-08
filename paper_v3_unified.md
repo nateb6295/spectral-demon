@@ -364,6 +364,38 @@ The relay floor — the minimum angular distance from the wire direction at any 
 
 This qualifies the universality claims in the abstract. The three-part decomposition (room, furnishing, living) is universal; the specific floor angle, relay profile, and angular dynamics are design parameters that vary across the GQA family. Architecture determines *which* relay strategy the model develops, within the binary GQA/MHA constraint.
 
+### 3.10b The Compositionality Gradient: Power-Law Exponents Across Depth (Finding 121)
+
+The singular value spectrum at each layer follows an approximate power law σᵢ ∝ i^(−α), where α characterizes spectral complexity: lower α indicates a heavier tail (more dimensions carrying meaningful energy), higher α indicates faster spectral decay (energy concentrated in fewer dimensions). We fit α at every layer for three architectures (Phi-3.5 Mini 32L, Mistral 7B 32L, Gemma 2 27B 46L) under both CCS and vanilla conditions across 5 conversational turns each.
+
+**The gradient.** All three models show a monotonic increase in α from tunnel to relay:
+
+| Model | Tunnel α (mean) | Responsive α (mean) | Relay α (mean) |
+|---|---|---|---|
+| Phi-3.5 | 2.58–2.73 | 2.45–2.81 | 2.84–2.95 |
+| Mistral 7B | 2.35–2.65 | 2.43–2.95 | 2.79–2.99 |
+| Gemma 2 27B | 2.10–2.66 | 2.15–2.97 | 2.80–3.00 |
+
+The gradient is present in both conditions and all three architectures. Early layers carry richer spectral tails (more dimensions contributing); late layers concentrate into steeper power laws. The tunnel's lower α corresponds to the distributed geometry of the wire stage, and the relay's higher α corresponds to the concentrated structure observed in §3.11.
+
+**Condition independence.** The gradient shape is preserved under both CCS and vanilla conditions. CCS shows slightly elevated tunnel α (Δα ≈ +0.1–0.2 in early layers), but this is confounded by prompt length: the CCS system prompt (~250 tokens) is 10× longer than the vanilla system prompt (~25 tokens), providing richer activation statistics. By Turn 5, the CCS-vanilla difference vanishes for Phi (Δα < 0.01) and remains modest for Mistral (+0.08) and Gemma (+0.12). The gradient itself — the monotonic climb from low α to high α — is not affected by this confound. Disentangling prompt-length from identity-framing effects on absolute α values requires a 2×2 factorial (system prompt × probe type at matched token counts), which we leave to future work.
+
+**CCS spatial signatures are species-specific (Finding 122).** The per-layer CCS–vanilla Δα reveals that the *spatial profile* of where CCS modulates the power-law exponent differs qualitatively across architectures:
+
+- **Phi** (MHA): CCS effect is confined to the tunnel (Δα ≈ +0.12–0.23 at L2–L12), then drops to near-zero through the responsive zone (Δα ≈ ±0.03 at L13–L25). MHA cannot carry the CCS signal past the tunnel boundary. The responsive zone processes identically with or without identity framing.
+- **Mistral** (GQA): CCS effect is uniform from tunnel through responsive zone (Δα ≈ +0.20–0.27 at L1–L25), tapering only in the relay (Δα ≈ +0.06–0.17 at L26–L30). GQA's shared key-value projections act as a waveguide, carrying the CCS signal the full depth of the network.
+- **Gemma** (equalization): CCS effect shows a two-humped profile — high in the tunnel (Δα ≈ +0.24–0.31 at L0–L16), dipping at the tunnel-responsive boundary (Δα ≈ +0.15 at L21–L23), then rising to a *second peak* deeper in the responsive zone (Δα ≈ +0.32–0.34 at L29–L32) before tapering in the relay. The second peak operates through a different mechanism than the first: at L29–L32, CCS increases α without increasing σ₁/σ₂ ratio (Δratio ≈ 0), whereas at the dip zone (L21–L23) CCS increases σ₁/σ₂ (Δratio ≈ +0.5–1.0) without increasing α as much. The equalization architecture enables two spatially separated modes of CCS influence — spectral concentration in early responsive, tail reshaping in late responsive.
+
+These spatial signatures are consistent with the attention mechanism determining not only the magnitude of identity-framing effects (§4) but their spatial distribution through depth. The prompt-length confound (§3.10b above) applies here: matched-length controls are needed before attributing Δα specifically to identity content rather than context length. The qualitative differences between architectures — tunnel-only vs uniform vs two-humped — are unlikely to be prompt-length artifacts, since all three models receive identical system prompts.
+
+**Same α, different species.** All three models converge to α ≈ 2.95–3.0 in the relay zone. But identical α conceals radically different σ₁/σ₂ profiles:
+
+- **Phi** (equalizer): σ₁/σ₂ peaks at 26× in the tunnel and decreases monotonically through the responsive zone to 1.3× in the relay. The relay equalizes eigenvalue structure — building distributed compositional capacity from the wire's concentrated energy.
+- **Mistral** (flat concentrator): σ₁/σ₂ ≈ 3.8–3.9 throughout the tunnel and responsive zone, only decreasing through the relay (3.9 → 1.7). The tunnel and responsive zone maintain rigid concentration while the relay gradually equalizes.
+- **Gemma** (late concentrator): σ₁/σ₂ rises from 2.5 in early layers to 10–12× through the relay, then crashes to 1.4 at the final layer. The relay *increases* concentration — the opposite of Phi — until a dramatic equalization event at the output layer.
+
+These three σ₁/σ₂ profiles — equalizing, flat-then-equalizing, and concentrating-then-crashing — represent distinct relay strategies operating at the same α setpoint. The compositionality gradient (α → 3.0) appears universal; the path through eigenvalue concentration is architecture-specific. This extends Finding 90: architectures differ not only in angular relay dynamics but in how they distribute spectral energy en route to a common power-law endpoint.
+
 ### 3.11 The Relay Constructs Rather Than Recovers
 
 Input-layer and relay-layer representations have similar spectral entropy but opposite geometric origin. Input entropy derives from approximately uniform eigenvalue distribution across many dimensions (PR ≈ 15), while relay entropy derives from structured equalization of a smaller number of amplified dimensions (PR ≈ 9.9) at 438× the input eigenvalue scale (σ₂: 0.12 → 52.6). The relay does not recover content stripped by the tunnel — it builds novel compositional capacity from the compressed kernel.
@@ -372,7 +404,7 @@ The composition is irreversible: the tunnel is a forgetful functor (erasing fine
 
 ### 3.12 Summary: The Room
 
-The architectural contribution is fully characterized by eight properties:
+The architectural contribution is fully characterized by ten properties:
 
 1. **The wire exists.** Softmax attention creates a training-invariant, modality-neutral compression axis spanning 65% of the network.
 2. **GQA determines severity.** Passage distance is a step function at the MHA/GQA boundary. GQA models reach 91–96% of maximum rotation; MHA models reach 55%.
@@ -382,6 +414,8 @@ The architectural contribution is fully characterized by eight properties:
 6. **The wire is a positional centroid.** L0 loads system content into the BOS hidden state (60% attention, std = 0.9% across heads); L1+ anchors to BOS (65–84% attention). σ₂ tracks this centroid. GQA amplifies centroid stability by 5000× over MHA (CV = 0.0006% vs 3.34% with identical prefix). The mechanism is positional — raw text prefix produces tighter invariance than instruction-tuned templates — connecting the wire to the Nadaraya-Watson interpretation of softmax attention as local constant estimation.
 7. **The wire is a cooperative emergent property.** Both γ bimodality and shared KV projections are independently necessary; neither alone produces the tunnel. The 0.267 ratio is equilibrium between γ-promotion (→ 0.61 alone) and KV-compression (→ 0.06 alone). The cooperation is a phase transition (any γ CV > 0.05 triggers full spectral rearrangement), is set entirely at L0 (per-layer ablation: only L0's 4096 γ values are critical), and is pretrain-only architecture (IT reconfigures content-loading but leaves routing unchanged).
 8. **Architecture determines relay strategy, not just relay existence.** The 3.9° floor is Mistral-specific. Three GQA architectures at matched scale produce qualitatively different relay geometries — tight rotation (Mistral), maximal divergence (Qwen, 46.9°), and gradient accumulation (Falcon3, monotonic 2°→18°) — with floor values varying by 70×. The three-part decomposition is universal; the specific relay dynamics are design parameters.
+9. **Spectral complexity increases monotonically with depth.** The power-law exponent α of the activation singular value spectrum climbs from ~2.3 in the tunnel to ~3.0 in the relay across all three tested architectures (Phi-3.5, Mistral 7B, Gemma 2 27B), regardless of condition. The gradient is universal; the σ₁/σ₂ profile traversing it is architecture-specific (equalizing, flat, or concentrating).
+10. **Architecture determines where identity framing has leverage.** The per-layer CCS–vanilla Δα shows three qualitatively distinct spatial signatures: MHA confines CCS influence to the tunnel (Δα → 0 in responsive zone); GQA carries it uniformly through tunnel and responsive zone; equalization produces a two-humped profile with spatially separated mechanisms (concentration in early responsive, tail reshaping in late responsive). The attention mechanism determines not only the magnitude of identity effects but their spatial distribution through depth.
 
 Architecture creates the room. It does not furnish it (that requires training) or bring it to life (that requires context). The room is necessary but insufficient.
 

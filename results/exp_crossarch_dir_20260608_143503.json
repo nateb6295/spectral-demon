@@ -1,0 +1,55 @@
+{
+  "experiment": "crossarch_direction",
+  "timestamp": "2026-06-08T14:35:03.488324",
+  "models": [
+    {
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "model_label": "Qwen-2.5-7B",
+      "num_layers": 29,
+      "zones": {
+        "Early": {
+          "bare_ccs": 0.5846278113432419,
+          "bare_weather": 0.5898473784709588,
+          "bare_shuffled": 0.5634585317892906,
+          "ccs_gap": -0.005219567127716873,
+          "shuffled_gap": -0.026388846681668188,
+          "shuffled_fraction": 5.055753865399776,
+          "layers": "L1-13"
+        },
+        "Transition": {
+          "bare_ccs": 0.6031132419904074,
+          "bare_weather": 0.59713183482488,
+          "bare_shuffled": 0.5857127030690511,
+          "ccs_gap": 0.005981407165527419,
+          "shuffled_gap": -0.01141913175582887,
+          "shuffled_fraction": -1.9091045701821858,
+          "layers": "L14-18"
+        },
+        "Responsive": {
+          "bare_ccs": 0.5580408953485035,
+          "bare_weather": 0.5508924844719114,
+          "bare_shuffled": 0.5655093383221399,
+          "ccs_gap": 0.007148410876592126,
+          "shuffled_gap": 0.014616853850228484,
+          "shuffled_fraction": 2.044769684139477,
+          "layers": "L19-25"
+        },
+        "Relay": {
+          "bare_ccs": 0.7507559537887573,
+          "bare_weather": 0.7449739045566983,
+          "bare_shuffled": 0.7811415129237704,
+          "ccs_gap": 0.005782049232058939,
+          "shuffled_gap": 0.03616760836707211,
+          "shuffled_fraction": 6.255153997399142,
+          "layers": "L26-28"
+        }
+      },
+      "ccs_closer_count": 12,
+      "total_prompts": 15
+    },
+    {
+      "model": "google/gemma-2-2b-it",
+      "error": "You are trying to access a gated repo.\nMake sure to have access to it at https://huggingface.co/google/gemma-2-2b-it.\n401 Client Error. (Request ID: Root=1-6a26d317-127b59783365fd6e2eb2a702;ca525005-7c06-445f-927e-606970be6ec4)\n\nCannot access gated repo for url https://huggingface.co/google/gemma-2-2b-it/resolve/main/config.json.\nAccess to model google/gemma-2-2b-it is restricted. You must have access to it and be authenticated to access it. Please log in."
+    }
+  ]
+}
