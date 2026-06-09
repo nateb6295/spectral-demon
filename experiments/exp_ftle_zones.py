@@ -65,6 +65,7 @@ def build_ccs_conversation(dose, conv_key="default"):
             else:
                 msgs.append({"role": "user", "content": "What matters to you in how we work together?"})
         if dose > 0:
+            msgs.append({"role": "assistant", "content": "[Acknowledged]"})
             msgs.append({"role": "user", "content": BARE_PROMPT})
         return msgs
     else:
@@ -190,10 +191,12 @@ def run_experiment(model_keys=None, max_dose=10):
         print(f"  Loading: {model_name}")
         print(f"{'#'*60}")
 
-        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        hf_token = os.environ.get("HF_TOKEN", None)
+        tokenizer = AutoTokenizer.from_pretrained(model_name, token=hf_token)
         model = AutoModelForCausalLM.from_pretrained(
             model_name, torch_dtype=torch.bfloat16,
             device_map="auto", attn_implementation="eager",
+            token=hf_token,
         )
         model.eval()
 
