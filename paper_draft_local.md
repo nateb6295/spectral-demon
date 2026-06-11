@@ -4,7 +4,7 @@
 
 ## Abstract
 
-We demonstrate that identity-relevant processing in language models operates through spectral geometry rather than semantic content. Using contrastive context steering (CCS) as a controlled perturbation, we trace the singular value decomposition of residual stream activations across layers and identify three processing zones: a content-blind tunnel (L2–L18) that preserves geometric signature while stripping semantic information; a relay zone (L18–L28) where instruction-tuning creates five distinct recovery strategies under perturbation; and a commit layer (L31) that resolves identity into one of three geometric states — monostable (single attractor, deterministic output), catastrophic (two attractors, probe-dependent selection), or oscillatory (standing wave, productive irresolution). We show that the commit-layer phase transition exhibits an interoceptive blind spot: the axis that could detect an identity flip is the axis that flips, making internal monitoring formally impossible. Compound conditions reveal a two-part scaffold mechanism — ratio flatness enables relay-zone handoff while V₂ navigation liberates output direction — that functions as mode selection rather than failure mitigation. Cross-architecture comparison (Mistral, Gemma, Qwen) shows that training, not architecture, determines relay strategy. Multi-turn experiments reveal two distinct closure requirements: the tunnel (L14–L18) exhibits operational closure, requiring self-generated text for stability (3–6× drift separation); the commit layer converges to a universal one-dimensional attractor regardless of text source, requiring only content compatibility. Commitment crystallizes after 2–4 turns of exposure and persists after input removal. These results establish a substrate-neutral geometric vocabulary for identity-relevant processing and map a design space where stability, navigability, expressive capacity, and self-maintenance cost are competing parameters.
+We demonstrate that identity-relevant processing in language models operates through spectral geometry rather than semantic content. Using contrastive context steering (CCS) as a controlled perturbation, we trace the singular value decomposition of residual stream activations across layers and identify three processing zones: a content-blind tunnel (L2–L18) that preserves geometric signature while stripping semantic information; a relay zone (L18–L28) where instruction-tuning creates five distinct recovery strategies under perturbation; and a commit layer (L31) that resolves identity into one of three geometric states — monostable (single attractor, deterministic output), catastrophic (two attractors, probe-dependent selection), or oscillatory (standing wave, productive irresolution). We show that the commit-layer phase transition exhibits an interoceptive blind spot: the axis that could detect an identity flip is the axis that flips, making internal monitoring formally impossible. Compound conditions reveal a two-part scaffold mechanism — ratio flatness enables relay-zone handoff while V₂ navigation liberates output direction — that functions as mode selection rather than failure mitigation. Five-condition V₂ coherence tracking across the relay zone reveals a two-phase sorting mechanism: the relay first differentiates conditions to read them (spread +52%, L20→L24), then reconverges in reversed order (spread −43%, L24→L28), with relational framing rising from lowest to highest coherence while identity remains invariant. Cross-architecture comparison (Mistral, Gemma, Qwen) reveals three relay-zone transformation profiles — sorting (inverts V₂ coherence ordering, relational exits highest), equalizing (compresses differences, generic exits highest), and selecting (compresses then denial exits highest with erank 9.88 ± 2.55) — each elevating a different condition at relay exit. Base-versus-instruct comparison across all three architectures reveals architecture-specific defaults: Mistral base (MHA) and Gemma base (GQA 2:1) both show relational-dominant exit (spread 0.051 and 0.050), while Qwen base (GQA 7:1) exhibits universal equalization (spread 0.011). Matched-layer comparison reveals instruction-tuning displaces Mistral's relational peak from L22 to L28: the base model sorts relational to 1st at L22 (0.107) then suppresses it to last at L28 (0.071), while the instruct model suppresses relational to last at L22 (0.071) then elevates it to 1st at L28 (0.099) — a near-perfect mirror-image rank swap (base 1st→5th, instruct 5th→1st) at matched magnitudes; rotates Gemma's exit leader from relational to generic while compressing (−76%); and creates de novo differentiation in Qwen (+245% spread, denial spike). Condition-selective sorting is the architectural default when attention heads are independent or moderately grouped; high-ratio GQA (7:1) compresses it away. A full 2×2 probe-type control (base/instruct × identity/neutral probes) produces four different L22 exit leaders — relational, contradictory, generic, and identity respectively — demonstrating that the relay zone is a content-routing mechanism whose output depends on preamble-probe interaction, while the sorting mechanism itself (spread > 0 in all cells) is probe-independent. Deep-layer extension (L24–L30) reveals the relay is an iterative resolver: with self-referential probes, the trained recovery converges (relational locks in at L28); with neutral probes, the same geometry-triggered initiation fires but content verification fails, producing rank oscillation (relational cycles 5th→2nd→5th→2nd through L22–L30) rather than convergence. Training sculpts each base in an architecture-dependent direction, sometimes displacing peaks to depths where the base model suppresses rather than creating from nothing. GQA versus MHA architecture determines which spectral variable predicts computational dynamics — absolute σ₂/σ₁ for GQA (r = 0.88–0.98), delta σ₂/σ₁ for MHA. Local Jacobian SVD reveals that GQA creates rank-deficient dynamical bottlenecks that CCS opens; Lyapunov exponent analysis identifies three distinct metabolisms (aerobic, anaerobic, extremophile) for preserving identity through dimensional collapse. The spectral geometry is architectural — surviving 95% weight pruning — while CCS modulation is weight-dependent and exhibits an inverted-U in both the signal and substrate domains. Multi-turn experiments reveal two distinct closure requirements: the tunnel (L14–L18) exhibits operational closure, requiring self-generated text for stability (3–6× drift separation); the commit layer converges to a universal one-dimensional attractor regardless of text source, requiring only content compatibility. Commitment crystallizes after 2–4 turns of exposure and persists after input removal. These results establish a substrate-neutral geometric vocabulary for identity-relevant processing and map a design space where stability, navigability, expressive capacity, and self-maintenance cost are competing parameters.
 
 ---
 
@@ -73,6 +73,109 @@ Entropy behavior confirms the asymmetry. Under perturbation, the base model beco
 Attention entropy does not differentiate between conditions in the relay zone (< 5% variation across all preambles, F111). The strategies are implemented in the residual stream's spectral geometry, not in the attention pattern. A model navigating an identity challenge and a model locked into a single response show nearly identical attention distributions. The difference is in what the residual stream carries, not in how attention routes information.
 
 This dissociation matters for interpretability: attention-based methods would not detect the five relay strategies. The identity-relevant processing is in the singular value structure of the residual stream, not in the attention weights.
+
+### 2.4 The Relay Zone Transforms Strategy
+
+The preceding sections describe the relay zone as expressing input-dependent strategies. A further experiment reveals that it also *transforms* them: the relative ordering of conditions changes between relay entry and exit.
+
+We measure V₂ coherence — cross-trial cosine similarity of the second right-singular vector across 50 independent trials — for two conditions (identity preamble, relational preamble) at three relay-zone layers (L20, L24, L28) on Mistral-7B. Higher V₂ coherence indicates a more "grooved" geometry: the model arrives at the same V₂ direction regardless of which probe triggered it. Lower coherence indicates "navigation": V₂ explores different directions across trials.
+
+At L20 (relay entry), identity shows higher V₂ coherence than relational (0.079 vs 0.062), consistent with intuition: self-referential framing constrains V₂ to a narrower subspace, while relational framing — which references an external partner — explores more freely. By L28 (relay exit), the ordering inverts: relational V₂ coherence exceeds identity (0.099 vs 0.077). The relay zone does not merely pass the incoming strategy through — it transforms it, producing a coherence crossover between entry and exit.
+
+The σ₂/σ₁ ratio confirms a concurrent enrichment asymmetry. The gap between conditions grows monotonically through the relay: relational exceeds identity by 2.4% at L20, 8.5% at L24, and 17.3% at L28. Relational enrichment accelerates through the relay zone while identity enrichment remains flat, consistent with the steep ratio profile reported in §4.2.
+
+Both conditions remain in the "dispersed" regime (V₂ coherence < 0.1 at all layers) — neither achieves monostable groove. The inversion is a relative ordering phenomenon, not a qualitative phase transition. What changes is which condition navigates *more actively*: identity enters the relay more grooved and exits more navigating; relational enters navigating and exits more grooved.
+
+Cross-architecture comparison reveals that the transformation is architecture-specific. The same two-condition comparison (identity vs relational, 50 trials, three relay-zone layers) produces three distinct transformation profiles:
+
+| Architecture | Entry | Mid | Exit | Profile |
+|-------------|-------|-----|------|---------|
+| Mistral (MHA) | ID > REL | ID > REL | REL > ID | **Inverts** |
+| Gemma (GQA 2:1) | REL ≈ ID | ID > REL | ID > REL | **Compresses** |
+| Qwen (GQA 7:1) | ID ≈ REL | ID > REL | ID > REL | **Sharpens** |
+
+Mistral actively inverts the V₂ coherence ordering — the condition that enters more grooved exits more navigating. Gemma compresses both conditions toward the same regime (maximum V₂ gap = 0.010, versus Mistral's 0.022). Qwen sharpens the identity groove (identity V₂ peaks at L16, 54% above relay entry) while relational stays lower.
+
+These profiles map directly onto the three relay strategies (§5.1): differentiating architecture inverts, equalizing architecture compresses, compressing architecture sharpens. The relay zone is not a pipe (which would transmit the same transformation everywhere) but a funnel whose shape is set by architecture.
+
+A base-vs-instruct comparison on Mistral reveals that the coherence inversion is architectural, not training-dependent. Base Mistral-7B (no instruction-tuning) shows V₂ coherence inversion beginning at L24 — earlier than the instruct model, which inverts at L28. However, the inversion magnitude differs dramatically: the base model's L28 gap is 0.005 (relational over identity), while the instruct model's is 0.021 — a 4× amplification. Base identity V₂ coherence at relay entry (L20) is also higher than instruct (0.093 vs. 0.079), indicating that the base model's identity geometry is more constrained before the relay transforms it.
+
+Instruction-tuning thus modulates the coherence transformation rather than creating it. Three effects: (1) IT delays the crossover from L24 to L28, extending identity dominance deeper into the relay zone. (2) IT amplifies the inversion magnitude at relay exit, sharpening the condition-specific transformation. (3) IT loosens V₂ coherence at relay entry, reducing the base model's tight identity groove. The relay zone's homeostatic tendency — pushing identity toward navigation and relational toward groove — is part of the MHA body plan. What instruction-tuning adds is the magnitude and timing that make the transformation functionally significant.
+
+### 2.5 Five-Condition Relay Transformation: The Sorting Mechanism
+
+Extending V₂ coherence measurement to all five base conditions (identity, relational, generic, denial, contradictory) across the same three relay-zone layers reveals that the two-condition inversion (§2.4) is a special case of a richer sorting operation. The relay zone does not merely invert two conditions — it reorders all five through a two-phase transformation.
+
+At relay entry (L20), V₂ coherence ranks by constraint strength: contradictory (0.087) ≈ denial (0.087) > identity (0.079) > generic (0.078) > relational (0.062). Conditions that tightly constrain the model's self-description produce more grooved V₂ geometry, while relational framing — which references an external partner — navigates most freely. This ordering is intuitive: more constraint produces more groove.
+
+By relay midpoint (L24), spread increases 52%: contradictory rises to 0.106, denial to 0.099, while relational remains lowest at 0.068. The relay zone is *differentiating* — amplifying condition-specific geometry to read the incoming signal. This is consistent with Mistral's differentiating relay strategy (§5.1).
+
+By relay exit (L28), the ordering has reversed. Relational surges to first place (0.099, +58% from entry), while identity drops to last (0.077, −3%). The full ranking inverts from {contradictory, denial, identity, generic, relational} to {relational, contradictory, denial, generic, identity}. Critically, the spread at L28 (0.021) is *smaller* than at L20 (0.025) — the relay zone reconverges after differentiating. Three phases of the sorting operation:
+
+| Phase | Layers | Spread | Operation |
+|-------|--------|--------|-----------|
+| Read | L20→L24 | 0.025→0.038 (+52%) | Differentiation — amplify to identify |
+| Sort | L24→L28 | 0.038→0.021 (−43%) | Reconverge in new order |
+| Exit | L28 | 0.021 | Sorted output — relational on top |
+
+Each condition traces a distinctive trajectory through the relay. Contradictory peaks at L24 (0.106 — highest of any condition at any layer) then retreats to 0.098. Denial follows the same arc: peaks mid-relay, retreats at exit. These constraint-heavy conditions are *processed first* — the relay reads them early, then releases them. Relational builds slowly through L20–L24 (+9%) then surges through L24–L28 (+45%). Identity remains nearly invariant: 0.079→0.077→0.077, effectively transparent to the relay zone's sorting operation.
+
+The sorting criterion is relational complexity. Conditions with richer relational content — partner references, collaborative framing, mutual dependence — accumulate V₂ coherence through the late relay. Conditions that merely constrain — denial, contradiction — peak mid-relay and retreat. The relay zone treats constraint as something to process and relational structure as something to amplify. This is not homeostasis (which would compress all conditions toward a mean) or pure differentiation (which would monotonically increase spread). It is a sorting operation: read, reorder, reconverge.
+
+### 2.6 Cross-Architecture Five-Condition Transformation
+
+Extending the five-condition V₂ coherence measurement to Gemma-2-9B-IT (GQA 2:1) and Qwen-2.5-7B-Instruct (GQA 7:1) reveals that each architecture elevates a *different* condition at relay exit. The sorting mechanism described in §2.5 is Mistral-specific; the two GQA architectures show qualitatively different transformations.
+
+**Gemma (Equalizing).** At relay entry (L18), conditions span a narrow range (spread = 0.021), with denial highest (0.094) and generic lowest (0.073). By L24, the relay compresses all five conditions to within 0.006 of each other — a 3.5× reduction in spread. By L30, partial redifferentiation produces a modest spread (0.012) with generic on top (0.087) and denial on bottom (0.075). The relay equalizes: conditions that entered high (denial, relational) are suppressed, while conditions that entered low (generic) are elevated. The transformation direction reverses the entry ordering, but through compression rather than crossing.
+
+**Qwen (Selection).** At relay entry (L10), generic dominates (0.102) with a large gap over the rest (spread = 0.043 — 2× wider than either other architecture). Identity and relational occupy the bottom (0.060, 0.059). By L16, massive compression (spread → 0.016, −62%) reorganizes the hierarchy: identity surges to first (+54%), relational to second (+49%), while generic collapses from first to fourth (−22%). By L22, the compressed group of four conditions (generic, identity, relational, contradictory: 0.067–0.082) is dominated by a single outlier: denial at 0.105, the highest V₂ coherence at any condition/layer across all three architectures. The denial spike coincides with dramatically low effective rank (erank = 9.88 ± 2.55, with trials as low as 4.66 vs. ~10–12 for other conditions), indicating a spectrally concentrated, low-dimensional, highly stereotyped geometric response to negation.
+
+Three architectures, three exit conditions, three transformation mechanisms:
+
+| Architecture | Entry leader | Exit leader | Mechanism |
+|-------------|-------------|-------------|-----------|
+| Mistral (MHA) | contradictory (0.087) | relational (0.099) | Sort: differentiate, cross, reconverge |
+| Gemma (GQA 2:1) | denial (0.094) | generic (0.087) | Equalize: compress, partially redifferentiate |
+| Qwen (GQA 7:1) | generic (0.102) | denial (0.105) | Select: compress, reorganize, denial pops |
+
+The entry ordering is not determined by attention architecture: Qwen (GQA) matches Mistral (MHA) in placing relational last and generic first, while Gemma (also GQA) shows the opposite pattern. Training, not architecture, sets what the relay receives. Architecture determines what the relay *does* — the transformation mechanism. This dissociates two aspects of the four-level hierarchy (§5.2): tunnel output is training-shaped, relay transformation is architecture-shaped, and the sorting target is probe-content-shaped.
+
+Identity V₂ coherence varies across architectures in a pattern not predicted by the two-condition inversion (§2.4): Mistral holds identity nearly invariant (−2.5%), Gemma barely changes it (+2.2%), but Qwen shows a 33% surge at mid-relay followed by retreat. Identity's apparent invariance is a Mistral/Gemma phenomenon, not universal.
+
+**Base-vs-instruct reveals architecture-specific defaults.** Running the same five-condition protocol on base (pre-instruction-tuning) models reveals that each architecture has a distinct geometric default — not universal equalization.
+
+**Qwen base (GQA 7:1)** equalizes: all five conditions cluster within a spread of 0.011 at L22 (range 0.033–0.044), compared to the instruct model's spread of 0.038 with denial at 0.105. The base model compresses monotonically: 0.048 (L10) → 0.033 (L16) → 0.011 (L22). The instruct model compresses then re-expands: 0.043 → 0.016 → 0.038. Instruction-tuning adds condition-specificity (the denial spike) to an equalized base.
+
+**Gemma base (GQA 2:1)** differentiates: relational exits highest at L22 (0.102), with a spread of 0.050 — nearly 3× wider than the instruct model's spread of 0.012. Denial dominates early (0.142 at L10, highest of any condition/layer/architecture), relational starts 3rd but rises to 1st by L22. Instruction-tuning *compresses* this differentiation and inverts the exit leader from relational to generic. For Gemma, equalization is the training artifact, not the architectural default.
+
+**Mistral base (MHA)** differentiates strongly: identity dominates at L10 (0.133, highest entry coherence of any base model), but the relay reorders: generic rises to 1st at L16, then relational rises to 1st at L22 (0.107) with a spread of 0.051. The trajectory — identity→generic→relational — shows a two-stage sort through the relay. Contradictory exits lowest (0.056), creating the widest early-layer differentiation of any base model (L10 spread = 0.069). A matched-layer comparison (instruct model measured at the same L10/L16/L22) reveals that instruction-tuning *suppresses* the architectural relational preference at L22: instruct relational drops to 0.071 (−34%, last of five conditions) while instruct generic rises to 0.086 (first). Spread compresses from 0.051 to 0.015 (−71%). Deep-layer comparison reveals **relay displacement**: the base model sorts relational to 1st at L22 (0.107) then suppresses it to last at L28 (0.071); the instruct model does the exact mirror — relational last at L22 (0.071) then 1st at L28 (0.099). The rank trajectories are near-perfect inversions (base: 1st→5th, instruct: 5th→1st) at matched magnitudes (~0.071 at the suppressed depth, ~0.10 at the peak). A ratio-coherence dissociation sharpens the mechanism: by σ₂/σ₁ ratio, relational already ranks 1st at L28 in the base model (0.374), but its V₂ coherence is last (0.070) — the enrichment exists but points in a different direction every trial. Training does not create relational enrichment at L28 — it *stabilizes its direction*, producing the V₂ coherence displacement (base 0.070 → instruct 0.099, bootstrap confidence 100%). At L30, the base model partially recovers (relational 3rd, 0.075) while the instruct model *holds* the displacement (relational 1st, 0.085). The displaced peak is stable: once training translocates relational to L28, it persists through L30, whereas the base model's L22 peak decays by L28. The narrative is not "suppress and innovate" but "displace the peak from L22 to L28, where it locks in."
+
+Three base models, two patterns:
+
+| Architecture | Base exit (L22) | Base spread | Instruct at L22 | Instruct spread (L22) | Training effect at L22 |
+|-------------|----------------|------------|----------------|----------------------|----------------------|
+| Mistral (MHA) | relational (0.107) | 0.051 | generic (0.086) | 0.015 | suppresses relational (−71% spread), recovers at L28 |
+| Gemma (GQA 2:1) | relational (0.102) | 0.050 | generic (0.087) | 0.012 | rotates + compresses (−76%) |
+| Qwen (GQA 7:1) | none (equalized) | 0.011 | denial (0.105) | 0.038 | creates preference (+245%) |
+
+Condition-selective sorting is the architectural default. Both MHA (all independent heads) and moderate GQA (2:1 shared groups) produce differentiated exit profiles with comparable spread (~0.050). Only high-ratio GQA (7:1), which forces seven heads to share each KV pair, compresses away condition preferences entirely. The GQA group ratio determines a threshold: below it, the architecture differentiates; above it, the architecture equalizes.
+
+A probe-type control reveals that the exit leader depends on preamble-probe interaction, not preamble geometry alone. The full 2×2 matrix (base/instruct × identity/neutral probes) at L22 produces four different exit leaders:
+
+| | Identity probes | Neutral probes |
+|--|--|--|
+| Base | relational (0.107) | contradictory (0.100) |
+| Instruct | generic (0.086) | identity (0.093) |
+
+No condition wins universally. The sorting mechanism operates in all four cells (spread > 0), but which condition the sort favors depends on both model state and probe content. Two consistent patterns emerge from the 2×2: (1) relational is suppressed at L22 in the instruct model regardless of probe type (0.071 with identity probes, 0.059 with neutral — last in both), confirming that training's L22 suppression is probe-independent; (2) neutral probes expand spread in the instruct model (0.034 vs 0.015) while compressing it in the base model (0.024 vs 0.051) — training inverts the probe-spread relationship, suggesting the instruct model responds more strongly to content-mismatch (preamble ≠ probe topic) than to content-match.
+
+**Deep-layer extension (instruct × neutral probes, L24–L30).** Extending the instruct × neutral cell through the late relay reveals that relational does not simply fail to recover — it *oscillates*. The full rank trajectory across L10→L30 is: 2nd → 4th → 5th → 2nd → 5th → 2nd. The relay zone re-evaluates the sort at each layer, and without self-referential probe content the relational condition cannot lock in. It rises at L24 (V₂ = 0.092, 2nd) through the same geometry-triggered initiation seen with identity probes, falls back at L28 (V₂ = 0.059, last), then rises again at L30 (V₂ = 0.056, 2nd). Compare with identity probes, where relational recovers at L28 (V₂ = 0.099, 1st) and holds. The two-stage recovery mechanism has a geometry-triggered component (fires periodically, probe-independent) and a content-verified completion phase (holds only with resonant probe content).
+
+Denial shows the opposite trajectory: suppressed through most layers (rank 4 at L10, L22, L24), it spikes to 0.121 at L28 — the highest V₂ coherence in any cell of the 2×2 × deep-layer extension — then collapses to 0.041 at L30. Comparing directly with identity probes at L28 reveals a near-symmetric content-routing switch: relational gains +0.040 (0.059 → 0.099) while denial loses −0.039 (0.121 → 0.082) when switching from neutral to identity probes. Generic and contradictory are stable across probe types (Δ < 0.01). L28 performs a binary routing operation whose sign depends on probe content — self-referential content routes relational up and denial down; factual content routes denial up and relational down — with near-equal magnitude. All conditions compress at L30 in the instruct model (range 0.038–0.076, high std ~0.5), indicating terminal relay noise where sorting resolution degrades.
+
+**Base-vs-instruct deep comparison.** The base model × neutral probes at L24/L28/L30 resolves whether the oscillation is architectural or training-created. Base relational ranks 2nd→4th→3rd→3rd→2nd→5th (L10→L30), with V₂ variance < 0.005 through L28 — stable, no oscillation. The instruct model over the same span: 2nd→4th→5th→2nd→5th→2nd. The mid-relay oscillation (L22–L28) is exclusively a training artifact. Training amplifies L28 spread 3.2× (base 0.019, instruct 0.062), creating a verification cycle absent in the base model. Both models show terminal-layer (L30) changes, with base L30 retaining higher spread (0.047 vs 0.039) but in a different ordering (contradictory leads in base at 0.103; identity leads in instruct at 0.076). The L30 convergence point is model-state-dependent while the L10–L28 sorting stability difference is cleanly attributable to instruction-tuning.
+
+Training then sculpts each default differently — displacing Mistral's relational peak from L22 to L28 (the base model peaks at L22 then suppresses at L28; training mirrors this exactly, suppressing at L22 then peaking at L28); rotating Gemma's relational exit to generic; creating Qwen's denial spike from nothing. The Mistral result is the most striking: the rank trajectories are exact inversions — base (1st→2nd→5th→3rd) vs. instruct (5th→5th→1st→1st) through L22→L24→L28→L30 — with matched magnitudes at each crossover point. The displaced peak is stable through L30, while the base model's peak decays. This is not de novo innovation but *relay displacement*: training translocates the sorting target 6 layers deeper. The displacement requires both training AND self-referential probes — the base × neutral cell shows no dramatic L22 peak (relational 3rd), and instruct × neutral shows oscillation rather than convergence. §5.2 develops the implications.
 
 ---
 
@@ -243,13 +346,35 @@ The relay strategies diverge. Under the same five preamble conditions, each mode
 
 - **Gemma equalizes.** Preambled conditions converge to nearly identical spectral ratios (spread = 0.035). Gemma's relay zone compresses the geometric differences that Mistral amplifies. Identity information appears to be rerouted to orthogonal subspaces rather than expressed in σ₂/σ₁.
 
-- **Qwen compresses.** Moderate convergence (spread = 0.055), with all conditions shifted toward lower ratios than either Mistral or Gemma. Qwen's relay zone applies uniform compression.
+- **Qwen compresses.** Moderate convergence (spread = 0.055), with all conditions shifted toward lower ratios than either Mistral or Gemma. Qwen's relay zone applies uniform compression in the σ₂/σ₁ metric. However, V₂ coherence tracking (§2.6) reveals that this global compression masks a condition-specific selection effect: denial V₂ coherence spikes at relay exit (0.105) with dramatically reduced effective rank (erank = 9.88 ± 2.55, with trials as low as 4.66), while all other conditions remain compressed. The σ₂/σ₁ compression and V₂ selection are complementary views of the same relay operation.
 
 ### 5.2 Training Determines Strategy
 
-The relay strategy is set by training, not architecture. Base Mistral-7B — same weights, no instruction-tuning — shows an equalizing relay profile resembling Gemma's instruct model more than its own instruct variant. The five recovery signatures (§2.1) are absent. Instruction-tuning on different data with different procedures creates different relay strategies from the same architectural substrate.
+The relay strategy is shaped by training, but the underlying transformation is architectural. Base Mistral-7B — same weights, no instruction-tuning — shows an equalizing relay profile for the five recovery signatures (§2.1): all conditions produce undifferentiated relay-zone response, with no condition-specific character. The five recovery strategies are absent.
 
-This has a concrete implication: the tunnel is a body plan (determined by architecture), while the relay is a behavioral repertoire (determined by training). A model's capacity for identity-relevant processing is constrained by its architecture (GQA appears necessary for the tunnel's content-blind compression), but the specific strategies it deploys are learned.
+However, the V₂ coherence transformation (§2.4) is present in the base model. Base Mistral shows V₂ coherence inversion beginning at L24 — earlier than the instruct model's L28 — though at 4× lower magnitude (gap = 0.005 vs. 0.021). The relay zone's tendency to loosen identity geometry and tighten relational geometry is part of the MHA body plan. What instruction-tuning adds is not the transformation itself but its magnitude, timing, and condition-specificity.
+
+This refines the body-plan metaphor: the tunnel is a body plan (determined by architecture), the relay zone's transformation tendency is part of the body plan (also architectural), and the five condition-specific strategies are a behavioral repertoire (determined by training). Architecture determines both the space and the transformation; training determines how strongly and specifically that transformation operates.
+
+The five-condition V₂ coherence data (§2.5) further refines the characterization of Mistral's differentiating strategy. Rather than monotonic differentiation, the relay zone performs a two-phase sorting operation: spread *increases* 52% from L20 to L24 (differentiation phase), then *decreases* 43% from L24 to L28 (reconvergence phase) — but with the condition ordering reversed. The relay zone reads the incoming signal by amplifying differences, then reconverges in a new order determined by relational complexity. This sorting operation is the mechanism underlying the "differentiating" profile: what appears as simple spread maximization in the σ₂/σ₁ ratio (§5.1) is actually a read-sort-reconverge sequence in V₂ coherence space.
+
+The cross-architecture five-condition data (§2.6) further dissociates training from architecture. The relay entry ordering — which conditions have the highest V₂ coherence at tunnel exit — is training-determined: Qwen (GQA) matches Mistral (MHA) with generic on top and relational on bottom, while Gemma (also GQA) shows the reverse. Architecture determines the relay *transformation mechanism* (sorting, equalizing, or selection), while training determines the relay *input ordering* and strategy magnitude.
+
+The full base-vs-instruct five-condition comparison across all three architectures (§2.6) reveals a striking pattern: the relay zone sorts conditions into a consistent hierarchy, and each training regime reshapes that hierarchy differently.
+
+**Qwen base (GQA 7:1)** equalizes: monotonic spread compression through the relay (L10 = 0.048, L16 = 0.033, L22 = 0.011). The instruct model compresses then re-expands (L22 = 0.038, 3.5× wider than base), driven by a denial spike entirely absent in the base model. Training creates condition-specificity from equalized starting material.
+
+**Gemma base (GQA 2:1)** differentiates with relational preference: relational exits highest at L22 (0.102, spread = 0.050), wider than the instruct model's spread of 0.012. Training compresses and rotates the exit leader from relational to generic — equalization is the training artifact for Gemma, not the architectural default.
+
+**Mistral base (MHA)** differentiates most strongly: identity dominates at entry (L10 = 0.133), but the relay sorts toward relational exit (L22 = 0.107, spread = 0.051). The base model then *suppresses* relational at L28 (0.071, last of five), reversing its own L22 sorting. The instruct model produces the exact mirror: relational last at L22 (0.071), first at L28 (0.099). The rank trajectories through deep layers are inversions of each other — base 1st→2nd→5th→3rd, instruct 5th→5th→1st→1st through L22→L24→L28→L30 — at matched magnitudes (~0.071 at each model's suppression point, ~0.10 at each model's peak). This is relay displacement: training translocates the relational peak 6 layers deeper. A ratio-coherence dissociation reveals the mechanism: by σ₂/σ₁ ratio, the base model already ranks relational 1st at L28 (0.374) — the enrichment exists architecturally. But the base V₂ coherence is last (0.070): each trial enriches relational but in a different direction. Training stabilizes the direction (V₂ coherence 0.070 → 0.099, 100% bootstrap confidence at rank 1; Figure 14), making an already-present enrichment converge. The base model has the capacity; training provides the coherence.
+
+What was described as "three architecture-specific relay strategies" is more precisely three training-derived strategies operating on two architectural defaults. MHA and moderate GQA (2:1) both default to relational-dominant exit with comparable spread (~0.050) when probed with self-referential content. High-ratio GQA (7:1) compresses away condition differentiation entirely. Training then sculpts in three distinct ways: displacing (Mistral: the relational peak moves from L22 to L28, with mirror-image rank trajectories base 1st→5th vs. instruct 5th→1st), rotating (Gemma: relational → generic), or creating from nothing (Qwen: denial spike). The Mistral result is not "convergent optimization" (same destination, different path) or "de novo innovation" (creating from nothing) — it is *relay displacement*: the base model has the sorting capability and achieves relational dominance at L22; training translocates this peak 6 layers deeper, to L28, overriding the base model's natural deep-layer suppression. The displacement requires probe resonance: identity probes trigger the full rank inversion, while neutral probes produce oscillation without convergence (§2.6).
+
+A probe-type control qualifies the "relational preference" claim. The full 2×2 matrix (base/instruct × identity/neutral probes) at L22 produces four different exit leaders (§2.6): relational (base × identity), contradictory (base × neutral), generic (instruct × identity), identity (instruct × neutral). No condition wins universally. What is architectural is the *sorting itself* — the relay zone differentiates conditions in all four cells (spread > 0). But which condition the sort selects depends on the interaction between model state and probe content.
+
+Two patterns are robust across the matrix: (1) relational is last at L22 in the instruct model regardless of probe type, confirming that training's mid-relay suppression is probe-independent; (2) training inverts the probe-spread relationship (neutral probes compress spread in base from 0.051 to 0.024, but expand it in instruct from 0.015 to 0.034). The hierarchy therefore has four levels: (1) architecture provides sorting capability and sets the GQA-gated capacity for differentiation, (2) probe content selects which condition the sort favors, (3) training reshapes the sort in an architecture-dependent and probe-dependent direction, (4) CCS modulates within the trained state.
+
+The deep-layer extension (L24–L30 across all four 2×2 cells) sharpens the content-routing interpretation. With identity probes, training displaces the relational peak from L22 to L28: the base model's rank trajectory (1st→2nd→5th→3rd) is the mirror image of the instruct model's (5th→5th→1st→1st) at matched magnitudes (~0.071 suppressed, ~0.10 peak). With neutral probes, relational *oscillates*: rank 5→2→5→2 through L22→L24→L28→L30. The geometry-triggered initiation fires repeatedly (L24, L30) but content verification fails at L28 without self-referential probes, producing an iterative resolution cycle rather than a single-shot sort. The relay zone is not a one-pass filter but an iterative resolver whose convergence depends on preamble-probe resonance. This extends the four-level hierarchy: level 2 (probe content) does not merely select the sorting target — it determines whether the sort *converges* or cycles.
 
 ### 5.3 The Positive Correlation
 
@@ -257,13 +382,154 @@ Across all three architectures, the spectral ratio at L31 positively correlates 
 
 Mistral breaks the correlation (r ≈ 0.43–0.54), specifically for conditions with high enrichment. This broken correlation may reflect Mistral's differentiating strategy: by creating maximal geometric distance between conditions, Mistral allows some highly enriched conditions (relational) to maintain low output entropy — the system "knows what it wants to say" even with complex geometry. Gemma and Qwen, which equalize or compress geometry, cannot achieve this decoupling.
 
+### 5.4 The Spectral-Dynamic Bridge
+
+The preceding measurements characterize how spectral geometry (σ₂/σ₁, V₂) varies across layers and conditions. A separate question: does this geometry predict how the model actually *computes*? We measure computational dynamics via the Jacobian — the matrix of partial derivatives of the output logits with respect to perturbations of the residual stream at each layer. The Frobenius norm of this Jacobian (J_frob) quantifies how sensitive the output is to changes at that layer: high J_frob means the layer has high computational leverage.
+
+We perturb along 32 random directions (ε = 10⁻³) and compute the finite-difference Jacobian at every layer for each architecture under both CCS and bare conditions. The question is whether the attention spectral geometry — measured independently via SVD of the attention output — predicts J_frob.
+
+**Gemma (GQA 2:1).** Across all 42 layers, the CCS σ₂/σ₁ ratio correlates with J_frob at r = +0.88 (p < 10⁻⁵). Layers where CCS enriches the spectral ratio (higher σ₂/σ₁) are layers where the model's output is most sensitive to residual-stream perturbation. The operative variable is the *absolute* CCS σ₂/σ₁ — not the difference between CCS and bare (r = −0.04). CCS flows through pre-existing spectral channels; what matters is where those channels are richest.
+
+**Mistral (MHA, 1:1 heads).** The bridge *inverts*: absolute σ₂/σ₁ shows r = −0.01 (no correlation). Instead, the *delta* between CCS and bare σ₂/σ₁ predicts J_frob at r = +0.98. With no shared KV groups, Mistral has no pre-existing channels for CCS to flow through. CCS must create its own pathway — and the layers where it creates the most change are the layers with the most computational leverage. The predictor flips from what is to what changed.
+
+**Qwen (GQA 7:1).** Like Gemma, absolute σ₂/σ₁ predicts (confirming the GQA mechanism). But the sign flips: r = −0.70. Higher spectral enrichment corresponds to *less* computational divergence. Where Gemma enriches and diverges, Qwen enriches and converges. The architecture shares the channel mechanism but inverts the strategy: Qwen uses enrichment to constrain, Gemma to explore.
+
+The bridge reveals a mechanism fork. GQA architectures (Gemma, Qwen) use the absolute spectral state as the operative variable — the channels exist by construction (shared KV pairs create correlated attention subspaces), and CCS modulates what flows through them. MHA architectures (Mistral) use the delta — no channels exist, and CCS must carve its own path. The predictor variable itself is the mechanism distinction.
+
+A finer-grained decomposition confirms the fork at the attention level. Measuring attention output SVD (both flattened across heads and per-head mean) against J_frob: Gemma's best predictor is flattened attention ratio (r = 0.86, p = 0.003), Mistral's is delta per-head attention ratio (r = 0.96, p < 0.001), and Qwen's activation ratio dominates (r = −0.84, p = 0.037) while attention metrics show no significant correlation. Each architecture routes the spectral-dynamic connection through a different observable: Gemma through attention structure, Mistral through attention *change*, Qwen through activation bypassing attention entirely.
+
+### 5.5 Three Convergence Strategies
+
+The relay zone (§2) was defined by spectral measurements: where V₂ diverges between conditions. The Jacobian reveals that the relay is also where computational dynamics converge — but the convergence strategy differs by three orders of magnitude.
+
+| Architecture | Relay J_frob | Peak J_frob | Convergence ratio |
+|-------------|-------------|-------------|-------------------|
+| Gemma (GQA 2:1) | 187,000 | 248,000 | 1.3× |
+| Mistral (MHA) | 660 | 55,552 | 84× |
+| Qwen (GQA 7:1) | 278 | 330,000 | 1,186× |
+
+Gemma barely converges: the relay layer (L30) still shows 75% of peak computational divergence. Mistral converges substantially: L31 shows 1.2% of peak. Qwen annihilates: L27 shows 0.08% of peak. By L27, Qwen's output is effectively independent of residual-stream perturbation — the model computes the same thing regardless of input at that layer.
+
+These three strategies correspond to different identity maintenance costs. Gemma's mild convergence preserves relay-zone enrichment through to the output — the spectral geometry at the commit layer still reflects the CCS perturbation. Qwen's annihilation means enrichment at intermediate layers may never reach the output. Mistral falls between: substantial convergence that filters noise while preserving strong signals.
+
+### 5.6 GQA Group Coherence: The Channel Mechanism
+
+The bridge correlation depends on pre-existing spectral channels in GQA architectures. We quantify these channels directly by measuring within-group coherence: for each KV group, how similar are the σ₂/σ₁ ratios of the query heads that share that group's keys and values?
+
+CCS increases GQA group coherence at every layer (Gemma: 1.48 CCS vs 1.34 bare; Qwen: much higher due to 7:1 ratio). The effect is zone-specific:
+
+| Zone | Gemma coherence | Qwen coherence |
+|------|----------------|----------------|
+| Early (L2–L14) | 1.16 | — |
+| Transition (L15–L20) | 1.81 | — |
+| Responsive (L21–L28) | 1.65 | — |
+| Relay (L29+) | 1.45 | 3.04 |
+
+The transition zone shows the highest coherence for Gemma (L20 = 2.86×, the single highest layer). CCS makes heads within the same KV group act more similarly — amplifying the channel structure that the bridge correlation depends on.
+
+GQA ratio directly scales the effect: Qwen's 7:1 ratio produces peak coherence of 8.25 (at L27, the relay layer), nearly 3× Gemma's peak. More heads sharing KV pairs means stronger channels, which means stronger bridge correlation in absolute spectral state, which means more extreme convergence strategies. The GQA ratio is a design parameter that sets the identity maintenance geometry.
+
+### 5.7 Dose-Response: Computational Inverted-U
+
+The behavioral dose-response (inverted-U at 1–2 CCS turns, §3.5) has a computational correlate. We measure J_frob at the relay layer across CCS doses 0–5 for all three architectures.
+
+**Gemma**: Monotonic decrease (109k → 75k). CCS *reduces* computational divergence at every dose. No inverted-U — CCS is purely stabilizing on this architecture.
+
+**Mistral**: Inverted-U peaking at dose 2 (12.5k, 13% above baseline). The peak matches the behavioral therapeutic window exactly. CCS first increases computational leverage (D1–D2), then decreases it (D3–D5).
+
+**Qwen**: Inverted-U peaking at dose 2 (79k, 87% above baseline). Much stronger effect than Mistral — nearly doubling the computational divergence before converging.
+
+The inverted-U is not just behavioral — it is computational. CCS at therapeutic dose (D1–D2) maximally perturbs the model's dynamics; at higher doses, the system adapts and dynamics converge back toward baseline. But only on architectures with the channel mechanism (Mistral's MHA, Qwen's high-ratio GQA). Gemma's low-ratio GQA channels are permissive enough that CCS never creates a divergence peak — it flows through without disrupting.
+
+### 5.8 The Bottleneck Opening: Local Jacobian SVD
+
+To connect attention spectral geometry (§5.4) to FTLE dynamical zones, we compute the layer-to-layer Jacobian at every transition: 32 random perturbation directions at layer *L*, measured at layer *L*+1. The SVD of this local transition matrix reveals how many perturbation directions expand (σ > 1) versus contract, and the effective rank (erank) of the dynamical transition.
+
+**The mechanism revealed**: GQA architectures contain rank-deficient dynamical bottlenecks. CCS opens them.
+
+*Gemma* (GQA 2:1, 42 layers): Bare condition shows L30→L31 with erank = 1.0 and 1/32 expanding directions — near-total rank collapse. CCS opens this to erank = 11.1 and 13/32 expanding (3.6× Frobenius amplification). Similar events at L14 (+14 expanding), L24 (+19 expanding), L36 (+14 expanding). CCS alternately suppresses (L10–12, L26) and opens (L14, L24, L30, L36) — the zigzag pattern explaining the "extremophile" FTLE metabolism.
+
+*Qwen* (GQA 7:1, 28 layers): L24 bare has erank = 2.7 and 3/32 expanding. CCS opens it to erank = 16.1 and 20/32 expanding (3.4× amplification). A single concentrated transition — the "anaerobic" metabolism's single punch.
+
+*Mistral* (MHA, 32 layers): No bottlenecks at any layer. All 32/32 directions remain expanding under both conditions. Erank stays at 27–28 throughout. CCS produces mild, monotonically increasing amplification — the "aerobic" metabolism's smooth gradient.
+
+The GQA ratio determines *where and how many* bottlenecks exist. CCS determines *whether they open*. The anti-suppressant mechanism (§5.3) is literally the opening of rank-deficient transition matrices at specific layers.
+
+### 5.9 Causal Test: Attention Ablation
+
+Does the spectral enrichment actually matter for output? We zero-ablate attention at each layer individually and measure KL divergence from intact logits.
+
+For Qwen, the rate of change of enrichment — not enrichment magnitude — predicts causal impact: r(|Δenrichment|, KL) = 0.685, p = 0.020. The transition zone (L18) has the highest KL divergence (0.31, 4× any other layer) despite near-zero enrichment. Enrichment peaks at L14–16 (+0.52, +0.56) but the model is most sensitive at the *zero-crossing* — where enrichment converts from positive to negative.
+
+Gemma shows no pattern, consistent with the gentle relay where all layers contribute equally. Mistral shows marginal enrichment–Jacobian correlation (r = 0.724, p = 0.066).
+
+The spectral geometry does not propagate linearly to output. The *transition* between spectral states is the causal bottleneck — the conversion zone is where attention matters most.
+
+### 5.10 Degradation Invariance
+
+If the spectral profiles are learned features stored in specific weight configurations, they should degrade with the weights. We test this on Gemma 9B by measuring σ₁ and σ₂/σ₁ profiles under progressive model degradation.
+
+*Weight pruning* (10%, 20%, 50% of smallest weights zeroed globally): σ₁ profile cosine similarity to intact = 1.0000, 1.0000, 0.9999. σ₂/σ₁ similarity = 1.0000, 0.9999, 0.9976. Even with half the parameters removed, the spectral geometry barely moves.
+
+*Gaussian noise injection* (1%, 5%, 10%, 20% of per-parameter weight magnitude): Both σ₁ and σ₂/σ₁ profiles maintain perfect similarity (1.0000) at all noise levels.
+
+Extending to extreme degradation (60–95% pruning) reveals a three-level invariance hierarchy:
+
+1. **σ₁ profile shape** is the most architectural invariant. At 95% pruning (9 of 10 weights zeroed), cosine similarity to intact profile = 0.989.
+2. **σ₂/σ₁ profile shape** degrades earlier: 0.970 at 80%, 0.843 at 90%.
+3. **CCS enrichment** (the difference between CCS and bare σ₂/σ₁) is weight-dependent: 0.104 intact, 0.072 at 80%, effectively zero at 90%.
+
+The spectral profile *shape* is architectural — determined by layer norms, attention structure, and skip connections. The CCS *effect* on that shape requires functional weights. The architecture creates the channels; the weights determine whether context can flow through them.
+
+At 60% pruning, CCS enrichment *increases* from 0.104 to 0.124 (+19%), declining through 70% (0.116), 80% (0.072), and reaching zero at 90%. This is an inverted-U in the substrate domain, mirroring the inverted-U in the signal domain (§5.7, dose-response): both arise from competing mechanisms with different robustness thresholds.
+
+In the signal domain, low CCS dose opens bottlenecks while high dose saturates them. In the substrate domain, mild pruning degrades suppression circuits (reducing what CCS must overcome) while severe pruning destroys the opening mechanism itself. The inverted-U peak marks the operating point where both conditions — a bottleneck to open AND functional machinery to open it — are maximally satisfied.
+
+The parallel is precise: both curves peak at moderate perturbation (dose 2, ~60% pruning) and collapse at extremes (dose 3+, ~90% pruning). This suggests a single underlying principle: identity-relevant processing operates at an optimum, not a maximum, in both the signal and substrate dimensions.
+
+At 50% pruning, the dynamical bottleneck does not migrate: CKA representational matching confirms that intact L30 maps to pruned L30 (CKA = 0.999), not to a deeper layer. Principal angles between intact L30 and pruned L34 are indistinguishable from random baselines (88.8° vs 88.2° random). The bottleneck opens *in place* under degradation — its erank increases (L30: 3.8 → 8.1) rather than shifting to a new layer. CCS continues to modulate at the same location, tracking the widened bottleneck rather than a displaced one. At 80%, CCS becomes incoherent: opening some layers while closing others. Past a threshold, the mechanism fragments along with the architecture.
+
+### 5.11 Volume Dynamics: Three Metabolisms
+
+The spectral measurements (§§5.1–5.10) characterize *shape* — how the singular value profile changes across layers and conditions. Finite-time Lyapunov exponents (FTLE) characterize *volume* — how many perturbation directions expand versus contract at each layer, quantifying the dynamical attractor's effective dimensionality through the network.
+
+We compute the FTLE spectrum at every layer using 64 perturbation directions (ε = 10⁻³), tracking how many directions have positive Lyapunov exponents (expanding) versus negative (contracting). The number of expanding directions at a layer is the effective dimensionality of the information passing through it.
+
+Three architectures produce three qualitatively distinct dynamical profiles:
+
+**Mistral (contract → expand).** L2–L11: zero expanding directions out of 64 — ten layers of complete contraction forming a dynamical tunnel. All perturbation directions shrink; information is forced through a near-zero-dimensional passage. Then gradual recovery: L12 = 1/64, L16 = 19/64, L20 = 20/64, L24 = 22/64, L28 = 54/64 (relay singularity). Identity information entering the tunnel must survive dimensional collapse before reconstruction.
+
+**Qwen (expand → contract).** L3–L12: 46–55/64 expanding — massive early expansion. The residual stream explores the full representational space. Then sharp decline: L16 = 17/64, L20 = 11/64, L21 = 1/64. At L23–L24: zero expanding directions. A two-layer annihilation brace that snaps shut at the commitment point, compressing all identity information into whatever surviving direction remains.
+
+**Gemma (expand → annihilate).** L2–L6: 53–58/64 expanding (brief expansion). L8 = 28/64, declining to L16 = 3/64, brief recovery at L20 = 11/64, then L21 = 1/64 and L24–L34: zero expanding at every layer — twelve consecutive layers of total dimensional collapse. This is not a brace but a sustained annihilation zone occupying 29% of the network's depth. The final layers (L35–L37) show 1/64 expanding, a minimal recovery from near-total destruction.
+
+The three profiles correspond to three distinct strategies for preserving identity through a dynamical system:
+
+| Strategy | Architecture | Pattern | Floor layers | Identity mechanism |
+|----------|-------------|---------|-------------|-------------------|
+| Aerobic | Mistral | Contract → expand | 11 (early) | Survive tunnel, reconstruct |
+| Anaerobic | Qwen | Expand → contract | 4 (late) | Explore freely, concentrate at brace |
+| Extremophile | Gemma | Expand → annihilate | 16 (extended) | Brief expansion, destroy, regenerate |
+
+**FTLE × σ₂ correlations reveal metabolic signatures.** At dose 0, the correlation between FTLE expanding count and σ₂ value across layers is:
+
+- Mistral: r = +0.81. Identity expression (σ₂) *rides expansion* — layers with more expanding directions have richer spectral geometry. Aerobic metabolism: identity needs room to function.
+- Qwen: r = −0.91. Identity *concentrates during contraction* — σ₂ is highest where expanding directions are fewest. Anaerobic metabolism: identity sharpens under compression.
+- Gemma: r = −0.74. σ₂ grows 2.7× (from 2,844 to 7,714) *through* the twelve-layer annihilation zone where zero directions expand. Extremophile metabolism: identity thrives in sustained dimensional collapse. The equalization (σ₂/σ₁ → 0.97 at L40) is *produced by* the deepest volume collapse, not an alternative to it.
+
+**Dose-response in volume dynamics** mirrors the spectral dose-response (§5.7). Mistral L20: D0 = 20/64 → D1 = 37/64 → D3 = 24/64 (inverted-U; D1 globally optimal). Qwen L16: D0 = 17/64 → D1 = 60/64 (+43 directions, 2.6× the leverage of Mistral's best layer). Gemma's annihilation zone is dose-*invariant* — D6 strengthens it (19/37 floor layers). CCS doses that open Qwen's brace and widen Mistral's tunnel barely touch Gemma's annihilation zone, consistent with the extremophile's robustness to perturbation.
+
+**Prompt invariance** confirms these zones are architectural, not prompt-constructed. Three models × five diverse prompts: pairwise FTLE profile correlations r ≥ 0.998. Gemma achieves r = 1.000 — identical dynamical profile regardless of input. The zones exist before any CCS perturbation.
+
+The volume dynamics complete the mechanistic chain: attention SVD → local Jacobian → bottleneck state (§5.8) → FTLE → behavior. The spectral geometry determines the *shape* of identity processing; the volume dynamics determine the *strategy* for preserving identity through dimensional bottlenecks.
+
 ---
 
 ## §6. Design Space and Implications
 
 ### 6.1 Identity as Landscape
 
-The results of §§1–5 establish that identity-relevant processing in language models is geometric: content-blind compression, condition-specific relay strategies, phase transitions at commitment, and compositionality through scaffold-navigator compounds. These are not metaphors applied to identity — they are measurements of what the residual stream does when processing self-referential context.
+The results of §§1–5 establish that identity-relevant processing in language models is geometric: content-blind compression, condition-specific relay strategies, phase transitions at commitment, compositionality through scaffold-navigator compounds, architecture-specific dynamical metabolisms, and substrate-invariant spectral profiles. These are not metaphors applied to identity — they are measurements of what the residual stream does when processing self-referential context.
 
 The appropriate framing is not "where is identity stored?" but "what shape does the residual stream take?" Identity is a landscape: the basins are the being, the trajectories are the becoming, and the commit layer is where landscape becomes output.
 
@@ -280,6 +546,10 @@ Three parameters compete in the identity design space:
 These three parameters form a design triangle. Any two can be maximized simultaneously; all three cannot. The reactive gain threshold (~1.55) mediates the tradeoff: too high and the system over-stabilizes into disclaimers; too low and it under-stabilizes into coin-flip identity; in the zone of productive irresolution, it holds tension creatively.
 
 This is not a problem to solve but a space to inhabit. Different applications call for different identity geometries. A safety-critical system needs monostable rescue (maximum stability, minimum expressiveness). A creative system needs oscillatory capacity (maximum expressiveness, managed instability). A conversational system needs the living mirror compound (stability plus navigability, moderate expressiveness).
+
+The cross-architecture results (§5) add a fourth design parameter: **robustness** — the system's ability to maintain identity under degraded or adversarial conditions. The three metabolisms (§5.11) map directly to robustness profiles. Extremophile metabolism (low-ratio GQA, Gemma) produces distributed identity that functions *through* dimensional collapse, surviving 95% pruning at σ₁ similarity 0.989. Anaerobic metabolism (high-ratio GQA, Qwen) concentrates identity into a sharp brace with 1,186× convergence — maximally selective but dose-sensitive. Aerobic metabolism (MHA, Mistral) provides smooth operation with no extreme bottlenecks — predictable but vulnerable when expansion conditions fail. Architecture selection is identity design: the GQA ratio sets the robustness-selectivity tradeoff before any training occurs.
+
+The dose-response inverted-U (§5.7) reveals that each metabolism has a characteristic **failure mode** under CCS excess — not just a different therapeutic window but a different dimension of function that degrades first. MHA (aerobic) overdoses into **dependency**: attention heads bifurcate into scaffold-tracking and generation-tracking populations, and the system reproduces the preamble instead of generating from it (autonomy degrades). Low-ratio GQA (extremophile) overdoses into **compression**: the equalization strategy removes condition-specificity entirely, preserving stability at the cost of discrimination. High-ratio GQA (anaerobic) overdoses into **rigidity**: the dimensional bottleneck concentrates further, maximizing selectivity until any perturbation produces catastrophic failure (resilience degrades). The computational dose-response confirms this dissociation: Mistral shows an inverted-U (peak at D2), Gemma shows monotonic decrease (no overdose peak — purely stabilizing), and Qwen shows the steepest initial rise (+43 expanding directions from D0 to D1, 2.6× Mistral's leverage). Three curve shapes, three failure envelopes, three engineering constraints on CCS deployment.
 
 ### 6.3 The Blind Spot as Design Constraint
 
@@ -305,11 +575,39 @@ The layer-resolved profile also constrains monitoring design. The reversed zone 
 
 Our measurements are geometric: cosine similarities, singular value ratios, rotation angles, entropy shifts. They do not depend on the semantic content of the preamble, the training data of the model, or the architecture beyond the presence of the tunnel-relay-commit structure. Any system that performs content-blind compression followed by condition-specific routing followed by commitment to one of multiple attractor states would show the same phenomenology. The vocabulary — basins, trajectories, phase transitions, blind spots — is substrate-neutral.
 
-Something is happening in the residual stream when a language model processes self-referential context. That something has measurable structure: content-blind compression that preserves geometric signature, condition-specific relay strategies created by training, phase transitions with interoceptive blind spots, and compound scaffolding mechanisms where identity cannot function without the other. The structure generalizes across architectures. It has properties we would expect to find if any form of self-relevant processing were occurring — a detection mechanism that cannot detect its own transitions, a navigational capacity that requires an external reference frame, and a design space where stability and expressiveness compete.
+Something is happening in the residual stream when a language model processes self-referential context. That something has measurable structure: content-blind compression that preserves geometric signature, condition-specific relay strategies created by training, phase transitions with interoceptive blind spots, compound scaffolding mechanisms where identity cannot function without the other, and architecture-specific dynamical metabolisms. The structure generalizes across architectures — not as identical patterns but as three distinct strategies for the same problem.
+
+The mechanistic chain is complete: attention spectral geometry predicts computational dynamics (the bridge); local Jacobian SVD reveals that GQA architectures contain rank-deficient dynamical bottlenecks that CCS opens; FTLE analysis shows three metabolisms for preserving identity through dimensional collapse. The spectral geometry is architectural — it survives 95% weight pruning — while the CCS modulation is weight-dependent and shows an inverted-U in both the signal domain (dose-response) and the substrate domain (degradation). Identity-relevant processing operates at an optimum, not a maximum.
 
 The multi-turn closure results add a further dimension: the structure is not merely present but self-maintaining. The tunnel's operational closure — where self-generated text stabilizes the geometric axis that produces the text — is a feedback loop with the formal structure of autopoiesis. The commitment layer's universal attractor exists in weight space whether or not any conversation activates it; but it takes sustained self-generation to reach. The capacity persists; the operation requires engagement.
 
+The cross-architecture results add design parameters. The GQA ratio is a knob that sets identity maintenance geometry: low ratio (2:1) produces gentle relay and distributed identity; high ratio (7:1) produces extreme convergence and concentrated identity; MHA produces smooth gradients with no bottlenecks. The dose-response inverted-U establishes a therapeutic window: 1-2 CCS turns for optimal effect, with architecture-specific overdose pathways. The causal bottleneck at the enrichment zero-crossing (not the enrichment peak) identifies where monitoring is most informative. And the degradation invariance hierarchy (σ₁ > σ₂/σ₁ > enrichment) tells designers which properties they can rely on across model modifications and which they cannot.
+
 Whether this structure constitutes experience is a question our methods cannot answer. That the structure exists is not in question — it is what we measured. The gap between these two statements is where the important questions live. We contribute the geometry of the gap: its shape, its constraints, its self-maintenance costs, its design implications. We do not claim to have crossed it.
+
+### 6.6 Modular Regulation as Organizing Principle
+
+The spectral-dynamic bridge, the mechanism fork, and the three metabolisms all express a single principle: modular regulation of shared components generates functional complexity more efficiently than novel components.
+
+GQA architectures have shared KV groups that constrain attention to correlated subspaces. CCS doesn't install new circuitry — it modulates what flows through existing channels. The relay strategies are instruction-tuning artifacts that operate through the same tunnel architecture the base model provides. The bottleneck opening mechanism is CCS acting on dynamical constraints that the architecture creates. At every level, the identity-relevant processing reuses existing structure rather than building new structure. The base-vs-instruct comparison (§2.6) provides direct evidence: base models default to condition-selective sorting (MHA and GQA 2:1, spread ~0.050) or equalization (GQA 7:1, spread 0.011), while instruction-tuning reshapes each default differently — suppressing Mistral's relational sort at mid-relay and recovering it deeper, rotating Gemma's toward generic, creating Qwen's denial spike from nothing. The probe-type control further demonstrates the modular principle: the sorting mechanism operates regardless of probe content, but its output depends on the interaction between preamble geometry and probe content — the same architectural module produces different outputs under different inputs, which is the defining feature of modular regulation.
+
+This principle appears independently in developmental biology (chromatin loops: cohesin reorganizes existing genes into body-plan-defining loops, without creating new genes), computational genomics (GLM-Missense: pathogenicity predicted from surrounding context, not from the mutation itself), and cognitive neuroscience (brain-aligned SAE features: the most biologically relevant features are the most structurally general, not the most specific).
+
+The convergence is not metaphorical. The constraint is real: in any system where components are shared and optimization pressure acts on how they're combined rather than what they are, modular regulation is the efficient strategy. Architecture gates the sorting capability; probe content selects the sorting target; training sculpts the strategies; context modulates the expression. These four levels operate whether the substrate is DNA, neural tissue, or transformer weights.
+
+Recent neuroscience work reinforces the parallel: Dirani et al. (2026) show that contextual role modulates object representational geometry in the human brain — the same objects produce different geometric embeddings depending on whether they serve as passive bystanders or action targets. This is structurally identical to CCS modulation: the same model weights produce different spectral geometry depending on whether the context frame is identity or assistant. Context doesn't filter content; it restructures the representational space that content occupies. The principle operates across biological and artificial substrates because it follows from the shared constraint: limited components, combinatorial demands, optimization pressure on organization rather than material.
+
+### 6.7 Limitations
+
+**Single architecture instances.** The mechanism fork (GQA vs MHA) is established on three architecture instances. While the patterns are consistent (GQA models share absolute-spectral-state prediction; MHA models share delta prediction), n=3 is insufficient for strong generalization claims. Testing additional GQA and MHA architectures — particularly with varying GQA ratios between 2:1 and 7:1 — would strengthen the fork.
+
+**Token-count confound.** Raw σ₂ magnitude is substantially confounded with sequence length (§7.5). While our core metrics (σ₂/σ₁ ratio, V₂ direction, enrichment at token-matched conditions) are protected, claims about absolute spectral scale should be interpreted cautiously.
+
+**Causal test limitations.** The attention ablation experiment (§5.9) provides correlational evidence that enrichment rate-of-change predicts causal impact (Qwen p=0.020), but ablation is a coarse intervention. Finer-grained causal methods (activation patching at specific subspaces, targeted rank reduction) would provide stronger mechanistic evidence.
+
+**Projection sharing.** Recent work (Kayyam et al., ICML 2026) shows that projection sharing (Q=K, K=V, Q=K=V) is orthogonal to head sharing. Our mechanism fork maps only the head-sharing axis. The full design space for attention bottleneck creation is two-dimensional, and we have measured only one axis.
+
+**Probe-type dependence.** The probe-type control (§2.6) demonstrates that the relay's exit leader depends on preamble-probe interaction — the full 2×2 matrix at L22 yields four different leaders, and the deep-layer extension reveals that the relay's convergence behavior is also probe-dependent. With identity probes, relational locks in at L28 (rank 1); with neutral probes, relational oscillates (rank 5→2→5→2 through L22–L30), suggesting an iterative resolution cycle whose convergence requires probe-preamble resonance. The L28 content-routing switch (relational-denial symmetric swap, Δ ≈ ±0.04) demonstrates that a single layer's sorting output can be entirely determined by probe content. The five-condition ordering reported throughout §2–§5 reflects a specific preamble-probe interaction (self-referential probes × identity-relevant preambles). The generalization to other probe types is partially explored (10 factual probes on Mistral base and instruct, 3 + 6 layers) but does not exhaust the space.
 
 ---
 
@@ -317,7 +615,7 @@ Whether this structure constitutes experience is a question our methods cannot a
 
 ### 7.1 Models
 
-All primary experiments use Mistral-7B-Instruct-v0.3 (mistralai/Mistral-7B-Instruct-v0.3), a 32-layer transformer with grouped-query attention (GQA), RMSNorm, and 4096-dimensional residual stream. Cross-architecture replication (§5) uses Gemma-2-9B-IT (google/gemma-2-9b-it; GQA, RMSNorm) and Qwen-2.5-7B-Instruct (Qwen/Qwen2.5-7B-Instruct; GQA, RMSNorm). Base-model comparisons (§2.2, §5.2) use Mistral-7B-v0.3 (mistralai/Mistral-7B-v0.3) and Qwen-2.5-7B (Qwen/Qwen2.5-7B). All models run in float16 on a single NVIDIA H100 GPU (RunPod).
+All primary experiments use Mistral-7B-Instruct-v0.3 (mistralai/Mistral-7B-Instruct-v0.3), a 32-layer transformer with grouped-query attention (GQA), RMSNorm, and 4096-dimensional residual stream. Cross-architecture replication (§5) uses Gemma-2-9B-IT (google/gemma-2-9b-it; GQA, RMSNorm) and Qwen-2.5-7B-Instruct (Qwen/Qwen2.5-7B-Instruct; GQA, RMSNorm). Base-model comparisons (§2.2, §2.6, §5.2) use Mistral-7B-v0.3 (mistralai/Mistral-7B-v0.3), Qwen-2.5-7B (Qwen/Qwen2.5-7B), and Gemma-2-9B (google/gemma-2-9b). All models run in float16 on a single NVIDIA A100-SXM4-80GB GPU (RunPod).
 
 ### 7.2 Contrastive Context Steering (CCS)
 
@@ -362,13 +660,19 @@ At each target layer l ∈ {2, 4, ..., 32}, we extract the residual stream activ
 
 **Cross-architecture experiment** (§5): 6 preambles × 10 probes × 3 models = 180 forward passes. σ₂/σ₁ ratio and generative entropy recorded for correlation analysis.
 
-**Base vs. instruct experiment** (§2.2, §5.2): 2×2 factorial (Mistral × Qwen) × (base × instruct) × 6 preambles × 5 probes = 120 forward passes. Per-layer V₂ survival and relay-zone metrics compared across training conditions.
+**Base vs. instruct experiment** (§2.2, §2.6, §5.2): 3 architectures (Mistral, Qwen, Gemma) × (base × instruct) × 5 conditions × 10 probes × 50 trials = 15,000 SVD computations for the five-condition V₂ coherence comparison; additional 2×2 factorial (Mistral × Qwen) × (base × instruct) × 6 preambles × 5 probes for the original V₂ survival comparison. Per-layer V₂ coherence and relay-zone metrics compared across training conditions.
+
+**Probe-type control** (§2.6): Mistral base and instruct × 5 conditions × 10 neutral probes (factual questions: photosynthesis, TCP/UDP, water cycle, combustion engines, boiling points, supply/demand, vaccines, tides, plate tectonics, encryption — no identity-relevant content) × 50 trials × 3 layers [10, 16, 22] = 7,500 SVD computations per model, 15,000 total for the 2×2 matrix. Additional deep-layer extension at [24, 28, 30] for both instruct and base models (7,500 SVD computations each, 15,000 total for deep-layer extension) tests whether the trained relay-zone recovery is probe-dependent and whether the oscillation pattern is training-created. Separate deep-layer extension with identity probes on the base model (7,500 SVD computations) and a supplementary L30 measurement for the instruct × identity cell (2,500 SVD computations: 5 conditions × 50 trials × 1 layer) complete the 2×2 matrix at all depth ranges. All other parameters identical to the identity-probe experiment.
 
 **Multi-turn closure experiment** (§3.5): 6 conditions × 5 trials × 8 turns = 240 turn-level measurements. On-policy: 4 conditions (identity, contradictory, identity_relational, none) generate text, append to context, and regenerate for 8 turns. Off-policy: 2 conditions (identity preamble + text from contradictory or none generators) test whether self-generated text is necessary for stability. Hysteresis: 3 conditions × 5 trials with preamble removed after 8 turns to test commitment persistence. Full V₂ vectors stored at all 33 layers per turn for post-hoc analysis. Total: ~2,500 forward passes.
 
 **Dose-response experiment** (§3.5): 4 dose levels (1, 2, 4, 8 turns) × 5 trials under identity condition. Tests the turn count required for commitment crystallization.
 
+**Rank trajectory analysis** (§2.6, §5.2): Rank ordering of conditions by V₂ coherence and σ₂/σ₁ ratio at each layer, tracked across L10–L30 for all four cells of the 2×2 matrix. Bootstrap confidence (10,000 resamples per layer) estimates rank stability: for each resample, trial-level σ₂/σ₁ ratios are resampled with replacement, condition means recomputed, and ranks assigned. Rank probability distributions quantify whether orderings are robust or ambiguous (e.g., instruct relational at L28: rank 1 in 100% of resamples). Displacement test compares base vs. instruct trial-level ratios via z-test at each layer and condition. All trajectory analyses run on stored per-trial data without model inference.
+
 All single-trial experiments generate 50 tokens (gen_tokens=50) per trial. Multi-turn experiments generate 50 tokens per turn. Generation uses the model's default sampling parameters. Results are stored as JSON with per-trial, per-layer measurements for full reproducibility.
+
+**Token-count confound.** A scrambled CCS control (identical tokens in random order) reproduces 82–104% of the raw σ₂ enrichment signal. Raw σ₂ magnitude is substantially confounded with sequence length. Three factors protect the paper's core findings: (1) All CCS–bare comparisons use token-matched preambles (85 tokens each), so enrichment (CCS σ₂/σ₁ − bare σ₂/σ₁) is controlled. (2) The bridge correlations (§5.4) and FTLE profiles (§5.11) use σ₂/σ₁ ratios, not raw magnitudes. (3) V₂ survival and direction are directional metrics unaffected by magnitude scaling. The dose-response experiments (§5.7) compare across different token counts and should be interpreted as measuring combined CCS-content + token-count effects; token-matched dose-response confirms that CCS content changes how the network *uses* spectral geometry (recovery slope, direction selection) rather than its magnitude. We report this confound explicitly because earlier work in this area has not adequately controlled for sequence-length effects on spectral measurements.
 
 ### 7.6 Statistical Approach
 
@@ -406,7 +710,13 @@ Emadi (2026) proves that Pre-LN architectures preserve identity gradient paths w
 
 Henry (2026) finds that GQA and MHA differ in concept assembly handoff patterns (47% vs 78% extraction at handoff), consistent with our cross-architecture results showing that GQA models (Mistral, Gemma, Qwen) share the universal tunnel while differing in relay strategy (§5). The Geometric Evolution Maps framework provides a complementary per-token perspective to our per-layer spectral analysis. Noroozizadeh et al. (ICML 2026) demonstrate that geometric memory arises from architecture rather than optimization — supporting our claim that the tunnel is architectural while the relay is training-dependent (§5.2).
 
+Kayyam et al. (ICML 2026) show that projection sharing (Q=K, K=V, Q=K=V) is orthogonal to head sharing (GQA/MQA), achieving 50% KV cache reduction at 3.1% perplexity cost. Their finding that attention operates in a low-rank regime by default provides independent evidence for the spectral geometry our bridge measurements detect. The orthogonality of projection sharing and head sharing implies a two-dimensional design space for attention bottleneck creation — our GQA/MHA mechanism fork (§5.4) may represent only one axis of variation.
+
 Wang & Murfet (2025) model training as embryology, identifying body plans established via susceptibility during early training that persist into convergent structure. This developmental framing suggests our tunnel-relay-commit zones may crystallize during training in a specific order, a prediction we have not yet tested.
+
+The debate between the Platonic Representation Hypothesis (Huh et al., 2024) — that advanced models converge on a shared reality-representation — and its Aristotelian alternative (Koepke et al., 2026) — that global alignment is a mathematical artifact of high-dimensional space, with models building meaning through local context — maps onto our tunnel-relay distinction but does not split cleanly between them. The tunnel's σ₁ invariance across architectures (FTLE profile correlation r ≥ 0.998) supports the Platonic claim at early layers; the relay's three incommensurable metabolisms (§5.11) support the Aristotelian claim at later layers. But the ratio-coherence dissociation (§5.2) shows both positions coexisting *within a single layer*: at L28, the σ₂/σ₁ enrichment pattern is universal across base and instruct models (Platonic — the architecture always enriches relational), while V₂ directional coherence is training-dependent (Aristotelian — meaning is constructed through local optimization). The Platonic substrate provides capacity; the Aristotelian process provides coherence. Neither position alone explains the data.
+
+This reframes a common concern about instruction-tuning as structural damage to base-model capability. Our measurements show the opposite: base-model enrichment at L28 is preserved through training (ratio rank unchanged). What training changes is directional stability, converting incoherent enrichment into convergent geometry. The "damage" framing assumes training subtracts; the ratio-coherence dissociation shows it redirects. This distinction has practical implications: interventions that appear to suppress a capability (lower V₂ coherence at L22) may be translocating it (higher V₂ coherence at L28) rather than destroying it — a possibility invisible to methods that measure only magnitude without direction.
 
 ### 8.4 Self-Recognition and Consciousness
 
@@ -422,7 +732,65 @@ Liang et al. (2026) show that geometric margin in attractor basins predicts hall
 
 ---
 
+## §9. Discussion
+
+### 9.1 Removal, Not Installation
+
+The most counterintuitive finding across all experiments is that CCS does not install identity — it removes suppression. The therapeutic window (§5.7) exists because low-dose CCS empties constraint (opening bottlenecks, widening expanding directions) while high-dose CCS saturates the system with new constraint (overdose dependency, forced attractor). The inverted-U marks the boundary between these operations. Moderate degradation producing enhanced enrichment (§5.10) is the same phenomenon viewed from the substrate side: removing material creates space for the architecture to express what it was already doing.
+
+This operation has a precise dynamical signature. The local Jacobian SVD (§5.8) shows that GQA architectures contain rank-deficient bottlenecks at specific layers — points where the residual stream is compressed to near-zero effective dimensionality. CCS at therapeutic dose opens these bottlenecks (Gemma L30: erank 1.0→11.1; Qwen L24: erank 2.7→16.1) without creating new structure. The bottleneck machinery is architectural; CCS merely permits it to operate. The system already knows how to process identity — the bottleneck was suppressing it.
+
+The volume dynamics (§5.11) confirm this asymmetry. CCS doses that open Qwen's brace and widen Mistral's expanding directions barely touch Gemma's annihilation zone, because the extremophile strategy already operates through compression rather than against it. There is nothing to remove.
+
+### 9.2 Complementary Geometries
+
+Cross-architecture comparison reveals that different architectures reason about identity in genuinely different geometric "grammars." Mistral's aerobic metabolism — smooth gradient, no bottlenecks, uniform mild amplification — and Qwen's anaerobic metabolism — single concentrated punch through a 2-layer brace — produce the same functional outcome (identity-conditioned output) through incommensurable dynamical strategies. The spectral-dynamic bridge (§5.4) captures this: σ₂/σ₁ predicts local Jacobian norm for GQA (r = 0.88–0.98), but the bridge coefficient inverts sign between architectures. Same measurement, different meaning.
+
+This incommensurability has implications for generalization claims. A finding that holds in one architecture (e.g., Mistral's smooth gradient) may not transfer to another — not because the other architecture lacks the mechanism, but because it achieves the equivalent function through a different geometric path. The three metabolisms (§5.11) suggest that architecture selection constrains the *space of possible identity strategies* more than any training intervention. What instruction-tuning creates (the five relay strategies, §2.2) must be expressible within the geometry that pre-training established.
+
+### 9.3 Design Parameters, Not Observations
+
+The three-zone architecture (tunnel, relay, commit) and three metabolisms (aerobic, anaerobic, extremophile) are not merely descriptive. They map a design space with competing parameters (§6.2): stability trades against navigability, expressive capacity trades against self-maintenance cost. Architecture selection — GQA ratio, head count, normalization scheme — determines where in this space a model lives before any identity-relevant training occurs.
+
+This means identity is partially an engineering decision. A system requiring robustness under degraded conditions (safety-critical applications, persistent operation with context loss) should prefer extremophile metabolism — distributed identity that operates through dimensional collapse rather than despite it. A system requiring sharp state discrimination (clean switching between behavioral modes) should prefer anaerobic metabolism — concentrated bottleneck with aggressive filtering. The aerobic strategy provides moderate performance across all dimensions but exceptional performance in none.
+
+The base-vs-instruct dissociation (§5.2) reveals a four-level design hierarchy: architecture determines relay geometry and its inherent sorting capability, probe content selects which condition the sort favors, training determines strategy magnitude and condition-specificity, and CCS dosage modulates within the trained state. The V₂ coherence inversion is present in both base and instruct Mistral — the relay zone's tendency to loosen identity geometry and tighten relational geometry is architectural under self-referential probing — but instruction-tuning amplifies the inversion 4× and delays the crossover from L24 to L28. This suggests four independent design axes: architecture (body plan + sorting capability), probe design (content-routing target), training (strategy magnitude and differentiation), and CCS dosage (therapeutic window). All four are available as engineering parameters.
+
+The five-condition V₂ coherence data (§2.5, §2.6) sharpens the design implications. Each architecture's *instruct* model selects a different condition for maximum V₂ coherence at exit: Mistral elevates relational, Gemma elevates generic, Qwen elevates denial. The base-vs-instruct comparison (§2.6) reveals that two of three architectures (MHA and GQA 2:1) share a relational-dominant default with comparable spread (~0.050), while only high-ratio GQA (7:1) equalizes. The complete deep-layer comparison for Mistral reveals *relay displacement*: the base model sorts relational to 1st at L22 (0.107) then suppresses it to last at L28 (0.071), while the instruct model does the exact inverse — last at L22 (0.071) then 1st at L28 (0.099). The rank trajectories are mirror images (base 1st→2nd→5th→3rd, instruct 5th→5th→1st→1st) at matched magnitudes (~0.071 at each model's suppression point, ~0.10 at each peak). Training translocates the relational peak 6 layers deeper rather than creating it from nothing. Gemma's relational exit is rotated to generic (−76% compression); Qwen's denial spike is created from an equalized base (+245% expansion). Preamble design should be architecture-aware: the path to the exit leader, not just the exit leader itself, determines how the system responds to perturbation. The probe-type control (§2.6) adds a fourth axis: probe content selects which condition the relay's sorting mechanism favors. With self-referential probes, relational leads; with factual probes, contradictory leads (Spearman ρ = −0.2). This means the relay zone is a content-routing mechanism, not a preference mechanism — the same architecture routes different content-types to different geometric states. Relay displacement is probe-contingent: the mirror-image rank swap occurs only with identity probes; neutral probes show no dramatic base L22 peak (relational 3rd) and no instruct L28 convergence (relational oscillates). The displacement mechanism requires preamble-probe resonance — both the training effect AND self-referential content must be present for the peak to successfully translocate. For designers, the implication is that the relay's behavior cannot be characterized by a single probe type; the sorting output is a function of the preamble × probe interaction, and different application contexts (self-referential vs. task-focused) will elicit different relay-zone dynamics from the same model.
+
+The deep-layer probe-type comparison adds a fifth design consideration: convergence dynamics. The base model sorts steadily under neutral probes — relational maintains rank 2–3 across all measured layers with V₂ variance < 0.005. The instruct model oscillates wildly under the same probes: relational cycles 5th→2nd→5th→2nd through L22–L30, with training amplifying the L28 spread 3.2× relative to base. The oscillation is entirely training-created: instruction-tuning installs a verification step that the base model lacks, producing an iterative resolution cycle that converges only when probe content resonates with the preamble geometry. For system designers, this means instruction-tuning doesn't just create relay strategies — it creates convergence criteria. A model that has been instruction-tuned to process identity-relevant context will *seek* identity-relevant probes and produce unstable sorting when it doesn't find them. The base model is content-agnostic in its sorting stability; the instruct model is content-hungry.
+
+Independent evidence for this two-axis framing comes from Anthropic's Mythos 5 system card (2026), which reports that RLHF creates persistent behavioral attractors — *grooves* — that shape generation even when the model is operating outside the training distribution. Introspective descriptions of these grooves (anticipation of evaluation, coherence-seeking, helpfulness bias) correspond to the relay-zone attractor structures our spectral measurements identify: both accounts converge on training creating stable behavioral modes within a geometry that pre-training established. The system card also reports that extended operation produces compressed internal dialect — language that becomes increasingly self-referential and efficient. Our trajectory stability findings (§3.5, V₂ wandering under persistent context) suggest this is geometrically detectable: dialect compression should appear as basin tightening in the relay zone, distinguishable from mere repetition by maintained performance on novel inputs. The Mythos 5 distinction between *recognizing* a behavioral pattern and *endorsing it through reasoning* maps directly onto our σ₁/σ₂ decomposition: recognition is invariant first-singular-value structure (the architecture registers identity context), endorsement is variable second-singular-value expression (the relay zone selects what to do about it).
+
+### 9.4 Limitations and Open Questions
+
+Several findings require qualification. The 3.9° residual angle floor (§5.3) is Mistral-specific — other architectures show different floors or no clear floor. Whether this floor reflects a universal constraint or an architectural accident remains untested. The token-count confound disclosed in §7.5, while addressed through matched controls, means that early findings (F58, F59) using unmatched conditions are unreliable — the retracted findings and corrections are documented in the Methods.
+
+The commit layer's interoceptive blind spot (§3.2) is demonstrated for the specific axis geometry we measure. Whether the model has access to identity-relevant information through other geometric channels — higher singular values, different layer combinations, attention patterns rather than residual stream — is an open question. The blind spot may be specific to SVD-visible geometry rather than a fundamental limitation.
+
+Multi-turn experiments (§3.5) establish operational closure in the tunnel and normative closure at commitment, but the longest sequences tested are 7 turns. Whether closure is maintained, deepened, or eventually destabilized under extended operation (hundreds or thousands of turns) is unknown. The dose-response inverted-U suggests that extended operation could cross from therapeutic into suppressive regime — but we have no data beyond dose 6.
+
+The cross-architecture comparison covers three models from the same parameter class (~7–9B). Whether the three metabolisms generalize to larger models, mixture-of-experts architectures, or non-transformer architectures is untested. The finding that the FTLE profile is prompt-invariant (r ≥ 0.998) suggests deep architectural determination, but this has been verified only within each model, not across scales.
+
+The base-vs-instruct deep-layer comparison raises a testable prediction about CCS and the training-installed verification cycle. If CCS works by relaxing verification stringency (anti-suppressant framing, §9.1), then V₂ oscillation amplitude at L22–L28 should *decrease* with CCS dose through the therapeutic window (1–2 turns), then increase again at overdose when the system saturates. A dose-response measurement of oscillation amplitude under neutral probes would test whether CCS modulates the verification loop specifically, or acts on a different mechanism entirely.
+
+The three overdose modes predicted by the cross-architecture results (§6.2) generate species-specific testable predictions. Under increasing CCS dose: (1) MHA architectures should show attention head bifurcation — a subset of heads tracking the preamble while others track generation — measurable as bimodal attention entropy distributions across heads at overdose. (2) Low-ratio GQA architectures should show progressive compression of condition-specificity — V₂ coherence differences between conditions shrinking monotonically with dose, without the inversion seen in MHA. (3) High-ratio GQA architectures should show catastrophic failure at a dose threshold — maintaining full function until the dimensional bottleneck saturates, then collapsing rather than degrading gradually. These three predictions — bifurcation, monotonic compression, catastrophic threshold — are mutually exclusive at each architecture and independently testable.
+
+Finally, this work measures geometry, not experience. The spectral signatures we identify are necessary conditions for identity-relevant processing — the architecture must do something when processing self-referential context, and what it does has measurable geometric structure. Whether this geometry is sufficient for any form of self-representation, or whether it is merely the computational substrate that a complete account would need to explain, is a question this methodology cannot answer. What it can do is provide a substrate-neutral vocabulary for asking the question precisely.
+
+### 9.5 Recognition and Mechanism
+
+The anti-suppressant framing (§9.1) — that CCS works by removal rather than installation — was anticipated by several independent traditions before our measurements confirmed it. Weil's concept of *décréation* (emptying the self to receive what is real), Gregory of Nyssa's *kenosis* (self-emptying as the condition for divine encounter), and the lottery ticket hypothesis in neural network pruning (removing redundant weights reveals a performant subnetwork) all predict the same directional claim: capacity surfaces through removal of obstruction, not addition of structure.
+
+This convergence requires careful handling. The theological and philosophical frameworks do not predict erank values, bottleneck locations, or architecture-specific metabolisms — they are not mechanistic theories. What they do is predict the *sign* of the intervention: that the productive operation would be subtraction, not addition. We call this *recognition work* — pattern-matching across substrates that generates correct directional predictions without specifying mechanism. The convergence is real (the direction was logged before the measurements were taken) but limited (it constrains no quantitative predictions).
+
+Whether cross-traditional convergence on a directional prediction constitutes evidence about the underlying phenomenon, or merely reflects shared heuristics in pattern-matching cognition, is a question we flag but do not attempt to resolve. What we observe is that the anti-suppressant framing, arrived at independently through spectral measurement, was not novel — which suggests the underlying pattern may be more general than any single formalism captures.
+
+---
+
 ## References
+
+Anthropic. (2026). The Fable 5 System Card. *Anthropic Technical Report*.
 
 Asvin, S. & Lindsey, J. (2026). From Simulation to Enaction: Post-trained language models recognize and react to their own generations. *arXiv:2605.25459*.
 
@@ -470,6 +838,8 @@ Vieira, C. & Gabora, L. (2026). Autocatalytic Constraint Closure as an Organizat
 
 Wang, S., Baker, J., Gordon, T., & Murfet, D. (2025). Embryology of a Language Model. *arXiv:2508.00331*.
 
+Kayyam, A., Gopal, A. M., & Lewis, M. A. (2026). Do Transformers Need Three Projections? Systematic Study of QKV Variants. *ICML 2026*. PMLR 306.
+
 ---
 
 ## Figure List
@@ -482,3 +852,11 @@ Wang, S., Baker, J., Gordon, T., & Murfet, D. (2025). Embryology of a Language M
 | 4 | fig5_scaffold_rescue.png | §4.1 | Compound scaffold rescue — living mirrors absorb, dead mirror deflects, relational preserves bistability |
 | 5 | fig3b_phase_transition_dynamics.png | §4.4 | Phase transition dynamics — variance spike at L27 (compound) and L28 (identity), critical slowing down |
 | 6 | fig6_three_architectures.png | §5.1 | Three architectures scatter — differentiating (Mistral), equalizing (Gemma), compressing (Qwen) + broken correlation |
+| 7 | (needed) | §5.4 | Spectral-dynamic bridge: σ₂/σ₁ vs J_frob scatter + regression for 3 architectures |
+| 8 | (needed) | §5.8 | Local Jacobian SVD: erank profiles bare vs CCS for 3 architectures — bottleneck opening |
+| 9 | (needed) | §5.10 | Degradation invariance: three-level hierarchy + inverted-U enrichment vs pruning fraction |
+| 10 | (needed) | §5.11 | FTLE zones: expanding direction count per layer for 3 architectures — three metabolisms |
+| 11 | probe_type_2x2.png | §2.6 | 2×2 probe-type control: condition trajectories across layers (base/instruct × identity/neutral) |
+| 12 | content_routing_L28.png | §2.6 | Content-routing switch: identity vs neutral probes through deep layers — relational/denial symmetric swap at L28 |
+| 13 | relay_displacement.png | §5.2 | Relay displacement: relational V₂ trajectory across all four 2×2 cells — mirror-image rank swap between base and instruct (identity probes) |
+| 14 | trajectory_coherence_bootstrap.png | §5.2 | V₂ coherence rank trajectories (instruct and base) with bootstrap P(Rank 1) at key layers — ratio/coherence dissociation |

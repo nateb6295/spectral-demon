@@ -7,3 +7,8 @@ paper.out
 paper.pdf
 results/exp_stabilization_dose_v2_20260605_0254.json
 results/exp_selfref_vs_relational_20260606_0211.json
+results/exp_selfref_vs_relational_mistral_*.json
+results/exp_selfref_vs_relational_phi_*.json
+results/exp_selfref_vs_relational_20260611_*.json
+results/dose_response_*.json
+results/exp_*.json
