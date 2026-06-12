@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "n_prompts": 50,
+    "n_permutations": 5,
+    "finding_id": "F131_highN_permuted",
+    "timestamp": "20260612_1158"
+  },
+  "per_permutation": [
+    {
+      "early": 0.9666666666666667,
+      "transition": 1.0,
+      "responsive": 1.0,
+      "relay": 0.96
+    },
+    {
+      "early": 0.9666666666666667,
+      "transition": 1.0,
+      "responsive": 1.0,
+      "relay": 0.99375
+    },
+    {
+      "early": 0.9666666666666667,
+      "transition": 1.0,
+      "responsive": 0.99875,
+      "relay": 0.9625000000000001
+    },
+    {
+      "early": 0.9666666666666667,
+      "transition": 1.0,
+      "responsive": 0.99875,
+      "relay": 0.9625
+    },
+    {
+      "early": 0.9666666666666667,
+      "transition": 1.0,
+      "responsive": 0.99875,
+      "relay": 0.9787500000000001
+    }
+  ],
+  "averaged": {
+    "early": 0.9666666666666666,
+    "transition": 1.0,
+    "responsive": 0.9992500000000002,
+    "relay": 0.9715
+  }
+}
