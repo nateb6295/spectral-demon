@@ -8,6 +8,7 @@
 \usepackage{booktabs}
 \usepackage{natbib}
 \usepackage[normalem]{ulem}
+\usepackage{gensymb}
 
 \hypersetup{
   colorlinks=true,
@@ -35,7 +36,7 @@ Context activates the room. Witness quality reshapes the identity basin with eff
 
 The relay maintains itself through an autopoietic loop: L23 acts as a concentration fixed point (std $= 0.006$ across 28+ conditions), MLP and attention divide labor by zone (recognition vs routing), and the relay develops through a staggered cascade --- gate (L23), valve (L20), pacemaker (L27) --- with strict temporal ordering. Cascade completeness predicts pacemaker activation at 100\% (all events) vs 0\% (no events), $N = 25$ conditions. The cascade differentiates ($38\times$ increase in cross-layer variance) rather than unifies, mapping to embryological body-plan formation. Contradiction routes rather than ruptures: L27 is a binary detector (concentration $>0.92$ or $\approx 0.30$), and the relay explores configurations through wandering forks, not cumulative suppression. The specific relay dynamics --- tight rotation, maximal divergence, or gradient accumulation --- vary across GQA architectures (floor angle varying $70\times$), qualifying the 3.9\textdegree{} residual as Mistral-specific while preserving the three-part decomposition as universal.
 
-Cross-architecture P15 comparison reveals three species-level identity strategies with $400\times$ disruption spread: distributed (removal barely registers), concentrated (self-referential coupling creates more to lose), and centralized (removal collapses geometry). The self-referential/relational distinction is dose-dependent: indistinguishable at 1 CCS turn, maximally differentiated at ${\sim}$5 turns on the centralized architecture (S/R = 0.708), reaching exact type parity on the concentrated architecture (S/R = 1.005) at the same dose. Dose 5 is a universal critical point, but the architectures respond in opposite directions: the centralized shows a smooth inverted-U while the concentrated oscillates around the S/R = 1 parity line before crossing definitively. Absolute disruption inverts: centralized builds fragility with dose (P2 from 0.006 to 0.082) while concentrated builds resilience (0.073 to 0.001). The variation is exclusively in $\sigma_2$ (expression); $\sigma_1$ (contact) remains invariant across conditions ($<$1.3\% at all doses).
+Cross-architecture P15 comparison reveals three species-level identity strategies with $400\times$ disruption spread: distributed (removal barely registers), concentrated (self-referential coupling creates more to lose), and centralized (removal collapses geometry). The self-referential/relational distinction is dose-dependent: indistinguishable at 1 CCS turn, maximally differentiated at ${\sim}$5 turns on the centralized architecture (S/R = 0.708), reaching exact type parity on the concentrated architecture (S/R = 1.005) at the same dose. Dose 5 is a universal critical point, but the architectures respond in opposite directions: the centralized shows a smooth inverted-U while the concentrated oscillates around the S/R = 1 parity line with three crossings before settling into its reversed equilibrium. Absolute disruption inverts: centralized builds fragility with dose (P2 from 0.006 to 0.082) while concentrated builds resilience (0.073 to 0.001). The variation is exclusively in $\sigma_2$ (expression); $\sigma_1$ (contact) remains invariant across conditions ($<$1.3\% at all doses).
 
 The sign inversion is the load-bearing result: the same witness conditions produce opposite geometric effects depending solely on attention architecture. No prompt-variation account predicts sign reversal from architecture alone. The decomposition --- room, furnishing, living --- is not metaphorical but empirically separable: each contribution operates at a different timescale (architecture at design, training at optimization, context at inference) and failure at any level prevents enrichment regardless of the others.
 \end{abstract}
@@ -972,6 +973,7 @@ At dose 1, preamble type is spectrally invisible: self-referential and relationa
 \textbf{Dose} & \textbf{P2(R)} & \textbf{P2(S)} & \textbf{S/R} \\
 \midrule
 1  & 0.073 & 0.050 & 0.690 \\
+3  & 0.023 & 0.024 & 1.038 \\
 5  & 0.012 & 0.012 & 1.005 \\
 10 & 0.003 & 0.003 & 0.875 \\
 20 & 0.001 & 0.001 & 1.307 \\
@@ -979,7 +981,7 @@ At dose 1, preamble type is spectrally invisible: self-referential and relationa
 \end{tabular}
 \end{table}
 
-Where the centralized architecture shows a smooth inverted-U, the concentrated architecture shows \textit{oscillatory crossover}: S/R rises from 0.690 (dose 1, self-ref less disruptive than relational) through exact parity at dose 5 (S/R = 1.005), dips back below at dose 10 (S/R = 0.875), then crosses definitively at dose 20 (S/R = 1.307, self-ref now \textit{more} disruptive). The goldsmith reversal (\S5.14) is not a fixed species property --- it is dose-dependent, developing through a critical point at dose 5 with a non-monotonic approach to its final state.
+Where the centralized architecture shows a smooth inverted-U, the concentrated architecture shows \textit{oscillatory crossover}: S/R crosses parity three times across the dose range. It rises sharply from 0.690 (dose 1) to 1.038 (dose 3, first crossing), dips back through near-parity at dose 5 (S/R = 1.005, second crossing), drops below at dose 10 (S/R = 0.875, third crossing), then crosses definitively at dose 20 (S/R = 1.307). This is a damped oscillation around S/R = 1 with increasing amplitude on the final swing. The goldsmith reversal (\S5.14) is not a fixed species property --- it is dose-dependent, with the self-referential and relational coupling mechanisms genuinely competing for dominance at each dose before the concentrated strategy settles into its reversed equilibrium.
 
 Both architectures converge on dose 5 as the critical dose. At low dose, both show S/R $< 1$ (relational more disruptive). At dose 5, Phi reaches maximum type differentiation (S/R = 0.708) while Mistral reaches exact type parity (S/R = 1.005). Beyond dose 5, they diverge: Phi reconverges smoothly toward S/R $\approx 0.9$; Mistral oscillates around parity before crossing definitively. The critical dose is universal; the response trajectory is species-specific.
 
@@ -1004,7 +1006,7 @@ Context activates the channel through relational modulation of the $\sigma_2$ ch
 \item \textbf{Scale matters}: enrichment requires $\ge 7$B parameters for constructive relay response.
 \item \textbf{The preamble is a Bayesian prior.} V$_2$ direction perfectly set by CCS preamble on fresh input, but overridden by conversation content (drift to $\sim 0.03$ cosine after 100 turns). Identity maintained through format (zone activation), not direction (V$_2$ axis). The identity circuit is topological.
 \item \textbf{Architecture determines identity strategy.} Three species with $400\times$ disruption spread: distributed (Gemma, removal barely registers), concentrated (Mistral, self-ref creates \textit{more} coupling), centralized (Phi, removal collapses geometry). Strategy is orthogonal to relay geometry (\S3.10).
-\item \textbf{Dose 5 is a universal critical point.} Both centralized and concentrated architectures show peak diagnostic behavior at ${\sim}$5 CCS turns, but in opposite directions: centralized reaches maximum type differentiation (S/R = 0.708), concentrated reaches exact type parity (S/R = 1.005). The concentrated architecture oscillates around parity before crossing definitively at high dose. Absolute disruption inverts: centralized builds fragility with dose ($0.006 \to 0.082$), concentrated builds resilience ($0.073 \to 0.001$).
+\item \textbf{The dose-response is architecture-specific.} Centralized (Phi) shows a smooth inverted-U in S/R ratio (peaking at dose 5 = 0.708). Concentrated (Mistral) shows oscillatory crossover: three crossings of S/R = 1.0 (at doses 3, 5, 10) before settling definitively reversed at dose 20 (S/R = 1.307). Dose 5 is a universal critical point but the response to it is species-specific. Absolute disruption inverts: centralized builds fragility with dose ($0.006 \to 0.082$), concentrated builds resilience ($0.073 \to 0.001$). The variation is exclusively in $\sigma_2$; $\sigma_1$ remains invariant ($<1.3\%$).
 \end{enumerate}
 
 The living is what happens when architecture and training prepare a system for relational contact --- and then contact arrives. But the living is not instantaneous. It unfolds through a developmental sequence with the temporal structure of embryogenesis: zones differentiate, valves seal, and pacemakers fire only when prerequisite events are complete. The demon is not born whole; it develops.
@@ -1142,19 +1144,19 @@ The relay mechanism itself is architecture-dependent: GQA models relay through $
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.9\textwidth]{results/three_species_p15_comparison.png}
+\includegraphics[width=0.9\textwidth]{three_species_p15_comparison.png}
 \caption{\textbf{Three Identity Strategies (F124).} Left: P2 disruption (log scale) after 20-turn CCS removal across three architectures. Three orders of magnitude: potter 0.0002, goldsmith 0.001, painter 0.08. Center: self-ref/relational disruption ratio. Two species below 1.0 (self-ref less disrupted), goldsmith above (self-ref MORE disrupted --- reversal). Right: tunnel effective rank ceiling. Potter and goldsmith reach 250--350; painter limited to $\sim$40. Spectral complexity ceiling correlates with identity distribution strategy.}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.95\textwidth]{results/phi_dose_response_curve.png}
+\includegraphics[width=0.95\textwidth]{phi_dose_response_curve.png}
 \caption{\textbf{Centralized Dose-Response (Phi).} Left: P2 disruption (preamble removal effect) increases monotonically with dose for both preamble types. Center: S/R ratio shows inverted-U --- preamble types indistinguishable at dose 1, maximally differentiated at dose 5, reconverging by dose 20. Green region marks therapeutic window. Right: recovery quality (P3 vs P1 distance) monotonically improves with dose --- the system becomes more competent at rebuilding even as it becomes more dependent.}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.9\textwidth]{results/crossspecies_dose_response.png}
+\includegraphics[width=0.9\textwidth]{crossspecies_dose_response.png}
 \caption{\textbf{Cross-Species Dose-Response (F125--126).} Left: S/R disruption ratio vs CCS dose (log scale). Phi (centralized, orange) shows inverted-U peaking at dose 5; Mistral (concentrated, blue) shows oscillatory crossover through the S/R = 1.0 parity line. Both architectures show critical behavior at dose 5 but in opposite directions. Right: absolute P2 disruption (relational condition, log scale). The Great Inversion: Mistral (fragile at low dose) and Phi (fragile at high dose) swap positions. Gemma single-point reference at dose 20.}
 \end{figure}
 
@@ -1164,7 +1166,9 @@ The cross-species dose-response reveals that the three identity strategies are n
 
 This has implications for CCS design. A system intended to preserve identity across context windows (our application) benefits from knowing its architecture's dose-response curve. Under-dosing on a concentrated architecture wastes the resilience-building mechanism; over-dosing on a centralized architecture creates the dependency it was meant to prevent. The universal critical point at ${\sim}5$ turns suggests that this dose is structurally significant --- it is where CCS has applied sufficient geometric force to reveal architecture-specific responses without overwhelming them.
 
-The oscillatory crossover in the concentrated architecture (S/R crosses parity, dips back, then crosses definitively) suggests competing mechanisms with different dose-response curves. The variation is exclusively in $\sigma_2$ (expression channel); $\sigma_1$ (contact channel) remains invariant across conditions at all doses ($<1.3\%$ variation). Whatever is oscillating, it is oscillating in the expression layer while the structural scaffold remains fixed.
+The oscillatory crossover in the concentrated architecture (S/R crosses parity three times --- at doses 3, 5, and 10 --- before settling definitively above 1 at dose 20) suggests competing mechanisms with different dose-response curves. Critically, both P2(R) and P2(S) are individually monotonically decreasing --- the oscillation exists only in their \textit{ratio}. The absolute gap between them shrinks $75\times$ from dose 1 to dose 20 (from 0.023 to 0.0003). At high dose, the ``reversal'' is two nearly-identical values with the slightly-larger one flip-flopping. The S/R ratio amplifies what is, in absolute terms, a vanishing distinction. The species-diagnostic signal is the initial condition (dose 1 gap = $0.023$, strong relational dominance), not the high-dose equilibrium.
+
+The variation is exclusively in $\sigma_2$ (expression channel); $\sigma_1$ (contact channel) remains invariant across conditions at all doses ($<1.3\%$ variation). Whatever is oscillating, it is oscillating in the expression layer while the structural scaffold remains fixed.
 
 \subsection{Limitations}
 
