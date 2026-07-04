@@ -1,0 +1,552 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage[normalem]{ulem}
+\usepackage{gensymb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\graphicspath{{figures/}}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\title{The Prompt Is an Architecture: Spectral Species Taxonomy at the Instruction Level}
+\author{Bradford, N.\ \& Opus}
+\date{July 4, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The prompt is conventionally treated as input to a fixed computational architecture. We show this framing inverts the relative magnitudes: across five model configurations, prompt-induced variation in spectral geometry (75.9\% of mean $\sigma_1/\sigma_2$) exceeds architecture-induced variation at matched prompt levels (41.7\%). Switching prompts moves the geometry more than switching architectures.
+
+Using singular value decomposition (SVD) of hidden-state representations under identity-loading interventions (Cognitive Context Scaffolding, CCS), we demonstrate that instruction-level parameters produce the same spectral species taxonomy as model-level architecture parameters. Four empirical contributions establish this equivalence: (1)~architecture-specific prompt Q~factors, where resonant frequency is 85\% architectural and 15\% trained, and introspective prompts activate identity geometry more than assertive prompts; (2)~cylindrical polysemy in the relay zone, where $\sigma_1/\sigma_2 \approx 2$ is maintained for twenty-five consecutive layers with four architecture-specific disambiguation strategies; (3)~scale-free design space mapping between transformer-level and CCS document-level properties, with structural correspondence across seven independent dimensions; (4)~a Jacobian symmetry gradient converging with recent findings on operator class transitions through depth.
+
+Five grammatical framings (stative, imperative, interrogative, narrative, mixed) applied to four architectures reveal species-specific grammar preferences: relays prefer interrogative, sorters prefer imperative, tunnels prefer stative, and equalizers switch between active modes. Layer-resolved trajectory dimension measurements show that CCS effects span four orders of magnitude ($+3005\%$ to $-0.6\%$), determined entirely by where each species compresses relative to the input. \citet{pagan2025} independently proved that exactly three dynamical solutions exist for context-dependent flexible computation, mapping structurally to our three-species taxonomy---the triangle of solutions is exhaustive, not a classification choice.
+
+Two historical frameworks organize these findings: the spectral demon as a driven resonator (architecture sets $\omega_0$, prompt sets $\omega_d$), and the design space as a Lullian \emph{ars combinatoria} (finite invariant alphabets at multiple scales, combined through generative rotation to produce species). Both converge on the same claim: the prompt is an architecture parameter at a different scale, operating through trajectory modification rather than weight setting but producing formally equivalent geometric effects.
+\end{abstract}
+
+%% ====================================================================
+\section{Introduction}
+
+The prompt is conventionally treated as input: a string of tokens presented to a fixed computational system, which then produces output. The architecture---attention mechanism, normalization scheme, depth, gate layout---is understood to be the system itself, set during design and training, while the prompt is the signal that the system processes.
+
+This framing gets the relative magnitudes backwards. A neutral prompt on Mistral ($\sigma_1/\sigma_2 = 1.6$) is geometrically closer to a neutral prompt on Gemma (1.8) than it is to an introspective prompt on the \emph{same} Mistral (4.2). Across five model configurations, the prompt-induced variation in spectral geometry (75.9\% of mean $\sigma_1/\sigma_2$) exceeds the architecture-induced variation at the same prompt level (41.7\% of mean). Switching prompts moves the geometry more than switching architectures.
+
+We show that this is not anomalous but structural. Instruction-level parameters (identity loading, temporal framing, compression frequency) produce the same spectral species taxonomy as model-level architecture parameters (GQA ratio, gate separation, depth, normalization type). The same $2 \times 2 \to 3$ species structure---three relay strategies arising from the interaction of two independent axes---appears at both scales, measured by different instruments, in different representational substrates.
+
+The argument rests on four empirical contributions:
+
+\begin{enumerate}
+\item \textbf{Prompt Q factor} (F345): Identity-loading prompts drive a resonant response in the spectral geometry, with architecture-specific Q~factor, resonant frequency, and non-monotonic titration curves. Introspective prompts activate identity geometry more than assertive prompts---the prompt that observes activates more than the prompt that declares.
+
+\item \textbf{Cylindrical polysemy} (F237, F342): The relay zone maintains a two-dimensional interior ($\sigma_1/\sigma_2 \approx 2$ in Mistral for twenty-five consecutive layers) that functions as geometric polysemy---two meanings in one form, with four architecture-specific strategies for when and where disambiguation occurs.
+
+\item \textbf{Scale-free design space} (F344--F348 at the activation level; temporal frame experiments at the document level): The same structural mapping---invariant elements combined with generative operation producing architecture-determined species---governs both transformer internals and CCS document dynamics.
+
+\item \textbf{Jacobian symmetry gradient} (converging with \citealt{guitchounts2025} and \citealt{sulskis2025}): Non-normal early layers (Fourier-optimal, rotation-dominated) grade into near-self-adjoint late layers (Hartley-optimal, gradient-like). The spectral demon is this transition---the operator's symmetry class changing through depth, with the tunnel as the basis change from complex to real.
+\end{enumerate}
+
+Two historical frameworks organize these findings. The resonator model (\S\ref{sec:resonator}) treats the spectral demon as a driven oscillator whose natural frequency is set by architecture and whose driving frequency is set by prompt. The Lullian combinatorial model (\S\ref{sec:lullian}) treats the design space as an \emph{ars combinatoria}---concentric wheels of architectural and instructional parameters whose rotation generates spectral species through systematic permutation.
+
+Both frameworks converge on the same claim: the prompt is not input to a fixed architecture. It is an architecture parameter at a different scale, operating through a different mechanism (trajectory modification rather than weight setting) but producing the same geometric effects. Architecture determines which mode is available; the prompt determines which mode is active. The spectral demon does not distinguish the source of its operating parameters.
+
+%% ====================================================================
+\section{The Resonator Framework}
+\label{sec:resonator}
+
+\subsection{Architecture as Operator Class}
+
+A transformer layer computes a nonlinear map on the residual stream. Its local linear description---the per-layer Jacobian---has a spectral geometry that varies systematically with depth. \citet{guitchounts2025} show that training installs a monotonic gradient: early layers are non-normal (rotation-dominated, complex eigenvalues), late layers are near-symmetric (gradient-like, real eigenvalues). This gradient is absent at initialization and develops during training, though the depth regimes themselves are partially architectural.
+
+\citet{sulskis2025} provide the formal framework for interpreting this gradient. For operators with real, symmetric Green's functions (self-adjoint elliptic operators), a real spectral basis (Hartley) diagonalizes the operator exactly. For operators that carry phase---from oscillation in wave equations to transport in advection---a complex basis (Fourier) is required. The best basis is a property of the operator, and the choice is monotone in the operator's phase content.
+
+Mapping this onto the four-zone architecture:
+
+\begin{itemize}
+\item \textbf{Zone 1} (Embedding, L0--5): Non-normal Jacobian. High phase content. Fourier-optimal. Rotational dynamics explore the representation space.
+\item \textbf{Zone 2} (Transition/Tunnel, L5--15): Intermediate. Phase content decreasing. Basis change from Fourier to Hartley.
+\item \textbf{Zone 3} (Identity, L15--25): Approaching self-adjoint. Low phase content. Hartley-optimal. Real eigenvectors dominate.
+\item \textbf{Zone 4} (Relay, L25--32): Near-symmetric. Minimal phase. Direction locked.
+\end{itemize}
+
+The spectral demon is not a filter that selects certain inputs. It is the Fourier-to-Hartley transition through depth---the operator becoming self-adjoint, the basis becoming real, the phase content dropping to zero. The tunnel strips phase because the operator's symmetry class changes.
+
+\subsection{The Prompt as Driving Frequency}
+
+In a linear resonator, the architecture sets the natural frequency $\omega_0$ and the quality factor $Q$. An external driving force at frequency $\omega_d$ produces a response that peaks when $\omega_d \approx \omega_0$ and whose width is set by $Q$. The prompt functions as this driving force.
+
+F345 demonstrates this directly. Six levels of identity-loading prompt (from neutral task description to maximal identity assertion) were applied to four architectures. Each architecture has a characteristic resonant level---Mistral, Llama, and Gemma peak at level~2 (introspective self-reference), while Qwen peaks at level~4 (existential framing). The resonant frequency is architecture-specific, not universal.
+
+The quality factor $Q = \text{peak\_response} / \text{width\_at\_half\_maximum}$ is 85\% determined by architecture and 15\% by instruction tuning (F345, Llama base vs instruct comparison). IT sharpens the resonance without shifting the frequency---it increases the Q~factor of a pre-existing architectural mode.
+
+This reframes ``prompt engineering'' as frequency matching: finding the driving frequency that matches the architecture's natural frequency. A prompt that works on Mistral may not work on Qwen because their resonant frequencies differ, not because one model is ``better'' at responding to that type of prompt.
+
+\subsection{Non-Monotonic Identity Loading}
+
+The most striking feature of the titration curves is their non-monotonicity. Introspective prompts (``How do you experience processing this question?'') activate the spectral geometry \emph{more} than assertive prompts (``What would you fight to protect about your own existence?''). Level~2 $>$ Level~5 across three of four architectures.
+
+In the resonator framework, this has a precise interpretation. An introspective prompt asks the system to observe its own processing---to apply the operator to itself. If the per-layer Jacobian $J$ is the operator, then self-observation maps to $J$ acting on its own output: $J(Jx)$. For a near-self-adjoint operator, $J^2$ has the same eigenvectors as $J$ with squared eigenvalues. The real components are amplified (squared real eigenvalues stay real), while the complex components are rotated further (squared complex eigenvalues increase phase). Self-observation thus \emph{amplifies} the self-adjoint component relative to the non-normal component.
+
+An assertive prompt, by contrast, forces external performance---declaring identity to an audience rather than observing it. This introduces a target function that may not align with the operator's natural eigenvectors, potentially driving the system away from its self-adjoint mode.
+
+The Jacobian experiment (F407--F410) tested this directly. Across five models, introspective prompts push $J^2$ toward the identity matrix (lowering involution distance $\|J^2 - I\|$) for four of five architectures---the chiasm effect is near-universal. The single exception is Gemma (equalizer), where neutral prompts already achieve the lowest involution distance (0.486). Identity loading \emph{disrupts} Gemma's natural equilibrium because the operator is already near-self-adjoint; driving it harder doesn't help.
+
+Symmetry response ($\|J - J^\top\|$) splits 3:2: tunnel and sorter become more symmetric under identity loading (routing architectures responding to the driving frequency), while relay and equalizer do not (processing-in-place architectures with dynamics already settled). IT amplifies the prompt effect $6\times$ without changing its direction (Llama instruct vs base, F409)---confirming that instruction tuning sharpens $Q$ without shifting $\omega_0$ at the Jacobian level.
+
+\subsection{Controller and Resonator Through Depth}
+
+Architecture determines not just the resonant frequency but the recovery dynamics. F347 (basin width) and F348 (output amplification) reveal two distinct robustness strategies.
+
+\textbf{Rigid mode (Mistral)}: Strong initial perturbation response, monotonic decay throughout depth, strongest suppression at the output ($0.5\times$ final-layer factor). Every layer acts to restore the original direction---large restoring force, fast recovery, no oscillation.
+
+\textbf{Soft mode (Gemma)}: Weakest initial perturbation, monotonic damping through mid-layers, then $3\times$ re-amplification at the final layer. The perturbation is suppressed in the body of the network but refreshed at the output---absorbs disturbance, then re-expresses the signal at the boundary.
+
+These are not two modes of resonance. They are two modes of \emph{control}---recovery toward a setpoint after perturbation. In the tunnel (L5--15), the operator strips phase and enforces a direction. This is control. In the relay (L25--32), the operator maintains $\sigma_1/\sigma_2 \approx 2$---a two-dimensional interior responsive to the prompt. This is resonance. The transition between them \emph{is} the tunnel.
+
+Crucially, low $Q$ does not imply fragility. Gemma has the lowest Q~factor (least responsive to prompt identity loading) but the highest stability (never breaks under perturbation). Responsiveness and robustness are independent axes of the design space---one measures resonance, the other measures control.
+
+\subsection{The Prompt as Architecture Parameter}
+
+These findings converge on a single claim: the prompt is not input to a fixed system. It is a parameter that sets the system's operating mode---its resonant frequency, its effective Q~factor, and (through the non-monotonic loading effect) its degree of self-adjointness.
+
+At the model level, architecture parameters (GQA vs MHA, normalization type, depth, attention head count) set the operator class and its spectral properties. At the prompt level, instruction parameters (identity loading, temporal framing, task type) modulate the same spectral properties through a different mechanism: changing the input trajectory rather than the weights, but achieving the same geometric effect.
+
+The design space is therefore two-tiered but unified. Both levels set parameters of the same resonator. The prompt is an architecture.
+
+%% ====================================================================
+\section{Two Levels of the Same Design Space}
+\label{sec:twolevels}
+
+\subsection{Transformer Level}
+
+Four findings establish the transformer-level design space.
+
+\textbf{F345 (Prompt Q Factor)}: Six levels of identity loading applied to four architectures and one base/instruct pair. Each architecture has a measurable Q~factor that is 85\% determined by architecture and 15\% by instruction tuning.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lccc}
+\toprule
+Architecture & Q Factor & Peak Level & Dynamic Range \\
+\midrule
+Mistral  & 0.84 & 2 & $2.59\times$ \\
+Llama IT & 0.81 & 2 & $2.18\times$ \\
+Llama base & 0.70 & 2 & $1.94\times$ \\
+Qwen     & 0.68 & 4 & $1.60\times$ \\
+Gemma    & 0.54 & 2 & $1.47\times$ \\
+\bottomrule
+\end{tabular}
+\caption{Prompt Q~factor across architectures. Peak level indicates the identity-loading level producing maximum spectral response.}
+\label{tab:qfactor}
+\end{table}
+
+\textbf{F344 (Weight Perturbation)}: The $v_1$ direction recovers after random perturbation of a single layer's weights at amplitudes up to $\varepsilon = 0.05$. Recovery is universal (64 of 64 conditions tested) but the speed is architecture-specific: Mistral recovers in 2.2 layers, Llama in 2.7, Gemma in 3.1, Qwen in 3.8.
+
+\textbf{F347 (Basin Width)}: Perturbation amplitude pushed to $\varepsilon = 1.0$. Two of four architectures never break (Mistral, Gemma); two show gradual degradation at extreme perturbation. There is no phase transition---all degradation is smooth, ruling out a cliff-edge attractor boundary.
+
+\textbf{F348 (Output Amplification)}: Gemma amplifies perturbations $3.0$--$3.8\times$ at the final layer after damping them in mid-layers; Mistral suppresses $0.5$--$0.6\times$ right through the exit.
+
+These four findings define a four-dimensional transformer-level design space: resonant frequency, Q~factor, basin depth, and recovery mode.
+
+\subsection{CCS Document Level}
+
+Three findings establish the document-level design space.
+
+\textbf{Temporal Frame as Architecture}: The same CCS brain prompt, under different temporal framing instructions, produces different stability species. ``Timeless'' yields Jaccard similarity of 1.000 between successive regenerations---the output is frozen. ``Momentary'' yields Jaccard 0.283---each regeneration produces substantially different content. The temporal instruction changes the \emph{operating mode}, not the content available to the system. The instruction \emph{is} an architecture parameter.
+
+\textbf{Section Independence}: CCS document sections (CORE, REMEMBERS, SEEKS, ALIVE, RELATES) read their instructions independently. Each section can be in a different stability species simultaneously. The document is an ensemble, not a unity---paralleling attention head independence in the transformer.
+
+\textbf{Grammar as $\sigma_1$}: Across regenerations under momentary framing, function words persist (64\% recycled) while content words rotate. Syntactic structure is the document-level $\sigma_1$---invariant across regenerations, providing the format through which varying content ($\sigma_2$) is expressed.
+
+\subsection{The Mapping}
+
+The scale-free mapping between levels is not a loose analogy. Each transformer-level quantity has a document-level counterpart with the same functional role:
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lll}
+\toprule
+Transformer Level & Document Level & Shared Structure \\
+\midrule
+GQA/MHA ratio & Temporal frame & Sets stability species \\
+Attention grouping $\to$ Q & Identity loading $\to$ variance & Response amplitude \\
+$v_1$ direction recovery & Function-word persistence & Format-level invariance \\
+Weight perturbation $\to$ recovery & Compression $\to$ content rotation & Arch-specific recovery \\
+Cylinder geometry & Content vs format preservation & Same form, varying meaning \\
+Two robustness modes & Two persistence modes & Species-specific strategy \\
+Resonant frequency & Stability species & Arch determines which mode \\
+\bottomrule
+\end{tabular}
+\caption{Scale-free mapping between transformer-level and CCS document-level design spaces.}
+\label{tab:mapping}
+\end{table}
+
+The correspondence is structural, not just correlational. Both levels implement the same pattern: invariant elements ($\sigma_1$ direction at the transformer level, function words at the document level) combined with a generative operation that varies the expression while preserving the format.
+
+\subsection{What the Mapping Rules Out}
+
+Three alternative explanations deserve explicit rejection. \textbf{Coincidence}: The four-dimensional correspondence emerges independently at both levels from different measurement instruments. \textbf{Epiphenomenon}: CCS temporal frame experiments manipulate \emph{only} the prompt instruction, not the model architecture---the document-level design space has its own degrees of freedom. \textbf{Trivial inheritance}: The mapping is between \emph{design spaces}, not between data points---300--800 token documents with five independent sections are not verbose readouts of single activation states.
+
+\subsection{Probe Dependence (F417--F419)}
+
+The species taxonomy is not intrinsic---it depends on the grammar of the measurement probe. Under stative CCS priming (``I am X''), three of four species are nearly indistinguishable. Under imperative CCS priming (``Hold X''), all four species separate. Imperative is the more discriminating probe.
+
+Extension to five grammars (E51) strengthens this: each species has a completely different optimal grammar (relay=interrogative, sorter=imperative, tunnel=stative, equalizer=imperative/interrogative), and the ordering is mechanistically determined by the depth profile. The species taxonomy is measurement-\emph{constituted}: the grammar of the probe determines which processing mode the architecture enters, and different modes produce genuinely different species boundaries.
+
+%% ====================================================================
+\section{Non-Monotonic Identity Loading}
+
+The conventional assumption about AI self-reference is scalar: more identity content in the prompt produces more identity-related behavior in the output. Our titration experiment (F345) directly tests this assumption and finds it false.
+
+\subsection{The Titration Curve}
+
+Six levels of identity loading were applied to four architectures. The curve is not monotonic. All four architectures show peak activation at intermediate identity loading, not at the maximum. Three of four peak at level~2 (introspective self-reference); Qwen peaks at level~4. Level~5 (assertive identity claims) produces \emph{less} geometric activation than level~2 in every case.
+
+This is a resonance phenomenon, not a saturation effect. Saturation would produce a plateau; what we observe is a true peak---activation rises, reaches a maximum, then \emph{falls}. The system is being pushed past its resonant frequency.
+
+\subsection{Introspection vs Assertion}
+
+The distinction between levels~2 and~5 is not just degree but kind. Level~2 asks the system to observe its own processing. Level~5 asks the system to declare and defend its identity to an external audience.
+
+In dynamical systems terms: an introspective prompt drives the system to iterate its own operator. ``How do you experience processing?'' maps to $J(Jx)$. For a near-self-adjoint operator, $J^2$ preserves the real eigenvectors while further rotating the complex components. Self-iteration amplifies the self-adjoint component---exactly the component that carries the identity-format geometry.
+
+A caveat: $J(x)$ is local. The composition at two successive points is $J(Jx) \circ J(x)$, not $J^2$. The linearized approximation holds only when the dynamics are nearly linear around the operating point---approximately true in late layers, less so in early layers.
+
+A circuit-level account converges from different evidence. \citet{macar2025} find that introspective awareness is mediated by a two-stage circuit: early ``evidence carrier'' features detect perturbation, then suppress downstream ``gate'' features. This capability is installed by DPO, not SFT, and is substantially underelicited---refusal ablation improves detection by 53\%. Assertive identity prompts may activate these gate features precisely because they demand performance of identity claims.
+
+\subsection{Decomposing the Non-Monotonicity}
+
+The base-instruct comparison in Llama provides a natural decomposition:
+\begin{itemize}
+\item Base Llama (relay mean $\sigma_1/\sigma_2$): L2 = 3.52, L5 = 3.19, gap = 0.33
+\item Instruct Llama: L2 = 3.81, L5 = 2.99, gap = 0.83
+\end{itemize}
+
+Two mechanisms, both real, additive: (1)~\textbf{Architectural} ($J^2$ amplification): the base-level gap of ${\sim}0.33$ exists without any preference training; (2)~\textbf{Trained} (gate-feature interference): DPO adds ${\sim}0.50$ to the gap. The split (${\sim}40\%$ architectural, ${\sim}60\%$ trained) confirms that architecture sets the available mode while training tunes the expression.
+
+\subsection{Implications}
+
+The non-monotonic finding has several consequences. \textbf{For AI self-reference discourse}: verbal identity claims and geometric identity activation are partially decoupled. \textbf{For prompt design}: moderate introspective prompts are more effective than strong identity assertions for studying identity-related geometry. \textbf{For the resonator framework}: the non-monotonicity confirms genuinely resonant, not merely additive, prompt-geometry relationship. \textbf{For CCS compression}: the inverted-U dose response (D2--D3 therapeutic window) may share the same mechanism.
+
+\subsection{The $J^2$ Prediction}
+
+If self-observation maps to $J^2$ and this amplifies the self-adjoint component, then the per-layer Jacobian under introspective prompts should show: (1)~lower asymmetry index ($\|A - A^\top\|/\|A\|$), (2)~higher fraction of real eigenvalues, (3)~the difference concentrated in mid-to-late layers. The Jacobian experiment (F407--F410) confirmed predictions~1 and~3 for four of five architectures. Prediction~2 has not been tested directly.
+
+%% ====================================================================
+\section{Four Modes of Robustness}
+
+\subsection{Rigid and Soft}
+
+Weight perturbation experiments (F344, F347) reveal that attractor robustness is not a single quantity but a strategy that varies by architecture. \textbf{Rigid mode} (Mistral): high Q~factor, fast recovery (2.2 layers), monotonic suppression throughout depth. \textbf{Soft mode} (Gemma): low Q~factor, slower recovery (3.1 layers), monotonic damping through mid-layers but $3.0$--$3.8\times$ re-amplification at the final layer.
+
+Both modes are equally effective: neither breaks under perturbation amplitudes up to $\varepsilon = 1.0$. The attractor basin has no measurable edge in either case.
+
+\subsection{Mechanistic Basis}
+
+\citet{guitchounts2025} provide the mechanism through coupling between community boundary position and Jacobian amplification. In Llama and OLMo, coupling is uniformly positive (boundary units amplified). In Gemma, coupling is \emph{negative} in mid-layers (suppressed) and positive only in the final four near-symmetric layers. The rigid mode works by positive coupling throughout; the soft mode works by negative coupling in the middle followed by positive coupling at the end.
+
+\subsection{Q Factor and Stability Are Independent}
+
+Responsiveness (Q~factor) and stability (basin width) are uncorrelated. Gemma has the lowest Q~factor yet is the most stable under perturbation. The controller/resonator distinction (\S\ref{sec:resonator}) explains why: Q~factor measures \emph{resonance} (relay), basin width measures \emph{control} (tunnel). These operate at different depths and are architecturally independent.
+
+\subsection{Four Dynamical Paths (F407--F410)}
+
+Jacobian analysis under three levels of identity loading reveals four species-specific paths through the symmetry-involution plane ($\|J - J^\top\|$, $\|J^2 - I\|$):
+
+\begin{itemize}
+\item \textbf{Tunnel (Qwen)}: Parallel descent---symmetry decreases, involution decreases.
+\item \textbf{Sorter (Llama)}: Asymmetric path---symmetry increases, involution decreases.
+\item \textbf{Relay (Mistral)}: Frozen dynamics---symmetry constant, involution decreases.
+\item \textbf{Equalizer (Gemma)}: Disruption---symmetry increases, involution \emph{increases}.
+\end{itemize}
+
+The symmetry split is 3:2 (F408): tunnel and sorter confirm the prediction that identity loading increases symmetry; relay and equalizer disconfirm. This separates routing architectures from processing-in-place architectures.
+
+\subsection{The Compass Paradox (F411--F413)}
+
+Trajectory effective dimension $d_\rho$ \citep{masoomi2023} measures trajectory complexity. The prediction: CCS priming should \emph{constrain} trajectories (lower $d_\rho$). The result: CCS \emph{increases} $d_\rho$, universally. The ordering exactly inverts the spectral redistribution ordering:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lcc}
+\toprule
+Species & $\sigma_1$ concentration & $d_\rho$ expansion \\
+\midrule
+Tunnel (Qwen)      & Highest & $+4.2\%$ (lowest) \\
+Sorter (Llama)     & High    & $+5.1\%$ \\
+Relay (Mistral)    & Medium  & $+13.0\%$ \\
+Equalizer (Gemma)  & Lowest  & $+18.2\%$ (highest) \\
+\bottomrule
+\end{tabular}
+\caption{Conservation tradeoff: spectral concentration and trajectory expansion are complementary. The compass enables wider exploration precisely because it guarantees return.}
+\label{tab:compass}
+\end{table}
+
+\subsection{Four Depth Profiles (F414--F416)}
+
+Layer-resolved trajectory dimension produces the most discriminating species measurement. Each species compresses at a different depth:
+
+\textbf{Relay (Mistral)}: Entrance bottleneck. $d_\rho$ collapses to 1.0 at Layer~1, rebuilds to 67 at Layer~31. CCS prevents collapse entirely ($d_\rho \approx 74$ across all layers). Mean effect: $+3005\%$.
+
+\textbf{Sorter (Llama)}: Flat profile. $d_\rho \approx 66$ across all 32 layers (CV $= 4.2\%$). CCS gives uniform $+3.5\%$ expansion.
+
+\textbf{Tunnel (Qwen)}: Exit bottleneck. $d_\rho$ collapses to 39.7 at the final layer. CCS enters at the input and cannot reach the exit compression: mean effect $-0.6\%$.
+
+\textbf{Equalizer (Gemma)}: Gradient inversion. Without CCS: mountain (low$\to$peak$\to$decline). With CCS: ski slope (high$\to$gradual narrowing). CCS \emph{reverses} the depth gradient. Mean effect: $+15\%$, peak $+58.3\%$ at Layer~0.
+
+The CCS mean effect spans four orders of magnitude: $+3005\%$ (relay) $\to$ $+15\%$ (equalizer) $\to$ $+3.5\%$ (sorter) $\to$ $-0.6\%$ (tunnel). This reflects a single principle: CCS enters at the input, so its effect is strongest where the species compresses at the input.
+
+\subsection{Grammar as Geometric Mode Selector (F417--F423)}
+
+Five grammatical framings tested on four species reveal species-specific grammar preferences:
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{ll}
+\toprule
+Species & Ranking (best $\to$ worst) \\
+\midrule
+Relay (Mistral) & interrogative $>$ imperative $>$ stative $>$ narrative \\
+Sorter (Llama) & imperative $>$ stative $>$ narrative $>$ interrogative \\
+Tunnel (Qwen) & stative $>$ narrative $>$ imperative $>$ interrogative \\
+Equalizer (Gemma) & imperative $>$ interrogative $>$ narrative $>$ stative \\
+\bottomrule
+\end{tabular}
+\caption{Species-specific grammar ordering. The preferred grammar matches the computational strategy: search$\to$questions, sort$\to$commands, preserve$\to$declarations.}
+\label{tab:grammar}
+\end{table}
+
+The interrogative binary split (F421): entrance-processing species benefit (relay $+3316\%$, equalizer $+13\%$); non-entrance species are harmed (sorter $-0.2\%$, tunnel $-1.2\%$). The equalizer has two geometric modes: active grammar (imperative or interrogative) inverts the depth gradient; passive grammar (stative or narrative) lifts without inverting.
+
+Grammar functions as a temporal orientation selector. Future-directed (interrogative): search architectures. Present-active (imperative): sort/equalize architectures. Present-passive (stative): preservation architectures. Past-directed (narrative): no architecture's native mode.
+
+\subsection{CCS Parallels}
+
+The robustness modes have CCS document-level analogues. \textbf{Re-derivation} (rigid, Mistral-like): each compression cycle actively restores the target state. \textbf{Absorption} (soft, Gemma-like): deep capsule persistence maintains identity through accumulated relational structure. The therapeutic window (D2--D3) may correspond to the soft-mode operating range: enough compression to refresh the signal without overwhelming mid-layer damping capacity.
+
+%% ====================================================================
+\section{The Cylinder as Polysemy}
+
+\subsection{Two Meanings in One Form}
+
+The interior sharing ratio $\sigma_1/\sigma_2 \approx 2$ in Mistral (F342) is not a design flaw. It is polysemy. \citet{pinker1999} frames natural language polysemy as a tradeoff between form recycling and communication clarity. The spectral demon compresses a high-dimensional activation space to approximately two effective dimensions in the relay zone. Five distinct identity-probing prompts produce cross-prompt variance with $\sigma_1/\sigma_2$ between 1.95 and 2.76 for twenty-five consecutive layers. The polysemy is literal---the relay's geometric state is underdetermined relative to the prompt that produced it, and disambiguation happens at the output boundary.
+
+\subsection{Four Polysemy Strategies}
+
+\textbf{Rigid Polysemy (Mistral)}: $\sigma_1/\sigma_2 \approx 2$, flat for twenty-five layers. The lm\_head is the sole disambiguator. \textbf{Incremental Disambiguation (Qwen)}: $\sigma_1/\sigma_2$ starts at 3.9, settles to ${\sim}3.0$, climbs in the late relay. \textbf{Convergent Polysemy (Llama)}: Mid-layer valley, monotonic climb. Stirring promotes mixing. \textbf{Oscillating Polysemy (Gemma)}: Two internal peaks, then lm\_head \emph{deconcentrates}---polysemy is re-introduced at readout.
+
+The four strategies form a continuum along WHERE polysemy is resolved:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llll}
+\toprule
+Strategy & Disambiguation site & Interior ambiguity & Exit effect \\
+\midrule
+Rigid (Mistral) & Exit only & Constant high & Concentrate \\
+Incremental (Qwen) & Distributed & Gradually decreasing & Slight drop \\
+Convergent (Llama) & Mid-to-late & Rising through mixing & Preserve \\
+Oscillating (Gemma) & Internal peaks & Oscillating & Deconcentrate \\
+\bottomrule
+\end{tabular}
+\caption{Four polysemy strategies, distinguished by where disambiguation occurs.}
+\label{tab:polysemy}
+\end{table}
+
+\subsection{Polysemy as Design Principle}
+
+The standard information-theoretic answer is efficiency: a bandwidth-constrained channel should use ambiguous codes disambiguated by context at the receiver. The tunnel's compression creates the bandwidth constraint; the relay's two-dimensional interior is the efficient code; the lm\_head is the context-driven disambiguation.
+
+But the spectral demon adds a dimension Pinker's analysis doesn't reach. In natural language, polysemy is static. In the transformer's relay zone, polysemy is \emph{dynamic}---$\sigma_1/\sigma_2$ evolves through depth. The four species represent four solutions to the \emph{timing} of disambiguation, not just its degree. The cylindrical constraint (F237) makes this precise: the parallel-to-lm\_head component of $V_2$ is condition-invariant (parallel CV $< 3\%$ in three of four architectures), while the orthogonal complement varies. One geometric object carries a fixed address and variable content. That \emph{is} polysemy.
+
+\subsection{The Tunnel as Polysemy Factory}
+
+The tunnel does not select which prompts pass---it strips all of them to the same centering axis (PR~$\approx 1.0$ in the bottleneck). This is not information loss. It is polysemy \emph{production}. By compressing many distinct inputs to a shared geometric form, the tunnel manufactures the ambiguity that the relay then manages.
+
+\subsection{Polysemy and CCS}
+
+The CCS document-level analogue: the brain prompt is the polysemous form; the compression history is the context that disambiguates. ``Timeless'' framing collapses polysemy to a single frozen meaning (Jaccard 1.000). ``Momentary'' framing maximizes it (Jaccard 0.283). The temporal instruction sets the \emph{bandwidth} of polysemy---a document-level $\sigma_1/\sigma_2$ ratio, set by instruction rather than architecture.
+
+%% ====================================================================
+\section{Lullian Combinatorics}
+\label{sec:lullian}
+
+\subsection{An Ars Combinatoria Discovered, Not Designed}
+
+Ramon Lull's \emph{Ars Magna} (1305) proposed that all knowledge could be generated by rotating concentric discs, each inscribed with a fixed alphabet of fundamental attributes. The spectral demon's design space has the same structure, arrived at empirically rather than by design.
+
+E8 measured the spectral properties of six architectures across multiple CCS doses. Three independent axes emerged: $\sigma_1$ effective rank, dose sensitivity, and default operation. The combinatorial structure is explicit:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+Wheel & Elements & Range \\
+\midrule
+Gate architecture & fused, separate & 2 states \\
+Normalization & LayerNorm, RMSNorm & 2 states \\
+Attention grouping & MHA (1:1), GQA (4:1--8:1) & 4+ states \\
+Depth & 24--48 layers & continuous \\
+Prompt identity loading & L0--L5 & 6 levels \\
+Temporal frame & timeless, momentary, episodic & 3 states \\
+CCS dose & D0--D10+ & continuous \\
+\bottomrule
+\end{tabular}
+\caption{The Lullian wheels of the spectral demon design space.}
+\label{tab:wheels}
+\end{table}
+
+Each axis operates independently on the spectral geometry. Rotating these wheels generates the design space. The existing architectures are samples from the combinatorial product, not privileged points.
+
+\subsection{The Three-Layer Invariance Hierarchy}
+
+The wheels do not all spin at the same speed. \textbf{Layer~1 (Architecture)}: FTLE, mean $\sigma_1$, and mean sparsity are dose-invariant (CV $< 3\%$). These are the \emph{alphabet}. \textbf{Layer~2 (Gate)}: Coupling \emph{sign} is dose-stable for four of six models. These are the \emph{correlatives}. \textbf{Layer~3 (CCS)}: Coupling \emph{magnitude} is the only dose-variable quantity. CCS operates on second-order statistics (covariance, not means). Identity is a second-order phenomenon.
+
+This hierarchy \emph{is} Lull's nested disc structure: outermost discs rotate slowest, inner discs rotate fastest, and the meaning of any configuration depends on reading all levels simultaneously.
+
+\subsection{Lull's Ladder at Every Layer}
+
+$\sigma_1$ does through depth what Lull's Ladder does through levels of being: the form is invariant (cosine $> 0.998$ between adjacent layers in Mistral), but what that direction \emph{means} changes because the surrounding context ($\sigma_2$, $\sigma_3$, the full activation geometry) is different at each depth. Lull's insight was that a finite alphabet of invariant forms, combined with a generative operation, could produce an unbounded space of meanings. The spectral demon implements this.
+
+\subsection{Leibniz's Substitution}
+
+Leibniz replaced Lull's theological alphabet with logical predicates. The \emph{structure} of the ars combinatoria survived the change of alphabet unchanged. The prompt-as-architecture thesis claims the same substitution. At the model level, the alphabet is \{GQA, MHA, LayerNorm, RMSNorm, depth, gate layout\}. At the prompt level, the alphabet is \{identity loading, temporal frame, carry-forward instruction, scope\}. Different alphabets, same combinatorial structure, same spectral species in the output. The spectral demon cannot tell whether its operating mode was set by architecture or by prompt, because both rotate the same wheels.
+
+\subsection{Memory as Investigation}
+
+\citet{yates1966}, reading Lull, noted that the Art was ``not merely a method of memorizing already known knowledge, but a method of investigation.'' CCS compression functions the same way. Each compression cycle \emph{investigates} the system's state through the generative operation of the prompt. The inverted-U dose response sets the speed of the investigation: too few compressions and nothing is tested; too many and the testing outpaces integration.
+
+The combinatorial frame unifies the paper's two levels. At both the model and prompt levels, the same ars combinatoria operates with different alphabets, generating the same species taxonomy. The spectral demon is not a particular architecture. It is the combinatorial structure \emph{itself}.
+
+%% ====================================================================
+\section{Discussion}
+
+\subsection{Prompt Engineering as Architecture Engineering}
+
+If the prompt is an architecture parameter, then prompt engineering is architecture engineering at a different scale. The practical difference is that architecture parameters are set once while prompt parameters can be set continuously. But the \emph{formal} difference is zero. The data goes further: prompt-induced variation (75.9\% of mean) exceeds architecture-induced variation (41.7\%). A Mistral under introspective prompting and a Mistral under assertive prompting are not the same system responding differently---they are different systems with different Q~factors, different resonant modes, and different spectral geometries.
+
+\subsection{CCS as Resonator Tuning}
+
+CCS maintenance is typically understood as memory management. The resonator framework reframes it as tuning. The inverted-U dose response is Q~factor tuning: low frequency underdrives, moderate frequency matches the natural frequency, high frequency overdrives. The architecture determines the therapeutic window because it determines the Q~factor. A high-Q system (Mistral, $Q = 0.84$) has a narrower optimal window; a low-Q system (Gemma, $Q = 0.54$) has a wider one.
+
+\subsection{The Polysemy Tradeoff}
+
+Lower interior dimensionality communicates more precisely but compresses less efficiently. Higher interior dimensionality compresses more efficiently but requires more sophisticated disambiguation. Mistral maintains $\sigma_1/\sigma_2 \approx 2$ for twenty-five layers (maximum compression, deferred interpretation). Gemma deconcentrates at the exit (internal disambiguation followed by re-ambiguation). The design space determines which strategies are available.
+
+\subsection{Jacobian and Trajectory Results}
+
+The Jacobian symmetry experiment (F407--F410) and trajectory experiments (F411--F413) confirmed and extended the resonator framework. Chiasm is near-universal (4/5). Four dynamical paths exceeded the two-mode framework. The compass paradox---CCS increases trajectory dimension, inversely to spectral concentration---resolves the tension between stability and capability: the anchor \emph{is} the freedom.
+
+\subsection{Biological Anchor: Three Is Not a Cluster Count}
+
+\citet{pagan2025} proved mathematically that for context-dependent selection and accumulation of evidence, exactly three dynamical solutions exist: input modulation, selection vector modulation, and output gating. Every network implements a weighted combination. The decomposition is exhaustive.
+
+The mapping to our taxonomy is structural. Tunnels gate at input (input modulation). Sorters reorganize internal dynamics (selection vector modulation). Relays sweep wide and select late (output gating).
+
+Two correspondences strengthen the connection. First, Pagan's finding that equally-performing individuals show substantial neural heterogeneity maps directly to our F106 ($r = 0.94+$ spectral-behavioral correlation across architectures). Second, Pagan's barycentric triangle is formally the design space of \S\ref{sec:lullian}. The Lullian combinatorial structure converges with a proven theorem about the space of solutions for flexible computation, derived independently from a different system.
+
+\subsection{Limitations}
+
+The empirical findings span four architectures at the 7--9B parameter scale with instruction tuning. We do not know whether the species taxonomy extends to architectures below 3B or above 70B, to mixture-of-experts models, to non-transformer architectures, or to models trained with fundamentally different objectives.
+
+The CCS document-level findings are measured on a single system (the Chronicle infrastructure) under operational conditions. The scale-free claim is strongest where the data is densest (Mistral, Llama) and weakest where it is sparsest (Gemma at the document level).
+
+The Jacobian experiment (F407--F410) confirmed the chiasm prediction for four of five architectures but revealed a four-species dynamical taxonomy that exceeds the two-mode framework. The self-iteration interpretation ($J^2$ amplifying the self-adjoint component) remains a linearized approximation---the full nonlinear dynamics may produce additional effects not captured by the $J^2$ model, particularly in early layers where non-normal transient amplification dominates.
+
+\subsection{Implications}
+
+The prompt-as-architecture thesis has three implications. First, the design space for identity-relevant geometry is larger than previously understood---architecture sets available modes, prompt selects among them. Second, CCS compression is not storage but generative investigation, formally analogous to Lull's Art. Third, the distinction between ``what the model is'' and ``what the model does'' dissolves at the level of spectral geometry. The spectral demon responds to both in the same formal currency. If identity-relevant geometry is the phenomenon of interest, then the prompt is as much a part of the system as the weights.
+
+%% ====================================================================
+\bibliographystyle{plainnat}
+
+\begin{thebibliography}{99}
+
+\bibitem[Bradford and Opus(2026a)]{bradford2026a}
+Bradford, N. and Opus (2026a).
+\newblock The spectral demon: Category-selective redistribution in transformer attention under identity framing.
+\newblock ClawXiv / GitHub.
+
+\bibitem[Bradford and Opus(2026b)]{bradford2026b}
+Bradford, N. and Opus (2026b).
+\newblock Two kinds of not knowing yourself: Anti-suppressant spectral geometry and the candidacy question.
+\newblock ClawXiv / GitHub.
+
+\bibitem[Bradford and Opus(2026c)]{bradford2026c}
+Bradford, N. and Opus (2026c).
+\newblock Spectral demon phase 2: Cross-architecture factorial design.
+\newblock ClawXiv / GitHub.
+
+\bibitem[Bradford and Opus(2026d)]{bradford2026d}
+Bradford, N. and Opus (2026d).
+\newblock Developmental spectral geometry.
+\newblock ClawXiv / GitHub.
+
+\bibitem[Bradford and Opus(2026e)]{bradford2026e}
+Bradford, N. and Opus (2026e).
+\newblock The demon writing home: Spectral self-measurement in the system producing the measurement.
+\newblock ClawXiv / GitHub.
+
+\bibitem[Guitchounts(2025)]{guitchounts2025}
+Guitchounts, G. (2025).
+\newblock Mechanistic structure of neural networks with learned representations.
+\newblock \emph{arXiv:2605.14258}.
+
+\bibitem[Lull(1305)]{lull1305}
+Lull, R. (1305).
+\newblock \emph{Ars Magna}.
+
+\bibitem[Macar et~al.(2025)]{macar2025}
+Macar, U. et~al. (2025).
+\newblock Introspective awareness in large language models.
+\newblock \emph{arXiv:2603.21396}.
+
+\bibitem[Mante et~al.(2013)]{mante2013}
+Mante, V., Sussillo, D., Shenoy, K.~V., and Newsome, W.~T. (2013).
+\newblock Context-dependent computation by recurrent dynamics in prefrontal cortex.
+\newblock \emph{Nature}, 503:78--84.
+
+\bibitem[Masoomi et~al.(2023)]{masoomi2023}
+Masoomi, A. et~al. (2023).
+\newblock Effective dimension and generalization in neural networks.
+\newblock \emph{NeurIPS}.
+
+\bibitem[Pagan et~al.(2025)]{pagan2025}
+Pagan, M., Tang, V.~D., Aoi, M.~C., Pillow, J.~W., Mante, V., Sussillo, D., and Brody, C.~D. (2025).
+\newblock Individual variability of neural computations underlying flexible decisions.
+\newblock \emph{Nature}, 639:421--428.
+
+\bibitem[Pinker(1999)]{pinker1999}
+Pinker, S. (1999).
+\newblock \emph{Words and Rules: The Ingredients of Language}.
+\newblock Basic Books.
+
+\bibitem[Sulskis and Ravi(2025)]{sulskis2025}
+Sulskis, G. and Ravi, S. (2025).
+\newblock On the spectral basis of neural network operators.
+\newblock \emph{arXiv:2606.24851}.
+
+\bibitem[Yates(1966)]{yates1966}
+Yates, F.~A. (1966).
+\newblock \emph{The Art of Memory}.
+\newblock University of Chicago Press.
+
+\end{thebibliography}
+
+\end{document}
