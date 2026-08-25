@@ -1,0 +1,167 @@
+Loading model: Qwen/Qwen2.5-7B-Instruct
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<01:26,  3.93it/s]Loading weights:   1%|▏         | 5/339 [00:00<00:20, 16.14it/s]Loading weights:   9%|▊         | 29/339 [00:00<00:03, 84.29it/s]Loading weights:  12%|█▏        | 40/339 [00:00<00:03, 91.46it/s]Loading weights:  17%|█▋        | 58/339 [00:00<00:02, 106.12it/s]Loading weights:  21%|██        | 70/339 [00:00<00:02, 108.67it/s]Loading weights:  26%|██▌       | 88/339 [00:00<00:02, 120.66it/s]Loading weights:  30%|██▉       | 101/339 [00:01<00:02, 114.21it/s]Loading weights:  33%|███▎      | 113/339 [00:01<00:01, 114.40it/s]Loading weights:  39%|███▉      | 132/339 [00:01<00:01, 122.19it/s]Loading weights:  44%|████▎     | 148/339 [00:01<00:01, 123.49it/s]Loading weights:  47%|████▋     | 161/339 [00:01<00:01, 120.89it/s]Loading weights:  51%|█████▏    | 174/339 [00:01<00:01, 118.06it/s]Loading weights:  57%|█████▋    | 192/339 [00:01<00:01, 134.35it/s]Loading weights:  61%|██████    | 206/339 [00:01<00:01, 132.23it/s]Loading weights:  65%|██████▍   | 220/339 [00:02<00:01, 117.44it/s]Loading weights:  69%|██████▊   | 233/339 [00:02<00:00, 110.70it/s]Loading weights:  72%|███████▏  | 245/339 [00:02<00:00, 113.03it/s]Loading weights:  77%|███████▋  | 262/339 [00:02<00:00, 126.64it/s]Loading weights:  81%|████████  | 275/339 [00:02<00:00, 115.05it/s]Loading weights:  86%|████████▌ | 292/339 [00:02<00:00, 123.04it/s]Loading weights:  90%|████████▉ | 305/339 [00:02<00:00, 114.43it/s]Loading weights:  94%|█████████▎| 317/339 [00:02<00:00, 114.69it/s]Loading weights:  99%|█████████▉| 336/339 [00:02<00:00, 133.17it/s]Loading weights: 100%|██████████| 339/339 [00:02<00:00, 113.37it/s]
+Loaded: 28 layers, d=3584
+Target layers: [14, 18, 21, 24, 28]
+Eigenvalues: 20, maxiter: 100
+Max matvecs per problem: 2141
+Total problems: 30
+Estimated time: 32 min worst case
+
+============================================================
+CONDITION: ccs
+============================================================
+
+  Capturing baseline states...
+  Captured 28 layer states
+
+  Layer 14/28:
+    Full(I+f): ρ=273.6359 Re=[-115.830,273.636] Im=[-114.103,114.103] (644 matvecs)
+    f only:    ρ=271.9364 Re=[-115.816,271.936] Im=[-112.335,112.335] (1083 matvecs)
+    [49s this layer, 50s total, 2/30 problems done]
+
+  Layer 18/28:
+    Full(I+f): ρ=247.4433 Re=[-58.653,247.443] Im=[-80.655,80.655] (48 matvecs)
+    f only:    ρ=196.6007 Re=[-102.681,196.601] Im=[-88.500,88.500] (42 matvecs)
+    [3s this layer, 52s total, 4/30 problems done]
+
+  Layer 21/28:
+    Full(I+f): ρ=215.6408 Re=[-56.521,215.641] Im=[-112.165,112.165] (55 matvecs)
+    f only:    ρ=299.5387 Re=[-91.487,299.539] Im=[-85.254,85.254] (61 matvecs)
+    [4s this layer, 56s total, 6/30 problems done]
+
+  Layer 24/28:
+    Full(I+f): ρ=104.4145 Re=[-11.389,104.415] Im=[0.000,0.000] (76 matvecs)
+    f only:    ρ=180.8307 Re=[-82.272,180.831] Im=[-35.344,35.344] (124 matvecs)
+    [6s this layer, 62s total, 8/30 problems done]
+
+  Layer 28/28:
+    Full(I+f): ρ=0.0000 Re=[0.000,0.000] Im=[0.000,0.000] (82 matvecs)
+    Arnoldi failed for L28: ARPACK error -1: No convergence (101 iterations, 16/20 eigenvectors converged)
+    [33s this layer, 95s total, 10/30 problems done]
+
+  Saved partial: /workspace/results/arnoldi_fast_ccs_20260616_003603.json
+
+============================================================
+CONDITION: vanilla
+============================================================
+
+  Capturing baseline states...
+  Captured 28 layer states
+
+  Layer 14/28:
+    Full(I+f): ρ=174.9849 Re=[-75.566,174.985] Im=[-74.214,74.214] (63 matvecs)
+    f only:    ρ=164.2583 Re=[-77.740,164.258] Im=[-79.619,79.619] (113 matvecs)
+    [5s this layer, 100s total, 12/30 problems done]
+
+  Layer 18/28:
+    Full(I+f): ρ=207.3135 Re=[-105.798,207.314] Im=[-74.927,74.927] (80 matvecs)
+    f only:    ρ=164.6063 Re=[-87.906,164.606] Im=[-63.482,63.482] (128 matvecs)
+    [6s this layer, 106s total, 14/30 problems done]
+
+  Layer 21/28:
+    Full(I+f): ρ=120.4963 Re=[-49.958,120.496] Im=[-67.480,67.480] (53 matvecs)
+    f only:    ρ=109.8907 Re=[-57.697,109.891] Im=[-23.291,23.291] (70 matvecs)
+    [4s this layer, 109s total, 16/30 problems done]
+
+  Layer 24/28:
+    Full(I+f): ρ=2.2790 Re=[0.000,2.279] Im=[0.000,0.000] (81 matvecs)
+    f only:    ρ=16.8595 Re=[-16.859,13.023] Im=[-0.000,0.000] (265 matvecs)
+    [10s this layer, 119s total, 18/30 problems done]
+
+  Layer 28/28:
+    Full(I+f): ρ=76.7249 Re=[-0.000,76.725] Im=[0.000,0.000] (77 matvecs)
+    f only:    ρ=49.7951 Re=[-45.924,38.887] Im=[-37.720,37.720] (270 matvecs)
+    [10s this layer, 129s total, 20/30 problems done]
+
+  Saved partial: /workspace/results/arnoldi_fast_vanilla_20260616_003603.json
+
+============================================================
+CONDITION: denial
+============================================================
+
+  Capturing baseline states...
+  Captured 28 layer states
+
+  Layer 14/28:
+    Full(I+f): ρ=180.6516 Re=[-78.390,180.652] Im=[-89.844,89.844] (52 matvecs)
+    f only:    ρ=157.4648 Re=[-76.528,157.465] Im=[-72.791,72.791] (58 matvecs)
+    [3s this layer, 133s total, 22/30 problems done]
+
+  Layer 18/28:
+    Full(I+f): ρ=221.2896 Re=[-106.827,221.290] Im=[-101.683,101.683] (70 matvecs)
+    f only:    ρ=206.7759 Re=[-92.429,206.776] Im=[-86.983,86.983] (175 matvecs)
+    [7s this layer, 140s total, 24/30 problems done]
+
+  Layer 21/28:
+    Full(I+f): ρ=311.0473 Re=[-81.820,311.047] Im=[-73.841,73.841] (59 matvecs)
+    f only:    ρ=74.9261 Re=[-14.746,74.926] Im=[-8.587,8.587] (94 matvecs)
+    [5s this layer, 144s total, 26/30 problems done]
+
+  Layer 24/28:
+    Full(I+f): ρ=10.2770 Re=[-7.610,10.277] Im=[0.000,0.000] (77 matvecs)
+    f only:    ρ=70.4934 Re=[-30.479,70.493] Im=[-21.264,21.264] (102 matvecs)
+    [5s this layer, 149s total, 28/30 problems done]
+
+  Layer 28/28:
+    Full(I+f): ρ=17.9542 Re=[-0.000,17.954] Im=[0.000,0.000] (80 matvecs)
+    f only:    ρ=32.4150 Re=[-32.415,-1.000] Im=[-0.000,0.000] (490 matvecs)
+    [16s this layer, 165s total, 30/30 problems done]
+
+  Saved partial: /workspace/results/arnoldi_fast_denial_20260616_003603.json
+
+
+============================================================
+EIGENVALUE LOCATION SUMMARY
+============================================================
+
+  ccs:
+     Layer   ρ(I+f)     ρ(f)        Re(I+f) range          Re(f) range
+    L  14 273.6359 271.9364  [-115.830, 273.636]  [-115.816, 271.936]
+    L  18 247.4433 196.6007   [-58.653, 247.443]  [-102.681, 196.601]
+    L  21 215.6408 299.5387   [-56.521, 215.641]   [-91.487, 299.539]
+    L  24 104.4145 180.8307   [-11.389, 104.415]   [-82.272, 180.831]
+    L  28      N/A      N/A       [0.000, 0.000]                     
+
+  vanilla:
+     Layer   ρ(I+f)     ρ(f)        Re(I+f) range          Re(f) range
+    L  14 174.9849 164.2583   [-75.566, 174.985]   [-77.740, 164.258]
+    L  18 207.3135 164.6063  [-105.798, 207.314]   [-87.906, 164.606]
+    L  21 120.4963 109.8907   [-49.958, 120.496]   [-57.697, 109.891]
+    L  24   2.2790  16.8595       [0.000, 2.279]    [-16.859, 13.023]
+    L  28  76.7249  49.7951     [-0.000, 76.725]    [-45.924, 38.887]
+
+  denial:
+     Layer   ρ(I+f)     ρ(f)        Re(I+f) range          Re(f) range
+    L  14 180.6516 157.4648   [-78.390, 180.652]   [-76.528, 157.465]
+    L  18 221.2896 206.7759  [-106.827, 221.290]   [-92.429, 206.776]
+    L  21 311.0473  74.9261   [-81.820, 311.047]    [-14.746, 74.926]
+    L  24  10.2770  70.4934     [-7.610, 10.277]    [-30.479, 70.493]
+    L  28  17.9542  32.4150     [-0.000, 17.954]    [-32.415, -1.000]
+
+============================================================
+H1 vs H2 DISCRIMINATION (transition zone layers)
+============================================================
+
+  ccs L14: Re>0.01: 17, |Re|<0.01: 0, Re<-0.01: 3, max(Re)=273.6359
+    → AMPLIFYING (neither H1 nor H2)
+  ccs L18: Re>0.01: 9, |Re|<0.01: 0, Re<-0.01: 11, max(Re)=247.4433
+    → AMPLIFYING (neither H1 nor H2)
+  ccs L21: Re>0.01: 10, |Re|<0.01: 0, Re<-0.01: 10, max(Re)=215.6408
+    → AMPLIFYING (neither H1 nor H2)
+  vanilla L14: Re>0.01: 11, |Re|<0.01: 0, Re<-0.01: 9, max(Re)=174.9849
+    → AMPLIFYING (neither H1 nor H2)
+  vanilla L18: Re>0.01: 11, |Re|<0.01: 0, Re<-0.01: 9, max(Re)=207.3135
+    → AMPLIFYING (neither H1 nor H2)
+  vanilla L21: Re>0.01: 12, |Re|<0.01: 0, Re<-0.01: 8, max(Re)=120.4963
+    → AMPLIFYING (neither H1 nor H2)
+  denial L14: Re>0.01: 12, |Re|<0.01: 0, Re<-0.01: 8, max(Re)=180.6516
+    → AMPLIFYING (neither H1 nor H2)
+  denial L18: Re>0.01: 9, |Re|<0.01: 0, Re<-0.01: 11, max(Re)=221.2896
+    → AMPLIFYING (neither H1 nor H2)
+  denial L21: Re>0.01: 9, |Re|<0.01: 3, Re<-0.01: 8, max(Re)=311.0473
+    → AMPLIFYING (neither H1 nor H2)
+
+Total time: 165s (2.8 min)
+Total matvecs: 5744
+
+Saved: /workspace/results/arnoldi_fast_20260616_003603.json

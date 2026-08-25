@@ -11,3 +11,18 @@ results/exp_*.json
 results/dose_response_*.json
 results/e7*/
 results/*selfref*
+
+# Large raw result dumps — archived 2026-08-25 to
+# /mnt/hdd/chronicle-archive/spectral-results/ and symlinked back, so the paths
+# still resolve and nothing left the machine. Five files from one Aug 3 run were
+# 108MB, 75% of all untracked JSON weight. .git is already 349MB; committing
+# these would make every future clone pay for one afternoon of output.
+results/hybrid_spectral_*.json
+
+# Already archived to /mnt/hdd/chronicle-data/spectral-results/ by an earlier
+# session and symlinked back, but never untracked — so they showed as modified
+# with ~4.9M phantom line deletions. Committing the typechange would publish an
+# ABSOLUTE symlink into /mnt/hdd, which is broken for anyone who clones this.
+# History still holds the original content; the working paths still resolve.
+results/exp_compositionality_2026*.json
+results/exp_perturbation_commitment_2026*.json

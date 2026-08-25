@@ -491,7 +491,7 @@ def main():
     model_id = MODEL_MAP[args.model]
     model_name = f"{args.model} ({model_id})"
 
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    api_key = os.environ.get("CHRONICLE_ANTHROPIC_KEY") or os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
         print("Set ANTHROPIC_API_KEY", file=sys.stderr)
         sys.exit(1)

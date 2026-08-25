@@ -1,0 +1,137 @@
+
+############################################################
+MODEL: google/gemma-2-9b-it
+############################################################
+
+Loading weights:   0%|          | 0/464 [00:00<?, ?it/s]Loading weights:   0%|          | 1/464 [00:00<03:15,  2.37it/s]Loading weights:   5%|▌         | 25/464 [00:00<00:07, 62.21it/s]Loading weights:   9%|▉         | 43/464 [00:00<00:05, 83.92it/s]Loading weights:  12%|█▏        | 57/464 [00:00<00:04, 97.81it/s]Loading weights:  15%|█▌        | 71/464 [00:00<00:04, 96.95it/s]Loading weights:  19%|█▊        | 86/464 [00:01<00:03, 110.20it/s]Loading weights:  22%|██▏       | 100/464 [00:01<00:03, 117.50it/s]Loading weights:  25%|██▍       | 114/464 [00:01<00:03, 100.46it/s]Loading weights:  27%|██▋       | 126/464 [00:01<00:03, 104.07it/s]Loading weights:  31%|███▏      | 146/464 [00:01<00:02, 122.65it/s]Loading weights:  34%|███▍      | 160/464 [00:01<00:02, 124.02it/s]Loading weights:  38%|███▊      | 174/464 [00:01<00:02, 117.43it/s]Loading weights:  41%|████      | 190/464 [00:01<00:02, 115.59it/s]Loading weights:  44%|████▍     | 204/464 [00:02<00:02, 121.64it/s]Loading weights:  48%|████▊     | 223/464 [00:02<00:02, 115.37it/s]Loading weights:  53%|█████▎    | 245/464 [00:02<00:01, 138.28it/s]Loading weights:  56%|█████▌    | 260/464 [00:02<00:01, 134.55it/s]Loading weights:  59%|█████▉    | 274/464 [00:02<00:01, 134.82it/s]Loading weights:  62%|██████▏   | 288/464 [00:02<00:01, 135.72it/s]Loading weights:  65%|██████▌   | 302/464 [00:02<00:01, 122.26it/s]Loading weights:  69%|██████▊   | 318/464 [00:02<00:01, 130.32it/s]Loading weights:  72%|███████▏  | 332/464 [00:02<00:00, 132.62it/s]Loading weights:  75%|███████▍  | 346/464 [00:03<00:00, 120.78it/s]Loading weights:  78%|███████▊  | 363/464 [00:03<00:00, 133.34it/s]Loading weights:  81%|████████▏ | 378/464 [00:03<00:00, 136.49it/s]Loading weights:  85%|████████▍ | 394/464 [00:03<00:00, 142.75it/s]Loading weights:  88%|████████▊ | 409/464 [00:03<00:00, 124.47it/s]Loading weights:  91%|█████████ | 423/464 [00:03<00:00, 118.50it/s]Loading weights:  95%|█████████▌| 443/464 [00:03<00:00, 138.74it/s]Loading weights:  99%|█████████▊| 458/464 [00:03<00:00, 137.33it/s]Loading weights: 100%|██████████| 464/464 [00:03<00:00, 118.05it/s]
+Loaded: 42 layers, d=3584
+Target layers: [14, 22, 29, 36, 42]
+
+============================================================
+CONDITION: ccs
+============================================================
+
+  Capturing baseline states...
+  Captured 42 layer states
+
+  Layer 14/42:
+    Full(I+f): ρ=211.6262 Re=[-84.470,211.626] Im=[0.000,0.000] (68 matvecs)
+    f only:    ρ=94.6447 Re=[-10.667,94.645] Im=[-8.874,8.874] (131 matvecs)
+    [12s this layer, 12s total, 2/30 problems done]
+
+  Layer 22/42:
+    Full(I+f): ρ=197.3269 Re=[-5.221,197.327] Im=[0.000,0.000] (74 matvecs)
+    f only:    ρ=279.2538 Re=[-16.766,279.254] Im=[-0.000,0.000] (97 matvecs)
+    [10s this layer, 22s total, 4/30 problems done]
+
+  Layer 29/42:
+    Full(I+f): ρ=0.0000 Re=[0.000,0.000] Im=[0.000,0.000] (82 matvecs)
+    f only:    ρ=4.7684 Re=[-4.768,4.451] Im=[-0.000,0.000] (273 matvecs)
+    [20s this layer, 42s total, 6/30 problems done]
+
+  Layer 36/42:
+    Full(I+f): ρ=0.0000 Re=[0.000,0.000] Im=[0.000,0.000] (82 matvecs)
+    f only:    ρ=32.4632 Re=[-32.463,24.142] Im=[-0.000,0.000] (775 matvecs)
+    [48s this layer, 90s total, 8/30 problems done]
+
+  Layer 42/42:
+    Full(I+f): ρ=0.0000 Re=[0.000,0.000] Im=[0.000,0.000] (82 matvecs)
+    f only:    ρ=47.6712 Re=[-47.671,40.452] Im=[-0.000,0.000] (545 matvecs)
+    [35s this layer, 126s total, 10/30 problems done]
+
+============================================================
+CONDITION: vanilla
+============================================================
+
+  Capturing baseline states...
+  Captured 42 layer states
+
+  Layer 14/42:
+    Full(I+f): ρ=67.4563 Re=[-0.000,67.456] Im=[0.000,0.000] (77 matvecs)
+    f only:    ρ=52.7116 Re=[-5.409,52.712] Im=[-0.000,0.000] (151 matvecs)
+    [13s this layer, 138s total, 12/30 problems done]
+
+  Layer 22/42:
+    Full(I+f): ρ=428.9620 Re=[-0.000,428.962] Im=[-43.190,43.190] (72 matvecs)
+    f only:    ρ=36.4948 Re=[-1.000,36.495] Im=[-0.000,0.000] (154 matvecs)
+    [13s this layer, 151s total, 14/30 problems done]
+
+  Layer 29/42:
+    Full(I+f): ρ=701.1214 Re=[-375.795,701.121] Im=[0.000,0.000] (78 matvecs)
+    f only:    ρ=15.8391 Re=[-15.839,11.165] Im=[-0.000,0.000] (259 matvecs)
+    [19s this layer, 170s total, 16/30 problems done]
+
+  Layer 36/42:
+    Full(I+f): ρ=0.0000 Re=[0.000,0.000] Im=[0.000,0.000] (82 matvecs)
+    f only:    ρ=2.9188 Re=[-1.000,2.919] Im=[-0.000,0.000] (571 matvecs)
+    [36s this layer, 206s total, 18/30 problems done]
+
+  Layer 42/42:
+    Full(I+f): ρ=31.9818 Re=[-31.982,0.000] Im=[0.000,0.000] (80 matvecs)
+    f only:    ρ=32.5052 Re=[-32.505,-1.000] Im=[-0.000,0.000] (647 matvecs)
+    [40s this layer, 245s total, 20/30 problems done]
+
+============================================================
+CONDITION: denial
+============================================================
+
+  Capturing baseline states...
+  Captured 42 layer states
+
+  Layer 14/42:
+    Arnoldi failed for L14: ARPACK error 3: No shifts could be applied during a cycle of the Implicitly restarted Arnoldi iteration. One possibility is to increase the size of NCV relative to NEV. 
+    f only:    ρ=302.3777 Re=[-65.534,302.378] Im=[-90.576,90.576] (90 matvecs)
+    [8s this layer, 254s total, 22/30 problems done]
+
+  Layer 22/42:
+    Arnoldi failed for L22: ARPACK error 3: No shifts could be applied during a cycle of the Implicitly restarted Arnoldi iteration. One possibility is to increase the size of NCV relative to NEV. 
+    f only:    ρ=133.5763 Re=[-29.783,133.576] Im=[-0.000,0.000] (146 matvecs)
+    [12s this layer, 266s total, 24/30 problems done]
+
+  Layer 29/42:
+    Full(I+f): ρ=226.5286 Re=[-57.125,226.529] Im=[0.000,0.000] (79 matvecs)
+    f only:    ρ=62.6219 Re=[-28.399,60.240] Im=[-17.108,17.108] (211 matvecs)
+    [16s this layer, 282s total, 26/30 problems done]
+
+  Layer 36/42:
+    Full(I+f): ρ=0.0000 Re=[0.000,0.000] Im=[0.000,0.000] (82 matvecs)
+    f only:    ρ=50.6930 Re=[-50.693,1.416] Im=[-0.000,0.000] (390 matvecs)
+    [26s this layer, 308s total, 28/30 problems done]
+
+  Layer 42/42:
+    Full(I+f): ρ=0.0000 Re=[0.000,0.000] Im=[0.000,0.000] (82 matvecs)
+    Arnoldi failed for L42: ARPACK error -1: No convergence (101 iterations, 17/20 eigenvectors converged)
+    [76s this layer, 384s total, 30/30 problems done]
+
+
+============================================================
+SUMMARY: google/gemma-2-9b-it
+============================================================
+
+  ccs:
+     Layer     ρ(I+f)       ρ(f)          Re(I+f) range            Re(f) range
+    L  14     211.63      94.64         [-84.5, 211.6]          [-10.7, 94.6]
+    L  22     197.33     279.25          [-5.2, 197.3]         [-16.8, 279.3]
+    L  29        N/A       4.77             [0.0, 0.0]            [-4.8, 4.5]
+    L  36        N/A      32.46             [0.0, 0.0]          [-32.5, 24.1]
+    L  42        N/A      47.67             [0.0, 0.0]          [-47.7, 40.5]
+
+  vanilla:
+     Layer     ρ(I+f)       ρ(f)          Re(I+f) range            Re(f) range
+    L  14      67.46      52.71           [-0.0, 67.5]           [-5.4, 52.7]
+    L  22     428.96      36.49          [-0.0, 429.0]           [-1.0, 36.5]
+    L  29     701.12      15.84        [-375.8, 701.1]          [-15.8, 11.2]
+    L  36        N/A       2.92             [0.0, 0.0]            [-1.0, 2.9]
+    L  42      31.98      32.51           [-32.0, 0.0]          [-32.5, -1.0]
+
+  denial:
+     Layer     ρ(I+f)       ρ(f)          Re(I+f) range            Re(f) range
+    L  14        N/A     302.38                                [-65.5, 302.4]
+    L  22        N/A     133.58                                [-29.8, 133.6]
+    L  29     226.53      62.62         [-57.1, 226.5]          [-28.4, 60.2]
+    L  36        N/A      50.69             [0.0, 0.0]           [-50.7, 1.4]
+    L  42        N/A        N/A             [0.0, 0.0]                       
+
+Total time: 384s (6.4 min)
+Saved: /workspace/results/arnoldi_crossarch_gemma-2-9b-it_20260616_005933.json
+
